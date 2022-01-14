@@ -10,9 +10,9 @@ class Information extends Component
     {
         $menu = new Menu([
             [
-                'info' => ' المتبرعين',
-                'value' => '1000',
-                
+                'info' => 'عدد المتبرعين',
+                'value' => '+1000',
+                'icon' => 'fa-solid fa-users',
 
                 // 'submenu' => [
                 //     [
@@ -26,12 +26,12 @@ class Information extends Component
             [
                 'info' => 'الحالات التي تم علاجها',
                 'value' => '+15',
-                
+                'icon' => 'fa-solid fa-hand-holding-heart',
             ],
             [
                 'info' => 'مجموع المبالغ المتبرع بها',
                 'value' => '+800$',
-                
+                'icon' => 'fa-solid fa-circle-info',
             ],
         ]);
         return view('livewire.components.home.information' ,[
@@ -65,7 +65,7 @@ class MenuItem
 {
     public $info;
     public $value;
-
+    public $icon;
     public $submenu;
 
 
@@ -81,7 +81,7 @@ class MenuItem
     {
         $this->info = $data['info'];
         $this->value = $data['value'];
-  
+        $this->icon = $data['icon'];
         $this->permissions = $data['permissions'] ?? 0;
         $this->hasSubmenu = isset($data['submenu']);
         $this->submenu = new Menu($data['submenu'] ?? []);
