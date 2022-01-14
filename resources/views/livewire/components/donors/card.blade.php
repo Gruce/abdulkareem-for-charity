@@ -41,7 +41,7 @@
                     <div class="col-span-3">
                         <h3 class="mt-6 text-center font-bold text-2xl ">{{ $item->name }}</h3>
                         <h3
-                            class="mt-2 font-Kufi text-center text-base @if ($item->type == 4) hidden @endif">
+                            class="mt-2 font-Alhurra text-center text-base @if ($item->type == 4) hidden @endif">
                             @if ($item->type == 1)
                                 طالب
                             @elseif($item->type == 2)
