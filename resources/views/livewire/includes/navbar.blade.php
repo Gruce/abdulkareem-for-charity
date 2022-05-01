@@ -30,7 +30,7 @@
                         @if ($menuitem->route == 'login')
                             <li>
                                 <a href="{{ route($menuitem->route) }}"
-                                    class=" m-4 py-2 pl-3 pr-4 rounded @if ($menuitem->active) text-primary-100 @else text-gray-700 @endif"
+                                    class="bg-primary-100 m-4 py-2 pl-3 pr-4 rounded @if ($menuitem->active) text-primary-100 @else text-gray-700 @endif"
                                     aria-current="page">
                                     <i class="{{ $menuitem->icon }} mr-1"></i>
                                     {{ $menuitem->name }}
