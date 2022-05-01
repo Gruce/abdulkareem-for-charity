@@ -1,16 +1,28 @@
-<div >
-    <div class="bg-red-100 flex p-10 justify-center">
-       
-<a href="#" class=" mb-6 ml-8 block p-6 max-w-lg bg-white rounded-lg border border-gray-200 hover:bg-gray-100 ">
-    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology acquisitions 2021</h5>
-    <p class="font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-    </a>
-    
-        
-<a href="#" class="block mb-6 mr-6  p-6 max-w-lg bg-white rounded-lg border border-gray-200 shadow-md hover:bg-gray-100 ">
-    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology acquisitions 2021</h5>
-    <p class="font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-    </a>
-    
+<div>
+    <div class="bg-white flex p-10 justify-center ">
+
+        <div class=" mt-8 ml-10 p-6 max-w-lg bg-white">
+            <h6 class="mb-2 text-3xl font-bold tracking-tight text-gray-900 dark:text-white">نحن نعيش </h6>
+            <h1 class="mb-2 text-6xl font-bold tracking-tight text-gray-900 dark:text-white">السعادة عبر</h1>
+            <h1 class="mb-2 text-6xl font-bold tracking-tight text-gray-900 dark:text-white">العطاء </h1>
+            <h6 class="mb-2 text-3xl font-bold tracking-tight text-gray-900 dark:text-white">لمن هو محتاج </h6>
+
+            <div class="flex  justify-between mt-7 text-2xl ">
+                <div class=" pt-7 pb-7 pr-3 pl-3 ml-2 mr-2 rounded-lg border border-gray-400 hover:bg-green-400 "> أشتراك<br> يومي </div>
+                <div  class=" pt-7 pb-7 pr-2 pl-2 ml-2 mr-2 rounded-lg border border-gray-400 hover:bg-green-300"> اشتراك  <br>اسبوعي </div>
+                <div  class=" pt-7 pb-7 pr-3 pl-3 ml-2 mr-2 rounded-lg border border-gray-400 hover:bg-green-300"> أشتراك<br> شهري</div>
+            </div>
+
+        </div>
+
+        <div class="mt-8 mr-10 p-6 max-w-lg bg-white ">
+            <img class="rounded-t-lg"
+                src="https://i.picsum.photos/id/1006/3000/2000.jpg?hmac=x83pQQ7LW1UTo8HxBcIWuRIVeN_uCg0cG6keXvNvM8g"
+                alt="photo" />
+            <p class=" mt-4 text-sm text-center font-normal tracking-tight text-gray-900 dark:text-white">
+                مابعرفششششششششششششششش </p>
+
+        </div>
+
     </div>
 </div>
