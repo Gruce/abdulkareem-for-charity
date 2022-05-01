@@ -1009,6 +1009,9 @@ select {
 .col-span-6 {
   grid-column: span 6 / span 6;
 }
+.m-4 {
+  margin: 1rem;
+}
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -1383,6 +1386,14 @@ select {
 .border-r {
   border-right-width: 1px;
 }
+.bg-secondary-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 55 174 / var(--tw-bg-opacity));
+}
+.bg-primary-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 179 172 / var(--tw-bg-opacity));
+}
 .bg-opacity-25 {
   --tw-bg-opacity: 0.25;
 }
@@ -1601,7 +1612,7 @@ select {
 }
 .text-primary-100 {
   --tw-text-opacity: 1;
-  color: rgb(0 255 0 / var(--tw-text-opacity));
+  color: rgb(0 179 172 / var(--tw-text-opacity));
 }
 .underline {
   -webkit-text-decoration-line: underline;
