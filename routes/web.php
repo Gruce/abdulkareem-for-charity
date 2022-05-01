@@ -2,27 +2,47 @@
 
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
 
-Route::get('/', function () {
-    return view('welcome');
+/***  Guest Routes  ***/
+use App\Http\Livewire\Guest\{
+    Home\Main as GuestHome
+};
+
+/***  User Routes  ***/
+use App\Http\Livewire\User\{
+    Home as UserHome
+};
+
+/***  Admin Routes  ***/
+use App\Http\Livewire\Admin\{
+    Home as AdminHome
+};
+
+
+
+
+
+/*****************************************************************/
+/************************ Main Routes ****************************/
+/*****************************************************************/
+
+// Guest Group
+Route::middleware(['guest'])->group(function () {
+    Route::get('/', GuestHome::class)->name('guest.home');
 });
 
-Route::middleware([
-    'auth:sanctum',
-    config('jetstream.auth_session'),
-    'verified'
-])->group(function () {
-    Route::get('/dashboard', function () {
-        return view('dashboard');
-    })->name('dashboard');
+
+// User Group
+Route::prefix('user')->middleware(['auth:sanctum'])->group(function () {
+    Route::get('/', UserHome::class)->name('user.home');
 });
+
+
+
+// Admin Group
+Route::prefix('admin')->middleware(['admin'])->group(function () {
+    Route::get('/', AdminHome::class)->name('admin.home');
+});
+
+
+
