@@ -18,7 +18,7 @@ class Navbar extends Component
     public function guest(){
         $this->menu = [
             new MenuItem('الصفحة الرئيسية', 'guest.home', 'fas fa-home'),
-            new MenuItem('الصفحة الرئيسية', 'guest.home', 'fas fa-home'),
+            
         ];
     }
 
