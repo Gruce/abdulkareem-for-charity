@@ -17,7 +17,7 @@ class Navbar extends Component
 
     public function guest(){
         $this->menu = [
-            new MenuItem('Home', 'guest.home', 'fas fa-home'),
+            new MenuItem('الصفحة الرئيسية', 'guest.home', 'fas fa-home'),
         ];
     }
 
@@ -32,12 +32,12 @@ class Navbar extends Component
                 // User Menu
                 $this->user();
             }
-            $this->menu[] = new MenuItem('Logout', 'logout', 'fas fa-sign-out-alt');
+            $this->menu[] = new MenuItem('تسجيل الخروج', 'logout', 'fas fa-sign-out-alt');
         } else {
             // Guest Menu
             $this->guest();
-            $this->menu[] = new MenuItem('Login', 'login', 'fas fa-sign-in-alt');
-            $this->menu[] = new MenuItem('Register', 'register', 'fas fa-user-plus');
+            $this->menu[] = new MenuItem('تسجيل الدخول', 'login', 'fas fa-sign-in-alt');
+            $this->menu[] = new MenuItem('تسجيل', 'register', 'fas fa-user-plus');
         }
 
         return view('livewire.includes.navbar');
