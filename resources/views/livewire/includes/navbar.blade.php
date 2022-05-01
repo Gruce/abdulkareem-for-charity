@@ -17,7 +17,7 @@
             <ul class="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
                 @foreach ($menu as $menuitem)
                     <li>
-                        <a href="{{route($menuitem->route)}}" class="block py-2 pl-3 pr-4 rounded @if ($menuitem->active) text-blue-700 @else text-gray-700 @endif" aria-current="page">
+                        <a href="{{route($menuitem->route)}}" class="block py-2 pl-3 pr-4 rounded @if ($menuitem->active) text-primary-100 @else text-gray-700 @endif" aria-current="page">
                             <i class="{{$menuitem->icon}} mr-1"></i>
                             {{$menuitem->name}}
                         </a>
