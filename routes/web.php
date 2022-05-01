@@ -18,7 +18,10 @@ use App\Http\Livewire\Admin\{
     Home as AdminHome
 };
 
-
+/*** Cases Routes */
+use App\Http\Livewire\Cases\{
+    Main as CaseMain
+};
 
 
 
@@ -46,3 +49,5 @@ Route::prefix('admin')->middleware(['admin'])->group(function () {
 
 
 
+// Cases 
+Route::get('/cases', CaseMain::class)->name('cases');
