@@ -13,7 +13,9 @@
                 style="width: 45%"> 45%</div>
         </div>
         <div class="flex items-center justify-between">
-            <div></div>
+            <div>
+            <h5 class="mb-2 text-1xl  font-bold tracking-tight text-gray-900 dark:text-white">التكلفة : 1,000,000 د.ع</h5>
+            </div>
             <a href="#"
                 class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-green-700 rounded-lg hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 ">
                 عرض التفاصيل
