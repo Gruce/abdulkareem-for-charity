@@ -9,44 +9,47 @@
         <div class="hidden w-full md:block md:w-auto" id="mobile-menu">
             <ul class="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
                 @foreach ($menu as $menuitem)
-                    @if ($menuitem->route == 'login' || $menuitem->route == 'register')
-                        @continue
-                    @endif
-                    <li>
-                        <a href="{{ route($menuitem->route) }}"
-                            class="block py-2 pl-3 pr-4 rounded @if ($menuitem->active) text-primary-100 @else text-gray-700 @endif"
-                            aria-current="page">
-                            <i class="{{ $menuitem->icon }} mr-1"></i>
-                            {{ $menuitem->name }}
-                        </a>
-                    </li>
+                @if ($menuitem->route == 'login' || $menuitem->route == 'register')
+                @continue
+                @endif
+                <li>
+                    <a href="{{ route($menuitem->route) }}"
+                        class="block py-2 pl-3 pr-4 rounded @if ($menuitem->active) text-primary-100 @else text-gray-700 @endif"
+                        aria-current="page">
+
+                        {{ $menuitem->name }}
+                        <i class="{{ $menuitem->icon }} mr-1"></i>
+                    </a>
+                </li>
                 @endforeach
             </ul>
         </div>
         <div>
             <ul class="flex flex-col mt-4 md:flex-row md:space-x-8  md:mt-0 md:text-sm md:font-medium">
                 @foreach ($menu as $menuitem)
-                    @if ($menuitem->route == 'login' || $menuitem->route == 'register')
-                        @if ($menuitem->route == 'login')
-                            <li>
-                                <a href="{{ route($menuitem->route) }}"
-                                    class="bg-primary-100 m-4 py-2 pl-3 pr-4 rounded @if ($menuitem->active) text-primary-100 @else text-gray-700 @endif"
-                                    aria-current="page">
-                                    <i class="{{ $menuitem->icon }} mr-1"></i>
-                                    {{ $menuitem->name }}
-                                </a>
-                            </li>
-                        @else
-                            <li>
-                                <a href="{{ route($menuitem->route) }}"
-                                    class="bg-secondary-100 py-2 pl-3 pr-4 rounded @if ($menuitem->active) text-primary-100 @else text-gray-700 @endif"
-                                    aria-current="page">
-                                    <i class="{{ $menuitem->icon }} mr-1"></i>
-                                    {{ $menuitem->name }}
-                                </a>
-                            </li>
-                        @endif
-                    @endif
+                @if ($menuitem->route == 'login' || $menuitem->route == 'register')
+                @if ($menuitem->route == 'login')
+                <li>
+                    <a href="{{ route($menuitem->route) }}"
+                        class="bg-secondary-100 text-white m-4 py-2 pl-3 pr-4 rounded @if ($menuitem->active) text-primary-100 @else text-gray-700 @endif"
+                        aria-current="page">
+
+                        {{ $menuitem->name }}
+                        <i class="{{ $menuitem->icon }} mr-1"></i>
+                    </a>
+                </li>
+                @else
+                <li>
+                    <a href="{{ route($menuitem->route) }}"
+                        class="bg-primary-100 text-white py-2 pl-3 pr-4 rounded @if ($menuitem->active) text-primary-100 @else text-gray-700 @endif"
+                        aria-current="page">
+
+                        {{ $menuitem->name }}
+                        <i class="{{ $menuitem->icon }} mr-1"></i>
+                    </a>
+                </li>
+                @endif
+                @endif
                 @endforeach
             </ul>
         </div>
