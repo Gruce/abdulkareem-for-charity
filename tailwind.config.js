@@ -34,7 +34,7 @@ module.exports = {
         },
         extend: {
             fontFamily: {
-                sans: ['Nunito', ...defaultTheme.fontFamily.sans],
+                sans: ['Cairo', ...defaultTheme.fontFamily.sans],
             },
         },
     },
