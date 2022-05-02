@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Livewire\Cases;
+namespace App\Http\Livewire\Components\Case;
 
 use Livewire\Component;
 
@@ -8,6 +8,6 @@ class Card extends Component
 {
     public function render()
     {
-        return view('livewire.cases.card');
+        return view('livewire.components.case.card');
     }
 }
