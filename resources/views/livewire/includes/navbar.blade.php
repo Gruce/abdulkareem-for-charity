@@ -1,6 +1,6 @@
 <nav class="bg-gray-300 border-gray-200 px-2 py-4 sm:px-4 rounded">
     <div class="container flex flex-wrap items-center justify-between mx-auto">
-        <a href="https://flowbite.com" class="flex items-center">
+        <a href="#" class="flex items-center">
             <img src="/docs/images/logo.svg" class="h-6 mr-3 sm:h-9" alt="">
             <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">ABDULKAREEM-FOR-CHARITY</span>
         </a>
