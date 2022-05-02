@@ -1004,6 +1004,9 @@ select {
 .m-4 {
   margin: 1rem;
 }
+.m-3 {
+  margin: 0.75rem;
+}
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -1135,6 +1138,9 @@ select {
 .h-20 {
   height: 5rem;
 }
+.h-36 {
+  height: 9rem;
+}
 .min-h-screen {
   min-height: 100vh;
 }
@@ -1254,6 +1260,9 @@ select {
 }
 .grid-cols-1 {
   grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+.grid-cols-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 .grid-rows-4 {
   grid-template-rows: repeat(4, minmax(0, 1fr));
