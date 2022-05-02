@@ -6,15 +6,19 @@ module.exports = {
         "./vendor/laravel/jetstream/**/*.blade.php",
         "./storage/framework/views/*.php",
         "./resources/views/**/*.blade.php",
+        "./resources/**/*.blade.php",
+        "./resources/**/*.js",
+        "./resources/**/*.vue",
     ],
 
     theme: {
         colors: {
             primary: {
                 100: "#00b3ac",
+                200: "#00b9ac",
             },
             secondary: {
-                100: "#0037ae",
+                100: "#a094d6",
             },
             success: {
                 100: "#ff0000",
