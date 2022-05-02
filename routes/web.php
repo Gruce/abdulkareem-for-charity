@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Livewire\Pages\{
     Home\Main as Home,
     About\Main as About,
+    Cases\Guest\Main as Cases,
 };
 
 
@@ -26,4 +27,4 @@ Route::get('/about', About::class)->name('about');
 
 
 // // Cases
-// Route::get('/cases', CaseMain::class)->name('cases');
+Route::get('/cases', Cases::class)->name('cases');
