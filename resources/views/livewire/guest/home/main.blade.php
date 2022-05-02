@@ -1,5 +1,5 @@
 <div>
-    <div class="bg-white flex  pb-14 pr-10 pl-10 pt-10 ">
+    <div class="bg-white flex  pb-14 pr-10 pl-10 pt-10 item-center ">
 
         <div class=" mt-8 mr-14 ml-14 p-7 max-w-full ">
             <p class=" mt-4  text-right tracking-tight text-primary-100 dark:text-white">
@@ -22,9 +22,9 @@
 
         </div>
 
-        <div class="mt-8 mr-14 item-center ">
+        <div class="mt-8 mr-14 ">
             <img class="rounded-t-lg max-w-2xl"
-                src="https://i.picsum.photos/id/1006/3000/2000.jpg?hmac=x83pQQ7LW1UTo8HxBcIWuRIVeN_uCg0cG6keXvNvM8g"
+                src="https://cdn.vox-cdn.com/thumbor/DV1o8xiIvsW4iSz6hukfKAM4SDA=/1400x1400/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/19411688/GettyImages_1060748862.jpg"
                 alt="photo" />
             <p class=" mt-4 text-sm text-center font-normal tracking-tight text-secondary-100 dark:text-white">
                 وصف الصورة </p>
