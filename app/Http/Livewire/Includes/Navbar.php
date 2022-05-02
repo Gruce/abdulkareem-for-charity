@@ -19,6 +19,7 @@ class Navbar extends Component
         $this->menu = [
             new MenuItem('الصفحة الرئيسية', 'guest.home', 'fas fa-home'),
             new MenuItem('الحالات', 'cases', 'fas fa-hand-holding-medical'),
+            new MenuItem('من نحن', 'guest.about', 'fas fa-address-card'),
             
         ];
     }

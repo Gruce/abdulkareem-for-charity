@@ -8,6 +8,6 @@ class Main extends Component
 {
     public function render()
     {
-        return view('livewire.cases.main');
+        return view('livewire.cases.main')->layout('layouts.guest');
     }
 }

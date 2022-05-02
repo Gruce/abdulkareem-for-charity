@@ -1,5 +1,5 @@
 <div>
-    <div class="bg-white grid grid-cols-2 py-6 pb-10">
+    <div class=" grid grid-cols-2 py-6 pb-10">
         <div class=" mt-8 mr-14 ml-14 p-7 max-w-full ">
             <p class=" mt-4 tracking-tight text-primary-100 dark:text-white">
                 <i class="text-3xl font-bold fa-solid fa-hand-holding-hand"></i>
@@ -10,7 +10,8 @@
             <h6 class="mb-2 text-3xl font-bold tracking-tight text-primary-100 dark:text-white">لمن هو محتاج </h6>
 
             <div class="flex item-center mt-10 ">
-                <button class="btn btn-lg text-center rounded-lg border border-gray-600 hover:bg-blue-100 mr-1 ml-1 p-6">
+                <button
+                    class="btn btn-lg text-center rounded-lg border border-gray-600 hover:bg-blue-100 mr-1 ml-1 p-6">
                     <a href="#" class=" ">
                         اشتراك يومي
                     </a>
@@ -35,7 +36,7 @@
         </div>
     </div>
 
-    <div class="contener rounded-lg grid-cols-3 gap-4  bg-gray-50 flex justify-center  my-10">
+    <div class="contener rounded-lg grid-cols-3 gap-4  bg-gray-100 flex justify-center  ">
 
         <div class="p-6 text-center dark:bg-gray-800 dark:border-gray-700">
             <a href="#">
