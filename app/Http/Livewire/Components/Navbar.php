@@ -22,10 +22,26 @@ class Navbar extends Component
                 // ]
             ],
             [
+                'name' => 'الحالات',
+                'route' => 'cases',
+                'icon' => 'fas fa-hand-holding-heart',
+            ],
+            [
+                'name' => 'معلومات عنا',
+                'route' => 'about',
+                'icon' => 'fas fa-circle-info',
+            ],
+            
+            [
                 'name' => 'تسجيل الدخول',
                 'route' => 'login',
                 'icon' => 'fas fa-home',
-            ]
+            ],
+            [
+                'name' => 'انشاء حساب',
+                'route' => 'register',
+                'icon' => 'fas fa-home',
+            ],
 
         ]);
 
