@@ -28,7 +28,6 @@
     <x-jet-banner />
 
     <div class="min-h-screen bg-white">
-        @livewire('includes.navbar')
         <!-- Page Content -->
         <main>
             {{ $slot }}
