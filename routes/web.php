@@ -5,7 +5,8 @@ use Illuminate\Support\Facades\Route;
 
 /***  Guest Routes  ***/
 use App\Http\Livewire\Guest\{
-    Home\Main as GuestHome
+    Home\Main as GuestHome ,
+    Home\About as GuestAbout,
 };
 
 /***  User Routes  ***/
@@ -32,6 +33,7 @@ use App\Http\Livewire\Cases\{
 // Guest Group
 Route::middleware(['guest'])->group(function () {
     Route::get('/', GuestHome::class)->name('guest.home');
+    Route::get('/about', GuestAbout::class)->name('guest.about');
 });
 
 
