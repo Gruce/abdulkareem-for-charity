@@ -1575,8 +1575,14 @@ select {
 .bg-opacity-25 {
   --tw-bg-opacity: 0.25;
 }
+.bg-\[url\(\'\/img\/photo1\.JPG\'\)\] {
+  background-image: url('/img/photo1.JPG');
+}
 .bg-cover {
   background-size: cover;
+}
+.bg-auto {
+  background-size: auto;
 }
 .bg-center {
   background-position: center;
