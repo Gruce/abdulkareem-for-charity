@@ -4,45 +4,27 @@ use Illuminate\Support\Facades\Route;
 
 
 /***  Guest Routes  ***/
-use App\Http\Livewire\Guest\{
-    Home\Main as GuestHome
+use App\Http\Livewire\Pages\{
+    Home\Main as Home,
+    About\Main as About,
+    Cases\Main as CaseMain
 };
-
-/***  User Routes  ***/
-use App\Http\Livewire\User\{
-    Home as UserHome
-};
-
-/***  Admin Routes  ***/
-use App\Http\Livewire\Admin\{
-    Home as AdminHome
-};
-
-
-
 
 
 /*****************************************************************/
 /************************ Main Routes ****************************/
 /*****************************************************************/
 
-// Guest Group
-Route::middleware(['guest'])->group(function () {
-    Route::get('/', GuestHome::class)->name('guest.home');
-});
+
+// Home
+Route::get('/', Home::class)->name('home');
 
 
-// User Group
-Route::prefix('user')->middleware(['auth:sanctum'])->group(function () {
-    Route::get('/', UserHome::class)->name('user.home');
-});
+// About
+Route::get('/about', About::class)->name('about');
 
 
 
-// Admin Group
-Route::prefix('admin')->middleware(['admin'])->group(function () {
-    Route::get('/', AdminHome::class)->name('admin.home');
-});
 
-
-
+// // Cases
+Route::get('/cases', CaseMain::class)->name('cases');

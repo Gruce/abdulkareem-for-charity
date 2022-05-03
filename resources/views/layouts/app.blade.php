@@ -1,41 +1,50 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>{{ config('app.name', 'Laravel') }}</title>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <!-- Fonts -->
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
+    <title>{{ config('app.name', 'Laravel') }}</title>
 
-        <!-- Styles -->
-        <link rel="stylesheet" href="{{ mix('css/app.css') }}">
-        <link rel="stylesheet" href="https://unpkg.com/flowbite@1.4.4/dist/flowbite.min.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
 
-        @livewireStyles
+    <!-- Styles -->
+    <link rel="stylesheet" href="{{ mix('css/app.css') }}">
+    <link rel="stylesheet" href="https://unpkg.com/flowbite@1.4.4/dist/flowbite.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-        <!-- Scripts -->
-        <script src="{{ mix('js/app.js') }}" defer></script>
-    </head>
-    <body class="font-sans antialiased" dir="rtl">
-        <x-jet-banner />
+    @livewireStyles
 
-        <div class="min-h-screen bg-gray-100">
-            @livewire('includes.navbar')
-            <!-- Page Content -->
-            <main>
+    <!-- Scripts -->
+    <script src="{{ mix('js/app.js') }}" defer></script>
+</head>
+
+<body class="font-serif antialiased " dir="rtl">
+    <x-jet-banner />
+
+    <div class="rounded-lg md:m-10 md:h-app">
+        @livewire('components.navbar')
+        <!-- Page Content -->
+        <main class="p-10 mt-5 overflow-y-auto bg-gray-100 rounded-lg md:h-main">
+            @hasSection('title')
+                <p class="px-5 py-2 text-3xl font-bold text-gray-600 bg-gray-200 rounded-lg">@yield('title')</p>
+            @endif
+            <div>
                 {{ $slot }}
-            </main>
-        </div>
+            </div>
+        </main>
+    </div>
 
-        @stack('modals')
+    @stack('modals')
 
-        @livewireScripts
-        <script src="//unpkg.com/alpinejs" defer></script>
-        <script src="https://unpkg.com/flowbite@1.4.4/dist/flowbite.js" defer></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js" integrity="sha512-6PM0qYu5KExuNcKt5bURAoT6KCThUmHRewN3zUFNaoI6Di7XJPTMoT6K0nsagZKk2OB4L7E3q1uQKHNHd4stIQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    </body>
+    @livewireScripts
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <script src="https://unpkg.com/flowbite@1.4.4/dist/flowbite.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js" integrity="sha512-6PM0qYu5KExuNcKt5bURAoT6KCThUmHRewN3zUFNaoI6Di7XJPTMoT6K0nsagZKk2OB4L7E3q1uQKHNHd4stIQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</body>
+
 </html>
