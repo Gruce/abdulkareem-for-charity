@@ -1,4 +1,4 @@
-<div>
+<div class="bg-[url('/img/photo1.JPG')] bg-auto bg-no-repeat bg-center bg-cover  md:bg-contain">
     <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 py-10 pr-10 ">
         <div class="max-w-full mt-8 mr-14 ml-14 p-7">
             <div class="mt-8 sm:text-xl md:text-2xl lg:text-5xl ">
@@ -40,4 +40,5 @@
             <p class="mb-3 sm:text-xl md:text-2xl lg:text-3xl font-normal text-gray-700"> الحالات التي تم علاجها.</p>
         </div>
     </div>
+
 </div>
