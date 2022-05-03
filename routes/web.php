@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Livewire\Pages\{
     Home\Main as Home,
     About\Main as About,
-    Cases\Guest\Main as CaseMain
+    Cases\Main as CaseMain
 };
 
 
