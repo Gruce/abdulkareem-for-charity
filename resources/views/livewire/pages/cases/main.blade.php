@@ -1,3 +1,15 @@
+@section('title', 'الحالات')
+
 <div>
-    {{-- Because she competes with no one, no one can compete with her. --}}
+    @guest
+        <livewire:pages.cases.guest.main />
+    @endguest
+    
+    @user
+        User
+    @enduser
+
+    @admin
+        Admin
+    @endadmin
 </div>

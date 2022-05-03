@@ -27,35 +27,31 @@ class Navbar extends Component
                 'icon' => 'fas fa-hand-holding-heart',
             ],
             [
-                'name' => 'معلومات عنا',
+                'name' => 'عن الصندوق',
                 'route' => 'about',
                 'icon' => 'fas fa-circle-info',
             ],
-            
+
+        ]);
+
+        $leftMenu = new Menu([
             [
                 'name' => 'تسجيل الدخول',
                 'route' => 'login',
                 'icon' => 'fas fa-home',
+                'permissions' => 1,
             ],
             [
                 'name' => 'انشاء حساب',
                 'route' => 'register',
                 'icon' => 'fas fa-home',
+                'permissions' => 1,
             ],
-
         ]);
-
-        // $leftMenu = new Menu([
-        //     [
-        //         'name' => 'Login',
-        //         'route' => 'login',
-        //         'icon' => 'fas fa-sign-in-alt',
-        //         'permissions' => 2,
-        //     ],
-        // ]);
 
         return view('livewire.components.navbar', [
             'menu' => $menu,
+            'leftMenu' => $leftMenu,
         ]);
     }
 }
