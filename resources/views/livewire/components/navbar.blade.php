@@ -1,19 +1,19 @@
-<nav class="fixed top-0 left-0 bg-white w-full ">
-    <div class="container m-auto flex justify-between items-center text-gray-700">
+<nav class="sticky top-0 w-full">
+    <div class="flex items-center justify-between w-full mx-auto text-gray-700 bg-gray-100 border-b-4 border-gray-100 rounded-lg md:px-10">
 
         {{-- Logo & Title --}}
         <div>
             <a href="/" class="flex items-center text-xl">
                 <img src="{{ asset('/img/logo.png') }}" class="h-12 ">
-                <span class=" font-bold text-gray-700 ">صندوق الأستاذ عبدالكريم</span>
+                <span class="font-bold text-gray-700">صندوق الأستاذ عبدالكريم</span>
             </a>
         </div>
 
         {{-- Pages/Home, Cases, About --}}
         <div>
-            <ul class="hidden md:flex items-center pr-10 text-base font-semibold cursor-pointer">
+            <ul class="items-center hidden pr-10 text-base font-semibold cursor-pointer md:flex">
                 @foreach ($menu->items as $item)
-                <li class=" py-4 px-6">
+                <li class="px-6 py-4 ">
                     @if ($item->hasSubmenu)
                     {{-- Has Submenu --}}
                     <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" id="user-menu-button"
@@ -50,9 +50,9 @@
 
         {{-- Pages/Login, Register --}}
         <div>
-            <ul class="hidden md:flex items-center pr-10 text-base font-semibold cursor-pointer">
+            <ul class="items-center hidden pr-10 text-base font-semibold cursor-pointer md:flex">
                 @foreach ($leftMenu->items as $item)
-                <li class=" py-4 px-6">
+                <li class="px-6 py-4 ">
                     @if ($item->hasSubmenu)
                     {{-- Has Submenu --}}
                     <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" id="user-menu-button"
@@ -88,18 +88,17 @@
         </div>
 
         {{-- Pages in Mobile --}}
-        <div x-data="{ isOpen: false}">
-            <button class="block md:hidden py-3 px-4 mx-2 rounded focus:outline-none hover:bg-gray-200 group"
+        <div x-data="{ isOpen: false}" class="block md:hidden">
+            <button class="px-4 py-3 mx-2 rounded focus:outline-none hover:bg-gray-200 group"
                 @click="isOpen = !isOpen " >
-                <div class="w-5 h-1 bg-gray-600 mb-1"></div>
-                <div class="w-5 h-1 bg-gray-600 mb-1"></div>
+                <div class="w-5 h-1 mb-1 bg-gray-600"></div>
+                <div class="w-5 h-1 mb-1 bg-gray-600"></div>
                 <div class="w-5 h-1 bg-gray-600"></div>
-                <div class="absolute top-0 -right-full h-screen w-8/12 bg-white border opacity-0
-                            group-focus:right-0 group-focus:opacity-100 transition-all duration-300" x-show="isOpen"  @click.away="isOpen = false">
+                <div class="absolute top-0 w-8/12 h-screen transition-all duration-300 bg-white border opacity-0 -right-full group-focus:right-0 group-focus:opacity-100" x-show="isOpen"  @click.away="isOpen = false">
 
-                    <ul class="flex flex-col items-center w-full text-base cursor-pointer pt-10">
+                    <ul class="flex flex-col items-center w-full pt-10 text-base cursor-pointer">
                         @foreach ($menu->items as $item)
-                        <li class=" py-4 px-6 w-full">
+                        <li class="w-full px-6 py-4 ">
                             @if ($item->hasSubmenu)
                             {{-- Has Submenu --}}
                             <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
@@ -135,7 +134,7 @@
 
 
                         @foreach ($leftMenu->items as $item)
-                        <li class=" py-4 px-6">
+                        <li class="px-6 py-4 ">
                             @if ($item->hasSubmenu)
                             {{-- Has Submenu --}}
                             <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
@@ -174,7 +173,5 @@
             </button>
 
         </div>
-
-
     </div>
 </nav>

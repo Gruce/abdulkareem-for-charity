@@ -25,13 +25,17 @@
 <body class="font-serif antialiased " dir="rtl">
     <x-jet-banner />
 
-    <div class="max-h-screen min-h-screen bg-white">
+    <div class="rounded-lg md:m-10 md:h-app">
         @livewire('components.navbar')
         <!-- Page Content -->
-        <main class="mx-10 bg-gray-100 rounded-lg">
-            {{ $slot }}
+        <main class="p-10 mt-5 bg-gray-100 rounded-lg md:h-main">
+            @hasSection('title')
+                <p class="px-5 py-2 text-3xl font-bold text-gray-600 bg-gray-200 rounded-lg">@yield('title')</p>
+            @endif
+            <div>
+                {{ $slot }}
+            </div>
         </main>
-
     </div>
 
     @stack('modals')
