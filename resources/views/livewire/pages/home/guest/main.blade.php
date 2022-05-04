@@ -1,5 +1,5 @@
 <div>
-    
+
     <div class=" bg-[url('/img/ppp.JPG')]  bg-cover   bg-no-repeat bg-center bg-fixed max-w-9xl bg-end   ">
 
         <div class="grid pt-10 pb-10 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 ">
@@ -175,9 +175,28 @@
         </button>
     </div> --}}
 
+    {{-- card --}}
+    <div class="grid  gap-8 mt-10 justify-center md:grid-cols-2  lg:grid-cols-3">
+
+        @for ($i = 0; $i <= 2; $i++)
+            <livewire:components.case.card />
+        @endfor
+    </div>
+    <a href="#"
+        class="inline-flex items-center py-2 px-3 text-lg font-medium text-center rounded-lg focus:ring-4 focus:outline-none text-gray-900 mt-8 hover:bg-gray-200">
+
+        <svg class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+                d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                clip-rule="evenodd"></path>
+        </svg>
+        المزيد من الحالات
+    </a>
+
+
 
     {{-- Donation details --}}
-    <div class="flex justify-center grid-cols-3 gap-4 bg-white ">
+    <div class="flex justify-center grid-cols-3 gap-4 bg-white mt-4">
         <div class="text-center p-9">
             <a href="#">
                 <i
@@ -206,7 +225,7 @@
     </div>
 
     {{-- Card --}}
-    <div class="flex justify-between bg-white pr-11 ">
+    {{-- <div class="flex justify-between bg-white pr-11 ">
         <div class="container px-6 py-20 md:px-12 lg:px-20">
             <div class="items-center justify-center -space-y-4 md:flex md:space-y-0 md:-space-x-4 xl:w-10/12">
                 <div class="relative z-10 -mx-4 group md:w-6/12 md:mx-0 lg:w-5/12">
@@ -261,7 +280,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
 
 
 </div>
