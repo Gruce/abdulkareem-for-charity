@@ -1,14 +1,14 @@
-<div class="max-w-xs m-3 duration-300 bg-white border border-gray-200 rounded-lg hover:drop-shadow-lg hover:scale-105 ">
+<div class="m-3 duration-300 bg-white border border-gray-200 rounded-lg hover:drop-shadow-lg hover:scale-105 w-96">
     <a href="#">
-        <img class="w-full rounded-t-lg h-36" src="/img/kid.jpg" alt=""/>
+        <img class="w-full rounded-t-lg h-40" src="/img/kid.jpg" alt=""/>
     </a>
-    <div class="p-5">
+    <div class="p-5 w-full h-full">
         <a href="#">
             <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">اجراء عملية جراحية</h5>
         </a>
         <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology
             acquisitions of 2021 so far, in reverse chronological order.</p>
-        <div class="w-full my-2 bg-gray-200 rounded-full dark:bg-gray-700">
+        <div class="my-2 bg-gray-200 rounded-full dark:bg-gray-700">
             <div class="bg-blue-800 text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full"
                 style="width:45%"> 45%</div>
         </div>
