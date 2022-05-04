@@ -1,4 +1,4 @@
-{{-- <div class="m-3 duration-300 bg-white border border-gray-200 rounded-lg hover:drop-shadow-lg hover:scale-105 w-96">
+<!-- <div class="m-3 duration-300 bg-white border border-gray-200 rounded-lg hover:drop-shadow-lg hover:scale-105 w-96">
     <a href="#">
         <img class="w-full rounded-t-lg h-40" src="/img/kid.jpg" alt="" />
     </a>
@@ -23,24 +23,35 @@
             </a>
         </div>
     </div>
-</div> --}}
+</div>  -->
 
-
-<div class="rounded-lg shadow-lg bg-white w-full">
-    <a href="#!">
-      <img class="rounded-t-lg" src="/img/kid.jpg" alt=""/>
-    </a>
-    <div class="p-6">
-      <h5 class="text-gray-900 text-xl font-medium mb-2"> اجراء عملية جراحية</h5>
-      <p class="text-gray-700 text-base mb-4">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        <a href="#!" class="text-blue-600 hover:text-blue-700 transition duration-300 ease-in-out mb-4"> عرض التفاصيل</a>
-    </p>
-      <button type="button" class=" inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Button</button>
+<div>
+    <div class="rounded-t-lg  bg-white w-full hover:bg-gray-50">
+        <a href="#!">
+            <img class="rounded-t-lg" src="/img/kid.jpg" alt="" />
+        </a>
+        <div class="p-6">
+            <h5 class="text-gray-900 text-xl font-medium mb-2"> اجراء عملية جراحية</h5>
+            <div class=" xs:28">
+                <p class="text-gray-700 text-base mb-4">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus quas iusto, repudiandae optio.
+                </p>
+                <p>هدف الحملة : 1000000 IQ</p>
+            </div>
+            <a href="#!" class="text-primary-500 hover:text-primary-500 transition duration-300 ease-in-out mb-4"> عرض
+                التفاصيل</a>
+        </div>
+        <div class="w-full  ">
+            <div class="bg-primary-500 text-xs font-medium text-gray-700 text-center p-0.5 leading-none rounded-b"
+                style="width: 100%"> 100%</div>
+        </div>
     </div>
-  </div>
 
-    {{-- <div class="grid grid-cols-10 rounded-lg bg-white h-72 w-full">
+
+</div>
+
+
+<!-- <div class="grid grid-cols-10 rounded-lg bg-white h-72 w-full">
         <div class="col-span-4 pt-4 pr-2">
         <img class=" w-full h-64 object-cover md:w-auto rounded-t-lg md:rounded-none md:rounded-l-lg"
             src="/img/kid.jpg" alt="" /></div>
@@ -52,4 +63,4 @@
             </p>
             <p class="text-gray-600 text-xs">Last updated 3 mins ago</p>
         </div>
-    </div> --}}
+    </div>  -->
