@@ -21,7 +21,7 @@
     <div class="mt-10">
         <div class=" flex justify-between">
             <h3
-                class="inline-flex items-center py-2 px-3 text-2xl font-medium text-center rounded-lg focus:ring-4 focus:outline-none text-gray-900 mt-8 hover:bg-gray-200">
+                class="inline-flex items-center py-2 px-3 text-2xl font-medium text-center rounded-lg  text-gray-900 mt-8 ">
                 الحالات الاخيرة            
             </h3>
             <a href="#"
