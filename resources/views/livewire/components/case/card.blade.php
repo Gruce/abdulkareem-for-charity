@@ -26,7 +26,7 @@
 </div>  -->
 
 <div>
-    <div class="rounded-t-lg  bg-white w-full hover:bg-gray-50">
+    <div class="rounded-t-lg  bg-white w-full hover:bg-gray-50 hover:scale-105">
         <a href="#!">
             <img class="rounded-t-lg" src="/img/kid.jpg" alt="" />
         </a>
