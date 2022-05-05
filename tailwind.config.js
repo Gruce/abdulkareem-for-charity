@@ -18,8 +18,7 @@ module.exports = {
                 'main': 'calc(100vh - 11.625rem)',
             },
             fontFamily: {
-                'noto': ['Noto Sans Arabic', 'sans-serif']
-                
+                sans: ["Cairo", ...defaultTheme.fontFamily.sans],
             },
             colors: {
                 primary: {
