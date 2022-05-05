@@ -1,6 +1,6 @@
 <div>
     
-    <div class=" bg-[url('/img/ppp.JPG')]  bg-cover   bg-no-repeat bg-center bg-fixed max-w-9xl bg-end   ">
+    <div class=" bg-[url('/img/ppp.JPG')]  bg-cover   bg-no-repeat bg-center bg-fixed max-w-9xl">
 
         <div class="grid pt-10 pb-10 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 ">
             <div class="max-w-xs mt-8 mr-14 p-7">
@@ -177,7 +177,7 @@
 
 
     {{-- Donation details --}}
-    <div class="flex justify-center grid-cols-3 gap-4 bg-white ">
+    <div class="flex justify-center   grid-cols-3 gap-4 bg-white ">
         <div class="text-center p-9">
             <a href="#">
                 <i

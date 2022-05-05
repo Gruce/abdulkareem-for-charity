@@ -2835,6 +2835,10 @@ select {
     justify-content: space-between;
   }
 
+  .sm\:justify-around {
+    justify-content: space-around;
+  }
+
   .sm\:rounded-lg {
     border-radius: 0.5rem;
   }
@@ -2857,6 +2861,10 @@ select {
 
   .sm\:rounded-br-md {
     border-bottom-right-radius: 0.375rem;
+  }
+
+  .sm\:bg-center {
+    background-position: center;
   }
 
   .sm\:p-6 {
@@ -3001,6 +3009,10 @@ select {
 
   .md\:flex-nowrap {
     flex-wrap: nowrap;
+  }
+
+  .md\:justify-center {
+    justify-content: center;
   }
 
   .md\:gap-6 {
