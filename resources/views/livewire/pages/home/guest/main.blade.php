@@ -1,6 +1,6 @@
 <div>
 
-    <div class=" bg-[url('/img/ppp.JPG')]  bg-cover   bg-no-repeat bg-top bg-fixed max-w-9xl   ">
+    <div class=" bg-[url('/img/ppp.JPG')]  bg-cover   bg-no-repeat bg-top bg-fixed max-w-9xl rounded-md  ">
 
         <div class="grid pt-10 pb-10 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 ">
             <div class="max-w-xs mt-8 mr-14 p-7">
@@ -24,9 +24,10 @@
                 class="inline-flex items-center py-2 px-3 text-2xl font-medium text-center rounded-lg  text-gray-900 mt-8 ">
                 الحالات الاخيرة            
             </h3>
-            <a href="#"
+            <a href="{{ route('cases') }}"
                 class="inline-flex items-center py-2 px-3 text-lg font-medium text-center rounded-lg focus:ring-4 focus:outline-none text-gray-900 mt-8 hover:bg-gray-200">
-                المزيد من الحالات
+             كل الحالات
+             
                 <i class="fa-solid fa-left-long mx-2"></i>
             </a>
         </div>
