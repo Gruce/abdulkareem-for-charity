@@ -1,25 +1,27 @@
 <div>
-    <img class="absolute w-full h-full rounded-t-lg"
-        src="https://17nkc83tbxn1423r9b40udlw-wpengine.netdna-ssl.com/recognition-and-engagement-blog/wp-content/uploads/sites/2/2019/08/Giving-to-charity-at-work-2.png"
-        alt="Charity" />
-    <div class="flex justify-center">
-        <div class="z-30 flex flex-col p-1 text-center">
-            <div class="flex justify-center p-5 text-6xl font-semibold">
-                معلومات عنا
-            </div>
-            <div class="text-2xl">
-                هنا سوف تجد ما تحتاج الى معرفته عنا
-            </div>
-            <div class="text-2xl">
-                هذا الموقع هو صندوق تبرعات باسم الاستاذ الراحل
-            </div>
-            <div class="text-2xl">
-                عبد الكريم للاعمال الخيريه
-            </div>
+    <div class=" grid md:grid-cols-10 sm:grid-cols-1 sm:grid-rows-6">
+        <div class="sm:col-span-6 sm:grid-rows-4 mt-10 md:mt-0">
+            <h1 class="text-3xl md:text-5xl text-center font-bold text-primary-600"> صندوق الأستاذ عبدالكريم</h1>
+            <p class="mt-10 text-xl text-gray-700 px-1 md:px-9">"صندوق الأستاذ عبد الكريم الخيري " هو مبادرة ونشاط طلابي بحت ينطلق من
+                طلبة كلية علوم الحاسوب وتكنلوجيا المعلومات. <br>
+
+                الهدف منه رعاية الاعمال الخيرية داخل الكلية وتكون الاولوية في صرف الصندوق للطلبة ذوي الدخل دون المحدود
+                وبقية الاعمال الخيرية. <br>
+
+                اساس عمل الصندوق قائم على اشتراكات شهرية لكل طالب او منتسب داخل الكلية، تبدئ الاشتراكات من مبلغ (٢٠٠٠)
+                ألفين دينار عراقي او اكثر،<br>
+                اساس عمل الصندوق سيتم جمع لجان من الطلبة من مختلف المراحل مع ممثلي المراحل للأشراف على: <br>
+
+                1- جمع المبالغ <br>
+                2- أمانة الصندوق <br>
+                3- الاعمال التي تُصرف فيها مبالغ الصندوق<br>
+            </p>
+        </div>
+        <div class="md:col-span-4 sm:grid-rows-2 order-first md:order-last ">
+
+            <img src="/img/about.png" class=" rounded-full">
         </div>
     </div>
 
-    <div>
-        {{-- --}}
-    </div>
+
 </div>
