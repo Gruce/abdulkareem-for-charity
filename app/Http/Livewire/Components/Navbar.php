@@ -35,6 +35,7 @@ class Navbar extends Component
                 'name' => 'البيانات الشخصية',
                 'route' => 'profile',
                 'icon' => 'fas fa-user',
+                'permissions' => 2,
             ],
 
         ]);
