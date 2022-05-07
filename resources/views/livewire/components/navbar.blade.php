@@ -6,7 +6,7 @@
         <div>
             <a href="/" class="flex items-center text-xl">
                 <img src="{{ asset('/img/logo.png') }}" class="h-12 ">
-                <span class="font-Kufi text-gray-700">صندوق الأستاذ عبدالكريم</span>
+                <span class="font-bold text-gray-700">صندوق الأستاذ عبدالكريم</span>
             </a>
         </div>
 
