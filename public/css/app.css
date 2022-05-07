@@ -981,6 +981,9 @@ select {
 .order-2 {
   order: 2;
 }
+.order-1 {
+  order: 1;
+}
 .order-first {
   order: -9999;
 }
@@ -1101,6 +1104,12 @@ select {
 }
 .-mt-px {
   margin-top: -1px;
+}
+.mt-12 {
+  margin-top: 3rem;
+}
+.mt-0 {
+  margin-top: 0px;
 }
 .block {
   display: block;
@@ -1680,6 +1689,10 @@ select {
   padding-left: 2rem;
   padding-right: 2rem;
 }
+.px-9 {
+  padding-left: 2.25rem;
+  padding-right: 2.25rem;
+}
 .pt-6 {
   padding-top: 1.5rem;
 }
@@ -1740,11 +1753,11 @@ select {
 .font-mono {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
-.font-noto {
-  font-family: Noto Sans Arabic, sans-serif;
-}
 .font-serif {
   font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+}
+.font-noto {
+  font-family: Noto Sans Arabic, sans-serif;
 }
 .text-sm {
   font-size: 0.875rem;
@@ -1785,6 +1798,10 @@ select {
 .text-7xl {
   font-size: 4.5rem;
   line-height: 1;
+}
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
 }
 .font-medium {
   font-weight: 500;
@@ -2273,6 +2290,14 @@ select {
 }
 @media (min-width: 640px) {
 
+  .sm\:order-1 {
+    order: 1;
+  }
+
+  .sm\:order-2 {
+    order: 2;
+  }
+
   .sm\:col-span-4 {
     grid-column: span 4 / span 4;
   }
@@ -2326,6 +2351,10 @@ select {
 
   .sm\:flex {
     display: flex;
+  }
+
+  .sm\:grid {
+    display: grid;
   }
 
   .sm\:hidden {
