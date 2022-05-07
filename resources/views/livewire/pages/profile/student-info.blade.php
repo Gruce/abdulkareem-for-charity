@@ -1,5 +1,5 @@
 <div>
-   
+
     <div class="px-4 pt-4">
         <form action="#" class="flex flex-col space-y-8">
 
@@ -45,13 +45,6 @@
                         class="w-full appearance-none text-gray-900  rounded shadow py-1 px-2 mr-2 focus:outline-none focus:shadow-outline focus:border-blue-200 text-opacity-25 ">
                 </div>
             </div>
-            
-
-
-
-
-            
-
 
         </form>
     </div>
