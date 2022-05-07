@@ -78,7 +78,7 @@
                     @else
                     {{-- Has no submenu --}}
                     <a href="{{route($item->route)}}"
-                        class="block py-2 pl-3 pr-4 font-semibold {{$item->active ? 'text-primary-500 border-primary-100' : 'text-gray-700 hover:bg-gray-50 border-gray-100'}} border-b-2 ">
+                        class="block py-2 pl-3 pr-4 font-semibold {{$item->active ? 'text-primary-500 border-primary-100' : 'text-gray-700 hover:bg-gray-50 border-gray-100'}} border-b-2">
                         {{$item->name}}
                     </a>
                     @endif
@@ -161,7 +161,7 @@
                             @else
                             {{-- Has no submenu --}}
                             <a href="{{route($item->route)}}"
-                                class="block py-2 pl-3 pr-4 font-semibold {{$item->active ? 'text-primary-500 border-primary-100' : 'text-gray-700 hover:bg-gray-50 border-gray-100'}} border-b-2 ">
+                                class="block py-2 pl-3 pr-4 font-semibold {{$item->active ? 'text-primary-500 border-primary-100' : 'text-gray-700 hover:bg-gray-50 border-gray-100'}} border-b-2">
                                 {{$item->name}}
                             </a>
                             @endif
