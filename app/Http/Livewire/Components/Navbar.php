@@ -31,6 +31,11 @@ class Navbar extends Component
                 'route' => 'about',
                 'icon' => 'fas fa-circle-info',
             ],
+            [
+                'name' => 'البيانات الشخصية',
+                'route' => 'profile',
+                'icon' => 'fas fa-user',
+            ],
 
         ]);
 
