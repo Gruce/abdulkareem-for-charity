@@ -8,6 +8,8 @@
     @enduser
 
     @admin
-        Admin
+    <livewire:pages.home.admin.main />
     @endadmin
+
+     
 </div>
