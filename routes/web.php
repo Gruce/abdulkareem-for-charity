@@ -12,6 +12,10 @@ use App\Http\Livewire\Pages\{
     Profile\Basic as ProfileBasic,
 };
 
+use App\Http\Livewire\Pages\Cases\{
+    Admin\Add as CaseAdd,
+};
+
 
 /*****************************************************************/
 /************************ Main Routes ****************************/
@@ -30,6 +34,7 @@ Route::get('/about', About::class)->name('about');
 
 // Cases
 Route::get('/cases', CaseMain::class)->name('cases');
+Route::get('/add-case', CaseAdd::class)->name('add-case');
 
 
 
