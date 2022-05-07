@@ -78,8 +78,8 @@ class UserSeeder extends Seeder
 
         // id:7
         User::create([
-            'name' => 'Fatima',
-            'email' => 'fatima@gmail.com',
+            'name' => 'Fatma',
+            'email' => 'fatma@gmail.com',
             'password' => bcrypt('123456'),
             //Default User
             'type' => 4
