@@ -7,6 +7,18 @@ use Illuminate\Database\Eloquent\Model;
 
 class Payment extends Model
 {
-    protected $fillable = ['price'];
+    
     use HasFactory;
+    protected $fillable = ['price'];
+
+
+    ### Start Relationships ###
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+
+    ### End Relationships ###
+
 }

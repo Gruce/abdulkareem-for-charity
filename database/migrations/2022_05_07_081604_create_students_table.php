@@ -15,11 +15,11 @@ return new class extends Migration
     {
         Schema::create('students', function (Blueprint $table) {
             $table->id();
-            $table->
-            $table->integer('department'); #### CS: 0, IS: 1 ###
-            $table->integer('study_type'); #### Morning: 0, Evening: 1 ###
+            $table->foreignId('user_id')->nullable()->constrained('users')->onDelete('cascade');
+            $table->integer('department'); #### CS: 1, IS: 2 ###
+            $table->integer('study_type'); #### Morning: 1, Evening: 2 ###
             $table->integer('stage'); #### first: 1, Second: 2, third: 3, fourth: 4 ###
-            $table->integer('division'); #### A:0, B:1, C:2, D:3, E:4 #####
+            $table->integer('division'); #### A:1, B:2, C:3, D:4, E:5 #####
             $table->timestamps();
         });
     }

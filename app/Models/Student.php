@@ -11,8 +11,13 @@ class Student extends Model
     use HasFactory;
     protected $fillable = ['department' , 'study_type','stage','division'];
 
+
+    ### Start Relationships ###
+
     public function user()
     {
         return $this->belongsTo(User::class);
     }
+
+    ### End Relationships ###
 }
