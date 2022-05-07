@@ -21,6 +21,14 @@ module.exports = {
                 'noto': ['Noto Sans Arabic', 'sans-serif'],
                 'Kufi':['Reem Kufi','sans-serif'],
             },
+
+            borderColor:{
+                primary: {
+                    100: "#ccfffb",
+                    500: "#00b9ac",
+                    600: "#008080"
+                },
+            },
             colors: {
                 primary: {
                     100: "#ccfffb",
