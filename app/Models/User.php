@@ -29,6 +29,9 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'is_admin',
+        'phone_number',
+        'type', 
     ];
 
     /**
@@ -68,4 +71,18 @@ class User extends Authenticatable
     public function scopeAdmins($query){
         return $query->where('is_admin', true);
     }
+
+    ### Start Relationships ###
+
+    public function student()
+    {
+        return $this->hasOne(Student::class);
+    }
+
+    public function payments()
+    {
+        return $this->hasMany(Payment::class);
+    }
+
+    ### End Relationships ###
 }

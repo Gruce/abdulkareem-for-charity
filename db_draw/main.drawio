@@ -1,56 +1,36 @@
 <mxfile host="65bd71144e">
     <diagram id="6cggQjElA7jcxz0K3cPM" name="Page-1">
-        <mxGraphModel dx="908" dy="652" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="843" dy="457" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
-                <mxCell id="49" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;strokeWidth=2;endArrow=ERmany;endFill=0;endSize=14;" edge="1" parent="1" source="44">
-                    <mxGeometry relative="1" as="geometry">
-                        <mxPoint x="600" y="160" as="targetPoint"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="44" value="&lt;span&gt;admins:&lt;br&gt;&lt;/span&gt;&lt;span&gt;-cases&lt;/span&gt;&lt;span&gt;&lt;br&gt;&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#F00C0C;strokeWidth=2;" vertex="1" parent="1">
-                    <mxGeometry x="260" y="140" width="120" height="40" as="geometry"/>
-                </mxCell>
-                <mxCell id="46" style="edgeStyle=none;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=2;endArrow=block;endFill=0;endSize=7;" edge="1" parent="1" source="45" target="44">
-                    <mxGeometry relative="1" as="geometry">
-                        <Array as="points">
-                            <mxPoint x="120" y="160"/>
-                        </Array>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="50" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=2;endArrow=block;endFill=0;endSize=7;" edge="1" parent="1" source="45" target="51">
-                    <mxGeometry relative="1" as="geometry">
-                        <mxPoint x="255.31999999999994" y="402.04999999999995" as="targetPoint"/>
-                        <Array as="points">
-                            <mxPoint x="120" y="360"/>
-                        </Array>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="45" value="Users" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=3;strokeColor=#009999;" vertex="1" parent="1">
-                    <mxGeometry x="60" y="240" width="120" height="40" as="geometry"/>
-                </mxCell>
-                <mxCell id="48" value="&lt;span&gt;Cases&lt;/span&gt;&lt;br&gt;&lt;br&gt;&lt;ul&gt;&lt;li&gt;title&lt;/li&gt;&lt;li&gt;description&lt;/li&gt;&lt;li&gt;image&lt;/li&gt;&lt;li&gt;details file&lt;/li&gt;&lt;li&gt;target&lt;/li&gt;&lt;li&gt;Amount received&lt;/li&gt;&lt;/ul&gt;" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;strokeColor=#F00C0C;" vertex="1" parent="1">
-                    <mxGeometry x="600" y="60" width="200" height="180" as="geometry"/>
-                </mxCell>
-                <mxCell id="57" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=2;endArrow=ERmany;endFill=0;endSize=14;" edge="1" parent="1" source="51" target="55">
-                    <mxGeometry relative="1" as="geometry">
-                        <Array as="points">
-                            <mxPoint x="320" y="560"/>
-                        </Array>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="58" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=2;endArrow=ERmany;endFill=0;endSize=10;" edge="1" parent="1" source="51" target="53">
+                <mxCell id="45" value="One To Many" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="9" target="36">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="51" value="&#10;&#10;&lt;span style=&quot;color: rgb(240, 240, 240); font-family: helvetica; font-size: 12px; font-style: normal; font-weight: 400; letter-spacing: normal; text-align: center; text-indent: 0px; text-transform: none; word-spacing: 0px; background-color: rgb(42, 42, 42); display: inline; float: none;&quot;&gt;donors&lt;/span&gt;&lt;br style=&quot;color: rgb(240, 240, 240); font-family: helvetica; font-size: 12px; font-style: normal; font-weight: 400; letter-spacing: normal; text-align: center; text-indent: 0px; text-transform: none; word-spacing: 0px; background-color: rgb(42, 42, 42);&quot;&gt;&lt;br style=&quot;color: rgb(240, 240, 240); font-family: helvetica; font-size: 12px; font-style: normal; font-weight: 400; letter-spacing: normal; text-align: center; text-indent: 0px; text-transform: none; word-spacing: 0px; background-color: rgb(42, 42, 42);&quot;&gt;&lt;ul style=&quot;color: rgb(240, 240, 240); font-family: helvetica; font-size: 12px; font-style: normal; font-weight: 400; letter-spacing: normal; text-align: center; text-indent: 0px; text-transform: none; word-spacing: 0px; background-color: rgb(42, 42, 42);&quot;&gt;&lt;li style=&quot;padding: 3px 0px&quot;&gt;type&lt;/li&gt;&lt;li style=&quot;padding: 3px 0px&quot;&gt;price&lt;/li&gt;&lt;li style=&quot;padding: 3px 0px&quot;&gt;contact&lt;/li&gt;&lt;/ul&gt;&#10;&#10;" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;strokeColor=#8FF08B;" vertex="1" parent="1">
-                    <mxGeometry x="230" y="280" width="180" height="160" as="geometry"/>
+                <mxCell id="46" style="edgeStyle=none;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="9" target="19">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="30" y="270" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="50" y="210"/>
+                        </Array>
+                    </mxGeometry>
                 </mxCell>
-                <mxCell id="53" value="&#10;&#10;&lt;span style=&quot;color: rgb(240, 240, 240); font-family: helvetica; font-size: 12px; font-style: normal; font-weight: 400; letter-spacing: normal; text-align: center; text-indent: 0px; text-transform: none; word-spacing: 0px; background-color: rgb(42, 42, 42); display: inline; float: none;&quot;&gt;Payments&lt;/span&gt;&lt;br style=&quot;color: rgb(240, 240, 240); font-family: helvetica; font-size: 12px; font-style: normal; font-weight: 400; letter-spacing: normal; text-align: center; text-indent: 0px; text-transform: none; word-spacing: 0px; background-color: rgb(42, 42, 42);&quot;&gt;&lt;br style=&quot;color: rgb(240, 240, 240); font-family: helvetica; font-size: 12px; font-style: normal; font-weight: 400; letter-spacing: normal; text-align: center; text-indent: 0px; text-transform: none; word-spacing: 0px; background-color: rgb(42, 42, 42);&quot;&gt;&lt;ul style=&quot;color: rgb(240, 240, 240); font-family: helvetica; font-size: 12px; font-style: normal; font-weight: 400; letter-spacing: normal; text-align: center; text-indent: 0px; text-transform: none; word-spacing: 0px; background-color: rgb(42, 42, 42);&quot;&gt;&lt;li style=&quot;padding: 3px 0px&quot;&gt;the amount&lt;/li&gt;&lt;/ul&gt;&#10;&#10;" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;strokeColor=#009900;" vertex="1" parent="1">
-                    <mxGeometry x="600" y="290" width="160" height="140" as="geometry"/>
+                <mxCell id="51" value="One To One" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="46">
+                    <mxGeometry x="0.0184" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
                 </mxCell>
-                <mxCell id="55" value="&#10;&#10;&lt;span style=&quot;color: rgb(240, 240, 240); font-family: helvetica; font-size: 12px; font-style: normal; font-weight: 400; letter-spacing: normal; text-align: center; text-indent: 0px; text-transform: none; word-spacing: 0px; background-color: rgb(42, 42, 42); display: inline; float: none;&quot;&gt;Students&lt;/span&gt;&lt;br style=&quot;color: rgb(240, 240, 240); font-family: helvetica; font-size: 12px; font-style: normal; font-weight: 400; letter-spacing: normal; text-align: center; text-indent: 0px; text-transform: none; word-spacing: 0px; background-color: rgb(42, 42, 42);&quot;&gt;&lt;br style=&quot;color: rgb(240, 240, 240); font-family: helvetica; font-size: 12px; font-style: normal; font-weight: 400; letter-spacing: normal; text-align: center; text-indent: 0px; text-transform: none; word-spacing: 0px; background-color: rgb(42, 42, 42);&quot;&gt;&lt;ul style=&quot;color: rgb(240, 240, 240); font-family: helvetica; font-size: 12px; font-style: normal; font-weight: 400; letter-spacing: normal; text-align: center; text-indent: 0px; text-transform: none; word-spacing: 0px; background-color: rgb(42, 42, 42);&quot;&gt;&lt;li style=&quot;padding: 3px 0px&quot;&gt;Department&lt;/li&gt;&lt;li style=&quot;padding: 3px 0px&quot;&gt;Study type&lt;br&gt;&lt;/li&gt;&lt;li style=&quot;padding: 3px 0px&quot;&gt;Stage&lt;/li&gt;&lt;li style=&quot;padding: 3px 0px&quot;&gt;Division&lt;/li&gt;&lt;/ul&gt;&#10;&#10;" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;strokeColor=#009900;fillColor=default;" vertex="1" parent="1">
-                    <mxGeometry x="600" y="480" width="160" height="160" as="geometry"/>
+                <mxCell id="9" value="Users&lt;br&gt;&lt;br&gt;&lt;ul&gt;&lt;li&gt;type&lt;/li&gt;&lt;li&gt;contact&lt;/li&gt;&lt;span&gt;&amp;nbsp;&lt;/span&gt;&lt;/ul&gt;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry y="10" width="120" height="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="Students&lt;br&gt;&lt;br&gt;&lt;ul&gt;&lt;li&gt;Department&lt;/li&gt;&lt;li&gt;Study type&lt;br&gt;&lt;/li&gt;&lt;li&gt;Stage&lt;/li&gt;&lt;li&gt;Division&lt;/li&gt;&lt;/ul&gt;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="170" y="210" width="120" height="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="28" value="Cases&lt;br&gt;&lt;br&gt;&lt;ul&gt;&lt;li&gt;title&lt;/li&gt;&lt;li&gt;description&lt;/li&gt;&lt;li&gt;image&lt;/li&gt;&lt;li&gt;details file&lt;/li&gt;&lt;li&gt;target&lt;/li&gt;&lt;li&gt;received_price&lt;/li&gt;&lt;/ul&gt;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="440" y="80" width="140" height="190" as="geometry"/>
+                </mxCell>
+                <mxCell id="36" value="Payments&lt;br&gt;&lt;br&gt;&lt;ul&gt;&lt;li&gt;user_id&lt;/li&gt;&lt;li&gt;price&lt;/li&gt;&lt;/ul&gt;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="240" y="25" width="120" height="110" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
