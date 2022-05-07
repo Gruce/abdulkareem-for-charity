@@ -18,8 +18,8 @@ module.exports = {
                 'main': 'calc(100vh - 11.625rem)',
             },
             fontFamily: {
-                'noto': ['Noto Sans Arabic', 'sans-serif']
-                
+                'noto': ['Noto Sans Arabic', 'sans-serif'],
+                'Kufi':['Reem Kufi','sans-serif'],
             },
             colors: {
                 primary: {
