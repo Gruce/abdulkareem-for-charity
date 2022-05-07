@@ -8,7 +8,7 @@
                         اسم الحالة
 
                     </label>
-                    <input required wire:model.lazy="movie.name" type="text" id="name"
+                    <input required wire:model.lazy="title" type="text" id="name"
                         class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-1/3 p-2.5"
                         placeholder="اسم الحالة">
 
@@ -18,7 +18,7 @@
                     <label for="name" class=" block mb-2 text-sm font-medium text-gray-900">
                         صورة الحالة
                     </label>
-                    <input required wire:model.lazy="movie.name" type="file" id="name"
+                    <input required wire:model.lazy="image_path" type="file" id="name"
                         class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-1/3 p-2.5"
                         placeholder="صورة الحالة">
 
@@ -29,7 +29,7 @@
                         مستمسكات شخصية
 
                     </label>
-                    <input required wire:model.lazy="movie.name" type="file" id="name"
+                    <input required wire:model.lazy="file_path" type="file" id="name"
                         class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-1/3 p-2.5"
                         placeholder="مستمسكات شخصية">
 
@@ -40,7 +40,7 @@
                         الهدف
 
                     </label>
-                    <input required wire:model.lazy="movie.name" type="text" id="name"
+                    <input required wire:model.lazy="target" type="number" 
                         class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-1/3 p-2.5"
                         placeholder="الهدف">
 
@@ -63,7 +63,7 @@
                         الوصف
 
                     </label>
-                    <textarea required wire:model.lazy="movie.description" id="message" rows="4"
+                    <textarea required wire:model.lazy="description" id="message" rows="4"
                         class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:shadow-sm-light"
                         placeholder="الوصف..."></textarea>
                 </div>

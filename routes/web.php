@@ -31,7 +31,6 @@ Route::get('/about', About::class)->name('about');
 
 
 
-
 // // Cases
 Route::get('/cases', CaseMain::class)->name('cases');
 Route::get('/add-case', CaseAdd::class)->name('add-case');
