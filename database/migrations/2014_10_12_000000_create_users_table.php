@@ -23,6 +23,8 @@ return new class extends Migration
             $table->foreignId('current_team_id')->nullable();
             $table->string('profile_photo_path', 2048)->nullable();
             $table->boolean('is_admin')->default(0);
+            $table->string('phone_number');
+            $table->integer('user_type')->default(0);   ### Student: 0 , Teacher: 1, Employees:2, Other: 3 ... ###
             $table->timestamps();
         });
     }
