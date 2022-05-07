@@ -44,12 +44,21 @@ class UserSeeder extends Seeder
             'type' => 3
         ]);
 
+        // id:4
+        User::create([
+            'name' => 'Mosa',
+            'email' => 'mosa@gmail.com',
+            'password' => bcrypt('123456'),
+            'is_admin' => true,
+            'type' => 4
+        ]);
+
 
         ### end admin ###
 
         ### User ### 
 
-        // id:4 
+        // id:5 
         User::create([
             'name' => 'Mohammed',
             'email' => 'mohammed@gmail.com',
@@ -58,7 +67,7 @@ class UserSeeder extends Seeder
             'type' => 1
         ]);
 
-        // id:5 
+        // id:6 
         User::create([
             'name' => 'Zainab',
             'email' => 'zainab@gmail.com',
@@ -67,7 +76,7 @@ class UserSeeder extends Seeder
             'type' => 2
         ]);
 
-        // id:6 
+        // id:7
         User::create([
             'name' => 'Ahmed',
             'email' => 'ahmed@gmail.com',
@@ -76,10 +85,10 @@ class UserSeeder extends Seeder
             'type' => 3
         ]);
 
-        // id:7
+        // id:8
         User::create([
-            'name' => 'Fatima',
-            'email' => 'fatima@gmail.com',
+            'name' => 'Fatma',
+            'email' => 'fatma@gmail.com',
             'password' => bcrypt('123456'),
             //Default User
             'type' => 4
