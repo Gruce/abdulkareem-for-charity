@@ -7,14 +7,14 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Livewire\Pages\{
     Home\Main as Home,
     About\Main as About,
-    Cases\Main as CaseMain
+    Cases\Main as CaseMain,
+    Profile\Main as Profile,
+    Profile\Basic as ProfileBasic,
 };
 
 use App\Http\Livewire\Pages\Cases\{
     Admin\Add as CaseAdd,
 };
-    
-
 
 
 /*****************************************************************/
@@ -32,6 +32,16 @@ Route::get('/about', About::class)->name('about');
 
 
 
-// // Cases
+// Cases
 Route::get('/cases', CaseMain::class)->name('cases');
 Route::get('/add-case', CaseAdd::class)->name('add-case');
+
+
+
+Route::middleware(['auth:sanctum'])->group(function () {
+    
+    //Profile
+
+    Route::get('/profile' , Profile::class)->name('profile');
+    Route::get('/basic' , ProfileBasic::class)->name('basic');
+});
