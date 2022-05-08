@@ -9,14 +9,19 @@ class StudentInfo extends Component
 {
     use LivewireAlert;
     
+    
+
     protected $rules = [
         'department' => 'required',
         'study_type' => 'required',
+        'stage' => 'required',
     ];
+
+    
     public  function edit(){
         $this->validate();
 
-        $this->user->edit([
+        $this->user->student->edit([
             'department' => $this->department,
             'study_type' => $this->study_type,
             'stage' => $this->stage,

@@ -90,7 +90,6 @@ class User extends Authenticatable
         $this->fill($data);
         $this->save();
     }
-
     // public function addProfile($file , $type = null){
     //     $type = $type ?? 'student';
     //     $ext = $file->extension();
@@ -99,4 +98,6 @@ class User extends Authenticatable
     //     $this->profile_photo_path = 'storage/' . $type . '/profile/'.$this->id.'/'.$name;
     //     $this->save();
     // }
+    
+    
 }
