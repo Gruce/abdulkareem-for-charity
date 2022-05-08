@@ -87,8 +87,8 @@
                 @endforeach
             </ul>
         </div>
-
-        <div class="flex gap-4">
+        
+        <div class="flex gap-4 @auth @else hidden @endauth">
             @admin
             <div>
                 <button type="button"
@@ -98,7 +98,7 @@
             </div>
             @endadmin
 
-            @auth
+
             <form method="POST" action="{{ route('logout') }}" x-data>
                 @csrf
                 <button wire:click="{{ route('logout') }}" type="link"
@@ -107,8 +107,9 @@
 
 
             </form>
-            @endauth
+
         </div>
+        
         {{-- Pages in Mobile --}}
         <div x-data="{ isOpen: false }" class="block md:hidden">
             <button class="px-4 py-3 mx-2 rounded focus:outline-none hover:bg-gray-200 group"
