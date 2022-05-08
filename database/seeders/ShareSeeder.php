@@ -4,9 +4,8 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use App\Models\Payment;
-
-class PaymentSeeder extends Seeder
+use App\Models\Share;
+class ShareSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -15,46 +14,47 @@ class PaymentSeeder extends Seeder
      */
     public function run()
     {
-        // id:1
-        Payment::create([
+         // id:1
+        Share::create([
             'user_id' => 1,
-            'price' => 5000,
+            'share' => 5,
         ]);
 
         // id:2
-        Payment::create([
+        Share::create([
             'user_id' => 1,
-            'price' => 10000,
+            'share' => 1,
         ]);
 
         // id:3
-        Payment::create([
+        Share::create([
             'user_id' => 2,
-            'price' => 12000,
+            'share' => 12,
         ]);
 
         // id:4
-        Payment::create([
+        Share::create([
             'user_id' => 2,
-            'price' => 15000,
+            'share' => 15,
         ]);
 
         // id:5
-        Payment::create([
+        Share::create([
             'user_id' => 2,
-            'price' => 20000,
+            'share' => 20,
         ]);
 
         // id:6
-        Payment::create([
+        Share::create([
             'user_id' => 5,
-            'price' => 20000,
+            'share' => 20,
         ]);
 
         // id:7
-        Payment::create([
+        Share::create([
             'user_id' => 6,
-            'price' => 20000,
+            'share' => 20,
         ]);
     }
 }
+

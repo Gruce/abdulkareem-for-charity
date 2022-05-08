@@ -79,9 +79,9 @@ class User extends Authenticatable
         return $this->hasOne(Student::class);
     }
 
-    public function payments()
+    public function shares()
     {
-        return $this->hasMany(Payment::class);
+        return $this->hasMany(Share::class);
     }
 
     ### End Relationships ###
