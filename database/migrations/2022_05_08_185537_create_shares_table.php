@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('shares', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->nullable()->constrained('users')->onDelete('cascade');
-            $table->integer('share');
+            $table->integer('share')->default(0);
             $table->text('notes')->nullable();
             $table->timestamps();
         });
