@@ -1,6 +1,8 @@
 <!-- Add Case -->
+<form wire:submit.prevent="add">
 <div class="flex h-auto items-center justify-center">
-    <form wire:submit.prevent="add">
+    
+    
         <div class="grid rounded-lg w-full">
             <div class="flex justify-center">
                 <div class="flex bg-primary-200 rounded-full md:p-2 p-2 border-2 border-primary-300">
@@ -17,7 +19,7 @@
             <div class="grid grid-cols-1 mt-5 mx-7">
                 <label class="md:text-sm text-xs text-gray-700 text-light font-semibold">عنوان الحالة</label>
                 <input wire:model.lazy="title"
-                    class="py-2 px-3 rounded-lg border-2 border-primary-500 mt-1 focus:outline-none focus:ring-2 focus:ring-primary-600 focus:border-transparent"
+                    class="py-2 px-3 rounded-lg border-2 border-gray-200 mt-1 focus:outline-none focus:ring-2 focus:ring-primary-100 focus:border-transparent"
                     type="text" placeholder="عنوان الحالة" />
             </div>
 
@@ -27,7 +29,7 @@
                     <label class="w-full md:text-sm text-xs text-gray-700 text-light font-semibold">المبلغ
                         الكلي</label>
                     <input wire:model.lazy="target"
-                        class="w-full py-2 px-3 rounded-lg border-2 border-primary-500 mt-1 focus:outline-none focus:ring-2 focus:ring-primary-600 focus:border-transparent"
+                        class="w-full py-2 px-3 rounded-lg border-2 border-gray-200 mt-1 focus:outline-none focus:ring-2 focus:ring-primary-100 focus:border-transparent"
                         type="number" placeholder="المبلغ الكلي" />
                 </div>
 
@@ -36,7 +38,7 @@
                     <label class="w-full md:text-sm text-xs text-gray-700 text-light font-semibold">المبلغ
                         الواصل</label>
                     <input
-                        class="w-full py-2 px-3 rounded-lg border-2 border-primary-500 mt-1 focus:outline-none focus:ring-2 focus:ring-primary-600 focus:border-transparent"
+                        class="w-full py-2 px-3 rounded-lg border-2 border-gray-200 mt-1 focus:outline-none focus:ring-2 focus:ring-primary-100 focus:border-transparent"
                         type="number" placeholder="المبلغ الواصل" />
                 </div>
             </div>
@@ -45,7 +47,7 @@
             <div class="grid grid-cols-1 mt-5 mx-7">
                 <label class="md:text-sm text-xs text-gray-700 text-light font-semibold">تفاصيل الحالة</label>
                 <textarea wire:model.lazy="description"
-                    class="py-2 px-3 rounded-lg h-32 border-2 border-primary-500 mt-1 focus:outline-none focus:ring-2 focus:ring-primary-600 focus:border-transparent"
+                    class="py-2 px-3 rounded-lg h-32 border-2 border-gray-200 mt-1 focus:outline-none focus:ring-2 focus:ring-primary-100 focus:border-transparent"
                     type="text"></textarea>
             </div>
 
@@ -88,9 +90,9 @@
             {{-- Button --}}
             <div class="flex items-center justify-center  md:gap-8 gap-4 pt-7 pb-7">
                 <button type="submit"
-                    class="w-auto bg-primary-500 hover:bg-primary-600 rounded-lg shadow-md hover:shadow-xl hover:scale-105 font-medium text-white px-4 py-2">أضف</button>
+                    class="w-auto bg-primary-400 hover:bg-primary-500 rounded-lg shadow-md hover:shadow-xl hover:scale-105 font-medium text-white px-4 py-2">أضف</button>
             </div>
 
         </div>
-    </form>
 </div>
+</form>

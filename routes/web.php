@@ -9,7 +9,8 @@ use App\Http\Livewire\Pages\{
     About\Main as About,
     Cases\Main as CaseMain,
     Profile\Main as Profile,
-    Profile\Basic as ProfileBasic,
+    Donate\Main as Donate,
+    
 };
 
 use App\Http\Livewire\Pages\Cases\{
@@ -42,5 +43,8 @@ Route::middleware(['auth:sanctum'])->group(function () {
     //Profile
 
     Route::get('/profile' , Profile::class)->name('profile');
-    Route::get('/basic' , ProfileBasic::class)->name('basic');
+
+    // donate
+    Route::get('/donate' , Donate::class)->name('donate');
+   
 });
