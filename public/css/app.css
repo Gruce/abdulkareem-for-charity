@@ -1021,6 +1021,15 @@ select{
 }
 .ml-14{
   margin-left: 3.5rem;
+<<<<<<< Updated upstream
+=======
+}
+.-mt-px{
+  margin-top: -1px;
+}
+.mt-32{
+  margin-top: 8rem;
+>>>>>>> Stashed changes
 }
 .-mt-px{
   margin-top: -1px;
@@ -1160,6 +1169,15 @@ select{
 .w-40{
   width: 10rem;
 }
+<<<<<<< Updated upstream
+=======
+.w-5\/6{
+  width: 83.333333%;
+}
+.w-1\/3{
+  width: 33.333333%;
+}
+>>>>>>> Stashed changes
 .min-w-0{
   min-width: 0px;
 }
@@ -1257,6 +1275,14 @@ select{
 }
 .grid-cols-12{
   grid-template-columns: repeat(12, minmax(0, 1fr));
+}
+<<<<<<< Updated upstream
+.grid-rows-4{
+  grid-template-rows: repeat(4, minmax(0, 1fr));
+=======
+.grid-cols-none{
+  grid-template-columns: none;
+>>>>>>> Stashed changes
 }
 .grid-rows-4{
   grid-template-rows: repeat(4, minmax(0, 1fr));
@@ -1447,17 +1473,16 @@ select{
   --tw-border-opacity: 1;
   border-color: rgb(243 244 246 / var(--tw-border-opacity));
 }
+<<<<<<< Updated upstream
 .border-primary-300{
-  --tw-border-opacity: 1;
-  border-color: rgb(76 206 196 / var(--tw-border-opacity));
-}
+=======
 .border-primary-500{
   --tw-border-opacity: 1;
   border-color: rgb(0 185 172 / var(--tw-border-opacity));
 }
 .border-primary-100{
   --tw-border-opacity: 1;
-  border-color: rgb(153 227 221 / var(--tw-border-opacity));
+  border-color: rgb(204 255 251 / var(--tw-border-opacity));
 }
 .border-gray-600{
   --tw-border-opacity: 1;
@@ -1467,6 +1492,34 @@ select{
   --tw-border-opacity: 1;
   border-color: rgb(156 163 175 / var(--tw-border-opacity));
 }
+.border-blue-300{
+>>>>>>> Stashed changes
+  --tw-border-opacity: 1;
+  border-color: rgb(76 206 196 / var(--tw-border-opacity));
+}
+<<<<<<< Updated upstream
+.border-primary-500{
+  --tw-border-opacity: 1;
+  border-color: rgb(0 185 172 / var(--tw-border-opacity));
+}
+.border-primary-100{
+=======
+.border-purple-300{
+>>>>>>> Stashed changes
+  --tw-border-opacity: 1;
+  border-color: rgb(153 227 221 / var(--tw-border-opacity));
+}
+.border-gray-600{
+  --tw-border-opacity: 1;
+  border-color: rgb(75 85 99 / var(--tw-border-opacity));
+}
+<<<<<<< Updated upstream
+.border-gray-400{
+  --tw-border-opacity: 1;
+  border-color: rgb(156 163 175 / var(--tw-border-opacity));
+}
+=======
+>>>>>>> Stashed changes
 .bg-white{
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
@@ -1519,6 +1572,7 @@ select{
   --tw-bg-opacity: 1;
   background-color: rgb(29 78 216 / var(--tw-bg-opacity));
 }
+<<<<<<< Updated upstream
 .bg-primary-200{
   --tw-bg-opacity: 1;
   background-color: rgb(102 213 205 / var(--tw-bg-opacity));
@@ -1537,6 +1591,22 @@ select{
 }
 .bg-gray-600{
   --tw-bg-opacity: 1;
+=======
+.bg-primary-500{
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 185 172 / var(--tw-bg-opacity));
+}
+.bg-primary-100{
+  --tw-bg-opacity: 1;
+  background-color: rgb(204 255 251 / var(--tw-bg-opacity));
+}
+.bg-purple-700{
+  --tw-bg-opacity: 1;
+  background-color: rgb(126 34 206 / var(--tw-bg-opacity));
+}
+.bg-gray-600{
+  --tw-bg-opacity: 1;
+>>>>>>> Stashed changes
   background-color: rgb(75 85 99 / var(--tw-bg-opacity));
 }
 .bg-blue-800{
@@ -1548,8 +1618,21 @@ select{
   background-color: rgb(21 128 61 / var(--tw-bg-opacity));
 }
 .bg-blue-600{
+<<<<<<< Updated upstream
   --tw-bg-opacity: 1;
   background-color: rgb(37 99 235 / var(--tw-bg-opacity));
+=======
+  --tw-bg-opacity: 1;
+  background-color: rgb(37 99 235 / var(--tw-bg-opacity));
+}
+.bg-black{
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+.bg-indigo-200{
+  --tw-bg-opacity: 1;
+  background-color: rgb(199 210 254 / var(--tw-bg-opacity));
+>>>>>>> Stashed changes
 }
 .bg-black{
   --tw-bg-opacity: 1;
@@ -1746,6 +1829,12 @@ select{
 }
 .pb-12{
   padding-bottom: 3rem;
+<<<<<<< Updated upstream
+=======
+}
+.pt-8{
+  padding-top: 2rem;
+>>>>>>> Stashed changes
 }
 .pt-8{
   padding-top: 2rem;
@@ -1918,7 +2007,11 @@ select{
 }
 .text-primary-100{
   --tw-text-opacity: 1;
+<<<<<<< Updated upstream
   color: rgb(153 227 221 / var(--tw-text-opacity));
+=======
+  color: rgb(204 255 251 / var(--tw-text-opacity));
+>>>>>>> Stashed changes
 }
 .text-primary-500{
   --tw-text-opacity: 1;
@@ -2111,7 +2204,11 @@ select{
 }
 .hover\:bg-primary-600:hover{
   --tw-bg-opacity: 1;
+<<<<<<< Updated upstream
   background-color: rgb(0 166 154 / var(--tw-bg-opacity));
+=======
+  background-color: rgb(0 128 128 / var(--tw-bg-opacity));
+>>>>>>> Stashed changes
 }
 .hover\:bg-purple-800:hover{
   --tw-bg-opacity: 1;
@@ -2126,6 +2223,13 @@ select{
   background-color: rgb(219 234 254 / var(--tw-bg-opacity));
 }
 .hover\:bg-indigo-700:hover{
+<<<<<<< Updated upstream
+=======
+  --tw-bg-opacity: 1;
+  background-color: rgb(67 56 202 / var(--tw-bg-opacity));
+}
+.hover\:bg-blue-700:hover{
+>>>>>>> Stashed changes
   --tw-bg-opacity: 1;
   background-color: rgb(67 56 202 / var(--tw-bg-opacity));
 }
@@ -2152,6 +2256,7 @@ select{
   --tw-text-opacity: 1;
   color: rgb(17 24 39 / var(--tw-text-opacity));
 }
+<<<<<<< Updated upstream
 .hover\:text-primary-300:hover{
   --tw-text-opacity: 1;
   color: rgb(76 206 196 / var(--tw-text-opacity));
@@ -2159,6 +2264,11 @@ select{
 .hover\:text-primary-100:hover{
   --tw-text-opacity: 1;
   color: rgb(153 227 221 / var(--tw-text-opacity));
+=======
+.hover\:text-primary-100:hover{
+  --tw-text-opacity: 1;
+  color: rgb(204 255 251 / var(--tw-text-opacity));
+>>>>>>> Stashed changes
 }
 .hover\:text-primary-500:hover{
   --tw-text-opacity: 1;
@@ -2208,6 +2318,13 @@ select{
   border-color: transparent;
 }
 .focus\:border-blue-200:focus{
+<<<<<<< Updated upstream
+=======
+  --tw-border-opacity: 1;
+  border-color: rgb(191 219 254 / var(--tw-border-opacity));
+}
+.focus\:border-gray-500:focus{
+>>>>>>> Stashed changes
   --tw-border-opacity: 1;
   border-color: rgb(191 219 254 / var(--tw-border-opacity));
 }
@@ -2303,6 +2420,17 @@ select{
   --tw-ring-color: rgb(0 166 154 / var(--tw-ring-opacity));
 }
 .focus\:ring-purple-300:focus{
+<<<<<<< Updated upstream
+=======
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(216 180 254 / var(--tw-ring-opacity));
+}
+.focus\:ring-green-300:focus{
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(134 239 172 / var(--tw-ring-opacity));
+}
+.focus\:ring-gray-500:focus{
+>>>>>>> Stashed changes
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(216 180 254 / var(--tw-ring-opacity));
 }
@@ -2347,6 +2475,10 @@ select{
 .group:hover .group-hover\:text-gray-600{
   --tw-text-opacity: 1;
   color: rgb(75 85 99 / var(--tw-text-opacity));
+}
+.group:hover .group-hover\:text-blue-600{
+  --tw-text-opacity: 1;
+  color: rgb(37 99 235 / var(--tw-text-opacity));
 }
 .group:focus .group-focus\:right-0{
   right: 0px;
@@ -2679,6 +2811,19 @@ select{
   }
   .md\:p-2{
     padding: 0.5rem;
+  }
+<<<<<<< Updated upstream
+  .md\:px-4{
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .md\:py-2{
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+=======
+  .md\:p-4{
+    padding: 1rem;
+>>>>>>> Stashed changes
   }
   .md\:px-4{
     padding-left: 1rem;
