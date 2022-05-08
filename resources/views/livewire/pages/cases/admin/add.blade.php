@@ -59,7 +59,7 @@
                             <p class="text-sm text-gray-400 group-hover:text-gray-600 pt-1 tracking-wide">
                                 اختر صورة</p>
                         </div>
-                        <input type="file" class="hidden" />
+                        <input wire:model.lazy="image_path" type="file" class="hidden" />
                     </label>
                 </div>
             </div>
