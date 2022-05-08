@@ -15,7 +15,7 @@
         {{-- Case Name --}}
         <div class="grid grid-cols-1 mt-5 mx-7">
             <label class="md:text-sm text-xs text-gray-700 text-light font-semibold">عنوان الحالة</label>
-            <input
+            <input wire:model.lazy="title"
                 class="py-2 px-3 rounded-lg border-2 border-primary-500 mt-1 focus:outline-none focus:ring-2 focus:ring-primary-600 focus:border-transparent"
                 type="text" placeholder="عنوان الحالة" />
         </div>
