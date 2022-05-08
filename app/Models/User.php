@@ -98,13 +98,6 @@ class User extends Authenticatable
     //     $this->profile_photo_path = 'storage/' . $type . '/profile/'.$this->id.'/'.$name;
     //     $this->save();
     // }
-    public function addProfile($file , $type = 1){
-        $type = $type == 1 ? 'images' : 'files';
-        $ext = $file->extension();
-        $name = \Str::random(10).'.'.$ext;
-        $file->storeAs('public/event'. $type . '/profile/'. $this->id .'/' ,$name);
-        $this->profile_photo_path = 'storage/event' . $type . '/profile/'.$this->id.'/'.$name;
-        $this->save();
-    }
+    
     
 }
