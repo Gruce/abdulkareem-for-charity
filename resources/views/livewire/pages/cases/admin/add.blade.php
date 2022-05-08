@@ -25,7 +25,7 @@
             <div class="w-1/2 grid grid-cols-1 mt-5 mx-7">
                 <label class="w-full md:text-sm text-xs text-gray-700 text-light font-semibold">المبلغ
                     الكلي</label>
-                <input
+                <input wire:model.lazy="target"
                     class="w-full py-2 px-3 rounded-lg border-2 border-primary-500 mt-1 focus:outline-none focus:ring-2 focus:ring-primary-600 focus:border-transparent"
                     type="number" placeholder="المبلغ الكلي" />
             </div>
