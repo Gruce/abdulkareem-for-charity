@@ -85,4 +85,18 @@ class User extends Authenticatable
     }
 
     ### End Relationships ###
+
+    public function edit($data)    {
+        $this->fill($data);
+        $this->save();
+    }
+
+    // public function addProfile($file , $type = null){
+    //     $type = $type ?? 'student';
+    //     $ext = $file->extension();
+    //     $name=\Str::random(10).'.'.$ext;
+    //     $file->storeAs('public/'. $type . '/profile/'. $this->id .'/' ,$name);
+    //     $this->profile_photo_path = 'storage/' . $type . '/profile/'.$this->id.'/'.$name;
+    //     $this->save();
+    // }
 }
