@@ -12,13 +12,13 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@300&display=swap" >
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@300&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Reem+Kufi&display=swap">
     <!-- Styles -->
     <link rel="stylesheet" href="https://unpkg.com/flowbite@1.4.4/dist/flowbite.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
 
     @livewireStyles
@@ -35,7 +35,7 @@
         <!-- Page Content -->
         <main class="p-10 mt-5 overflow-y-auto bg-gray-100 rounded-lg md:h-main">
             @hasSection('title')
-                <p class="px-5 py-2 text-3xl font-bold text-gray-600 bg-gray-200 rounded-lg">@yield('title')</p>
+            <p class="px-5 py-2 text-3xl font-bold text-gray-600 bg-gray-200 rounded-lg">@yield('title')</p>
             @endif
             <div>
                 {{ $slot }}
@@ -46,6 +46,8 @@
     @stack('modals')
 
     @livewireScripts
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <x-livewire-alert::scripts />
     <script src="//unpkg.com/alpinejs" defer></script>
     <script src="https://unpkg.com/flowbite@1.4.4/dist/flowbite.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js"

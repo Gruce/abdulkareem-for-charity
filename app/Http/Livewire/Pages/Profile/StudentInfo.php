@@ -1,13 +1,46 @@
 <?php
 
 namespace App\Http\Livewire\Pages\Profile;
+use Jantinnerezo\LivewireAlert\LivewireAlert;
 
 use Livewire\Component;
 
 class StudentInfo extends Component
 {
+    use LivewireAlert;
+    
+    protected $rules = [
+        'department' => 'required',
+        'study_type' => 'required',
+    ];
+    public  function edit(){
+        $this->validate();
+
+        $this->user->edit([
+            'department' => $this->department,
+            'study_type' => $this->study_type,
+            'stage' => $this->stage,
+            'division' => $this->division,
+
+        ]);
+
+        $this->alert('success', 'Done!', [
+            'position' => 'top-start',
+            'timer' => 3000,
+            'toast' => true,
+        ]);   
+    }
+    public function mount($user){
+        $this->user = $user;
+        $this->department = $this->user->student->department;
+        $this->study_type = $this->user->student->study_type;
+        $this->stage = $this->user->student->stage;
+        $this->division = $this->user->student->division;
+    }
+
     public function render()
     {
+        
         return view('livewire.pages.profile.student-info');
     }
 }
