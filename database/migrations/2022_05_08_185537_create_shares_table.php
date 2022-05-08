@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('user_id')->nullable()->constrained('users')->onDelete('cascade');
             $table->integer('share')->default(0);
-            $table->text('notes')->nullable();
+            $table->text('note')->nullable();
             $table->timestamps();
         });
     }

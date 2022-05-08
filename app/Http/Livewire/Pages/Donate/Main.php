@@ -11,7 +11,8 @@ class Main extends Component
 
     public function save()
     {
-        Share::add($this->share, $this->note);
+        $donate = new Share;
+        $donate->add($this->share, $this->note);
     }
 
     public function render()
