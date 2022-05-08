@@ -87,7 +87,7 @@
                 @endforeach
             </ul>
         </div>
-        
+
         <div class="flex gap-4 @auth @else hidden @endauth">
             @admin
             <div>
@@ -109,7 +109,7 @@
             </form>
 
         </div>
-        
+
         {{-- Pages in Mobile --}}
         <div x-data="{ isOpen: false }" class="block md:hidden">
             <button class="px-4 py-3 mx-2 rounded focus:outline-none hover:bg-gray-200 group"
