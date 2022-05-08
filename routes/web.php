@@ -9,7 +9,9 @@ use App\Http\Livewire\Pages\{
     About\Main as About,
     Cases\Main as CaseMain,
     Profile\Main as Profile,
-    Profile\Basic as ProfileBasic,
+    Donate\Main as Donate,
+    Donors\Main as Donors,
+    
 };
 
 use App\Http\Livewire\Pages\Cases\{
@@ -29,19 +31,23 @@ Route::get('/', Home::class)->name('home');
 // About
 Route::get('/about', About::class)->name('about');
 
+// donors
+Route::get('/donors' , Donors::class)->name('donors');
+
 
 
 
 // Cases
 Route::get('/cases', CaseMain::class)->name('cases');
-Route::get('/add-case', CaseAdd::class)->name('add-case');
-
-
 
 Route::middleware(['auth:sanctum'])->group(function () {
-    
+    Route::middleware(['admin'])->group(function (){
+        Route::get('/add-case', CaseAdd::class)->name('add-case');
+    });
     //Profile
 
     Route::get('/profile' , Profile::class)->name('profile');
-    Route::get('/basic' , ProfileBasic::class)->name('basic');
+
+    // donate
+    Route::get('/donate' , Donate::class)->name('donate');
 });

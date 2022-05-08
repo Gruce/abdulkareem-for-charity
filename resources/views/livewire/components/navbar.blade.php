@@ -88,27 +88,32 @@
             </ul>
         </div>
 
-        <div class="flex gap-4">
+        <div class=" flex gap-4 @auth  @else hidden @endauth">
+            <div>
+                <a  href="{{ route('donate') }}"
+                    class="text-white bg-purple-700 hover:bg-purple-800 focus:outline-none focus:ring-4 focus:ring-purple-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mb-2 ">
+                    تبرع</a>
+
+            </div>
+            
             @admin
             <div>
-                <button type="button"
-                    class="text-white bg-purple-700 hover:bg-purple-800 focus:outline-none focus:ring-4 focus:ring-purple-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mb-2 ">Add
-                    Case</button>
+                <a  href="{{ route('add-case') }}"
+                    class="text-white bg-purple-700 hover:bg-purple-800 focus:outline-none focus:ring-4 focus:ring-purple-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mb-2 ">
+                    اضافة حالة</a>
 
             </div>
             @endadmin
 
-            @auth
+            
             <form method="POST" action="{{ route('logout') }}" x-data>
                 @csrf
-                <button wire:click="{{ route('logout') }}" type="link"
+                <button type="submit" 
                     class="text-white bg-purple-700 hover:bg-purple-800 focus:outline-none focus:ring-4 focus:ring-purple-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mb-2 "><i
                         class="fa-solid fa-right-from-bracket"></i> </button>
-
-
             </form>
-            @endauth
         </div>
+
         {{-- Pages in Mobile --}}
         <div x-data="{ isOpen: false }" class="block md:hidden">
             <button class="px-4 py-3 mx-2 rounded focus:outline-none hover:bg-gray-200 group"

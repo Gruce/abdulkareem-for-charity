@@ -66,7 +66,6 @@ class UserSeeder extends Seeder
             //Default User
             'type' => 1
         ]);
-
         // id:6 
         User::create([
             'name' => 'Zainab',

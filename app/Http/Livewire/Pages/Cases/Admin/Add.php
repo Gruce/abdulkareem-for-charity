@@ -3,32 +3,45 @@
 namespace App\Http\Livewire\Pages\Cases\Admin;
 
 use Livewire\Component;
-use App\Models\Case as CaseModel;
+use App\Models\Event;
+use Livewire\WithFileUploads;
+use Jantinnerezo\LivewireAlert\LivewireAlert;
+
 class Add extends Component
 {
-    public $title, $description, $image_path, $file_path, $target, $received_price;
+    use LivewireAlert;
+    use WithFileUploads;
+    public $title, $description, $image_path, $file_path, $target;
 
     protected $rules = [
         'title' => 'required',
         'target' => 'required',
-        'received_price' => 'required',
-        
     ];
 
     public function add()
     {
+        
         $this->validate();
         
-        CaseModel::create([
+        $data = [
             'title' => $this->title,
             'description' => $this->description,
-            // 'image_path' => $this->image_path,
-            // 'file_path' => $this->file_path,
             'target' => $this->target,
-            'received_price' => $this->received_price,
-        ]);
+
+        ];
+        $this->alert('success', 'Done!', [
+            'position' => 'top',
+            'timer' => 3000,
+            'toast' => true,
+        ]);   
+        $case = new Event();
+        $case->add($data);
+        $case->add_file($this->file_path, 2); // 2: file_path
+        $case->add_file($this->image_path); // 1: image_path default
         $this->reset();
+        
     }
+
 
     public function render()
     {
