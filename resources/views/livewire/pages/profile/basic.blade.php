@@ -38,6 +38,8 @@
                     <hr>
                 </div>
 
+
+                
                 <div class="form-item">
                     <label class="text-xl ">رقم الهاتف</label>
                     <input wire:model="phone_number" type="text"

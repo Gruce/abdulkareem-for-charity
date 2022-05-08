@@ -27,6 +27,8 @@
 
             </div>
 
+
+            
             <div x-show="isOpen"
                 class=" md:border-solid md:border-l md:border-black md:border-opacity-25 h-full pb-12 md:col-span-10">
                 @livewire('pages.profile.basic', ['user' => $user])
