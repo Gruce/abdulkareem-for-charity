@@ -1046,14 +1046,17 @@ select{
 .h-20{
   height: 5rem;
 }
-.h-screen{
-  height: 100vh;
+.h-auto{
+  height: auto;
 }
 .h-32{
   height: 8rem;
 }
 .h-1{
   height: 0.25rem;
+}
+.h-screen{
+  height: 100vh;
 }
 .h-40{
   height: 10rem;
@@ -1668,8 +1671,8 @@ select{
 .pt-7{
   padding-top: 1.75rem;
 }
-.pb-5{
-  padding-bottom: 1.25rem;
+.pb-7{
+  padding-bottom: 1.75rem;
 }
 .pt-8{
   padding-top: 2rem;
@@ -2073,6 +2076,11 @@ select{
   --tw-text-opacity: 1;
   color: rgb(0 185 172 / var(--tw-text-opacity));
 }
+.hover\:shadow-xl:hover{
+  --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
 .hover\:drop-shadow-lg:hover{
   --tw-drop-shadow: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
@@ -2235,10 +2243,6 @@ select{
 }
 .disabled\:opacity-25:disabled{
   opacity: 0.25;
-}
-.group:hover .group-hover\:text-primary-400{
-  --tw-text-opacity: 1;
-  color: rgb(128 255 245 / var(--tw-text-opacity));
 }
 .group:hover .group-hover\:text-gray-600{
   --tw-text-opacity: 1;
@@ -2523,8 +2527,8 @@ select{
   .md\:border-opacity-25{
     --tw-border-opacity: 0.25;
   }
-  .md\:p-4{
-    padding: 1rem;
+  .md\:p-2{
+    padding: 0.5rem;
   }
   .md\:px-10{
     padding-left: 2.5rem;
