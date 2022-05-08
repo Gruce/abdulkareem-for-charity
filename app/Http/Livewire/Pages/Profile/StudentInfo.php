@@ -2,7 +2,6 @@
 
 namespace App\Http\Livewire\Pages\Profile;
 use Jantinnerezo\LivewireAlert\LivewireAlert;
-
 use Livewire\Component;
 
 class StudentInfo extends Component
