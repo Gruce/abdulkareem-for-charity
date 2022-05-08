@@ -16,10 +16,12 @@ class StudentInfo extends Component
         'study_type' => 'required',
         'stage' => 'required',
     ];
+
+    
     public  function edit(){
         $this->validate();
 
-        $this->user->edit([
+        $this->user->student->edit([
             'department' => $this->department,
             'study_type' => $this->study_type,
             'stage' => $this->stage,
@@ -35,7 +37,7 @@ class StudentInfo extends Component
     }
     public function mount($user){
         $this->user = $user;
-        $this->department = $this->user->department;
+        $this->department = $this->user->student->department;
         $this->study_type = $this->user->student->study_type;
         $this->stage = $this->user->student->stage;
         $this->division = $this->user->student->division;

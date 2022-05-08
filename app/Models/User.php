@@ -90,13 +90,17 @@ class User extends Authenticatable
         $this->fill($data);
         $this->save();
     }
-
-    // public function addProfile($file , $type = null){
-    //     $type = $type ?? 'student';
-    //     $ext = $file->extension();
-    //     $name=\Str::random(10).'.'.$ext;
-    //     $file->storeAs('public/'. $type . '/profile/'. $this->id .'/' ,$name);
-    //     $this->profile_photo_path = 'storage/' . $type . '/profile/'.$this->id.'/'.$name;
-    //     $this->save();
-    // }
+    public function add_file($file, $type = 1)
+    {
+        $type = $type == 1 ? 'images' : 'files';
+        $ext = $file->extension();
+        $name = \Str::random(10) . '.' . $ext;
+        $file = $file->storeAs('public/event/' . $this->id . '/' . $type . '/' , $name);
+        if ($type == 'images') 
+            $this->profile_photo_path = $name;
+        else $this->file_path = $name;
+        
+        $this->save();
+    }
+    
 }

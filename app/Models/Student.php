@@ -24,5 +24,6 @@ class Student extends Model
         $this->fill($data);
         $this->save();
     }
+    
 
 }
