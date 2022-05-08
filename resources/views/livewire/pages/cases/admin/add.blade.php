@@ -83,7 +83,7 @@
         </div>
         {{-- Button --}}
         <div class="flex items-center justify-center  md:gap-8 gap-4 pt-7 pb-7">
-            <button
+            <button type="submit"
                 class="w-auto bg-primary-500 hover:bg-primary-600 rounded-lg shadow-md hover:shadow-xl hover:scale-105 font-medium text-white px-4 py-2">أضف</button>
         </div>
 
