@@ -32,10 +32,15 @@ class StudentInfo extends Component
     }
     public function mount($user){
         $this->user = $user;
+        if(auth()->user()->type == 1){
         $this->department = $this->user->student->department;
         $this->study_type = $this->user->student->study_type;
         $this->stage = $this->user->student->stage;
         $this->division = $this->user->student->division;
+        }
+        
+        
+        
     }
 
     public function render()
