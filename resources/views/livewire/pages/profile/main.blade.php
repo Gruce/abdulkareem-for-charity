@@ -4,16 +4,13 @@
             <img src="https://images.unsplash.com/photo-1503264116251-35a269479413?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
                 alt="" class="bg w-full h-full object-cover object-center absolute z-0">
             <div class="flex flex-col justify-center items-center relative h-full bg-black bg-opacity-50 text-white">
-                <img src="{{ asset($profile_photo_path ?? 'img/download.jpg') }}"
+                <img src="{{ asset($user->profile_photo_path ?? 'img/download.jpg') }}"
                     class="h-24 w-24 object-cover rounded-full">
                 <h1 class="text-2xl font-semibold">{{$user->name}}</h1>
                 <h4 class="text-sm font-semibold">انضم منذ {{date('Y', strtotime($user->created_at))}}</h4>
             </div>
         </div>
-        <div class="ml-5 mt-9">
-            <input type="file" wire:model="profile_photo"
-                class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 focus:outline-none focus:border-transparent ">
-        </div>
+        
         <div x-data="{isOpen: true}" class="grid grid-cols-12 bg-white ">
 
             <div 
