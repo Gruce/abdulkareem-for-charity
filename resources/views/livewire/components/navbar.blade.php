@@ -88,7 +88,7 @@
             </ul>
         </div>
 
-        <div class="flex gap-4 @auth @else hidden @endauth">
+        <div class=" gap-4 @auth flex @else hidden @endauth">
             @admin
             <div>
                 <a type="button" href="{{ route('add-case') }}"
