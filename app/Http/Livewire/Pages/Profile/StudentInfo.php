@@ -9,9 +9,12 @@ class StudentInfo extends Component
 {
     use LivewireAlert;
     
+    
+
     protected $rules = [
         'department' => 'required',
         'study_type' => 'required',
+        'stage' => 'required',
     ];
     public  function edit(){
         $this->validate();
@@ -32,7 +35,7 @@ class StudentInfo extends Component
     }
     public function mount($user){
         $this->user = $user;
-        $this->department = $this->user->student->department;
+        $this->department = $this->user->department;
         $this->study_type = $this->user->student->study_type;
         $this->stage = $this->user->student->stage;
         $this->division = $this->user->student->division;

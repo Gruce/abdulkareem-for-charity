@@ -15,7 +15,7 @@ class Basic extends Component
         'name' => 'required',
     ];
     
-    public $student;
+    
     public $name;
     public $email;
     public $phone_number;
