@@ -15,19 +15,19 @@ class Button extends Component
      */
     public function __construct($color = "primary")
     {
-        $this->default = 'text-white focus:ring-2 font-medium text-sm rounded-lg px-5 py-2.5 focus:outline-none hover:scale-105 duration-200 cursor-pointer ';
+        $this->default = 'text-white focus:ring-2 font-medium text-sm rounded-lg px-5 py-2.5 focus:outline-none cursor-pointer ';
 
         if ($this->color = $color) {
 
             switch ($this->color) {
                 case "primary":
-                    $this->default .= 'bg-blue-500 hover:bg-blue-800 focus:ring-blue-300';
+                    $this->default .= 'bg-primary-500 hover:bg-primary-900 focus:ring-primary-300';
                     break;
                 case "secondary":
-                    $this->default .= 'bg-gray-700 hover:bg-gray-800 focus:ring-gray-300';
+                    $this->default .= 'bg-secondary-700 hover:bg-secondary-800 focus:ring-secondary-300';
                     break;
                 case "success":
-                    $this->default .= 'bg-green-700 hover:bg-green-800 focus:ring-green-300';
+                    $this->default .= 'bg-success-700 hover:bg-success-800 focus:ring-success-300';
                     break;
                 case "error":
                     $this->default .= 'bg-red-700 hover:bg-red-800 focus:ring-red-300';

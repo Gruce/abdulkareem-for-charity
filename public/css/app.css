@@ -2021,6 +2021,10 @@ select{
   --tw-bg-opacity: 1;
   background-color: rgb(67 56 202 / var(--tw-bg-opacity));
 }
+.hover\:bg-primary-900:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 92 86 / var(--tw-bg-opacity));
+}
 .hover\:bg-gradient-to-r:hover{
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
 }
