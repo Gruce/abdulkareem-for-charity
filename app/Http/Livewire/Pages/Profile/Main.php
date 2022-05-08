@@ -7,31 +7,30 @@ use App\Modles\User;
 use App\Modles\Student as StudentModel;
 class Main extends Component
 {
-
     use WithFileUploads;
 
-    
-
-    public  $profile_photo_path, $file_path;
+    public $profile_photo_path;
+    public $profile_photo;
 
     
     public function edit()
     {
         $this->validate();
-        $user = new User();
-        $case->edit_file($this->file_path, 2); // 2: file_path
-        $user->edit_file($this->profile_photo_path); // 1: image_path default
-        $this->reset();
-        
+        $user = auth()->user();
+
+        if($this->profile_photo) 
+            $user->addProfile($this->profile_photo);
     }
     
-        //$user = auth()->user();
+        
 
         
 
     public function mount(){
         $this->user = auth()->user()->load('student');
-        $this->profile_photo_path = $this->user->profile_photo_path;
+        $this->profile_photo_path = $this->user->student->profile_photo_path;
+        
+        
 
     }
 

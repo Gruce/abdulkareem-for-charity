@@ -10,7 +10,7 @@
 
             <div class="form-item">
                 <label class="text-xl ">القسم</label>
-                <select  wire:model="department" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 ">
+                <select  wire:model="department" class="bg-gray-50 border border-gray-300  text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 ">
                     <option value="1">علوم الحاسوب</option>
                     <option value="2">نظم المعلومات </option>
                 </select>
@@ -22,7 +22,7 @@
             <div class="flex flex-col space-y-4 md:space-y-0 md:flex-row md:space-x-4">
                 <div class="form-item w-full">
                     <label class="text-xl ">نوع الدراسة</label>
-                    <select wire:model="study_type" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 ">
+                    <select wire:model="study_type" class="bg-gray-50 border border-gray-300  text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 ">
                         <option value="1">صباحي</option>
                         <option value="2">مسائي  </option>
                     </select>
@@ -35,7 +35,7 @@
             <div class="flex flex-col space-y-4 md:space-y-0 md:flex-row md:space-x-4">
                 <div class="form-item w-full">
                     <label class="text-xl ">المرحلة</label>
-                    <select wire:model="stage" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 ">
+                    <select wire:model="stage" class="bg-gray-50 border border-gray-300  text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 ">
                         <option value="1">الاولى</option>
                         <option value="2">الثانية  </option>
                         <option value="3">الثالثة</option>
@@ -50,7 +50,7 @@
             <div class="flex flex-col space-y-4 md:space-y-0 md:flex-row md:space-x-4">
                 <div class="form-item w-full">
                     <label class="text-xl ">الشعبة</label>
-                    <select   wire:model="division" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 ">
+                    <select   wire:model="division" class="bg-gray-50 border border-gray-300  text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 ">
                         <option value="1">A</option>
                         <option value="2">B  </option>
                         <option value="3">C</option>

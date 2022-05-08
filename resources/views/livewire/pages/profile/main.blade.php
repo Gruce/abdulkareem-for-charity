@@ -11,7 +11,7 @@
             </div>
         </div>
         <div class="ml-5 mt-9">
-            <input type="file" wire:model="profile_photo_path"
+            <input type="file" wire:model="profile_photo"
                 class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 focus:outline-none focus:border-transparent ">
         </div>
         <div x-data="{isOpen: true}" class="grid grid-cols-12 bg-white ">
