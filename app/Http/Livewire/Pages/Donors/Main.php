@@ -8,6 +8,7 @@ class Main extends Component
 {
     public function render()
     {
+        $this->users->User::
         return view('livewire.pages.donors.main');
     }
 }
