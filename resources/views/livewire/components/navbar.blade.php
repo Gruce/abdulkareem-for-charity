@@ -98,16 +98,13 @@
             </div>
             @endadmin
 
-
+            
             <form method="POST" action="{{ route('logout') }}" x-data>
                 @csrf
                 <button wire:click="{{ route('logout') }}" type="link"
                     class="text-white bg-purple-700 hover:bg-purple-800 focus:outline-none focus:ring-4 focus:ring-purple-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mb-2 "><i
                         class="fa-solid fa-right-from-bracket"></i> </button>
-
-
             </form>
-
         </div>
 
         {{-- Pages in Mobile --}}
