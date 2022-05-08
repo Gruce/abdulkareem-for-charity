@@ -5,8 +5,11 @@ namespace App\Http\Livewire\Pages\Cases\Admin;
 use Livewire\Component;
 use App\Models\Event;
 use Livewire\WithFileUploads;
+use Jantinnerezo\LivewireAlert\LivewireAlert;
+
 class Add extends Component
 {
+    use LivewireAlert;
     use WithFileUploads;
     public $title, $description, $image_path, $file_path, $target;
 
@@ -26,6 +29,11 @@ class Add extends Component
             'target' => $this->target,
 
         ];
+        $this->alert('success', 'Done!', [
+            'position' => 'top',
+            'timer' => 3000,
+            'toast' => true,
+        ]);   
         $case = new Event();
         $case->add($data);
         $case->add_file($this->file_path, 2); // 2: file_path
