@@ -6,8 +6,8 @@
             <div class="flex flex-col justify-center items-center relative h-full bg-black bg-opacity-50 text-white">
                 <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
                     class="h-24 w-24 object-cover rounded-full">
-                <h1 class="text-2xl font-semibold">محمد جواد</h1>
-                <h4 class="text-sm font-semibold">انضم منذ 2022</h4>
+                <h1 class="text-2xl font-semibold">{{$user->name}}</h1>
+                <h4 class="text-sm font-semibold">انضم منذ {{date('Y', strtotime($user->created_at))}}</h4>
             </div>
         </div>
         <div x-data="{isOpen: true}" class="grid grid-cols-12 bg-white ">
@@ -29,12 +29,12 @@
 
             <div x-show="isOpen"
                 class=" md:border-solid md:border-l md:border-black md:border-opacity-25 h-full pb-12 md:col-span-10">
-                <livewire:pages.profile.basic />
+                @livewire('pages.profile.basic', ['user' => $user])
             </div>
 
             <div x-show="!isOpen"
                 class=" md:border-solid md:border-l md:border-black md:border-opacity-25 h-full pb-12 md:col-span-10">
-                <livewire:pages.profile.student-info />
+                @livewire('pages.profile.student-info', ['user' => $user])
             </div>
 
             

@@ -38,6 +38,8 @@
     @stack('modals')
 
     @livewireScripts
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <x-livewire-alert::scripts />
     <script src="//unpkg.com/alpinejs" defer></script>
     <script src="https://unpkg.com/flowbite@1.4.4/dist/flowbite.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js"
