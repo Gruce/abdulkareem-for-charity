@@ -1,52 +1,54 @@
-<div>
 
-    <div class=" ">
+{{-- Donors Card --}}
 
-        <div class="p-4 w-1/2 h-full bg-gray-100 rounded-lg sm:p-8">
-            <div class="flex justify-between items-center mb-4">
-                <h3 class="text-xl font-bold leading-none text-لقشغ-900">المتبرعين</h3>
+<div class="h-screen w-full">
+    <div class="flex justify-between items-center mb-5">
+        <h3 class="text-xl font-bold leading-none text-black">المتبرعين</h3>
+    </div>
+    <div class="">
+        @forelse ($users as $item)
+            <div class="grid grid-rows-3 justify-start pt-10 gap-2">
 
-            </div>
-            <div class="flow-root">
-                <ul role="list" class="divide-y ">
-                    @forelse ($users as $item)
-                    <li class="py-3 sm:py-4" x-data="{ isOpen: false}">
-                        <div class="flex items-center space-x-4">
-                            <div class="flex-shrink-0">
-                                <img class="w-8 h-8 rounded-full bg-secondary-500"
-                                    src="{{ asset($item->profile_photo_path) }}">
-                            </div>
-                            <div class="flex-1 min-w-0">
-                                <p class="text-sm font-medium text-gray-900 truncate ">
-                                    {{ $item->name }}
-                                </p>
-                                <p class="text-sm text-gray-500 truncate ">
-                                    {{$item->email}}
-                                </p>
-                            </div>
+                <div class="card w-96 h-auto mx-auto bg-white  shadow-md hover:shadow-xl">
 
-                            <div class="inline-flex items-center text-base font-semibold text-gray-900 ">
-                                @if($item->shares_sum_share)
-                                {{ $item->shares_sum_share }}
-                                @else 0
-                                @endif
-                            </div>
+                    <img class="w-32 mx-auto rounded-full -mt-20 border-8 border-white"
+                        src="{{ asset($item->profile_photo_path) }}" alt="Profile Pic">
+                    <div class="text-center mt-2 text-3xl font-medium">{{ $item->name }}</div>
+                    <div class="text-center mt-2 font-light text-sm">{{ $item->email }}</div>
+                    <div class="text-center font-normal text-lg">{{ $item->type }}</div>
+                    <div class="px-6 text-center mt-2 font-light text-sm">
+                        <p>
+                            ضيفوا الي يعجبكم...........هيهيه
+                        </p>
+                    </div>
+                    <hr class="mt-8">
+                    <div class="flex p-4">
+                        <div class="w-1/2 text-center">
+                            <span class="font-bold">2022</span> انظم منذ
                         </div>
-                    </li>
-                    @empty
-                    <li>
-                        fgfg
-                    </li>
-                    @endforelse
+                        <div class="w-0 border border-gray-300">
+                        </div>
+                        <div class="w-1/2 text-center">
+                            <span class="font-bold">
+                                @if ($item->shares_sum_share)
+                                    {{ $item->shares_sum_share }}
+                                @else
+                                    0
+                                @endif
+                            </span> الأسهم
+                        </div>
 
+                    </div>
 
-                </ul>
+                </div>
             </div>
-        </div>
-
+        @empty
+            <div class="text-center text-xl font-bold">لا يوجد متبرعين</div>
+        @endforelse
     </div>
 </div>
 
+{{-- Admin?? --}}
 
 {{-- @admin
 <button @click="isOpen = !isOpen" class="bg-primary-50">اضغطني عفيه</button>
