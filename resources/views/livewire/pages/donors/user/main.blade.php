@@ -1,5 +1,5 @@
-<div class="grid  gap-8  justify-center md:grid-cols-2  lg:grid-cols-3">
+<div class="">
 
-    <livewire:components.case.card />
+    <livewire:pages.donors.user.card />
     
 </div>

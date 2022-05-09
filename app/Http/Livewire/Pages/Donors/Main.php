@@ -9,6 +9,6 @@ class Main extends Component
 {
     public function render()
     {
-        
+        return view('livewire.pages.donors.main');
     }
 }
