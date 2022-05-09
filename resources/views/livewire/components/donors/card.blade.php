@@ -19,29 +19,25 @@
 
 
             </div>
-            <ul class=" flex justify-start space-x-4 text-center text-lg" x-data="{ isOpen: false}">
+            <ul class=" flex justify-start space-x-4 text-center text-lg" x-data="{ isOpen: false }">
 
                 <button @click="isOpen = !isOpen"
-                    class="mt-2 ml-10 text-white bg-cyan-700 hover:bg-cyan-800 focus:ring-2 focus:ring-cyan-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2">
+                    class="mt-2 ml-10 text-white bg-primary-400 hover:bg-primary-500 focus:ring-2 focus:ring-cyan-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2">
                     زيادة الاسهم
                 </button>
 
-                <form class="flex flex-row-reverse" x-show="isOpen">
+                
+                <form class="flex justify-between flex-row-reverse " x-show="isOpen">
                     <div>
-
                         <input type="number" id="shares"
-                            class=" bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block h-12 "
+                            class="bg-gray-50 border border-gray-300 ml-9 m-3 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block h-12 "
                             placeholder="ادخل عدد الاسهم التي تريد اضافتها">
                     </div>
 
-
                     <button type="submit"
-                        class="mt-2 w-full text-white bg-cyan-700 hover:bg-cyan-800 focus:ring-2 focus:ring-cyan-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2">اضافة
+                        class="w-full text-white bg-primary-400 hover:bg-primary-500 focus:ring-2 focus:ring-cyan-300 font-medium rounded-full text-sm px-5 py-2 text-center m-4">اضافة
                     </button>
                 </form>
-
-
-
             </ul>
             <h5 class="text-lg font-bold tracking-tight pt-5">البريد الالكتروني: jawad6686@gmail.com
             </h5>
