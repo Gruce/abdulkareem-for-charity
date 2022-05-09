@@ -20,4 +20,10 @@ class Student extends Model
     }
 
     ### End Relationships ###
+    public function edit($data)    {
+        $this->fill($data);
+        $this->save();
+    }
+    
+
 }

@@ -32,6 +32,11 @@ class Navbar extends Component
                 'icon' => 'fas fa-circle-info',
             ],
             [
+                'name' => 'المتبرعين ',
+                'route' => 'donors',
+                'icon' => 'fas fa-donors',
+            ],
+            [
                 'name' => 'البيانات الشخصية',
                 'route' => 'profile',
                 'icon' => 'fas fa-user',
