@@ -15,18 +15,17 @@
                 </div>
             </div>
 
-            <ul class=" flex justify-start space-x-4 text-center text-lg" x-data="{ isOpen: false }">
+            <ul class=" justify-start space-x-20 text-center text-lg" x-data="{ isOpen: false }">
 
                 <button @click="isOpen = !isOpen"
                     class="m-2 text-white bg-primary-400 hover:bg-primary-500 focus:ring-1 focus:ring-cyan-300 font-medium rounded-full text-sm px-5 py-2.5 text-center ">
                     زيادة الاسهم
                 </button>
 
-
                 <form class="flex flex-row-reverse" x-show="isOpen">
                     <div>
                         <input type="number" id="shares"
-                            class="py-5 bg-gray-50 border border-gray-300 ml-9 m-4 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block h-12 "
+                            class=" bg-gray-50 border border-gray-300  text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block h-12 ml-9 m-4 py-5"
                             placeholder="ادخل عدد الاسهم التي تريد اضافتها">
                     </div>
 
@@ -35,6 +34,23 @@
                     </button>
                 </form>
             </ul>
+
+            {{-- <ul class=" flex justify-start space-x-4 text-center text-lg" x-data="{ isOpen: false}">
+                <button @click="isOpen = !isOpen"
+                    class="mt-2 ml-10 text-white bg-primary-400 hover:bg-primary-500 focus:ring-1 focus:ring-cyan-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2">
+                    زيادة الاسهم
+                </button>
+                <form class="flex flex-row-reverse" x-show="isOpen">
+                    <div>
+                        <input type="number" id="shares"
+                            class=" bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block h-12 "
+                            placeholder="ادخل عدد الاسهم التي تريد اضافتها">
+                    </div>
+                    <button type="submit"
+                        class="mt-2 w-full text-white bg-cyan-700 hover:bg-cyan-800 focus:ring-2 focus:ring-cyan-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2">اضافة
+                    </button>
+                </form>
+            </ul> --}}
 
             <h5 class="text-lg tracking-tight pt-5 text-center">البريد الالكتروني: jawad6686@gmail.com
             </h5>
