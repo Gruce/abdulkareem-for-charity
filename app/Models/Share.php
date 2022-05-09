@@ -5,12 +5,10 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Payment extends Model
+class Share extends Model
 {
-    
     use HasFactory;
-    protected $fillable = ['price'];
-
+    protected $fillable = ['share', 'note', 'user_id'];
 
     ### Start Relationships ###
 
@@ -21,4 +19,11 @@ class Payment extends Model
 
     ### End Relationships ###
 
+    public function add($share , $note = null)
+    {
+        $this->share = $share;
+        $this->note = $note;
+        $this->user_id = auth()->user()->id;
+        $this->save();
+    }
 }

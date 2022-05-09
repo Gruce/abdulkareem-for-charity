@@ -79,9 +79,9 @@ class User extends Authenticatable
         return $this->hasOne(Student::class);
     }
 
-    public function payments()
+    public function shares()
     {
-        return $this->hasMany(Payment::class);
+        return $this->hasMany(Share::class);
     }
 
     ### End Relationships ###
@@ -90,13 +90,15 @@ class User extends Authenticatable
         $this->fill($data);
         $this->save();
     }
-
-    // public function addProfile($file , $type = null){
-    //     $type = $type ?? 'student';
-    //     $ext = $file->extension();
-    //     $name=\Str::random(10).'.'.$ext;
-    //     $file->storeAs('public/'. $type . '/profile/'. $this->id .'/' ,$name);
-    //     $this->profile_photo_path = 'storage/' . $type . '/profile/'.$this->id.'/'.$name;
-    //     $this->save();
-    // }
+    
+    public function addProfile($file , $type = null){
+        $type = $type ?? 'student';
+        $ext = $file->extension();
+        $name=\Str::random(10).'.'.$ext;
+        $file->storeAs('public/'. $type . '/profile/'. $this->id .'/' ,$name);
+        $this->profile_photo_path = 'storage/' . $type . '/profile/'.$this->id.'/'.$name;
+        $this->save();
+    }
+    
+    
 }

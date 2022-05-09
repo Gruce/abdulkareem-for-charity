@@ -1,13 +1,11 @@
 <?php
 
 namespace App\Http\Livewire\Pages\Profile;
-
 use Livewire\Component;
 use App\Modles\User;
 use App\Modles\Student as StudentModel;
 class Main extends Component
 {
-
     public function mount(){
         $this->user = auth()->user()->load('student');
     }

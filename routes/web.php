@@ -10,6 +10,7 @@ use App\Http\Livewire\Pages\{
     Cases\Main as CaseMain,
     Profile\Main as Profile,
     Donate\Main as Donate,
+    Donors\Main as Donors,
     
 };
 
@@ -30,6 +31,9 @@ Route::get('/', Home::class)->name('home');
 // About
 Route::get('/about', About::class)->name('about');
 
+// donors
+Route::get('/donors' , Donors::class)->name('donors');
+
 
 
 
@@ -46,5 +50,4 @@ Route::middleware(['auth:sanctum'])->group(function () {
 
     // donate
     Route::get('/donate' , Donate::class)->name('donate');
-   
 });
