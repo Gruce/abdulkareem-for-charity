@@ -15,7 +15,7 @@
                 </div>
             </div>
 
-            <ul class=" justify-start space-x-20 text-center text-lg" x-data="{ isOpen: false }">
+            <ul class="flex justify-start space-x-20 text-center text-lg" x-data="{ isOpen: false }">
 
                 <button @click="isOpen = !isOpen"
                     class="m-2 text-white bg-primary-400 hover:bg-primary-500 focus:ring-1 focus:ring-cyan-300 font-medium rounded-full text-sm px-5 py-2.5 text-center ">
