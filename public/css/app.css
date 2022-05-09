@@ -939,6 +939,12 @@ select{
 .col-span-12{
   grid-column: span 12 / span 12;
 }
+<<<<<<< Updated upstream
+=======
+.col-span-4{
+  grid-column: span 4 / span 4;
+}
+>>>>>>> Stashed changes
 .row-span-2{
   grid-row: span 2 / span 2;
 }
@@ -1168,6 +1174,15 @@ select{
 .h-\[30rem\]{
   height: 30rem;
 }
+<<<<<<< Updated upstream
+=======
+.h-40{
+  height: 10rem;
+}
+.h-72{
+  height: 18rem;
+}
+>>>>>>> Stashed changes
 .h-36{
   height: 9rem;
 }
@@ -1236,6 +1251,12 @@ select{
 }
 .w-\[38rem\]{
   width: 38rem;
+<<<<<<< Updated upstream
+=======
+}
+.w-96{
+  width: 24rem;
+>>>>>>> Stashed changes
 }
 .min-w-0{
   min-width: 0px;
@@ -1354,6 +1375,9 @@ select{
 }
 .grid-cols-12{
   grid-template-columns: repeat(12, minmax(0, 1fr));
+}
+.grid-cols-10{
+  grid-template-columns: repeat(10, minmax(0, 1fr));
 }
 .grid-rows-4{
   grid-template-rows: repeat(4, minmax(0, 1fr));
@@ -1919,6 +1943,9 @@ select{
 }
 .pt-8{
   padding-top: 2rem;
+}
+.pr-2{
+  padding-right: 0.5rem;
 }
 .text-left{
   text-align: left;
