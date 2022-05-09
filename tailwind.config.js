@@ -13,6 +13,7 @@ module.exports = {
 
     theme: {
         extend: {
+            
             'height': {
                 'app': 'calc(100vh - 5rem)',
                 'main': 'calc(100vh - 11.625rem)',
