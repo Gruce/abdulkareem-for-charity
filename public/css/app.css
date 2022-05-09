@@ -932,6 +932,10 @@ select{
   margin-left: 1.75rem;
   margin-right: 1.75rem;
 }
+.my-20{
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
 .ml-3{
   margin-left: 0.75rem;
 }
@@ -1096,6 +1100,9 @@ select{
 }
 .h-32{
   height: 8rem;
+}
+.h-36{
+  height: 9rem;
 }
 .min-h-screen{
   min-height: 100vh;
@@ -1473,6 +1480,10 @@ select{
   --tw-border-opacity: 1;
   border-color: rgb(76 206 196 / var(--tw-border-opacity));
 }
+.border-primary-50{
+  --tw-border-opacity: 1;
+  border-color: rgb(204 241 238 / var(--tw-border-opacity));
+}
 .bg-white{
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
@@ -1733,6 +1744,10 @@ select{
 .py-2\.5{
   padding-top: 0.625rem;
   padding-bottom: 0.625rem;
+}
+.px-8{
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 .pt-6{
   padding-top: 1.5rem;

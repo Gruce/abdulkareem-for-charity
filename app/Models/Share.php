@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Share extends Model
 {
     use HasFactory;
-    protected $fillable = ['price', 'note', 'user_id'];
+    protected $fillable = ['share', 'note', 'user_id'];
 
     ### Start Relationships ###
 

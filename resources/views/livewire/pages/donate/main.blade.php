@@ -33,22 +33,23 @@
                     <div class="p-6 bg-gray-100 rounded ">
                         <div class="flex items-center justify-center font-black m-3 mb-12">
 
-                            <h1 class="tracking-wide text-3xl text-gray-900">تبرع من هنا  </h1>
+                            <h1 class="tracking-wide text-3xl text-gray-900">تبرع من هنا </h1>
                             <i class="fa-solid fa-heart h-10 w-10 mr-3 text-red-600 animate-pulse"></i>
-                            
+
                         </div>
-                        <form wire:submit.prevent="save" id="login_form" action="api_login" method="POST" class="flex flex-col justify-center">
-                            <div class=" items-center mb-3">
+                        <form wire:submit.prevent="save" id="login_form" action="api_login"
+                            class="flex flex-col justify-center">
+                            <div class="flex justify-between items-center mb-3">
                                 <div class="inline-flex items-center self-start">
-                                    
+
                                 </div>
                                 <div class="flex">
                                     <button type="button" onclick="minus()"
                                         class="bg-yellow-600 p-1.5 font-bold rounded">
-                                        <i class="fa-solid fa-minus h-4 w-4"></i>
+                                        <i class="fa-solid fa-minus w-4 h-4"></i>
                                     </button>
 
-                                    <input id="item_count" type="number" value="1"
+                                    <input wire:model="share" id="item_count" type="number" value="1"
                                         class="max-w-[100px] font-bold font-mono py-1.5 px-2 mx-1.5
                         block border border-gray-300 rounded-md text-sm shadow-sm  placeholder-gray-400
                         focus:outline-none
@@ -58,20 +59,20 @@
                         focus:invalid:border-red-500  focus:invalid:ring-red-500">
 
                                     <button type="button" onclick="plus()" class="bg-green-600 p-1.5 font-bold rounded">
-                                        <i class="fa-solid fa-plus h-4 w-4"></i>
+                                        <i class="fa-solid fa-plus w-4 h-4"></i>
                                     </button>
                                 </div>
                             </div>
-                            
+
                             <label class="text-sm font-medium">ملاحظة (اختياري)</label>
-                            <textarea class="
+                            <textarea wire:model="note" class="
                         mb-3 mt-1 block w-full px-2 py-1.5 border border-gray-300 rounded-md text-sm shadow-sm placeholder-gray-400
                         focus:outline-none
                         focus:border-sky-500
                         focus:ring-1
                         focus:ring-sky-500
                         focus:invalid:border-red-500 focus:invalid:ring-red-500"
-                                name="messages" placeholder="اكتب شيئا"></textarea>
+                                name="messages" placeholder="Write something"></textarea>
                             <button
                                 class="px-4 py-1.5 rounded-md shadow-lg bg-gradient-to-r from-green-500 to-primary-600 font-medium text-gray-100 block transition duration-300"
                                 type="submit">
@@ -93,11 +94,11 @@
                     }
 
                     let current_count = parseInt(document.getElementById("item_count").value)
-                    let subtotal = parseInt(2000)
+                    let subtotal = parseInt(5)
 
                     function plus() {
                         document.getElementById("item_count").value = ++current_count
-                        document.getElementById("subtotal").innerHTML = ` ${subtotal * document.getElementById("item_count").value}`
+                        document.getElementById("subtotal").innerHTML = ` $${subtotal * document.getElementById("item_count").value}`
 
                     }
 
