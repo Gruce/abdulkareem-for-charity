@@ -4,13 +4,13 @@
         <div class=" p-4 w-full rounded-t-xl bg-gray-50 hover:bg-gray-200 transition duration-300">
             <div class="grid grid-cols-5 mb-5">
                 <div class="col-span-2 flex flex-col">
-                    <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1171&q=80"
+                    <img src="{{ asset($photo ?? 'img/user.png') }}"
                         alt="" class=" rounded-full h-32 w-32" />
-                    <h3 class=" text-xl mr-2 mt-4"> يملك 20 سهما </h3>
+                    <h3 class=" text-xl mr-2 mt-4"> يملك {{ $shares  ?? 0}} سهما </h3>
                 </div>
 
                 <div class="col-span-3">
-                    <h3 class="mt-6 text-center font-bold text-2xl ">محمد جواد كاظم</h3>
+                    <h3 class="mt-6 text-center font-bold text-2xl ">{{ $name }}</h3>
                     <h3 class="mt-2 text-center text-base ">طالب</h3>
                 </div>
             </div>
