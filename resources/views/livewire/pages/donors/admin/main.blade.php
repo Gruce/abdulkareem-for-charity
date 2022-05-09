@@ -1,5 +1,5 @@
 <div class="">
 
-    <livewire:pages.donors.admin.card />
+    <livewire:component.donater.card />
     
 </div>
