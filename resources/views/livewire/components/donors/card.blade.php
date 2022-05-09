@@ -11,12 +11,12 @@
 
                 <div class="col-span-3">
                     <h3 class="mt-6 text-center font-bold text-2xl ">{{ $name }}</h3>
-                    <h3 class="mt-2 text-center text-base ">طالب</h3>
+                    <h3 class="mt-2 text-center text-base @if($type == 4) hidden @endif">@if($type == 1) طالب @elseif($type == 2) تدريسي @else موظف @endif</h3>
                 </div>
             </div>
 
 
-
+            @admin
             <ul class=" flex justify-start space-x-4 text-center text-lg" x-data="{ isOpen: false}">
                 <button @click="isOpen = !isOpen"
                     class="mt-2 ml-10 text-white bg-primary-400 hover:bg-primary-500 focus:ring-1 focus:ring-cyan-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2">
@@ -33,10 +33,11 @@
                     </button>
                 </form>
             </ul>
-
-            <h5 class="text-lg tracking-tight pt-5 text-center">البريد الالكتروني: jawad6686@gmail.com
-            </h5>
-            <p class="text-sm font-normal text-gray-500 text-center">تاريخ الانضمام: 2022/10/1</p>
+            @endadmin
+            @auth
+            <h5 class="text-lg tracking-tight pt-5 ">البريد الالكتروني: {{ $email }}</h5>
+            @endauth
+            <p class="text-sm font-normal text-gray-500 ">تاريخ الانضمام: {{$date}}</p>
 
         </div>
 
