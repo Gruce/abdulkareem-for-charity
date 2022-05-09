@@ -954,12 +954,6 @@ select{
 .m-3{
   margin: 0.75rem;
 }
-.m-2{
-  margin: 0.5rem;
-}
-.m-4{
-  margin: 1rem;
-}
 .mx-auto{
   margin-left: auto;
   margin-right: auto;
@@ -1098,9 +1092,6 @@ select{
 }
 .-mt-px{
   margin-top: -1px;
-}
-.ml-9{
-  margin-left: 2.25rem;
 }
 .-mt-20{
   margin-top: -5rem;
@@ -1445,16 +1436,6 @@ select{
   margin-right: calc(1rem * var(--tw-space-x-reverse));
   margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
 }
-.space-x-20 > :not([hidden]) ~ :not([hidden]){
-  --tw-space-x-reverse: 0;
-  margin-right: calc(5rem * var(--tw-space-x-reverse));
-  margin-left: calc(5rem * calc(1 - var(--tw-space-x-reverse)));
-}
-.space-x-12 > :not([hidden]) ~ :not([hidden]){
-  --tw-space-x-reverse: 0;
-  margin-right: calc(3rem * var(--tw-space-x-reverse));
-  margin-left: calc(3rem * calc(1 - var(--tw-space-x-reverse)));
-}
 .divide-y > :not([hidden]) ~ :not([hidden]){
   --tw-divide-y-reverse: 0;
   border-top-width: calc(1px * calc(1 - var(--tw-divide-y-reverse)));
@@ -1698,10 +1679,6 @@ select{
 .bg-primary-300{
   --tw-bg-opacity: 1;
   background-color: rgb(76 206 196 / var(--tw-bg-opacity));
-}
-.bg-\[\#d7e0e0\]{
-  --tw-bg-opacity: 1;
-  background-color: rgb(215 224 224 / var(--tw-bg-opacity));
 }
 .bg-blue-600{
   --tw-bg-opacity: 1;
