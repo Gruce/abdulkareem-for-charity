@@ -1,7 +1,8 @@
+<x-ui.button >تسجيل دخول</x-ui.button>
 <div>
     <div class="grid md:grid-cols-10 sm:grid-cols-1 sm:grid-rows-6">
         <div class="sm:col-span-6 sm:grid-rows-4 mt-10 md:mt-0">
-        <x-ui.button >تسجيل دخول</x-ui.button>
+        
             <h1 class="text-3xl md:text-5xl font-Kufi text-center font-bold text-primary-600"> صندوق الأستاذ عبدالكريم</h1>
             <p class="mt-10 text-xl text-gray-700 px-1 md:px-9">"صـندوق الأستاذ عبد الكريم الخيري" هو مبادرة ونشاط طلابي بحت ينطلق من
                 طلبة كلية علوم الحاسوب وتكنلوجيا المعلومات. <br>
