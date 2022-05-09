@@ -8,6 +8,6 @@ class Main extends Component
 {
     public function render()
     {
-        return view('livewire.pages.donors.admin.main');
+        return view('livewire.pages.donors.guest.main');
     }
 }
