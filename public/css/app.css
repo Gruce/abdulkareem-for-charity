@@ -908,6 +908,9 @@ select{
 .m-3{
   margin: 0.75rem;
 }
+.m-2{
+  margin: 0.5rem;
+}
 .mx-auto{
   margin-left: auto;
   margin-right: auto;
@@ -943,6 +946,10 @@ select{
 .mx-1{
   margin-left: 0.25rem;
   margin-right: 0.25rem;
+}
+.my-32{
+  margin-top: 8rem;
+  margin-bottom: 8rem;
 }
 .ml-3{
   margin-left: 0.75rem;
@@ -1039,6 +1046,9 @@ select{
 }
 .ml-10{
   margin-left: 2.5rem;
+}
+.ml-9{
+  margin-left: 2.25rem;
 }
 .mb-12{
   margin-bottom: 3rem;
@@ -1585,9 +1595,9 @@ select{
   --tw-bg-opacity: 1;
   background-color: rgb(76 206 196 / var(--tw-bg-opacity));
 }
-.bg-cyan-700{
+.bg-primary-400{
   --tw-bg-opacity: 1;
-  background-color: rgb(14 116 144 / var(--tw-bg-opacity));
+  background-color: rgb(50 199 188 / var(--tw-bg-opacity));
 }
 .bg-blue-600{
   --tw-bg-opacity: 1;
@@ -1604,14 +1614,6 @@ select{
 .bg-primary-200{
   --tw-bg-opacity: 1;
   background-color: rgb(102 213 205 / var(--tw-bg-opacity));
-}
-.bg-primary-400{
-  --tw-bg-opacity: 1;
-  background-color: rgb(50 199 188 / var(--tw-bg-opacity));
-}
-.bg-sky-100{
-  --tw-bg-opacity: 1;
-  background-color: rgb(224 242 254 / var(--tw-bg-opacity));
 }
 .bg-yellow-600{
   --tw-bg-opacity: 1;
@@ -1641,19 +1643,12 @@ select{
   --tw-gradient-from: #4ade80;
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(74 222 128 / 0));
 }
-.from-pink-600{
-  --tw-gradient-from: #db2777;
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(219 39 119 / 0));
-}
 .from-green-500{
   --tw-gradient-from: #22c55e;
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(34 197 94 / 0));
 }
 .to-blue-200{
   --tw-gradient-to: #bfdbfe;
-}
-.to-red-600{
-  --tw-gradient-to: #dc2626;
 }
 .to-primary-600{
   --tw-gradient-to: #00a69a;
@@ -1848,6 +1843,9 @@ select{
 }
 .text-right{
   text-align: right;
+}
+.text-justify{
+  text-align: justify;
 }
 .font-sans{
   font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -2229,10 +2227,6 @@ select{
 .hover\:bg-primary-500:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(0 185 172 / var(--tw-bg-opacity));
-}
-.hover\:bg-cyan-800:hover{
-  --tw-bg-opacity: 1;
-  background-color: rgb(21 94 117 / var(--tw-bg-opacity));
 }
 .hover\:bg-indigo-700:hover{
   --tw-bg-opacity: 1;
