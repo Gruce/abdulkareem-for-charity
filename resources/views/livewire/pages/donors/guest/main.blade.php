@@ -1,5 +1,5 @@
-<div class="">
+{{-- <div class="">
 
-    {{-- <livewire:pages.donors.guest.card /> --}}
+    <livewire:components.donater.card />
     
-</div>
+</div> --}}
