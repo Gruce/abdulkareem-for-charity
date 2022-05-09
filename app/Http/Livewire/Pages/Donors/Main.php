@@ -8,6 +8,6 @@ class Main extends Component
 {
     public function render()
     {
-        return view('livewire.components.donater.card');
+        return view('livewire.pages.donors.main');
     }
 }
