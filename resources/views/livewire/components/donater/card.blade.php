@@ -1,4 +1,4 @@
-<div class="h-screen w-full">
+{{-- <div class="h-screen w-full">
     <div class="flex justify-between items-center mb-5">
         <h3 class="text-xl font-bold leading-none text-black">المتبرعين</h3>
     </div>
@@ -37,4 +37,4 @@
         <div class="text-center text-xl font-bold">لا يوجد متبرعين</div>
         @endforelse
     </div>
-</div>
+</div> --}}
