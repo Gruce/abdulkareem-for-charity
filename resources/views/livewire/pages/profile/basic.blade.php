@@ -49,6 +49,10 @@
                         @enderror
                     </div>
 
+                    <div class="form-item">
+                        <input type="file" wire:model="profile_photo"
+                            class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 focus:outline-none focus:border-transparent ">
+                    </div>
                 <button  type="submit" class="text-white bg-primary-300 hover:bg-primary-500 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
 
 
