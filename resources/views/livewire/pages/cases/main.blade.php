@@ -1,6 +1,7 @@
 @section('title', 'الحالات')
 
 <div>
+    <div class="grid grid-cols-4 gap-6">
     @forelse ($cases as $item)
     @livewire('components.case.card' , [
     'title' => $item->title,
@@ -13,6 +14,6 @@
     @empty
     لا يوجد حالات
     @endforelse
+    </div>
 
-    
 </div>
