@@ -7,8 +7,8 @@ use Livewire\Component;
 class StudentInfo extends Component
 {
     use LivewireAlert;
-    
-    
+
+
 
     protected $rules = [
         'department' => 'required',
@@ -16,7 +16,7 @@ class StudentInfo extends Component
         'stage' => 'required',
     ];
 
-    
+
     public  function edit(){
         $this->validate();
 
@@ -28,11 +28,11 @@ class StudentInfo extends Component
 
         ]);
 
-        $this->alert('success', 'Done!', [
+        $this->alert('success', 'تم', [
             'position' => 'top-start',
             'timer' => 3000,
             'toast' => true,
-        ]);   
+        ]);
     }
     public function mount($user){
         $this->user = $user;
@@ -42,14 +42,14 @@ class StudentInfo extends Component
         $this->stage = $this->user->student->stage;
         $this->division = $this->user->student->division;
         }
-        
-        
-        
+
+
+
     }
 
     public function render()
     {
-        
+
         return view('livewire.pages.profile.student-info');
     }
 }
