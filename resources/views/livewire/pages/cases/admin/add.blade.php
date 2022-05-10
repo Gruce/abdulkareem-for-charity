@@ -56,11 +56,11 @@
                 <div class="w-1/2 mt-5 mx-7">
                     <label class=" md:text-sm text-xs text-gray-700 text-light font-semibold mb-1">ارفاق صورة
                         الحالة</label>
-                    <div class="flex items-center justify-center w-full">
+                    <div class="flex items-center justify-center w-full group">
                         <label
-                            class="flex flex-col border-4 border-dashed w-full h-32 hover:bg-gray-200 hover:border-primary-300 rounded-lg">
+                            class="flex flex-col border-4 border-dashed w-full h-32 hover:bg-gray-200 group-hover:border-primary-300 rounded-lg">
                             <div class="flex flex-col items-center justify-center pt-7">
-                                <i class="fa-solid fa-image w-10 h-10 text-gray-400 hover:text-primary-300"></i>
+                                <i class="fa-solid fa-image w-10 h-10 text-gray-400 group-hover:text-primary-300"></i>
                                 <p class="text-sm text-gray-400 group-hover:text-gray-600 pt-1 tracking-wide">
                                     اختر صورة</p>
                             </div>
@@ -73,12 +73,12 @@
                 <div class="w-1/2 mt-5 mx-7">
                     <label class="md:text-sm text-xs text-gray-700 text-light font-semibold mb-1">صورة
                         المستمسكات</label>
-                    <div class="flex items-center justify-center w-full">
+                    <div class="flex items-center justify-center w-full group">
                         <label
-                            class="flex flex-col border-4 border-dashed w-full h-32 hover:bg-gray-200 hover:border-primary-300 rounded-lg">
+                            class="flex flex-col border-4 border-dashed w-full h-32 hover:bg-gray-200 group-hover:border-primary-300 rounded-lg">
                             <div class="flex flex-col items-center justify-center pt-7">
                                 <i
-                                    class="fa-solid fa-file-circle-plus w-10 h-10 text-gray-400 hover:text-primary-300"></i>
+                                    class="fa-solid fa-file-circle-plus w-10 h-10 text-gray-400 group-hover:text-primary-300"></i>
                                 <p class="text-sm text-gray-400 group-hover:text-gray-600 pt-1 tracking-wider">
                                     اختر صورة</p>
                             </div>
