@@ -4,13 +4,13 @@
         <form action="#" class="flex flex-col space-y-8"  wire:submit.prevent="edit">
 
             <div>
-                <h3 class="text-2xl font-semibold">المعلومات الاساسية</h3>
+                <h3 class="text-2xl font-semibold">معلومات الطالب</h3>
                 <hr>
             </div>
 
             <div class="form-item">
                 <label class="text-xl ">القسم</label>
-                <select  wire:model="department" class="bg-gray-50 border border-gray-300  text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 ">
+                <select  wire:model="department" class="bg-gray-50 border border-gray-300  text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-1/2 p-2.5 ">
                     <option value="1">علوم الحاسوب</option>
                     <option value="2">نظم المعلومات </option>
                 </select>

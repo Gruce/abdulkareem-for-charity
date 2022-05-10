@@ -2487,6 +2487,10 @@ select{
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(0 166 154 / var(--tw-ring-opacity));
 }
+.focus\:ring-black:focus{
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(0 0 0 / var(--tw-ring-opacity));
+}
 .focus\:ring-opacity-50:focus{
   --tw-ring-opacity: 0.5;
 }
