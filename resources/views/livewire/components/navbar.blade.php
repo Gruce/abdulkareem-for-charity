@@ -88,20 +88,21 @@
             </ul>
         </div>
 
-        <div class=" flex gap-4 @auth  @else hidden @endauth">
+        <div class="flex gap-4 @auth  @else hidden @endauth">
             <div>
                 <a  href="{{ route('donate') }}"
-                    class="text-white bg-purple-700 hover:bg-purple-800 focus:outline-none focus:ring-4 focus:ring-purple-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mb-2 ">
-                    تبرع</a>
+                    class="block text-white bg-primary-300 hover:bg-primary-600 focus:outline-none focus:ring-4 focus:ring-primary-600 font-medium rounded-full text-sm px-5 py-2.5 text-center mb-2">
+                    تبرع
+                </a>
 
             </div>
             
             @admin
             <div>
                 <a  href="{{ route('add-case') }}"
-                    class="text-white bg-purple-700 hover:bg-purple-800 focus:outline-none focus:ring-4 focus:ring-purple-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mb-2 ">
-                    اضافة حالة</a>
-
+                    class="block text-white bg-primary-300 hover:bg-primary-600 focus:outline-none focus:ring-4 focus:ring-primary-600 font-medium rounded-full text-sm px-5 py-2.5 text-center mb-2 ">
+                    اضافة حالة
+                </a>
             </div>
             @endadmin
 
@@ -109,8 +110,9 @@
             <form method="POST" action="{{ route('logout') }}" x-data>
                 @csrf
                 <button type="submit" 
-                    class="text-white bg-purple-700 hover:bg-purple-800 focus:outline-none focus:ring-4 focus:ring-purple-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mb-2 "><i
-                        class="fa-solid fa-right-from-bracket"></i> </button>
+                    class="text-white bg-primary-300 hover:bg-primary-600 focus:outline-none focus:ring-4 focus:ring-primary-600 font-medium rounded-full text-sm px-5 py-2.5 text-center mb-2 "><i
+                    class="fa-solid fa-right-from-bracket"></i>
+                </button>
             </form>
         </div>
 
