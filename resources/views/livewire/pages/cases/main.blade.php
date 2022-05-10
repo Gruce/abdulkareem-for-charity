@@ -1,6 +1,6 @@
 @section('title', 'الحالات')
 
-<div>
+<div class="grid grid-cols-3 gap-6 pt-5">
     @forelse ($cases as $item)
     @livewire('components.case.card' , [
     'title' => $item->title,
