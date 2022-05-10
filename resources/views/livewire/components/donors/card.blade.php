@@ -6,7 +6,7 @@
                 <div class="col-span-2 flex flex-col">
                     <img src="{{ asset($photo ?? 'img/user.png') }}"
                         alt="" class=" rounded-full h-32 w-32" />
-                    <h3 class=" text-xl mr-2 mt-4"> يملك {{ $shares  ?? 0}} سهما </h3>
+                    <h3 class=" text-xl mr-2 mt-4"> يملك {{ $shares  ?? 0}} سهماً </h3>
                 </div>
 
                 <div class="col-span-3">
@@ -22,9 +22,10 @@
                     class="text-white bg-primary-400 hover:bg-primary-500 focus:ring-1 focus:ring-cyan-300 font-medium rounded-xl text-sm px-5 py-1 text-center">
                     زيادة الاسهم
                 </button>
-                <form class="flex flex-row" x-show="isOpen">
+                <form wire:submit.prevent="add" class="flex flex-row" x-show="isOpen">
                     <div>
-                        <input type="number" id="shares"
+
+                        <input wire:model="shares" type="number" id="shares"
                             class=" bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-sm focus:ring-blue-400 focus:border-blue-500 block h-12"
                             placeholder="ادخل عدد الاسهم">
                     </div>
