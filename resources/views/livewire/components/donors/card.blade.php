@@ -6,7 +6,7 @@
                 <div class="col-span-2 flex flex-col">
                     <img src="{{ asset($photo ?? 'img/user.png') }}"
                         alt="" class=" rounded-full h-32 w-32" />
-                    <h3 class=" text-xl mr-2 mt-4"> يملك {{ $shares  ?? 0}} سهما </h3>
+                    <h3 class=" text-xl mr-2 mt-4"> يملك {{ $shares  ?? 0}} سهماً </h3>
                 </div>
 
                 <div class="col-span-3">
