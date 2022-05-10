@@ -16,7 +16,7 @@
         الخيري
         </h1>
         <p class="font-semibold text-lg mt-10 leading-9 text-gray-600">
-            مبادرة ونشاط طلابي بحت ينطلق من طلبة كلية علوم الحاسوب وتـكـنلوجيا المعـلومات
+            مبادرة ونشاط طلابي بحت ينطلق من طلبة كلية علوم الحـاسوب وتـكنلوجيا المعـلومات
             <br>
             الهدف منه رعاية الاعمال الخيرية داخل الكلية وتكون الاولوية في صرف الصندوق للطلبة
             <br>
@@ -29,10 +29,10 @@
             
         </p>
         <div class="mt-20">
-            <p class="mb-5 text-primary-900 text-2xl font-semibold">
+            <p class="mb-5 text-primary-500 text-2xl font-semibold">
                 من اجل استمرار العطاء اضغط هنا للتبرع
                 <a  href="{{ route('donate') }}"
-                class="text-white bg-primary-300 hover:bg-primary-600 focus:outline-none focus:ring-4 focus:ring-primary-600 font-medium rounded-xl text-sm px-5 py-2.5 text-center mb-2">
+                class="text-white bg-primary-500 hover:bg-primary-600 focus:outline-none focus:ring-4 focus:ring-primary-600 font-medium rounded-full text-sm px-5 py-2.5 text-center mb-2">
                 تبرع من هنا
             </a>
             </p>
@@ -47,8 +47,8 @@
                 </div>   
         </div>
         
-        <div class="col-span-2 row-span-1 bg-teal-200">03</div>
-        <div class="col-span-2 row-span-3 bg-purple-200">04</div>
+        {{-- <div class="col-span-2 row-span-1 bg-teal-200">03</div>
+        <div class="col-span-2 row-span-3 bg-purple-200">04</div> --}}
     </div>
 
 
