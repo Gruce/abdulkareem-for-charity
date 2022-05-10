@@ -8,7 +8,7 @@
                 <h5 class="text-gray-900 text-xl font-medium mb-2"> {{ $title }}</h5>
                 @auth
                     <div>
-                        <a wire:click="confirm({{$case}})">
+                        <a wire:click="confirm({{ $case }})">
                             <i class="fa-solid fa-trash"></i>
                         </a>
         
@@ -18,6 +18,7 @@
                     </div>
                 @endauth
             </div>
+           
             <div class=" xs:28">
                 <p class="text-gray-700 text-base mb-4">
                     {{ $description }}
@@ -31,7 +32,8 @@
             <div class="bg-primary-500 text-xs font-medium text-gray-700 text-center p-0.5 leading-none rounded-b"
                 style="width: 100%"> {{$received_price}}</div>
         </div>
-    </div>
+    </div> 
+    
 
 
 </div>

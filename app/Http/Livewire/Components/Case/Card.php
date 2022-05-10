@@ -13,7 +13,7 @@ class Card extends Component
     protected $listeners = ['delete'];
 
     public function delete()
-    {
+    {   $case=$this->cases->id;
         $this->case->delete();
         $this->alert('success', 'Done!', [
             'position' => 'top-start',
@@ -65,7 +65,10 @@ class Card extends Component
     // }
 
     public function render()
-    {
+    {$this->cases= Event::orderByDesc('id')->get();
+        
+        
+
         return view('livewire.components.case.card');
     }
 }
