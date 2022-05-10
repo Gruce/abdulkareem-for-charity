@@ -30,7 +30,7 @@
         </p>
         <div class="mt-20">
             <p class="mb-5 text-primary-500 text-2xl font-semibold">
-                من اجل استمرار العطاء اضغط هنا للتبرع
+                من اجل أستمرار العطاء اضغط هنا للتبرع
                 <a  href="{{ route('donate') }}"
                 class="text-white bg-primary-500 hover:bg-primary-600 focus:outline-none focus:ring-4 focus:ring-primary-600 font-medium rounded-full text-sm px-5 py-2.5 text-center mb-2">
                 تبرع من هنا
