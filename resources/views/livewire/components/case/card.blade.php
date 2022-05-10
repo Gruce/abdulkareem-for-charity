@@ -4,7 +4,20 @@
             <img class="rounded-t-lg" src="{{ asset($image_path) }}" alt="" />
         </a>
         <div class="p-6">
-            <h5 class="text-gray-900 text-xl font-medium mb-2"> {{ $title }}</h5>
+            <div class="flex justify-between">
+                <h5 class="text-gray-900 text-xl font-medium mb-2"> {{ $title }}</h5>
+                @auth
+                    <div>
+                        <a wire:click="delete">
+                            <i class="fa-solid fa-trash"></i>
+                        </a>
+        
+                        {{-- <a href="">
+                            <i class="fa-solid fa-pen-to-square"></i>
+                        </a> --}}
+                    </div>
+                @endauth
+            </div>
             <div class=" xs:28">
                 <p class="text-gray-700 text-base mb-4">
                     {{ $description }}
