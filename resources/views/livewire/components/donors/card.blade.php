@@ -24,8 +24,8 @@
                 </button>
                 <form wire:submit.prevent="add" class="flex flex-row" x-show="isOpen">
                     <div>
-                        
-                        <input type="number" id="shares"
+
+                        <input wire:model="shares" type="number" id="shares"
                             class=" bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-sm focus:ring-blue-400 focus:border-blue-500 block h-12"
                             placeholder="ادخل عدد الاسهم">
                     </div>
