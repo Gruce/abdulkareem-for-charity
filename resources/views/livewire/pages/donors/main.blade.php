@@ -12,7 +12,7 @@
         'date' => $item->created_at,
         ])
         @empty
-        هلو
+        لا يوجد متبرعيين
         @endforelse
 
 
@@ -31,7 +31,7 @@
         'date' => $item->created_at,
         ])
         @empty
-        هلو
+        لا يوجد متبرعيين
         @endforelse
 
         @enduser
@@ -50,7 +50,7 @@
         'phone_number' => $item->phone_number,
         ])
         @empty
-        هلو
+        لا يوجد متبرعيين
         @endforelse
 
         @endadmin

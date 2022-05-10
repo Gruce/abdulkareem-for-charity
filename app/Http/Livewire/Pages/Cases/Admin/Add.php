@@ -20,26 +20,26 @@ class Add extends Component
 
     public function add()
     {
-        
+
         $this->validate();
-        
+
         $data = [
             'title' => $this->title,
             'description' => $this->description,
             'target' => $this->target,
 
         ];
-        $this->alert('success', 'Done!', [
+        $this->alert('success', 'تمت الاضافة', [
             'position' => 'top',
             'timer' => 3000,
             'toast' => true,
-        ]);   
+        ]);
         $case = new Event();
         $case->add($data);
         $case->add_file($this->file_path, 2); // 2: file_path
         $case->add_file($this->image_path); // 1: image_path default
         $this->reset();
-        
+
     }
 
 

@@ -3,7 +3,8 @@
          بِسْمِ اللَّـهِ الرَّحْمَـٰنِ الرَّحِيمِ
      </div>
      <div class="text-2xl font-semibold font-IBM">
-        مَن ذَا الذي يُقرضُ الله قَرضًا حَسنًا فَيُضاعفهُ لَهُ أَضعَافًا كَثيرةً وَالله يَقبضُ ويَبسطُ وإِليهِ تُرجَعونَ
+         مَن ذَا الذي يُقرضُ الله قَرضًا حَسنًا فَيُضاعفهُ لَهُ أَضعَافًا كَثيرةً وَالله يَقبضُ ويَبسطُ وإِليهِ
+         تُرجَعونَ
      </div>
 
  </div>
@@ -22,7 +23,7 @@
                      class="flex flex-col justify-center">
 
                      <div class="inline-flex items-center self-start">
-                        أشتري
+                         أشتري
                      </div>
                      <div class="flex py-2">
                          <button type="button" onclick="minus()" class="bg-yellow-600 p-1.5 font-bold rounded">
@@ -31,11 +32,11 @@
 
                          <input wire:model="share" id="item_count" type="number" value="1"
                              class="w-full font-bold font-mono mx-1.5
-                                    block border border-gray-300 rounded-md text-sm shadow-sm  placeholder-gray-400
+                                    block border border-gray-300 rounded-md text-sm shadow-sm
                                     focus:outline-none
-                                    focus:border-sky-500
+                                    focus:border-primary-ring-primary-400
                                     focus:ring-1
-                                    focus:ring-sky-500
+                                    focus:ring-primary-300
                                     focus:invalid:border-red-500  focus:invalid:ring-red-500">
                          <button type="button" onclick="plus()" class="bg-green-600 p-1.5 font-bold rounded">
                              <i class="fa-solid fa-plus w-4 h-4"></i>
@@ -48,9 +49,9 @@
                          class="
                         mb-3 mt-1 block w-full px-2 py-1.5 border border-gray-300 rounded-md text-sm shadow-sm placeholder-gray-400
                         focus:outline-none
-                        focus:border-sky-500
+                        focus:border-primary-ring-primary-400
                         focus:ring-1
-                        focus:ring-sky-500
+                        focus:ring-primary-300
                         focus:invalid:border-red-500 focus:invalid:ring-red-500"
                          name="messages" placeholder="السهم الواحد = 2000 دينار عراقي"></textarea>
                      <button
