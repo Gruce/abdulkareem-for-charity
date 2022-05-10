@@ -8,7 +8,7 @@
                 <h5 class="text-gray-900 text-xl font-medium mb-2"> {{ $title }}</h5>
                 @auth
                     <div>
-                        <a wire:click="delete">
+                        <a wire:click="confirm({{$case}})">
                             <i class="fa-solid fa-trash"></i>
                         </a>
         
