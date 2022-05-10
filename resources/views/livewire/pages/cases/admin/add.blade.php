@@ -1,8 +1,8 @@
 <!-- Add Case -->
 <form wire:submit.prevent="add">
 <div class="flex h-auto items-center justify-center">
-    
-    
+
+
         <div class="grid rounded-lg w-full">
             <div class="flex justify-center">
                 <div class="flex bg-primary-200 rounded-full md:p-2 p-2 border-2 border-primary-300">
@@ -68,7 +68,9 @@
                         </label>
                     </div>
                 </div>
-
+                {{-- <div wire:loading>
+                    <x-ui.loading />
+                </div> --}}
                 {{-- Case Personal info image --}}
                 <div class="w-1/2 mt-5 mx-7">
                     <label class="md:text-sm text-xs text-gray-700 text-light font-semibold mb-1">صورة
