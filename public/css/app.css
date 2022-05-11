@@ -1008,6 +1008,10 @@ select{
   margin-top: 6rem;
   margin-bottom: 6rem;
 }
+.my-12{
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
 .ml-3{
   margin-left: 0.75rem;
 }
@@ -1845,6 +1849,9 @@ select{
 }
 .p-9{
   padding: 2.25rem;
+}
+.p-8{
+  padding: 2rem;
 }
 .px-4{
   padding-left: 1rem;
@@ -2726,6 +2733,10 @@ select{
     --tw-border-opacity: 1;
     border-color: rgb(107 114 128 / var(--tw-border-opacity));
   }
+  .dark\:border-gray-600{
+    --tw-border-opacity: 1;
+    border-color: rgb(75 85 99 / var(--tw-border-opacity));
+  }
   .dark\:bg-gray-700{
     --tw-bg-opacity: 1;
     background-color: rgb(55 65 81 / var(--tw-bg-opacity));
@@ -2805,6 +2816,10 @@ select{
     --tw-text-opacity: 1;
     color: rgb(255 255 255 / var(--tw-text-opacity));
   }
+  .dark\:focus\:border-blue-500:focus{
+    --tw-border-opacity: 1;
+    border-color: rgb(59 130 246 / var(--tw-border-opacity));
+  }
   .dark\:focus\:ring-gray-700:focus{
     --tw-ring-opacity: 1;
     --tw-ring-color: rgb(55 65 81 / var(--tw-ring-opacity));
@@ -2816,6 +2831,10 @@ select{
   .dark\:focus\:ring-blue-800:focus{
     --tw-ring-opacity: 1;
     --tw-ring-color: rgb(30 64 175 / var(--tw-ring-opacity));
+  }
+  .dark\:focus\:ring-blue-500:focus{
+    --tw-ring-opacity: 1;
+    --tw-ring-color: rgb(59 130 246 / var(--tw-ring-opacity));
   }
 }
 @media (min-width: 640px){
@@ -3170,5 +3189,9 @@ select{
 @media (min-width: 1280px){
   .xl\:grid-cols-3{
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .xl\:px-64{
+    padding-left: 16rem;
+    padding-right: 16rem;
   }
 }
