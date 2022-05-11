@@ -45,6 +45,7 @@ Route::middleware(['auth:sanctum'])->group(function () {
     Route::middleware(['admin'])->group(function (){
         Route::get('/add-case', CaseAdd::class)->name('add-case');
         Route::get('/edit-case/{case_id}', CaseEdit::class)->name('edit-case');
+        
 
     });
     //Profile
