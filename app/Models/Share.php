@@ -17,6 +17,10 @@ class Share extends Model
         return $this->belongsTo(User::class);
     }
 
+    public function event()
+    {
+        return $this->belongsTo(Event::class);
+    }
     ### End Relationships ###
 
     // public function add($share , $note = null)

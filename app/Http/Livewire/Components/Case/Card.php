@@ -27,6 +27,7 @@ class Card extends Component
             'timer' => 3000,
             'toast' => true,
         ]);
+
         $this->emitSelf('$refresh');
     }
 

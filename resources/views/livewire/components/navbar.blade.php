@@ -94,15 +94,9 @@
 
         <div class="flex gap-4 @auth
 @else
-hidden 
+hidden
 @endauth">
-            <div>
-                <a href="{{ route('donate') }}"
-                    class="block text-white hover:scale-105 duration-200 hover:border-2 hover:border-primary-400 bg-primary-300 hover:bg-primary-600 focus:outline-none font-medium rounded-full text-sm px-5 py-2.5 text-center mb-2">
-                    تبرع
-                </a>
 
-            </div>
 
             @admin
             <div>
