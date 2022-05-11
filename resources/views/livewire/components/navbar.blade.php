@@ -87,40 +87,32 @@
                         @endif
                     </li>
                 @endforeach
+
+                {{-- Donate/Add Buttons --}}
+                <div class="flex gap-4 @auth
+@else
+hidden 
+                     @endauth">
+                    <a href="{{ route('donate') }}"
+                        class="block py-2 pl-3 pr-4 font-semibold text-gray-700 hover:bg-gray-300 rounded-lg border-gray-100 hover:scale-110 duration-200 border-b-2">
+                        تبرع
+                    </a>
+                    @admin
+                    <a href="{{ route('add-case') }}"
+                        class="block py-2 pl-3 pr-4 font-semibold text-gray-700 hover:bg-gray-300 rounded-lg border-gray-100 hover:scale-110 duration-200 border-b-2">
+                        اضافة حالة
+                    </a>
+                    @endadmin
+                    <form method="POST" action="{{ route('logout') }}" x-data>
+                        @csrf
+                        <button type="submit"
+                            class="block py-2 pl-3 pr-4 font-semibold text-gray-700 hover:bg-gray-300 rounded-lg border-gray-100 hover:scale-110 duration-200 border-b-2">
+                            <i class="fa-solid fa-right-from-bracket"></i>
+                        </button>
+                    </form>
+                </div>
             </ul>
-        </div>
 
-        {{-- Donate/Add Buttons --}}
-
-        <div class="flex gap-4 @auth
-            @else
-            hidden 
-            @endauth">
-            <div>
-                <a href="{{ route('donate') }}"
-                    class="block text-white hover:scale-105 duration-200 hover:border-2 hover:border-primary-400 bg-primary-300 hover:bg-primary-600 focus:outline-none font-medium rounded-full text-sm px-5 py-2.5 text-center mb-2">
-                    تبرع
-                </a>
-
-            </div>
-
-            @admin
-            <div>
-                <a href="{{ route('add-case') }}"
-                    class="block text-white hover:scale-105 duration-200 hover:border-2 hover:border-primary-400 bg-primary-300 hover:bg-primary-600 focus:outline-none font-medium rounded-full text-sm px-5 py-2.5 text-center mb-2 ">
-                    اضافة حالة
-                </a>
-            </div>
-            @endadmin
-
-
-            <form method="POST" action="{{ route('logout') }}" x-data>
-                @csrf
-                <button type="submit"
-                    class="text-white hover:scale-105 duration-200 hover:border-2 hover:border-primary-400 bg-primary-300 hover:bg-primary-600 focus:outline-none font-medium rounded-full text-sm px-5 py-2.5 text-center mb-2 ">
-                    <i class="fa-solid fa-right-from-bracket"></i>
-                </button>
-            </form>
         </div>
 
         {{-- Pages in Mobile --}}
@@ -204,6 +196,28 @@
                                 @endif
                             </li>
                         @endforeach
+                        <div class="flex gap-4 @auth
+@else
+hidden 
+                     @endauth">
+                            <a href="{{ route('donate') }}"
+                                class="block py-2 pl-3 pr-4 font-semibold text-gray-700 hover:bg-gray-300 rounded-lg border-gray-100 hover:scale-110 duration-200 border-b-2">
+                                تبرع
+                            </a>
+                            @admin
+                            <a href="{{ route('add-case') }}"
+                                class="block py-2 pl-3 pr-4 font-semibold text-gray-700 hover:bg-gray-300 rounded-lg border-gray-100 hover:scale-110 duration-200 border-b-2">
+                                اضافة حالة
+                            </a>
+                            @endadmin
+                            <form method="POST" action="{{ route('logout') }}" x-data>
+                                @csrf
+                                <button type="submit"
+                                    class="block py-2 pl-3 pr-4 font-semibold text-gray-700 hover:bg-gray-300 rounded-lg border-gray-100 hover:scale-110 duration-200 border-b-2">
+                                    <i class="fa-solid fa-right-from-bracket"></i>
+                                </button>
+                            </form>
+                        </div>
                     </ul>
                 </div>
 

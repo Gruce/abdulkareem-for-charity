@@ -10,11 +10,11 @@
                 @admin
                     <div>
                         <a wire:click="confirm({{$item->id}})">
-                            <i class="text-red-600 fa-solid fa-trash"></i>
+                            <i class="text-xl text-red-500 fa-solid fa-trash hover:scale-110 duration-200 hover:text-red-600"></i>
                         </a>
 
-                        <a href={{route('edit-case', ['case_id'=> $item->id])}}>
-                            <i class="text-green-500 fa-solid fa-pen-to-square"></i>
+                        <a href="#">
+                            <i class="text-xl text-green-500 fa-solid fa-pen-to-square hover:scale-110 hover:rotate-12 duration-200 hover:text-green-600"></i>
                         </a>
                     </div>
                 @endadmin
@@ -23,14 +23,13 @@
                 <p class="text-gray-700 text-base mb-4">
                     {{ $item->description }}
                 </p>
-                <p>هدف الحملة : {{$item->target}} IQ</p>
+                <p>هدف الحملة : {{$item->target}} IQD</p>
+                <p>المبلغ الواصل : {{$item->received_price}} IQD</p>
             </div>
-            <a href="#!" class="text-primary-500 hover:text-primary-500 transition duration-300 ease-in-out mb-4"> عرض
-                التفاصيل</a>
         </div>
-        <div class="w-full  ">
-            <div class="bg-primary-500 text-xs font-medium text-gray-700 text-center p-0.5 leading-none rounded-b"
-                style="width: 100%"> {{$item->received_price}}</div>
+        <div class="w-full">
+            <div class="bg-primary-500 text-xs font-medium text-gray-700 text-center p-1.5 leading-none rounded-b"
+                style="width: 100%"></div>
         </div>
     </div>
     @empty
