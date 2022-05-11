@@ -51,10 +51,20 @@ class Card extends Component
 
 
     public function add($id){
-        Share::create([
+        
+        $data = [
             'user_id' => $id,
-            'share' => $share,
-        ])
+            'share' => $this->share,
+        ];
+        $this->alert('success', 'تمت الاضافة', [
+            'position' => 'top',
+            'timer' => 3000,
+            'toast' => true,
+        ]);
+        $share = new Share();
+        $share->add($data);
+        $this->reset();
+
 
 
     }
