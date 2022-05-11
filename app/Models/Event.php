@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Support\Facades\Str;
+
 
 class Event extends Model
 {
@@ -12,7 +12,7 @@ class Event extends Model
     use HasFactory;
 
     ### Start Relationships ###
-    
+
     public function shares()
     {
         return $this->hasMany(Share::class);
@@ -27,10 +27,9 @@ class Event extends Model
     ### End add ###
     public function add_file($file, $type = 1)
     {
-        dd($file);
         $type = $type == 1 ? 'images' : 'files';
         $ext = $file->extension();
-        $name = Str::random(10) . '.' . $ext;
+        $name = \Str::random(10) . '.' . $ext;
         $file = $file->storeAs('public/event/' . $this->id . '/' . $type . '/' , $name);
         if ($type == 'images')
             $this->image_path = $name;
