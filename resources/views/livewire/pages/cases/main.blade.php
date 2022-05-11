@@ -1,5 +1,5 @@
 @section('title', 'الحالات')
 
-<div class="grid grid-cols-3 gap-6 pt-5">
+<div >
     @livewire('components.case.card')
 </div>
