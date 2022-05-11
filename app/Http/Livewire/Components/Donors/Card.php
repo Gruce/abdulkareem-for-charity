@@ -4,18 +4,26 @@ namespace App\Http\Livewire\Components\Donors;
 use Jantinnerezo\LivewireAlert\LivewireAlert;
 use App\Models\User;
 use Livewire\Component;
+use App\Models\Share;
+
 
 class Card extends Component
 {
-    public $name, $type, $shares, $photo, $date, $email, $phone_number;
+    public $name, $type, $shares, $share, $photo, $date, $email, $phone_number;
     use LivewireAlert;
     public  $share_id;
+   
 
-    protected $listeners = ['delete', '$refresh'];
+    protected $rules = [
+        'name' => 'required',
+       'shares' => 'required',
+    ];
+
+    protected $listeners = ['delete', '$refresh' ];
 
     public function mount(){
         $this->shares = User::orderByDesc('id')->get();
-        
+
     }
 
     public function delete(){
@@ -39,6 +47,30 @@ class Card extends Component
             'showCancelButton' => true,
             'onDismissed' => '',
         ]);
+    }
+
+
+    public function add($id){
+        $this->validate();
+        
+        $shares = new Share;
+
+        $shares->add([
+            'user_id' => $id,
+            'share' => $this->share,
+        ]);
+
+        $this->alert('success', 'تمت التغيير', [
+            'position' => 'top',
+            'timer' => 3000,
+            'toast' => true,
+        ]);
+        
+        $this->emitTo('components.donors.card', '$refresh');
+
+        $this->reset();
+
+
     }
 
     public function render(){
