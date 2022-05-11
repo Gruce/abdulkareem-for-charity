@@ -4,6 +4,11 @@
         @forelse ($users as $item)
         <div
             class="shadow-sm shadow-gray-300 hover:shadow-gray-400 hover:shadow-lg p-4 w-full rounded-xl bg-gray-50 hover:bg-gray-200 transition duration-200">
+            <div class="justify-end">
+                <a wire:click="confirm({{$item->id}})">
+                    <i class="text-red-600 fa-solid fa-trash"></i>
+                </a>
+            </div>
             <div class="grid grid-cols-5 mb-5">
                 <div class="col-span-2 flex flex-col">
                     <img src="{{ asset($item->profile_photo_path ?? 'img/user.png') }}" alt=""
@@ -16,12 +21,9 @@
                     <h3 class="mt-2 font-Kufi text-center text-base @if($item->type == 4) hidden @endif">@if($item->type
                         == 1) طالب
                         @elseif($item->type == 2) تدريسي @else موظف @endif</h3>
+                        
                 </div>
-                <div>
-                    <a wire:click="confirm({{$item->id}})">
-                        <i class="text-red-600 fa-solid fa-trash"></i>
-                    </a>
-                </div>
+               
             </div>
 
 
