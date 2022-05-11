@@ -6,11 +6,9 @@ use Livewire\Component;
 use App\Models\Share;
 use Jantinnerezo\LivewireAlert\LivewireAlert;
 
-class Main extends Component
-{
+class Main extends Component{
     use LivewireAlert;
     // public $share, $note;
-
     // public function save()
     // {
     //     $donate = new Share;
@@ -24,8 +22,7 @@ class Main extends Component
     //     $this->reset();
     // }
 
-    public function render()
-    {
+    public function render(){
         return view('livewire.pages.donate.main');
     }
 }

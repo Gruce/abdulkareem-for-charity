@@ -8,16 +8,13 @@ class StudentInfo extends Component
 {
     use LivewireAlert;
 
-
-
     protected $rules = [
         'department' => 'required',
         'study_type' => 'required',
         'stage' => 'required',
     ];
 
-
-    public  function edit(){
+    public function edit(){
         $this->validate();
 
         $this->user->student->edit([
@@ -42,14 +39,9 @@ class StudentInfo extends Component
         $this->stage = $this->user->student->stage;
         $this->division = $this->user->student->division;
         }
-
-
-
     }
 
-    public function render()
-    {
-
+    public function render(){
         return view('livewire.pages.profile.student-info');
     }
 }
