@@ -34,7 +34,7 @@
         </div>
     </div>
     @empty
-    <div class="">
+    <div class="text-2xl font-medium text-gray-700">
     لايوجد حالات
     </div>
     @endforelse
