@@ -10,12 +10,12 @@ class Event extends Model
     protected $fillable = ['title', 'description', 'image_path', 'file_path', 'target', 'received_price'];
     use HasFactory;
 
-    public function add($data)
-    {
-    
+    ### add ###
+    public function add($data){
         $this->fill($data);
         $this->save();
     }
+    ### End add ###
     public function add_file($file, $type = 1)
     {
         $type = $type == 1 ? 'images' : 'files';
@@ -27,6 +27,15 @@ class Event extends Model
         else $this->file_path = $name;
         
         $this->save();
+    }
+    ### edit ###
+    public function edit($data){
+        $this->fill($data);
+        $this->save();
+    }
+    ### End edit ###
+    public function delete(){
+        $this->delete();
     }
 }
 

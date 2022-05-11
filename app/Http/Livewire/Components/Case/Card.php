@@ -3,27 +3,35 @@
 namespace App\Http\Livewire\Components\Case;
 
 use Livewire\Component;
+use App\Models\Event;
 use Jantinnerezo\LivewireAlert\LivewireAlert;
 
 class Card extends Component
 {
     use LivewireAlert;
-    public $title, $description, $image_path, $file_path, $target, $received_price;
-    
-    protected $listeners = ['delete'];
 
-    public function delete()
-    {
-        $this->card->delete();
-        $this->alert('success', 'Done!', [
-            'position' => 'top-start',
+    public  $event_id;
+
+
+    protected $listeners = ['delete', '$refresh'];
+
+    public function mount(){
+        $this->events = Event::orderByDesc('id')->get();
+
+    }
+
+    public function delete(){
+        Event::findOrFail($this->event_id)->delete();
+        $this->alert('success', 'تم حذف الحالة', [
+            'position' => 'top',
             'timer' => 3000,
             'toast' => true,
         ]);
+        $this->emitSelf('$refresh');
     }
 
-    public function confirm(Card $card){
-        $this->card = $card;
+    public function confirm($id){
+        $this->event_id = $id;
         $this->alert('warning', 'هل انت متأكد من حذف الحالة؟', [
             'position' => 'center',
             'timer' => 3000,

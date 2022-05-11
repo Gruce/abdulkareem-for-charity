@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Student extends Model
 {
-    
+
     use HasFactory;
     protected $fillable = ['department' , 'study_type','stage','division'];
 
@@ -20,10 +20,12 @@ class Student extends Model
     }
 
     ### End Relationships ###
+
+    
     public function edit($data)    {
         $this->fill($data);
         $this->save();
     }
-    
+
 
 }
