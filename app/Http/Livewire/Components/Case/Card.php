@@ -9,15 +9,12 @@ use Jantinnerezo\LivewireAlert\LivewireAlert;
 class Card extends Component
 {
     use LivewireAlert;
-
     public  $event_id;
-
 
     protected $listeners = ['delete', '$refresh'];
 
     public function mount(){
         $this->events = Event::orderByDesc('id')->get();
-
     }
 
     public function delete(){
@@ -43,8 +40,7 @@ class Card extends Component
         ]);
     }
 
-    public function render()
-    {
+    public function render(){
         return view('livewire.components.case.card');
     }
 }

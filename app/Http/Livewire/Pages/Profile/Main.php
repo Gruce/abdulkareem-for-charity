@@ -10,8 +10,7 @@ class Main extends Component
         $this->user = auth()->user()->load('student');
     }
 
-    public function render()
-    {
+    public function render(){
         return view('livewire.pages.profile.main');
     }
 }
