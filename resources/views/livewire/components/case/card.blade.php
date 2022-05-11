@@ -10,7 +10,7 @@
                 <h5 class="text-gray-900 text-xl font-medium mb-2"> {{ $title }}</h5>
                 @auth
                     <div>
-                        <button wire:click="confirm" class="mr-4">
+                        <button wire:click="confirm({{$cases}})" class="mr-4">
                             <i class=" fa-solid fa-trash-can text-red-400 hover:text-red-600"></i>
                         </button>
                         <button wire:click="edit">
@@ -19,7 +19,6 @@
                     </div>
                 @endauth
             </div>
-           
             <div class=" xs:28">
                 <p class="text-gray-700 text-base mb-4">
                     {{ $description }}
