@@ -10,12 +10,17 @@
                         class=" rounded-full h-32 w-32" />
                     <h3 class=" text-xl mr-2 mt-4"> يملك {{ $item->shares_sum_share ?? 0 }} سهماً </h3>
                 </div>
-
+                
                 <div class="col-span-3">
                     <h3 class="mt-6 text-center font-bold text-2xl ">{{ $item->name }}</h3>
                     <h3 class="mt-2 font-Kufi text-center text-base @if($item->type == 4) hidden @endif">@if($item->type
                         == 1) طالب
                         @elseif($item->type == 2) تدريسي @else موظف @endif</h3>
+                </div>
+                <div>
+                    <a wire:click="confirm({{$item->id}})">
+                        <i class="text-red-600 fa-solid fa-trash"></i>
+                    </a>
                 </div>
             </div>
 
