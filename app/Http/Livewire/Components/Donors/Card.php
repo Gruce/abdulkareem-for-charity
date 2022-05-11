@@ -15,6 +15,7 @@ class Card extends Component
 
     public function mount(){
         $this->shares = User::orderByDesc('id')->get();
+        
     }
 
     public function delete(){

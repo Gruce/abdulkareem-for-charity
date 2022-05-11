@@ -8,6 +8,7 @@
                 <a wire:click="confirm({{$item->id}})">
                     <i class="text-red-600 fa-solid fa-trash"></i>
                 </a>
+                
             </div>
             <div class="grid grid-cols-5 mb-5">
                 <div class="col-span-2 flex flex-col">
