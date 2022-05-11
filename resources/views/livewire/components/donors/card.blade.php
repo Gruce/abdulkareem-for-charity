@@ -8,7 +8,7 @@
                 <a wire:click="confirm({{$item->id}})">
                     <i class="text-red-600 fa-solid fa-trash"></i>
                 </a>
-                
+
             </div>
             <div class="grid grid-cols-5 mb-5">
                 <div class="col-span-2 flex flex-col">
@@ -41,7 +41,7 @@
                             class=" bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-sm focus:ring-blue-400 focus:border-blue-500 block h-12"
                             placeholder="ادخل عدد الاسهم">
                     </div>
-                    <button type="submit"
+                    <button type="submit" 
                         class="mt-2 w-full text-white bg-cyan-700 hover:bg-cyan-800 focus:ring-2 focus:ring-cyan-300 font-medium rounded-sm text-sm px-2.5 py-1 text-center mr-2 mb-2">+
                     </button>
                 </form>

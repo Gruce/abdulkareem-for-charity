@@ -10,12 +10,17 @@ class Card extends Component
     public $name, $type, $shares, $photo, $date, $email, $phone_number;
     use LivewireAlert;
     public  $share_id;
+   
+
+    protected $rules = [
+       'shares' => 'required',
+    ];
 
     protected $listeners = ['delete', '$refresh'];
 
     public function mount(){
         $this->shares = User::orderByDesc('id')->get();
-        
+
     }
 
     public function delete(){
@@ -39,6 +44,25 @@ class Card extends Component
             'showCancelButton' => true,
             'onDismissed' => '',
         ]);
+    }
+
+
+    public function add(){
+        $this->validate();
+
+        $data = [
+            'shares' => $this->shares,
+        ];
+
+        $this->alert('success', 'تمت التغيير', [
+            'position' => 'top',
+            'timer' => 3000,
+            'toast' => true,
+        ]);
+        
+        $shares->add($data);
+        $this->reset();
+
     }
 
     public function render(){
