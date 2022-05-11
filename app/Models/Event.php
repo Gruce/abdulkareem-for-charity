@@ -19,6 +19,7 @@ class Event extends Model
     ### End add ###
     public function add_file($file, $type = 1)
     {
+        
         $type = $type == 1 ? 'images' : 'files';
         $ext = $file->extension();
         $name = \Str::random(10) . '.' . $ext;
