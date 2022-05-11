@@ -19,6 +19,8 @@ class Edit extends Component
 
     public function render()
     {
+        $case = Event::findOrFail($this->case_id);
+
         return view('livewire.pages.cases.admin.edit', compact('case'));
     }
 }
