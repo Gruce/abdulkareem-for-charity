@@ -10,7 +10,7 @@ class Card extends Component
 {
     use LivewireAlert;
 
-    public $title, $description, $image_path, $file_path, $target, $received_price, $event_id;
+    public  $event_id;
 
 
     protected $listeners = ['delete', '$refresh'];

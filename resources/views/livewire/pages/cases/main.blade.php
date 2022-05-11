@@ -3,4 +3,5 @@
 <div >
     @livewire('components.case.card')
 
+    
 </div>

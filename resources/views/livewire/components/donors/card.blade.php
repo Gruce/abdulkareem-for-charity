@@ -1,17 +1,21 @@
 <div>
 
-    <div>
-        <div class="shadow-sm shadow-gray-400 hover:shadow-gray-500 hover:shadow-lg p-4 w-full rounded-xl bg-gray-50 hover:bg-gray-200 transition duration-300">
+    <div class="grid grid-cols-4 gap-6">
+        @forelse ($users as $item)
+        <div
+            class="shadow-sm shadow-gray-300 hover:shadow-gray-400 hover:shadow-lg p-4 w-full rounded-xl bg-gray-50 hover:bg-gray-200 transition duration-200">
             <div class="grid grid-cols-5 mb-5">
                 <div class="col-span-2 flex flex-col">
-                    <img src="{{ asset($photo ?? 'img/user.png') }}"
-                        alt="" class=" rounded-full h-32 w-32" />
-                    <h3 class=" text-xl mr-2 mt-4"> يملك {{ $shares  ?? 0}} سهماً </h3>
+                    <img src="{{ asset($item->profile_photo_path ?? 'img/user.png') }}" alt=""
+                        class=" rounded-full h-32 w-32" />
+                    <h3 class=" text-xl mr-2 mt-4"> يملك {{ $item->shares_sum_share ?? 0 }} سهماً </h3>
                 </div>
 
                 <div class="col-span-3">
-                    <h3 class="mt-6 text-center font-bold text-2xl ">{{ $name }}</h3>
-                    <h3 class="mt-2 font-Kufi text-center text-base @if($type == 4) hidden @endif">@if($type == 1) طالب @elseif($type == 2) تدريسي @else موظف @endif</h3>
+                    <h3 class="mt-6 text-center font-bold text-2xl ">{{ $item->name }}</h3>
+                    <h3 class="mt-2 font-Kufi text-center text-base @if($item->type == 4) hidden @endif">@if($item->type
+                        == 1) طالب
+                        @elseif($item->type == 2) تدريسي @else موظف @endif</h3>
                 </div>
             </div>
 
@@ -36,11 +40,15 @@
             </ul>
             @endadmin
             @auth
-            <h5 class="text-lg tracking-tight pt-5 ">البريد الالكتروني: {{ $email }}</h5>
+            <h5 class="text-lg tracking-tight pt-5 ">البريد الالكتروني: {{ $item->email }}</h5>
             @endauth
-            <p class="text-sm font-normal text-gray-500 ">انضم منذ: {{$date}}</p>
+            <p class="text-sm font-normal text-gray-500 ">انضم منذ: {{ $item->created_at }}</p>
 
         </div>
+        @empty
+        لا يوجد متبرعين
+        @endforelse
+
 
     </div>
 </div>
