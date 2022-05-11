@@ -12,13 +12,13 @@
         'date' => $item->created_at,
         ])
         @empty
-        لا يوجد متبرعيين
+        لا يوجد متبرعين
         @endforelse
 
 
         @endguest
 
-        
+
         @user
 
         @forelse ($users as $item)
@@ -31,14 +31,14 @@
         'date' => $item->created_at,
         ])
         @empty
-        لا يوجد متبرعيين
+        هلو
         @endforelse
 
         @enduser
-        
-        
+
+
         @admin
-        
+
         @forelse ($users as $item)
         @livewire('components.donors.card' , [
         'name' => $item->name,
@@ -50,7 +50,7 @@
         'phone_number' => $item->phone_number,
         ])
         @empty
-        لا يوجد متبرعيين
+        هلو
         @endforelse
 
         @endadmin
