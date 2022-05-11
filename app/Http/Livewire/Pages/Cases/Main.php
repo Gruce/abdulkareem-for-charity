@@ -10,8 +10,6 @@ class Main extends Component
 
     public function render()
     {
-        $this->cases= Event::orderByDesc('id')->get();
-        // dd($this->cases->toArray());
         return view('livewire.pages.cases.main');
     }
 }
