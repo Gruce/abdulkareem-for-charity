@@ -11,11 +11,11 @@
                         @admin
                         <div>
                             <a wire:click="confirm({{ $item->id }})">
-                                <i class="text-red-600 fa-solid fa-trash"></i>
+                                <i class="text-red-500 fa-solid fa-trash text-xl hover:scale-110 hover:text-red-600"></i>
                             </a>
 
                             <a href={{ route('edit-case', ['case_id' => $item->id]) }}>
-                                <i class="text-green-500 fa-solid fa-pen-to-square"></i>
+                                <i class="text-green-500 fa-solid fa-pen-to-square text-xl hover:scale-110 hover:text-green-600 hover:rotate-12"></i>
                             </a>
                         </div>
                         @endadmin
