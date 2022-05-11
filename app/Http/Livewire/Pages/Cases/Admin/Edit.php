@@ -12,6 +12,7 @@ class Edit extends Component
     {
     $this->case_id = $case_id;
     if ($case_id) {
+        
         $case = Event::findOrFail($this->case_id);
 
     }
