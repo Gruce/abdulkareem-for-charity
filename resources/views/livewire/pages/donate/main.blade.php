@@ -57,7 +57,7 @@
                      <button
                          class="px-4 py-1.5 rounded-md shadow-lg bg-gradient-to-r from-green-500 to-primary-600 font-medium text-gray-100 block transition duration-300"
                          type="submit">
-                         <span id="login_process_state" class="hidden">Sending (:</span>
+                         <span id="login_process_state" class="hidden">Sending</span>
                          <span id="login_default_state">تبرع<span id="subtotal"></span></span>
                      </button>
                  </form>
