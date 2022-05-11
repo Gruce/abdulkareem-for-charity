@@ -32,6 +32,7 @@
                             class="w-full py-2 px-3 rounded-lg border-2 border-gray-200 mt-1 focus:outline-none focus:ring-2 focus:ring-primary-100 focus:border-transparent"
                             type="number" placeholder="المبلغ الكلي" />
                     </div>
+                    
 
                     {{-- Received Payment --}}
                     <div class="grid grid-cols-1 mt-5 mx-7 w-1/2">
