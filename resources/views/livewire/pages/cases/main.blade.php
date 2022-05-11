@@ -10,6 +10,7 @@
     'target' => $item->target,
     'received_price' => $item->received_price,
     ])
+
     @empty
     لا يوجد حالات
     @endforelse

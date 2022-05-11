@@ -34,5 +34,8 @@ class Event extends Model
         $this->save();
     }
     ### End edit ###
+    public function delete(){
+        $this->delete();
+    }
 }
 

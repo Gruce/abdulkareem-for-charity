@@ -2023,6 +2023,9 @@ select{
 .leading-9{
   line-height: 2.25rem;
 }
+.leading-6{
+  line-height: 1.5rem;
+}
 .tracking-widest{
   letter-spacing: 0.1em;
 }
@@ -2805,6 +2808,13 @@ select{
   }
   .sm\:text-xl{
     font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+  .sm\:text-lg{
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+  .sm\:leading-7{
     line-height: 1.75rem;
   }
 }
