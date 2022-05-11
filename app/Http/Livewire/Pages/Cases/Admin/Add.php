@@ -35,6 +35,7 @@ class Add extends Component
             'timer' => 3000,
             'toast' => true,
         ]);
+        
         $case = new Event();
         $case->add($data);
         $case->add_file($this->file_path, 2); // 2: file_path
