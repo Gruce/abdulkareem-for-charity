@@ -26,4 +26,8 @@ class Share extends Model
     //     $this->user_id = auth()->user()->id;
     //     $this->save();
     // }
+    public function add($data){
+        $this->fill($data);
+        $this->save();
+    }
 }
