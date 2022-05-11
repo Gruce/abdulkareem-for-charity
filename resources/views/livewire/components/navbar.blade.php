@@ -39,9 +39,9 @@
                                 </ul>
                             </div>
                         @else
-                            {{-- Has no submenu --}}
+                            {{-- Has no submenu / edit button here! --}}
                             <a href="{{ route($item->route) }}"
-                                class="block py-2 pl-3 pr-4 font-semibold {{ $item->active ? 'text-primary-500 border-primary-100' : 'text-gray-700 hover:bg-gray-50 border-gray-100' }} border-b-2 ">
+                                class="block py-2 pl-3 pr-4 font-semibold {{ $item->active ? 'text-primary-500 border-primary-100' : 'text-gray-700 hover:bg-gray-300 rounded-lg border-gray-100 hover:scale-110 duration-200 ' }} border-b-2">
                                 {{ $item->name }}
                             </a>
                         @endif
@@ -93,9 +93,9 @@
         {{-- Donate/Add Buttons --}}
 
         <div class="flex gap-4 @auth
-@else
-hidden 
-@endauth">
+            @else
+            hidden 
+            @endauth">
             <div>
                 <a href="{{ route('donate') }}"
                     class="block text-white hover:scale-105 duration-200 hover:border-2 hover:border-primary-400 bg-primary-300 hover:bg-primary-600 focus:outline-none font-medium rounded-full text-sm px-5 py-2.5 text-center mb-2">
