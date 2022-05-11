@@ -11,7 +11,7 @@
 
                 <div class="col-span-3">
                     <h3 class="mt-6 text-center font-bold text-2xl ">{{ $name }}</h3>
-                    <h3 class="mt-2 font-Kufi text-center text-base @if($type == 4) hidden @endif">@if($type == 1) طالب @elseif($type == 2) تدريسي @else موظف @endif</h3>
+                    <h3 class="mt-2 text-center text-base @if($type == 4) hidden @endif">@if($type == 1) طالب @elseif($type == 2) تدريسي @else موظف @endif</h3>
                 </div>
             </div>
 
@@ -36,7 +36,7 @@
             </ul>
             @endadmin
             @auth
-            <h5 class="text-lg tracking-tight pt-5 ">البريد الالكتروني: {{ $email }}</h5>
+            <h5 class="text-lg tracking-tight pt-5 ">البريد الالكتروني: {{$email}}</h5>
             @endauth
             <p class="text-sm font-normal text-gray-500 ">انضم منذ: {{$date}}</p>
 
