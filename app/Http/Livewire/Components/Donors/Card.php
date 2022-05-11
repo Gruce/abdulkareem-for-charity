@@ -51,24 +51,10 @@ class Card extends Component
 
 
     public function add($id){
-        $this->validate();
-        
-        $shares = new Share;
-
-        $shares->add([
+        Share::create([
             'user_id' => $id,
-            'share' => $this->share,
-        ]);
-
-        $this->alert('success', 'تمت التغيير', [
-            'position' => 'top',
-            'timer' => 3000,
-            'toast' => true,
-        ]);
-        
-        $this->emitTo('components.donors.card', '$refresh');
-
-        $this->reset();
+            'share' => $share,
+        ])
 
 
     }
