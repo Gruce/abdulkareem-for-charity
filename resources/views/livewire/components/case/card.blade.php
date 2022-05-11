@@ -1,4 +1,5 @@
 <div>
+    <div class="grid grid-cols-3 gap-6 pt-5">
     @forelse ($events as $item)
     <div class="rounded-t-lg  bg-white w-full hover:bg-gray-50 ">
         <a href="#!">
@@ -39,5 +40,5 @@
     </div>
     @endforelse
 
-
+    </div>
 </div>
