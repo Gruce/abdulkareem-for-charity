@@ -886,6 +886,9 @@ select{
 .pointer-events-none{
   pointer-events: none;
 }
+.invisible{
+  visibility: hidden;
+}
 .fixed{
   position: fixed;
 }
@@ -1099,6 +1102,9 @@ select{
 .block{
   display: block;
 }
+.inline-block{
+  display: inline-block;
+}
 .inline{
   display: inline;
 }
@@ -1167,6 +1173,9 @@ select{
 }
 .h-64{
   height: 16rem;
+}
+.h-0{
+  height: 0px;
 }
 .min-h-screen{
   min-height: 100vh;
@@ -1240,6 +1249,11 @@ select{
 .w-\[36rem\]{
   width: 36rem;
 }
+.w-fit{
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
 .min-w-0{
   min-width: 0px;
 }
@@ -1282,6 +1296,14 @@ select{
 }
 .translate-y-0{
   --tw-translate-y: 0px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.translate-y-10{
+  --tw-translate-y: 2.5rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.-translate-x-10{
+  --tw-translate-x: -2.5rem;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 .scale-95{
@@ -1418,6 +1440,15 @@ select{
 .gap-8{
   gap: 2rem;
 }
+.gap-10{
+  gap: 2.5rem;
+}
+.gap-96{
+  gap: 24rem;
+}
+.gap-80{
+  gap: 20rem;
+}
 .space-x-8 > :not([hidden]) ~ :not([hidden]){
   --tw-space-x-reverse: 0;
   margin-right: calc(2rem * var(--tw-space-x-reverse));
@@ -1540,6 +1571,10 @@ select{
 .border-0{
   border-width: 0px;
 }
+.border-x-8{
+  border-left-width: 8px;
+  border-right-width: 8px;
+}
 .border-b-2{
   border-bottom-width: 2px;
 }
@@ -1554,6 +1589,9 @@ select{
 }
 .border-b-4{
   border-bottom-width: 4px;
+}
+.border-b-8{
+  border-bottom-width: 8px;
 }
 .border-solid{
   border-style: solid;
@@ -1595,6 +1633,25 @@ select{
 .border-red-200{
   --tw-border-opacity: 1;
   border-color: rgb(254 202 202 / var(--tw-border-opacity));
+}
+.border-x-transparent{
+  border-left-color: transparent;
+  border-right-color: transparent;
+}
+.border-y-transparent{
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+}
+.border-b-blue-600{
+  --tw-border-opacity: 1;
+  border-bottom-color: rgb(37 99 235 / var(--tw-border-opacity));
+}
+.border-b-gray-600{
+  --tw-border-opacity: 1;
+  border-bottom-color: rgb(75 85 99 / var(--tw-border-opacity));
+}
+.border-b-transparent{
+  border-bottom-color: transparent;
 }
 .bg-white{
   --tw-bg-opacity: 1;
@@ -1715,6 +1772,10 @@ select{
 .bg-gray-700{
   --tw-bg-opacity: 1;
   background-color: rgb(55 65 81 / var(--tw-bg-opacity));
+}
+.bg-gray-900{
+  --tw-bg-opacity: 1;
+  background-color: rgb(17 24 39 / var(--tw-bg-opacity));
 }
 .bg-opacity-25{
   --tw-bg-opacity: 0.25;
@@ -2009,6 +2070,10 @@ select{
   font-size: 8rem;
   line-height: 1;
 }
+.text-6xl{
+  font-size: 3.75rem;
+  line-height: 1;
+}
 .font-medium{
   font-weight: 500;
 }
@@ -2141,6 +2206,10 @@ select{
   --tw-text-opacity: 1;
   color: rgb(153 27 27 / var(--tw-text-opacity));
 }
+.text-black{
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+}
 .underline{
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
@@ -2233,6 +2302,14 @@ select{
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
+.transition-opacity{
+  transition-property: opacity;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+.delay-300{
+  transition-delay: 300ms;
+}
 .duration-150{
   transition-duration: 150ms;
 }
@@ -2254,6 +2331,9 @@ select{
 .ease-in{
   transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
 }
+.\[grid-area\:1\/1\]{
+  grid-area: 1 / 1;
+}
 *::-webkit-scrollbar {
     width: 12px;
     /* width of the entire scrollbar */
@@ -2269,6 +2349,14 @@ select{
     /* roundness of the scroll thumb */
     /* border: 3px solid orange; */
     /* creates padding around scroll thumb */
+}
+.hover\:-translate-y-5:hover{
+  --tw-translate-y: -1.25rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.hover\:translate-x-5:hover{
+  --tw-translate-x: 1.25rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 .hover\:rotate-12:hover{
   --tw-rotate: 12deg;
@@ -2630,6 +2718,22 @@ select{
 .disabled\:opacity-25:disabled{
   opacity: 0.25;
 }
+.group:hover .group-hover\:translate-y-0{
+  --tw-translate-y: 0px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.group:hover .group-hover\:translate-x-0{
+  --tw-translate-x: 0px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.group:hover .group-hover\:-translate-y-10{
+  --tw-translate-y: -2.5rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.group:hover .group-hover\:translate-x-10{
+  --tw-translate-x: 2.5rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
 .group:hover .group-hover\:scale-125{
   --tw-scale-x: 1.25;
   --tw-scale-y: 1.25;
@@ -2650,6 +2754,12 @@ select{
 .group:hover .group-hover\:text-gray-600{
   --tw-text-opacity: 1;
   color: rgb(75 85 99 / var(--tw-text-opacity));
+}
+.group:hover .group-hover\:delay-300{
+  transition-delay: 300ms;
+}
+.group:hover .group-hover\:delay-\[0s\]{
+  transition-delay: 0s;
 }
 .group:focus .group-focus\:right-0{
   right: 0px;
