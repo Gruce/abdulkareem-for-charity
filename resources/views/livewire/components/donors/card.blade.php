@@ -34,17 +34,17 @@
                     class="text-white bg-primary-400 hover:bg-primary-500 focus:ring-1 focus:ring-cyan-300 font-medium rounded-xl text-sm px-5 py-1 text-center">
                     زيادة الاسهم
                 </button>
-                <div  class="flex flex-row" x-show="isOpen">
+                <form  wire:submit.prevent="add" class="flex flex-row" x-show="isOpen">
                     <div>
 
                         <input wire:model="share" type="number" id="share"
                             class=" bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-sm focus:ring-blue-400 focus:border-blue-500 block h-12"
                             placeholder="ادخل عدد الاسهم">
                     </div>
-                    <button wire:click="add({{$item->id}})"
+                    <button type="submit"
                         class="mt-2 w-full text-white bg-cyan-700 hover:bg-cyan-800 focus:ring-2 focus:ring-cyan-300 font-medium rounded-sm text-sm px-2.5 py-1 text-center mr-2 mb-2">+
                     </button>
-                </div>
+                </form>
             </ul>
             @endadmin
             @auth

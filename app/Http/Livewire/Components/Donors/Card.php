@@ -11,65 +11,28 @@ class Card extends Component
 {
     public $name, $type, $shares, $share, $photo, $date, $email, $phone_number;
     use LivewireAlert;
-    public  $share_id;
-   
 
     protected $rules = [
+        'share' => 'required',
         'name' => 'required',
-       'shares' => 'required',
     ];
-
-    protected $listeners = ['delete', '$refresh' ];
-
-    public function mount(){
-        $this->shares = User::orderByDesc('id')->get();
-
-    }
-
-    public function delete(){
-        User::findOrFail($this->share_id)->delete();
-        $this->alert('success', 'تم حذف الحالة', [
-            'position' => 'top',
-            'timer' => 3000,
-            'toast' => true,
-        ]);
-        $this->emitSelf('$refresh');
-    }
-
-    public function confirm($id){
-        $this->share_id = $id;
-        $this->alert('warning', 'هل انت متأكد من حذف الحالة؟', [
-            'position' => 'center',
-            'timer' => 3000,
-            'toast' => true,
-            'showConfirmButton' => true,
-            'onConfirmed' => 'delete',
-            'showCancelButton' => true,
-            'onDismissed' => '',
-        ]);
-    }
-
-
-    public function add($id){
+    
+    public function add(){
+        
         $this->validate();
         
-        $shares = new Share;
-
-        $shares->add([
-            'user_id' => $id,
+        $data = [
             'share' => $this->share,
-        ]);
-
-        $this->alert('success', 'تمت التغيير', [
+        ];
+        $share->add($data);
+        dd($share);
+        $this->reset();
+        $this->alert('success', 'تمت الاضافة', [
             'position' => 'top',
             'timer' => 3000,
             'toast' => true,
         ]);
         
-        $this->emitTo('components.donors.card', '$refresh');
-
-        $this->reset();
-
 
     }
 
