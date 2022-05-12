@@ -12,31 +12,68 @@ class Card extends Component
     public $name, $type, $shares, $share, $photo, $date, $email, $phone_number;
     use LivewireAlert;
 
+    public $share_id, $search;
+
     protected $rules = [
-        'share' => 'required',
         'name' => 'required',
+        'shares' => 'required',
     ];
-    
-    public function add(){
-        
-        $this->validate();
-        
+
+    protected $listeners = ['delete', '$refresh', 'search'];
+
+    public function mount(){
+        $this->shares = User::orderByDesc('id')->get();
+
+    }
+
+    function search($string)
+    {
+        $this->search = $string;
+    }
+
+    public function delete(){
+        User::findOrFail($this->share_id)->delete();
+        $this->alert('success', 'تم حذف الحالة', [
+            'position' => 'top',
+            'timer' => 3000,
+            'toast' => true,
+        ]);
+        $this->emitSelf('$refresh');
+    }
+
+    public function confirm($id){
+        $this->share_id = $id;
+        $this->alert('warning', 'هل انت متأكد من حذف الحالة؟', [
+            'position' => 'center',
+            'timer' => 3000,
+            'toast' => true,
+            'showConfirmButton' => true,
+            'onConfirmed' => 'delete',
+            'showCancelButton' => true,
+            'onDismissed' => '',
+        ]);
+    }
+
+    public function add($id){
+
         $data = [
+            'user_id' => $id,
             'share' => $this->share,
         ];
-        $share->add($data);
-        dd($share);
-        $this->reset();
         $this->alert('success', 'تمت الاضافة', [
             'position' => 'top',
             'timer' => 3000,
             'toast' => true,
         ]);
-        
+        $share = new Share();
+        $share->add($data);
+        $this->reset();
 
     }
 
     public function render(){
+        $search = '%' . $this->search . '%';
+        // $this->shares = User::where('name', 'LIKE', $search)->orderByDesc('id')->get();
         $this->users= User::withSum('shares','share')->orderByDesc('shares_sum_share')->get();
         return view('livewire.components.donors.card');
     }
