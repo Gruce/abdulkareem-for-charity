@@ -21,11 +21,6 @@ class Card extends Component
 
     protected $listeners = ['delete', '$refresh', 'search'];
 
-    public function mount(){
-        $this->shares = User::orderByDesc('id')->get();
-
-    }
-
     function search($string)
     {
         $this->search = $string;
@@ -73,8 +68,7 @@ class Card extends Component
 
     public function render(){
         $search = '%' . $this->search . '%';
-        // $this->shares = User::where('name', 'LIKE', $search)->orderByDesc('id')->get();
-        $this->users= User::withSum('shares','share')->orderByDesc('shares_sum_share')->get();
+        $this->users= User::where('name', 'LIKE', $search)->withSum('shares','share')->orderByDesc('shares_sum_share')->get();
         return view('livewire.components.donors.card');
     }
 }

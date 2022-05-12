@@ -9,7 +9,7 @@
                     clip-rule="evenodd"></path>
             </svg>
         </div>
-        <input wire:model.lazy="search" type="text" id="table-search"
+        <input wire:model.debounce.500ms="search" type="text" id="table-search"
             class="bg-gray-100 border-0 text-gray-500 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full pl-10 p-2.5"
             placeholder="بحث" />
     </div>

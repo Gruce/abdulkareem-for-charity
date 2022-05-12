@@ -13,10 +13,6 @@ class Card extends Component
 
     protected $listeners = ['delete', '$refresh','search'];
 
-    public function mount(){
-        $this->events = Event::orderByDesc('id')->get();
-    }
-
     function search($string)
     {
         $this->search = $string;
