@@ -18,9 +18,7 @@ class Add extends Component
         'target' => 'required',
     ];
 
-    public function add()
-    {
-
+    public function add(){
         $this->validate();
 
         $data = [
