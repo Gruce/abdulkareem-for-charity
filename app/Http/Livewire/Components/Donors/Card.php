@@ -11,8 +11,9 @@ class Card extends Component
 {
     public $name, $type, $shares, $share, $photo, $date, $email, $phone_number;
     use LivewireAlert;
-
-    public $share_id, $search;
+    public $search;
+    
+    public $share_id;
 
     protected $rules = [
         'name' => 'required',
@@ -21,15 +22,7 @@ class Card extends Component
 
     protected $listeners = ['delete', '$refresh', 'search'];
 
-    public function mount(){
-        $this->shares = User::orderByDesc('id')->get();
-
-    }
-
-    function search($string)
-    {
-        $this->search = $string;
-    }
+    
 
     public function delete(){
         User::findOrFail($this->share_id)->delete();
@@ -70,11 +63,19 @@ class Card extends Component
         $this->reset();
 
     }
+    public function search($search)
+    {
+        $this->search = $search;
+    }
 
     public function render(){
         $search = '%' . $this->search . '%';
-        // $this->shares = User::where('name', 'LIKE', $search)->orderByDesc('id')->get();
-        $this->users= User::withSum('shares','share')->orderByDesc('shares_sum_share')->get();
+        $this->users = User::with('shares')->whereHas('shares', function ($user) use ($search) {
+            return $user->where('name', 'LIKE', $search)->orWhere('email', 'LIKE', $search);
+        }) 
+        //->orWhere('type', 'LIKE', $search)
+        
+        ->withSum('shares','share')->orderByDesc('shares_sum_share')->get();
         return view('livewire.components.donors.card');
     }
 }
