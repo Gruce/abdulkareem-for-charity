@@ -39,7 +39,7 @@
         </div>
 
         <div class="col-span-1 row-span-3 bg-primary-200 relative h-[36rem]">
-            <ul class="flex gap-4 p-10 ">
+            <ul class="flex gap-12 p-10 justify-center">
                 <li>
                     <a href="/">عن الصندوق </a>
                 </li>
@@ -59,7 +59,7 @@
 
 
         <div class="col-span-2 row-span-1 bg-primary-800 ">@livewire('components.home.information')</div>
-        <div class="col-span-2 row-span-4 bg-purple-200 text-9xl">04</div>
+        <div class="col-span-2 row-span-4 bg-stone-300 text-9xl">04</div>
     </div>
 
 
