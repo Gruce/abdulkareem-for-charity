@@ -4,12 +4,14 @@
         @forelse ($users as $item)
         <div
             class="shadow-sm shadow-gray-300 hover:shadow-gray-400 hover:shadow-lg p-4 w-full rounded-xl bg-gray-50 hover:bg-gray-200 transition duration-200">
+            @admin
             <div class="justify-end">
                 <a wire:click="confirm({{$item->id}})">
-                    <i class="text-red-600 fa-solid fa-trash"></i>
+                    <i class="text-red-500 fa-solid fa-trash text-sm hover:scale-125 hover:text-red-600"></i>
                 </a>
                 
             </div>
+            @endadmin
             <div class="grid grid-cols-5 mb-5">
                 <div class="col-span-2 flex flex-col">
                     <img src="{{ asset($item->profile_photo_path ?? 'img/user.png') }}" alt=""
