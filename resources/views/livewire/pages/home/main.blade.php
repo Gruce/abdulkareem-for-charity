@@ -47,7 +47,7 @@
                 </div>   
         </div>
         
-        <div class="col-span-2 row-span-1 bg-teal-200">03</div>
+        <div class="col-span-2 row-span-1 bg-teal-200">@livewire('components.home.information')</div>
         <div class="col-span-2 row-span-3 bg-purple-200">04</div>
     </div>
 

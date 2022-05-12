@@ -12,7 +12,7 @@ class Information extends Component
             [
                 'info' => 'عدد المتبرعين',
                 'value' => '+1000',
-                'icon' => 'fas fa-home',
+                'icon' => 'fa-solid fa-home',
 
                 // 'submenu' => [
                 //     [
@@ -26,15 +26,14 @@ class Information extends Component
             [
                 'info' => 'الحالات التي تم علاجها',
                 'value' => '+15',
-                'icon' => 'fas fa-hand-holding-heart',
+                'icon' => 'fa-solid fa-hand-holding-heart',
             ],
             [
                 'info' => 'مجموع المبالغ المتبرع بها',
                 'value' => '+800$',
-                'icon' => 'fas fa-circle-info',
+                'icon' => 'fa-solid fa-circle-info',
             ],
         ]);
-
         return view('livewire.components.home.information' ,[
             'menu' => $menu,
         ]);
@@ -65,9 +64,10 @@ class Menu
 class MenuItem
 {
     public $info;
-    public $submenu;
     public $value;
     public $icon;
+    public $submenu;
+
 
     public $permissions;
     public $show = true;
@@ -79,14 +79,13 @@ class MenuItem
 
     public function __construct($data)
     {
-        $this->name = $data['name'];
-        $this->route = $data['route'];
+        $this->info = $data['info'];
+        $this->value = $data['value'];
         $this->icon = $data['icon'];
         $this->permissions = $data['permissions'] ?? 0;
         $this->hasSubmenu = isset($data['submenu']);
         $this->submenu = new Menu($data['submenu'] ?? []);
 
-        $this->active = request()->routeIs($this->route);
 
         if ($this->permissions == 1) {
             // Only guests
