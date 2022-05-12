@@ -5,8 +5,8 @@
             <div
                 class="shadow-sm shadow-gray-300 hover:shadow-gray-400 hover:shadow-lg p-4 w-full rounded-xl bg-gray-50 hover:bg-gray-200 transition duration-200">
                 <div class="flex justify-end px-4 pt-4">
-                    <button id="dropdownButton-{{$item->id}}" data-dropdown-toggle="dropdown-{{$item->id}}"
-                        class="hidden sm:inline-block text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:outline-none focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-1.5"
+                    <button id="dropdownButton-{{ $item->id }}" data-dropdown-toggle="dropdown-{{ $item->id }}"
+                        class="hidden sm:inline-block text-gray-500 hover:bg-gray-100 duration-200 focus:outline-none focus:ring-4 focus:ring-gray-300 rounded-lg text-sm p-1.5"
                         type="button">
                         <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"
                             xmlns="http://www.w3.org/2000/svg">
@@ -16,14 +16,14 @@
                         </svg>
                     </button>
                     <!-- Dropdown menu -->
-                    <div id="dropdown-{{$item->id}}"
-                        class="hidden z-10 w-44 text-base list-none bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700">
-                        <ul class="py-1" aria-labelledby="dropdownButton-{{$item->id}}">
+                    <div id="dropdown-{{ $item->id }}"
+                        class="hidden group text-center z-10 w-44 text-base list-none hover:bg-gray-300 bg-white rounded divide-y divide-gray-100 shadow">
+                        <ul class="py-1" aria-labelledby="dropdownButton-{{ $item->id }}">
                             <li class="mb-2">
                                 <a class="cursor-pointer w-full p-4" wire:click="confirm({{ $item->id }})">
                                     <i
-                                        class="text-red-600 fa-solid fa-trash text-sm hover:scale-125 hover:text-red-600"></i>
-                                    Delete
+                                        class="text-red-600 fa-solid fa-trash text-sm group-hover:scale-125 hover:text-red-600"></i>
+                                    Remove
                                 </a>
 
                             </li>
