@@ -99,6 +99,10 @@ class User extends Authenticatable
         $this->profile_photo_path = 'storage/' . $type . '/profile/'.$this->id.'/'.$name;
         $this->save();
     }
+    public function add($data){
+        $this->fill($data);
+        $this->save();
+    }
     
     
 }

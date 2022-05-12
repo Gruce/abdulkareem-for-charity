@@ -17,12 +17,7 @@ class Basic extends Component
         'name' => 'required',
     ];
     
-    public $profile_photo_path;
-    public $profile_photo;
-    public $name;
-    public $email;
-    public $phone_number;
-
+    public $profile_photo_path , $profile_photo ,  $name , $email , $phone_number  ;
 
     public  function edit(){
         $this->validate();
@@ -40,6 +35,7 @@ class Basic extends Component
             'toast' => true,
         ]);   
     }
+    
     public function mount($user){
         $this->user = $user;
         $this->name = $this->user->name;
@@ -48,8 +44,7 @@ class Basic extends Component
         $this->profile_photo_path = $this->user->profile_photo_path;
     }
 
-    public function render()
-    {
+    public function render(){
         return view('livewire.pages.profile.basic');
     }
 }

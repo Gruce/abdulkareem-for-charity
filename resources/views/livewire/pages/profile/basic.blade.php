@@ -1,7 +1,7 @@
 <div>
     <div class="px-4 pt-4">
         <form action="#" class="flex flex-col space-y-8" wire:submit.prevent="edit">
-            <div>
+            <div class="p-2">
                 <h3 class="text-2xl font-semibold">المعلومات الاساسية</h3>
                 <hr class="w-1/2">
             </div>
@@ -30,7 +30,7 @@
             <div class="form-item">
                 <label class="text-xl ">رقم الهاتف</label>
                 <input wire:model="phone_number" type="text"
-                    class="bg-gray-50 border border-gray-300  text-sm rounded-lg focus:ring-primary-600 focus:border-primary-500 block w-1/2 p-2.5">
+                    class="bg-gray-50 border border-gray-300 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-500 block w-1/2 p-2.5">
                 @error('phone_number')
                     <span class="text-red-500 error">{{ $message }}</span>
                 @enderror

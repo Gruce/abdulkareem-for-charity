@@ -9,15 +9,12 @@ use Jantinnerezo\LivewireAlert\LivewireAlert;
 class Card extends Component
 {
     use LivewireAlert;
-
-    public $title, $description, $image_path, $file_path, $target, $received_price, $event_id;
-
+    public  $event_id;
 
     protected $listeners = ['delete', '$refresh'];
 
     public function mount(){
         $this->events = Event::orderByDesc('id')->get();
-
     }
 
     public function delete(){
@@ -27,6 +24,7 @@ class Card extends Component
             'timer' => 3000,
             'toast' => true,
         ]);
+
         $this->emitSelf('$refresh');
     }
 
@@ -43,8 +41,7 @@ class Card extends Component
         ]);
     }
 
-    public function render()
-    {
+    public function render(){
         return view('livewire.components.case.card');
     }
 }

@@ -3,8 +3,8 @@
     <div class="px-4 pt-4">
         <form action="#" class="flex flex-col space-y-8" wire:submit.prevent="edit">
 
-            <div>
-                <h3 class="text-2xl font-semibold">المعلومات الاساسية</h3>
+            <div class="p-2">
+                <h3 class="text-2xl font-semibold">معلومات الطالب</h3>
                 <hr>
             </div>
 

@@ -31,7 +31,7 @@
 <body class="font-noto " dir="rtl">
     <x-jet-banner />
 
-    <div class="rounded-lg md:m-10 md:h-app">
+    <div class="rounded-lg md:m-10 ">
         @livewire('components.navbar')
         <!-- Page Content -->
         <main class="p-10 mt-5 overflow-y-auto bg-gray-100 rounded-lg md:h-main">
