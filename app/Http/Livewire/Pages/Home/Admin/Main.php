@@ -6,8 +6,7 @@ use Livewire\Component;
 
 class Main extends Component
 {
-    public function render()
-    {
+    public function render(){
         return view('livewire.pages.home.admin.main');
     }
 }
