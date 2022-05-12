@@ -5,7 +5,7 @@
             <div
                 class="shadow-sm shadow-gray-300 hover:shadow-gray-400 hover:shadow-lg p-4 w-full rounded-xl bg-gray-50 hover:bg-gray-200 transition duration-200">
                 <div class="flex justify-end px-4 pt-4">
-                    <button id="dropdownButton" data-dropdown-toggle="dropdown"
+                    <button id="dropdownButton-{{$item->id}}" data-dropdown-toggle="dropdown-{{$item->id}}"
                         class="hidden sm:inline-block text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:outline-none focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-1.5"
                         type="button">
                         <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"
@@ -16,9 +16,9 @@
                         </svg>
                     </button>
                     <!-- Dropdown menu -->
-                    <div id="dropdown"
+                    <div id="dropdown-{{$item->id}}"
                         class="hidden z-10 w-44 text-base list-none bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700">
-                        <ul class="py-1" aria-labelledby="dropdownButton">
+                        <ul class="py-1" aria-labelledby="dropdownButton-{{$item->id}}">
                             <li class="mb-2">
                                 <a class="cursor-pointer w-full p-4" wire:click="confirm({{ $item->id }})">
                                     <i
@@ -32,7 +32,6 @@
                         </ul>
                     </div>
                 </div>
-                @endadmin
                 <div class="grid grid-cols-5 mb-5">
                     <div class="col-span-2 flex flex-col">
                         <img src="{{ asset($item->profile_photo_path ?? 'img/user.png') }}" alt=""
