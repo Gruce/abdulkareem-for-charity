@@ -12,7 +12,7 @@ class Information extends Component
             [
                 'info' => 'عدد المتبرعين',
                 'value' => '+1000',
-                'icon' => 'fa-solid fa-home',
+                'icon' => 'fa-solid fa-users',
 
                 // 'submenu' => [
                 //     [
