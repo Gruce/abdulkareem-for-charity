@@ -45,6 +45,7 @@ class Card extends Component
     public function render(){
         $search = '%' . $this->search . '%';
         $this->events = Event::where('title', 'LIKE', $search)->orderByDesc('id')->get();
+        //dd($this->events->toArray());
         return view('livewire.components.case.card');
     }
 }
