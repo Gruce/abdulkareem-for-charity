@@ -30,10 +30,10 @@
                         class="text-primary-500 hover:text-primary-500 transition duration-300 ease-in-out mb-4"> عرض
                         التفاصيل</a>
 
-                    {{-- <a
+                    <a
                 class="text-white hover:scale-105 duration-200 hover:border-2 hover:border-primary-400 bg-primary-300 hover:bg-primary-600 focus:outline-none font-medium rounded-lg text-sm px-5 text-center" data-modal-toggle="defaultModa" >
                 تبرع
-            </a> --}}
+            </a>
 
                     <button
                         class="block text-white bg-primary-400 hover:bg-primary-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
@@ -73,3 +73,67 @@
         </div>
     </div>
 </div>
+
+
+<div>
+    <div class="bg-red-50  p-5 rounded-lg">
+        <div class="flex justify-between border-b border-red-200  pb-3 items-center">
+            <div>
+                <button data-dropdown-toggle="dropdown" type="button" class="text-gray-900  focus:outline-none  hover:bg-red-100  focus:ring-2 font-medium rounded-lg text-sm px-2.5 py-2.5">
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                </button>
+
+                <!-- Dropdown menu -->
+                <div id="dropdown" class="hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700">
+                    <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefault">
+                        <li>
+                            <a href="#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-black flex justify-between">
+                                <span>Edit</span>
+                                <i class="fa fa-pen"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-black flex justify-between">
+                                <span>Remove</span>
+                                <i class="fa fa-trash"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="text-center  text-red-500 font-semibold text-xl">
+                تتتتت
+            </div>
+                <span class=" text-red-800  focus:outline-none  hover:bg-red-100 focus:ring-2 font-medium rounded-lg text-sm px-2.5 py-2.5">
+                    <i  class="fa-solid fa-store-slash"></i>
+                </span>
+                <button wire:click = "" type="button" class=" text-red-800  focus:outline-none  hover:bg-red-100 focus:ring-2 font-medium rounded-lg text-sm px-2.5 py-2.5">
+                    <i class="fa-solid fa-store"></i>
+                </button>
+        </div>
+
+        <div class="flex flex-col">
+            {{-- Car Price --}}
+            <div class="flex justify-between mt-3">
+                <span class=" text-red-800 text-sm font-semibold mr-2 px-2.5 py-0.5 rounded">
+                    Price
+                </span>
+                <span class="text-red-800 bg-red-200  text-sm font-semibold mr-2 px-2.5 py-0.5 rounded">
+                    55
+                </span>
+            </div>
+
+            {{-- Car Model --}}
+            <div class="flex justify-between mt-3">
+                <span class="text-red-800  text-sm font-semibold mr-2 px-2.5 py-0.5 rounded">
+                    Model
+                </span>
+                <span class=" bg-red-200 text-red-800 text-sm font-semibold mr-2 px-2.5 py-0.5 rounded">
+                    يييييييييي
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
