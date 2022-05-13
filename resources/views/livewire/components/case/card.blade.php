@@ -104,12 +104,12 @@
                                     @endif
                                 </div>
                                 <div
-                                    class="pt-6 text-base leading-6 font-bold sm:text-lg sm:leading-7 flex justify-end">
-                                    <button class="mr-4">
-                                        <i class=" fa-solid fa-trash-can text-red-400 hover:text-red-600"></i>
+                                    class="text-base leading-6 font-bold sm:text-lg sm:leading-7 flex justify-end">
+                                    <button class="p-3">
+                                        <i class=" fa-solid fa-trash-can text-red-400 hover:scale-110 hover:text-red-600"></i>
                                     </button>
                                     <button>
-                                        <i class="fa-solid fa-pen-to-square text-blue-400 hover:text-blue-600"></i>
+                                        <i class="fa-solid fa-pen-to-square text-blue-400 hover:scale-110 hover:rotate-6 hover:text-blue-600"></i>
                                     </button>
 
                                 </div>
