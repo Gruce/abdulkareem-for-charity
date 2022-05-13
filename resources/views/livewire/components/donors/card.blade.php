@@ -37,6 +37,7 @@
                         <h3 class=" text-xl mr-2 mt-4"> يملك {{ $item->shares_sum_share ?? 0 }} سهماً </h3>
                     </div>
 
+
                     <div class="col-span-3">
                         <h3 class="mt-6 text-center font-bold text-2xl ">{{ $item->name }}</h3>
                         <h3
@@ -53,8 +54,37 @@
                     </div>
 
                 </div>
+                @admin
+                <div x-data="{ open: false }">
+                    @if ($item->shares->count() > 0)
+                        <button @click="open = ! open"><i
+                                class="fa-solid fa-heart h-10 w-10 mr-3 text-red-600 animate-pulse"></i>
+                        </button>
+                    @endif
+                    <div x-show="open" @click.outside="open = false">
+                        <div class="">
+                            @foreach ($item->shares as $share)
+                                <div
+                                    class="px-5 py-2 text-3xl font-bold text-gray-600 bg-gray-200 rounded-lg flex justify-between">
+                                    <div>
+                                        <h3 class="text-xl mr-2 ">تبرع :
+                                            <span>{{ $share->share }}</span>
+                                        </h3>
+                                    </div>
+                                    <div>
+                                        <button type="button"
+                                            wire:click="accept({{ $share->id }}, {{ $share->state }})"
+                                            class="focus:outline-none text-white bg-green-500 hover:bg-green-500 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2">قبول</button>
+                                        <button type="button" wire:click="deleteShare({{ $share->id }})"
+                                            class="focus:outline-none text-white bg-red-500 hover:bg-red-500 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2">حذف</button>
+                                    </div>
+                                </div>
+                            @endforeach
+                        </div>
+                    </div>
+                </div>
 
-
+                @endadmin
 
                 @auth
                     <h5 class="text-lg tracking-tight pt-5">البريد الالكتروني: {{ $item->email }}</h5>
