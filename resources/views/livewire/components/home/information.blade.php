@@ -18,6 +18,7 @@
 
         </div>
         @empty
+        
         @endforelse
     </div>
 </div>
