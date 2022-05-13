@@ -1733,6 +1733,32 @@ select{
   --tw-bg-opacity: 1;
   background-color: rgb(55 65 81 / var(--tw-bg-opacity));
 }
+.bg-\[\#EDF7\]{
+  background-color: #EDF7;
+}
+.bg-\[\#EDF7DA\]{
+  --tw-bg-opacity: 1;
+  background-color: rgb(237 247 218 / var(--tw-bg-opacity));
+}
+.bg-\[\#61B\]{
+  --tw-bg-opacity: 1;
+  background-color: rgb(102 17 187 / var(--tw-bg-opacity));
+}
+.bg-\[\#61BA\]{
+  background-color: #61BA;
+}
+.bg-\[\#61BA9C\]{
+  --tw-bg-opacity: 1;
+  background-color: rgb(97 186 156 / var(--tw-bg-opacity));
+}
+.bg-\[\#A1D\]{
+  --tw-bg-opacity: 1;
+  background-color: rgb(170 17 221 / var(--tw-bg-opacity));
+}
+.bg-\[\#A1D6B5\]{
+  --tw-bg-opacity: 1;
+  background-color: rgb(161 214 181 / var(--tw-bg-opacity));
+}
 .bg-opacity-25{
   --tw-bg-opacity: 0.25;
 }
