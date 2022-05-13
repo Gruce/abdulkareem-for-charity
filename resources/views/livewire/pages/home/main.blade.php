@@ -18,17 +18,17 @@
 
                 <div>
                     <a href="{{ route('donate') }}"
-                        class="text-gray-900 text-base bg-[#f2f2f2] hover:bg-secondary-800 focus:outline-none font-medium hover:scale-110 duration-200 rounded-lg  px-5 py-2.5 text-center mb-2">
+                        class="text-black text-base bg-[#f2f2f2] hover:bg-primary-600 hover:text-white focus:outline-none font-medium hover:scale-110 duration-200 rounded-lg  px-5 py-2.5 text-center mb-2">
                         تبرع الان
                     </a>
                 </div>
 
 
-                <div class="flex flex-col ">
+                <div class="flex flex-col">
                     <span class="text-center">
                         <a href="{{ route('about') }}"
-                            class="  bg-[#f2f2f2] duration-200 hover:bg-secondary-800 rounded-full px-6 py-2  text-center mb-2">
-                            <i class="fa-solid fa-info text-lg text-gray-900"></i>
+                            class="  bg-[#f2f2f2] duration-200 hover:bg-primary-600 rounded-full px-6 py-2 text-center mb-2">
+                            <i class="fa-solid fa-info text-lg text-black"></i>
                         </a>
                     </span>
                     <span class="mt-4 text-lg font-mono text-[#F2f2f2]">
@@ -43,7 +43,7 @@
         <div class="col-span-1 row-span-3 bg-[#548C62] relative h-[36rem]">
             
             <div class="absolute bottom-0 right-0 ">
-                <div class="h-[30rem] w-[36rem] ">
+                <div class="h-[34rem] w-[40rem] ">
                     <img class="h-full rounded-l-full" src="/img/home.jpg" alt="">
                 </div>
             </div>
