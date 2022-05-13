@@ -9,10 +9,11 @@ use App\Models\Share;
 
 class Card extends Component
 {
-    public $name, $type, $shares, $share, $photo, $date, $email, $phone_number;
     use LivewireAlert;
-    public $search;
+    public $name, $type, $shares, $share, $photo, $date, $email, $phone_number;
     
+    public $search,$user_type;
+
     public $share_id;
 
     protected $rules = [
@@ -20,9 +21,9 @@ class Card extends Component
         'shares' => 'required',
     ];
 
-    protected $listeners = ['delete', '$refresh', 'search'];
+    protected $listeners = ['delete', '$refresh', 'search' ,'getUserType'];
 
-    
+
 
     public function delete(){
         User::findOrFail($this->share_id)->delete();
@@ -34,18 +35,18 @@ class Card extends Component
         $this->emitSelf('$refresh');
     }
 
-    public function confirm($id){
-        $this->share_id = $id;
-        $this->alert('warning', 'هل انت متأكد من حذف الحالة؟', [
-            'position' => 'center',
-            'timer' => 3000,
-            'toast' => true,
-            'showConfirmButton' => true,
-            'onConfirmed' => 'delete',
-            'showCancelButton' => true,
-            'onDismissed' => '',
-        ]);
-    }
+    // public function confirm($id){
+    //     $this->share_id = $id;
+    //     $this->alert('warning', 'هل انت متأكد من حذف الحالة؟', [
+    //         'position' => 'center',
+    //         'timer' => 3000,
+    //         'toast' => true,
+    //         'showConfirmButton' => true,
+    //         'onConfirmed' => 'delete',
+    //         'showCancelButton' => true,
+    //         'onDismissed' => '',
+    //     ]);
+    // }
 
     public function add($id){
 
@@ -63,20 +64,46 @@ class Card extends Component
         $this->reset();
 
     }
+    public function accept($id, $state){
+        $share = Share::findOrFail($id);
+        $share->state($state);
+        $this->alert('success', 'تم القبول', [
+            'position' => 'top',
+            'timer' => 3000,
+            'toast' => true,
+        ]);
+    }
+    public function deleteShare($id){
+        $share = Share::findOrFail($id);
+        $share->delete();
+        $this->alert('success', 'تم الرفض', [
+            'position' => 'top',
+            'timer' => 3000,
+            'toast' => true,
+        ]);
+    }
     public function search($search)
     {
         $this->search = $search;
     }
 
+    public function getUserType ($type)
+    {
+        $this->user_type = $type;
+    }
+
     public function render(){
         $search = '%' . $this->search . '%';
-        $this->users = User::with('shares')
-        // ->whereHas('shares', function ($user) use ($search) {
-        //     return $user->where('name', 'LIKE', $search)->orWhere('email', 'LIKE', $search);
-        // }) 
-        ->where('name', 'LIKE', $search)->orWhere('email', 'LIKE', $search)
-        
-        ->withSum('shares','share')->orderByDesc('shares_sum_share')->get();
+
+        $this->users= User::with([
+            'shares' => function($query){
+                return $query->where('state', false)->get();
+            }
+        ]);
+        if($this->user_type != 0 && $this->user_type <= 4){
+            $this->users = $this->users->where('type', $this->user_type);
+        }
+        $this->users = $this->users->where('name', 'LIKE', $search)->withSum('shares','share')->orderByDesc('shares_sum_share')->get();
         return view('livewire.components.donors.card');
     }
 }
