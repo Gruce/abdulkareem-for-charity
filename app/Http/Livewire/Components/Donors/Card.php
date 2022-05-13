@@ -11,13 +11,10 @@ class Card extends Component
 {
     public $name, $type, $shares, $share, $photo, $date, $email, $phone_number;
     use LivewireAlert;
-<<<<<<< HEAD
+
     public $search ,$user_type;
     
-=======
-    public $search;
 
->>>>>>> Manar
     public $share_id;
 
     protected $rules = [
@@ -79,7 +76,7 @@ class Card extends Component
 
     public function render(){
         $search = '%' . $this->search . '%';
-<<<<<<< HEAD
+
         $this->users = User::with('shares');
 
         if($this->user_type != 0 && $this->user_type <= 4){
@@ -89,10 +86,7 @@ class Card extends Component
                         ->withSum('shares','share')->orderByDesc('shares_sum_share')    
                         ->get();
         
-        
-=======
-        $this->users= User::where('name', 'LIKE', $search)->withSum('shares','share')->orderByDesc('shares_sum_share')->get();
->>>>>>> Manar
+
         return view('livewire.components.donors.card');
     }
 }
