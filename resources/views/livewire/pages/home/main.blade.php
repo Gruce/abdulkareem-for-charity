@@ -2,7 +2,7 @@
     <div class="container mx-auto grid grid-cols-2 grid-rows-8">
 
         {{-- Introduction --}}
-        <div class="col-span-1 row-span-3 bg-[#a2bf39] p-16">
+        <div class="col-span-1 row-span-3 bg-[#93A893] p-16">
             <h1 class="font-Kufi text-7xl text-[#f2f2f2]">صندوق الاستاذ عبدالكريم الخيري</h1>
             <p class="font-bold font-IBM text-lg mt-10 leading-9 text-gray-800">
                 مبادرة ونشاط طلابي بحت ينطلق من طلبة كلية علوم الحـاسوب وتـكنلوجيا المعـلومات
@@ -40,7 +40,7 @@
         </div>
 
         {{-- photo --}}
-        <div class="col-span-1 row-span-3 bg-[#f2f2f2] relative h-[36rem]">
+        <div class="col-span-1 row-span-3 bg-[#548C62] relative h-[36rem]">
             <ul class="flex gap-12 p-10 justify-center text-gray-900">
                 <li>
                     <a href="/">عن الصندوق </a>
@@ -66,10 +66,10 @@
         </div>
 
         {{-- information --}}
-        <div class="col-span-2 row-span-1 bg-[#f2f2f2] ">@livewire('components.home.information')</div>
+        <div class="col-span-2 row-span-1 bg-[#548C62] ">@livewire('components.home.information')</div>
         
         {{-- Contect --}}
-        <div class="col-span-2 row-span-4 bg-tertiary-100 text-9xl">04</div>
+        <div class="col-span-2 row-span-4 bg-white text-9xl">04</div>
     </div>
 
 
