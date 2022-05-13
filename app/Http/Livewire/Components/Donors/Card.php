@@ -11,20 +11,18 @@ class Card extends Component
 {
     public $name, $type, $shares, $share, $photo, $date, $email, $phone_number;
     use LivewireAlert;
-    public  $share_id;
-   
+    public $search;
+    
+    public $share_id;
 
     protected $rules = [
         'name' => 'required',
-       'shares' => 'required',
+        'shares' => 'required',
     ];
 
-    protected $listeners = ['delete', '$refresh' ];
+    protected $listeners = ['delete', '$refresh', 'search'];
 
-    public function mount(){
-        $this->shares = User::orderByDesc('id')->get();
-
-    }
+    
 
     public function delete(){
         User::findOrFail($this->share_id)->delete();
@@ -49,9 +47,8 @@ class Card extends Component
         ]);
     }
 
-
     public function add($id){
-        
+
         $data = [
             'user_id' => $id,
             'share' => $this->share,
@@ -65,12 +62,21 @@ class Card extends Component
         $share->add($data);
         $this->reset();
 
-
-
+    }
+    public function search($search)
+    {
+        $this->search = $search;
     }
 
     public function render(){
-        $this->users= User::withSum('shares','share')->orderByDesc('shares_sum_share')->get();
+        $search = '%' . $this->search . '%';
+        $this->users = User::with('shares')
+        // ->whereHas('shares', function ($user) use ($search) {
+        //     return $user->where('name', 'LIKE', $search)->orWhere('email', 'LIKE', $search);
+        // }) 
+        ->where('name', 'LIKE', $search)->orWhere('email', 'LIKE', $search)
+        
+        ->withSum('shares','share')->orderByDesc('shares_sum_share')->get();
         return view('livewire.components.donors.card');
     }
 }
