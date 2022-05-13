@@ -27,18 +27,18 @@ class Card extends Component
         $this->emitSelf('$refresh');
     }
 
-    // public function confirm($id){
-    //     $this->event_id = $id;
-    //     $this->alert('warning', 'هل انت متأكد من حذف الحالة؟', [
-    //         'position' => 'center',
-    //         'timer' => 3000,
-    //         'toast' => true,
-    //         'showConfirmButton' => true,
-    //         'onConfirmed' => 'delete',
-    //         'showCancelButton' => true,
-    //         'onDismissed' => '',
-    //     ]);
-    // }
+    public function confirm($id){
+        $this->event_id = $id;
+        $this->alert('warning', 'هل انت متأكد من حذف الحالة؟', [
+            'position' => 'center',
+            'timer' => 3000,
+            'toast' => true,
+            'showConfirmButton' => true,
+            'onConfirmed' => 'delete',
+            'showCancelButton' => true,
+            'onDismissed' => '',
+        ]);
+    }
 
     public function render(){
         $search = '%' . $this->search . '%';
