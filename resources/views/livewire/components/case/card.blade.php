@@ -1,7 +1,7 @@
 <div>
     <div class="grid grid-cols-3 gap-6 pt-5">
         @forelse ($events as $item)
-            <div class="rounded-t-lg  bg-white w-full hover:bg-gray-50 ">
+            {{-- <div class="rounded-t-lg  bg-white w-full hover:bg-gray-50 ">
                 <a href="#!">
                     <img class="rounded-t-lg" src="{{ asset($item->image_path) }}" alt="" />
                 </a>
@@ -46,15 +46,85 @@
                     <div class="bg-primary-500 text-xs font-medium text-gray-700 text-center p-0.5 leading-none rounded-b"
                         style="width: 100%"> {{ $item->received_price }}</div>
                 </div>
-            </div>
+            </div> --}}
+
+            <div class=" px-4 py-10 sm:p-10 bg-gray-50 hover:bg-gray-100 shadow-lg sm:rounded-3xl  bg-clip-padding bg-opacity-60 border border-gray-200 "
+                    style="backdrop-filter: blur(20px);">
+                    <div class="max-w-md mx-auto">
+                        @if (1==2)
+                            <div>
+
+                                <input wire:model.lazy="title" type="text"
+                                    class="mt-4  text-gray-800 border-gray-200 text-3xl font-bold focus:ring-0 rounded-full">
+                            </div>
+                            <div class="divide-y divide-gray-200">
+                                <div class="py-8 text-base leading-6 space-y-4 text-gray-700 sm:text-lg sm:leading-7">
+
+
+                                    <textarea wire:model.lazy="description" rows="3"
+                                        class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 "></textarea>
+                                    <input wire:model="file_path" type="file"
+                                        class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 ">
+
+                                </div>
+                                <div
+                                    class="pt-6 text-base leading-6 font-bold sm:text-lg sm:leading-7 flex justify-end space-x-4">
+                                    <button wire:click="save">
+                                        <i class="fa-solid fa-check text-blue-400 hover:text-blue-600"></i>
+                                    </button>
+                                    <button wire:click="$set('edit_id', {{ null }})" class="mr-4">
+                                        <i class=" fa-solid fa-angles-right text-red-400 hover:text-red-600"></i>
+                                    </button>
+
+
+                                </div>
+
+                            </div>
+                        @else
+                            <div>
+                                <h3 class="mt-4  text-gray-800  text-4xl font-bold">{{ $item->title }}</h3>
+                            </div>
+                            <div class="divide-y divide-gray-200">
+                                <div class="py-8 text-base leading-6 space-y-4 text-gray-700 sm:text-lg sm:leading-7">
+                                    @if ($item->description)
+                                        <p>Description: {{ $item->description }}</p>
+                                    @else
+                                        <p>No description added</p>
+                                    @endif
+
+                                    @if ($item->file_path)
+                                        <p>
+                                            <a href="{{ asset($item->file_path)}}"
+                                                class="font-bold text-cyan-600 hover:text-cyan-700">
+                                                Read
+                                                the details file &rarr; </a>
+                                        </p>
+                                    @else
+                                        No file
+                                    @endif
+                                </div>
+                                <div
+                                    class="pt-6 text-base leading-6 font-bold sm:text-lg sm:leading-7 flex justify-end">
+                                    <button class="mr-4">
+                                        <i class=" fa-solid fa-trash-can text-red-400 hover:text-red-600"></i>
+                                    </button>
+                                    <button>
+                                        <i class="fa-solid fa-pen-to-square text-blue-400 hover:text-blue-600"></i>
+                                    </button>
+
+                                </div>
+
+                            </div>
+                        @endif
+                    </div>
+                </div>
         @empty
             <div class="text-2xl font-medium text-gray-700">
                 لايوجد حالات
             </div>
         @endforelse
-
     </div>
-    <div id="defaultModal" tabindex="-1" aria-hidden="true"
+    {{-- <div id="defaultModal" tabindex="-1" aria-hidden="true"
         class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full">
         <div class="relative p-4 w-full max-w-2xl h-full md:h-auto">
             <!-- Modal content -->
@@ -71,6 +141,6 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
 </div>
 
