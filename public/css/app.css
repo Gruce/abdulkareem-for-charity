@@ -2334,6 +2334,10 @@ select{
   --tw-text-opacity: 1;
   color: rgb(242 224 136 / var(--tw-text-opacity));
 }
+.text-\[\#F2f2f2\]{
+  --tw-text-opacity: 1;
+  color: rgb(242 242 242 / var(--tw-text-opacity));
+}
 .underline{
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;

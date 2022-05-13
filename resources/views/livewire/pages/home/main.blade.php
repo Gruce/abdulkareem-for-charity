@@ -4,7 +4,7 @@
         {{-- Introduction --}}
         <div class="col-span-1 row-span-3 bg-[#93A893] p-16">
             <h1 class="font-Kufi text-7xl text-[#f2f2f2]">صندوق الاستاذ عبدالكريم الخيري</h1>
-            <p class="font-bold font-IBM text-lg mt-10 leading-9 text-gray-800">
+            <p class="font-bold font-IBM text-lg mt-10 leading-9 ">
                 مبادرة ونشاط طلابي بحت ينطلق من طلبة كلية علوم الحـاسوب وتـكنلوجيا المعـلومات
                 <br>
                 الهدف منه رعاية الاعمال الخيرية داخل الكلية وتكون الاولوية في صرف الصندوق للطلبة
@@ -27,11 +27,11 @@
                 <div class="flex flex-col ">
                     <span class="text-center">
                         <a href="{{ route('about') }}"
-                            class="  bg-[#f2f2f2] duration-200 hover:bg-secondary-800 rounded-full px-5 py-2  text-center mb-2">
-                            <i class="fa-solid fa-info text-2xl text-gray-900"></i>
+                            class="  bg-[#f2f2f2] duration-200 hover:bg-secondary-800 rounded-full px-6 py-2  text-center mb-2">
+                            <i class="fa-solid fa-info text-lg text-gray-900"></i>
                         </a>
                     </span>
-                    <span class="mt-4 text-lg font-mono">
+                    <span class="mt-4 text-lg font-mono text-[#F2f2f2]">
                         لمعرفة المزيد
                     </span>
                 </div>
@@ -41,23 +41,7 @@
 
         {{-- photo --}}
         <div class="col-span-1 row-span-3 bg-[#548C62] relative h-[36rem]">
-            <ul class="flex gap-12 p-10 justify-center text-gray-900">
-                <li>
-                    <a href="/">عن الصندوق </a>
-                </li>
-                <li>
-                    <a href="/">.</a>
-                </li>
-                <li>
-                    <a href="/">المتبرعين </a>
-                </li>
-                <li>
-                    <a href="/">.</a>
-                </li>
-                <li>
-                    <a href="/"> الحالات</a>
-                </li>
-            </ul>
+            
             <div class="absolute bottom-0 right-0 ">
                 <div class="h-[30rem] w-[36rem] ">
                     <img class="h-full rounded-l-full" src="/img/home.jpg" alt="">
