@@ -12,7 +12,7 @@ class Card extends Component
     public $name, $type, $shares, $share, $photo, $date, $email, $phone_number;
     use LivewireAlert;
     public $search;
-    
+
     public $share_id;
 
     protected $rules = [
@@ -22,7 +22,7 @@ class Card extends Component
 
     protected $listeners = ['delete', '$refresh', 'search'];
 
-    
+
 
     public function delete(){
         User::findOrFail($this->share_id)->delete();
@@ -70,13 +70,7 @@ class Card extends Component
 
     public function render(){
         $search = '%' . $this->search . '%';
-        $this->users = User::with('shares')
-        // ->whereHas('shares', function ($user) use ($search) {
-        //     return $user->where('name', 'LIKE', $search)->orWhere('email', 'LIKE', $search);
-        // }) 
-        ->where('name', 'LIKE', $search)->orWhere('email', 'LIKE', $search)
-        
-        ->withSum('shares','share')->orderByDesc('shares_sum_share')->get();
+        $this->users= User::where('name', 'LIKE', $search)->withSum('shares','share')->orderByDesc('shares_sum_share')->get();
         return view('livewire.components.donors.card');
     }
 }
