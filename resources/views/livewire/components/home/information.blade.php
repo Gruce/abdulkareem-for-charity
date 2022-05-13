@@ -2,7 +2,7 @@
     <div class="grid grid-cols-3 p-10 ">
         @forelse ($menu->items as $item)
         <div class="flex justify-center">
-            <div class="flex flex-col p-2 ">
+            <div class="flex flex-col p-2 text-center">
                 <span class="text-white text-3xl">
                     {{ $item->value }}
                 </span>
