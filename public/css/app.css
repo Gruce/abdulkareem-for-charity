@@ -1745,6 +1745,38 @@ select{
   --tw-bg-opacity: 1;
   background-color: rgb(120 197 148 / var(--tw-bg-opacity));
 }
+.bg-primary-50{
+  --tw-bg-opacity: 1;
+  background-color: rgb(233 246 238 / var(--tw-bg-opacity));
+}
+.bg-secondary-50{
+  --tw-bg-opacity: 1;
+  background-color: rgb(210 148 153 / var(--tw-bg-opacity));
+}
+.bg-tertiary-700{
+  --tw-bg-opacity: 1;
+  background-color: rgb(185 209 137 / var(--tw-bg-opacity));
+}
+.bg-tertiary-100{
+  --tw-bg-opacity: 1;
+  background-color: rgb(237 247 218 / var(--tw-bg-opacity));
+}
+.bg-tertiary-200{
+  --tw-bg-opacity: 1;
+  background-color: rgb(237 247 219 / var(--tw-bg-opacity));
+}
+.bg-secondary-300{
+  --tw-bg-opacity: 1;
+  background-color: rgb(200 102 110 / var(--tw-bg-opacity));
+}
+.bg-secondary-400{
+  --tw-bg-opacity: 1;
+  background-color: rgb(209 90 100 / var(--tw-bg-opacity));
+}
+.bg-secondary-200{
+  --tw-bg-opacity: 1;
+  background-color: rgb(194 121 127 / var(--tw-bg-opacity));
+}
 .bg-opacity-25{
   --tw-bg-opacity: 0.25;
 }
@@ -2437,6 +2469,10 @@ select{
 .hover\:bg-secondary-800:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(205 45 59 / var(--tw-bg-opacity));
+}
+.hover\:bg-primary-800:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(78 163 109 / var(--tw-bg-opacity));
 }
 .hover\:bg-gradient-to-r:hover{
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
