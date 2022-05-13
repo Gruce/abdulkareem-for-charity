@@ -31,7 +31,7 @@ class User extends Authenticatable
         'password',
         'is_admin',
         'phone_number',
-        'type', 
+        'type',
     ];
 
     /**
@@ -90,7 +90,7 @@ class User extends Authenticatable
         $this->fill($data);
         $this->save();
     }
-    
+
     public function addProfile($file , $type = null){
         $type = $type ?? 'student';
         $ext = $file->extension();
@@ -103,6 +103,9 @@ class User extends Authenticatable
         $this->fill($data);
         $this->save();
     }
-    
-    
+    public function getShare() {
+        return $this->shares()->where('state', true)->sum('share');
+
+    }
+
 }

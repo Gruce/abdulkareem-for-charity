@@ -34,7 +34,7 @@
                     <div class="col-span-2 flex flex-col">
                         <img src="{{ asset($item->profile_photo_path ?? 'img/user.png') }}" alt=""
                             class=" rounded-full h-32 w-32" />
-                        <h3 class=" text-xl mr-2 mt-4"> يملك {{ $item->shares_sum_share ?? 0 }} سهماً </h3>
+                        <h3 class=" text-xl mr-2 mt-4"> يملك {{ $item->getShare() ?? 0 }} سهماً </h3>
                     </div>
 
 
@@ -58,7 +58,7 @@
                 <div x-data="{ open: false }">
                     @if ($item->shares->count() > 0)
                         <button @click="open = ! open"><i
-                                class="fa-solid fa-heart h-10 w-10 mr-3 text-red-600 animate-pulse"></i>
+                                class="fa-solid fa-hand-holding-dollar h-10 w-10 mr-3 text-red-600 animate-pulse"></i>
                         </button>
                     @endif
                     <div x-show="open" @click.outside="open = false">
