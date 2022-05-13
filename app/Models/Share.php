@@ -19,15 +19,15 @@ class Share extends Model
 
     ### End Relationships ###
 
-    // public function add($share , $note = null)
-    // {
-    //     $this->share = $share;
-    //     $this->note = $note;
-    //     $this->user_id = auth()->user()->id;
-    //     $this->save();
-    // }
-    public function add($data){
-        $this->fill($data);
+    public function add($share , $note = null)
+    {
+        $this->share = $share;
+        $this->note = $note;
+        $this->user_id = auth()->user()->id;
         $this->save();
     }
+    // public function add($data){
+    //     $this->fill($data);
+    //     $this->save();
+    // }
 }
