@@ -82,7 +82,7 @@
 
                         </div>
                         
-                        <div class="divide-y divide-gray-200 ">
+                        <div class=" divide-y divide-gray-200 ">
                             <div class="py-8 text-base leading-6 space-y-4 text-gray-700 sm:text-lg sm:leading-7">
 
                                 @if ($item->description)
@@ -99,12 +99,11 @@
                                             the details file &rarr; </a>
                                     </p>
                                 @else
-                                    No file
+                                    <p>لايوجد ملف</p>
                                 @endif
                                 <div>
                                     
                                     <p class="text-center font-bold">هدف الحملة: {{ $item->target }} IQ</p>
-
                                     <div class="w-full">
                                         <div class="bg-primary-500 text-xs font-medium text-gray-700 text-center p-0.5 leading-none rounded-full"
                                             style="width: 100%">100%
