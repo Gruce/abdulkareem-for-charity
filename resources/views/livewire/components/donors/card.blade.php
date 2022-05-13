@@ -3,27 +3,23 @@
     <div x-data="{ isOpen: false }" class="grid grid-cols-4 gap-6">
         @forelse ($users as $item)
             <div
-                class="shadow-sm shadow-gray-300 hover:shadow-gray-400 hover:shadow-lg p-4 w-full rounded-xl bg-gray-50 hover:bg-gray-200 transition duration-200">
-                <div class="flex justify-end px-4 pt-4">
-                    <button id="dropdownButton-{{$item->id}}" data-dropdown-toggle="dropdown-{{$item->id}}"
-                        class="hidden sm:inline-block text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:outline-none focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-1.5"
+                class="shadow-sm shadow-gray-300 hover:shadow-gray-400 hover:shadow-md p-4 w-full rounded-xl bg-gray-50 hover:bg-gray-100 transition duration-200">
+                <div class="flex justify-end">
+                    <button id="dropdownButton-{{ $item->id }}" data-dropdown-toggle="dropdown-{{ $item->id }}"
+                        class="text-gray-900 focus:outline-none hover:bg-gray-300 text-xl rounded-md px-2.5 py-2.5"
                         type="button">
-                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z">
-                            </path>
-                        </svg>
+                        <i class="fa-solid fa-ellipsis-vertical "></i>
                     </button>
                     <!-- Dropdown menu -->
-                    <div id="dropdown-{{$item->id}}"
-                        class="hidden z-10 w-44 text-base list-none bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700">
-                        <ul class="py-1" aria-labelledby="dropdownButton-{{$item->id}}">
+                    <div id="dropdown-{{ $item->id }}"
+                        class="hidden group z-10 w-44 rounded divide-y divide-gray-100 shadow bg-gray-700">
+                        <ul class="py-1 text-sm text-gray-200" aria-labelledby="dropdownButton-{{ $item->id }}">
                             <li class="mb-2">
-                                <a class="cursor-pointer w-full p-4" wire:click="confirm({{ $item->id }})">
+                                <a class="cursor-pointer w-full p-4 block py-2 px-4 hover:bg-gray-600 hover:text-black flex justify-between"
+                                    wire:click="confirm({{ $item->id }})">
                                     <i
-                                        class="text-red-600 fa-solid fa-trash text-sm hover:scale-125 hover:text-red-600"></i>
-                                    Delete
+                                        class="text-red-600 fa-solid fa-trash text-md duration-200 group-hover:scale-125 hover:text-red-600"></i>
+                                    Remove
                                 </a>
 
                             </li>
@@ -31,6 +27,8 @@
 
                         </ul>
                     </div>
+
+
                 </div>
                 <div class="grid grid-cols-5 mb-5">
                     <div class="col-span-2 flex flex-col">

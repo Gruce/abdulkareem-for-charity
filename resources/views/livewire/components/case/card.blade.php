@@ -2,7 +2,7 @@
     <div class="grid grid-cols-3 gap-6 pt-5">
         @forelse ($events as $item)
             <div class="rounded-t-lg  bg-white w-full hover:bg-gray-50 ">
-                <a href="#">
+                <a href="#!">
                     <img class="rounded-t-lg" src="{{ asset($item->image_path) }}" alt="" />
                 </a>
                 <div class="p-6">
@@ -30,10 +30,11 @@
                         class="text-primary-500 hover:text-primary-500 transition duration-300 ease-in-out mb-4"> عرض
                         التفاصيل</a>
 
-                    {{-- <a
+                    <a
                 class="text-white hover:scale-105 duration-200 hover:border-2 hover:border-primary-400 bg-primary-300 hover:bg-primary-600 focus:outline-none font-medium rounded-lg text-sm px-5 text-center" data-modal-toggle="defaultModa" >
                 تبرع
-            </a> --}}
+            </a>
+
                     <button
                         class="block text-white bg-primary-400 hover:bg-primary-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
                         type="button" data-modal-toggle="defaultModal">
@@ -72,3 +73,4 @@
         </div>
     </div>
 </div>
+
