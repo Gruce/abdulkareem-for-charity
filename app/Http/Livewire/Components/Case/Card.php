@@ -4,11 +4,9 @@ namespace App\Http\Livewire\Components\Case;
 
 use Livewire\Component;
 use App\Models\Event;
-use Jantinnerezo\LivewireAlert\LivewireAlert;
 
 class Card extends Component
 {
-    use LivewireAlert;
     public  $event_id, $search;
 
     protected $listeners = ['delete', '$refresh','search'];
