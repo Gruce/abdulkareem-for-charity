@@ -34,18 +34,18 @@ class Card extends Component
         $this->emitSelf('$refresh');
     }
 
-    public function confirm($id){
-        $this->share_id = $id;
-        $this->alert('warning', 'هل انت متأكد من حذف الحالة؟', [
-            'position' => 'center',
-            'timer' => 3000,
-            'toast' => true,
-            'showConfirmButton' => true,
-            'onConfirmed' => 'delete',
-            'showCancelButton' => true,
-            'onDismissed' => '',
-        ]);
-    }
+    // public function confirm($id){
+    //     $this->share_id = $id;
+    //     $this->alert('warning', 'هل انت متأكد من حذف الحالة؟', [
+    //         'position' => 'center',
+    //         'timer' => 3000,
+    //         'toast' => true,
+    //         'showConfirmButton' => true,
+    //         'onConfirmed' => 'delete',
+    //         'showCancelButton' => true,
+    //         'onDismissed' => '',
+    //     ]);
+    // }
 
     public function add($id){
 
@@ -62,6 +62,24 @@ class Card extends Component
         $share->add($data);
         $this->reset();
 
+    }
+    public function accept($id, $state){
+        $share = Share::findOrFail($id);
+        $share->state($state);
+        $this->alert('success', 'تم القبول', [
+            'position' => 'top',
+            'timer' => 3000,
+            'toast' => true,
+        ]);
+    }
+    public function deleteShare($id){
+        $share = Share::findOrFail($id);
+        $share->delete();
+        $this->alert('success', 'تم الرفض', [
+            'position' => 'top',
+            'timer' => 3000,
+            'toast' => true,
+        ]);
     }
     public function search($search)
     {
