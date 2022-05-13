@@ -1171,6 +1171,33 @@ select{
 .h-\[30rem\]{
   height: 30rem;
 }
+.h-\[33rem\]{
+  height: 33rem;
+}
+.h-\[rem\]{
+  height: rem;
+}
+.h-\[38rem\]{
+  height: 38rem;
+}
+.h-\[35rem\]{
+  height: 35rem;
+}
+.h-\[34rem\]{
+  height: 34rem;
+}
+.h-60{
+  height: 15rem;
+}
+.h-80{
+  height: 20rem;
+}
+.h-96{
+  height: 24rem;
+}
+.h-1\/2{
+  height: 50%;
+}
 .min-h-screen{
   min-height: 100vh;
 }
@@ -1239,6 +1266,15 @@ select{
 }
 .w-64{
   width: 16rem;
+}
+.w-\[3rem\]{
+  width: 3rem;
+}
+.w-\[38rem\]{
+  width: 38rem;
+}
+.w-\[40rem\]{
+  width: 40rem;
 }
 .min-w-0{
   min-width: 0px;
@@ -1497,6 +1533,9 @@ select{
 }
 .rounded-xl{
   border-radius: 0.75rem;
+}
+.rounded-sm{
+  border-radius: 0.125rem;
 }
 .rounded-l-md{
   border-top-left-radius: 0.375rem;
@@ -2390,6 +2429,10 @@ select{
 .hover\:bg-secondary-800:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(205 45 59 / var(--tw-bg-opacity));
+}
+.hover\:bg-primary-300:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(161 214 181 / var(--tw-bg-opacity));
 }
 .hover\:bg-gradient-to-r:hover{
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
