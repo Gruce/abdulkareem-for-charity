@@ -9,8 +9,9 @@ use App\Models\Share;
 
 class Card extends Component
 {
-    public $name, $type, $shares, $share, $photo, $date, $email, $phone_number;
     use LivewireAlert;
+    public $name, $type, $shares, $share, $photo, $date, $email, $phone_number;
+    
     public $search,$user_type;
 
     public $share_id;

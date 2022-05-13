@@ -1,5 +1,5 @@
 <div>
-    <div class="container mx-auto grid grid-cols-2 grid-rows-8">
+    <div class=" grid grid-cols-2 grid-rows-8">
 
         {{-- Introduction --}}
         <div class="col-span-1 row-span-3 bg-[#93A893] p-16">
