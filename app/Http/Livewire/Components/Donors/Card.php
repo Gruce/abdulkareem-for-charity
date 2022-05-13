@@ -11,7 +11,7 @@ class Card extends Component
 {
     public $name, $type, $shares, $share, $photo, $date, $email, $phone_number;
     use LivewireAlert;
-    public $search;
+    public $search ,$user_type;
     
     public $share_id;
 
@@ -20,7 +20,7 @@ class Card extends Component
         'shares' => 'required',
     ];
 
-    protected $listeners = ['delete', '$refresh', 'search'];
+    protected $listeners = ['delete', '$refresh', 'search' ,'getUserType'];
 
     
 
@@ -67,16 +67,23 @@ class Card extends Component
     {
         $this->search = $search;
     }
+    public function getUserType ($type)
+    {
+        $this->user_type = $type;
+    }
 
     public function render(){
         $search = '%' . $this->search . '%';
-        $this->users = User::with('shares')
-        // ->whereHas('shares', function ($user) use ($search) {
-        //     return $user->where('name', 'LIKE', $search)->orWhere('email', 'LIKE', $search);
-        // }) 
-        ->where('name', 'LIKE', $search)->orWhere('email', 'LIKE', $search)
+        $this->users = User::with('shares');
+
+        if($this->user_type != 0 && $this->user_type <= 4){
+            $this->users = $this->users->where('type', $this->user_type);
+        }
+        $this->users = $this->users->where('name', 'LIKE', $search)
+                        ->withSum('shares','share')->orderByDesc('shares_sum_share')    
+                        ->get();
         
-        ->withSum('shares','share')->orderByDesc('shares_sum_share')->get();
+        
         return view('livewire.components.donors.card');
     }
 }

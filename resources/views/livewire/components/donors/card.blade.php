@@ -1,7 +1,9 @@
 <div>
 
     <div x-data="{ isOpen: false}" class="grid grid-cols-4 gap-6">
+       
         @forelse ($users as $item)
+      
         <div
             class="shadow-sm shadow-gray-300 hover:shadow-gray-400 hover:shadow-lg p-4 w-full rounded-xl bg-gray-50 hover:bg-gray-200 transition duration-200">
             <div class="flex justify-end px-4 pt-4">
@@ -20,7 +22,7 @@
                     <ul class="py-1" aria-labelledby="dropdownButton">
                         <li class="mb-2">
                             <a class="cursor-pointer w-full p-4" wire:click="confirm({{$item->id}})">
-                                <i class="text-red-600 fa-solid fa-trash"></i> Delete
+                                <i class="text-red-600 fa-solid fa-trash"></i> Delete  
                             </a>
                             
                         </li>
@@ -57,7 +59,7 @@
         @empty
         لا يوجد متبرعين
         @endforelse
-
+    
     </div>
 
 
