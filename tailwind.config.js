@@ -30,6 +30,8 @@ module.exports = {
 
             },
 
+            //Border Color
+
             borderColor: {
                 primary: {
                     100: "#c2ebd8",
@@ -53,6 +55,9 @@ module.exports = {
                     900: "#1d1e42",
                 },
             },
+
+            //Website Color
+
             colors: {
                 primary: {
                     100: "#c2ebd8",
