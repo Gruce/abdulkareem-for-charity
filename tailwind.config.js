@@ -26,9 +26,6 @@ module.exports = {
             },
             fontFamily: {
                 noto: ["Noto Sans Arabic", "sans-serif"],
-                Kufi: ["Reem Kufi", "sans-serif"],
-                IBM: ["IBM Plex Sans Arabic", "sans-serif"],
-                Alhurra: ['Alhurra, sans-serif'],
                 NotoKufi: ['Noto Kufi Arabic , sans-serif'],
 
             },

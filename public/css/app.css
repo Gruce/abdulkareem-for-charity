@@ -1927,15 +1927,6 @@ select{
 .font-mono{
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
-.font-Alhurra{
-  font-family: Alhurra, sans-serif;
-}
-.font-Kufi{
-  font-family: Reem Kufi, sans-serif;
-}
-.font-IBM{
-  font-family: IBM Plex Sans Arabic, sans-serif;
-}
 .font-noto{
   font-family: Noto Sans Arabic, sans-serif;
 }
