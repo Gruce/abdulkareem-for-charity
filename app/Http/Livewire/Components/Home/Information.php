@@ -24,13 +24,13 @@ class Information extends Component
                 // ]
             ],
             [
-                'info' => 'الحالات التي تم علاجها',
-                'value' => '+15',
+                'info' => 'الحالات',
+                'value' => '15',
                 
             ],
             [
                 'info' => 'مجموع المبالغ المتبرع بها',
-                'value' => '+800$',
+                'value' => '800',
                 
             ],
         ]);

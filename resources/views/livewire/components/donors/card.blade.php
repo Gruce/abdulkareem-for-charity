@@ -89,7 +89,7 @@
                 @auth
                     <h5 class="text-lg tracking-tight pt-5">البريد الالكتروني: {{ $item->email }}</h5>
                 @endauth
-                <p class="text-sm font-normal text-gray-500">انضم منذ: {{ $item->created_at }}</p>
+                <p class="text-sm font-normal text-gray-500">انضم {{ $item->created_at->diffForHumans() }}</p>
 
             </div>
         @empty
