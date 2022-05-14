@@ -1,9 +1,10 @@
 
 @forelse ($events as $item)
-<div class="rounded-t-lg  bg-gray-50 hover:bg-gray-100 w-96 h-auto">
-    @admin
+<div class="rounded-lg bg-gray-50 hover:bg-gray-100 border-2 border-transparent hover:shadow-lg hover:border-green-600 w-96 h-auto group">
+    @admin 
+    {{-- start dropdown --}}
     <div class="flex justify-end relative">
-        {{-- start dropdown --}}
+       
         <button id="dropdownButton-{{ $item->id }}" data-dropdown-toggle="dropdown-{{ $item->id }}"
             class="absolute text-gray-800 focus:outline-none hover:bg-gray-300 text-xl rounded-md px-2.5 py-2.5"
             type="button">
@@ -31,20 +32,20 @@
     {{-- end dropdown --}}
 
     {{-- case Image --}}
-    <a href="#!">
+    <div class="rounded-lg">
         {{-- <img class="rounded-t-lg" src="{{ asset($item->image_path) }}" alt="" /> --}}
-        <img src="/img/about.png" class="rounded-md pl-3 pt-3 pr-3" alt="">
-    </a>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQI7Vm3bWFcLUw9o1XiIVwWv3Vcuitvy9GOCg&usqp=CAU" class="pl-3 pt-3 pr-3 w-full rounded-lg" alt="fdfgjknml">
+    </div>
 
     {{-- title + more info --}}
     <div class="p-6">
-        <h5 class="text-center font-bold text-primary-900 text-3xl mb-2"> {{ $item->title }}</h5>
+        <h5 class="text-center font-bold group-hover:text-green-600 text-3xl mb-2"> {{ $item->title }}</h5>
         <div class=" xs:28">
             <p class="text-gray-900 text-medium mb-4">
                 {{ Str::limit($item->description, 140) }}
 
                 {{-- more info button --}}
-                <button class="text-primary-800 font-bold transition duration-300 ease-in-out mb-4" type="button"
+                <button class="text-primary-500 hover:scale-110 font-bold duration-300 mb-4" type="button"
                     data-modal-toggle="defaultModal">
                     قراءة المزيد
                 </button>
@@ -54,7 +55,7 @@
                 <div class="relative p-4 w-full max-w-2xl h-full md:h-auto">
                     <div class="relative bg-white rounded-lg shadow ">
                         <button type="button"
-                            class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-red-600 rounded-lg p-3 ml-auto inline-flex items-center "
+                            class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-red-600 rounded-bl-lg rounded-tr-lg p-3 ml-auto inline-flex items-center "
                             data-modal-toggle="defaultModal">
                             <i class="fa-solid fa-xmark text-2xl"></i>
                         </button>
@@ -74,7 +75,7 @@
             </div>
             <hr class="mb-5">
 
-            <div class="font-bold font-2xl text-primary-800 text-center mb-2">
+            <div class="font-bold font-noto text-xl group-hover:text-green-600 text-center mb-2">
                 الهدف : {{ $item->target }} د.ع
             </div>
         </div>
