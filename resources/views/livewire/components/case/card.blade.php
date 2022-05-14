@@ -3,8 +3,9 @@
         @forelse ($events as $item)
             <div class="rounded-t-lg  bg-gray-50 hover:bg-gray-100 ">
                 @admin
+                {{-- start dropdown --}}
                 <div class="flex justify-end relative">
-                    {{-- start dropdown --}}
+                    
                     <button id="dropdownButton-{{ $item->id }}" data-dropdown-toggle="dropdown-{{ $item->id }}"
                         class="absolute text-gray-800 focus:outline-none hover:bg-gray-300 text-xl rounded-md px-2.5 py-2.5"
                         type="button">
