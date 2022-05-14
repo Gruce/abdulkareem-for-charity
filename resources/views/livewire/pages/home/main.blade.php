@@ -18,28 +18,29 @@
 
                 <div>
                     <a href="{{ route('donate') }}"
-                        class="text-black text-base bg-[#f2f2f2] hover:bg-primary-600 hover:text-white focus:outline-none font-medium hover:scale-110 duration-200 rounded-lg  px-5 py-2.5 text-center mb-2">
-                        تبرع الان
-                    </a>
-                </div>
+class="text-black text-base bg-[#f2f2f2] hover:bg-primary-600 hover:text-white focus:outline-none font-medium
+hover:scale-110 duration-200 rounded-lg px-5 py-2.5 text-center mb-2">
+تبرع الان
+</a>
+</div>
 
 
-                <div class="flex flex-col">
-                    <span class="text-center">
-                        <a href="{{ route('about') }}"
-                            class="  bg-[#f2f2f2] duration-200 hover:bg-primary-600 rounded-full px-6 py-2 text-center mb-2">
-                            <i class="fa-solid fa-info text-lg text-black"></i>
-                        </a>
-                    </span>
-                    <span class="mt-4 text-lg font-mono text-[#F2f2f2]">
-                        لمعرفة المزيد
-                    </span>
-                </div>
+<div class="flex flex-col">
+    <span class="text-center">
+        <a href="{{ route('about') }}"
+            class="  bg-[#f2f2f2] duration-200 hover:bg-primary-600 rounded-full px-6 py-2 text-center mb-2">
+            <i class="fa-solid fa-info text-lg text-black"></i>
+        </a>
+    </span>
+    <span class="mt-4 text-lg font-mono text-[#F2f2f2]">
+        لمعرفة المزيد
+    </span>
+</div>
 
-            </div>
-        </div>
+</div>
+</div>
 
-        {{-- photo
+{{-- photo
         <div class="col-span-1 row-span-3 bg-[#548C62] relative h-[36rem]">
             
             <div class="absolute bottom-0 right-0 ">
@@ -56,8 +57,33 @@
         <div class="col-span-2 row-span-4 bg-white text-9xl">04</div>
     </div>
 
-
 </div> --}}
 <div>
-HI
+    <div class="flex flex-col h-screen">
+
+        <!-- INTRO -->
+        <div class="flex basis-4/12 bg-red-50 p-16">
+            <!-- Text -->
+            <div class="basis-6/12 p-6">
+                <h1 class="text-secondary-900 text-8xl font-bold ">
+                    تبرع بسهولة
+                </h1>
+                <p class="text-secondary-200 text-3xl mt-6">
+                    مبادرة ونشاط طلابي بحت ينطلق من طلبة كلية علوم
+                    <br>
+                    الحـاسوب وتـكنلوجيا المعـلومات الهدف منه رعاية الاعمال
+                    <br>
+                    الخيرية داخل الكلية وتكون الاولوية في صرف الصندوق
+                    <br>
+                    للطلبة ذوي الدخل دون المحدود وبقية الاعمال الخيرية.
+            </div>
+            <div class="basis-6/12">
+                <img src="/img/charity.png" class="h-60">
+            </div>
+        </div>
+
+        <div class="flex basis-2/12 bg-blue-600">2</div>
+        <div class="flex basis-4/12 bg-red-600">3</div>
+        <div class="flex basis-2/12 bg-blue-600">4</div>
+    </div>
 </div>
