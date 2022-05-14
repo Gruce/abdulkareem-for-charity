@@ -12,12 +12,13 @@
                     </button>
                     <!-- Dropdown menu -->
                     <div id="dropdown-{{ $item->id }}"
-                        class="hidden z-10 rounded divide-y divide-gray-100 shadow bg-gray-50">
-                        <ul class="text-base" aria-labelledby="dropdownButton-{{ $item->id }}">
+                        class="hidden z-10 rounded divide-y w-32 divide-gray-100 shadow bg-gray-50">
+                        <ul class="text-base flex flex-row" aria-labelledby="dropdownButton-{{ $item->id }}">
                             <div class="group p-2">
-                                <a href={{ route('edit-case', ['case_id' => $item->id]) }} class=" w-full hover:bg-gray-200">
+                                <a href="{{ route('edit-case', ['case_id' => $item->id]) }}" class="hover:bg-gray-200">
                                     <i
-                                        class="text-green-400 fa-solid fa-pen-to-square text-xl hover:scale-110 hover:text-green-600 hover:rotate-12"></i>
+                                        class="text-green-400 fa-solid fa-pen-to-square text-xl hover:scale-110 hover:text-green-600 hover:rotate-12">
+                                    </i>
                                     تعديل
                                 </a>
                                 <button wire:click="confirm({{ $item->id }})" class=" w-full hover:bg-gray-200">
