@@ -93,9 +93,6 @@
                             الهدف : {{ $item->target }} د.ع
                         </div>
                     </div>
-
-                    
-
                 </div>
 
                 {{-- <div class="w-full  ">
