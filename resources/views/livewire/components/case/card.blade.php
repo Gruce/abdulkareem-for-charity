@@ -1,6 +1,6 @@
 @forelse ($events as $item)
     <div
-        class="rounded-lg bg-gray-50 hover:bg-gray-100 border-2 border-transparent hover:shadow-lg hover:border-green-600 w-96 h-auto group">
+        class="rounded-lg  border-2 border-primary-100 hover:shadow-lg hover:border-primary-500 w-96 h-auto group">
         @admin
         {{-- start dropdown --}}
         <div class="flex justify-end relative">
@@ -36,7 +36,7 @@
         <div class="rounded-lg">
             {{-- <img class="rounded-t-lg" src="{{ asset($item->image_path) }}" alt="" /> --}}
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQI7Vm3bWFcLUw9o1XiIVwWv3Vcuitvy9GOCg&usqp=CAU"
-                class="pl-3 pt-3 pr-3 w-full rounded-lg" alt="fdfgjknml">
+                class="pl-3 pt-3 pr-3 w-full rounded-lg" >
         </div>
 
         {{-- title + more info --}}
@@ -68,7 +68,7 @@
                             </div>
 
                             <div class="p-6 space-y-6">
-                                <p class="text-base font-Alhurra font-semibold leading-relaxed text-gray-600">
+                                <p class="text-base font-semibold leading-relaxed text-gray-600">
                                     {{ $item->description }}
                                 </p>
                             </div>
