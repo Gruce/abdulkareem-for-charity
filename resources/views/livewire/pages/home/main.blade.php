@@ -62,7 +62,7 @@ hover:scale-110 duration-200 rounded-lg px-5 py-2.5 text-center mb-2">
     <div class="flex flex-col h-screen">
 
         <!-- INTRO -->
-        <div class="flex basis-4/12 bg-red-50 p-16">
+        <div class="flex bg-red-50 p-16">
             <!-- Text -->
             <div class="basis-6/12 p-6">
                 <h1 class="text-secondary-900 text-8xl font-bold ">
@@ -77,8 +77,8 @@ hover:scale-110 duration-200 rounded-lg px-5 py-2.5 text-center mb-2">
                     <br>
                     للطلبة ذوي الدخل دون المحدود وبقية الاعمال الخيرية.
             </div>
-            <div class="basis-6/12">
-                <img src="/img/charity.png" class="h-60">
+            <div class="basis-6/12 ">
+                <img src="/img/charity.png" class="h-60 p-4">
             </div>
         </div>
 
