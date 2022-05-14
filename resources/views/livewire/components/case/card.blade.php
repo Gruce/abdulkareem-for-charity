@@ -1,7 +1,7 @@
 <div>
     <div class="grid grid-cols-4 gap-6 pt-5">
         @forelse ($events as $item)
-            <div class="rounded-t-lg  bg-gray-50 hover:bg-gray-100 ">
+            <div class="rounded-lg  bg-gray-50 hover:bg-gray-100 ">
                 @admin
                 {{-- start dropdown --}}
                 <div class="flex justify-end relative">
