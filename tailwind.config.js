@@ -28,6 +28,7 @@ module.exports = {
                 noto: ["Noto Sans Arabic", "sans-serif"],
                 Kufi: ["Reem Kufi", "sans-serif"],
                 IBM: ["IBM Plex Sans Arabic", "sans-serif"],
+                Alhurra: ['Alhurra, sans-serif'],
             },
 
             borderColor: {
