@@ -4,22 +4,23 @@
         @forelse ($users as $item)
             <div
                 class="shadow-sm shadow-gray-300 hover:shadow-gray-400 hover:shadow-md p-4 w-full rounded-xl bg-gray-50 hover:bg-gray-100 transition duration-200">
+                @admin
                 <div class="flex justify-end">
                     <button id="dropdownButton-{{ $item->id }}" data-dropdown-toggle="dropdown-{{ $item->id }}"
-                        class="text-gray-900 focus:outline-none hover:bg-gray-300 text-xl rounded-md px-2.5 py-2.5"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg hover:bg-gray-200 focus:ring-2 focus:ring-primary-300 px-2.5 py-2.5"
                         type="button">
                         <i class="fa-solid fa-ellipsis-vertical "></i>
                     </button>
                     <!-- Dropdown menu -->
                     <div id="dropdown-{{ $item->id }}"
-                        class="hidden group z-10 w-44 rounded divide-y divide-gray-100 shadow bg-gray-700">
+                        class="hidden group z-10 w-44 rounded divide-y divide-gray-100 shadow bg-gray-200">
                         <ul class="py-1 text-sm text-gray-200" aria-labelledby="dropdownButton-{{ $item->id }}">
                             <li class="mb-2">
-                                <a class="cursor-pointer w-full p-4 block py-2 px-4 hover:bg-gray-600 hover:text-black flex justify-between"
+                                <a class="cursor-pointer w-full p-4 block py-2 px-4 bg-gray-200 hover:bg-gray-600 font-bold hover:text-white text-black flex justify-between"
                                     wire:click="confirm({{ $item->id }})">
                                     <i
                                         class="text-red-600 fa-solid fa-trash text-md duration-200 group-hover:scale-125 hover:text-red-600"></i>
-                                    Remove
+                                    حذف
                                 </a>
 
                             </li>
@@ -27,9 +28,8 @@
 
                         </ul>
                     </div>
-
-
                 </div>
+                @endadmin
                 <div class="grid grid-cols-5 mb-5">
                     <div class="col-span-2 flex flex-col">
                         <img src="{{ asset($item->profile_photo_path ?? 'img/user.png') }}" alt=""
@@ -89,7 +89,7 @@
                 @auth
                     <h5 class="text-lg tracking-tight pt-5">البريد الالكتروني: {{ $item->email }}</h5>
                 @endauth
-                <p class="text-sm font-normal text-gray-500">انضم منذ: {{ $item->created_at }}</p>
+                <p class="text-sm font-normal text-gray-500">انضم {{ $item->created_at->diffForHumans() }}</p>
 
             </div>
         @empty
