@@ -4,7 +4,7 @@
 
             <h1 class="text-3xl md:text-5xl font-Alhurra text-center font-bold text-primary-600"> صندوق الأستاذ عبدالكريم
             </h1>
-            <p class="mt-10 text-xl text-gray-700 px-1 md:px-9">"صـندوق الأستاذ عبد الكريم الخيري" هو مبادرة ونشاط طلابي
+            <p class="mt-10 text-xl font-Alhurra text-gray-700 px-1 md:px-9">"صـندوق الأستاذ عبد الكريم الخيري" هو مبادرة ونشاط طلابي
                 بحت ينطلق من
                 طلبة كلية علوم الحاسوب وتكنلوجيا المعلومات. <br>
 
