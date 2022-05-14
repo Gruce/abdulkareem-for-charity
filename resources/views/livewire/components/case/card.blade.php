@@ -1,7 +1,7 @@
 <div>
     <div class="grid grid-cols-4 gap-6 pt-5">
         @forelse ($events as $item)
-            <div class="rounded-lg  bg-gray-50 hover:bg-gray-100 ">
+            <div class="rounded-lg  bg-gray-50 hover:bg-gray-100 hover:shadow-lg border-transparent border-2 hover:border-primary-600 group">
                 @admin
                 {{-- start dropdown --}}
                 <div class="flex justify-end relative">
@@ -36,20 +36,20 @@
                 {{-- end dropdown --}}
 
                 {{-- case Image --}}
-                <a href="#!">
+                <div href="#!">
                     {{-- <img class="rounded-t-lg" src="{{ asset($item->image_path) }}" alt="" /> --}}
                     <img src="/img/about.png" class="rounded-md pl-3 pt-3 pr-3" alt="">
-                </a>
+                </div>
 
                 {{-- title + more info --}}
                 <div class="p-6">
-                    <h5 class="text-center font-bold text-primary-900 text-3xl mb-2"> {{ $item->title }}</h5>
+                    <h5 class="text-center font-bold group-hover:text-green-600 text-3xl mb-2"> {{ $item->title }}</h5>
                     <div class=" xs:28">
                         <p class="text-gray-900 text-medium mb-4">
                             {{ Str::limit($item->description, 140) }}
 
                             {{-- more info button --}}
-                            <button class="text-primary-800 font-bold transition duration-300 ease-in-out mb-4"
+                            <button class="text-primary-500 hover:scale-110 font-bold duration-300 mb-4"
                                 type="button" data-modal-toggle="defaultModal">
                                 قراءة المزيد
                             </button>
@@ -64,7 +64,7 @@
                                         <i class="fa-solid fa-xmark text-2xl"></i>
                                     </button>
                                     <div class="flex justify-center items-center rounded-t border-b ">
-                                        <h5 class="text-center font-bold text-primary-900 text-3xl">
+                                        <h5 class="text-center font-bold  text-3xl">
                                             {{ $item->title }}
                                         </h5>
                                     </div>
@@ -79,7 +79,7 @@
                         </div>
                         <hr class="mb-5">
 
-                        <div class="font-bold font-2xl text-primary-800 text-center mb-2">
+                        <div class="font-bold font-noto text-xl group-hover:text-green-600 text-center mb-2">
                             الهدف : {{ $item->target }} د.ع
                         </div>
                     </div>
