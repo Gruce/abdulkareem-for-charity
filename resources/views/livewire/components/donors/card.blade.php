@@ -16,7 +16,7 @@
                         class="hidden group z-10 w-44 rounded divide-y divide-gray-100 shadow bg-gray-200">
                         <ul class="py-1 text-sm text-gray-200" aria-labelledby="dropdownButton-{{ $item->id }}">
                             <li class="mb-2">
-                                <a class="cursor-pointer w-full p-4 block py-2 px-4 bg-gray-200 hover:bg-gray-400 font-bold text-black flex justify-between"
+                                <a class="cursor-pointer w-full p-4 block py-2 px-4 bg-gray-200 hover:bg-gray-600 font-bold hover:text-white text-black flex justify-between"
                                     wire:click="confirm({{ $item->id }})">
                                     <i
                                         class="text-red-600 fa-solid fa-trash text-md duration-200 group-hover:scale-125 hover:text-red-600"></i>
