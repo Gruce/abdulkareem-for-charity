@@ -70,7 +70,7 @@ module.exports = {
             },
             colors: {
                 primary: {
-                    50: "#e9f6ee",
+                     50: "#e9f6ee",
                     100: "#daefe2",
                     200: "#c8e4d2",
                     300: "#a1d6b5",
@@ -94,7 +94,7 @@ module.exports = {
                     900: "#cd1e2c",
                 },
                 tertiary: {
-                    50: "#f3fae7",
+                     50: "#f3fae7",
                     100: "#edf7da",
                     200: "#edf7db",
                     300: "#e3f0ca",
@@ -107,7 +107,7 @@ module.exports = {
                 },
 
                 success: {
-                    50: "#e5ebf6",
+                     50: "#e5ebf6",
                     100: "#ccd7ee",
                     200: "#99afde",
                     300: "#6687ce",
