@@ -19,7 +19,7 @@
 
                 </p>
                 <div class="mt-10 mr-4">
-                <button type="button" class="text-white text-2xl bg-primary-500 hover:bg-primary-900 focus:ring-4 focus:ring-primary-300  rounded-lg  px-5 py-2.5 mr-2 mb-2 ">تبرع الان</button>
+                <button type="button" class="text-white text-2xl bg-primary-500 hover:bg-white  border border-transparent hover:border-green-500 hover:text-primary-500 focus:ring-4 focus:ring-primary-300  rounded-lg  px-5 py-2.5 mr-2 mb-2 ">تبرع الان</button>
                 </div>
             </div>
             {{-- Photo --}}
