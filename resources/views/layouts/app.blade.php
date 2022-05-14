@@ -31,10 +31,10 @@
 <body class="font-Alhurra " dir="rtl">
     <x-jet-banner />
 
-    <div class="rounded-lg md:m-10  ">
+    <div class="rounded-lg ">
         @livewire('components.navbar')
         <!-- Page Content -->
-        <main class="p-10 mt-5 overflow-y-auto  rounded-lg md:h-main">
+        <main class=" p-10 mt-5 overflow-y-auto  rounded-lg md:h-main">
             @hasSection('title')
                 <p class="px-5 py-2 text-3xl font-bold text-gray-600 bg-gray-200 rounded-lg">@yield('title')</p>
             @endif

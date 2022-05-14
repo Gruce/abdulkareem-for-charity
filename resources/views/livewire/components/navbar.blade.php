@@ -40,7 +40,7 @@
                     @else
                     {{-- Has no submenu / edit button here! --}}
                     <a href="{{ route($item->route) }}"
-                        class="block py-2 pl-3 pr-4 font-semibold {{ $item->active ? 'text-primary-500 border-primary-100' : 'text-gray-700 hover:bg-gray-300 rounded-lg border-gray-100 hover:scale-110 duration-200 ' }} border-b-2">
+                        class="block py-2 pl-3 pr-4 font-Alhurra1 {{ $item->active ? 'text-primary-500 border-primary-100' : 'text-gray-700 hover:bg-gray-300 rounded-lg border-gray-100 hover:scale-110 duration-200 ' }} border-b-2">
                         {{ $item->name }}
                     </a>
                     @endif
@@ -51,7 +51,7 @@
 
         {{-- Pages/Login, Register --}}
         <div>
-            <ul class="items-center hidden pr-10 text-base font-semibold cursor-pointer md:flex">
+            <ul class="items-center hidden pr-10 text-base font-Alhurra cursor-pointer md:flex">
                 @foreach ($leftMenu->items as $item)
                 <li class="px-6 py-4 ">
                     @if ($item->hasSubmenu)
@@ -79,7 +79,7 @@
                     @else
                     {{-- Has no submenu --}}
                     <a href="{{ route($item->route) }}"
-                        class="block py-2 pl-3 pr-4 font-semibold {{ $item->active ? 'text-primary-500 border-primary-100' : 'text-gray-700 hover:bg-gray-300 rounded-lg border-gray-100 hover:scale-110 duration-200 ' }} border-b-2 ">
+                        class="block py-2 pl-3 pr-4 {{ $item->active ? 'text-primary-500 border-primary-100' : 'text-gray-700 hover:bg-gray-300 rounded-lg border-gray-100 hover:scale-110 duration-200 ' }} border-b-2 ">
                         {{ $item->name }}
                     </a>
                     @endif
@@ -92,19 +92,19 @@
                     hidden 
                     @endauth">
                     <a href="{{ route('donate') }}"
-                        class="block py-2 pl-3 pr-4 font-semibold text-gray-700 hover:bg-gray-300 rounded-lg border-gray-100 hover:scale-110 duration-200 border-b-2">
+                        class="block py-2 pl-3 pr-4 text-gray-700 hover:bg-gray-300 rounded-lg border-gray-100 hover:scale-110 duration-200 border-b-2">
                         تبرع
                     </a>
                     @admin
                     <a href="{{ route('add-case') }}"
-                        class="block py-2 pl-3 pr-4 font-semibold text-gray-700 hover:bg-gray-300 rounded-lg border-gray-100 hover:scale-110 duration-200 border-b-2">
+                        class="block py-2 pl-3 pr-4 text-gray-700 hover:bg-gray-300 rounded-lg border-gray-100 hover:scale-110 duration-200 border-b-2">
                         اضافة حالة
                     </a>
                     @endadmin
                     <form method="POST" action="{{ route('logout') }}" x-data>
                         @csrf
                         <button type="submit"
-                            class="block py-2 pl-3 pr-4 font-semibold text-gray-700 hover:bg-gray-300 rounded-lg border-gray-100 hover:scale-110 duration-200 border-b-2">
+                            class="block py-2 pl-3 pr-4 text-gray-700 hover:bg-gray-300 rounded-lg border-gray-100 hover:scale-110 duration-200 border-b-2">
                             <i class="fa-solid fa-right-from-bracket"></i>
                         </button>
                     </form>
