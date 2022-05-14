@@ -920,11 +920,11 @@ select{
 .col-span-3{
   grid-column: span 3 / span 3;
 }
-.col-span-12{
-  grid-column: span 12 / span 12;
-}
 .col-span-1{
   grid-column: span 1 / span 1;
+}
+.col-span-12{
+  grid-column: span 12 / span 12;
 }
 .col-start-1{
   grid-column-start: 1;
@@ -1056,6 +1056,18 @@ select{
 .mb-5{
   margin-bottom: 1.25rem;
 }
+.mr-20{
+  margin-right: 5rem;
+}
+.mt-20{
+  margin-top: 5rem;
+}
+.mb-10{
+  margin-bottom: 2.5rem;
+}
+.ml-40{
+  margin-left: 10rem;
+}
 .mb-12{
   margin-bottom: 3rem;
 }
@@ -1064,18 +1076,6 @@ select{
 }
 .mr-4{
   margin-right: 1rem;
-}
-.mt-20{
-  margin-top: 5rem;
-}
-.mr-20{
-  margin-right: 5rem;
-}
-.mb-10{
-  margin-bottom: 2.5rem;
-}
-.ml-40{
-  margin-left: 10rem;
 }
 .mr-14{
   margin-right: 3.5rem;
@@ -1149,9 +1149,6 @@ select{
 .h-\[36rem\]{
   height: 36rem;
 }
-.h-\[30rem\]{
-  height: 30rem;
-}
 .h-\[34rem\]{
   height: 34rem;
 }
@@ -1218,14 +1215,11 @@ select{
 .w-32{
   width: 8rem;
 }
-.w-\[36rem\]{
-  width: 36rem;
+.w-\[40rem\]{
+  width: 40rem;
 }
 .w-64{
   width: 16rem;
-}
-.w-\[40rem\]{
-  width: 40rem;
 }
 .min-w-0{
   min-width: 0px;
@@ -1339,11 +1333,11 @@ select{
 .grid-cols-5{
   grid-template-columns: repeat(5, minmax(0, 1fr));
 }
-.grid-cols-3{
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-}
 .grid-cols-2{
   grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.grid-cols-3{
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 .grid-cols-12{
   grid-template-columns: repeat(12, minmax(0, 1fr));
@@ -1967,6 +1961,10 @@ select{
   font-size: 1.875rem;
   line-height: 2.25rem;
 }
+.text-5xl{
+  font-size: 3rem;
+  line-height: 1;
+}
 .text-4xl{
   font-size: 2.25rem;
   line-height: 2.5rem;
@@ -1977,10 +1975,6 @@ select{
 }
 .text-9xl{
   font-size: 8rem;
-  line-height: 1;
-}
-.text-5xl{
-  font-size: 3rem;
   line-height: 1;
 }
 .font-medium{
@@ -2013,6 +2007,9 @@ select{
 .leading-4{
   line-height: 1rem;
 }
+.leading-10{
+  line-height: 2.5rem;
+}
 .leading-6{
   line-height: 1.5rem;
 }
@@ -2021,9 +2018,6 @@ select{
 }
 .leading-none{
   line-height: 1;
-}
-.leading-10{
-  line-height: 2.5rem;
 }
 .tracking-widest{
   letter-spacing: 0.1em;
@@ -2105,6 +2099,10 @@ select{
   --tw-text-opacity: 1;
   color: rgb(229 231 235 / var(--tw-text-opacity));
 }
+.text-primary-800{
+  --tw-text-opacity: 1;
+  color: rgb(78 163 109 / var(--tw-text-opacity));
+}
 .text-gray-100{
   --tw-text-opacity: 1;
   color: rgb(243 244 246 / var(--tw-text-opacity));
@@ -2125,6 +2123,10 @@ select{
   --tw-text-opacity: 1;
   color: rgb(242 242 242 / var(--tw-text-opacity));
 }
+.text-black{
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+}
 .text-\[\#F2f2f2\]{
   --tw-text-opacity: 1;
   color: rgb(242 242 242 / var(--tw-text-opacity));
@@ -2133,17 +2135,9 @@ select{
   --tw-text-opacity: 1;
   color: rgb(120 197 148 / var(--tw-text-opacity));
 }
-.text-black{
-  --tw-text-opacity: 1;
-  color: rgb(0 0 0 / var(--tw-text-opacity));
-}
 .text-gray-300{
   --tw-text-opacity: 1;
   color: rgb(209 213 219 / var(--tw-text-opacity));
-}
-.text-primary-800{
-  --tw-text-opacity: 1;
-  color: rgb(78 163 109 / var(--tw-text-opacity));
 }
 .underline{
   -webkit-text-decoration-line: underline;
@@ -2358,10 +2352,6 @@ select{
 .hover\:bg-green-500:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(34 197 94 / var(--tw-bg-opacity));
-}
-.hover\:bg-secondary-800:hover{
-  --tw-bg-opacity: 1;
-  background-color: rgb(205 45 59 / var(--tw-bg-opacity));
 }
 .hover\:bg-primary-600:hover{
   --tw-bg-opacity: 1;
@@ -2792,14 +2782,14 @@ select{
   .sm\:grid-cols-1{
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
-  .sm\:grid-rows-2{
-    grid-template-rows: repeat(2, minmax(0, 1fr));
-  }
   .sm\:grid-rows-6{
     grid-template-rows: repeat(6, minmax(0, 1fr));
   }
   .sm\:grid-rows-4{
     grid-template-rows: repeat(4, minmax(0, 1fr));
+  }
+  .sm\:grid-rows-2{
+    grid-template-rows: repeat(2, minmax(0, 1fr));
   }
   .sm\:items-start{
     align-items: flex-start;
@@ -2893,11 +2883,11 @@ select{
   .md\:col-span-1{
     grid-column: span 1 / span 1;
   }
-  .md\:col-span-4{
-    grid-column: span 4 / span 4;
-  }
   .md\:col-span-10{
     grid-column: span 10 / span 10;
+  }
+  .md\:col-span-4{
+    grid-column: span 4 / span 4;
   }
   .md\:m-10{
     margin: 2.5rem;
