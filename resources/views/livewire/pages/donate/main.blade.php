@@ -1,15 +1,15 @@
-<div>
-<div class="flex flex-col justify-start items-center gap-4">
-    <div class="font-Kufi text-4xl">
-        بِسْمِ اللَّـهِ الرَّحْمَـٰنِ الرَّحِيمِ
-    </div>
-    <div class="text-2xl font-semibold font-IBM">
-        من ذا الذي يقرض الله قرضا حسنا فيضاعفه له أضعافا كثيرة والله يقبض ويبسط وإليه ترجعونَ
-    </div>
-</div>
-<div>
-    <div class="md:col-span-4 sm:grid-rows-2 order-first md:order-last">
-
+<div class="grid grid-cols-2">
+     <div class="col-span-1 mr-20 mt-20">
+        <div class="font-bold text-5xl text-primary-800 mb-10">
+            بِسْمِ اللَّـهِ الرَّحْمَـٰنِ الرَّحِيمِ
+        </div>
+        <div class="font-IBM text-2xl font-semibold leading-10">
+            من ذا الذي يقرض الله قرضاً حسناً فيضاعفه له أضعافاً كثيرةً 
+            <br>
+            و الله يقبضُ ويبسطُ و إليه تُرجعون
+        </div>
+     </div>
+     <div class="col-span-1 mt-10 ml-40">
         <section class="flex flex-col justify-start min-h-auto max-w-md mx-auto">
             <div class="p-6 bg-gray-100 rounded ">
                 <div class="flex items-center justify-center font-black m-3 mb-12">
@@ -55,7 +55,7 @@
                     <button
                         class="px-4 py-1.5 rounded-md shadow-lg bg-gradient-to-r from-green-500 to-primary-600 font-medium text-gray-100 block transition duration-300"
                         type="submit">
-                        <span id="login_process_state" class="hidden">Sending</span>
+            
                         <span id="login_default_state">تبرع<span id="subtotal"></span></span>
                     </button>
                 </form>
@@ -63,6 +63,6 @@
             </div>
 
         </section>
-    </div>
-</div>
-</div>
+     </div>
+
+ </div>
