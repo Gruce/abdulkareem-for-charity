@@ -62,10 +62,9 @@ hover:scale-110 duration-200 rounded-lg px-5 py-2.5 text-center mb-2">
     <div class="flex flex-col h-screen">
 
         <!-- INTRO -->
-        <div class="grid grid-cols-12 basis-4/12   justify-between ">
-
+        <div class="flex basis-4/12 bg-red-50 p-16">
             <!-- Text -->
-            <div class="col-span-5 pr-20 pt-16  ">
+            <div class="basis-6/12 p-6">
                 <h1 class="text-secondary-900 text-8xl font-bold ">
                     تبرع بسهولة
                 </h1>
@@ -77,21 +76,14 @@ hover:scale-110 duration-200 rounded-lg px-5 py-2.5 text-center mb-2">
                     الخيرية داخل الكلية وتكون الاولوية في صرف الصندوق
                     <br>
                     للطلبة ذوي الدخل دون المحدود وبقية الاعمال الخيرية.
-
-                </p>
-                
             </div>
-            
-
-            {{-- Photo --}}
-            
-            <div class="col-span-7    ">
-                <img src="/img/charity.png" class="w-11/12 h-auto m-auto">
+            <div class="basis-6/12">
+                <img src="/img/charity.png" class="h-60">
             </div>
         </div>
 
-        <div class="flex basis-2/12 ">@livewire('components.home.information')</div>
-        <div class="flex basis-4/12 bg-red-600">تحت الصيانة </div>
-        <div class="flex basis-2/12 bg-blue-600">تحت الصيانة </div>
+        <div class="flex basis-2/12 bg-blue-600">2</div>
+        <div class="flex basis-4/12 bg-red-600">3</div>
+        <div class="flex basis-2/12 bg-blue-600">4</div>
     </div>
 </div>
