@@ -1,10 +1,10 @@
-<div>
+{{-- <div>
     <div class=" grid grid-cols-2 grid-rows-8">
 
-        {{-- Introduction --}}
+        {{-- Introduction
         <div class="col-span-1 row-span-3 bg-[#93A893] p-16">
-            <h1 class="font-Kufi text-7xl text-[#f2f2f2]">صندوق الاستاذ عبدالكريم الخيري</h1>
-            <p class="font-bold font-IBM text-lg mt-10 leading-9 ">
+            <h1 class="font-Alhurra font-bold text-7xl text-[#f2f2f2]">صندوق الاستاذ عبدالكريم الخيري</h1>
+            <p class="font-Alhurra text-lg mt-10 leading-9 ">
                 مبادرة ونشاط طلابي بحت ينطلق من طلبة كلية علوم الحـاسوب وتـكنلوجيا المعـلومات
                 <br>
                 الهدف منه رعاية الاعمال الخيرية داخل الكلية وتكون الاولوية في صرف الصندوق للطلبة
@@ -39,7 +39,7 @@
             </div>
         </div>
 
-        {{-- photo --}}
+        {{-- photo
         <div class="col-span-1 row-span-3 bg-[#548C62] relative h-[36rem]">
             
             <div class="absolute bottom-0 right-0 ">
@@ -49,12 +49,15 @@
             </div>
         </div>
 
-        {{-- information --}}
+        {{-- information 
         <div class="col-span-2 row-span-1 bg-[#548C62] ">@livewire('components.home.information')</div>
         
-        {{-- Contect --}}
+        {{-- Contect -
         <div class="col-span-2 row-span-4 bg-white text-9xl">04</div>
     </div>
 
 
+</div> --}}
+<div>
+HI
 </div>
