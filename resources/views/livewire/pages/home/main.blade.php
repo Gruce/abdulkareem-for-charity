@@ -26,17 +26,17 @@
                         class="hover:text-white text-2xl hover:bg-primary-500 bg-white  border hover:border-transparent border-green-500 text-primary-500 focus:ring-4 focus:ring-primary-300  rounded-lg  px-5 py-2.5 mr-2 mb-2 ">الحالات</button>
                 </div>
             </div>
-            {{-- Photo --}}
+            {{--Photo--}}
 
             <div class="col-span-7">
                 <img src="/img/charity.png" class="w-10/12 h-auto m-auto">
             </div>
         </div>
 
-        {{-- information --}}
+        {{--information--}}
         <div class="flex basis-2/12 justify-center mt-14">@livewire('components.home.information')</div>
 
-        {{-- Cases --}}
+        {{--Cases--}}
         <div class="flex basis-4/12 pr-20 pt-16">
             <span class="text-secondary-900 text-6xl font-bold ">
                 اخر الحالات
@@ -47,7 +47,7 @@
 
         </div>
 
-        {{-- Work for --}}
+        {{--Work for--}}
         <div class="flex basis-2/12  pr-20 pt-16">
             <span class="text-secondary-900 text-6xl font-bold ">
                 نحن نعمل لأجل
