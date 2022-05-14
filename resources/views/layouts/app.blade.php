@@ -28,7 +28,7 @@
     <script src="{{ mix('js/app.js') }}" defer></script>
 </head>
 
-<body class="font-noto " dir="rtl">
+<body class="font-Alhurra " dir="rtl">
     <x-jet-banner />
 
     <div class="rounded-lg md:m-10  ">
