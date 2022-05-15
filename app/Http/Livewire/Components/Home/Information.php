@@ -8,11 +8,6 @@ use App\Models\Share;
 use App\Models\Event;
 class Information extends Component
 {   public $state = null;
-    //public $target,$received_price;
-    
-
-    
-    
     
     public function render()
     {
