@@ -26,12 +26,11 @@ module.exports = {
             },
             fontFamily: {
                 noto: ["Noto Sans Arabic", "sans-serif"],
-                Kufi: ["Reem Kufi", "sans-serif"],
-                IBM: ["IBM Plex Sans Arabic", "sans-serif"],
-                Alhurra: ['Alhurra, sans-serif'],
                 NotoKufi: ['Noto Kufi Arabic , sans-serif'],
 
             },
+
+            //Border Color
 
             borderColor: {
                 primary: {
@@ -45,18 +44,7 @@ module.exports = {
                     800: "#2d8b5f",
                     900: "#25744f",
                 },
-                // success: {
-                //     50: "#e5ebf6",
-                //     100: "#ccd7ee",
-                //     200: "#99afde",
-                //     300: "#6687ce",
-                //     400: "#4c73c6",
-                //     500: "#194bb6",
-                //     600: "#0037ae",
-                //     700: "#00319c",
-                //     800: "#002c8b",
-                //     900: "#002168",
-                // },
+                
                 secondary: {
                     300: "#d7d7ed",
                     400: "#b3b5de",
@@ -67,6 +55,9 @@ module.exports = {
                     900: "#1d1e42",
                 },
             },
+
+            //Website Color
+
             colors: {
                 primary: {
                     100: "#c2ebd8",
