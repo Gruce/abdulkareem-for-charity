@@ -7,7 +7,8 @@ use App\Models\Share;
 use Jantinnerezo\LivewireAlert\LivewireAlert;
 
 class Main extends Component{
-
+    use LivewireAlert;
+    
     public $share, $note;
     public function save()
     {
