@@ -1,88 +1,37 @@
 <?php
 
 namespace App\Http\Livewire\Components\Case;
-use App\Models\Event;
+
 use Livewire\Component;
+use App\Models\Event;
 use Jantinnerezo\LivewireAlert\LivewireAlert;
 
 class Card extends Component
 {
     use LivewireAlert;
-    public $title, $description, $image_path, $file_path, $target, $received_price ,$cases ;
-    public $edit_id = null;
-    
-    protected $listeners = ['delete'];
 
-    public function delete()
-    {  
-        $this->event->delete();
-        $this->alert('success', 'Done!', [
-            'position' => 'top-start',
+    public  $event_id, $search;
+
+    protected $listeners = ['delete', '$refresh','search'];
+
+    function search($string)
+    {
+        $this->search = $string;
+    }
+
+    public function delete(){
+        Event::findOrFail($this->event_id)->delete();
+        $this->alert('success', 'تم حذف الحالة', [
+            'position' => 'top',
             'timer' => 3000,
             'toast' => true,
         ]);
+
+        $this->emitSelf('$refresh');
     }
 
-    public function confirm(Event $event){
-        $this->event = $event;
-        $this->alert('warning', 'هل انت متأكد من حذف الحالة؟', [
-            'position' => 'center',
-            'timer' => 3000,
-            'toast' => true,
-            'showConfirmButton' => true,
-            'onConfirmed' => 'delete',
-            'showCancelButton' => true,
-            'onDismissed' => '',
-        ]);
-    }
-
-    public function save(){
-        $this->cases->title = $this->title;
-        $this->cases->description = $this->description;
-        $this->cases->target = $this->target;
-        $this->cases->received_price = $this->received_price;
-        $this->cases->save();
-       
-
-        $this->edit_id = null;
-
-        $this->alert('success', 'تم التعديل', [
-            'position' => 'top-start',
-            'timer' => '3000',
-            'toast' => true,
-        ]);
-
-    }
-
-    public function edit(Event $event){
-        $this->edit_id = $event->id;
-        $this->title = $event->title;
-        $this->description = $event->description;
-        $this->target = $event->target;
-        $this->received_price = $event->received_price;
-        $this->image_path = $event->image_path;
-        $this->file_path = $event->file_path;
-        $this->event = $event;
-    }
-
-
-    
-    
-    
-    // protected $listeners = ['delete'];
-
-    // public function delete()
-    // {
-    //     Event::findOrFail($this->ID)->delete();
-    //     $this->alert('success', 'Done!', [
-    //         'position' => 'top-start',
-    //         'timer' => 3000,
-    //         'toast' => true,
-    //     ]);
-    // }
-
-    // public function confirm($ID ){
-    //     $this->ID = $id;
+    // public function confirm($id){
+    //     $this->event_id = $id;
     //     $this->alert('warning', 'هل انت متأكد من حذف الحالة؟', [
     //         'position' => 'center',
     //         'timer' => 3000,
@@ -94,11 +43,10 @@ class Card extends Component
     //     ]);
     // }
 
-    public function render()
-    {//$this->cases= Event::where('cases_id')->get();
-
-        
-
+    public function render(){
+        $search = '%' . $this->search . '%';
+        $this->events = Event::where('title', 'LIKE', $search)->orderByDesc('id')->get();
+        //dd($this->events->toArray());
         return view('livewire.components.case.card');
     }
 }

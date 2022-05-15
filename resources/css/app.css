@@ -4,6 +4,15 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+@layer base{
+    @font-face {
+        font-family: "Alhurra";
+        src: url('/fonts/AlHurraTxtlight.woff2') format('woff2');
+        font-weight: 400;
+        font-display: swap;
+        font-style: normal;
+      }
+}
 
 *::-webkit-scrollbar {
     width: 12px;

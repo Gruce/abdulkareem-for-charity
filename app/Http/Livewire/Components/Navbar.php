@@ -20,7 +20,7 @@ class Navbar extends Component
                 //         'permissions' => 2,
                 //     ]
                 // ]
-            ],
+            ],                                                                                                                                                                                                                                                                                                                     
             [
                 'name' => 'الحالات',
                 'route' => 'cases',

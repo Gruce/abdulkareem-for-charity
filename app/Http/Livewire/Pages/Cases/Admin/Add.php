@@ -11,22 +11,21 @@ class Add extends Component
 {
     use LivewireAlert;
     use WithFileUploads;
-    public $title, $description, $image_path, $file_path, $target;
+    public $title, $description, $image_path, $file_path, $target, $received_price;
 
     protected $rules = [
         'title' => 'required',
         'target' => 'required',
     ];
 
-    public function add()
-    {
-
+    public function add(){
         $this->validate();
 
         $data = [
             'title' => $this->title,
             'description' => $this->description,
             'target' => $this->target,
+            'received_price' => $this->received_price,
 
         ];
         $this->alert('success', 'تمت الاضافة', [
@@ -34,6 +33,7 @@ class Add extends Component
             'timer' => 3000,
             'toast' => true,
         ]);
+        
         $case = new Event();
         $case->add($data);
         $case->add_file($this->file_path, 2); // 2: file_path

@@ -11,11 +11,12 @@ use App\Http\Livewire\Pages\{
     Profile\Main as Profile,
     Donate\Main as Donate,
     Donors\Main as Donors,
-    
+
 };
 
 use App\Http\Livewire\Pages\Cases\{
     Admin\Add as CaseAdd,
+    Admin\Edit as CaseEdit,
 };
 
 
@@ -43,6 +44,9 @@ Route::get('/cases', CaseMain::class)->name('cases');
 Route::middleware(['auth:sanctum'])->group(function () {
     Route::middleware(['admin'])->group(function (){
         Route::get('/add-case', CaseAdd::class)->name('add-case');
+        Route::get('/edit-case/{case_id}', CaseEdit::class)->name('edit-case');
+        
+
     });
     //Profile
 
