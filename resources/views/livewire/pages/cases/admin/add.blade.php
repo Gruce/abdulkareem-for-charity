@@ -1,6 +1,6 @@
 <!-- Add Case -->
 <form wire:submit.prevent="add">
-<div class="flex h-auto items-center justify-center">
+    <div class="flex h-auto items-center justify-center">
 
 
         <div class="grid rounded-lg w-full">
@@ -15,7 +15,7 @@
                     <h1 class="text-gray-800 font-bold md:text-2xl text-xl">إضافة الحالات</h1>
                 </div>
             </div>
-            
+
             {{-- Case Name --}}
             <div class="grid grid-cols-1 mt-5 mx-7">
                 <label class="md:text-sm text-xs text-gray-700 text-light font-semibold">عنوان الحالة</label>
@@ -97,5 +97,5 @@
             </div>
 
         </div>
-</div>
+    </div>
 </form>
