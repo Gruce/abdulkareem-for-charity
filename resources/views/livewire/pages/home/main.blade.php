@@ -6,7 +6,7 @@
             <!-- Text -->
             <div class="col-span-5 pr-24 pt-20  ">
                 <h1 class="text-secondary-900 text-6xl font-bold ">
-                    تبرع بسهولة
+                    صندوق الكريم
                 </h1>
                 <p class="text-secondary-200 text-2xl mt-6">
                     مبادرة ونشاط طلابي بحت ينطلق من طلبة كلية علوم
