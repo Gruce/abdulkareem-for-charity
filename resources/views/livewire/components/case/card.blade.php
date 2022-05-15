@@ -9,12 +9,21 @@
             class=" w-full rounded-lg ">
     </div>
 
+<<<<<<< Updated upstream
     {{-- title + more info --}}
     <div class="p-6">
         <h5 class="text-center font-bold group-hover:text-green-600 text-3xl mb-2"> {{ $item->title }}</h5>
         <div class=" xs:28">
             <p class="text-gray-900 text-medium mb-4">
                 {{ Str::limit($item->description, 140) }}
+=======
+        {{-- title + more info --}}
+        <div class="p-6">
+            <h5 class="text-center font-bold group-hover:text-green-600 text-3xl mb-2"> {{ $item->title }}</h5>
+            <div class=" xs:28">
+                <p class="text-gray-900 text-medium mb-4">
+                    {{ $item->getLimit('description') }}
+>>>>>>> Stashed changes
 
                 {{-- more info button --}}
                 <button class="text-primary-500 hover:scale-110 font-bold duration-300 mb-4" type="button"
@@ -69,12 +78,37 @@
 
         </div>
     </div>
+<<<<<<< Updated upstream
 </div>
 @empty
 <div class="text-2xl font-medium text-gray-700">
     لايوجد حالات
 </div>
 @endforelse
+=======
+    @empty
+    <div class="text-2xl font-medium text-gray-700">
+        لايوجد حالات
+    </div>
+    @endforelse
+
+    <div wire:ignore.self id="case-modal" tabindex="-1" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full">
+        <div class="relative p-4 w-full max-w-4xl h-full md:h-auto">
+            <!-- Modal content -->
+            <div class="relative bg-white rounded-lg">
+                <!-- Modal header -->
+                <div class="flex justify-between items-center p-5 rounded-t border-b">
+                    <h3 class="text-xl font-medium text-gray-900 dark:text-white">
+                        Large modal
+                    </h3>
+                    <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-red-600 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center" data-modal-toggle="case-modal">
+                        <i class="fa-solid fa-xmark text-2xl"></i>
+                    </button>
+                </div>
+                <!-- Modal body -->
+                @livewire('pages.cases.admin.edit' , ['case_id' => $case_id], key($case_id))
+                <!-- Modal footer -->
+>>>>>>> Stashed changes
 
 <div wire:ignore.self id="case-modal" tabindex="-1"
     class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full">
