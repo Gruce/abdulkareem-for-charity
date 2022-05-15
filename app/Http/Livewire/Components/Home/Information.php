@@ -3,16 +3,19 @@
 namespace App\Http\Livewire\Components\Home;
 
 use Livewire\Component;
-
+use App\Models\User;
 class Information extends Component
 {
     public $state = null;
     public function render()
     {
+
+        
+
         $menu = new Menu([
             [
                 'info' => 'متبرعين',
-                'value' => '124',
+                'value' => '$this->user',
                  
             ],
             [

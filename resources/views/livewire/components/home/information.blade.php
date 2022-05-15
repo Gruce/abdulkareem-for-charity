@@ -18,7 +18,7 @@
     @forelse ($menu->items as $item)
         <div class="flex flex-col p-2 text-center mx-20">
             <span class="text-5xl font-bold font-noto">
-                {{ $item->value }}
+                {{ $item->value }}+
             </span>
 
             <span class="text-xl">
