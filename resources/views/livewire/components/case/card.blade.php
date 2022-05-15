@@ -75,9 +75,7 @@
                     </div>
                 </div>
                 <hr class="mb-5">
-                <div class="flex justify-center @admin
-justify-between
-@endadmin">
+                <div class="flex justify-center @admin justify-between @endadmin">
                     <div class="font-bold font-noto text-xl group-hover:text-green-600 text-center ">
                         الهدف : {{ $item->target }} د.ع
 
