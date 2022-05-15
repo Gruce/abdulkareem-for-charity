@@ -18,10 +18,8 @@ class Information extends Component
     {
             $users = User::all()->count();
             $share = Share::all()->sum('share');
-            $event = Event::all()->count();
-            // if($this->received_price == $this->target){
-               
-            // }
+            $event = Event::where('received_price',''=='','target')->count();
+            
         
         $menu = new Menu([
             [
@@ -32,7 +30,7 @@ class Information extends Component
             [
                 'info' => 'حالات معالجة',
                 'value' =>$event,
-                ''
+                
             ],
             [
                 'info' => 'اسهم',
