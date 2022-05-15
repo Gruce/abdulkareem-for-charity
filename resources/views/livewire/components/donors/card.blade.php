@@ -21,7 +21,7 @@
                                     <i
                                         class="text-red-600 fa-solid fa-trash text-md duration-200 group-hover:scale-125 hover:text-red-600"></i>
                                     حذف
-                                </a>
+                            </a>
 
                             </li>
 
