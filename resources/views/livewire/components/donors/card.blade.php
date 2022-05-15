@@ -69,7 +69,7 @@
                                     <div
                                         class="px-5 py-2 text-3xl font-bold text-gray-600 bg-gray-200 rounded-lg flex justify-between">
                                         <div>
-                                            <h3 class="text-xl mr-2 ">تبرع :
+                                            <h3 class="text-xl mr-2">تبرع :
                                                 <span>{{ $share->share }}</span>
                                             </h3>
                                         </div>
