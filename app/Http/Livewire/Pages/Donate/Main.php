@@ -4,6 +4,7 @@ namespace App\Http\Livewire\Pages\Donate;
 
 use Livewire\Component;
 use App\Models\Share;
+use Jantinnerezo\LivewireAlert\LivewireAlert;
 
 class Main extends Component{
 
