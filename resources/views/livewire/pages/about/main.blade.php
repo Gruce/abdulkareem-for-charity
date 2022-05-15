@@ -4,7 +4,8 @@
 
             <h1 class="text-3xl md:text-5xl font-Alhurra text-center font-bold text-primary-600"> صندوق الأستاذ عبدالكريم
             </h1>
-            <p class="mt-10 text-xl text-gray-700 font-Alhurrareg px-1 md:px-9">"صـندوق الأستاذ عبد الكريم الخيري" هو مبادرة ونشاط طلابي
+            <p class="mt-10 text-xl text-gray-700 font-Alhurrareg px-1 md:px-9">"صـندوق الأستاذ عبد الكريم الخيري" هو
+                مبادرة ونشاط طلابي
                 بحت ينطلق من
                 طلبة كلية علوم الحاسوب وتكنلوجيا المعلومات. <br>
 
@@ -19,14 +20,14 @@
                 2- أمانة الصندوق <br>
                 3- الاعمال التي تُصرف فيها مبالغ الصندوق<br>
             </p>
-           
+
             {{-- Carators/Programmers --}}
             <div class="grid grid-cols-3 gap-5 p-7 ">
-                
+
                 <article class="w-64 p-4 bg-gradient-to-r from-cyan-600 via-cyan-700 to-cyan-900 rounded-xl ">
                     <div class="flex justify-between items-center ">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgOpAl-zUOnAKg8BQvuTaNWSmFGdklvUv8ng&usqp=CAU" alt="صوره بروف"
-                            class="w-16 h-16 rounded-full" />
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgOpAl-zUOnAKg8BQvuTaNWSmFGdklvUv8ng&usqp=CAU"
+                            alt="صوره بروف" class="w-16 h-16 rounded-full" />
 
                         <div class="ml-3">
                             <h5 class="text-xl m-3 font-medium text-white   ">حسن الخالدي</h5>
@@ -85,7 +86,7 @@
                         </div>
                     </div>
                 </article>
-               
+
             </div>
         </div>
         <div class="md:col-span-4 sm:grid-rows-2 order-first md:order-last ">
