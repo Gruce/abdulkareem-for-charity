@@ -55,7 +55,7 @@ class Information extends Component
             ],
             [
                 'info' => 'المرضى',
-                'value' => 'seedling',
+                'value' => 'head-side-mask',
                 
             ],
             
