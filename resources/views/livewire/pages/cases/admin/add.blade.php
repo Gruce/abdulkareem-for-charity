@@ -53,7 +53,7 @@
             </div>
 
             {{-- Case Image --}}
-            <div class="flex flex-row w-full">
+            {{-- <div class="flex flex-row w-full">
                 <div class="w-1/2 mt-5 mx-7">
                     <label class=" md:text-sm text-xs text-gray-700 text-light font-semibold mb-1">ارفاق صورة
                         الحالة</label>
@@ -72,7 +72,7 @@
                 {{-- <div wire:loading>
                     <x-ui.loading />
                 </div> --}}
-                {{-- Case Personal info image --}}
+            {{-- Case Personal info image --
                 <div class="w-1/2 mt-5 mx-7">
                     <label class="md:text-sm text-xs text-gray-700 text-light font-semibold mb-1">صورة
                         المستمسكات</label>
@@ -89,13 +89,73 @@
                         </label>
                     </div>
                 </div>
-            </div>
-            {{-- Button --}}
-            <div class="flex items-center justify-center  md:gap-8 gap-4 pt-7 pb-7">
-                <button type="submit"
-                    class="w-auto bg-primary-400 hover:bg-primary-500 rounded-lg shadow-md hover:shadow-xl hover:scale-105 font-medium text-white px-4 py-2">أضف</button>
-            </div>
+            </div> --}}
 
+
+            <div class="basis-1/2 w-2/2">
+                <div class="grid grid-cols-2 gap-4 mt-6">
+                    <div class="flex w-full items-center justify-center bg-grey-lighter">
+                        <label
+                            class="w-full flex flex-col items-center px-2 py-6  @if ($image_path) bg-primary-700 text-white @else bg-white text-primary-700 @endif rounded-lg tracking-wide border border-primary-700 cursor-pointer hover:bg-primary-700 hover:text-white">
+                            <div wire:loading wire:target="image_path">
+                                {{-- <x-ui.loading /> --}}
+                            </div>
+                            <div wire:loading.remove wire:target="image_path">
+                                @if ($image_path)
+                                    <i class="fa-solid fa-check text-2xl"></i>
+                                @else
+                                    <i class="fa-solid fa-upload text-2xl"></i>
+                                @endif
+                            </div>
+                            <span class="mt-2 text-base leading-normal">
+                                @if ($image_path)
+                                    تم اختيار الصورة
+                                @else
+                                    إختر صورة
+                                @endif
+                            </span>
+                            <input wire:model.lazy="image_path" type="file" class="hidden" />
+                        </label>
+                        @error('image_path')
+                            <span class="error text-primary-600 bg-primary-100 rounded-lg py-1 px-2 text-xs">لم يتم تحميل الصورة</span>
+                        @enderror
+                    </div>
+
+
+                    <div class="flex w-full items-center justify-center bg-grey-lighter">
+                        <label
+                            class="w-full flex flex-col items-center px-2 py-6  @if ($file_path) bg-primary-700 text-white @else bg-white text-primary-700 @endif rounded-lg tracking-wide border border-primary-700 cursor-pointer hover:bg-primary-700 hover:text-white">
+                            <div wire:loading wire:target="image_path">
+                                {{-- <x-ui.loading /> --}}
+                            </div>
+                            <div wire:loading.remove wire:target="file_path">
+                                @if ($file_path)
+                                    <i class="fa-solid fa-check text-2xl"></i>
+                                @else
+                                    <i class="fa-solid fa-upload text-2xl"></i>
+                                @endif
+                            </div>
+                            <span class="mt-2 text-base leading-normal">
+                                @if ($file_path)
+                                    تم اختيار الملف
+                                @else
+                                    إختر ملف
+                                @endif
+                            </span>
+                            <input id="file" required type='file' class="hidden" wire:model="file_path" multiple />
+                        </label>
+                        @error('file_path')
+                            <span class="error text-primary-600 bg-primary-100 rounded-lg py-1 px-2 text-xs"></span>
+                        @enderror
+                    </div>
+                </div>
+
+                {{-- Button --}}
+                <div class="flex items-center justify-center  md:gap-8 gap-4 pt-7 pb-7">
+                    <button type="submit"
+                        class="w-auto bg-primary-400 hover:bg-primary-500 rounded-lg shadow-md hover:shadow-xl hover:scale-105 font-medium text-white px-4 py-2">أضف</button>
+                </div>
+
+            </div>
         </div>
-    </div>
 </form>
