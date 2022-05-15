@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css2?family=Reem+Kufi&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@500&display=swap);
 
 /*
 ! tailwindcss v3.0.24 | MIT License | https://tailwindcss.com
@@ -903,9 +904,6 @@ select{
 .-right-full{
   right: -100%;
 }
-.bottom-0{
-  bottom: 0px;
-}
 .z-0{
   z-index: 0;
 }
@@ -947,15 +945,6 @@ select{
 }
 .col-end-7{
   grid-column-end: 7;
-}
-.row-span-3{
-  grid-row: span 3 / span 3;
-}
-.row-span-1{
-  grid-row: span 1 / span 1;
-}
-.row-span-4{
-  grid-row: span 4 / span 4;
 }
 .m-3{
   margin: 0.75rem;
@@ -1117,6 +1106,9 @@ select{
 .mt-14{
   margin-top: 3.5rem;
 }
+.mr-1{
+  margin-right: 0.25rem;
+}
 .mr-14{
   margin-right: 3.5rem;
 }
@@ -1185,12 +1177,6 @@ select{
 }
 .h-64{
   height: 16rem;
-}
-.h-\[36rem\]{
-  height: 36rem;
-}
-.h-\[34rem\]{
-  height: 34rem;
 }
 .min-h-screen{
   min-height: 100vh;
@@ -1263,9 +1249,6 @@ select{
 }
 .w-64{
   width: 16rem;
-}
-.w-\[40rem\]{
-  width: 40rem;
 }
 .min-w-0{
   min-width: 0px;
@@ -1397,9 +1380,6 @@ select{
 .grid-cols-3{
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
-.grid-rows-8{
-  grid-template-rows: repeat(8, minmax(0, 1fr));
-}
 .flex-row{
   flex-direction: row;
 }
@@ -1441,9 +1421,6 @@ select{
 }
 .gap-5{
   gap: 1.25rem;
-}
-.gap-80{
-  gap: 20rem;
 }
 .gap-8{
   gap: 2rem;
@@ -1545,10 +1522,6 @@ select{
 .rounded-t-lg{
   border-top-left-radius: 0.5rem;
   border-top-right-radius: 0.5rem;
-}
-.rounded-l-full{
-  border-top-left-radius: 9999px;
-  border-bottom-left-radius: 9999px;
 }
 .rounded-bl-lg{
   border-bottom-left-radius: 0.5rem;
@@ -1718,22 +1691,6 @@ select{
   --tw-bg-opacity: 1;
   background-color: rgb(78 198 142 / var(--tw-bg-opacity));
 }
-.bg-\[\#93A893\]{
-  --tw-bg-opacity: 1;
-  background-color: rgb(147 168 147 / var(--tw-bg-opacity));
-}
-.bg-\[\#f2f2f2\]{
-  --tw-bg-opacity: 1;
-  background-color: rgb(242 242 242 / var(--tw-bg-opacity));
-}
-.bg-\[\#548C62\]{
-  --tw-bg-opacity: 1;
-  background-color: rgb(84 140 98 / var(--tw-bg-opacity));
-}
-.bg-black{
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
-}
 .bg-opacity-25{
   --tw-bg-opacity: 0.25;
 }
@@ -1822,9 +1779,6 @@ select{
 }
 .p-7{
   padding: 1.75rem;
-}
-.p-16{
-  padding: 4rem;
 }
 .p-9{
   padding: 2.25rem;
@@ -1967,9 +1921,6 @@ select{
 .pr-20{
   padding-right: 5rem;
 }
-.pr-3{
-  padding-right: 0.75rem;
-}
 .pb-10{
   padding-bottom: 2.5rem;
 }
@@ -1988,11 +1939,8 @@ select{
 .font-mono{
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
-.font-Alhurra{
-  font-family: Alhurra, sans-serif;
-}
-.font-IBM{
-  font-family: IBM Plex Sans Arabic, sans-serif;
+.font-NotoKufi{
+  font-family: Noto Kufi Arabic , sans-serif;
 }
 .font-noto{
   font-family: Noto Sans Arabic, sans-serif;
@@ -2040,10 +1988,6 @@ select{
   font-size: 4.5rem;
   line-height: 1;
 }
-.text-9xl{
-  font-size: 8rem;
-  line-height: 1;
-}
 .font-medium{
   font-weight: 500;
 }
@@ -2082,9 +2026,6 @@ select{
 }
 .leading-none{
   line-height: 1;
-}
-.leading-9{
-  line-height: 2.25rem;
 }
 .tracking-widest{
   letter-spacing: 0.1em;
@@ -2205,14 +2146,6 @@ select{
 .text-primary-600{
   --tw-text-opacity: 1;
   color: rgb(60 186 127 / var(--tw-text-opacity));
-}
-.text-\[\#f2f2f2\]{
-  --tw-text-opacity: 1;
-  color: rgb(242 242 242 / var(--tw-text-opacity));
-}
-.text-\[\#F2f2f2\]{
-  --tw-text-opacity: 1;
-  color: rgb(242 242 242 / var(--tw-text-opacity));
 }
 .underline{
   -webkit-text-decoration-line: underline;
@@ -2424,10 +2357,6 @@ select{
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
-.hover\:bg-primary-600:hover{
-  --tw-bg-opacity: 1;
-  background-color: rgb(60 186 127 / var(--tw-bg-opacity));
-}
 .hover\:bg-gradient-to-r:hover{
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
 }
@@ -2563,10 +2492,6 @@ select{
 .focus\:text-gray-500:focus{
   --tw-text-opacity: 1;
   color: rgb(107 114 128 / var(--tw-text-opacity));
-}
-.focus\:text-white:focus{
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 .focus\:outline-none:focus{
   outline: 2px solid transparent;
