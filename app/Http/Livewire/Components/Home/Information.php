@@ -34,9 +34,9 @@ class Information extends Component
         ]);
         $activities = new Menu([
             [
-                'info' => 'الطلاب',
-                'value' => 'graduation-cap',
-                 
+                'info' => 'المرضى',
+                'value' => 'seedling',
+                
             ],
             [
                 'info' => 'الايتام',
@@ -49,15 +49,16 @@ class Information extends Component
                 
             ],
             [
+                'info' => 'الطلاب',
+                'value' => 'graduation-cap',
+                 
+            ],
+            [
                 'info' => 'البيئة',
                 'value' => 'seedling',
                 
             ],
-            [
-                'info' => 'المرضى',
-                'value' => 'seedling',
-                
-            ],
+
             
         ]);
         return view('livewire.components.home.information' ,[
