@@ -1,9 +1,9 @@
 <div>
     <div class="w-full mt-4 rounded my-24 overflow-hidden">
         <div class="top h-64 w-full overflow-hidden relative">
-            <img src="https://images.unsplash.com/photo-1503264116251-35a269479413?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
-                alt="" class="bg w-full h-full object-cover object-center absolute z-0">
-            <div class="flex flex-col justify-center items-center relative h-full bg-black bg-opacity-50 text-white">
+            {{-- <img src="https://images.unsplash.com/photo-1503264116251-35a269479413?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
+                alt="" class="bg w-full h-full object-cover object-center absolute z-0"> --}}
+            <div class="flex flex-col justify-center items-center relative h-full bg-primary-300 bg-opacity-50 text-white">
                 <img src="{{ asset($user->profile_photo_path ?? 'img/user.png') }}"
                     class="h-32 w-32 object-cover rounded-full">
                 <h1 class="text-2xl font-semibold">{{ $user->name }}</h1>
@@ -26,11 +26,7 @@
                         class="text-sm p-2 text-center rounded font-bold w-40  hover:scale-105 duration-200 focus:ring-2 focus:ring-primary-700 bg-primary-300 hover:bg-primary-500 focus:bg-primary-600  hover:text-white focus:text-white">معلومات
                         الطالب</button>
                 @endif
-
-
             </div>
-
-
 
             <div x-show="isOpen"
                 class=" md:border-solid md:border-l md:border-black md:border-opacity-25 h-full pb-12 md:col-span-10">
@@ -42,10 +38,6 @@
                 class=" md:border-solid md:border-l md:border-black md:border-opacity-25 h-full pb-12 md:col-span-10">
                 @livewire('pages.profile.student-info', ['user' => $user])
             </div>
-
-
-
-
         </div>
     </div>
 </div>

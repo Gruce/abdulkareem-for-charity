@@ -10,11 +10,7 @@
                     {{ $item->info }}
                 </span>
             </div>
-
-
         </div>
-
-
     @empty
     @endforelse
 @else
@@ -29,8 +25,6 @@
                 {{ $item->info }}
             </span>
         </div>
-
-
     @empty
     @endforelse
 
