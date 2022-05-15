@@ -13,7 +13,7 @@ class Information extends Component
     {
             $users = User::all()->count();
             $share = Share::all()->sum('share');
-            $event = Event::where('received_price',''=='','target')->count();
+            $event = Event::whereColumn('received_price','target')->count();
             
         
         $menu = new Menu([
