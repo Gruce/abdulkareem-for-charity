@@ -1106,6 +1106,9 @@ select{
 .mr-14{
   margin-right: 3.5rem;
 }
+.mr-1{
+  margin-right: 0.25rem;
+}
 .block{
   display: block;
 }

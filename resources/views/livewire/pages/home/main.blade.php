@@ -36,18 +36,17 @@
         <div class="flex basis-2/12 justify-center mt-14">@livewire('components.home.information')</div>
 
         {{--Cases--}}
-        <div class="flex basis-4/12 pr-24 pt-16">
+        <div class=" basis-4/12 pr-24 pt-16">
             <span class="text-secondary-900 text-6xl font-bold ">
                 اخر الحالات
             </span>
             <div class="my-20 flex gap-6">
                 @livewire('components.case.card')
             </div>
-
         </div>
 
         {{--Work for--}}
-        <div class="flex basis-2/12  pr-20 pt-16">
+        <div class="y basis-2/12  pr-20 pt-16">
             <span class="text-secondary-900 text-6xl font-bold ">
                 نحن نعمل لأجل
             </span>
