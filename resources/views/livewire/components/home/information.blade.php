@@ -1,24 +1,43 @@
-<div>
-    <div class="grid grid-cols-3 p-10 ">
-        @forelse ($menu->items as $item)
-        <div class="flex justify-center">
-            <div class="flex flex-col p-2 text-center">
-                <span class="text-white text-3xl">
-                    {{ $item->value }}
-                </span>
+@if($state)
 
-                <span class="text-white text-lg">
-                    {{ $item->info }}
-                </span>
-            </div>
-            <div class="">
-                <i class="{{ $item->icon }} text-white text-7xl ml-4"></i>
-            </div>
+{{-- activites --}}
+@forelse ($activities->items as $item)
 
+<div class="p-4 bg-white rounded-lg border border-gray-200 shadow-md m-5">
+    <div class="flex flex-col p-2 text-center mx-10">
+        <i class="fa-solid fa-{{ $item->value }} text-7xl text-primary-500"></i>
 
-        </div>
-        @empty
-        
-        @endforelse
+        <span class="text-2xl font-bold mt-2">
+            {{ $item->info }}
+        </span>
     </div>
+
+
 </div>
+
+
+@empty
+
+@endforelse
+
+
+@else
+{{-- info --}}
+@forelse ($menu->items as $item)
+
+<div class="flex flex-col p-2 text-center mx-20">
+    <span class="text-5xl font-bold font-noto">
+        {{ $item->value }}
+    </span>
+
+    <span class="text-xl">
+        {{ $item->info }}
+    </span>
+</div>
+
+
+@empty
+
+@endforelse
+
+@endif
