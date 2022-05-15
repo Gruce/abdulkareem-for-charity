@@ -1106,6 +1106,12 @@ select{
 .mr-14{
   margin-right: 3.5rem;
 }
+.mt-11{
+  margin-top: 2.75rem;
+}
+.mr-1{
+  margin-right: 0.25rem;
+}
 .block{
   display: block;
 }
@@ -1924,6 +1930,9 @@ select{
 }
 .pb-10{
   padding-bottom: 2.5rem;
+}
+.pr-16{
+  padding-right: 4rem;
 }
 .text-left{
   text-align: left;

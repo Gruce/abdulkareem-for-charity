@@ -53,6 +53,11 @@ class Information extends Component
                 'value' => 'seedling',
                 
             ],
+            [
+                'info' => 'المرضى',
+                'value' => 'seedling',
+                
+            ],
             
         ]);
         return view('livewire.components.home.information' ,[
