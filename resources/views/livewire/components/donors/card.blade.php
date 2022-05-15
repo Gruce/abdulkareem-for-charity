@@ -1,9 +1,9 @@
 <div>
 
-    <div x-data="{ isOpen: false }" class="grid grid-cols-4 gap-6">
+    <div x-data="{ isOpen: false }" class="grid grid-cols-4 gap-6 group">
         @forelse ($users as $item)
             <div
-                class="shadow-sm shadow-gray-300 hover:shadow-gray-400 hover:shadow-md p-4 w-full rounded-xl bg-gray-50 hover:bg-gray-100 transition duration-200">
+                class="rounded-xl border-2 border-primary-100 hover:shadow-lg hover:border-primary-500 duration-300 p-4 w-full">
                 @admin
                     <div class="flex justify-end">
 
@@ -93,7 +93,7 @@
                 <div class="flex justify-between">
                     <p class="text-sm font-normal text-gray-500">انضم {{ $item->created_at->diffForHumans() }}</p>
                     <button wire:click="confirm({{ $item->id }})" class="mx-2">
-                        <i class="text-red-400 fa-solid fa-trash text-xl hover:text-red-600"></i>
+                        <i class="text-red-400 fa-solid fa-trash text-xl hover:scale-110 duration-200 hover:text-red-600"></i>
 
                     </button>
                 </div>
