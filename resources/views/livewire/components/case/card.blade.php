@@ -1,36 +1,6 @@
 @forelse ($events as $item)
     <div
         class="rounded-xl border-2 border-primary-100 hover:shadow-lg hover:border-primary-500 w-96 h-auto group duration-300">
-        {{-- @admin
-    start dropdown --}}
-        {{-- <div class="flex justify-end relative">
-
-        <button id="dropdownButton-{{ $item->id }}" data-dropdown-toggle="dropdown-{{ $item->id }}"
-            class="absolute text-gray-800 focus:outline-none hover:bg-gray-300 text-xl rounded-md px-2.5 py-2.5"
-            type="button">
-            <i class="fa-solid fa-ellipsis-vertical "></i>
-        </button>
-        <!-- Dropdown menu -->
-        <div id="dropdown-{{ $item->id }}" class="hidden z-10 rounded divide-y divide-gray-100 shadow bg-gray-50">
-            <ul class="text-base" aria-labelledby="dropdownButton-{{ $item->id }}">
-                <div class="group p-2">
-                    <a href={{ route('edit-case', ['case_id'=> $item->id]) }} class=" w-full hover:bg-gray-200">
-                        <i
-                            class="text-green-400 fa-solid fa-pen-to-square text-xl hover:scale-110 hover:text-green-600 hover:rotate-12"></i>
-                        تعديل
-                    </a>
-                    <button wire:click="confirm({{ $item->id }})" class=" w-full hover:bg-gray-200">
-                        <i class="text-red-400 fa-solid fa-trash text-xl hover:scale-110 hover:text-red-600"></i>
-                        حذف
-                    </button>
-                </div>
-
-            </ul>
-        </div>
-    </div>
-    @endadmin --}}
-        {{-- end dropdown --}}
-
         {{-- case Image --}}
         <div class="pt-3 px-3">
             {{-- <img class="rounded-t-lg" src="{{ asset($item->image_path) }}" alt="" /> --}}
@@ -40,13 +10,13 @@
 
         {{-- title + more info --}}
         <div class="p-6">
-            <h5 class="text-center font-bold group-hover:text-green-600 text-3xl mb-2"> {{ $item->title }}</h5>
+            <h5 class="text-center font-bold group-hover:text-primary-500 text-3xl mb-2"> {{ $item->title }}</h5>
             <div class=" xs:28">
                 <p class="text-gray-900 text-medium mb-4">
                     {{ Str::limit($item->description, 140) }}
 
                     {{-- more info button --}}
-                    <button class="text-primary-500 hover:scale-110 font-bold duration-300 mb-4" type="button"
+                    <button class="text-primary-500 hover:text-primary-700 hover:scale-110 font-bold duration-300 mb-4" type="button"
                         data-modal-toggle="defaultModal">
                         قراءة المزيد
                     </button>
@@ -76,7 +46,7 @@
                 </div>
                 <hr class="mb-5">
                 <div class="flex justify-center @admin justify-between @endadmin">
-                    <div class="font-bold font-noto text-xl group-hover:text-green-600 text-center ">
+                    <div class="font-bold font-noto text-xl group-hover:text-primary-500 text-center ">
                         الهدف : {{ $item->target }} د.ع
 
 
