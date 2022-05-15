@@ -10,9 +10,8 @@ use App\Models\Share;
 class Card extends Component
 {
     use LivewireAlert;
-    public $name, $type, $shares, $share, $photo, $date, $email, $phone_number;
     
-    public $search,$user_type;
+    public $search, $user_type;
 
     public $share_id;
 
@@ -35,18 +34,18 @@ class Card extends Component
         $this->emitSelf('$refresh');
     }
 
-    // public function confirm($id){
-    //     $this->share_id = $id;
-    //     $this->alert('warning', 'هل انت متأكد من حذف الحالة؟', [
-    //         'position' => 'center',
-    //         'timer' => 3000,
-    //         'toast' => true,
-    //         'showConfirmButton' => true,
-    //         'onConfirmed' => 'delete',
-    //         'showCancelButton' => true,
-    //         'onDismissed' => '',
-    //     ]);
-    // }
+    public function confirm($id){
+        $this->share_id = $id;
+        $this->alert('warning', 'هل انت متأكد من حذف الحالة؟', [
+            'position' => 'center',
+            'timer' => 3000,
+            'toast' => true,
+            'showConfirmButton' => true,
+            'onConfirmed' => 'delete',
+            'showCancelButton' => true,
+            'onDismissed' => '',
+        ]);
+    }
 
     public function add($id){
 
