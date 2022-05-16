@@ -8,20 +8,20 @@ use App\Models\Event;
 class Main extends Component
 {
 
-     public $search;
+    public $search;
 
-    // protected $listeners = ['delete', '$refresh', 'search'];
+    protected $listeners = [ '$refresh', 'search'];
 
-    // function search($string)
-    // {
-    //     $this->search = $string;
-    // }
+    function search($string)
+    {
+        $this->search = $string;
+    }
 
     public function render()
     {
         $search = '%' . $this->search . '%';
-        $this->events = Event::where('title', 'LIKE', $search)->orderByDesc('id')->get();
-        //dd($this->events->toArray());
-        return view('livewire.pages.cases.main');
+        $events = Event::where('title', 'LIKE', $search)->orderByDesc('id')->get();
+        // dd($events->toArray());
+        return view('livewire.pages.cases.main', compact('events'));
     }
 }

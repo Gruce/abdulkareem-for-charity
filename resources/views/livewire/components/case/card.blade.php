@@ -53,17 +53,6 @@
 
                     </div>
                     <div class="text-right mt-2">
-                        {{-- @admin
-
-                        <button wire:click="remove({{ $ID }})" class="mx-2">
-                            <i
-                                class="text-red-400 fa-solid fa-trash text-xl hover:scale-110 duration-200 hover:text-red-600"></i>
-                        </button>
-                        <button wire:click="$set('case_id', {{ $ID }})" class="mx-2" type="button"
-                            data-modal-toggle="case-modal">
-                            <i class="text-primary-400 fa-solid fa-pen-to-square text-xl hover:text-primary-600"></i>
-                        </button>
-                        @endadmin --}}
                         @admin
                         <div x-data="{ open: false }">
                             <button wire:click="confirm({{ $event->id }})" class="mx-2">
@@ -114,7 +103,7 @@
                     </button>
                 </div>
                 <!-- Modal body -->
-                @livewire('pages.cases.admin.edit', ['case_id' => $case_id], key($case_id))
+                @livewire('pages.cases.admin.edit', ['case_id' => $event->id], key($event_id))
             </div>
         </div>
     </div>
