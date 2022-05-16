@@ -3,33 +3,26 @@
 namespace App\Http\Livewire\Components\Home;
 
 use Livewire\Component;
-use App\Models\User;
-use App\Models\Share;
-use App\Models\Event;
+
 class Information extends Component
-{   public $state = null;
-    
+{
+    public $state = null;
     public function render()
     {
-            $users = User::all()->count();
-            $share = Share::all()->sum('share');
-            $event = Event::whereColumn('received_price','target')->count();
-            
-        
         $menu = new Menu([
             [
                 'info' => 'متبرعين',
-                'value' => $users,
+                'value' => '124',
                  
             ],
             [
                 'info' => 'حالات معالجة',
-                'value' =>$event,
+                'value' => '15',
                 
             ],
             [
                 'info' => 'اسهم',
-                'value' =>  $share,
+                'value' => '1000',
                 
             ],
             [

@@ -50,7 +50,7 @@
                 </div>
             </div>
             <button type="submit"
-                class="text-white bg-primary-300 hover:scale-105 duration-200 hover:bg-primary-500 focus:ring-2 focus:outline-none focus:ring-primary-600 font-medium rounded-lg text-sm w-40 px-5 py-2.5 text-center">
+                class="text-white bg-primary-600 hover:scale-105 duration-200 hover:bg-primary-800 focus:ring-2 focus:outline-none focus:ring-primary-600 font-medium rounded-lg text-sm w-40 px-5 py-2.5 text-center">
                 أرسل</button>
         </form>
     </div>
