@@ -2,7 +2,8 @@
     <div class="h-screen grid md:grid-cols-10 sm:grid-cols-1 sm:grid-rows-6">
         <div class="sm:col-span-6 sm:grid-rows-4 mt-10 md:mt-0">
 
-            <h1 class="text-3xl md:text-5xl font-Alhurra text-center font-bold text-primary-600"> صندوق الأستاذ عبدالكريم
+            <h1 class="text-3xl md:text-5xl font-Alhurra text-center font-bold text-primary-600"> صندوق الأستاذ
+                عبدالكريم
             </h1>
             <p class="mt-10 text-xl text-gray-700 font-Alhurrareg px-1 md:px-9">"صـندوق الأستاذ عبد الكريم الخيري" هو
                 مبادرة ونشاط طلابي
@@ -21,9 +22,9 @@
                 3- الاعمال التي تُصرف فيها مبالغ الصندوق<br>
             </p>
 
-            
+
         </div>
-        
+
 
     </div>
 </div>
