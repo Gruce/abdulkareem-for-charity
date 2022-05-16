@@ -3,40 +3,49 @@
 namespace App\Http\Livewire\Components\Home;
 
 use Livewire\Component;
-
+use App\Models\User;
+use App\Models\Share;
+use App\Models\Event;
 class Information extends Component
-{
-    public $state = null;
+{   public $state = null;
+    
     public function render()
     {
+            $users = User::all()->count();
+            $share = Share::all()->sum('share');
+            $event = Event::whereColumn('received_price','target')->count();
+            $even = Event::sum('received_price');
+            
+            
+        
         $menu = new Menu([
             [
                 'info' => 'متبرعين',
-                'value' => '124',
+                'value' => $users,
                  
             ],
             [
                 'info' => 'حالات معالجة',
-                'value' => '15',
+                'value' =>$event,
                 
             ],
             [
                 'info' => 'اسهم',
-                'value' => '1000',
+                'value' =>  $share,
                 
             ],
             [
                 'info' => 'مصروفات',
-                'value' => '1235000',
+                'value' => $even,
                 
             ],
             
         ]);
         $activities = new Menu([
             [
-                'info' => 'المرضى',
-                'value' => 'seedling',
-                
+                'info' => 'الطلاب',
+                'value' => 'graduation-cap',
+                 
             ],
             [
                 'info' => 'الايتام',
@@ -49,16 +58,15 @@ class Information extends Component
                 
             ],
             [
-                'info' => 'الطلاب',
-                'value' => 'graduation-cap',
-                 
+                'info' => 'البيئة',
+                'value' => 'seedling',
+                
             ],
             [
                 'info' => 'المرضى',
-                'value' => 'head-side-mask',
+                'value' => 'seedling',
                 
             ],
-
             
         ]);
         return view('livewire.components.home.information' ,[
