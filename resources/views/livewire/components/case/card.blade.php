@@ -44,16 +44,18 @@
                 </div>
                 <hr class="mb-5">
                 <div class="flex justify-center @admin
-                    justify-between
-                    @endadmin">
-                    <div class="font-bold font-noto text-xl group-hover:text-primary-500 text-center">
+                        justify-between
+                        @endadmin">
+                    <div class="font-bold font-noto text-xl pl-1 group-hover:text-primary-500 text-center">
                         الهدف : {{ $event->target }} د.ع
 
                     </div>
-                    <div class="font-bold font-noto text-xl group-hover:text-primary-500 text-center">
-                        المتبقي : {{ $event->received() }} د.ع
+                    @admin
+                        <div class="font-bold font-noto text-xl group-hover:text-primary-500 text-center">
+                            المتبقي : {{ $event->received() }} د.ع
 
-                    </div>
+                        </div>
+                    @endadmin
                     <div class="text-right mt-2">
                         @admin
                             <div x-data="{ open: false }">

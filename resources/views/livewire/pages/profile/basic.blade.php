@@ -39,7 +39,7 @@
                 <label class="text-xl ">اختر صورة الملف الشخصي</label>
                 <div class="flex items-center justify-center w-full">
                     <label
-                        class="flex flex-col border-4 border-dashed border-primary-400 w-full h-32 hover:bg-gray-100 group-hover:border-primary-500 rounded-md">
+                        class="flex flex-col border-4 border-dashed border-primary-100 w-full h-32 hover:bg-gray-100 group-hover:border-primary-500 rounded-md">
                         <div class="flex flex-col items-center justify-center pt-7">
                             <i class="fa-solid fa-image w-10 h-10 text-gray-400 group-hover:text-primary-500"></i>
                             <p class="text-sm text-gray-400 group-hover:text-gray-600 pt-1 tracking-wide">
