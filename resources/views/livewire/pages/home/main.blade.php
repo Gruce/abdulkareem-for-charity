@@ -51,8 +51,6 @@
                 نحن نعمل لأجل
             </span>
             <div class="my-20 flex gap-6 justify-center">
-                {{-- <blade
-                    livewire|(%26%2339%3Bcomponents.home.information%26%2339%3B%2C%5B%26%2339%3Bstate%26%2339%3B%20%3D%3E%201%5D)%0D> --}}
                     @livewire('components.home.information',['state' => true])
             </div>
         </div>
