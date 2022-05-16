@@ -26,7 +26,6 @@ class ShareSeeder extends Seeder
             'user_id' => 1,
             'share' => 1,
             'state' => true,
-
         ]);
 
         // id:3
@@ -34,7 +33,6 @@ class ShareSeeder extends Seeder
             'user_id' => 2,
             'share' => 12,
             'state' => true,
-
         ]);
 
         // id:4
@@ -42,7 +40,6 @@ class ShareSeeder extends Seeder
             'user_id' => 2,
             'share' => 15,
             'state' => true,
-
         ]);
 
         // id:5
@@ -50,7 +47,6 @@ class ShareSeeder extends Seeder
             'user_id' => 2,
             'share' => 20,
             'state' => true,
-
         ]);
 
         // id:6
@@ -58,7 +54,6 @@ class ShareSeeder extends Seeder
             'user_id' => 5,
             'share' => 20,
             'state' => true,
-
         ]);
 
         // id:7
@@ -66,7 +61,6 @@ class ShareSeeder extends Seeder
             'user_id' => 6,
             'share' => 20,
             'state' => true,
-
         ]);
     }
 }

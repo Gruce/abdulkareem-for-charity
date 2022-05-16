@@ -54,8 +54,8 @@ class Information extends Component
                  
             ],
             [
-                'info' => 'البيئة',
-                'value' => 'seedling',
+                'info' => 'المرضى',
+                'value' => 'head-side-mask',
                 
             ],
 

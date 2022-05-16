@@ -1,5 +1,5 @@
 @forelse ($events as $item)
-<div class="rounded-lg  border-2 border-primary-100 hover:shadow-lg hover:border-primary-500 w-96 h-auto group">
+<div class="rounded-xl border-2 border-primary-100 hover:shadow-lg hover:border-primary-500 w-96 h-auto group duration-300">
     {{--
     @admin
     start dropdown --}}
@@ -83,11 +83,11 @@
                 </div>
                 <div class="text-right mt-2">@admin
                     <button wire:click="confirm({{ $item->id }})" class="mx-2">
-                        <i class="text-red-400 fa-solid fa-trash text-xl hover:text-red-600"></i>
+                        <i class="text-red-400 fa-solid fa-trash text-xl hover:scale-110 duration-200 hover:text-red-600"></i>
 
                     </button>
                     <a href={{ route('edit-case', ['case_id'=> $item->id]) }} class="mx-2">
-                        <i class="text-primary-400 fa-solid fa-pen-to-square text-xl hover:text-primary-600"></i>
+                        <i class="text-primary-400 fa-solid fa-pen-to-square text-xl hover:rotate-12 hover:scale-110 duration-200 hover:text-primary-600"></i>
 
                     </a>
 
