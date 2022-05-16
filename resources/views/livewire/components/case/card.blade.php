@@ -1,4 +1,4 @@
-<div>
+<div class="flex gap-8 col-span-3 px-6" >
     @forelse ($events as $item)
         <div
             class="rounded-xl border-2 border-primary-100 hover:shadow-lg hover:border-primary-500 w-96 h-auto group duration-300">
