@@ -15,7 +15,7 @@ class Button extends Component
      */
     public function __construct($color = "primary")
     {
-        $this->default = 'text-white focus:ring-2 font-medium text-sm rounded-full px-5 py-2.5 focus:outline-none cursor-pointer ';
+        $this->default = 'text-white focus:ring-2 font-medium text-sm rounded-md px-5 py-2.5 focus:outline-none cursor-pointer ';
 
         if ($this->color = $color) {
 
