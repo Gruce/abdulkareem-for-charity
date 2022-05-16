@@ -14,6 +14,8 @@ class Information extends Component
             $users = User::all()->count();
             $share = Share::all()->sum('share');
             $event = Event::whereColumn('received_price','target')->count();
+            $even = Event::sum('received_price');
+            
             
         
         $menu = new Menu([
@@ -34,7 +36,7 @@ class Information extends Component
             ],
             [
                 'info' => 'مصروفات',
-                'value' => '1235000',
+                'value' => $even,
                 
             ],
             
