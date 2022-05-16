@@ -48,6 +48,11 @@ class Information extends Component
                  
             ],
             [
+                'info' => 'المرضى',
+                'value' => 'head-side-mask',
+                
+            ],
+            [
                 'info' => 'الايتام',
                 'value' => 'people-line',
                 
@@ -62,11 +67,7 @@ class Information extends Component
                 'value' => 'seedling',
                 
             ],
-            [
-                'info' => 'المرضى',
-                'value' => 'seedling',
-                
-            ],
+            
             
         ]);
         return view('livewire.components.home.information' ,[
@@ -85,9 +86,8 @@ class Menu
         // Menu Generation
         foreach ($items as $item) $this->items[] = new MenuItem($item);
 
-       
-    }
     
+    }
 }
 
 class MenuItem

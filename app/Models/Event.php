@@ -39,5 +39,15 @@ class Event extends Model
     public function getLimit($column, $value = 140){
         return \Str::limit($this->$column, $value);
     }
+    public function add_price($received_price){
+        $this->received_price += $received_price;
+        $this->save();
+    }
+
+    public function received()
+    {
+        return $this->target - $this->received_price;
+    }
 }
+
 
