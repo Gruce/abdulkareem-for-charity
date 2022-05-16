@@ -6,7 +6,7 @@
                 <hr class="w-1/2">
             </div>
             <div class="form-item">
-                <label class="text-xl ">الاسم الكامل</label>
+                <label class="text-xl">الاسم الكامل</label>
                 <input wire:model="name" type="text" value="{{ $name }}"
                     class="bg-gray-50 border border-primary-400 text-sm focus:ring-primary-600 focus:border-primary-500 w-1/2 block p-2.5 rounded-md mt-2">
                 @error('name')

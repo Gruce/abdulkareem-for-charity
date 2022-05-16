@@ -99,9 +99,9 @@
             <!-- Modal content -->
             <div class="relative bg-white rounded-lg shadow ">
                 <!-- Modal header -->
-                <div class="flex justify-between items-center p-5 rounded-t border-b">
+                <div class="flex justify-between items-center">
                     <button type="button"
-                        class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-red-600 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center"
+                        class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-red-600 rounded-bl-lg rounded-tr-lg text-lg p-1.5 ml-auto inline-flex items-center"
                         data-modal-toggle="case-modal">
                         <i class="fa-solid fa-xmark text-2xl"></i>
                     </button>
