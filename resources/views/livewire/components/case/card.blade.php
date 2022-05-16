@@ -55,7 +55,7 @@
                         <div class="text-right mt-2">
                             @admin
                             
-                                <button wire:click="confirm({{ $ID }})" class="mx-2">
+                                <button wire:click="delete({{ $ID }})" class="mx-2">
                                     <i
                                         class="text-red-400 fa-solid fa-trash text-xl hover:scale-110 duration-200 hover:text-red-600"></i>
                                 </button>

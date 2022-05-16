@@ -14,33 +14,46 @@ class Card extends Component
     public  $event_id, $case_id;
     public $ID, $title, $description, $image_path, $file_path, $target, $received_price, $created_at;
 
-    public function confirm($id)
+    public function delete($id)
     {
         $this->event_id = $id;
-        $this->alert('warning', 'هل انت متأكد من حذف الحالة؟', [
+        $this->alert('warning', 'هل انت متأكد من انك تريد حذف الحالة', [
             'position' => 'center',
-            'timer' => 3000,
+            'timer' => '7000',
             'toast' => true,
+            'text' => '',
             'showConfirmButton' => true,
-            'onConfirmed' => 'del',
+            'onConfirmed' => 'remove',
             'showCancelButton' => true,
             'onDismissed' => '',
-            
-        ]);
+            'cancelButtonText' => 'الغاء ',
+            'confirmButtonText' => 'حذف',
+            'width' => '400',
+           ]);
+           
+        
     }
 
-    // public function del()
-    // {
-    //     //dd($this->event_id);
-    //     Event::findOrFail($this->event_id)->delete();
-    //     $this->alert('success', 'تم حذف الحالة', [
-    //         'position' => 'top',
-    //         'timer' => 3000,
-    //         'toast' => true,
-    //     ]);
+    public function remove(){
+        $this->alert('success', 'تم حذف الحالة', [
+            'position' => 'center',
+            'timer' => '2000',
+            'toast' => true,
+            'text' => '',
+            'showConfirmButton' => false,
+            'onConfirmed' => '',
+            'showCancelButton' => false,
+            'onDismissed' => '',
+            'cancelButtonText' => 'الغاء ',
+            'confirmButtonText' => 'حذف',
+            'width' => '400',
+           ]);
 
-    //     $this->emitSelf('$refresh');
-    // }
+        Event::findOrFail($this->event_id)->delete();
+        
+
+        $this->emitSelf('$refresh');
+    }
 
     public function render()
     {
