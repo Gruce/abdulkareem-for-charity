@@ -8,14 +8,14 @@ use App\Models\Event;
 class Main extends Component
 {
 
-    public $search;
+     public $search;
 
-    protected $listeners = ['delete', '$refresh', 'search'];
+    // protected $listeners = ['delete', '$refresh', 'search'];
 
-    function search($string)
-    {
-        $this->search = $string;
-    }
+    // function search($string)
+    // {
+    //     $this->search = $string;
+    // }
 
     public function render()
     {

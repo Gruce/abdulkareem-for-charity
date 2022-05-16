@@ -29,18 +29,18 @@ class Card extends Component
         ]);
     }
 
-    public function delete()
-    {
-        //dd($this->event_id);
-        Event::findOrFail($this->event_id)->delete();
-        $this->alert('success', 'تم حذف الحالة', [
-            'position' => 'top',
-            'timer' => 3000,
-            'toast' => true,
-        ]);
+    // public function delete()
+    // {
+    //     //dd($this->event_id);
+    //     Event::findOrFail($this->event_id)->delete();
+    //     $this->alert('success', 'تم حذف الحالة', [
+    //         'position' => 'top',
+    //         'timer' => 3000,
+    //         'toast' => true,
+    //     ]);
 
-        $this->emitSelf('$refresh');
-    }
+    //     $this->emitSelf('$refresh');
+    // }
 
     public function render()
     {
