@@ -26,7 +26,6 @@ class Add extends Component
             'description' => $this->description,
             'target' => $this->target,
             'received_price' => $this->received_price,
-
         ];
         $this->alert('success', 'تمت الاضافة', [
             'position' => 'top',
