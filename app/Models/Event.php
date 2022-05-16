@@ -46,7 +46,7 @@ class Event extends Model
         $this->save();
     }
 
-    ######### FUNCTIONS ##########
+    ######### END FUNCTIONS ##########
 
     public function received()
     {
