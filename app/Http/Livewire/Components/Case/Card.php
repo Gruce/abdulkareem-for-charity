@@ -4,6 +4,7 @@ namespace App\Http\Livewire\Components\Case;
 
 use App\Models\Event;
 use Livewire\Component;
+use App\Models\User;
 use Jantinnerezo\LivewireAlert\LivewireAlert;
 
 
@@ -12,7 +13,7 @@ class Card extends Component
     use LivewireAlert;
 
     public  $event_id, $case_id;
-    public $ID, $title, $description, $image_path, $file_path, $target, $received_price, $created_at;
+    public $ID, $title, $description, $image_path, $file_path, $target, $received_price, $created_at ;
 
     public function remove($id)
     {
@@ -28,7 +29,7 @@ class Card extends Component
             
         ]);
     }
-
+    
     // public function delete()
     // {
     //     //dd($this->event_id);
@@ -41,7 +42,7 @@ class Card extends Component
 
     //     $this->emitSelf('$refresh');
     // }
-
+    
     public function render()
     {
         return view('livewire.components.case.card');
