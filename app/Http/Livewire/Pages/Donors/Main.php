@@ -9,7 +9,7 @@ class Main extends Component
 {
     public $type = 0;
 
-    public function x()
+    public function getType()
     {
         $this->emit('getUserType', $this->type);
     }
