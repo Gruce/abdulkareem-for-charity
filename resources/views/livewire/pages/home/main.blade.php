@@ -41,7 +41,9 @@
                 اخر الحالات
             </span>
             <div class="my-20 flex gap-6">
-                @livewire('components.case.card')
+                @foreach ($events as $event )
+                @livewire('components.case.card',['event'=>$event])
+                @endforeach
             </div>
         </div>
 
