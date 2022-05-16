@@ -12,7 +12,7 @@
         <div class="p-6">
             <h5 class="text-center font-bold group-hover:text-primary-500 text-3xl mb-2"> {{ $item->title }}</h5>
             <div class=" xs:28">
-                <p class="text-gray-900 text-medium mb-4">
+                <p class="text-gray-900 text-medium mb-4 flex-r">
                     {{ Str::limit($item->description, 140) }}
 
                     {{-- more info button --}}
