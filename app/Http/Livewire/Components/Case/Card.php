@@ -11,8 +11,8 @@ class Card extends Component
 {
     use LivewireAlert;
 
-    public  $event_id, $case_id;
-    public $ID, $title, $description, $image_path, $file_path, $target, $received_price, $created_at;
+    public  $event_id, $case_id, $received_price;
+    public $event;
 
     public function remove($id)
     {
@@ -25,7 +25,7 @@ class Card extends Component
             'onConfirmed' => 'delete',
             'showCancelButton' => true,
             'onDismissed' => '',
-            
+
         ]);
     }
 
