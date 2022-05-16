@@ -1,5 +1,4 @@
 <div>
-
     <div class="px-4 pt-4">
         <form action="#" class="flex flex-col space-y-8" wire:submit.prevent="edit">
 
@@ -54,7 +53,7 @@
 
             <div class="flex flex-col space-y-4 md:space-y-0 md:flex-row md:space-x-4">
                 <div class="form-item w-full">
-                    <label class="text-xl mb-2 font-semibold mb-2">المرحلة</label>
+                    <label class="text-xl font-semibold mb-2">المرحلة</label>
                     {{-- <select wire:model="stage"
                         class="bg-gray-50 border border-primary-400  text-base rounded-md focus:ring-primary-600 focus:border-primary-500 block w-64 mt-2">
                         <option value="1">الاولى</option>
@@ -122,5 +121,4 @@
 
         </form>
     </div>
-
 </div>
