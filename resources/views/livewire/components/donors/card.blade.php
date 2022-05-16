@@ -1,22 +1,21 @@
 <div>
 
     <div x-data="{ isOpen: false }" class="grid grid-cols-4 gap-6 group">
-        @forelse ($users as $item)
+        @forelse($users as $item)
             <div
                 class="rounded-xl border-2 border-primary-100 hover:shadow-lg hover:border-primary-500 duration-300 p-4 w-full">
                 <div class="grid grid-cols-5 mb-5">
                     <div class="col-span-2 flex flex-col">
-                        <img src="{{ asset($item->profile_photo_path ?? 'img/user.png') }}" alt=""
-                            class=" rounded-full h-32 w-32" />
+                        <img src="{{ asset($item->profile_photo_path ?? 'img/user.png') }}"
+                            alt="" class=" rounded-full h-32 w-32" />
                         <h3 class=" text-xl mr-1 mt-4"> يملك {{ $item->getShare() ?? 0 }} سهماً </h3>
                     </div>
 
 
                     <div class="col-span-3">
                         <h3 class="mt-6 text-center font-bold text-2xl ">{{ $item->name }}</h3>
-                        <h3
-                            class="mt-2 font-Alhurra text-center text-base @if ($item->type == 4) hidden @endif">
-                            @if ($item->type == 1)
+                        <h3 class="mt-2 font-Alhurra text-center text-base @if ($item->type == 4) hidden @endif">
+                            @if($item->type == 1)
                                 طالب
                             @elseif($item->type == 2)
                                 تدريسي
@@ -30,14 +29,14 @@
                 </div>
                 @admin
                     <div x-data="{ open: false }">
-                        @if ($item->shares->count() > 0)
+                        @if($item->shares->count() > 0)
                             <button @click="open = ! open"><i
                                     class="fa-solid fa-hand-holding-dollar h-10 w-10 mr-3 text-red-600 animate-pulse"></i>
                             </button>
                         @endif
                         <div x-show="open" @click.outside="open = false">
                             <div class="">
-                                @foreach ($item->shares as $share)
+                                @foreach($item->shares as $share)
                                     <div
                                         class="px-5 py-2 text-3xl font-bold text-gray-600 bg-gray-200 rounded-lg flex justify-between">
                                         <div>
