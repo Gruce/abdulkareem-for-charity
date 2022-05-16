@@ -70,7 +70,7 @@
                                 @if ($event->received_price != $event->target)
                                     <button @click="open = ! open" class="mx-2">
                                         <i
-                                            class="text-red-400 fa-solid fa-plus text-xl hover:scale-110 hover:rotate-45 duration-200 hover:text-red-600"></i>
+                                            class="text-red-400 fa-solid fa-plus text-xl hover:scale-110 hover:rotate-45 duration-300 hover:text-red-600"></i>
                                     </button>
                                     <div x-show="open" @click.outside="open = false">
                                         <input type="text" wire:model="received_price"
