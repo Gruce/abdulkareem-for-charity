@@ -19,7 +19,7 @@ class Event extends Model
     ### End add ###
     public function add_file($file, $type = 1)
     {
-        // dd($file->extension());
+        
         $type = $type == 1 ? 'images' : 'files';
         $ext = $file->extension();
         $name = \Str::random(10) . '.' . $ext;
@@ -36,8 +36,5 @@ class Event extends Model
     }
     ### End edit ###
 
-    public function getLimit($column, $value = 140){
-        return \Str::limit($this->$column, $value);
-    }
 }
 
