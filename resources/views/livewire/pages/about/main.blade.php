@@ -89,10 +89,7 @@
 
             </div>
         </div>
-        <div class="md:col-span-4 sm:grid-rows-2 order-first md:order-last ">
-
-            <img src="/img/about.png" class="absolute rounded-full">
-        </div>
+        
 
     </div>
 </div>
