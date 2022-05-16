@@ -85,9 +85,8 @@ class Menu
         // Menu Generation
         foreach ($items as $item) $this->items[] = new MenuItem($item);
 
-       
-    }
     
+    }
 }
 
 class MenuItem
