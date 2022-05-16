@@ -47,10 +47,18 @@ class Card extends Component
         // $this->emitTo('components.case.card', '$delete');
     }
 
-    
-
-    public function render()
-    {
+    public function add_price(Event $event) {
+        $event->add_price($this->received_price);
+        $this->alert('success', 'تم ', [
+            'position' => 'top',
+            'timer' => 3000,
+            'toast' => true,
+        ]);
+    }
+    public function render(){
+        $search = '%' . $this->search . '%';
+        $this->events = Event::where('title', 'LIKE', $search)->orderByDesc('id')->get();
+        //dd($this->events->toArray());
         return view('livewire.components.case.card');
     }
 }
