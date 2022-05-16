@@ -58,7 +58,7 @@
                                     class="text-red-400 fa-solid fa-trash text-xl hover:scale-110 duration-200 hover:text-red-600"></i>
 
                             </button>
-                            <a href={{ route('edit-case', ['case_id' => $item->id]) }} class="mx-2">
+                            <a  class="mx-2">
                                 <i
                                     class="text-primary-400 fa-solid fa-pen-to-square text-xl hover:rotate-12 hover:scale-110 duration-200 hover:text-primary-600"></i>
 
