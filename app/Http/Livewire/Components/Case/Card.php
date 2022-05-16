@@ -10,50 +10,44 @@ use Jantinnerezo\LivewireAlert\LivewireAlert;
 class Card extends Component
 {
     use LivewireAlert;
+    protected $listeners = ['delete', '$refresh', 'search'];
 
     public  $event_id, $case_id;
     public $ID, $title, $description, $image_path, $file_path, $target, $received_price, $created_at;
 
-    public function delete($id)
+    public function remove($id)
     {
         $this->event_id = $id;
-        $this->alert('warning', 'هل انت متأكد من انك تريد حذف الحالة', [
+        $this->alert('warning', 'هل انت متأكد من حذف الحالة؟', [
             'position' => 'center',
-            'timer' => '7000',
+            'timer' => 3000,
             'toast' => true,
-            'text' => '',
             'showConfirmButton' => true,
-            'onConfirmed' => 'remove',
+            'onConfirmed' => 'del',
             'showCancelButton' => true,
             'onDismissed' => '',
-            'cancelButtonText' => 'الغاء ',
-            'confirmButtonText' => 'حذف',
-            'width' => '400',
-           ]);
-           
-        
-    }
-
-    public function remove(){
-        $this->alert('success', 'تم حذف الحالة', [
-            'position' => 'center',
-            'timer' => '2000',
-            'toast' => true,
-            'text' => '',
-            'showConfirmButton' => false,
-            'onConfirmed' => '',
-            'showCancelButton' => false,
-            'onDismissed' => '',
-            'cancelButtonText' => 'الغاء ',
-            'confirmButtonText' => 'حذف',
-            'width' => '400',
-           ]);
-
+            
+        ]);
         Event::findOrFail($this->event_id)->delete();
         
-
-        $this->emitSelf('$refresh');
     }
+
+    public function delete()
+    {
+    
+        
+        $this->alert('success', 'تم حذف الحالة', [
+            'position' => 'top',
+            'timer' => 3000,
+            'toast' => true,
+        ]);
+        
+         $this->emitSelf('$refresh');
+        // $this->emitTo('pages.cases.main', '$delete');
+        // $this->emitTo('components.case.card', '$delete');
+    }
+
+    
 
     public function render()
     {
