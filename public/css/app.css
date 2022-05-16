@@ -995,6 +995,10 @@ select{
   margin-left: 5rem;
   margin-right: 5rem;
 }
+.mx-5{
+  margin-left: 1.25rem;
+  margin-right: 1.25rem;
+}
 .ml-3{
   margin-left: 0.75rem;
 }
@@ -1383,6 +1387,9 @@ select{
 .flex-row{
   flex-direction: row;
 }
+.flex-row-reverse{
+  flex-direction: row-reverse;
+}
 .flex-col{
   flex-direction: column;
 }
@@ -1499,6 +1506,9 @@ select{
 .rounded-xl{
   border-radius: 0.75rem;
 }
+.rounded-sm{
+  border-radius: 0.125rem;
+}
 .rounded-l-md{
   border-top-left-radius: 0.375rem;
   border-bottom-left-radius: 0.375rem;
@@ -1607,6 +1617,10 @@ select{
 .border-gray-700{
   --tw-border-opacity: 1;
   border-color: rgb(55 65 81 / var(--tw-border-opacity));
+}
+.border-primary-400{
+  --tw-border-opacity: 1;
+  border-color: rgb(124 213 172 / var(--tw-border-opacity));
 }
 .bg-white{
   --tw-bg-opacity: 1;
@@ -2054,6 +2068,9 @@ select{
 .leading-none{
   line-height: 1;
 }
+.leading-8{
+  line-height: 2rem;
+}
 .tracking-widest{
   letter-spacing: 0.1em;
 }
@@ -2396,6 +2413,18 @@ select{
   --tw-bg-opacity: 1;
   background-color: rgb(45 139 95 / var(--tw-bg-opacity));
 }
+.hover\:bg-primary-100:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(194 235 216 / var(--tw-bg-opacity));
+}
+.hover\:bg-gray-500:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(107 114 128 / var(--tw-bg-opacity));
+}
+.hover\:bg-primary-600:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(60 186 127 / var(--tw-bg-opacity));
+}
 .hover\:bg-gradient-to-r:hover{
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
 }
@@ -2651,6 +2680,10 @@ select{
   --tw-border-opacity: 1;
   border-color: rgb(147 220 186 / var(--tw-border-opacity));
 }
+.group:hover .group-hover\:border-primary-500{
+  --tw-border-opacity: 1;
+  border-color: rgb(78 198 142 / var(--tw-border-opacity));
+}
 .group:hover .group-hover\:text-green-600{
   --tw-text-opacity: 1;
   color: rgb(22 163 74 / var(--tw-text-opacity));
@@ -2662,6 +2695,10 @@ select{
 .group:hover .group-hover\:text-gray-600{
   --tw-text-opacity: 1;
   color: rgb(75 85 99 / var(--tw-text-opacity));
+}
+.group:hover .group-hover\:text-primary-500{
+  --tw-text-opacity: 1;
+  color: rgb(78 198 142 / var(--tw-text-opacity));
 }
 .group:focus .group-focus\:right-0{
   right: 0px;
