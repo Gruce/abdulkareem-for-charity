@@ -27,11 +27,11 @@ class Event extends Model
         
         $type = $type == 1 ? 'images' : 'files';
         $ext = $file->extension();
-        $name = 'storage/event/' . $this->id . '/' . $type . '/' . \Str::random(10) . '.' . $ext;
+        $name =  \Str::random(10) . '.' . $ext;
         $file = $file->storeAs('public/event/' . $this->id . '/' . $type . '/' , $name);
         if ($type == 'images')
-            $this->image_path = $name;
-        else $this->file_path = $name;
+            $this->image_path ='storage/event/' . $this->id . '/' . $type . '/' . $name;
+        else $this->file_path ='storage/event/' . $this->id . '/' . $type . '/' . $name;
 
         $this->save();
     }
