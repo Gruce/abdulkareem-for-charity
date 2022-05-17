@@ -56,5 +56,6 @@
                     @livewire('components.home.information',['state' => true])
             </div>
         </div>
+        
     </div>
 </div>
