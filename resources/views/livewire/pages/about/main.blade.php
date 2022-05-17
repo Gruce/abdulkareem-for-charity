@@ -140,15 +140,15 @@
             </h1>
 
             {{-- Cards --}}
-            <div class="grid grid-cols-4 gap-6 px-16">
+            <div class="grid grid-cols-4 gap-6 px-28">
                 @for ($i = 0; $i < 8; $i++) 
                 <div
-                    class="p-8 w-80  rounded-3xl bg-white transition duration-300 ease-in-out hover:scale-105  border mb-16 border-gray-600">
-                    <div class="-mt-4 -translate-y-1/2 transform rounded-full">
+                    class="p-8 w-64  rounded-3xl bg-white transition duration-300 ease-in-out hover:scale-105  border mb-16 border-gray-600">
+                    <div class="-mt-10 -translate-y-1/2 transform rounded-full">
                         <img src="/img/mo.jpg" 
                             class="mx-auto h-32 rounded-full" />
                     </div>
-                    <div class="text-center -mt-10">
+                    <div class="text-center -mt-12">
                         <h3 class="text-center text-2xl font-bold ">احمد عبدالكريم</h3>
                         <div class="text-lg font-semibold mt-3 text-secondary-200 -mb-3">مرحلة رابعة - علوم</div>
                     </div>
