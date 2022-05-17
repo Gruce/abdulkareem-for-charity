@@ -12,9 +12,9 @@ class Card extends Component
     use LivewireAlert;
 
     public  $event_id, $case_id, $received_price;
-    public $event;
+    public $event , $search ,$title;
 
-    protected $listeners = ['delete', '$refresh'];
+    protected $listeners = ['delete', '$refresh' ,'search'];
 
     public function delete(){
         Event::findOrFail($this->event_id)->delete();
@@ -49,8 +49,12 @@ class Card extends Component
             'toast' => true,
         ]);
     }
-    public function render()
-    {
+    public function search($search){
+        $this->search = $search;
+    }
+    public function render(){
+       $search = '%' . $this->search . '%';
+        $this->events = Event::where('title', 'LIKE', $search)->get(); 
         return view('livewire.components.case.card');
     }
 }

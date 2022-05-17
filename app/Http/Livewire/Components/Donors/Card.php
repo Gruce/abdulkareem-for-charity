@@ -103,9 +103,7 @@ class Card extends Component
         if($this->user_type != 0 && $this->user_type <= 4){
             $this->users = $this->users->where('type', $this->user_type);
         }
-        $this->users = $this->users->where('name', 'LIKE', $search)
-
-        ->orderByDesc('id')->get();
+        $this->users = $this->users->where('name', 'LIKE', $search)->orderByDesc('id')->get();
         return view('livewire.components.donors.card');
     }
 }
