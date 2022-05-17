@@ -1,7 +1,7 @@
-@if ($state)
+@if($state)
 
     {{-- activites --}}
-    @forelse ($activities->items as $item)
+    @forelse($activities->items as $item)
         <div class="p-4 bg-white rounded-lg border border-gray-200 shadow-md m-5">
             <div class="flex flex-col p-2 text-center mx-10">
                 <i class="fa-solid fa-{{ $item->value }} text-7xl text-primary-500"></i>
@@ -15,7 +15,7 @@
     @endforelse
 @else
     {{-- info --}}
-    @forelse ($menu->items as $item)
+    @forelse($menu->items as $item)
         <div class="flex flex-col p-2 text-center mx-20">
             <span class="text-5xl font-bold font-noto">
                 {{ $item->value }}

@@ -2,22 +2,19 @@
 
 namespace App\Http\Livewire\Components\Case;
 
-use Livewire\Component;
 use App\Models\Event;
+use Livewire\Component;
 use Jantinnerezo\LivewireAlert\LivewireAlert;
+
 
 class Card extends Component
 {
     use LivewireAlert;
 
-    public  $event_id, $search, $case_id;
+    public  $event_id, $case_id, $received_price;
+    public $event;
 
-    protected $listeners = ['delete', '$refresh','search'];
-
-    function search($string)
-    {
-        $this->search = $string;
-    }
+    protected $listeners = ['delete', '$refresh'];
 
     public function delete(){
         Event::findOrFail($this->event_id)->delete();
@@ -43,11 +40,17 @@ class Card extends Component
             'onDismissed' => '',
         ]);
     }
-    
-    public function render(){
-        $search = '%' . $this->search . '%';
-        $this->events = Event::where('title', 'LIKE', $search)->orderByDesc('id')->get();
-        //dd($this->events->toArray());
+
+    public function add_price(Event $event) {
+        $event->add_price($this->received_price);
+        $this->alert('success', 'تم ', [
+            'position' => 'top',
+            'timer' => 3000,
+            'toast' => true,
+        ]);
+    }
+    public function render()
+    {
         return view('livewire.components.case.card');
     }
 }

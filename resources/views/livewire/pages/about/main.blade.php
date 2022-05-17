@@ -1,8 +1,9 @@
-<div class="p-4">
-    <div class="h-screen grid md:grid-cols-10 sm:grid-cols-1 sm:grid-rows-6">
+<div>
+    {{-- <div class="h-screen grid md:grid-cols-10 sm:grid-cols-1 sm:grid-rows-6">
         <div class="sm:col-span-6 sm:grid-rows-4 mt-10 md:mt-0">
 
-            <h1 class="text-3xl md:text-5xl font-Alhurra text-center font-bold text-primary-600"> صندوق الأستاذ عبدالكريم
+            <h1 class="text-3xl md:text-5xl font-Alhurra text-center font-bold text-primary-600"> صندوق الأستاذ
+                عبدالكريم
             </h1>
             <p class="mt-10 text-xl text-gray-700 font-Alhurrareg px-1 md:px-9">"صـندوق الأستاذ عبد الكريم الخيري" هو
                 مبادرة ونشاط طلابي
@@ -20,79 +21,146 @@
                 2- أمانة الصندوق <br>
                 3- الاعمال التي تُصرف فيها مبالغ الصندوق<br>
             </p>
+        </div>
+    </div> --}}
 
-            {{-- Carators/Programmers --}}
-            <div class="grid grid-cols-3 gap-5 p-7 ">
+    <div class="flex flex-col px-16">
 
-                <article class="w-64 p-4 bg-gradient-to-r from-cyan-600 via-cyan-700 to-cyan-900 rounded-xl ">
-                    <div class="flex justify-between items-center ">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgOpAl-zUOnAKg8BQvuTaNWSmFGdklvUv8ng&usqp=CAU"
-                            alt="صوره بروف" class="w-16 h-16 rounded-full" />
+        <div class="basis-1/4 grid grid-cols-12 justify-between">
 
-                        <div class="ml-3">
-                            <h5 class="text-xl m-3 font-medium text-white   ">حسن الخالدي</h5>
-                            <div class="flow-root">
-                                <ul class="flex  justify-between  -m-1">
-                                    <li class="p-1 leading-none">
-                                        <a href="https://twitter.com/itsmarkmead" target="_blank"
-                                            class="text-xs font-medium text-black text-2xl ">
-                                            <i class="fa-brands fa-twitter"></i>
-                                        </a>
-                                    </li>
-                                    <li class="p-1 leading-none">
-                                        <a href="https://github.com/markmead" target="_blank"
-                                            class="text-xs font-medium text-black text-2xl">
-                                            <i class="fa-brands fa-github"></i>
-                                        </a>
-                                    </li>
-                                    <li class="p-1 leading-none">
-                                        <a href="https://markmead.dev/" target="_blank"
-                                            class="text-xs font-medium text-black text-2xl">
-                                            <i class="fa-brands fa-instagram"></i></a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </article>
+            <!-- Text -->
+            <div class="basis-1/2 col-span-7 pt-20  text-center">
+                <h1 class="text-secondary-900 text-6xl font-bold ">
+                    صندوق الكريم
+                </h1>
+                <p class="mt-10 text-xl text-gray-700 font-Alhurrareg px-1 md:px-9 text-right">"صـندوق الأستاذ عبد
+                    الكريم الخيري" هو
+                    مبادرة ونشاط طلابي
+                    بحت ينطلق من
+                    طلبة كلية علوم الحاسوب<br> وتكنلوجيا المعلومات.
 
-                <article class="w-64 p-4 bg-gray-800 border border-gray-700 rounded-xl ">
-                    <div class="flex justify-between items-center ">
-                        <img src="https://unavatar.now.sh/twitter/itsmarkmead" alt="صوره بروف"
-                            class="w-16 h-16 rounded-full" />
+                    الهدف منه رعاية الاعمال الخيرية داخل الكلية وتكون الاولوية في صرف الصندوق للطلبة<br> ذوي الدخل دون
+                    المحدود
+                    وبقية الاعمال الخيرية.
 
-                        <div class="ml-3">
-                            <h5 class="text-lg font-medium text-white">حسن الخالدي</h5>
-                            <div class="flow-root">
-                                <ul class="flex flex-wrap -m-1">
-                                    <li class="p-1 leading-none">
-                                        <a href="https://twitter.com/itsmarkmead" target="_blank"
-                                            class="text-xs font-medium text-gray-300">
-                                            Twitter
-                                        </a>
-                                    </li>
-                                    <li class="p-1 leading-none">
-                                        <a href="https://github.com/markmead" target="_blank"
-                                            class="text-xs font-medium text-gray-300">
-                                            GitHub
-                                        </a>
-                                    </li>
-                                    <li class="p-1 leading-none">
-                                        <a href="https://markmead.dev/" target="_blank"
-                                            class="text-xs font-medium text-gray-300">Instagram</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </article>
+                    اساس عمل الصندوق قائم على اشتراكات شهرية لكل طالب <br>او منتسب داخل الكلية، تبدئ الاشتراكات من مبلغ
+                    (٢٠٠٠)
+                    ألفين دينار عراقي او اكثر،
+                    اساس عمل الصندوق سيتم جمع لجان من الطلبة من مختلف المراحل مع ممثلي المراحل للأشراف على : <br>
+
+                    - جمع المبالغ <br>
+                    - أمانة الصندوق <br>
+                    - الاعمال التي تُصرف فيها مبالغ الصندوق<br>
+                </p>
 
             </div>
-        </div>
-        <div class="md:col-span-4 sm:grid-rows-2 order-first md:order-last ">
 
-            <img src="/img/about.png" class="absolute rounded-full">
+            {{--Photo--}}
+            <div class="basis-1/2 col-span-5 ">
+                <img src="/img/About1.png" class="w-3/4 h-auto m-auto">
+            </div>
+
         </div>
 
+        <div class="basis-1/4 grid grid-cols-12 justify-between mt-16">
+
+            {{--Photo--}}
+            <div class="basis-1/2 col-span-5 ">
+                <img src="/img/About2.png" class="w-3/4 h-auto m-auto">
+            </div>
+
+            <!-- Text -->
+            <div class="basis-1/2 col-span-7 pt-20  text-center">
+                <h1 class="text-secondary-900 text-6xl font-bold ">
+                    من هو الأستاذ عبدالكريم
+                </h1>
+                <p class="mt-10 text-xl text-gray-700 font-Alhurrareg px-1 md:px-9 text-right">"صـندوق الأستاذ عبد
+                    الكريم الخيري" هو
+                    مبادرة ونشاط طلابي
+                    بحت ينطلق من
+                    طلبة كلية علوم الحاسوب<br> وتكنلوجيا المعلومات.
+
+                    الهدف منه رعاية الاعمال الخيرية داخل الكلية وتكون الاولوية في صرف الصندوق للطلبة<br> ذوي الدخل دون
+                    المحدود
+                    وبقية الاعمال الخيرية.
+
+                    اساس عمل الصندوق قائم على اشتراكات شهرية لكل طالب <br>او منتسب داخل الكلية، تبدئ الاشتراكات من مبلغ
+                    (٢٠٠٠)
+                    ألفين دينار عراقي او اكثر،
+                    اساس عمل الصندوق سيتم جمع لجان من الطلبة من مختلف المراحل مع ممثلي المراحل للأشراف على : <br>
+
+                    - جمع المبالغ <br>
+                    - أمانة الصندوق <br>
+                    - الاعمال التي تُصرف فيها مبالغ الصندوق<br>
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="basis-1/4 grid grid-cols-12 justify-between mt-12">
+
+            <!-- Text -->
+            <div class="basis-1/2 col-span-5 pt-20  text-center">
+                <h1 class="text-secondary-900 text-6xl font-bold ">
+                    كيف يتم جمع التبرعات؟
+                </h1>
+                <p class="mt-10 text-xl text-gray-700 font-Alhurrareg px-1 md:px-9 text-right">"صـندوق الأستاذ عبد
+                    الكريم الخيري" هو
+                    مبادرة ونشاط طلابي
+                    بحت ينطلق من
+                    طلبة كلية علوم الحاسوب<br> وتكنلوجيا المعلومات.
+
+                    الهدف منه رعاية الاعمال الخيرية داخل الكلية وتكون الاولوية في صرف الصندوق للطلبة<br> ذوي الدخل دون
+                    المحدود
+                    وبقية الاعمال الخيرية.
+
+                    اساس عمل الصندوق قائم على اشتراكات شهرية لكل طالب <br>او منتسب داخل الكلية، تبدئ الاشتراكات من مبلغ
+                    (٢٠٠٠)
+                    ألفين دينار عراقي او اكثر،
+                    اساس عمل الصندوق سيتم جمع لجان من الطلبة من مختلف المراحل مع ممثلي المراحل للأشراف على
+
+
+                </p>
+
+            </div>
+
+            {{--Photo--}}
+            <div class="basis-1/2 col-span-7 ">
+                <img src="/img/About3.png" class="w-3/4 h-auto m-auto">
+            </div>
+
+        </div>
+
+        <div class="basis-1/4 flex flex-col mt-20 py-10 space-y-10">
+
+            <h1 class="text-secondary-900 text-6xl font-bold text-center mb-10">
+                فريق المطورين
+            </h1>
+
+            {{-- Cards --}}
+            <div class="grid grid-cols-4 gap-6 px-16">
+                @for ($i = 0; $i < 8; $i++) 
+                <div
+                    class="p-8 w-72 cursor-pointer rounded-3xl bg-white transition duration-300 ease-in-out hover:scale-105 hover:drop-shadow-2xl border border-gray-600">
+                    <div class="-mt-4 -translate-y-1/2 transform rounded-full">
+                        <img src="/img/mo.jpg" 
+                            class="mx-auto h-32 rounded-full" />
+                    </div>
+                    <div class="text-center">
+                        <h3 class="text-center text-4xl font-bold">Kobe Bryant</h3>
+                        <span class="text-sm">Shooting Guard</span>
+                    </div>
+                    
+            </div>
+            @endfor
+
+
+        </div>
     </div>
+
+</div>
+
+
 </div>

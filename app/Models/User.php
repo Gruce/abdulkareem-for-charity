@@ -92,6 +92,7 @@ class User extends Authenticatable
     }
 
     public function addProfile($file , $type = null){
+        dd($file);
         $type = $type ?? 'student';
         $ext = $file->extension();
         $name=\Str::random(10).'.'.$ext;

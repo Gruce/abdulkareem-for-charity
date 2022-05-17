@@ -20,8 +20,8 @@
 
     @livewireStyles
 
-    <!-- Scripts -->
-    <script src="{{ mix('js/app.js') }}" defer></script>
+        <!-- Scripts -->
+        <script src="{{ mix('js/app.js') }}" defer></script>
 </head>
 
 <body class="font-serif antialiased " dir="rtl">
@@ -38,13 +38,13 @@
     @stack('modals')
 
     @livewireScripts
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <x-livewire-alert::scripts />
-    <script src="//unpkg.com/alpinejs" defer></script>
-    <script src="https://unpkg.com/flowbite@1.4.4/dist/flowbite.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js"
-        integrity="sha512-6PM0qYu5KExuNcKt5bURAoT6KCThUmHRewN3zUFNaoI6Di7XJPTMoT6K0nsagZKk2OB4L7E3q1uQKHNHd4stIQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <x-livewire-alert::scripts />
+        <script src="//unpkg.com/alpinejs" defer></script>
+        <script src="https://unpkg.com/flowbite@1.4.4/dist/flowbite.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js"
+            integrity="sha512-6PM0qYu5KExuNcKt5bURAoT6KCThUmHRewN3zUFNaoI6Di7XJPTMoT6K0nsagZKk2OB4L7E3q1uQKHNHd4stIQ=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 </body>
 

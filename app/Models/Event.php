@@ -11,6 +11,8 @@ class Event extends Model
     protected $fillable = ['title', 'description', 'image_path', 'file_path', 'target', 'received_price'];
     use HasFactory;
 
+    ######### FUNCTIONS ##########
+
     ### add ###
     public function add($data){
         $this->fill($data);
@@ -39,5 +41,17 @@ class Event extends Model
     public function getLimit($column, $value = 140){
         return \Str::limit($this->$column, $value);
     }
+    public function add_price($received_price){
+        $this->received_price += $received_price;
+        $this->save();
+    }
+
+    ######### END FUNCTIONS ##########
+
+    public function received()
+    {
+        return $this->target - $this->received_price;
+    }
 }
+
 
