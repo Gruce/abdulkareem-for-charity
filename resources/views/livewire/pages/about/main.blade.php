@@ -140,15 +140,15 @@
             </h1>
 
             {{-- Cards --}}
-            <div class="grid grid-cols-4 gap-6 px-16">
+            <div class="grid grid-cols-4 gap-8 px-16 mx-auto">
                 @for ($i = 0; $i < 8; $i++)
                     <div
-                        class="p-8 w-72 h-44 cursor-pointer rounded-2xl hover:bg-white mt-12 bg-white transition duration-300 ease-in-out hover:scale-105 hover:shadow-xl border border-gray-600">
-                        <div class="-mt-6 -translate-y-1/2 transform rounded-full">
+                        class="p-8 w-72 h-44  rounded-2xl hover:bg-white mt-14 mb-4 bg-white transition duration-300 ease-in-out hover:scale-105  border border-gray-600">
+                        <div class="-mt-8 -translate-y-1/2 transform rounded-full">
                             <img src="/img/mo.jpg" class="mx-auto h-32 rounded-full" />
                         </div>
                         <div class="text-center -mt-14">
-                            <h3 class="text-4xl font-bold">Kobe Bryant</h3>
+                            <h3 class="text-3xl font-bold">محمد جواد</h3>
                             <span class="text-sm">مرحله اولى - علوم</span>
                         </div>
 
