@@ -143,7 +143,7 @@
             <div class="grid grid-cols-4 gap-6 px-16">
                 @for ($i = 0; $i < 8; $i++) 
                 <div
-                    class="p-8 w-72 cursor-pointer rounded-3xl bg-white transition duration-300 ease-in-out hover:scale-105 hover:drop-shadow-2xl border border-gray-600">
+                    class="p-8 w-72 cursor-pointer rounded-3xl bg-white transition duration-300 ease-in-out hover:scale-105 hover:drop-shadow-2xl border mb-16 border-gray-600">
                     <div class="-mt-4 -translate-y-1/2 transform rounded-full">
                         <img src="/img/mo.jpg" 
                             class="mx-auto h-32 rounded-full" />
