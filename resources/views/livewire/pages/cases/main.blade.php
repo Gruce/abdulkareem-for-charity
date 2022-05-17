@@ -2,7 +2,7 @@
 <div>
     <div>
         <div>
-            @livewire('ui.search')
+            @livewire('ui.search','title' )
         </div>
 
         <div class="grid grid-cols-4 gap-6 pt-5">
@@ -17,7 +17,8 @@
                     // 'received_price' => $item->received_price ,
                     // 'created_at' => $item->created_at ,
                     'event' => $event
-                ],'title')
+                ])
+
             @empty
                 <div class="text-2xl font-medium text-gray-700">
                     لايوجد حالات
