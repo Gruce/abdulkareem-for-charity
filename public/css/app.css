@@ -1106,6 +1106,33 @@ select{
 .mr-14{
   margin-right: 3.5rem;
 }
+.mt-7{
+  margin-top: 1.75rem;
+}
+.mb-7{
+  margin-bottom: 1.75rem;
+}
+.-mb-7{
+  margin-bottom: -1.75rem;
+}
+.-mt-7{
+  margin-top: -1.75rem;
+}
+.-mt-9{
+  margin-top: -2.25rem;
+}
+.-mt-10{
+  margin-top: -2.5rem;
+}
+.-mt-12{
+  margin-top: -3rem;
+}
+.-mt-1{
+  margin-top: -0.25rem;
+}
+.-mt-14{
+  margin-top: -3.5rem;
+}
 .block{
   display: block;
 }
@@ -2385,6 +2412,10 @@ select{
 .hover\:bg-green-500:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(34 197 94 / var(--tw-bg-opacity));
+}
+.hover\:bg-black:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 .hover\:bg-gradient-to-r:hover{
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
