@@ -149,7 +149,7 @@
                             class="mx-auto h-32 rounded-full" />
                     </div>
                     <div class="text-center">
-                        <h3 class="text-center text-4xl font-bold">Kobe Bryant</h3>
+                        <h3 class="text-center text-4xl font-bold -mt-10">Kobe Bryant</h3>
                         <span class="text-sm">Shooting Guard</span>
                     </div>
                     
