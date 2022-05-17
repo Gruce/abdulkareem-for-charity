@@ -3,9 +3,7 @@
         class="rounded-xl border-2 border-primary-100 hover:shadow-lg hover:border-primary-500 w-96 h-auto group duration-300">
         {{-- case Image --}}
         <div class="pt-3 px-3">
-            {{-- <img class="rounded-t-lg" src="{{ asset($item->image_path) }}" alt="" /> --}}
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQI7Vm3bWFcLUw9o1XiIVwWv3Vcuitvy9GOCg&usqp=CAU"
-                class=" w-full rounded-lg">
+            <img src="{{ asset($event->image_path ?? 'img/kid.jpg') }}" class="rounded-t-lg" />
         </div>
         {{-- title + more info --}}
         <div class="p-6">
