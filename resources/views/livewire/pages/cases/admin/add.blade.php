@@ -100,7 +100,7 @@
                                     إختر ملف
                                 @endif
                             </span>
-                            <input id="file" type='file' class="hidden" wire:model="file_path" multiple />
+                            <input id="file" type='file' class="hidden" wire:model="file_path"  />
                         </label>
                         @error('file_path')
                             <span class="error text-primary-600 bg-primary-100 rounded-lg py-1 px-2 text-xs">لم يتم تحميل

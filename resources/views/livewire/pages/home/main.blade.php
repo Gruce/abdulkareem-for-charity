@@ -1,5 +1,4 @@
-<div>
-    <img src="/img/curve.png" class="-z-30 w-96 relative">
+<div >
     <div class="flex flex-col absolute h-screen">
 
         <!-- INTRO -->
