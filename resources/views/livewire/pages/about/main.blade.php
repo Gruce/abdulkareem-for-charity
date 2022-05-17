@@ -148,7 +148,7 @@
                             <img src="/img/mo.jpg" class="mx-auto h-32 rounded-full" />
                         </div>
                         <div class="text-center">
-                            <h3 class="text-center text-4xl font-bold">Kobe Bryant</h3>
+                            <h3 class="text-4xl font-bold">Kobe Bryant</h3>
                             <span class="text-sm">مرحله اولى - علوم</span>
                         </div>
 
