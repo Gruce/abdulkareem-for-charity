@@ -2,7 +2,7 @@
 <div>
     <div>
         <div>
-            @livewire('ui.search','title' )
+            @livewire('ui.search', '$events' )
         </div>
 
         <div class="grid grid-cols-4 gap-6 pt-5">
