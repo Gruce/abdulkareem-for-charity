@@ -141,18 +141,21 @@
 
             {{-- Cards --}}
             <div class="grid grid-cols-4 gap-6 px-16">
-                @for ($i = 0; $i < 8; $i++)
+                @forelse ($developers as $item)
                     <div
                         class="p-8 w-72 cursor-pointer rounded-3xl bg-white transition duration-300 ease-in-out hover:scale-105 hover:drop-shadow-2xl border border-gray-600">
                         <div class="-mt-4 -translate-y-1/2 transform rounded-full">
-                            <img src="/img/mo.jpg" class="mx-auto h-32 rounded-full" />
+                            <img src="{{$item->photo}}" class="mx-auto h-32 rounded-full" />
                         </div>
                         <div class="text-center">
-                            <h3 class="text-center text-4xl font-bold">Kobe Bryant</h3>
-                            <span class="text-sm">Shooting Guard</span>
+                            <h3 class="text-center text-4xl font-bold">{{$item->name}}</h3>
+                            <span class="text-sm">{{$item->stage}}</span>
                         </div>
                     </div>
-                @endfor
+                @empty
+                hello
+                @endforelse
+
             </div>
         </div>
 
