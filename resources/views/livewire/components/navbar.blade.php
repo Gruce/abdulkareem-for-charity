@@ -109,6 +109,7 @@ hidden
                             class="block py-2 pl-3 pr-4 text-gray-700 hover:bg-gray-300 rounded-lg border-gray-100 hover:scale-110 duration-200 border-b-2">
                             <i class="fa-solid fa-right-from-bracket"></i>
                         </button>
+
                     </form>
                 </div>
             </ul>
