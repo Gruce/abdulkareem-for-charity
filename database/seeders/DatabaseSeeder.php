@@ -19,6 +19,8 @@ class DatabaseSeeder extends Seeder
             StudentSeeder::class,
             ShareSeeder::class,
             EventSeeder::class,
+            DeveloperSeeder::class,
+
         ]);
     }
 }

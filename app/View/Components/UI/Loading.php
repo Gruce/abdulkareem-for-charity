@@ -23,6 +23,6 @@ class Loading extends Component
      */
     public function render()
     {
-        return view('components.ui.loading');
+        return view('components.u-i.loading');
     }
 }
