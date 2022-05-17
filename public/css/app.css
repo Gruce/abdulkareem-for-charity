@@ -955,6 +955,9 @@ select{
 .m-5{
   margin: 1.25rem;
 }
+.m-10{
+  margin: 2.5rem;
+}
 .mx-auto{
   margin-left: auto;
   margin-right: auto;
