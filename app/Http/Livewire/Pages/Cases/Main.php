@@ -12,6 +12,7 @@ class Main extends Component
 
     protected $listeners = [ '$refresh', 'search'];
 
+    
     function search($string)
     {
         $this->search = $string;
