@@ -26,7 +26,7 @@ class DeveloperSeeder extends Seeder
          Developer::create([
             'name' => 'حسين نجاح',
             'stage' => "المرحلة ألأولى - علوم الحاسوب",
-            'photo' => "/img/mo.jpg",
+            'photo' => "/img/Dev2.jpg",
         ]);
 
          ### id = 3 ###
