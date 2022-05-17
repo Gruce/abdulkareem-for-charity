@@ -6,7 +6,7 @@
                 <hr class="w-1/2">
             </div>
             <div class="form-item">
-                <label class="text-xl ">الاسم الكامل</label>
+                <label class="text-xl">الاسم الكامل</label>
                 <input wire:model="name" type="text" value="{{ $name }}"
                     class="bg-gray-50 border border-primary-400 text-sm focus:ring-primary-600 focus:border-primary-500 w-1/2 block p-2.5 rounded-md mt-2">
                 @error('name')
@@ -15,7 +15,7 @@
             </div>
             <div class="flex flex-col space-y-4 md:space-y-0 md:flex-row md:space-x-4">
                 <div class="form-item w-full">
-                    <label class="text-xl ">البريد الألكتروني</label>
+                    <label class="text-md">البريد الألكتروني</label>
                     <input wire:model="email" type="text" id="email"
                         class="bg-gray-50 border border-primary-400  text-sm focus:ring-primary-600 focus:border-primary-500 block w-1/2 p-2.5 mt-2 rounded-md">
                     @error('email')
@@ -39,7 +39,7 @@
                 <label class="text-xl ">اختر صورة الملف الشخصي</label>
                 <div class="flex items-center justify-center w-full">
                     <label
-                        class="flex flex-col border-4 border-dashed border-primary-400 w-full h-32 hover:bg-gray-100 group-hover:border-primary-500 rounded-md">
+                        class="flex flex-col border-4 border-dashed border-primary-100 w-full h-32 hover:bg-gray-100 group-hover:border-primary-500 rounded-md">
                         <div class="flex flex-col items-center justify-center pt-7">
                             <i class="fa-solid fa-image w-10 h-10 text-gray-400 group-hover:text-primary-500"></i>
                             <p class="text-sm text-gray-400 group-hover:text-gray-600 pt-1 tracking-wide">

@@ -19,10 +19,10 @@
                 </p>
                 <div class="mt-10 mr-4 flex gap-5">
                     <a href="{{ route('donate') }}"
-                        class="text-white text-2xl bg-primary-500 hover:bg-white  border border-transparent hover:border-green-500 hover:text-primary-500 focus:ring-4 focus:ring-primary-300  rounded-lg  px-5 py-2.5 mr-2 mb-2 ">تبرع
+                        class="text-white text-2xl hover:scale-110 duration-200 bg-primary-500 hover:bg-white border border-transparent hover:border-green-500 hover:text-primary-500 focus:ring-4 focus:ring-primary-300 rounded-lg px-5 py-2.5 mr-2 mb-2 ">تبرع
                         الان</a>
                     <a href="{{ route('cases') }}"
-                        class="hover:text-white text-2xl hover:bg-primary-500 bg-white  border hover:border-transparent border-green-500 text-primary-500 focus:ring-4 focus:ring-primary-300  rounded-lg  px-5 py-2.5 mr-2 mb-2 ">الحالات</a>
+                        class="hover:text-white text-2xl hover:scale-110 duration-200 hover:bg-primary-500 bg-white  border hover:border-transparent border-green-500 text-primary-500 focus:ring-4 focus:ring-primary-300  rounded-lg  px-5 py-2.5 mr-2 mb-2 ">الحالات</a>
                 </div>
             </div>
             {{--Photo--}}
@@ -53,8 +53,6 @@
                 نحن نعمل لأجل
             </span>
             <div class="my-20 flex gap-6 justify-center">
-                {{-- <blade
-                    livewire|(%26%2339%3Bcomponents.home.information%26%2339%3B%2C%5B%26%2339%3Bstate%26%2339%3B%20%3D%3E%201%5D)%0D> --}}
                     @livewire('components.home.information',['state' => true])
             </div>
         </div>
