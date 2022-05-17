@@ -89,10 +89,7 @@
                 @endforeach
 
                 {{-- Donate/Add Buttons --}}
-                <div class="flex gap-4 @auth
-@else
-hidden 
-@endauth">
+                <div class="flex gap-4 @guest hidden @endguest">
                     <a href=" {{ route('donate') }}"
                     class="block py-2 pl-3 pr-4 text-gray-700 hover:bg-gray-300 rounded-lg border-gray-100 hover:scale-110 duration-200 border-b-2">
                     تبرع
@@ -103,14 +100,49 @@ hidden
                             اضافة حالة
                         </a>
                     @endadmin
-                    <form method="POST" action="{{ route('logout') }}" x-data>
-                        @csrf
-                        <button type="submit"
-                            class="block py-2 pl-3 pr-4 text-gray-700 hover:bg-gray-300 rounded-lg border-gray-100 hover:scale-110 duration-200 border-b-2">
-                            <i class="fa-solid fa-right-from-bracket"></i>
-                        </button>
 
-                    </form>
+                    
+                    
+        
+                    <div class="relative" x-data="{ isOpen: false }">
+                        <button class="flex items-center focus:outline-none" @click="isOpen = !isOpen"
+                            @keydown.escape="isOpen = false">
+                            <i class="fa-solid fa-angle-down ml-2"></i>
+                            <img src="{{ asset(auth()->user()->profile_photo_path ?? '/img/user.png') }}" alt="Avatar Image" class="w-12 h-12 rounded-full">
+                            
+                        </button>
+        
+                        <ul class="absolute left-0 mt-2 overflow-hidden font-normal bg-white border rounded-md shadow w-24 "
+                            x-show="isOpen" @click.away="isOpen = false">
+                            <li>
+                                <a href="{{ route('profile') }}"
+                                    class="flex justify-around items-center p-3 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900">
+        
+                                    
+        
+                                    <span >حسابك</span>
+                                    <i class="fa-solid fa-circle-user"></i>
+        
+                                </a>
+                            </li>
+        
+                            
+        
+                            <li class="">
+                                <form method="POST" action="{{ route('logout') }}" class="" x-data>
+                                    @csrf
+                                    <button type="submit"
+                                        class="flex justify-around items-center p-3 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900 w-full">
+                                        <span> الخروج</span>
+                                        <i class="fa-solid fa-right-from-bracket"></i>
+                                        
+                                    </button>
+                                </form>
+                            </li>
+        
+                        </ul>
+        
+                    </div>
                 </div>
             </ul>
 

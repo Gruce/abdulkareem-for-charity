@@ -18,6 +18,7 @@
                     // 'created_at' => $item->created_at ,
                     'event' => $event
                 ])
+
             @empty
                 <div class="text-2xl font-medium text-gray-700">
                     لايوجد حالات
