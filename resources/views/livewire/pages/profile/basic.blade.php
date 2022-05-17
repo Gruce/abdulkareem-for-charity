@@ -35,7 +35,7 @@
                     <span class="text-red-500 error">{{ $message }}</span>
                 @enderror
             </div>
-            {{-- <div class="w-1/2 group">
+            <div class="w-1/2 group">
                 <label class="text-xl ">اختر صورة الملف الشخصي</label>
                 <div class="flex items-center justify-center w-full">
                     <label
@@ -45,39 +45,40 @@
                             <p class="text-sm text-gray-400 group-hover:text-gray-600 pt-1 tracking-wide">
                                 إختر صورة</p>
                         </div>
+                        {{-- profile_photo_path ??? --}}
                         <input wire:model="profile_photo" type="file" class="hidden" />
                     </label>
                 </div>
-            </div> --}}
+            </div>
 
             {{-- profile image( if fixed) --}}
-            <div class="w-1/2 mt-5 mx-7 items-center justify-center bg-grey-lighter">
-    <label
-        class="w-full flex flex-col items-center px-2 py-6  @if ($profile_photo_path) bg-primary-700 text-white @else bg-white text-primary-700 @endif rounded-lg tracking-wide border-4 border-dashed border-primary-700 cursor-pointer hover:bg-primary-700 hover:text-white">
-        <div wire:loading wire:target="profile_photo_path">
-            <x-ui.loading />
-        </div>
-        <div wire:loading.remove wire:target="profile_photo_path">
-            @if ($profile_photo_path)
-                <i class="fa-solid fa-check text-2xl"></i>
-            @else
-                <i class="fa-solid fa-upload text-2xl"></i>
-            @endif
-        </div>
-        <span class="mt-2 text-base leading-normal">
-            @if ($profile_photo_path)
-                تم اختيار الملف
-            @else
-                إختر ملف
-            @endif
-        </span>
-        <input id="file" type='file' class="hidden" wire:model="profile_photo_path" multiple />
-    </label>
-    @error('profile_photo_path')
-        <span class="error text-primary-600 bg-primary-100 rounded-lg py-1 px-2 text-xs">لم يتم تحميل
-            الملف</span>
-    @enderror
-</div>
+            {{-- <div class="w-1/2 items-center justify-center">
+                <label
+                    class="w-full flex flex-col items-center px-2 py-6  @if ($profile_photo_path) bg-primary-700 text-white @else bg-white text-primary-700 @endif rounded-lg tracking-wide border-4 border-dashed border-primary-700 cursor-pointer hover:bg-primary-700 hover:text-white">
+                    <div wire:loading wire:target="profile_photo_path">
+                        <x-ui.loading />
+                    </div>
+                    <div wire:loading.remove wire:target="profile_photo_path">
+                        @if ($profile_photo_path)
+                            <i class="fa-solid fa-check text-2xl"></i>
+                        @else
+                            <i class="fa-solid fa-upload text-2xl"></i>
+                        @endif
+                    </div>
+                    <span class="mt-2 text-base leading-normal">
+                        @if ($profile_photo_path)
+                            تم اختيار الملف
+                        @else
+                            إختر ملف
+                        @endif
+                    </span>
+                    <input id="file" type='file' class="hidden" wire:model="profile_photo_path" multiple />
+                </label>
+                @error('profile_photo_path')
+                    <span class="error text-primary-600 bg-primary-100 rounded-lg py-1 px-2 text-xs">لم يتم تحميل
+                        الملف</span>
+                @enderror
+            </div> --}}
             <button type="submit"
                 class="text-white bg-primary-600 hover:scale-105 duration-200 hover:bg-primary-800 focus:ring-2 focus:outline-none focus:ring-primary-600 font-medium text-sm w-40 px-5 py-2.5 text-center rounded-md">
                 أرسل</button>
