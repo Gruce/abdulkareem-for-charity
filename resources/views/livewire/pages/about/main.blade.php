@@ -144,7 +144,7 @@
                 @for ($i = 0; $i < 8; $i++)
                     <div
                         class="p-8 w-72 h-44 cursor-pointer rounded-2xl hover:bg-white mt-12 bg-white transition duration-300 ease-in-out hover:scale-105 hover:shadow-xl border border-gray-600">
-                        <div class="-mt-4 -translate-y-1/2 transform rounded-full">
+                        <div class="-mt-6 -translate-y-1/2 transform rounded-full">
                             <img src="/img/mo.jpg" class="mx-auto h-32 rounded-full" />
                         </div>
                         <div class="text-center -mt-14">
