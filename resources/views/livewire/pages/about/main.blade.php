@@ -55,7 +55,7 @@
 
             </div>
 
-            {{--Photo--}}
+            {{-- Photo --}}
             <div class="basis-1/2 col-span-5 ">
                 <img src="/img/About1.png" class="w-3/4 h-auto m-auto">
             </div>
@@ -64,7 +64,7 @@
 
         <div class="basis-1/4 grid grid-cols-12 justify-between mt-16">
 
-            {{--Photo--}}
+            {{-- Photo --}}
             <div class="basis-1/2 col-span-5 ">
                 <img src="/img/About2.png" class="w-3/4 h-auto m-auto">
             </div>
@@ -126,7 +126,7 @@
 
             </div>
 
-            {{--Photo--}}
+            {{-- Photo --}}
             <div class="basis-1/2 col-span-7 ">
                 <img src="/img/About3.png" class="w-3/4 h-auto m-auto">
             </div>
@@ -145,11 +145,11 @@
                     <div
                         class="p-8 w-72 h-44  rounded-2xl hover:bg-white mt-14 mb-4 bg-white transition duration-300 ease-in-out hover:scale-105  border border-gray-600">
                         <div class="-mt-8 -translate-y-1/2 transform rounded-full">
-                            <img src="{{$item->photo}}" class="mx-auto h-32 rounded-full" />
+                            <img src="{{ $item->photo }}" class="mx-auto h-32 rounded-full" />
                         </div>
                         <div class="text-center -mt-14">
-                            <h3 class="text-3xl font-bold mb-4">{{$item->name}}</h3>
-                            <span class="text-sm">{{$item->stage}}</span>
+                            <h3 class="text-3xl font-bold mb-4">{{ $item->name }}</h3>
+                            <span class="text-sm">{{ $item->stage }}</span>
                         </div>
                     </div>
                 @endforeach
