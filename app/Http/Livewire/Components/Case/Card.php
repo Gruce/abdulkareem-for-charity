@@ -49,14 +49,12 @@ class Card extends Component
             'toast' => true,
         ]);
     }
-    public function search($search)
-    {
+    public function search($search){
         $this->search = $search;
     }
-    public function render()
-    { $search = '%' . $this->search . '%';
-        $events = Event::where('title', 'LIKE', $search)->orderByDesc('id')->get();
-        
+    public function render(){
+       $search = '%' . $this->search . '%';
+        $this->events = Event::where('title', 'LIKE', $search)->get(); 
         return view('livewire.components.case.card');
     }
 }
