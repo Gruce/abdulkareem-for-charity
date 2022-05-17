@@ -55,7 +55,7 @@
 
             </div>
 
-            {{--Photo--}}
+            {{-- Photo --}}
             <div class="basis-1/2 col-span-5 ">
                 <img src="/img/About1.png" class="w-3/4 h-auto m-auto">
             </div>
@@ -64,7 +64,7 @@
 
         <div class="basis-1/4 grid grid-cols-12 justify-between mt-16">
 
-            {{--Photo--}}
+            {{-- Photo --}}
             <div class="basis-1/2 col-span-5 ">
                 <img src="/img/About2.png" class="w-3/4 h-auto m-auto">
             </div>
@@ -103,7 +103,7 @@
 
             <!-- Text -->
             <div class="basis-1/2 col-span-5 pt-20  text-center">
-                <h1 class="text-secondary-900 text-6xl font-bold ">
+                <h1 class="text-secondary-900 text-5xl font-bold ">
                     كيف يتم جمع التبرعات؟
                 </h1>
                 <p class="mt-10 text-xl text-gray-700 font-Alhurrareg px-1 md:px-9 text-right">"صـندوق الأستاذ عبد
@@ -126,7 +126,7 @@
 
             </div>
 
-            {{--Photo--}}
+            {{-- Photo --}}
             <div class="basis-1/2 col-span-7 ">
                 <img src="/img/About3.png" class="w-3/4 h-auto m-auto">
             </div>
@@ -141,26 +141,25 @@
 
             {{-- Cards --}}
             <div class="grid grid-cols-4 gap-6 px-16">
-                @for ($i = 0; $i < 8; $i++) 
-                <div
-                    class="p-8 w-72 cursor-pointer rounded-3xl bg-white transition duration-300 ease-in-out hover:scale-105 hover:drop-shadow-2xl border border-gray-600">
-                    <div class="-mt-4 -translate-y-1/2 transform rounded-full">
-                        <img src="/img/mo.jpg" 
-                            class="mx-auto h-32 rounded-full" />
+                @for ($i = 0; $i < 8; $i++)
+                    <div
+                        class="p-8 w-72 h-44 cursor-pointer rounded-2xl bg-white transition duration-300 ease-in-out hover:scale-105 hover:shadow-xl border border-gray-600">
+                        <div class="-mt-4 -translate-y-1/2 transform rounded-full">
+                            <img src="/img/mo.jpg" class="mx-auto h-32 rounded-full" />
+                        </div>
+                        <div class="text-center">
+                            <h3 class="text-center text-4xl font-bold">Kobe Bryant</h3>
+                            <span class="text-sm">مرحله اولى - علوم</span>
+                        </div>
+
                     </div>
-                    <div class="text-center">
-                        <h3 class="text-center text-4xl font-bold">Kobe Bryant</h3>
-                        <span class="text-sm">Shooting Guard</span>
-                    </div>
-                    
+                @endfor
+
+
             </div>
-            @endfor
-
-
         </div>
-    </div>
 
-</div>
+    </div>
 
 
 </div>
