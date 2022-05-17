@@ -44,6 +44,7 @@
                 </div>
             </main>
     </div>
+    
 
     @stack('modals')
 

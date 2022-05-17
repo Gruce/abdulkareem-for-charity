@@ -25,7 +25,7 @@ class DeveloperSeeder extends Seeder
          ### id = 2 ###
          Developer::create([
             'name' => 'حسين نجاح',
-            'stage' => "المرحلة ألأولى - علوم الحاسوب",
+            'stage' => "المرحلة الاولى - علوم الحاسوب",
             'photo' => "/img/Dev2.jpg",
         ]);
 
@@ -39,8 +39,8 @@ class DeveloperSeeder extends Seeder
          ### id = 4 ###
          Developer::create([
             'name' => 'أحمد عبدالكريم',
-            'stage' => "المرحلة ألأولى - علوم الحاسوب",
-            'photo' => "/img/mo.jpg",
+            'stage' => "المرحلة الاولى - علوم الحاسوب",
+            'photo' => "/img/Dev4.jpg",
         ]);
 
          ### id = 5 ###
