@@ -1205,6 +1205,9 @@ select{
 .h-72{
   height: 18rem;
 }
+.h-44{
+  height: 11rem;
+}
 .min-h-screen{
   min-height: 100vh;
 }
@@ -1568,6 +1571,9 @@ select{
 }
 .rounded-3xl{
   border-radius: 1.5rem;
+}
+.rounded-2xl{
+  border-radius: 1rem;
 }
 .rounded-l-md{
   border-top-left-radius: 0.375rem;
