@@ -1147,6 +1147,18 @@ select{
 .-mt-4{
   margin-top: -1rem;
 }
+.-mt-6{
+  margin-top: -1.5rem;
+}
+.mb-40{
+  margin-bottom: 10rem;
+}
+.mb-72{
+  margin-bottom: 18rem;
+}
+.mb-96{
+  margin-bottom: 24rem;
+}
 .block{
   display: block;
 }
@@ -1502,6 +1514,15 @@ select{
 }
 .gap-12{
   gap: 3rem;
+}
+.gap-20{
+  gap: 5rem;
+}
+.gap-y-6{
+  row-gap: 1.5rem;
+}
+.gap-y-20{
+  row-gap: 5rem;
 }
 .space-x-8 > :not([hidden]) ~ :not([hidden]){
   --tw-space-x-reverse: 0;
