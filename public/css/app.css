@@ -1118,6 +1118,18 @@ select{
 .-mt-px{
   margin-top: -1px;
 }
+.mb-16{
+  margin-bottom: 4rem;
+}
+.-mt-4{
+  margin-top: -1rem;
+}
+.-mt-10{
+  margin-top: -2.5rem;
+}
+.-mb-3{
+  margin-bottom: -0.75rem;
+}
 .block{
   display: block;
 }
@@ -1255,6 +1267,9 @@ select{
 }
 .w-24{
   width: 6rem;
+}
+.w-80{
+  width: 20rem;
 }
 .min-w-0{
   min-width: 0px;
@@ -2048,6 +2063,10 @@ select{
   font-size: 3.75rem;
   line-height: 1;
 }
+.text-4xl{
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
 .font-medium{
   font-weight: 500;
 }
@@ -2477,6 +2496,10 @@ select{
   --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+.hover\:drop-shadow-2xl:hover{
+  --tw-drop-shadow: drop-shadow(0 25px 25px rgb(0 0 0 / 0.15));
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 .focus\:z-10:focus{
   z-index: 10;
