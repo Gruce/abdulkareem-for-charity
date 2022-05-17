@@ -24,7 +24,7 @@
                     class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full justify-center items-center">
                     <div class="relative p-4 w-full max-w-2xl h-full md:h-auto">
                         <div class="relative bg-white rounded-lg shadow ">
-                            <button type="button"
+                            <button type="button" 
                                 class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-red-600 rounded-bl-lg rounded-tr-lg p-3 ml-auto inline-flex items-center "
                                 data-modal-toggle="defaultModal">
                                 <i class="fa-solid fa-xmark text-2xl"></i>
