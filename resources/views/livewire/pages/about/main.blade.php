@@ -154,8 +154,7 @@
                     </div>
                 @endforeach
 
-            </div>
-            @endfor
+                </div>
 
 
         </div>
