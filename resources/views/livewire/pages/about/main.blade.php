@@ -135,7 +135,7 @@
 
         <div class="basis-1/4 flex flex-col mt-20 py-10 space-y-10">
 
-            <h1 class="text-secondary-900 text-6xl font-bold text-center mb-10">
+            <h1 class="text-secondary-900 text-6xl font-bold text-center mb-20">
                 فريق المطورين
             </h1>
 
@@ -143,14 +143,14 @@
             <div class="grid grid-cols-4 gap-6 px-16">
                 @for ($i = 0; $i < 8; $i++) 
                 <div
-                    class="p-8 w-72 cursor-pointer rounded-3xl bg-white transition duration-300 ease-in-out hover:scale-105 hover:drop-shadow-2xl border mb-16 border-gray-600">
+                    class="p-8 w-80 cursor-pointer rounded-3xl bg-white transition duration-300 ease-in-out hover:scale-105 hover:drop-shadow-2xl border mb-16 border-gray-600">
                     <div class="-mt-4 -translate-y-1/2 transform rounded-full">
                         <img src="/img/mo.jpg" 
                             class="mx-auto h-32 rounded-full" />
                     </div>
-                    <div class="text-center">
-                        <h3 class="text-center text-4xl font-bold -mt-10">Kobe Bryant</h3>
-                        <span class="text-sm">Shooting Guard</span>
+                    <div class="text-center -mt-10">
+                        <h3 class="text-center text-4xl font-bold ">احمد عبدالكريم</h3>
+                        <div class="text-lg font-semibold mt-3 text-secondary-200 -mb-3">مرحلة رابعة - علوم</div>
                     </div>
                     
             </div>
