@@ -8,15 +8,9 @@ use App\Models\Event;
 class Main extends Component
 {
 
-    
-
-    
-
-    public function render()
-    {
+    public function render(){
         
         $events = Event::orderByDesc('id')->get();
-        // dd($events->toArray());
         return view('livewire.pages.cases.main', compact('events'));
     }
 }
