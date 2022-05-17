@@ -25,8 +25,8 @@
 
     @livewireStyles
 
-    <!-- Scripts -->
-    <script src="{{ mix('js/app.js') }}" defer></script>
+        <!-- Scripts -->
+        <script src="{{ mix('js/app.js') }}" defer></script>
 </head>
 
 <body class="font-NotoKufi " dir="rtl">
@@ -34,27 +34,27 @@
 
     <div class="rounded-lg ">
         @livewire('components.navbar')
-        <!-- Page Content -->
-        <main class=" p-10 mt-5 overflow-y-auto  rounded-lg md:h-main">
-            @hasSection('title')
-                <p class="px-5 py-2 text-3xl font-bold text-gray-600 bg-gray-200 rounded-lg">@yield('title')</p>
-            @endif
-            <div>
-                {{ $slot }}
-            </div>
-        </main>
+            <!-- Page Content -->
+            <main class=" p-10 mt-5 overflow-y-auto  rounded-lg md:h-main">
+                @hasSection('title')
+                    <p class="px-5 py-2 text-3xl font-bold text-gray-600 bg-gray-200 rounded-lg">@yield('title')</p>
+                @endif
+                <div>
+                    {{ $slot }}
+                </div>
+            </main>
     </div>
 
     @stack('modals')
 
     @livewireScripts
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <x-livewire-alert::scripts />
-    <script src="//unpkg.com/alpinejs" defer></script>
-    <script src="https://unpkg.com/flowbite@1.4.4/dist/flowbite.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js"
-        integrity="sha512-6PM0qYu5KExuNcKt5bURAoT6KCThUmHRewN3zUFNaoI6Di7XJPTMoT6K0nsagZKk2OB4L7E3q1uQKHNHd4stIQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <x-livewire-alert::scripts />
+        <script src="//unpkg.com/alpinejs" defer></script>
+        <script src="https://unpkg.com/flowbite@1.4.4/dist/flowbite.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js"
+            integrity="sha512-6PM0qYu5KExuNcKt5bURAoT6KCThUmHRewN3zUFNaoI6Di7XJPTMoT6K0nsagZKk2OB4L7E3q1uQKHNHd4stIQ=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 </body>
 
