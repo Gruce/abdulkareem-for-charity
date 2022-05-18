@@ -167,6 +167,8 @@
                 <p class="text-xs sm:text-base text-gray-700 text-center"></p>
             </div>
             <div class="flex justify-center pt-2 align-center">
+                
+                @admin
                 <div x-data="{ open: false }">
                     @if($item->shares->count() > 0)
                     <button @click="open = ! open"><i
@@ -199,6 +201,7 @@
                         class="text-red-400 fa-solid fa-trash text-xl hover:scale-110 duration-200 hover:text-red-600"></i>
 
                 </button>
+                @endadmin
             </div>
 
         </div>
