@@ -1,13 +1,12 @@
-<div>
-    @foreach ($collection as $item)
+<div >
+   
         <div
             class="flex flex-col justify-center max-w-sm p-6 shadow-md rounded-xl sm:px-12 border-2 border-primary-100 ">
-            <img src="{{ $item->photo }}" class="w-32 h-32 mx-auto rounded-full bg-white-500 aspect-square">
+            <img src="{{ $team->photo }}" class="w-32 h-32 mx-auto rounded-full bg-white-500 aspect-square">
             <div class="space-y-4 text-center divide-y divide-gray-700">
                 <div class="my-2 space-y-1">
-                    <h2 class="text-xl font-semibold sm:text-2xl pb-4">{{ $item->name }}</h2>
-                    <p class="text-xs sm:text-base text-gray-700 text-center">{{ $item->stage }} -
-                        {{ $item->department }}</p>
+                    <h2 class="text-xl font-semibold sm:text-2xl pb-4">{{ $team->name }}</h2>
+                    <p class="text-xs sm:text-base text-gray-700 text-center">{{ $team->stage }}  {{ $team->department }}</p>
                     <p class="text-xs sm:text-base text-gray-700 text-center"></p>
                 </div>
                 <div class="flex justify-center pt-2 align-center">
@@ -30,5 +29,5 @@
                 </div>
             </div>
         </div>
-    @endforeach
+    
 </div>

@@ -134,14 +134,15 @@
         </div>
 
         <div class="basis-1/4 flex flex-col mt-20 py-10 space-y-10">
+            {{-- Developers --}}
+            <div>
+                <h1 class="text-secondary-900 text-6xl font-bold text-center mb-20">
+                    فريق المطورين
+                </h1>
 
-            <h1 class="text-secondary-900 text-6xl font-bold text-center mb-20">
-                فريق المطورين
-            </h1>
-
-            {{-- Cards --}}
-            <div class="grid grid-cols-4 gap-8 justify-center px-16 mx-auto">
-                @foreach ($developers as $item)
+                {{-- Cards --}}
+                <div class="grid grid-cols-4 gap-8 justify-center  mx-auto">
+                    @foreach ($developers as $team)
                     {{-- <div
                         class="p-8 w-72 h-44  rounded-2xl hover:bg-white mt-14 mb-4 bg-white transition duration-300 ease-in-out hover:scale-105  border border-gray-600">
                         <div class="-mt-8 -translate-y-1/2 transform rounded-full">
@@ -152,16 +153,19 @@
                             <span class="text-sm">{{$item->stage}}</span>
                         </div>
                     </div> --}}
-                    @livewire('components.about.card')
-                @endforeach
-            </div>
 
-            <h1 class="text-secondary-900 text-6xl font-bold text-center mb-20">
-                فريق الأداريين
-            </h1>
-            {{-- Cards --}}
-            <div class="grid grid-cols-4 gap-8 px-16 mx-auto">
-                @foreach ($managers as $item)
+                    <livewire:components.about.card :team="$team" key="{{now()}}" />
+                    @endforeach
+                </div>
+            </div>
+            {{-- Managers --}}
+            <div>
+                <h1 class="text-secondary-900 text-6xl font-bold text-center mb-20">
+                    فريق الأداريين
+                </h1>
+                {{-- Cards --}}
+                <div class="grid grid-cols-4 gap-8 px-16 mx-auto">
+                    @foreach ($managers as $team)
                     {{-- <div
                         class="p-8 w-72 h-44  rounded-2xl hover:bg-white mt-14 mb-4 bg-white transition duration-300 ease-in-out hover:scale-105  border border-gray-600">
                         <div class="-mt-8 -translate-y-1/2 transform rounded-full">
@@ -173,9 +177,11 @@
                         </div>
                     </div> --}}
 
-                    @livewire('components.about.card')
-                @endforeach
+                    <livewire:components.about.card :team="$team" key="{{now()}}" />
+                    @endforeach
+                </div>
             </div>
+
         </div>
     </div>
 </div>
