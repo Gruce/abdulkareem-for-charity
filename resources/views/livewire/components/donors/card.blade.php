@@ -174,7 +174,7 @@
                 <div x-data="{ open: false }">
                     @if($item->shares->count() > 0)
                     <button @click="open = ! open"><i
-                            class="fa-solid fa-hand-holding-dollar h-10 w-10 mr-3 text-red-600 animate-pulse"></i>
+                            class="fa-solid fa-hand-holding-dollar h-8 w-8 mr-3 text-red-600 animate-pulse"></i>
                     </button>
                     @endif
                     <div x-show="open" @click.outside="open = false">
