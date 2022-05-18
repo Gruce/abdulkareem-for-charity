@@ -17,9 +17,9 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('stage');
+            $table->integer('type')->default(1); // developer = 1 : manager = 2
             $table->string('photo');
             $table->timestamps();
-            
         });
     }
 
