@@ -82,11 +82,18 @@
             <li class="py-2">يتم دفع الاسهم نقداً لأحد الممثلين</li>
             <li class="py-2">تضاف الاسهم الى حسابك بعد التأكد من عملية الدفع </li>
         </ul>
-        <div
-            class="p-8 max-w-lg h-44 mx-auto rounded-3xl hover:bg-white mt-14 mb-4 bg-white transition duration-300 ease-in-out hover:scale-105  border border-gray-600">
+        <div class="p-8 max-w-lg h-auto mx-auto rounded-3xl  mt-14  bg-white border border-gray-600">
             <div class="text-center ">
-                <h3 class="text-3xl font-bold ">ما نقص مال من صدقة</h3>
-                <input type="number">
+                <h3 class="text-3xl font-bold mb-5 ">ما نقص مال من صدقة</h3>
+                <div class="">
+                    <input type="number" id="floating_outlined"
+                        class="block px-2.5 pb-2.5  pt-4 w-full h-14 text-lg text-gray-900 bg-transparent rounded-lg border-1 border-gray-300 appearance-none  focus:outline-none focus:ring-0  focus:border-primary-500 peer"
+                        placeholder="ادخل عدد الاسهم"  min=2 max=25 />
+                </div>
+                <div class="mt-8">
+                    <a href=""
+                        class="text-white text-2xl bg-primary-500 hover:bg-primary-800 border border-transparent hover:border-green-500  focus:ring-4 focus:ring-primary-300 rounded-lg px-5 py-1 mr-2 mb-2 "> شراء الاسهم </a>
+                </div>
                 <span class="text-sm"></span>
             </div>
         </div>
@@ -94,6 +101,6 @@
 
     {{-- Photo --}}
     <div class="basis-1/2 col-span-7 ">
-        <img src="/img/donate.png" class="w-3/4 h-auto m-auto mt-24">
+        <img src="/img/donate.png" class="w-3/4 h-auto m-auto mt-16">
     </div>
 </div>
