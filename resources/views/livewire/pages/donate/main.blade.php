@@ -86,15 +86,16 @@
             <div class="text-center ">
                 <h3 class="text-3xl font-bold mb-5 ">ما نقص مال من صدقة</h3>
                 <div class="">
-                    <input type="number" id="floating_outlined"
+                    <input wire:model="share" id="item_count" type="number" value="1"
                         class="block px-2.5 pb-2.5  pt-4 w-full h-14 text-lg text-gray-900 bg-transparent rounded-lg border-1 border-gray-300 appearance-none  focus:outline-none focus:ring-0  focus:border-primary-500 peer"
-                        placeholder="ادخل عدد الاسهم" min=2 max=25 />
+                        placeholder="ادخل عدد الاسهم" min=1 max=25 />
                 </div>
-                <div class="mt-8">
-                    <a href=""
-                        class="text-white text-2xl bg-primary-500 hover:bg-primary-800 border border-transparent hover:border-green-500  focus:ring-4 focus:ring-primary-300 rounded-lg px-5 py-1 mr-2 mb-2 ">
-                        شراء الاسهم </a>
-                </div>
+                <button
+                    class="text-white text-2xl mt-4 bg-primary-500 hover:bg-primary-800 border border-transparent hover:border-green-500 focus:ring-2 focus:ring-primary-300 rounded-lg px-5 py-1 mr-2 mb-2"
+                    type="submit">
+
+                    <span class="" id="login_default_state">اشتري<span id="subtotal"></span></span>
+                </button>
                 <span class="text-sm"></span>
             </div>
         </div>
