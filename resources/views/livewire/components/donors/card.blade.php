@@ -63,11 +63,13 @@
                 @endauth
                 <div class="flex justify-between">
                     <p class="text-sm font-normal text-gray-500">انضم {{ $item->created_at->diffForHumans() }}</p>
+                    @admin
                     <button wire:click="confirm({{ $item->id }})" class="mx-2">
                         <i
                             class="text-red-400 fa-solid fa-trash text-xl hover:scale-110 duration-200 hover:text-red-600"></i>
 
                     </button>
+                    @endadmin
                 </div>
             </div>
         @empty

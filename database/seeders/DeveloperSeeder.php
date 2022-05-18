@@ -15,6 +15,8 @@ class DeveloperSeeder extends Seeder
      */
     public function run()
     {
+        ### developers ###
+
         ### id = 1 ###
         Developer::create([
             'name' => 'محمد جواد',
@@ -25,8 +27,8 @@ class DeveloperSeeder extends Seeder
         ### id = 2 ###
         Developer::create([
             'name' => 'حسين نجاح',
-            'stage' => "المرحلة الاولى - علوم الحاسوب",
-            'photo' => "/img/Dev2.jpg",
+            'stage' => "المرحلة ألأولى - علوم الحاسوب",
+            'photo' => "/img/mo.jpg",
         ]);
 
         ### id = 3 ###
@@ -39,8 +41,8 @@ class DeveloperSeeder extends Seeder
         ### id = 4 ###
         Developer::create([
             'name' => 'أحمد عبدالكريم',
-            'stage' => "المرحلة الاولى - علوم الحاسوب",
-            'photo' => "/img/Dev4.jpg",
+            'stage' => "المرحلة ألأولى - علوم الحاسوب",
+            'photo' => "/img/mo.jpg",
         ]);
 
         ### id = 5 ###
@@ -61,6 +63,13 @@ class DeveloperSeeder extends Seeder
         Developer::create([
             'name' => 'فاطمة نوفل',
             'stage' => "المرحلة الثالثة - علوم الحاسوب",
+            'photo' => "/img/mo.jpg",
+        ]);
+        ### manager ###
+        Developer::create([
+            'name' => 'مصطفى معتز',
+            'stage' => "المرحلة الثالثة - علوم الحاسوب",
+            'type' => 2,
             'photo' => "/img/mo.jpg",
         ]);
     }
