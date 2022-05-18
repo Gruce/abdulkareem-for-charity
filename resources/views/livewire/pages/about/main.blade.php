@@ -168,7 +168,7 @@
                 {{-- Cards --}}
                 <div class="grid grid-cols-4 gap-8 ">
                     @foreach ($developers as $team)
-                    {{-- <div
+                    <!-- <div
                         class="p-8 w-72 h-44  rounded-2xl hover:bg-white mt-14 mb-4 bg-white transition duration-300 ease-in-out hover:scale-105  border border-gray-600">
                         <div class="-mt-8 -translate-y-1/2 transform rounded-full">
                             <img src="{{$team->photo}}" class="mx-auto h-32 rounded-full" />
@@ -177,7 +177,7 @@
                             <h3 class="text-3xl font-bold mb-4">{{$team->name}}</h3>
                             <span class="text-sm">{{$team->stage}}</span>
                         </div>
-                    </div> --}}
+                    </div> -->
 
                     <livewire:components.about.card :team="$team" key="{{now()}}" />
                     @endforeach
