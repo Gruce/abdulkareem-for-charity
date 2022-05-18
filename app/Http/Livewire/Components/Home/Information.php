@@ -16,9 +16,9 @@ class Information extends Component
         $users = User::all()->count();
         $share = Share::all()->sum('share');
         $event = Event::whereColumn('received_price', 'target')->count();
-        $even = Event::sum('received_price');
-        $total = Share::sum('share') * 2000;
-        $current_price = $total - $even;
+        $payments = Event::sum('received_price');
+        $total = Share::where('state', true)->sum('share') * 2000;
+        $current_price = $total - $payments;
 
 
 
@@ -40,7 +40,7 @@ class Information extends Component
             ],
             [
                 'info' => 'مصروفات',
-                'value' => $even,
+                'value' => $payments,
 
             ],
             [
