@@ -1,13 +1,13 @@
 <div>
     <div
-        class="rounded-xl border-2 border-primary-100 hover:shadow-lg hover:border-primary-500 w-96 h-auto group duration-300">
+        class="rounded-xl border-2 border-primary-100 hover:shadow-lg hover:border-primary-500 group duration-300 ">
         {{-- case Image --}}
         <div class="pt-3 px-3">
             <img src="{{ asset($event->image_path ?? 'img/kid.jpg') }}" class="rounded-t-lg" />
         </div>
         {{-- title + more info --}}
         <div class="p-6">
-            <h5 class="text-center font-bold group-hover:text-primary-500 text-3xl mb-2"> {{ $event->title }}</h5>
+            <h5 class="text-center font-bold group-hover:text-primary-500 text-3xl md:text-xl mb-2"> {{ $event->title }}</h5>
             <div class="xs:28">
                 <p class="text-gray-900 text-medium mb-4">
                     {{ $event->getLimit('description') }}
