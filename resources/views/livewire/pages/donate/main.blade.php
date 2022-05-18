@@ -1,4 +1,4 @@
-<div class="grid grid-cols-2">
+<!-- <div class="grid grid-cols-2">
     <div class="col-span-1 mr-20 mt-20">
         <div class="font-bold text-5xl text-primary-800 mb-10">
             بِسْمِ اللَّـهِ الرَّحْمَـٰنِ الرَّحِيمِ
@@ -65,4 +65,34 @@
         </section>
     </div>
 
+</div> -->
+
+
+<div class="basis-1/4 grid grid-cols-12 justify-between mt-16">
+
+    <!-- Text -->
+    <div class="basis-1/2 col-span-5 pt-2  text-center">
+        <h1 class="text-secondary-900 text-6xl mr-10 font-bold ">
+            طريقة التبرع
+        </h1>
+        <ul class="list-disc list-inside text-secondary-200 text-right mr-24 mt-10 text-2xl">
+            <li class="py-2">يتم التبرع عن طريق شراء الاسهم</li>
+            <li class="py-2">سعر السهم 2000 دينار عراقي</li>
+            <li class="py-2">ادخل عدد الاسهم التي تود شرائها</li>
+            <li class="py-2">يتم دفع الاسهم نقداً لأحد الممثلين</li>
+            <li class="py-2">تضاف الاسهم الى حسابك بعد التأكد من عملية الدفع </li>
+        </ul>
+        <div
+            class="p-8 w-72 h-44  rounded-2xl hover:bg-white mt-14 mb-4 bg-white transition duration-300 ease-in-out hover:scale-105  border border-gray-600">
+            <div class="text-center -mt-14">
+                <h3 class="text-3xl font-bold mb-4"></h3>
+                <span class="text-sm"></span>
+            </div>
+        </div>
+    </div>
+
+    {{-- Photo --}}
+    <div class="basis-1/2 col-span-7 ">
+        <img src="/img/donate.png" class="w-3/4 h-auto m-auto mt-24">
+    </div>
 </div>
