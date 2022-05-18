@@ -12,6 +12,7 @@
                 <option value="2">تدريسي</option>
                 <option value="3">موظف</option>
                 <option value="4">اخرى</option>
+                {{-- <option value="5">الانتظار</option> --}}
             </select>
         </div>
     </div>
