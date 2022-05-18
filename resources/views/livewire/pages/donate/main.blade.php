@@ -103,6 +103,6 @@
 
     {{-- Photo --}}
     <div class="basis-1/2 col-span-7 ">
-        <img src="/img/donate.png" class="w-3/4 h-auto m-auto mt-16">
+        <img src="/img/donate.png" class="w-3/4 h-auto m-auto mt-10">
     </div>
 </div>
