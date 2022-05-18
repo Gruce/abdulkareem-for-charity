@@ -32,7 +32,7 @@
 <body class="font-NotoKufi " dir="rtl">
     <x-jet-banner />
 
-    <div class="rounded-lg ">
+    <div class="  ">
         @livewire('components.navbar')
             <!-- Page Content -->
             <main class=" p-10 mt-5 overflow-y-auto  rounded-lg md:h-main">
