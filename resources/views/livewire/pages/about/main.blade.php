@@ -133,16 +133,17 @@
 
         </div>
 
-        <div class="basis-1/4 flex flex-col mt-20 py-10 space-y-10">
-
-            <h1 class="text-secondary-900 text-6xl font-bold text-center mb-20">
-                فريق المطورين
-            </h1>
-
-            {{-- Cards --}}
-            <div class="grid grid-cols-4 gap-8 px-16 mx-auto">
-                @foreach ($developers as $item)
-                    <div
+        <div class="basis-1/4 flex flex-col mt-20 py-10 space-y-40 px-32">
+            
+            {{-- Managers --}}
+            <div >
+                <h1 class="text-secondary-900 text-6xl font-bold text-center mb-20">
+                    فريق الأداريين
+                </h1>
+                {{-- Cards --}}
+                <div class="grid grid-cols-4 gap-8 ">
+                    @foreach ($managers as $team)
+                    {{-- <div
                         class="p-8 w-72 h-44  rounded-2xl hover:bg-white mt-14 mb-4 bg-white transition duration-300 ease-in-out hover:scale-105  border border-gray-600">
                         <div class="-mt-8 -translate-y-1/2 transform rounded-full">
                             <img src="{{ $item->photo }}" class="mx-auto h-32 rounded-full" />
@@ -151,31 +152,38 @@
                             <h3 class="text-3xl font-bold mb-4">{{ $item->name }}</h3>
                             <span class="text-sm">{{ $item->stage }}</span>
                         </div>
-                    </div>
-                @endforeach
+                    </div> --}}
 
+                    <livewire:components.about.card :team="$team" key="{{now()}}" />
+                    @endforeach
+                </div>
             </div>
 
-            <h1 class="text-secondary-900 text-6xl font-bold text-center mb-20">
-                فريق الأداريين
-            </h1>
+            {{-- Developers --}}
+            <div>
+                <h1 class="text-secondary-900 text-6xl font-bold text-center mb-20">
+                    فريق المطورين
+                </h1>
 
-            {{-- Cards --}}
-            <div class="grid grid-cols-4 gap-8 px-16 mx-auto">
-                @foreach ($managers as $item)
-                    <div
+                {{-- Cards --}}
+                <div class="grid grid-cols-4 gap-8 ">
+                    @foreach ($developers as $team)
+                    {{-- <div
                         class="p-8 w-72 h-44  rounded-2xl hover:bg-white mt-14 mb-4 bg-white transition duration-300 ease-in-out hover:scale-105  border border-gray-600">
                         <div class="-mt-8 -translate-y-1/2 transform rounded-full">
-                            <img src="{{ $item->photo }}" class="mx-auto h-32 rounded-full" />
+                            <img src="{{$item->photo}}" class="mx-auto h-32 rounded-full" />
                         </div>
                         <div class="text-center -mt-14">
-                            <h3 class="text-3xl font-bold mb-4">{{ $item->name }}</h3>
-                            <span class="text-sm">{{ $item->stage }}</span>
+                            <h3 class="text-3xl font-bold mb-4">{{$item->name}}</h3>
+                            <span class="text-sm">{{$item->stage}}</span>
                         </div>
-                    </div>
-                @endforeach
+                    </div> --}}
 
+                    <livewire:components.about.card :team="$team" key="{{now()}}" />
+                    @endforeach
+                </div>
             </div>
+
         </div>
     </div>
 </div>
