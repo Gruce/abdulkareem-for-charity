@@ -19,7 +19,7 @@ class Share extends Model
 
     ### End Relationships ###
 
-    public function add($share , $note = null)
+    public function add($share, $note = null)
     {
         $this->share = $share;
         $this->note = $note;
@@ -31,9 +31,8 @@ class Share extends Model
         $this->state = !$state;
         $this->save();
     }
-    }
+}
     // public function add($data){
     //     $this->fill($data);
     //     $this->save();
     // }
-

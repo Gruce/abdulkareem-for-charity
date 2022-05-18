@@ -6,16 +6,19 @@ use Livewire\Component;
 use App\Models\User;
 use App\Models\Share;
 use App\Models\Event;
+
 class Information extends Component
-{   public $state = null;
+{
+    public $state = null;
 
     public function render()
     {
-            $users = User::all()->count();
-            $share = Share::all()->sum('share');
-            $event = Event::whereColumn('received_price','target')->count();
-            $even = Event::sum('received_price');Event::sum('received_price');
-            $total = Share:: sum('share') * 2000;
+        $users = User::all()->count();
+        $share = Share::all()->sum('share');
+        $event = Event::whereColumn('received_price', 'target')->count();
+        $even = Event::sum('received_price');
+        $total = Share::sum('share') * 2000;
+        $current_price = $total - $even;
 
 
 
@@ -27,7 +30,7 @@ class Information extends Component
             ],
             [
                 'info' => 'حالات معالجة',
-                'value' =>$event,
+                'value' => $event,
 
             ],
             [
@@ -47,7 +50,7 @@ class Information extends Component
             ],
             [
                 'info' => 'المبلغ الحالي',
-                'value' => $total,
+                'value' => $current_price,
 
             ],
 
@@ -81,7 +84,7 @@ class Information extends Component
 
 
         ]);
-        return view('livewire.components.home.information' ,[
+        return view('livewire.components.home.information', [
             'menu' => $menu,
             'activities' => $activities
         ]);
@@ -96,8 +99,6 @@ class Menu
     {
         // Menu Generation
         foreach ($items as $item) $this->items[] = new MenuItem($item);
-
-
     }
 }
 
@@ -111,6 +112,5 @@ class MenuItem
     {
         $this->info = $data['info'];
         $this->value = $data['value'];
-
     }
 }
