@@ -156,21 +156,25 @@
         <div class="space-y-4 text-center divide-y divide-gray-700">
             <div class="my-2 space-y-1">
                 <h2 class="text-xl font-semibold sm:text-2xl pb-4">{{ $item->name }}</h2>
-                <p class="text-xs sm:text-base text-gray-700 text-center @if ($item->type == 4) hidden @endif">{{ $item->getShare() ?? 0 }} سهماً -
+                <p class="text-xs sm:text-base text-gray-700 text-center ">{{ $item->getShare() ?? 0 }} سهماً
                     @if($item->type == 1)
-                    طالب
+                    - طالب
                     @elseif($item->type == 2)
-                    تدريسي
-                    @else
-                    موظف
-                    @endif</p>
+                    - تدريسي
+                    @elseif ($item->type == 3)
+                    - موظف
+                    @endif
+                </p>
+
                 <p class="text-xs sm:text-base text-gray-700 text-center"></p>
             </div>
             <div class="flex justify-center pt-2 align-center">
+
+                @admin
                 <div x-data="{ open: false }">
                     @if($item->shares->count() > 0)
                     <button @click="open = ! open"><i
-                            class="fa-solid fa-hand-holding-dollar h-10 w-10 mr-3 text-red-600 animate-pulse"></i>
+                            class="fa-solid fa-hand-holding-dollar h-8 w-8 mr-3 text-red-600 animate-pulse"></i>
                     </button>
                     @endif
                     <div x-show="open" @click.outside="open = false">
@@ -199,6 +203,7 @@
                         class="text-red-400 fa-solid fa-trash text-xl hover:scale-110 duration-200 hover:text-red-600"></i>
 
                 </button>
+                @endadmin
             </div>
 
         </div>

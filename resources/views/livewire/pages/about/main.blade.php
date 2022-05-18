@@ -33,11 +33,11 @@
                 <h1 class="text-secondary-900 text-6xl font-bold ">
                     صندوق الكريم
                 </h1>
-                <p class="mt-10 text-xl text-gray-700 font-Alhurrareg px-1 md:px-9 text-right">"صـندوق الأستاذ عبد
-                    الكريم الخيري" هو
+                <p class="mt-10 text-xl text-gray-700 font-Alhurrareg px-1 md:px-9 text-right">
+                    <b>صـندوق الأستاذ عبدالكريم الخيري</b> هو
                     مبادرة ونشاط طلابي
                     بحت ينطلق من
-                    طلبة كلية علوم الحاسوب<br> وتكنلوجيا المعلومات.
+                    طلبة كلية علوم الحاسوب وتكنلوجيا المعلومات.<br>
 
                     الهدف منه رعاية الاعمال الخيرية داخل الكلية وتكون الاولوية في صرف الصندوق للطلبة<br> ذوي الدخل دون
                     المحدود
@@ -74,8 +74,8 @@
                 <h1 class="text-secondary-900 text-6xl font-bold ">
                     من هو الأستاذ عبدالكريم
                 </h1>
-                <p class="mt-10 text-xl text-gray-700 font-Alhurrareg px-1 md:px-9 text-right">"صـندوق الأستاذ عبد
-                    الكريم الخيري" هو
+                <p class="mt-10 text-xl text-gray-700 font-Alhurrareg px-1 md:px-9 text-right">
+                    <b>صـندوق الأستاذ عبدالكريم الخيري</b> هو
                     مبادرة ونشاط طلابي
                     بحت ينطلق من
                     طلبة كلية علوم الحاسوب<br> وتكنلوجيا المعلومات.
