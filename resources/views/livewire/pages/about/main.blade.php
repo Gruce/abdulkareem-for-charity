@@ -33,11 +33,11 @@
                 <h1 class="text-secondary-900 text-6xl font-bold ">
                     صندوق الكريم
                 </h1>
-                <p class="mt-10 text-xl text-gray-700 font-Alhurrareg px-1 md:px-9 text-right">"صـندوق الأستاذ عبد
-                    الكريم الخيري" هو
+                <p class="mt-10 text-xl text-gray-700 font-Alhurrareg px-1 md:px-9 text-right">
+                    <b>صـندوق الأستاذ عبدالكريم الخيري</b> هو
                     مبادرة ونشاط طلابي
                     بحت ينطلق من
-                    طلبة كلية علوم الحاسوب<br> وتكنلوجيا المعلومات.
+                    طلبة كلية علوم الحاسوب وتكنلوجيا المعلومات.<br>
 
                     الهدف منه رعاية الاعمال الخيرية داخل الكلية وتكون الاولوية في صرف الصندوق للطلبة<br> ذوي الدخل دون
                     المحدود
@@ -74,8 +74,8 @@
                 <h1 class="text-secondary-900 text-6xl font-bold ">
                     من هو الأستاذ عبدالكريم
                 </h1>
-                <p class="mt-10 text-xl text-gray-700 font-Alhurrareg px-1 md:px-9 text-right">"صـندوق الأستاذ عبد
-                    الكريم الخيري" هو
+                <p class="mt-10 text-xl text-gray-700 font-Alhurrareg px-1 md:px-9 text-right">
+                    <b>صـندوق الأستاذ عبدالكريم الخيري</b> هو
                     مبادرة ونشاط طلابي
                     بحت ينطلق من
                     طلبة كلية علوم الحاسوب<br> وتكنلوجيا المعلومات.
@@ -171,11 +171,11 @@
                     {{-- <div
                         class="p-8 w-72 h-44  rounded-2xl hover:bg-white mt-14 mb-4 bg-white transition duration-300 ease-in-out hover:scale-105  border border-gray-600">
                         <div class="-mt-8 -translate-y-1/2 transform rounded-full">
-                            <img src="{{$item->photo}}" class="mx-auto h-32 rounded-full" />
+                            <img src="{{$team->photo}}" class="mx-auto h-32 rounded-full" />
                         </div>
                         <div class="text-center -mt-14">
-                            <h3 class="text-3xl font-bold mb-4">{{$item->name}}</h3>
-                            <span class="text-sm">{{$item->stage}}</span>
+                            <h3 class="text-3xl font-bold mb-4">{{$team->name}}</h3>
+                            <span class="text-sm">{{$team->stage}}</span>
                         </div>
                     </div> --}}
 

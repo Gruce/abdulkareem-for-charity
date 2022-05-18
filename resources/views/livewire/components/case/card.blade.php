@@ -7,16 +7,19 @@
         </div>
         {{-- title + more info --}}
         <div class="p-6">
+            {{-- Title --}}
             <h5 class="text-center font-bold group-hover:text-primary-500 text-3xl mb-2"> {{ $event->title }}</h5>
             <div class="xs:28">
-                <p class="text-gray-900 text-medium mb-4">
+                {{-- Description --}}
+                <p class="text-gray-500 font-bold text-medium mb-4">
                     {{ $event->getLimit('description') }}
-                    {{-- more info button --}}
-                    <button class="text-primary-500 hover:text-primary-700 hover:scale-110 font-bold duration-300 mb-4"
+                    {{-- Read more info --}}
+                    <button class="text-primary-400 hover:text-primary-700 font-bold mb-4"
                         type="button" data-modal-toggle="defaultModal">
                         قراءة المزيد
                     </button>
                 </p>
+                {{-- Description Modal --}}
                 <div id="defaultModal" tabindex="-1" aria-hidden="true"
                     class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full justify-center items-center">
                     <div class="relative p-4 w-full max-w-2xl h-full md:h-auto">
@@ -27,13 +30,13 @@
                                 <i class="fa-solid fa-xmark text-2xl"></i>
                             </button>
                             <div class="flex justify-center items-center rounded-t border-b">
-                                <h5 class="text-center font-bold text-primary-900 text-3xl">
+                                <h5 class="text-center font-bold text-primary-700 text-3xl">
                                     {{ $event->title }}
                                 </h5>
                             </div>
 
                             <div class="p-6 space-y-6">
-                                <p class="text-base font-semibold leading-relaxed text-gray-600">
+                                <p class="text-base font-semibold leading-relaxed text-black">
                                     {{ $event->description }}
                                 </p>
                             </div>
@@ -44,13 +47,13 @@
                 <div class="flex justify-center @admin
                         justify-between
                         @endadmin">
-                    <div class="font-bold font-noto text-xl pl-1 group-hover:text-primary-500 text-center">
-                        الهدف : {{ $event->target }} د.ع
+                    <div class="font-bold font-noto text-xl pl-1 group-hover:text-primary-400 text-center">
+                        الهدف  {{ $event->target }} د.ع
 
                     </div>
                     @admin
-                        <div class="font-bold font-noto text-xl group-hover:text-primary-500 text-center">
-                            المتبقي : {{ $event->received() }} د.ع
+                        <div class="font-bold font-noto text-xl group-hover:text-primary-400 text-center">
+                            المتبقي  {{ $event->received() }} د.ع
 
                         </div>
                     @endadmin
@@ -59,18 +62,18 @@
                             <div x-data="{ open: false }">
                                 <button wire:click="confirm({{ $event->id }})" class="mx-2">
                                     <i
-                                        class="text-red-400 fa-solid fa-trash text-xl hover:scale-110 duration-200 hover:text-red-600"></i>
+                                        class="text-red-400 fa-solid fa-trash text-lg duration-200 hover:text-red-600"></i>
 
                                 </button>
-                                <button wire:click="$set('case_id', {{ $event->id }})" class="mx-2"
+                                <button wire:click="$set('case_id', {{ $event->id }})"
                                     type="button" data-modal-toggle="case-modal">
                                     <i
-                                        class="text-primary-400 fa-solid fa-pen-to-square text-xl hover:rotate-12 duration-200 hover:text-primary-600"></i>
+                                        class="text-primary-400 fa-solid fa-pen-to-square text-lg hover:rotate-12 duration-200 hover:text-primary-600"></i>
                                 </button>
                                 @if ($event->received_price != $event->target)
                                     <button @click="open = ! open" class="mx-2">
                                         <i
-                                            class="text-red-400 fa-solid fa-plus text-xl hover:scale-110 hover:rotate-45 duration-300 hover:text-red-600"></i>
+                                            class="text-red-400 fa-solid fa-plus text-lg hover:rotate-45 duration-300 hover:text-red-600"></i>
                                     </button>
                                     <div x-show="open" @click.outside="open = false">
                                         <input type="text" wire:model="received_price"
