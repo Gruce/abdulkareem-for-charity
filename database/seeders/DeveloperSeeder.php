@@ -14,54 +14,71 @@ class DeveloperSeeder extends Seeder
      * @return void
      */
     public function run()
-    {  
+    {
+        ### developers ###
+
         ### id = 1 ###
         Developer::create([
             'name' => 'محمد جواد',
-            'stage' => "المرحلة الثانية - علوم الحاسوب",
+            'department'=>'علوم الحاسوب',
+            'stage' => "المرحلة الثانية",
             'photo' => "/img/mo.jpg",
         ]);
 
-         ### id = 2 ###
-         Developer::create([
+        ### id = 2 ###
+        Developer::create([
             'name' => 'حسين نجاح',
-            'stage' => "المرحلة الاولى - علوم الحاسوب",
-            'photo' => "/img/Dev2.jpg",
+            'department'=>'علوم الحاسوب',
+            'stage' => "المرحلة الأولى",
+            'photo' => "/img/dev2.jpg",
         ]);
 
-         ### id = 3 ###
-         Developer::create([
+        ### id = 3 ###
+        Developer::create([
             'name' => 'منار ناصر',
-            'stage' => "المرحلة الثالثة - علوم الحاسوب",
+            'department'=>'علوم الحاسوب',
+            'stage' => "المرحلة الثالثة",
             'photo' => "/img/mo.jpg",
         ]);
 
-         ### id = 4 ###
-         Developer::create([
+        ### id = 4 ###
+        Developer::create([
             'name' => 'أحمد عبدالكريم',
-            'stage' => "المرحلة الاولى - علوم الحاسوب",
-            'photo' => "/img/Dev4.jpg",
+            'department'=>'علوم الحاسوب',
+            'stage' => "المرحلة الأولى",
+            'photo' => "/img/dev4.jpg",
         ]);
 
-         ### id = 5 ###
-         Developer::create([
+        ### id = 5 ###
+        Developer::create([
             'name' => 'موسى نمير',
-            'stage' => "المرحلة الثانية - علوم الحاسوب",
+            'department'=>'علوم الحاسوب',
+            'stage' => "المرحلة الثانية",
             'photo' => "/img/mo.jpg",
         ]);
 
-         ### id = 6 ###
-         Developer::create([
+        ### id = 6 ###
+        Developer::create([
             'name' => 'زينب أمجد ',
-            'stage' => "المرحلة الرابعة - علوم الحاسوب",
+            'department'=>'علوم الحاسوب',
+            'stage' => "المرحلة الرابعة",
             'photo' => "/img/mo.jpg",
         ]);
 
-         ### id = 7 ###
-         Developer::create([
+        ### id = 7 ###
+        Developer::create([
             'name' => 'فاطمة نوفل',
-            'stage' => "المرحلة الثالثة - علوم الحاسوب",
-            'photo' => "/img/mo.jpg",
+            'department'=>'علوم الحاسوب',
+            'stage' => 'المرحلة الثالثة',
+            'photo' =>'/img/mo.jpg',
+        ]);
+        ### manager ###
+        Developer::create([
+            'name' => 'مصطفى معتز',
+            'department' => 'علوم الحاسوب',
+            'stage' => "المرحلة الثالثة",
+            'type' => 2,
+            'photo' => '/img/mo.jpg',
         ]);
     }
 }

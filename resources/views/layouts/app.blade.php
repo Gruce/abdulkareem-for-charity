@@ -32,13 +32,13 @@
 <body class="font-NotoKufi " dir="rtl">
     <x-jet-banner />
 
-    <div class="rounded-lg ">
+    <div class="  ">
         @livewire('components.navbar')
             <!-- Page Content -->
             <main class=" p-10 mt-5 overflow-y-auto  rounded-lg md:h-main">
-                @hasSection('title')
+                {{-- @hasSection('title')
                     <p class="px-5 py-2 text-3xl font-bold text-gray-600 bg-gray-200 rounded-lg">@yield('title')</p>
-                @endif
+                @endif --}}
                 <div>
                     {{ $slot }}
                 </div>
