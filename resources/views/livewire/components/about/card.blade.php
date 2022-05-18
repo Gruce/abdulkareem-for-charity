@@ -6,7 +6,7 @@
             <div class="space-y-4 text-center divide-y divide-gray-700">
                 <div class="my-2 space-y-1">
                     <h2 class="text-xl font-semibold sm:text-2xl pb-4">{{ $team->name }}</h2>
-                    <p class="text-xs sm:text-base text-gray-700 text-center">{{ $team->stage }}  {{ $team->department }}</p>
+                    <p class="text-xs sm:text-base text-gray-700 text-center">{{ $team->stage }} - {{ $team->department }}</p>
                     <p class="text-xs sm:text-base text-gray-700 text-center"></p>
                 </div>
                 <div class="flex justify-center pt-2 align-center">

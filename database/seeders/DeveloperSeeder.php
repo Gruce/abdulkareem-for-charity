@@ -30,7 +30,7 @@ class DeveloperSeeder extends Seeder
             'name' => 'حسين نجاح',
             'department'=>'علوم الحاسوب',
             'stage' => "المرحلة الأولى",
-            'photo' => "/img/mo.jpg",
+            'photo' => "/img/dev2.jpg",
         ]);
 
         ### id = 3 ###
@@ -46,7 +46,7 @@ class DeveloperSeeder extends Seeder
             'name' => 'أحمد عبدالكريم',
             'department'=>'علوم الحاسوب',
             'stage' => "المرحلة الأولى",
-            'photo' => "/img/mo.jpg",
+            'photo' => "/img/dev4.jpg",
         ]);
 
         ### id = 5 ###
