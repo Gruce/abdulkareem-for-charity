@@ -2,14 +2,13 @@
 <div>
 
     <div class="w-full md:w-full shadow p-5 rounded-lg bg-white">
-        <div class="col-start-1 col-end-3">
-            @livewire('ui.search')
-        </div>
-
-
-
+        
         <div>
+            
             <div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-3 gap-4 mt-4">
+                <div class="col-span-2">
+                    @livewire('ui.search')
+                </div>
                 <select 
                     class="px-10 py-3 w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0 text-sm">
                     <option value="">حالة التبرع</option>
@@ -63,7 +62,7 @@
 
                 </select>
                 <select
-                    class="col-span-3 px-10 py-3 w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0 text-sm">
+                    class=" px-10 py-3 w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0 text-sm">
                     <option value="">القسم</option>
                     <option value="">علوم الحاسوب</option>
                     <option value="">نظم المعلومات</option>
