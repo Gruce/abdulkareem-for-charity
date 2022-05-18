@@ -204,9 +204,21 @@
 
                 </button>
                 @endadmin
+
             </div>
 
+
         </div>
+        <div class= "flex justify-between mt-4">
+        <div>
+            <p class="text-xs text-gray-600 mr-2">انضم {{ $item->created_at->diffForHumans() }}</p>
+        </div>
+        @auth
+        <div>
+            <p class="text-xs text-gray-600">البريد : {{ $item->email }}</p>
+        </div>
+        @endauth
+    </div>
     </div>
     @empty
         لا يوجد متبرعين
