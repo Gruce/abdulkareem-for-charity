@@ -83,9 +83,10 @@
             <li class="py-2">تضاف الاسهم الى حسابك بعد التأكد من عملية الدفع </li>
         </ul>
         <div
-            class="p-8 w-72 h-44  rounded-2xl hover:bg-white mt-14 mb-4 bg-white transition duration-300 ease-in-out hover:scale-105  border border-gray-600">
-            <div class="text-center -mt-14">
-                <h3 class="text-3xl font-bold mb-4"></h3>
+            class="p-8 max-w-lg h-44 mx-auto rounded-3xl hover:bg-white mt-14 mb-4 bg-white transition duration-300 ease-in-out hover:scale-105  border border-gray-600">
+            <div class="text-center ">
+                <h3 class="text-3xl font-bold ">ما نقص مال من صدقة</h3>
+                <input type="number">
                 <span class="text-sm"></span>
             </div>
         </div>
