@@ -9,14 +9,13 @@
                 <div class="col-span-2">
                     @livewire('ui.search')
                 </div>
+                
                 <select wire:change="getType" wire:model="state"
                     class="px-10 py-3 w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0 text-sm">
-                    <option value="0">حالة التبرع</option>
-                    <option value="1">ارسل طلب تبرع جديد</option>
-                    <option value="0">لم يرسل طلب جديد</option>
-
+                    <option value="">حالة التبرع</option>
+                    <option value="0">ارسل طلب تبرع جديد</option>
+                    <option value="1">لم يرسل طلب جديد</option>
                 </select>
-
                 <select wire:change="getType" wire:model="type"
                     class="px-10 py-3 w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0 text-sm">
                     <option value="0">النوع</option>

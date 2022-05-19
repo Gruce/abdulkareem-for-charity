@@ -109,8 +109,13 @@ class Card extends Component
         if($this->user_gender != 0 && $this->user_gender <= 2){
             $this->users = $this->users->where('gender', $this->user_gender);
         }
-        if($this->user_request != 0 && $this->user_request == false){
-            $this->users = $this->users->where('gender', $this->user_gender);
+        if($this->user_request == 1 ){
+            $this->users = $this->users->with([
+                'shares' => function($query){
+                    return $query->where('state',$this->user_request)->get();
+                }
+            ]);
+            //dd($this->user_request);
         }
         $this->users = $this->users->where('name', 'LIKE', $search)->orderByDesc('id')->get();
         return view('livewire.components.donors.card');

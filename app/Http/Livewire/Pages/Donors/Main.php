@@ -7,7 +7,7 @@ use Livewire\Component;
 
 class Main extends Component
 {
-    public $type = 0 , $gender = 0, $state = 0;
+    public $type = 0 , $gender = 0 ,$state;
 
     public function getType()
     {
