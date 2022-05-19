@@ -8,8 +8,8 @@
                 <h1 class="text-secondary-900 text-6xl font-bold ">
                     صندوق الكريم
                 </h1>
-                <p class="mt-10 text-xl text-gray-700 font-Alhurrareg px-1 md:px-9 text-right">"صـندوق الأستاذ عبد
-                    الكريم الخيري" هو
+                <p class="mt-10 text-xl text-gray-700 font-Alhurrareg px-1 md:px-9 text-right"><b>صـندوق الأستاذ عبد
+                        الكريم الخيري</b> هو
                     مبادرة ونشاط طلابي
                     بحت ينطلق من
                     طلبة كلية علوم الحاسوب<br> وتكنلوجيا المعلومات.
@@ -109,16 +109,16 @@
         </div>
 
         <div class="basis-1/4 flex flex-col mt-20 py-10 space-y-40 px-32">
-            
+
             {{-- Managers --}}
-            <div >
+            <div>
                 <h1 class="text-secondary-900 text-6xl font-bold text-center mb-20">
                     فريق الأداريين
                 </h1>
                 {{-- Cards --}}
                 <div class="grid grid-cols-4 gap-8 ">
                     @foreach ($managers as $team)
-                    <livewire:components.about.card :team="$team" key="{{now()}}" />
+                        <livewire:components.about.card :team="$team" key="{{ now() }}" />
                     @endforeach
                 </div>
             </div>
@@ -132,7 +132,7 @@
                 {{-- Cards --}}
                 <div class="grid grid-cols-4 gap-8 ">
                     @foreach ($developers as $team)
-                    <livewire:components.about.card :team="$team" key="{{now()}}" />
+                        <livewire:components.about.card :team="$team" key="{{ now() }}" />
                     @endforeach
                 </div>
             </div>
