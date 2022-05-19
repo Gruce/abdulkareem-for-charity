@@ -2187,6 +2187,10 @@ select{
   --tw-text-opacity: 1;
   color: rgb(60 63 137 / var(--tw-text-opacity));
 }
+.text-primary-900{
+  --tw-text-opacity: 1;
+  color: rgb(37 116 79 / var(--tw-text-opacity));
+}
 .underline{
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
@@ -2981,6 +2985,10 @@ select{
     font-size: 1.875rem;
     line-height: 2.25rem;
   }
+  .md\:text-xl{
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
 }
 @media (min-width: 1024px){
   .lg\:col-span-4{
@@ -3008,5 +3016,13 @@ select{
 @media (min-width: 1280px){
   .xl\:grid-cols-3{
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .xl\:grid-cols-4{
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+@media (min-width: 1536px){
+  .\32xl\:grid-cols-4{
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }
