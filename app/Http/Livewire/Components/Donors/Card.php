@@ -10,9 +10,9 @@ use App\Models\Share;
 class Card extends Component
 {
     use LivewireAlert;
-    public $name, $type, $shares, $share, $photo, $date, $email, $phone_number;
+    public $name, $type, $shares, $share, $photo, $date, $email, $phone_number, $gender , $state;
 
-    public $search,$user_type;
+    public $search,$user_type, $user_gender, $user_request;
 
     public $share_id;
 
@@ -87,10 +87,13 @@ class Card extends Component
         $this->search = $search;
     }
 
-    public function getUserType ($type)
+    public function getUserType ($type, $gender, $state)
     {
         $this->user_type = $type;
+        $this->user_gender = $gender;
+        $this->user_request = $state;
     }
+
 
     public function render(){
         $search = '%' . $this->search . '%';
@@ -102,6 +105,12 @@ class Card extends Component
         ]);
         if($this->user_type != 0 && $this->user_type <= 4){
             $this->users = $this->users->where('type', $this->user_type);
+        }
+        if($this->user_gender != 0 && $this->user_gender <= 2){
+            $this->users = $this->users->where('gender', $this->user_gender);
+        }
+        if($this->user_request != 0 && $this->user_request == false){
+            $this->users = $this->users->where('gender', $this->user_gender);
         }
         $this->users = $this->users->where('name', 'LIKE', $search)->orderByDesc('id')->get();
         return view('livewire.components.donors.card');

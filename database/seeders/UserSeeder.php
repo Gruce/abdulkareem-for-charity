@@ -23,7 +23,8 @@ class UserSeeder extends Seeder
             'email' => 'admin@gmail.com',
             'password' => bcrypt('123456'),
             'is_admin' => true,
-            'type' => 1
+            'type' => 1,
+            'gender' => 1
         ]);
 
         // id:2
@@ -32,7 +33,8 @@ class UserSeeder extends Seeder
             'email' => 'hussein@gmail.com',
             'password' => bcrypt('123456'),
             'is_admin' => true,
-            'type' => 2
+            'type' => 2,
+            'gender' => 2
         ]);
 
         // id:3
@@ -41,7 +43,8 @@ class UserSeeder extends Seeder
             'email' => 'manar@gmail.com',
             'password' => bcrypt('123456'),
             'is_admin' => true,
-            'type' => 3
+            'type' => 3,
+            'gender' => 1
         ]);
 
         // id:4
@@ -50,29 +53,32 @@ class UserSeeder extends Seeder
             'email' => 'mosa@gmail.com',
             'password' => bcrypt('123456'),
             'is_admin' => true,
-            'type' => 4
+            'type' => 4,
+            'gender' => 2
         ]);
 
 
         ### end admin ###
 
-        ### User ### 
+        ### User ###
 
-        // id:5 
+        // id:5
         User::create([
             'name' => 'Mohammed',
             'email' => 'mohammed@gmail.com',
             'password' => bcrypt('123456'),
             //Default User
-            'type' => 1
+            'type' => 1,
+            'gender' => 1
         ]);
-        // id:6 
+        // id:6
         User::create([
             'name' => 'Zainab',
             'email' => 'zainab@gmail.com',
             'password' => bcrypt('123456'),
             //Default User
-            'type' => 2
+            'type' => 2,
+            'gender' => 1
         ]);
 
         // id:7
@@ -81,7 +87,8 @@ class UserSeeder extends Seeder
             'email' => 'ahmed@gmail.com',
             'password' => bcrypt('123456'),
             //Default User
-            'type' => 3
+            'type' => 3,
+            'gender' => 2
         ]);
 
         // id:8
@@ -90,12 +97,13 @@ class UserSeeder extends Seeder
             'email' => 'fatma@gmail.com',
             'password' => bcrypt('123456'),
             //Default User
-            'type' => 4
+            'type' => 4,
+            'gender' => 1
         ]);
 
         ### end User ###
 
 
-        
+
     }
 }
