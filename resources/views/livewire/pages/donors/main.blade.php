@@ -68,18 +68,12 @@
                     <option value="">نظم المعلومات</option>
 
                 </select>
-
-<<<<<<< Updated upstream
-
-
-
-=======
->>>>>>> Stashed changes
             </div>
         </div>
+
         <div class="mt-4">
             @livewire('components.donors.card')
         </div>
+        
     </div>
-
 </div>
