@@ -8,9 +8,7 @@
                     class="px-10 py-3 w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0 text-sm">
                     <option value="">الكل</option>
                     <option value="">الحالات التي تم علاجها</option>
-                    <option value="">حالات لم تعالج للان</option>
-
-
+                    <option value="">حالات لم تعالج الى الان</option>
                 </select>
             </div>
         </div>

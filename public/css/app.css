@@ -2557,6 +2557,10 @@ select{
   --tw-text-opacity: 1;
   color: rgb(248 113 113 / var(--tw-text-opacity));
 }
+.hover\:text-red-500:hover{
+  --tw-text-opacity: 1;
+  color: rgb(239 68 68 / var(--tw-text-opacity));
+}
 .hover\:shadow-xl:hover{
   --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
@@ -2779,6 +2783,14 @@ select{
 .group:hover .group-hover\:text-primary-500{
   --tw-text-opacity: 1;
   color: rgb(78 198 142 / var(--tw-text-opacity));
+}
+.group:hover .group-hover\:text-primary-700{
+  --tw-text-opacity: 1;
+  color: rgb(52 162 111 / var(--tw-text-opacity));
+}
+.group:hover .group-hover\:text-primary-400{
+  --tw-text-opacity: 1;
+  color: rgb(124 213 172 / var(--tw-text-opacity));
 }
 .group:focus .group-focus\:right-0{
   right: 0px;
