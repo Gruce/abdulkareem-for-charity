@@ -1078,9 +1078,12 @@ select{
 }
 .mb-3{
   margin-bottom: 0.75rem;
+<<<<<<< Updated upstream
 }
 .ml-8{
   margin-left: 2rem;
+=======
+>>>>>>> Stashed changes
 }
 .block{
   display: block;
@@ -1891,10 +1894,13 @@ select{
   padding-left: 8rem;
   padding-right: 8rem;
 }
+<<<<<<< Updated upstream
 .px-20{
   padding-left: 5rem;
   padding-right: 5rem;
 }
+=======
+>>>>>>> Stashed changes
 .pt-6{
   padding-top: 1.5rem;
 }
