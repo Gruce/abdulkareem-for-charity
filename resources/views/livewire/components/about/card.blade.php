@@ -1,4 +1,5 @@
 <div >
+   
         <div
             class="flex flex-col justify-center max-w-sm p-6 shadow-md rounded-xl sm:px-12 border-2 border-primary-100 ">
             <img src="{{ $team->photo }}" class="w-32 h-32 mx-auto rounded-full bg-white-500 aspect-square">

@@ -156,7 +156,7 @@
         <div class="space-y-4 text-center divide-y divide-gray-700">
             <div class="my-2 space-y-1">
                 <h2 class="text-xl font-semibold sm:text-2xl pb-4">{{ $item->name }}</h2>
-                <p class="text-xs sm:text-base text-gray-700 text-center ">{{ $item->getShare() ?? 0 }} سهماً
+                <p class="text-xs sm:text-base text-gray-700 text-center ">{{ $item->getShare() ?? 0 }} سهم
                     @if($item->type == 1)
                     - طالب
                     @elseif($item->type == 2)
@@ -165,8 +165,6 @@
                     - موظف
                     @endif
                 </p>
-
-                <p class="text-xs sm:text-base text-gray-700 text-center"></p>
             </div>
             <div class="flex justify-center pt-2 align-center">
 
@@ -205,9 +203,25 @@
 
                 </button>
                 @endadmin
+
             </div>
 
+
         </div>
+        <div class= "flex justify-between mt-4">
+        <div>
+            <p class="text-xs text-gray-600 mr-2">انضم {{ $item->created_at->diffForHumans() }}</p>
+        </div>
+        @admin
+        @if($item->phoneNumber)
+        <div class="text-xs text-gray-600">
+            <i class="fa-solid fa-phone-flip "></i>
+            <span class="">{{ $item->phone_number }}</span>
+            
+        </div>
+        @endif
+        @endadmin
+    </div>
     </div>
     @empty
         لا يوجد متبرعين
