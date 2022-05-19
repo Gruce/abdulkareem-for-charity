@@ -2,19 +2,19 @@
 <div>
 
     <div class="w-full md:w-full shadow p-5 rounded-lg bg-white">
-        
+
         <div>
-            
+
             <div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-3 gap-4 mt-4">
                 <div class="col-span-2">
                     @livewire('ui.search')
                 </div>
-                <select 
+                <select
                     class="px-10 py-3 w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0 text-sm">
                     <option value="">حالة التبرع</option>
                     <option value="">ارسل طلب تبرع جديد</option>
                     <option value="">لم يرسل طلب جديد</option>
-                    
+
                 </select>
 
                 <select wire:change="x" wire:model="type"
@@ -33,7 +33,7 @@
                     <option value=""></option>
                 </select>
 
-                
+
                 <select
                     class="px-10 py-3 w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0 text-sm">
                     <option value="">نوع الدراسة</option>
@@ -68,11 +68,6 @@
                     <option value="">نظم المعلومات</option>
 
                 </select>
-
-
-
-
-
             </div>
         </div>
         <div class="mt-4">
