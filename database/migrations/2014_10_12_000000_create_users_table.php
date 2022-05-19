@@ -25,6 +25,7 @@ return new class extends Migration
             $table->boolean('is_admin')->default(false);   ### Admin: true, User: false ###
             $table->string('phone_number')->nullable();
             $table->integer('type')->default(1);   ### Student: 1, Teacher: 2, Employees: 3, Other: 4 ... ###
+            $table->string('gender')->default(1); ###  Female: 1, Male:2
             $table->timestamps();
         });
     }
