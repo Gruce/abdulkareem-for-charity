@@ -970,6 +970,10 @@ select{
   margin-left: 0.25rem;
   margin-right: 0.25rem;
 }
+.my-10{
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+}
 .ml-3{
   margin-left: 0.75rem;
 }
@@ -1671,6 +1675,10 @@ select{
 .border-green-500{
   --tw-border-opacity: 1;
   border-color: rgb(34 197 94 / var(--tw-border-opacity));
+}
+.border-secondary-800{
+  --tw-border-opacity: 1;
+  border-color: rgb(44 46 102 / var(--tw-border-opacity));
 }
 .bg-white{
   --tw-bg-opacity: 1;
