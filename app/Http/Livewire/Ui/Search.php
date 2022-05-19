@@ -10,6 +10,7 @@ class Search extends Component
     protected $queryString = ['search'];
     
     public function render(){
+        
         $this->emit('search', $this->search);
         return view('livewire.ui.search');
     }

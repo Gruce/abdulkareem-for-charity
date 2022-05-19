@@ -4,25 +4,29 @@ namespace App\Http\Livewire\Pages\Cases;
 
 use Livewire\Component;
 use App\Models\Event;
-
+use App\Models\Share;
 class Main extends Component
 {
+    protected $listeners = ['$refresh' ,'search'];
 
     public $search;
 
-    protected $listeners = [ '$refresh', 'search'];
-
-    
-    function search($string)
+    public function mount()
     {
-        $this->search = $string;
+        $payments = Event::sum('received_price');
+        $this->total = Share::where('state', true)->sum('share') * 2000;
+        $this->current_price = $this->total - $payments;
     }
 
-    public function render()
-    {
+    public function search($search){
+        $this->search = $search;
+
+    }
+
+    public function render(){
         $search = '%' . $this->search . '%';
-        $events = Event::where('title', 'LIKE', $search)->orderByDesc('id')->get();
-        // dd($events->toArray());
-        return view('livewire.pages.cases.main', compact('events'));
+        $this->events = Event::where('title', 'LIKE', $search)->get();
+
+        return view('livewire.pages.cases.main');
     }
 }

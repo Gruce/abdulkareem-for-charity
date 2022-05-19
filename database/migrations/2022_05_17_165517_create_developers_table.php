@@ -16,10 +16,11 @@ return new class extends Migration
         Schema::create('developers', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->string('department');
             $table->string('stage');
+            $table->integer('type')->default(1); // developer = 1 : manager = 2
             $table->string('photo');
             $table->timestamps();
-            
         });
     }
 

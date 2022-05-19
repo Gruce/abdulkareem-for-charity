@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Livewire\Components\Donors;
+
 use Jantinnerezo\LivewireAlert\LivewireAlert;
 use App\Models\User;
 use Livewire\Component;
@@ -10,9 +11,8 @@ use App\Models\Share;
 class Card extends Component
 {
     use LivewireAlert;
-    public $name, $type, $shares, $share, $photo, $date, $email, $phone_number;
 
-    public $search,$user_type;
+    public $search, $user_type, $user_gender, $user_request, $study_type, $stage, $department, $division;
 
     public $share_id;
 
@@ -21,11 +21,12 @@ class Card extends Component
         'shares' => 'required',
     ];
 
-    protected $listeners = ['delete', '$refresh', 'search' ,'getUserType'];
+    protected $listeners = ['delete', '$refresh', 'search', 'getUserType'];
 
 
 
-    public function delete(){
+    public function delete()
+    {
         User::findOrFail($this->share_id)->delete();
         $this->alert('success', 'تم حذف الحالة', [
             'position' => 'top',
@@ -35,7 +36,8 @@ class Card extends Component
         $this->emitSelf('$refresh');
     }
 
-    public function confirm($id){
+    public function confirm($id)
+    {
         $this->share_id = $id;
         $this->alert('warning', 'هل انت متأكد من حذف الحالة؟', [
             'position' => 'center',
@@ -48,7 +50,8 @@ class Card extends Component
         ]);
     }
 
-    public function add($id){
+    public function add($id)
+    {
 
         $data = [
             'user_id' => $id,
@@ -62,9 +65,9 @@ class Card extends Component
         $share = new Share();
         $share->add($data);
         $this->reset();
-
     }
-    public function accept($id, $state){
+    public function accept($id, $state)
+    {
         $share = Share::findOrFail($id);
         $share->state($state);
         $this->alert('success', 'تم القبول', [
@@ -73,7 +76,8 @@ class Card extends Component
             'toast' => true,
         ]);
     }
-    public function deleteShare($id){
+    public function deleteShare($id)
+    {
         $share = Share::findOrFail($id);
         $share->delete();
         $this->alert('success', 'تم الرفض', [
@@ -87,25 +91,62 @@ class Card extends Component
         $this->search = $search;
     }
 
-    public function getUserType ($type)
+    public function getUserType($type, $gender, $state, $study_type, $stage, $department, $division)
     {
         $this->user_type = $type;
+        $this->user_gender = $gender;
+        $this->user_request = $state;
+        $this->study_type = $study_type;
+        $this->stage = $stage;
+        $this->department = $department;
+        $this->division = $division;
     }
 
-    public function render(){
+
+    public function render()
+    {
         $search = '%' . $this->search . '%';
 
-        $this->users= User::with([
-            'shares' => function($query){
+        $this->users = User::with([
+            'shares' => function ($query) {
                 return $query->where('state', false)->get();
             }
         ]);
-        if($this->user_type != 0 && $this->user_type <= 4){
-            $this->users = $this->users->where('type', $this->user_type);
-        }
-        $this->users = $this->users->where('name', 'LIKE', $search)
+        if ($this->user_type) $this->users = $this->users->where('type', $this->user_type);
 
-        ->orderByDesc('id')->get();
+        if ($this->user_gender) $this->users = $this->users->where('gender', $this->user_gender);
+
+        // if ($this->user_request) {
+        //     $this->users = $this->users->whereHas('shares',  function ($query) {
+        //         $query->where('state', $this->user_request);
+        //     });
+        // }
+
+        if ($this->study_type) {
+            $this->users = $this->users->whereHas('student', function ($query) {
+                $query->where('study_type', $this->study_type);
+            });
+        }
+
+        if ($this->stage) {
+            $this->users = $this->users->whereHas('student', function ($query) {
+                $query->where('stage', $this->stage);
+            });
+        }
+
+        if ($this->division) {
+            $this->users = $this->users->whereHas('student', function ($query) {
+                $query->where('division', $this->division);
+            });
+        }
+
+        if ($this->department) {
+            $this->users = $this->users->whereHas('student', function ($query) {
+                $query->where('department', $this->department);
+            });
+        }
+
+        $this->users = $this->users->where('name', 'LIKE', $search)->orderByDesc('id')->get();
         return view('livewire.components.donors.card');
     }
 }

@@ -4,13 +4,16 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Livewire\WithFileUploads;
 
 
 class Event extends Model
 {
-    protected $fillable = ['title', 'description', 'image_path', 'file_path', 'target', 'received_price'];
+    use WithFileUploads;
     use HasFactory;
-
+    protected $fillable = ['title', 'description', 'image_path', 'file_path', 'target', 'received_price'];
+    
+    
     ######### FUNCTIONS ##########
 
     ### add ###
@@ -21,14 +24,14 @@ class Event extends Model
     ### End add ###
     public function add_file($file, $type = 1)
     {
-        // dd($file->extension());
+        
         $type = $type == 1 ? 'images' : 'files';
         $ext = $file->extension();
-        $name = \Str::random(10) . '.' . $ext;
+        $name =  \Str::random(10) . '.' . $ext;
         $file = $file->storeAs('public/event/' . $this->id . '/' . $type . '/' , $name);
         if ($type == 'images')
-            $this->image_path = $name;
-        else $this->file_path = $name;
+            $this->image_path ='storage/event/' . $this->id . '/' . $type . '/' . $name;
+        else $this->file_path ='storage/event/' . $this->id . '/' . $type . '/' . $name;
 
         $this->save();
     }
