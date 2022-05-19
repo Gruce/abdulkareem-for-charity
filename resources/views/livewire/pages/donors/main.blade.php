@@ -9,15 +9,15 @@
                 <div class="col-span-2">
                     @livewire('ui.search')
                 </div>
-                <select
+                <select wire:change="getType" wire:model="state"
                     class="px-10 py-3 w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0 text-sm">
-                    <option value="">حالة التبرع</option>
-                    <option value="">ارسل طلب تبرع جديد</option>
-                    <option value="">لم يرسل طلب جديد</option>
+                    <option value="0">حالة التبرع</option>
+                    <option value="1">ارسل طلب تبرع جديد</option>
+                    <option value="0">لم يرسل طلب جديد</option>
 
                 </select>
 
-                <select wire:change="x" wire:model="type"
+                <select wire:change="getType" wire:model="type"
                     class="px-10 py-3 w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0 text-sm">
                     <option value="0">النوع</option>
                     <option value="1">طالب</option>
@@ -25,14 +25,12 @@
                     <option value="3">موظف</option>
                     <option value="4">اخرى</option>
                 </select>
-                <select
+                <select wire:change="getType" wire:model="gender"
                     class="px-10 py-3 w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0 text-sm">
-                    <option value="">الجنس</option>
-                    <option value="">ذكر</option>
-                    <option value="">أنثى</option>
-                    <option value=""></option>
+                    <option value="0">الجنس</option>
+                    <option value="2">ذكر</option>
+                    <option value="1">أنثى</option>
                 </select>
-
 
                 <select
                     class="px-10 py-3 w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0 text-sm">
