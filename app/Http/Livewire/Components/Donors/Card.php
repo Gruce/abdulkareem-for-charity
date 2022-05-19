@@ -3,6 +3,7 @@
 namespace App\Http\Livewire\Components\Donors;
 use Jantinnerezo\LivewireAlert\LivewireAlert;
 use App\Models\User;
+use App\Models\Student;
 use Livewire\Component;
 use App\Models\Share;
 
@@ -12,7 +13,7 @@ class Card extends Component
     use LivewireAlert;
     public $name, $type, $shares, $share, $photo, $date, $email, $phone_number, $gender , $state;
 
-    public $search,$user_type, $user_gender, $user_request;
+    public $search,$user_type, $user_gender, $user_request ,$stage, $user_stage;
 
     public $share_id;
 
@@ -87,11 +88,12 @@ class Card extends Component
         $this->search = $search;
     }
 
-    public function getUserType ($type, $gender, $state)
+    public function getUserType ($type, $gender, $state , $stage)
     {
         $this->user_type = $type;
         $this->user_gender = $gender;
         $this->user_request = $state;
+        $this->user_stage = $stage;
     }
 
 
@@ -102,6 +104,7 @@ class Card extends Component
             'shares' => function($query){
                 return $query->where('state', false)->get();
             }
+
         ]);
         if($this->user_type != 0 && $this->user_type <= 4){
             $this->users = $this->users->where('type', $this->user_type);
@@ -109,9 +112,15 @@ class Card extends Component
         if($this->user_gender != 0 && $this->user_gender <= 2){
             $this->users = $this->users->where('gender', $this->user_gender);
         }
-        if($this->user_request != 0 && $this->user_request == false){
-            $this->users = $this->users->where('gender', $this->user_gender);
+        if($this->user_request == 1 ){
+            $this->users = $this->users->with([
+                'shares' => function($query){
+                    return $query->where('state',$this->user_request)->get();
+                }
+            ]);
+            dd($this->user_request);
         }
+        
         $this->users = $this->users->where('name', 'LIKE', $search)->orderByDesc('id')->get();
         return view('livewire.components.donors.card');
     }
