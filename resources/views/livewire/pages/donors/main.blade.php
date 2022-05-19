@@ -11,9 +11,9 @@
                 </div>
                 <select wire:change="getType" wire:model="state"
                     class="px-10 py-3 w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0 text-sm">
-                    <option value="0">حالة التبرع</option>
-                    <option value="1">ارسل طلب تبرع جديد</option>
-                    <option value="0">لم يرسل طلب جديد</option>
+                    <option selected>حالة التبرع</option>
+                    <option value="true">ارسل طلب تبرع جديد</option>
+                    <option value="false">لم يرسل طلب جديد</option>
 
                 </select>
 
@@ -32,38 +32,38 @@
                     <option value="1">أنثى</option>
                 </select>
 
-                <select
+                <select wire:change="getType" wire:model="study_type"
                     class="px-10 py-3 w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0 text-sm">
                     <option value="">نوع الدراسة</option>
-                    <option value="">صباحي</option>
-                    <option value="">مسائي</option>
+                    <option value="1">صباحي</option>
+                    <option value="2">مسائي</option>
 
                 </select>
 
-                <select
+                <select wire:change="getType" wire:model="stage"
                     class="px-10 py-3 w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0 text-sm">
                     <option value="">المرحلة</option>
-                    <option value="">الاولى</option>
-                    <option value="">الثانية</option>
-                    <option value="">الثالثة</option>
-                    <option value="">الرابعة</option>
+                    <option value="1">الاولى</option>
+                    <option value="2">الثانية</option>
+                    <option value="3">الثالثة</option>
+                    <option value="4">الرابعة</option>
                 </select>
 
-                <select
+                <select wire:change="getType" wire:model="division"
                     class="px-10 py-3 w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0 text-sm">
                     <option value="">الشعبة</option>
-                    <option value="">A</option>
-                    <option value="">B</option>
-                    <option value="">C</option>
-                    <option value="">D</option>
-                    <option value="">E</option>
+                    <option value="1">A</option>
+                    <option value="2">B</option>
+                    <option value="3">C</option>
+                    <option value="4">D</option>
+                    <option value="5">E</option>
 
                 </select>
-                <select
+                <select wire:change="getType" wire:model="department"
                     class=" px-10 py-3 w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0 text-sm">
                     <option value="">القسم</option>
-                    <option value="">علوم الحاسوب</option>
-                    <option value="">نظم المعلومات</option>
+                    <option value="1">علوم الحاسوب</option>
+                    <option value="2">نظم المعلومات</option>
 
                 </select>
             </div>
