@@ -8,7 +8,7 @@ class Main extends Component
 {
     public function mount()
     {
-        $this->events = Event::get();
+        $this->events = Event::orderByDesc('id')->take(4)->get();
     }
     public function render(){
         return view('livewire.pages.home.main');
