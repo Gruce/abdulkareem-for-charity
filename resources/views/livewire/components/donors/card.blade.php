@@ -1,6 +1,6 @@
 <div>
 
-    <div x-data="{ isOpen: false }" class="grid grid-cols-4 gap-6 group">
+    <div x-data="{ isOpen: false }" class="grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 group">
         @forelse($users as $item)
         {{-- <div
             class="rounded-xl border-2 border-primary-100 hover:shadow-lg hover:border-primary-500 duration-300 p-4 w-full">
@@ -198,7 +198,8 @@
                 </div>
                 <button wire:click="confirm({{ $item->id }})" class="mx-2">
                     <i
-                        class="text-red-400 fa-solid fa-trash text-xl hover:scale-110 duration-200 hover:text-red-600"></i>
+                        class="text-red-400 fa-solid fa-trash text-xl hover:scale-110 duration-200 hover:text-red-600">
+                    </i>
 
                 </button>
                 @endadmin
@@ -226,6 +227,4 @@
         لا يوجد متبرعين
         @endforelse
     </div>
-
-
 </div>

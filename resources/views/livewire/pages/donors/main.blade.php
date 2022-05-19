@@ -70,9 +70,10 @@
                 </select>
             </div>
         </div>
+
         <div class="mt-4">
             @livewire('components.donors.card')
         </div>
+        
     </div>
-
 </div>
