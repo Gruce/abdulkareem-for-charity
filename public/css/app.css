@@ -1156,6 +1156,9 @@ select{
 .-mt-px{
   margin-top: -1px;
 }
+.ml-8{
+  margin-left: 2rem;
+}
 .block{
   display: block;
 }
@@ -1227,6 +1230,12 @@ select{
 }
 .h-14{
   height: 3.5rem;
+}
+.h-48{
+  height: 12rem;
+}
+.h-56{
+  height: 14rem;
 }
 .min-h-screen{
   min-height: 100vh;
@@ -2035,6 +2044,14 @@ select{
   padding-left: 0.625rem;
   padding-right: 0.625rem;
 }
+.px-12{
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+.px-20{
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
 .pt-6{
   padding-top: 1.5rem;
 }
@@ -2115,6 +2132,9 @@ select{
 }
 .pt-8{
   padding-top: 2rem;
+}
+.pl-4{
+  padding-left: 1rem;
 }
 .text-left{
   text-align: left;
@@ -3123,6 +3143,9 @@ select{
   .md\:grid-cols-10{
     grid-template-columns: repeat(10, minmax(0, 1fr));
   }
+  .md\:grid-cols-4{
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
   .md\:flex-row{
     flex-direction: row;
   }
@@ -3196,6 +3219,10 @@ select{
     font-size: 1.875rem;
     line-height: 2.25rem;
   }
+  .md\:text-xl{
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
 }
 @media (min-width: 1024px){
   .lg\:col-span-4{
@@ -3216,6 +3243,9 @@ select{
   .lg\:grid-cols-3{
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
+  .lg\:grid-cols-4{
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
   .lg\:px-8{
     padding-left: 2rem;
     padding-right: 2rem;
@@ -3230,7 +3260,18 @@ select{
   }
 }
 @media (min-width: 1280px){
+  .xl\:grid{
+    display: grid;
+  }
   .xl\:grid-cols-3{
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .xl\:grid-cols-4{
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+@media (min-width: 1536px){
+  .\32xl\:grid-cols-4{
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }

@@ -36,11 +36,11 @@
         <div class="flex basis-2/12 justify-center mt-14">@livewire('components.home.information')</div>
 
         {{-- Cases --}}
-        <div class=" basis-4/12 pr-24 pt-16">
+        <div class=" basis-4/12 px-20 ml-8  pt-16">
             <span class="text-secondary-900 text-6xl font-bold ">
                 اخر الحالات
             </span>
-            <div class="my-20 flex gap-6">
+            <div class="my-20 grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 pt-5">
                 @foreach ($events as $event)
                     @livewire('components.case.card', ['event' => $event])
                 @endforeach
