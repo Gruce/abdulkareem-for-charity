@@ -37,7 +37,7 @@ class Card extends Component
 
     public function confirm($id){
         $this->share_id = $id;
-        $this->alert('warning', 'هل انت متأكد من حذف الحالة؟', [
+        $this->alert('warning', 'هل انت متأكد من حذف المتبرع؟', [
             'position' => 'center',
             'timer' => 3000,
             'toast' => true,
