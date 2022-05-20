@@ -112,8 +112,21 @@ class Card extends Component
                 return $query->where('state', false)->get();
             }
         ]);
-        if ($this->user_type) $this->users = $this->users->where('type', $this->user_type);
-
+        if ($this->user_type && $this->study_type && $this->stage && $this->division &&$this->department ) {
+        $this->users = $this->users->where('type', $this->user_type);
+        $this->users = $this->users->whereHas('student', function ($query) {
+            $query->where('study_type', $this->study_type);
+        });
+        $this->users = $this->users->whereHas('student', function ($query) {
+            $query->where('stage', $this->stage);
+        });
+        $this->users = $this->users->whereHas('student', function ($query) {
+            $query->where('division', $this->division);
+        });
+        $this->users = $this->users->whereHas('student', function ($query) {
+            $query->where('department', $this->department);
+        });
+    }
         if ($this->user_gender) $this->users = $this->users->where('gender', $this->user_gender);
 
         if ($this->user_request != 1 && $this->user_request != 0 ) {
@@ -122,30 +135,8 @@ class Card extends Component
             });
         }
 
-        if ($this->study_type) {
-            $this->users = $this->users->whereHas('student', function ($query) {
-                $query->where('study_type', $this->study_type);
-            });
-        }
 
-        if ($this->stage) {
-            $this->users = $this->users->whereHas('student', function ($query) {
-                $query->where('stage', $this->stage);
-            });
-        }
-
-        if ($this->division) {
-            $this->users = $this->users->whereHas('student', function ($query) {
-                $query->where('division', $this->division);
-            });
-        }
-
-        if ($this->department) {
-            $this->users = $this->users->whereHas('student', function ($query) {
-                $query->where('department', $this->department);
-            });
-        }
-
+       
         $this->users = $this->users->where('name', 'LIKE', $search)->orderByDesc('id')->get();
         return view('livewire.components.donors.card');
     }
