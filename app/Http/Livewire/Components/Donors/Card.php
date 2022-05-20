@@ -12,7 +12,7 @@ class Card extends Component
 {
     use LivewireAlert;
 
-    public $search, $user_type, $user_gender, $user_request, $study_type, $stage, $department, $division;
+    public $search, $user_type, $user_gender, $user_request, $state,$study_type, $stage, $department, $division;
 
     public $share_id;
 
@@ -116,11 +116,11 @@ class Card extends Component
 
         if ($this->user_gender) $this->users = $this->users->where('gender', $this->user_gender);
 
-        // if ($this->user_request) {
-        //     $this->users = $this->users->whereHas('shares',  function ($query) {
-        //         $query->where('state', $this->user_request);
-        //     });
-        // }
+        if ($this->user_request != 1 && $this->user_request != 0 ) {
+            $this->users = $this->users->whereHas('shares',  function ($query) {
+                $query->where('state', $this->user_request);
+            });
+        }
 
         if ($this->study_type) {
             $this->users = $this->users->whereHas('student', function ($query) {

@@ -11,10 +11,8 @@
                 </div>
                 <select wire:change="getType" wire:model="state"
                     class="px-10 py-3 w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0 text-sm">
-                    <option selected>حالة التبرع</option>
-                    <option value="true">ارسل طلب تبرع جديد</option>
-                    <option value="false">لم يرسل طلب جديد</option>
-
+                    <option value="0">حالة التبرع </option>
+                    <option value="">ارسل طلب تبرع جديد</option>
                 </select>
 
                 <select wire:change="getType" wire:model="type"
