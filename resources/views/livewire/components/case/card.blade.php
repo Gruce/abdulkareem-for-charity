@@ -65,7 +65,7 @@
 
 
                 </div>
-                @endadmin
+                
                 <div x-show="open" @click.outside="open = false" class="flex">
 
                     <button wire:click="add_price ({{ $event->id }})"
