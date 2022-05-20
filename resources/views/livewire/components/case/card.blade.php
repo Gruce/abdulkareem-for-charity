@@ -3,9 +3,10 @@
         <div class="bg-white hover:bg-gray-50 p-6 rounded-t-lg border  w-11/12">
             <img class="h-64 rounded w-full object-cover object-center mb-6"
                 src="{{ asset($event->image_path ?? 'img/caseImage.webp') }}" alt="content">
-            
+
             <h2 class="text-xl text-gray-900 font-medium title-font mb-2 text-center">{{ $event->title }}</h2>
-            <h3 class="tracking-widest text-secondary-700 text-base font-medium title-font text-center mb-4">{{ $event->target }} د.ع</h3>
+            <h3 class="tracking-widest text-secondary-700 text-base font-medium title-font text-center mb-4">
+                {{ $event->target }} د.ع</h3>
 
             <p class="leading-relaxed text-base">{{ $event->getLimit('description') }}
                 {{-- more info button --}}
@@ -41,7 +42,8 @@
             </div>
             <hr class="mb-5">
             <div x-data="{ open: false }" class="flex flex-col">
-                {{-- edit/delete/add Buttons--}}
+                {{-- edit/delete/add Buttons --}}
+                @admin
                 <div class="flex justify-around">
 
                     <button wire:click="confirm({{ $event->id }})" class="mx-2">
@@ -55,15 +57,15 @@
                             class="text-secondary-600 fa-solid fa-pen-to-square text-xl hover:rotate-12 duration-200 hover:text-secondary-700"></i>
                     </button>
                     @if ($event->received_price != $event->target)
-                    <button @click="open = !open" class="mx-2">
-                        <i
-                            class="text-red-400 fa-solid fa-plus text-xl hover:scale-110 hover:rotate-45 duration-300 hover:text-red-500"></i>
-                    </button>
+                        <button @click="open = !open" class="mx-2">
+                            <i
+                                class="text-red-400 fa-solid fa-plus text-xl hover:scale-110 hover:rotate-45 duration-300 hover:text-red-500"></i>
+                        </button>
                     @endif
 
 
                 </div>
-
+                @endadmin
                 <div x-show="open" @click.outside="open = false" class="flex">
 
                     <button wire:click="add_price ({{ $event->id }})"
@@ -79,11 +81,11 @@
 
         </div>
         <div class="w-11/12 bg-gray-200 h-1 mb-6 text-center">
-            <div class="bg-green-500 h-1 " style="width: {{ ($event->received_price * 100) / $event->target}}%"></div>
-            @if($event->received_price == $event->target)
-            مكتمل
+            <div class="bg-green-500 h-1 " style="width: {{ ($event->received_price * 100) / $event->target }}%"></div>
+            @if ($event->received_price == $event->target)
+                مكتمل
             @else
-            {{ $event->received_price }} د.ع
+                {{ $event->received_price }} د.ع
             @endif
         </div>
     </div>
