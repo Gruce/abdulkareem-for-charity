@@ -1154,6 +1154,12 @@ select{
 }
 .h-14{
   height: 3.5rem;
+<<<<<<< Updated upstream
+=======
+}
+.h-40{
+  height: 10rem;
+>>>>>>> Stashed changes
 }
 .min-h-screen{
   min-height: 100vh;
