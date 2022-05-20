@@ -23,7 +23,6 @@ class Card extends Component
             'timer' => 3000,
             'toast' => true,
         ]);
-
         $this->emitSelf('$refresh');
     }
 
@@ -48,6 +47,7 @@ class Card extends Component
             'timer' => 3000,
             'toast' => true,
         ]);
+        $this->emitSelf('$refresh');
     }
     
     public function getEvent($received_price ,$target , $selectEvent){
