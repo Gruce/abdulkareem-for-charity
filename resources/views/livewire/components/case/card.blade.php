@@ -1,114 +1,92 @@
 <div>
-    <div
-        class="rounded-xl border-2 border-primary-100 hover:shadow-lg hover:border-primary-500 group duration-300 ">
-        {{-- case Image --}}
-        <div class="pt-3 px-3">
-            <img src="{{ asset($event->image_path ?? 'img/kid.jpg') }}" class="rounded-t-lg h-64 w-full" />
-        </div>
-        {{-- title + more info --}}
-        <div class="p-6">
-            <h5 class="text-center font-bold group-hover:text-primary-700 text-3xl md:text-xl mb-2"> {{ $event->title }}</h5>
-            <div class="xs:28">
-                <p class="text-gray-500 text-medium font-bold mb-4">
-                    {{ $event->getLimit('description') }}
-                    {{-- more info button --}}
-                    <button class="text-primary-500 font-bold duration-300 mb-4"
-                        type="button" data-modal-toggle="defaultModal">
-                        قراءة المزيد
-                    </button>
-                </p>
-                <div id="defaultModal" tabindex="-1" aria-hidden="true"
-                    class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full justify-center items-center">
-                    <div class="relative p-4 w-full max-w-2xl h-full md:h-auto">
-                        <div class="relative bg-white rounded-lg shadow ">
-                            <button type="button"
-                                class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-red-600 rounded-bl-lg rounded-tr-lg p-3 ml-auto inline-flex items-center"
-                                data-modal-toggle="defaultModal">
-                                <i class="fa-solid fa-xmark text-2xl"></i>
-                            </button>
-                            
-                            <div class="flex justify-center items-center rounded-t border-b">
-                                <h5 class="text-center font-bold text-primary-900 text-3xl">
-                                    {{ $event->title }}
-                                </h5>
-                            </div>
+    <div class="h-auto ">
+        <div class="bg-white hover:bg-gray-50 p-6 rounded-t-lg border  w-11/12">
+            <img class="h-64 rounded w-full object-cover object-center mb-6"
+                src="{{ asset($event->image_path ?? 'img/caseImage.webp') }}" alt="content">
+            
+            <h2 class="text-xl text-gray-900 font-medium title-font mb-2 text-center">{{ $event->title }}</h2>
+            <h3 class="tracking-widest text-secondary-700 text-base font-medium title-font text-center mb-4">{{ $event->target }} د.ع</h3>
 
-                            <div class="p-6 space-y-6">
-                                <p class="text-base font-semibold leading-relaxed text-black">
-                                    {{ $event->description }}
-                                </p>
-                            </div>
+            <p class="leading-relaxed text-base">{{ $event->getLimit('description') }}
+                {{-- more info button --}}
+                <button class="text-secondary-600 text-sm font-bold duration-300 mb-4" type="button"
+                    data-modal-toggle="defaultModal">
+                    قراءة المزيد
+                </button>
+
+            </p>
+            <div id="defaultModal" tabindex="-1" aria-hidden="true"
+                class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full justify-center items-center">
+                <div class="relative p-4 w-full max-w-2xl h-full md:h-auto">
+                    <div class="relative bg-white rounded-lg shadow ">
+                        <button type="button"
+                            class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-red-600 rounded-bl-lg rounded-tr-lg p-3 ml-auto inline-flex items-center"
+                            data-modal-toggle="defaultModal">
+                            <i class="fa-solid fa-xmark text-2xl"></i>
+                        </button>
+
+                        <div class="flex justify-center items-center rounded-t border-b">
+                            <h5 class="text-center font-bold text-primary-900 text-3xl">
+                                {{ $event->title }}
+                            </h5>
+                        </div>
+
+                        <div class="p-6 space-y-6">
+                            <p class="text-base font-semibold leading-relaxed text-black">
+                                {{ $event->description }}
+                            </p>
                         </div>
                     </div>
                 </div>
-                <hr class="mb-5">
-                <div class="flex justify-center @admin
-                        justify-between
-                        @endadmin">
-                        
-                    <div class="font-bold font-noto text-xl pl-1 group-hover:text-primary-400 text-center">
-                        الهدف : {{ $event->target }} د.ع
-
-                    </div>
-                    @admin
-                        <div class="font-bold font-noto text-xl group-hover:text-primary-400 text-center">
-                            المتبقي : {{ $event->received() }} د.ع
-
-                        </div>
-                    @endadmin
-                    <div class="text-right mt-2">
-                        @admin
-                            <div x-data="{ open: false }">
-                                <button wire:click="confirm({{ $event->id }})" class="mx-2">
-                                    <i
-                                        class="text-red-400 fa-solid fa-trash text-xl hover:scale-110 duration-200 hover:text-red-500"></i>
-
-                                </button>
-                                <button wire:click="$set('case_id', {{ $event->id }})" class="mx-2"
-                                    type="button" data-modal-toggle="case-modal">
-                                    <i
-                                        class="text-primary-400 fa-solid fa-pen-to-square text-xl hover:rotate-12 duration-200 hover:text-primary-500"></i>
-                                </button>
-                                @if ($event->received_price != $event->target)
-                                    <button @click="open = ! open" class="mx-2">
-                                        <i
-                                            class="text-red-400 fa-solid fa-plus text-xl hover:scale-110 hover:rotate-45 duration-300 hover:text-red-500"></i>
-                                    </button>
-                                    <div x-show="open" @click.outside="open = false">
-                                        <input type="text" wire:model="received_price"
-                                            class="ml-4 bg-gray-50 border border-primary-700 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-28 pl-10 p-2.5"
-                                            placeholder="" required="">
-                                        <button type="submit" wire:click="add_price ({{ $event->id }})"
-                                            class=" mt-4 inline-flex items-center py-2 px-2 ml-2 text-sm font-medium text-white bg-primary-600 rounded-lg border border-primary-700 focus:ring-2 focus:outline-none focus:ring-primary-300">
-                                            اضافة</button>
-                                    </div>
-                                @endif
-                            </div>
-                        @endadmin
-                    </div>
-                </div>
-
             </div>
-        </div>
-    </div>
+            <hr class="mb-5">
+            <div x-data="{ open: false }" class="flex flex-col">
+                {{-- edit/delete/add Buttons--}}
+                <div class="flex justify-around">
 
-    {{-- modal --}}
-    <div wire:ignore.self id="case-modal" tabindex="-1"
-        class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full">
-        <div class="relative p-4 w-full max-w-4xl h-full md:h-auto">
-            <!-- Modal content -->
-            <div class="relative bg-white rounded-lg shadow ">
-                <!-- Modal header -->
-                <div class="flex justify-between items-center">
-                    <button type="button"
-                        class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-red-600 rounded-bl-lg rounded-tr-lg text-lg p-1.5 ml-auto inline-flex items-center"
+                    <button wire:click="confirm({{ $event->id }})" class="mx-2">
+                        <i
+                            class="text-red-400 fa-solid fa-trash text-xl hover:scale-110 duration-200 hover:text-red-500"></i>
+
+                    </button>
+                    <button wire:click="$set('case_id', {{ $event->id }})" class="mx-2" type="button"
                         data-modal-toggle="case-modal">
-                        <i class="fa-solid fa-xmark text-2xl"></i>
+                        <i
+                            class="text-secondary-600 fa-solid fa-pen-to-square text-xl hover:rotate-12 duration-200 hover:text-secondary-700"></i>
                     </button>
+                    @if ($event->received_price != $event->target)
+                    <button @click="open = !open" class="mx-2">
+                        <i
+                            class="text-red-400 fa-solid fa-plus text-xl hover:scale-110 hover:rotate-45 duration-300 hover:text-red-500"></i>
+                    </button>
+                    @endif
+
+
                 </div>
-                <!-- Modal body -->
-                @livewire('pages.cases.admin.edit', ['case_id' => $event->id], key($event_id))
+
+                <div x-show="open" @click.outside="open = false" class="flex">
+
+                    <button wire:click="add_price ({{ $event->id }})"
+                        class=" mt-4 inline-flex items-center py-2 px-2 ml-2 text-sm font-medium text-white bg-primary-600 rounded-lg border border-primary-700 focus:ring-2 focus:outline-none focus:ring-primary-300">
+                        اضافة</button>
+                    <input type="number" wire:model="received_price"
+                        class="bg-gray-50 border  border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500  w-full h-1/2 p-1 mt-4 "
+                        placeholder="" required="">
+
+                </div>
+
             </div>
+
+        </div>
+        <div class="w-11/12 bg-gray-200 h-1 mb-6 text-center">
+            <div class="bg-green-500 h-1 " style="width: {{ ($event->received_price * 100) / $event->target}}%"></div>
+            @if($event->received_price == $event->target)
+            مكتمل
+            @else
+            {{ $event->received_price }} د.ع
+            @endif
         </div>
     </div>
+
+
 </div>
