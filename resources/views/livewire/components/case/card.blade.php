@@ -1,16 +1,19 @@
 <div>
     <div class="h-auto ">
-        <div class="bg-gray-100 hover:bg-gray-200 p-6 rounded-lg w-11/12">
+        <div class="bg-white hover:bg-gray-50 p-6 rounded-lg border  w-11/12">
             <img class="h-64 rounded w-full object-cover object-center mb-6"
                 src="{{ asset($event->image_path ?? 'img/caseImage.webp') }}" alt="content">
-            <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">{{ $event->target }} د.ع</h3>
-            <h2 class="text-lg text-gray-900 font-medium title-font mb-4">{{ $event->title }}</h2>
+            
+            <h2 class="text-xl text-gray-900 font-medium title-font mb-2 text-center">{{ $event->title }}</h2>
+            <h3 class="tracking-widest text-secondary-700 text-base font-medium title-font text-center mb-4">{{ $event->target }} د.ع</h3>
+
             <p class="leading-relaxed text-base">{{ $event->getLimit('description') }}
                 {{-- more info button --}}
                 <button class="text-secondary-600 text-sm font-bold duration-300 mb-4" type="button"
                     data-modal-toggle="defaultModal">
                     قراءة المزيد
                 </button>
+
             </p>
             <div id="defaultModal" tabindex="-1" aria-hidden="true"
                 class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full justify-center items-center">
