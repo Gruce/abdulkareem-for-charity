@@ -69,7 +69,7 @@ class UserSeeder extends Seeder
             'password' => bcrypt('123456'),
             //Default User
             'type' => 1,
-            'gender' => 1
+            'gender' => 2
         ]);
         // id:6
         User::create([
