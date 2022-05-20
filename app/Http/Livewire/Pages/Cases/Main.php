@@ -9,7 +9,7 @@ class Main extends Component
 {
     protected $listeners = ['$refresh' ,'search'];
 
-    public $search;
+    public $search , $received_price ,$target;
 
     public function mount()
     {
@@ -22,7 +22,14 @@ class Main extends Component
         $this->search = $search;
 
     }
-
+    public function getEventt()
+    {
+        $this->emit(
+            'getEvent',
+            $this->received_price,
+            $this->target,
+        );
+    }
     public function render(){
         $search = '%' . $this->search . '%';
         $this->events = Event::where('title', 'LIKE', $search)->get();
