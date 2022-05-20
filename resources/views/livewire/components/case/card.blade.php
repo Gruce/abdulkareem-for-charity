@@ -40,8 +40,9 @@
                     </div>
                 </div>
             </div>
-            <hr class="mb-5">
+            @admin
             <div x-data="{ open: false }" class="flex flex-col">
+                <hr class="mb-5">
                 {{-- edit/delete/add Buttons--}}
                 <div class="flex justify-around">
 
@@ -77,6 +78,7 @@
                 </div>
 
             </div>
+            @endadmin
 
         </div>
         <div class="w-11/12 bg-gray-200 h-1 mb-6 text-center">
