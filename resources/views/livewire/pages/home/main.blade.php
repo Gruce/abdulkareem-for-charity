@@ -19,10 +19,10 @@
                 </p>
                 <div class="mt-4 xl:mt-10 mr-10 xl:mr-4 flex gap-5">
                     <a href="{{ route('donate') }}"
-                        class="text-white text-base xl:text-2xl hover:scale-110 duration-200 bg-primary-500 hover:bg-white border border-transparent hover:border-green-500 hover:text-primary-500 focus:ring-4 focus:ring-primary-300 rounded-lg px-5 py-2.5 mr-2 mb-2 ">تبرع
+                        class="text-white text-base xl:text-2xl duration-200 bg-primary-500 hover:bg-white border border-transparent hover:border-green-500 hover:text-primary-500 focus:ring-4 focus:ring-primary-300 rounded-lg px-5 py-2.5 mr-2 mb-2 ">تبرع
                         الان</a>
                     <a href="{{ route('cases') }}"
-                        class="hover:text-white text-base xl:text-2xl hover:scale-110 duration-200 hover:bg-primary-500 bg-white  border hover:border-transparent border-green-500 text-primary-500 focus:ring-4 focus:ring-primary-300  rounded-lg  px-5 py-2.5 mr-2 mb-2 ">الحالات</a>
+                        class="hover:text-white text-base xl:text-2xl duration-200 hover:bg-primary-500 bg-white  border hover:border-transparent border-green-500 text-primary-500 focus:ring-4 focus:ring-primary-300  rounded-lg  px-5 py-2.5 mr-2 mb-2 ">الحالات</a>
                 </div>
             </div>
             {{--Photo--}}
@@ -41,7 +41,7 @@
             <span class="text-secondary-900 text-4xl xl:text-6xl font-bold ">
                 اخر الحالات
             </span>
-            <div class="my-6 xl:my-20 ml-10 xl:ml-0 grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 pt-5">
+            <div class="my-6 xl:my-20 ml-10 xl:ml-0 grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 ">
                 @foreach ($events as $event)
                 @livewire('components.case.card', ['event' => $event])
                 @endforeach

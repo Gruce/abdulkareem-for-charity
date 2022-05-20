@@ -13,12 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('adminstrarers', function (Blueprint $table) {
+        Schema::create('administrators', function (Blueprint $table) {
             $table->id();
             $table->string('name');
             $table->string('email')->unique();
             $table->string('phone_number')->nullable();
-            //$table->integer('type')->default(1); // developer = 1 : manager = 2
+            //$table->integer('type')->default(1); // ** = 1 : ** = 2
             $table->string('photo');
             $table->timestamps();
         });
@@ -31,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('adminstrarers');
+        Schema::dropIfExists('administrators');
     }
 };

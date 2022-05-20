@@ -1159,6 +1159,9 @@ select{
 .h-44{
   height: 11rem;
 }
+.h-1\/2{
+  height: 50%;
+}
 .min-h-screen{
   min-height: 100vh;
 }
@@ -1230,6 +1233,9 @@ select{
 }
 .w-64{
   width: 16rem;
+}
+.w-11\/12{
+  width: 91.666667%;
 }
 .min-w-0{
   min-width: 0px;
@@ -1742,6 +1748,10 @@ select{
 .bg-primary-300{
   --tw-bg-opacity: 1;
   background-color: rgb(147 220 186 / var(--tw-bg-opacity));
+}
+.bg-blue-700{
+  --tw-bg-opacity: 1;
+  background-color: rgb(29 78 216 / var(--tw-bg-opacity));
 }
 .bg-opacity-25{
   --tw-bg-opacity: 0.25;
@@ -2396,6 +2406,10 @@ select{
   --tw-bg-opacity: 1;
   background-color: rgb(185 28 28 / var(--tw-bg-opacity));
 }
+.hover\:bg-blue-600:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(37 99 235 / var(--tw-bg-opacity));
+}
 .hover\:text-gray-500:hover{
   --tw-text-opacity: 1;
   color: rgb(107 114 128 / var(--tw-text-opacity));
@@ -2439,6 +2453,10 @@ select{
 .hover\:text-red-400:hover{
   --tw-text-opacity: 1;
   color: rgb(248 113 113 / var(--tw-text-opacity));
+}
+.hover\:text-secondary-700:hover{
+  --tw-text-opacity: 1;
+  color: rgb(60 63 137 / var(--tw-text-opacity));
 }
 .hover\:shadow-xl:hover{
   --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
@@ -2487,6 +2505,10 @@ select{
 .focus\:border-gray-500:focus{
   --tw-border-opacity: 1;
   border-color: rgb(107 114 128 / var(--tw-border-opacity));
+}
+.focus\:border-blue-600:focus{
+  --tw-border-opacity: 1;
+  border-color: rgb(37 99 235 / var(--tw-border-opacity));
 }
 .focus\:bg-indigo-600:focus{
   --tw-bg-opacity: 1;
@@ -2604,6 +2626,10 @@ select{
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(52 162 111 / var(--tw-ring-opacity));
 }
+.focus\:ring-blue-700:focus{
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(29 78 216 / var(--tw-ring-opacity));
+}
 .focus\:ring-opacity-50:focus{
   --tw-ring-opacity: 0.5;
 }
@@ -2622,6 +2648,10 @@ select{
 .active\:bg-gray-50:active{
   --tw-bg-opacity: 1;
   background-color: rgb(249 250 251 / var(--tw-bg-opacity));
+}
+.active\:bg-blue-600:active{
+  --tw-bg-opacity: 1;
+  background-color: rgb(37 99 235 / var(--tw-bg-opacity));
 }
 .active\:text-gray-700:active{
   --tw-text-opacity: 1;
