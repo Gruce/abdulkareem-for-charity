@@ -41,7 +41,7 @@
             <span class="text-secondary-900 text-4xl xl:text-6xl font-bold ">
                 اخر الحالات
             </span>
-            <div class="my-6 xl:my-20 ml-10 xl:ml-0 grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 pt-5">
+            <div class="my-6 xl:my-20 ml-10 xl:ml-0 grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 ">
                 @foreach ($events as $event)
                 @livewire('components.case.card', ['event' => $event])
                 @endforeach
