@@ -20,7 +20,7 @@ class DatabaseSeeder extends Seeder
             ShareSeeder::class,
             EventSeeder::class,
             DeveloperSeeder::class,
-            AdminstrarerSeeder::class,
+            AdministratorSeeder::class,
 
         ]);
     }
