@@ -16,10 +16,7 @@ class Card extends Component
     public $event  ,$title ,$selectEvent;
 
     protected $listeners = ['delete', '$refresh' , 'getEvent'];
-    protected $rules = [
-        'name' => 'required',
-        
-    ];
+   
 
     public function delete(){
         Event::findOrFail($this->event_id)->delete();
