@@ -112,7 +112,7 @@ class Card extends Component
                 return $query->where('state', false)->get();
             }
         ]);
-        if ($this->user_type) $this->users = $this->users->where('type', $this->user_type);
+        if ($this->user_type) $this->users = $this->users->where('type','>', $this->user_type);
 
         if ($this->user_gender) $this->users = $this->users->where('gender', $this->user_gender);
 
