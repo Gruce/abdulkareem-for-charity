@@ -8,7 +8,7 @@
             <h3 class="tracking-widest text-secondary-700 text-base font-medium title-font text-center mb-4">
                 {{ $event->target }} د.ع</h3>
 
-            <p class="leading-relaxed text-base">{{ $event->getLimit('description') }}
+            <p class="leading-relaxed text-base font-bold text-gray-400">{{ $event->getLimit('description') }}
                 {{-- more info button --}}
                 <button class="text-secondary-600 text-sm font-bold duration-300 mb-4" type="button"
                     data-modal-toggle="defaultModal">
@@ -33,7 +33,7 @@
                         </div>
 
                         <div class="p-6 space-y-6">
-                            <p class="text-base font-semibold leading-relaxed text-black">
+                            <p class="text-lg font-semibold leading-relaxed text-black">
                                 {{ $event->description }}
                             </p>
                         </div>
