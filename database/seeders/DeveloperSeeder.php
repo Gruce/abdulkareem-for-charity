@@ -23,6 +23,7 @@ class DeveloperSeeder extends Seeder
             'department'=>'علوم الحاسوب',
             'stage' => "المرحلة الثانية",
             'photo' => "/img/mo.jpg",
+
         ]);
 
         ### id = 2 ###
@@ -31,6 +32,7 @@ class DeveloperSeeder extends Seeder
             'department'=>'علوم الحاسوب',
             'stage' => "المرحلة الأولى",
             'photo' => "/img/dev2.jpg",
+
         ]);
 
         ### id = 3 ###
@@ -39,6 +41,7 @@ class DeveloperSeeder extends Seeder
             'department'=>'علوم الحاسوب',
             'stage' => "المرحلة الثالثة",
             'photo' => "/img/mo.jpg",
+
         ]);
 
         ### id = 4 ###
@@ -47,6 +50,7 @@ class DeveloperSeeder extends Seeder
             'department'=>'علوم الحاسوب',
             'stage' => "المرحلة الأولى",
             'photo' => "/img/dev4.jpg",
+
         ]);
 
         ### id = 5 ###
@@ -55,6 +59,7 @@ class DeveloperSeeder extends Seeder
             'department'=>'علوم الحاسوب',
             'stage' => "المرحلة الثانية",
             'photo' => "/img/mo.jpg",
+
         ]);
 
         ### id = 6 ###
@@ -63,6 +68,7 @@ class DeveloperSeeder extends Seeder
             'department'=>'علوم الحاسوب',
             'stage' => "المرحلة الرابعة",
             'photo' => "/img/mo.jpg",
+
         ]);
 
         ### id = 7 ###
@@ -71,6 +77,9 @@ class DeveloperSeeder extends Seeder
             'department'=>'علوم الحاسوب',
             'stage' => 'المرحلة الثالثة',
             'photo' =>'/img/mo.jpg',
+            'email' => 'fatma.nawfal.abdalrazak@gmail.com',
+            'linkedln' => 'https://www.linkedin.com/in/fatma-nawfal-99a8a2214',
+            'github' => 'https://github.com/fatmanawfal'
         ]);
         ### manager ###
         Developer::create([
@@ -79,6 +88,7 @@ class DeveloperSeeder extends Seeder
             'stage' => "المرحلة الثالثة",
             'type' => 2,
             'photo' => '/img/mo.jpg',
+
         ]);
     }
 }

@@ -1,13 +1,14 @@
 <div>
     <div class="h-auto ">
-        <div class="bg-white hover:bg-gray-50 p-6 rounded-t-lg border  w-11/12">
+        <div class="relative bg-white hover:bg-gray-50 p-6 rounded-t-lg border  w-11/12">
             <img class="h-64 rounded w-full object-cover object-center mb-6"
                 src="{{ asset($event->image_path ?? 'img/caseImage.webp') }}" alt="content">
-            
-            <h2 class="text-xl text-gray-900 font-medium title-font mb-2 text-center">{{ $event->title }}</h2>
-            <h3 class="tracking-widest text-secondary-700 text-base font-medium title-font text-center mb-4">{{ $event->target }} د.ع</h3>
 
-            <p class="leading-relaxed text-base">{{ $event->getLimit('description') }}
+            <h2 class="text-xl text-gray-900 font-medium title-font mb-2 text-center">{{ $event->title }}</h2>
+            <h3 class="tracking-widest text-secondary-700 text-base font-medium title-font text-center mb-4">
+                {{ $event->target }} د.ع</h3>
+
+            <p class="leading-relaxed text-base font-bold text-gray-400">{{ $event->getLimit('description') }}
                 {{-- more info button --}}
                 <button class="text-secondary-600 text-sm font-bold duration-300 mb-4" type="button"
                     data-modal-toggle="defaultModal">
@@ -32,15 +33,16 @@
                         </div>
 
                         <div class="p-6 space-y-6">
-                            <p class="text-base font-semibold leading-relaxed text-black">
+                            <p class="text-lg font-semibold leading-relaxed text-black">
                                 {{ $event->description }}
                             </p>
                         </div>
                     </div>
                 </div>
             </div>
-            <hr class="mb-5">
+            @admin
             <div x-data="{ open: false }" class="flex flex-col">
+                <hr class="mb-5">
                 {{-- edit/delete/add Buttons--}}
                 <div class="flex justify-around">
 
@@ -77,17 +79,35 @@
                 </div>
 
             </div>
+            @endadmin
+            <div class="w-full absolute bottom-0 right-0  text-center">
+                <div class="bg-green-500 h-4 text-2xs text-white " style="width: {{ ($event->received_price * 100) / $event->target }}%">
+                    {{round( ($event->received_price * 100) / $event->target )}}%
+                </div>
+                
+            </div>
 
         </div>
-        <div class="w-11/12 bg-gray-200 h-1 mb-6 text-center">
-            <div class="bg-green-500 h-1 " style="width: {{ ($event->received_price * 100) / $event->target}}%"></div>
-            @if($event->received_price == $event->target)
-            مكتمل
-            @else
-            {{ $event->received_price }} د.ع
-            @endif
-        </div>
+        
     </div>
 
-
+    {{-- modal --}}
+    <div wire:ignore.self id="case-modal" tabindex="-1"
+        class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full">
+        <div class="relative p-4 w-full max-w-4xl h-full md:h-auto">
+            <!-- Modal content -->
+            <div class="relative bg-white rounded-lg shadow ">
+                <!-- Modal header -->
+                <div class="flex justify-between items-center">
+                    <button type="button"
+                        class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-red-600 rounded-bl-lg rounded-tr-lg text-lg p-1.5 ml-auto inline-flex items-center"
+                        data-modal-toggle="case-modal">
+                        <i class="fa-solid fa-xmark text-2xl"></i>
+                    </button>
+                </div>
+                <!-- Modal body -->
+                @livewire('pages.cases.admin.edit', ['case_id' => $event->id], key($event_id))
+            </div>
+        </div>
+    </div>
 </div>

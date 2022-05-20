@@ -7,7 +7,7 @@ use App\Models\Event;
 use App\Models\Share;
 class Main extends Component
 {
-    protected $listeners = ['$refresh' ,'search'];
+    protected $listeners = ['$refresh' ,'search', 'hi' => 'hi'];
 
     public $search , $received_price ,$target ,$selectEvent;
 
@@ -16,6 +16,9 @@ class Main extends Component
         $payments = Event::sum('received_price');
         $this->total = Share::where('state', true)->sum('share') * 2000;
         $this->current_price = $this->total - $payments;
+    }
+    public function hi(){
+        dd("ddd");
     }
 
     public function search($search){

@@ -13,19 +13,21 @@
                 <p class="text-xs sm:text-base text-gray-700 text-center"></p>
             </div>
             <div class="flex justify-center pt-2 align-center">
-                <a rel="noopener noreferrer" href="#" aria-label="GitHub"
+                <a rel="noopener noreferrer" href="{{ $team->github }}" aria-label="GitHub" target="_blank"
                     class="p-2 rounded-md text-gray-900 hover:text-violet-400">
-                    <i class="fa-brands fa-github"></i>
+                    <i class="fa-brands fa-github">
+                        {{ $team->github }}
+                    </i>
                 </a>
-                <a rel="noopener noreferrer" href="#" aria-label="Instagram"
+                {{-- <a rel="noopener noreferrer" href="#" aria-label="Instagram"
                     class="p-2 rounded-md text-gray-900 hover:text-violet-400">
                     <i class="fa-brands fa-instagram"></i>
-                </a>
-                <a rel="noopener noreferrer" href="#" aria-label="Linkedin"
+                </a> --}}
+                <a rel="noopener noreferrer" href="{{ $team->linkedln }}" aria-label="Linkedin" target="_blank"
                     class="p-2 rounded-md text-gray-900 hover:text-violet-400">
                     <i class="fa-brands fa-linkedin"></i>
                 </a>
-                <a rel="noopener noreferrer" href="#" aria-label="Email"
+                <a rel="noopener noreferrer" href="{{ $team->email }}" aria-label="Email" target="_blank"
                     class="p-2 rounded-md text-gray-900 hover:text-violet-400">
                     <i class="fa-solid fa-envelope"></i>
                 </a>
