@@ -7,6 +7,7 @@ use Livewire\Component;
 use Jantinnerezo\LivewireAlert\LivewireAlert;
 
 
+
 class Card extends Component
 {
     use LivewireAlert;
@@ -15,6 +16,10 @@ class Card extends Component
     public $event  ,$title ,$selectEvent;
 
     protected $listeners = ['delete', '$refresh' , 'getEvent'];
+    protected $rules = [
+        'name' => 'required',
+        
+    ];
 
     public function delete(){
         Event::findOrFail($this->event_id)->delete();
@@ -23,10 +28,9 @@ class Card extends Component
             'timer' => 3000,
             'toast' => true,
         ]);
-        $this->emitSelf('$refresh');
+        $this->emitUp('$refresh');
     }
-
-
+    
     public function confirm($id){
         $this->event_id = $id;
         $this->alert('warning', 'هل انت متأكد من حذف الحالة؟', [

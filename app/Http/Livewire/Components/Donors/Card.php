@@ -36,8 +36,7 @@ class Card extends Component
         $this->emitSelf('$refresh');
     }
 
-    public function confirm($id)
-    {
+    public function confirm($id){
         $this->share_id = $id;
         $this->alert('warning', 'هل انت متأكد من حذف الحالة؟', [
             'position' => 'center',
