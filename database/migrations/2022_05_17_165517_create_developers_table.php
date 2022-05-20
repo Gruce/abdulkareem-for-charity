@@ -20,6 +20,10 @@ return new class extends Migration
             $table->string('stage');
             $table->integer('type')->default(1); // developer = 1 : manager = 2
             $table->string('photo');
+            $table->string('email')->nullable();
+            $table->string('linkedln')->nullable();
+            $table->string('github')->nullable();
+            $table->string('phone')->nullable();
             $table->timestamps();
         });
     }
