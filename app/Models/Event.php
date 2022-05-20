@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Livewire\WithFileUploads;
+use Illuminate\Database\Eloquent\Casts\Attribute;
 
 
 class Event extends Model
@@ -52,9 +53,19 @@ class Event extends Model
     ######### END FUNCTIONS ##########
 
     public function received()
-    {
+    {   
         return $this->target - $this->received_price;
+
     }
+    // protected function getReceivedState():Attribute{
+    //     return Attribute::make(
+    //         get: function () {
+    //             dd($this->received());
+    //             return $this->received();
+    //         }
+    //     );
+    // }
+
 }
 
 

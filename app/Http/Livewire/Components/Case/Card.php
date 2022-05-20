@@ -11,10 +11,10 @@ class Card extends Component
 {
     use LivewireAlert;
 
-    public  $event_id, $case_id, $received_price;
-    public $event  ,$title;
+    public  $event_id, $case_id, $received_price ,$target;
+    public $event  ,$title ,$selectEvent;
 
-    protected $listeners = ['delete', '$refresh' ];
+    protected $listeners = ['delete', '$refresh' , 'getEvent'];
 
     public function delete(){
         Event::findOrFail($this->event_id)->delete();
@@ -23,7 +23,6 @@ class Card extends Component
             'timer' => 3000,
             'toast' => true,
         ]);
-
         $this->emitSelf('$refresh');
     }
 
@@ -48,11 +47,17 @@ class Card extends Component
             'timer' => 3000,
             'toast' => true,
         ]);
+        $this->emitSelf('$refresh');
     }
     
+    public function getEvent($received_price ,$target , $selectEvent){
+        $this->received_price = $received_price;
+        $this->target = $target;
+        $this->selectEvent = $selectEvent;
+        
+    }
     
     public function render(){
-        
         return view('livewire.components.case.card');
     }
 }
