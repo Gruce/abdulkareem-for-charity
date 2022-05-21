@@ -44,21 +44,44 @@ class Card extends Component
 
     public function add_price(Event $event)
     {
-        if ($this->received_price <= $event->received() && $this->received_price <= $this->current_price) {
-            $event->add_price($this->received_price);
+        // if ($this->received_price <= $event->received() && $this->received_price <= $this->current_price) {
+        //     $event->add_price($this->received_price);
 
-            $this->alert('success', 'تم ', [
-                'position' => 'top',
-                'timer' => 3000,
-                'toast' => true,
-            ]);
-            $this->emitSelf('$refresh');
-        } else {
+        //     $this->alert('success', 'تم ', [
+        //         'position' => 'top',
+        //         'timer' => 3000,
+        //         'toast' => true,
+        //     ]);
+        //     $this->emitSelf('$refresh');
+        // } else {
+        //     $this->alert('warning', 'لا يمكن اضافة رسوم بقيمة اكبر من المطلوب', [
+        //         'position' => 'top',
+        //         'timer' => 3000,
+        //         'toast' => true,
+        //     ]);
+        // }
+        if($this->received_price > $event->received()){
             $this->alert('warning', 'لا يمكن اضافة رسوم بقيمة اكبر من المطلوب', [
+                        'position' => 'top',
+                        'timer' => 3000,
+                        'toast' => true,
+                    ]);
+        }
+        elseif ($this->received_price > $this->current_price) {
+            $this->alert('warning', 'لا يمكنك اضافة مبالغ اكثر من الموجود في الصندوق', [
                 'position' => 'top',
                 'timer' => 3000,
                 'toast' => true,
             ]);
+        }
+        else{
+            $event->add_price($this->received_price);
+            $this->alert('success', 'تم ', [
+                        'position' => 'top',
+                        'timer' => 3000,
+                        'toast' => true,
+                    ]);
+                    $this->emitSelf('$refresh');
         }
     }
 
