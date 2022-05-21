@@ -44,7 +44,7 @@ class Card extends Component
 
     public function add_price(Event $event)
     {
-        if ($this->received_price <= $event->received() ) {
+        if ($this->received_price <= $event->received() && $this->received_price <= $this->current_price) {
             $event->add_price($this->received_price);
 
             $this->alert('success', 'تم ', [
