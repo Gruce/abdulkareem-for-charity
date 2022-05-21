@@ -55,8 +55,8 @@
             <span class="text-secondary-900 text-4xl xl:text-6xl  font-bold  xl:pr-20">
                 نحن نعمل لأجل
             </span>
-            <div class="my-6 xl:my-20 grid grid-cols-2 xl:grid-cols-5 gap-6 ">
-                @livewire('components.home.information',['state' => true], key("هلو"))
+            <div class="my-6 xl:my-20">
+                @livewire('pages.home.activities')
             </div>
         </div>
 
