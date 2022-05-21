@@ -2,7 +2,7 @@
     <div class="flex flex-col absolute h-screen">
 
         <!-- INTRO -->
-        <div class="grid grid-cols-1 xl:grid-cols-12 basis-4/12 justify-between ">
+        <div class="basis-4/12 grid grid-cols-1 xl:grid-cols-12 justify-between ml-6 md:ml-0">
             <!-- Text -->
             <div class=" xl:col-span-5 xl:pr-24 xl:pt-20  ">
                 <h1 class="text-secondary-900 text-4xl xl:text-6xl font-bold ">

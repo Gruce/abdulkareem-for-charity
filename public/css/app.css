@@ -2931,6 +2931,9 @@ select{
   .md\:mt-7{
     margin-top: 1.75rem;
   }
+  .md\:ml-0{
+    margin-left: 0px;
+  }
   .md\:flex{
     display: flex;
   }
