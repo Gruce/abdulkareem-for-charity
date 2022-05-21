@@ -6,7 +6,7 @@
             <!-- Text -->
             <div class=" xl:col-span-5 xl:pr-24 xl:pt-20  ">
                 <h1 class="text-secondary-900 text-4xl xl:text-6xl font-bold ">
-                    صندوق الكريم
+                    صندوق الكرم
                 </h1>
                 <p class="text-secondary-200 text-lg xl:text-2xl mt-6">
                     مبادرة ونشاط طلابي بحت ينطلق من طلبة كلية علوم
