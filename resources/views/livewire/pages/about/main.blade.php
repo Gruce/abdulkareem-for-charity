@@ -132,7 +132,7 @@
                 {{-- Cards --}}
                 <div class="grid grid-cols-4 gap-8 ">
                     @foreach ($developers as $team)
-                        <livewire:components.about.card :team="$team" key="{{ now() }}" />
+                        <livewire:pages.about.card :team="$team" key="{{ now() }}" />
                     @endforeach
                 </div>
             </div>

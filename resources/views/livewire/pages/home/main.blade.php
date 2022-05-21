@@ -45,7 +45,7 @@
             <div
                 class="my-6 xl:my-20 ml-10 xl:ml-0 grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 ">
                 @foreach ($events as $event)
-                @livewire('components.case.card', ['event' => $event], key($event->id . "hi"))
+                @livewire('pages.cases.card', ['event' => $event], key($event->id . "hi"))
                 @endforeach
             </div>
         </div>
