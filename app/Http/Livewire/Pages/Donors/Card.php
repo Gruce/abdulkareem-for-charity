@@ -1,12 +1,11 @@
 <?php
 
-namespace App\Http\Livewire\Components\Donors;
+namespace App\Http\Livewire\Pages\Donors;
 
+use Livewire\Component;
 use Jantinnerezo\LivewireAlert\LivewireAlert;
 use App\Models\User;
-use Livewire\Component;
 use App\Models\Share;
-
 
 class Card extends Component
 {
@@ -101,7 +100,6 @@ class Card extends Component
         $this->division = $division;
     }
 
-
     public function render()
     {
         $search = '%' . $this->search . '%';
@@ -146,6 +144,6 @@ class Card extends Component
         }
 
         $this->users = $this->users->where('name', 'LIKE', $search)->orderByDesc('id')->get();
-        return view('livewire.components.donors.card');
+        return view('livewire.pages.donors.card');
     }
 }
