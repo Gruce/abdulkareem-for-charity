@@ -11,12 +11,7 @@ class Main extends Component
 
     public $search , $received_price ,$target ,$selectEvent;
 
-    public function mount()
-    {
-        $payments = Event::sum('received_price');
-        $this->total = Share::where('state', true)->sum('share') * 2000;
-        $this->current_price = $this->total - $payments;
-    }
+    
 
 
     public function search($search){
@@ -33,6 +28,10 @@ class Main extends Component
         );
     }
     public function render(){
+        $payments = Event::sum('received_price');
+        $this->total = Share::where('state', true)->sum('share') * 2000;
+        $this->current_price = $this->total - $payments;
+
         $search = '%' . $this->search . '%';
         $this->events =[];
         if($this->selectEvent == 1){

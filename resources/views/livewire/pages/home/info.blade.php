@@ -1,33 +1,12 @@
-<div>
-    @if($state)
-
-    {{-- activites --}}
-    @forelse($activities->items as $item)
-    <div class="p-4 bg-white rounded-lg border border-gray-200 shadow-md xl:m-5 m-1 ml-10 xl:ml-0">
-        <div class="flex flex-col p-2 text-center xl:mx-10">
-            <i class="fa-solid fa-{{ $item->value }} text-7xl text-primary-500"></i>
-
-            <span class="text-xl xl:text-2xl font-bold mt-2 mx-auto">
-                {{ $item->info }}
-            </span>
+<section class="p-6  text-gray-100">
+    {{-- <div class="container mx-auto grid justify-center grid-cols-2 text-center lg:grid-cols-3">
+        @foreach ($menu as $item)
+        <div class="flex flex-col justify-start m-2 lg:m-6">
+            <p class="text-4xl font-bold leading-none lg:text-6xl">{{ $item->value }}</p>
+            <p class="text-sm sm:text-base">{{ $item->info }}</p>
         </div>
-    </div>
-    @empty
-    @endforelse
-    @else
-    {{-- info --}}
-    @forelse($menu->items as $item)
-    <div class="flex flex-col p-2 text-center mx-3 xl:mx-20 mb-4 xl:mb-10">
-        <span class="text-sm md:text-lg xl:text-4xl font-bold font-noto">
-            {{ $item->value }}
-        </span>
+        @endforeach
 
-        <span class="text-xs md:text-base xl:text-2xl">
-            {{ $item->info }}
-        </span>
-    </div>
-    @empty
-    @endforelse
 
-    @endif
-</div>
+    </div> --}}
+</section>

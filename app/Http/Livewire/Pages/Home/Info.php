@@ -11,6 +11,7 @@ use Livewire\Component;
 
 class Info extends Component
 {
+   
     
 
     public function render()
@@ -24,7 +25,7 @@ class Info extends Component
 
 
 
-        $menu = new Menu([
+        $menu  = new Menu([
             [
                 'info' => 'المبلغ الكلي',
                 'value' => $total,
@@ -66,6 +67,7 @@ class Info extends Component
     }
 }
 
+
 class Menu
 {
     public $items;
@@ -89,3 +91,4 @@ class MenuItem
         $this->value = $data['value'];
     }
 }
+
