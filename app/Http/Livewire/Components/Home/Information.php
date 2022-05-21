@@ -38,7 +38,7 @@ class Information extends Component
                 'value' => $payments,
 
             ],
-            
+
             [
                 'info' => 'متبرعين',
                 'value' => $users,
@@ -54,7 +54,7 @@ class Information extends Component
                 'value' =>  $share,
 
             ],
-            
+
 
         ]);
         $activities = new Menu([

@@ -887,11 +887,11 @@ select{
 .top-0{
   top: 0px;
 }
-.-right-full{
-  right: -100%;
-}
 .bottom-0{
   bottom: 0px;
+}
+.-right-full{
+  right: -100%;
 }
 .z-0{
   z-index: 0;
@@ -1149,23 +1149,17 @@ select{
 .h-1\/2{
   height: 50%;
 }
-.h-1{
-  height: 0.25rem;
-}
 .h-screen{
   height: 100vh;
+}
+.h-1{
+  height: 0.25rem;
 }
 .h-44{
   height: 11rem;
 }
 .h-14{
   height: 3.5rem;
-}
-.h-2{
-  height: 0.5rem;
-}
-.h-3{
-  height: 0.75rem;
 }
 .min-h-screen{
   min-height: 100vh;
@@ -1552,18 +1546,6 @@ select{
 .rounded-t{
   border-top-left-radius: 0.25rem;
   border-top-right-radius: 0.25rem;
-}
-.rounded-b-full{
-  border-bottom-right-radius: 9999px;
-  border-bottom-left-radius: 9999px;
-}
-.rounded-b{
-  border-bottom-right-radius: 0.25rem;
-  border-bottom-left-radius: 0.25rem;
-}
-.rounded-b-lg{
-  border-bottom-right-radius: 0.5rem;
-  border-bottom-left-radius: 0.5rem;
 }
 .rounded-bl-lg{
   border-bottom-left-radius: 0.5rem;
@@ -2946,9 +2928,6 @@ select{
   }
   .md\:hidden{
     display: none;
-  }
-  .md\:h-main{
-    height: calc(100vh - 11.625rem);
   }
   .md\:h-full{
     height: 100%;

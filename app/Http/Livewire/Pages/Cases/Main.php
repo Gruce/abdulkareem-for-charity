@@ -7,7 +7,7 @@ use App\Models\Event;
 use App\Models\Share;
 class Main extends Component
 {
-    protected $listeners = ['$refresh' ,'search', 'hi' => 'hi'];
+    protected $listeners = ['$refresh' ,'search'];
 
     public $search , $received_price ,$target ,$selectEvent;
 
@@ -17,9 +17,7 @@ class Main extends Component
         $this->total = Share::where('state', true)->sum('share') * 2000;
         $this->current_price = $this->total - $payments;
     }
-    public function hi(){
-        dd("ddd");
-    }
+
 
     public function search($search){
         $this->search = $search;
@@ -39,7 +37,7 @@ class Main extends Component
         $this->events =[];
         if($this->selectEvent == 1){
             $this->events = Event::where('title', 'LIKE', $search)->whereColumn('received_price', '=', 'target')->get();
-        
+
         }
         elseif ($this->selectEvent == 2)
             $this->events = Event::where('title', 'LIKE', $search)->whereColumn('received_price','<','target')->get();
