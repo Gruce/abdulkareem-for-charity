@@ -3,7 +3,10 @@
 namespace App\Http\Livewire\Pages\Home;
 
 use Livewire\Component;
-use App\Models\Event;
+use App\Models\{ 
+    Event,
+};
+
 class Main extends Component
 {
     protected $listeners = [ '$refresh' ];

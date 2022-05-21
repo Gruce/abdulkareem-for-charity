@@ -33,8 +33,8 @@
         </div>
 
         {{--information--}}
-        <div class=" basis-2/12 mt-6 xl:mt-14 justify-around grid grid-cols-3 ml-10">
-            @livewire('components.home.information', key("صباح الخير"))
+        <div class=" basis-2/12 mt-6 xl:mt-14 ml-10 ">
+            @livewire('pages.home.info')
         </div>
 
         {{-- Cases --}}
