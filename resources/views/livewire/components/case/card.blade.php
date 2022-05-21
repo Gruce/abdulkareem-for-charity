@@ -56,7 +56,7 @@
                         <i
                             class="text-secondary-600 fa-solid fa-pen-to-square text-xl hover:rotate-12 duration-200 hover:text-secondary-700"></i>
                     </button>
-                    @if ($event->received_price != $event->target)
+                    @if ($event->received_price < $event->target)
                     <button @click="open = !open" class="mx-2">
                         <i
                             class="text-red-400 fa-solid fa-plus text-xl hover:scale-110 hover:rotate-45 duration-300 hover:text-red-500"></i>
@@ -83,11 +83,11 @@
                 <div class="bg-green-500 h-4 text-2xs text-white " style="width: {{ ($event->received_price * 100) / $event->target }}%">
                     {{round( ($event->received_price * 100) / $event->target )}}%
                 </div>
-                
+
             </div>
 
         </div>
-        
+
     </div>
 
     {{-- modal --}}
