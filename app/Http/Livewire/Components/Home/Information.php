@@ -24,6 +24,22 @@ class Information extends Component
 
         $menu = new Menu([
             [
+                'info' => 'المبلغ الكلي',
+                'value' => $total,
+
+            ],
+            [
+                'info' => 'المبلغ الحالي',
+                'value' => $current_price,
+
+            ],
+            [
+                'info' => 'مصروفات',
+                'value' => $payments,
+
+            ],
+
+            [
                 'info' => 'متبرعين',
                 'value' => $users,
 
@@ -38,21 +54,7 @@ class Information extends Component
                 'value' =>  $share,
 
             ],
-            [
-                'info' => 'مصروفات',
-                'value' => $payments,
 
-            ],
-            [
-                'info' => 'المبلغ الكلي',
-                'value' => $total,
-
-            ],
-            [
-                'info' => 'المبلغ الحالي',
-                'value' => $current_price,
-
-            ],
 
         ]);
         $activities = new Menu([

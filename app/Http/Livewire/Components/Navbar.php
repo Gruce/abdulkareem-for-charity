@@ -27,15 +27,16 @@ class Navbar extends Component
                 'icon' => 'fas fa-hand-holding-heart',
             ],
             [
-                'name' => 'عن الصندوق',
-                'route' => 'about',
-                'icon' => 'fas fa-circle-info',
-            ],
-            [
                 'name' => 'المتبرعين ',
                 'route' => 'donors',
                 'icon' => 'fas fa-donors',
             ],
+            [
+                'name' => 'الصندوق',
+                'route' => 'about',
+                'icon' => 'fas fa-circle-info',
+            ],
+            
             
 
         ]);
