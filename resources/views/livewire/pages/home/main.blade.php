@@ -6,7 +6,7 @@
             <!-- Text -->
             <div class=" xl:col-span-5 xl:pr-24 xl:pt-20  ">
                 <h1 class="text-secondary-900 text-4xl xl:text-6xl font-bold ">
-                    صندوق الكريم
+                    صندوق الكرم
                 </h1>
                 <p class="text-secondary-200 text-lg xl:text-2xl mt-6">
                     مبادرة ونشاط طلابي بحت ينطلق من طلبة كلية علوم
@@ -45,7 +45,7 @@
             <div
                 class="my-6 xl:my-20 ml-10 xl:ml-0 grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 ">
                 @foreach ($events as $event)
-                @livewire('components.case.card', ['event' => $event], key($event->id . "hi"))
+                @livewire('pages.cases.card', ['event' => $event], key($event->id . "hi"))
                 @endforeach
             </div>
         </div>
