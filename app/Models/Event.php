@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Livewire\WithFileUploads;
+use Illuminate\Database\Eloquent\Casts\Attribute;
 
 
 class Event extends Model
@@ -12,8 +13,8 @@ class Event extends Model
     use WithFileUploads;
     use HasFactory;
     protected $fillable = ['title', 'description', 'image_path', 'file_path', 'target', 'received_price'];
-    
-    
+
+
     ######### FUNCTIONS ##########
 
     ### add ###
@@ -24,7 +25,7 @@ class Event extends Model
     ### End add ###
     public function add_file($file, $type = 1)
     {
-        
+
         $type = $type == 1 ? 'images' : 'files';
         $ext = $file->extension();
         $name =  \Str::random(10) . '.' . $ext;
@@ -54,7 +55,18 @@ class Event extends Model
     public function received()
     {
         return $this->target - $this->received_price;
+
     }
+    
+    // protected function getReceivedState():Attribute{
+    //     return Attribute::make(
+    //         get: function () {
+    //             dd($this->received());
+    //             return $this->received();
+    //         }
+    //     );
+    // }
+
 }
 
 

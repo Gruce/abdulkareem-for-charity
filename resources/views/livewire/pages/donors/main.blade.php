@@ -67,7 +67,7 @@
             </div>
         </div>
         <div class="mt-4">
-            @livewire('components.donors.card')
+            @livewire('pages.donors.card')
         </div>
     </div>
 

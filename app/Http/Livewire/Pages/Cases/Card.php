@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Http\Livewire\Components\Case;
+namespace App\Http\Livewire\Pages\Cases;
 
-use App\Models\Event;
 use Livewire\Component;
+use App\Models\Event;
 use Jantinnerezo\LivewireAlert\LivewireAlert;
 use App\Models\Share;
 
@@ -79,12 +79,12 @@ class Card extends Component
     }
     
 
-    public function render()
-    {
+    public function render(){
+        
         $payments = Event::sum('received_price');
         $total = Share::where('state', true)->sum('share') * 2000;
         $this->current_price = $total - $payments;
 
-        return view('livewire.components.case.card');
+        return view('livewire.pages.cases.card');
     }
 }
