@@ -9,7 +9,7 @@ class Navbar extends Component
     public function render(){
         $menu = new Menu([
             [
-                'name' => 'الصفحة الرئيسية',
+                'name' => 'الرئيسية',
                 'route' => 'home',
                 'icon' => 'fas fa-home',
                 // 'submenu' => [
@@ -27,6 +27,11 @@ class Navbar extends Component
                 'icon' => 'fas fa-hand-holding-heart',
             ],
             [
+                'name' => 'التبرع',
+                'route' => 'donate',
+                'icon' => 'fas fa-circle-info',
+            ],
+            [
                 'name' => 'المتبرعين ',
                 'route' => 'donors',
                 'icon' => 'fas fa-donors',
@@ -36,6 +41,7 @@ class Navbar extends Component
                 'route' => 'about',
                 'icon' => 'fas fa-circle-info',
             ],
+            
             
             
 
