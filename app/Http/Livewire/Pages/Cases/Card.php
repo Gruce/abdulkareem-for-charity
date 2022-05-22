@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Http\Livewire\Components\Case;
+namespace App\Http\Livewire\Pages\Cases;
 
-use App\Models\Event;
 use Livewire\Component;
+use App\Models\Event;
 use Jantinnerezo\LivewireAlert\LivewireAlert;
 use App\Models\Share;
 
@@ -44,20 +44,20 @@ class Card extends Component
 
     public function add_price(Event $event)
     {
-        
-        if($this->received_price > $event->received()){
-            $this->alert('warning', 'لا يمكن اضافة رسوم بقيمة اكبر من المطلوب', [
-                        'position' => 'top',
-                        'timer' => 3000,
-                        'toast' => true,
-                    ]);
-        }
-        elseif ($this->received_price > $this->current_price) {
+        if ($this->received_price > $this->current_price) {
             $this->alert('warning', 'لا يمكنك اضافة مبالغ اكثر من الموجود في الصندوق', [
                 'position' => 'top',
                 'timer' => 3000,
                 'toast' => true,
             ]);
+        }
+        
+        elseif($this->received_price > $event->received()){
+            $this->alert('warning', 'لا يمكن اضافة رسوم بقيمة اكبر من المطلوب', [
+                        'position' => 'top',
+                        'timer' => 3000,
+                        'toast' => true,
+                    ]);
         }
         else{
             $event->add_price($this->received_price);
@@ -66,8 +66,8 @@ class Card extends Component
                         'timer' => 3000,
                         'toast' => true,
                     ]);
-                    $this->emitSelf('$refresh');
-                    $this->emitTo('Pages.Cases.Main', '$refresh');
+                    $this->emitUp('$refresh');
+                    $this->emitTo('pages.cases.main', '$refresh');
         }
     }
 
@@ -77,15 +77,14 @@ class Card extends Component
         $this->target = $target;
         $this->selectEvent = $selectEvent;
     }
-    public function mount()
-    {
+    
+
+    public function render(){
+        
         $payments = Event::sum('received_price');
         $total = Share::where('state', true)->sum('share') * 2000;
         $this->current_price = $total - $payments;
-    }
 
-    public function render()
-    {
-        return view('livewire.components.case.card');
+        return view('livewire.pages.cases.card');
     }
 }

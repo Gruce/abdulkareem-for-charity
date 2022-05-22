@@ -1,12 +1,11 @@
 <?php
 
-namespace App\Http\Livewire\Components\Donors;
+namespace App\Http\Livewire\Pages\Donors;
 
+use Livewire\Component;
 use Jantinnerezo\LivewireAlert\LivewireAlert;
 use App\Models\User;
-use Livewire\Component;
 use App\Models\Share;
-
 
 class Card extends Component
 {
@@ -36,8 +35,7 @@ class Card extends Component
         $this->emitSelf('$refresh');
     }
 
-    public function confirm($id)
-    {
+    public function confirm($id){
         $this->share_id = $id;
         $this->alert('warning', 'هل انت متأكد من حذف الحالة؟', [
             'position' => 'center',
@@ -102,7 +100,6 @@ class Card extends Component
         $this->division = $division;
     }
 
-
     public function render()
     {
         $search = '%' . $this->search . '%';
@@ -147,6 +144,6 @@ class Card extends Component
         }
 
         $this->users = $this->users->where('name', 'LIKE', $search)->orderByDesc('id')->get();
-        return view('livewire.components.donors.card');
+        return view('livewire.pages.donors.card');
     }
 }

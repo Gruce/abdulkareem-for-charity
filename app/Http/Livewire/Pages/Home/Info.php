@@ -1,15 +1,18 @@
 <?php
 
-namespace App\Http\Livewire\Components\Home;
+namespace App\Http\Livewire\Pages\Home;
 
+use App\Models\{
+    Event,
+    Share,
+    User,
+};
 use Livewire\Component;
-use App\Models\User;
-use App\Models\Share;
-use App\Models\Event;
 
-class Information extends Component
+class Info extends Component
 {
-    public $state = null;
+   
+    
 
     public function render()
     {
@@ -22,7 +25,7 @@ class Information extends Component
 
 
 
-        $menu = new Menu([
+        $menu  = new Menu([
             [
                 'info' => 'المبلغ الكلي',
                 'value' => $total,
@@ -57,41 +60,13 @@ class Information extends Component
 
 
         ]);
-        $activities = new Menu([
-            [
-                'info' => 'الطلاب',
-                'value' => 'graduation-cap',
-
-            ],
-            [
-                'info' => 'المرضى',
-                'value' => 'head-side-mask',
-
-            ],
-            [
-                'info' => 'الايتام',
-                'value' => 'people-line',
-
-            ],
-            [
-                'info' => 'الفقراء',
-                'value' => 'person-arrow-up-from-line',
-
-            ],
-            [
-                'info' => 'البيئة',
-                'value' => 'seedling',
-
-            ],
-
-
-        ]);
-        return view('livewire.components.home.information', [
+        
+        return view('livewire.pages.home.info', [
             'menu' => $menu,
-            'activities' => $activities
         ]);
     }
 }
+
 
 class Menu
 {
@@ -116,3 +91,4 @@ class MenuItem
         $this->value = $data['value'];
     }
 }
+

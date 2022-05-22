@@ -6,7 +6,7 @@
             <!-- Text -->
             <div class="basis-1/2 col-span-7 pt-20  text-center">
                 <h1 class="text-secondary-900 text-6xl font-bold ">
-                    صندوق الكريم
+                    صندوق الكرم
                 </h1>
                 <p class="mt-10 text-xl text-gray-700 font-Alhurrareg px-1 md:px-9 text-right"><b>صـندوق الأستاذ عبد
                         الكريم الخيري</b> هو
@@ -118,7 +118,7 @@
                 {{-- Cards --}}
                 <div class="grid grid-cols-4 gap-8 ">
                     @foreach ($managers as $team)
-                        <livewire:components.about.card :team="$team" key="{{ now() }}" />
+                    <livewire:pages.about.card :team="$team" key="{{ now() }}" />
                     @endforeach
                 </div>
             </div>
@@ -132,7 +132,7 @@
                 {{-- Cards --}}
                 <div class="grid grid-cols-4 gap-8 ">
                     @foreach ($developers as $team)
-                        <livewire:components.about.card :team="$team" key="{{ now() }}" />
+                    <livewire:pages.about.card :team="$team" key="{{ now() }}" />
                     @endforeach
                 </div>
             </div>

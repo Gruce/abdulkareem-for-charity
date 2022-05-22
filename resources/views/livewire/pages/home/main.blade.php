@@ -2,11 +2,11 @@
     <div class="flex flex-col absolute h-screen">
 
         <!-- INTRO -->
-        <div class="grid grid-cols-1 xl:grid-cols-12 basis-4/12 justify-between ">
+        <div class="basis-4/12 grid grid-cols-1 xl:grid-cols-12 justify-between ml-6 md:ml-0">
             <!-- Text -->
             <div class=" xl:col-span-5 xl:pr-24 xl:pt-20  ">
                 <h1 class="text-secondary-900 text-4xl xl:text-6xl font-bold ">
-                    صندوق الكريم
+                    صندوق الكرم
                 </h1>
                 <p class="text-secondary-200 text-lg xl:text-2xl mt-6">
                     مبادرة ونشاط طلابي بحت ينطلق من طلبة كلية علوم
@@ -33,8 +33,8 @@
         </div>
 
         {{--information--}}
-        <div class=" basis-2/12 mt-6 xl:mt-14 justify-around grid grid-cols-3 ml-10">
-            @livewire('components.home.information', key("صباح الخير"))
+        <div class=" basis-2/12 mt-6 xl:mt-14 ml-10 ">
+            @livewire('pages.home.info')
         </div>
 
         {{-- Cases --}}
@@ -45,7 +45,7 @@
             <div
                 class="my-6 xl:my-20 ml-10 xl:ml-0 grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 ">
                 @foreach ($events as $event)
-                @livewire('components.case.card', ['event' => $event], key($event->id . "hi"))
+                @livewire('pages.cases.card', ['event' => $event], key($event->id . "hi"))
                 @endforeach
             </div>
         </div>
@@ -55,8 +55,8 @@
             <span class="text-secondary-900 text-4xl xl:text-6xl  font-bold  xl:pr-20">
                 نحن نعمل لأجل
             </span>
-            <div class="my-6 xl:my-20 grid grid-cols-2 xl:grid-cols-5 gap-6 ">
-                @livewire('components.home.information',['state' => true], key("هلو"))
+            <div class="my-6 xl:my-20">
+                @livewire('pages.home.activities')
             </div>
         </div>
 

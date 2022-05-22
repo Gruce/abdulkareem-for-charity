@@ -4,7 +4,7 @@
         <div>
             <a href="/" class="flex items-center text-xl">
                 <img src="{{ asset('/img/logo.png') }}" class="h-12 ">
-                <span class="font-Alhurra text-2xl font-bold text-gray-700">صندوق الكريم</span>
+                <span class="font-Alhurra text-2xl font-bold text-gray-700">صندوق الكرم</span>
             </a>
         </div>
         <div class="flex items-center md:order-2 @guest hidden @endguest">
