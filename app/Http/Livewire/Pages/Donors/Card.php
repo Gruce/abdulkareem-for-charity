@@ -11,7 +11,7 @@ class Card extends Component
 {
     use LivewireAlert;
 
-    public $search, $user_type, $user_gender, $user_request, $state,$study_type, $stage, $department, $division;
+    public $item, $user_type, $user_gender, $user_request, $state,$study_type, $stage, $department, $division;
 
     public $share_id;
 
@@ -20,7 +20,7 @@ class Card extends Component
         'shares' => 'required',
     ];
 
-    protected $listeners = ['delete', '$refresh', 'search', 'getUserType'];
+    protected $listeners = ['delete', '$refresh', 'getUserType'];
 
 
 
@@ -84,31 +84,31 @@ class Card extends Component
             'toast' => true,
         ]);
     }
-    public function search($search)
-    {
-        $this->search = $search;
-    }
+    // public function search($search)
+    // {
+    //     $this->search = $search;
+    // }
 
-    public function getUserType($type, $gender, $state, $study_type, $stage, $department, $division)
-    {
-        $this->user_type = $type;
-        $this->user_gender = $gender;
-        $this->user_request = $state;
-        $this->study_type = $study_type;
-        $this->stage = $stage;
-        $this->department = $department;
-        $this->division = $division;
-    }
+    // public function getUserType($type, $gender, $state, $study_type, $stage, $department, $division)
+    // {
+    //     $this->user_type = $type;
+    //     $this->user_gender = $gender;
+    //     $this->user_request = $state;
+    //     $this->study_type = $study_type;
+    //     $this->stage = $stage;
+    //     $this->department = $department;
+    //     $this->division = $division;
+    // }
 
     public function render()
     {
-        $search = '%' . $this->search . '%';
+        // $search = '%' . $this->search . '%';
 
-        $this->users = User::with([
-            'shares' => function ($query) {
-                return $query->where('state', false)->get();
-            }
-        ]);
+        // $this->users = User::with([
+        //     'shares' => function ($query) {
+        //         return $query->where('state', false)->get();
+        //     }
+        // ]);
         if ($this->user_type) $this->users = $this->users->where('type','>', $this->user_type);
 
         if ($this->user_gender) $this->users = $this->users->where('gender', $this->user_gender);
@@ -143,7 +143,7 @@ class Card extends Component
             });
         }
 
-        $this->users = $this->users->where('name', 'LIKE', $search)->orderByDesc('id')->get();
+        // $this->users = $this->users->where('name', 'LIKE', $search)->orderByDesc('id')->get();
         return view('livewire.pages.donors.card');
     }
 }
