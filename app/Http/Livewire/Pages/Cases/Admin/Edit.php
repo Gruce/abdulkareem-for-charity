@@ -4,10 +4,12 @@ namespace App\Http\Livewire\Pages\Cases\Admin;
 
 use Livewire\Component;
 use App\Models\Event;
+use Livewire\WithFileUploads;
 use Jantinnerezo\LivewireAlert\LivewireAlert;
 class Edit extends Component
 {
     use LivewireAlert;
+    use WithFileUploads;
     public $title, $description, $image_path, $file_path, $target, $received_price, $case_id;
 
     protected $rules = [
@@ -15,9 +17,10 @@ class Edit extends Component
         'target' => 'required',
     ];
 
-    public function mount()
+    public function mount($case_id)
     {
-    if ($this->case_id) {
+        $this->case_id = $case_id;
+    if ($case_id) {
 
         $case = Event::findOrFail($this->case_id);
         $this->title = $case->title;

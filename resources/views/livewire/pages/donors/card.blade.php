@@ -1,7 +1,7 @@
 <div>
 
     <div x-data="{ isOpen: false }" class="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 group">
-        @forelse($users as $item)
+        {{-- @forelse($users as $item) --}}
         <div
             class="flex flex-col justify-center max-w-sm p-6  rounded-xl sm:px-12 border-x-2 border-y border-gray-200">
             <img src="{{ asset($item->profile_photo_path ?? 'img/user.png') }}"
@@ -76,8 +76,8 @@
                 @endadmin
             </div>
         </div>
-        @empty
+        {{-- @empty
         لا يوجد متبرعين
-        @endforelse
+        @endforelse --}}
     </div>
 </div>
