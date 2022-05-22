@@ -11,7 +11,7 @@ class Card extends Component
 {
     use LivewireAlert;
 
-    public $search, $user_type, $user_gender, $user_request, $state,$study_type, $stage, $department, $division;
+    public  $item ,$type, $gender, $request, $state,$study_type, $stage, $department, $division;
 
     public $share_id;
 
@@ -20,7 +20,7 @@ class Card extends Component
         'shares' => 'required',
     ];
 
-    protected $listeners = ['delete', '$refresh', 'search', 'getUserType'];
+    protected $listeners = ['delete', '$refresh' , 'getUserType'];
 
 
 
@@ -32,7 +32,7 @@ class Card extends Component
             'timer' => 3000,
             'toast' => true,
         ]);
-        $this->emitSelf('$refresh');
+        $this->emitUp('$refresh');
     }
 
     public function confirm($id){
@@ -50,7 +50,6 @@ class Card extends Component
 
     public function add($id)
     {
-
         $data = [
             'user_id' => $id,
             'share' => $this->share,
@@ -63,6 +62,8 @@ class Card extends Component
         $share = new Share();
         $share->add($data);
         $this->reset();
+        
+        
     }
     public function accept($id, $state)
     {
@@ -84,16 +85,13 @@ class Card extends Component
             'toast' => true,
         ]);
     }
-    public function search($search)
-    {
-        $this->search = $search;
-    }
+    
 
     public function getUserType($type, $gender, $state, $study_type, $stage, $department, $division)
     {
-        $this->user_type = $type;
-        $this->user_gender = $gender;
-        $this->user_request = $state;
+        $this->type = $type;
+        $this->gender = $gender;
+        $this->state = $state;
         $this->study_type = $study_type;
         $this->stage = $stage;
         $this->department = $department;
@@ -102,48 +100,6 @@ class Card extends Component
 
     public function render()
     {
-        $search = '%' . $this->search . '%';
-
-        $this->users = User::with([
-            'shares' => function ($query) {
-                return $query->where('state', false)->get();
-            }
-        ]);
-        if ($this->user_type) $this->users = $this->users->where('type','>', $this->user_type);
-
-        if ($this->user_gender) $this->users = $this->users->where('gender', $this->user_gender);
-
-        if ($this->user_request != 1 && $this->user_request != 0 ) {
-            $this->users = $this->users->whereHas('shares',  function ($query) {
-                $query->where('state', $this->user_request);
-            });
-        }
-
-        if ($this->study_type) {
-            $this->users = $this->users->whereHas('student', function ($query) {
-                $query->where('study_type', $this->study_type);
-            });
-        }
-
-        if ($this->stage) {
-            $this->users = $this->users->whereHas('student', function ($query) {
-                $query->where('stage', $this->stage);
-            });
-        }
-
-        if ($this->division) {
-            $this->users = $this->users->whereHas('student', function ($query) {
-                $query->where('division', $this->division);
-            });
-        }
-
-        if ($this->department) {
-            $this->users = $this->users->whereHas('student', function ($query) {
-                $query->where('department', $this->department);
-            });
-        }
-
-        $this->users = $this->users->where('name', 'LIKE', $search)->orderByDesc('id')->get();
         return view('livewire.pages.donors.card');
     }
 }
