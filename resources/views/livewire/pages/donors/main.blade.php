@@ -67,13 +67,7 @@
             </div>
         </div>
         <div class="mt-4">
-        @forelse($users as $item)
-            <livewire:pages.donors.card :item="$item" key="{{ now() }}"/>
-            @empty
-            <div class="text-2xl font-medium text-gray-700">
-                لايوجد متبرعين
-            </div>
-            @endforelse
+            @livewire('pages.donors.card')
         </div>
     </div>
 

@@ -8,6 +8,7 @@ use App\Models\User;
 use App\Models\Share;
 class Main extends Component
 {
+
     public $search, $type = 0, $gender = 0, $state = 0 , $study_type = 0, $stage = 0, $department = 0, $division = 0;
     protected $listeners = [ 'search'];
     public function getType()

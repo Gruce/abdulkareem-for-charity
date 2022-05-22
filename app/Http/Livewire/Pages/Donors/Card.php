@@ -89,16 +89,16 @@ class Card extends Component
     //     $this->search = $search;
     // }
 
-    public function getUserType($type, $gender, $state, $study_type, $stage, $department, $division)
-    {
-        $this->user_type = $type;
-        $this->user_gender = $gender;
-        $this->user_request = $state;
-        $this->study_type = $study_type;
-        $this->stage = $stage;
-        $this->department = $department;
-        $this->division = $division;
-    }
+    // public function getUserType($type, $gender, $state, $study_type, $stage, $department, $division)
+    // {
+    //     $this->user_type = $type;
+    //     $this->user_gender = $gender;
+    //     $this->user_request = $state;
+    //     $this->study_type = $study_type;
+    //     $this->stage = $stage;
+    //     $this->department = $department;
+    //     $this->division = $division;
+    // }
 
     public function render()
     {
