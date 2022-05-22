@@ -51,15 +51,12 @@
                             class="text-red-400 fa-solid fa-trash text-xl hover:scale-110 duration-200 hover:text-red-500"></i>
 
                     </button>
-                    {{-- <button wire:click="$set('case_id', {{ $event->id }})" class="mx-2" type="button"
-                        >
+                    <button wire:click="$set('case_id', {{ $event->id }})" class="mx-2" type="button"
+                        data-modal-toggle="case-modal">
                         <i
-
+                        
                         class="text-secondary-600 fa-solid fa-pen-to-square text-xl hover:rotate-12 duration-200 hover:text-secondary-700"></i>
-                    </button> --}}
-                    <a href={{route('edit-case', ['case_id'=> $event->id])}}>
-                        <i class="text-secondary-600 fa-solid fa-pen-to-square text-xl hover:rotate-12 duration-200 hover:text-secondary-700"></i>
-                    </a>
+                    </button>
                     @if ($event->received_price < $event->target)
                         <button @click="open = !open" class="mx-2">
                             <i
@@ -96,7 +93,7 @@
     </div>
 
     {{-- modal --}}
-    {{-- <div wire:ignore.self id="case-modal" tabindex="-1"
+    <div wire:ignore.self id="case-modal" tabindex="-1"
         class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full">
         <div class="relative p-4 w-full max-w-4xl h-full md:h-auto">
             <!-- Modal content -->
@@ -113,5 +110,5 @@
                 @livewire('pages.cases.admin.edit', ['case_id' => $event->id], key($event_id))
             </div>
         </div>
-    </div> --}}
+    </div>
 </div>

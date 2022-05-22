@@ -7,7 +7,7 @@
 
             <div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-3 gap-4 mt-4">
                 <div class="col-span-2">
-                    @livewire('ui.search')
+                    @livewire('ui.search' ,'name')
                 </div>
                 <select wire:change="getType" wire:model="state"
                     class="px-10 py-3 w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0 text-sm">
@@ -66,7 +66,7 @@
                 </select>
             </div>
         </div>
-        <div class="mt-4">
+        <div class="mt-4 grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 group ">
             @forelse($users as $item)
             <livewire:pages.donors.card :item="$item" key="{{ now() }}"/>
             @empty

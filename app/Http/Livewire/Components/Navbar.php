@@ -4,8 +4,8 @@ namespace App\Http\Livewire\Components;
 
 use Livewire\Component;
 
-class Navbar extends Component
-{
+class Navbar extends Component{
+
     public function render(){
         $menu = new Menu([
             [
