@@ -32,7 +32,7 @@ class Card extends Component
             'timer' => 3000,
             'toast' => true,
         ]);
-        $this->emitSelf('$refresh');
+        $this->emitUp('$refresh');
     }
 
     public function confirm($id){
@@ -50,7 +50,6 @@ class Card extends Component
 
     public function add($id)
     {
-
         $data = [
             'user_id' => $id,
             'share' => $this->share,
@@ -63,6 +62,7 @@ class Card extends Component
         $share = new Share();
         $share->add($data);
         $this->reset();
+        
     }
     public function accept($id, $state)
     {
@@ -72,7 +72,7 @@ class Card extends Component
             'position' => 'top',
             'timer' => 3000,
             'toast' => true,
-        ]);
+        ]);$this->emitUp('$refresh');
     }
     public function deleteShare($id)
     {
