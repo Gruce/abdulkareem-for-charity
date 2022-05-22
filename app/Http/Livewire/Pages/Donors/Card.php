@@ -11,7 +11,7 @@ class Card extends Component
 {
     use LivewireAlert;
 
-    public $search, $user_type, $user_gender, $user_request, $state,$study_type, $stage, $department, $division;
+    public $item, $user_type, $user_gender, $user_request, $state,$study_type, $stage, $department, $division;
 
     public $share_id;
 
@@ -20,7 +20,7 @@ class Card extends Component
         'shares' => 'required',
     ];
 
-    protected $listeners = ['delete', '$refresh', 'search', 'getUserType'];
+    protected $listeners = ['delete', '$refresh', 'getUserType'];
 
 
 
@@ -84,10 +84,10 @@ class Card extends Component
             'toast' => true,
         ]);
     }
-    public function search($search)
-    {
-        $this->search = $search;
-    }
+    // public function search($search)
+    // {
+    //     $this->search = $search;
+    // }
 
     public function getUserType($type, $gender, $state, $study_type, $stage, $department, $division)
     {
@@ -102,7 +102,7 @@ class Card extends Component
 
     public function render()
     {
-        $search = '%' . $this->search . '%';
+        // $search = '%' . $this->search . '%';
 
         // $this->users = User::with([
         //     'shares' => function ($query) {
