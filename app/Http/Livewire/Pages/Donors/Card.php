@@ -63,6 +63,7 @@ class Card extends Component
         $share->add($data);
         $this->reset();
         
+        
     }
     public function accept($id, $state)
     {
@@ -72,7 +73,7 @@ class Card extends Component
             'position' => 'top',
             'timer' => 3000,
             'toast' => true,
-        ]);$this->emitUp('$refresh');
+        ]);
     }
     public function deleteShare($id)
     {
