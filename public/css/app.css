@@ -1588,6 +1588,18 @@ select{
   border-left-width: 4px;
   border-right-width: 4px;
 }
+.border-x{
+  border-left-width: 1px;
+  border-right-width: 1px;
+}
+.border-y-4{
+  border-top-width: 4px;
+  border-bottom-width: 4px;
+}
+.border-x-2{
+  border-left-width: 2px;
+  border-right-width: 2px;
+}
 .border-b-2{
   border-bottom-width: 2px;
 }
@@ -2788,6 +2800,12 @@ select{
   .sm\:grid-cols-1{
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
+  .sm\:grid-cols-2{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .sm\:grid-cols-3{
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
   .sm\:items-start{
     align-items: flex-start;
   }
@@ -3030,6 +3048,9 @@ select{
   .lg\:grid-cols-5{
     grid-template-columns: repeat(5, minmax(0, 1fr));
   }
+  .lg\:grid-cols-6{
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
   .lg\:px-8{
     padding-left: 2rem;
     padding-right: 2rem;
@@ -3093,6 +3114,9 @@ select{
   }
   .xl\:grid-cols-12{
     grid-template-columns: repeat(12, minmax(0, 1fr));
+  }
+  .xl\:grid-cols-5{
+    grid-template-columns: repeat(5, minmax(0, 1fr));
   }
   .xl\:px-20{
     padding-left: 5rem;

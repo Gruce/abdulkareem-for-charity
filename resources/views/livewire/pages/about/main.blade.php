@@ -118,7 +118,7 @@
                 {{-- Cards --}}
                 <div class="grid grid-cols-4 gap-8 ">
                     @foreach ($managers as $team)
-                        <livewire:pages.about.card :team="$team" key="{{ now() }}" />
+                    <livewire:pages.about.card :team="$team" key="{{ now() }}" />
                     @endforeach
                 </div>
             </div>
@@ -132,7 +132,7 @@
                 {{-- Cards --}}
                 <div class="grid grid-cols-4 gap-8 ">
                     @foreach ($developers as $team)
-                        <livewire:pages.about.card :team="$team" key="{{ now() }}" />
+                    <livewire:pages.about.card :team="$team" key="{{ now() }}" />
                     @endforeach
                 </div>
             </div>
