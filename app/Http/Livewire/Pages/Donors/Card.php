@@ -104,11 +104,11 @@ class Card extends Component
     {
         $search = '%' . $this->search . '%';
 
-        $this->users = User::with([
-            'shares' => function ($query) {
-                return $query->where('state', false)->get();
-            }
-        ]);
+        // $this->users = User::with([
+        //     'shares' => function ($query) {
+        //         return $query->where('state', false)->get();
+        //     }
+        // ]);
         if ($this->user_type) $this->users = $this->users->where('type','>', $this->user_type);
 
         if ($this->user_gender) $this->users = $this->users->where('gender', $this->user_gender);
@@ -143,7 +143,7 @@ class Card extends Component
             });
         }
 
-        $this->users = $this->users->where('name', 'LIKE', $search)->orderByDesc('id')->get();
+        // $this->users = $this->users->where('name', 'LIKE', $search)->orderByDesc('id')->get();
         return view('livewire.pages.donors.card');
     }
 }
