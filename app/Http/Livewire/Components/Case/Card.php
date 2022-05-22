@@ -67,6 +67,7 @@ class Card extends Component
                         'toast' => true,
                     ]);
                     $this->emitSelf('$refresh');
+                    $this->emitTo('Pages.Cases.Main', '$refresh');
         }
     }
 

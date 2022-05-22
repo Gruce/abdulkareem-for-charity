@@ -7,7 +7,7 @@ use App\Models\Event;
 use App\Models\Share;
 class Main extends Component
 {
-    protected $listeners = ['$refresh' ,'search', 'hi' => 'hi'];
+    protected $listeners = ['$refresh' ,'search'];
 
     public $search , $received_price ,$target ,$selectEvent;
 
