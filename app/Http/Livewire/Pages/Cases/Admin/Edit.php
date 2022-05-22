@@ -15,9 +15,10 @@ class Edit extends Component
         'target' => 'required',
     ];
 
-    public function mount()
+    public function mount($case_id)
     {
-    if ($this->case_id) {
+        $this->case_id = $case_id;
+    if ($case_id) {
 
         $case = Event::findOrFail($this->case_id);
         $this->title = $case->title;
