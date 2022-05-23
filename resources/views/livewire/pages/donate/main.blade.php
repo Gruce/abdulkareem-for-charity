@@ -49,6 +49,14 @@
         @endforeach --}}
         <livewire:pages.donate.committee />
     </div>
+
+    <div class="justify-center mt-4 xl:mt-10 mr-10 xl:mr-4 flex">
+        <a href=""
+            class="text-white text-base xl:text-xl duration-200 bg-primary-500 hover:bg-white border border-transparent hover:border-green-500 hover:text-primary-500 focus:ring-4 focus:ring-primary-300 rounded-lg px-5 py-2.5 mr-2">
+            <i class="fa-solid fa-plus"></i>
+            إضافة عضو
+        </a>
+    </div>
 </div>
 
 <div>
