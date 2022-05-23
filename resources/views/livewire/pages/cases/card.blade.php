@@ -51,12 +51,15 @@
                             class="text-red-400 fa-solid fa-trash text-xl hover:scale-110 duration-200 hover:text-red-500"></i>
 
                     </button>
-                    <button wire:click="$set('case_id', {{ $event->id }})" class="mx-2" type="button"
+                    {{-- <button wire:click="$set('case_id', {{ $event->id }})" class="mx-2" type="button"
                         data-modal-toggle="case-modal">
                         <i
-                        
+
                         class="text-secondary-600 fa-solid fa-pen-to-square text-xl hover:rotate-12 duration-200 hover:text-secondary-700"></i>
-                    </button>
+                    </button> --}}
+                        <a href={{route('edit-case', ['case_id'=> $event->id])}}>
+                        <i class="text-secondary-600 fa-solid fa-pen-to-square text-xl hover:rotate-12 duration-200 hover:text-secondary-700"></i>
+                    </a>
                     @if ($event->received_price < $event->target)
                         <button @click="open = !open" class="mx-2">
                             <i
