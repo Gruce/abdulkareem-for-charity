@@ -18,7 +18,7 @@ class ShareSeeder extends Seeder
         Share::create([
             'user_id' => 1,
             'share' => 5,
-            'state' => true,
+            'state' => false,
         ]);
 
         // id:2

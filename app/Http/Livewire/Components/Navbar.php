@@ -4,12 +4,12 @@ namespace App\Http\Livewire\Components;
 
 use Livewire\Component;
 
-class Navbar extends Component
-{
+class Navbar extends Component{
+
     public function render(){
         $menu = new Menu([
             [
-                'name' => 'الصفحة الرئيسية',
+                'name' => 'الرئيسية',
                 'route' => 'home',
                 'icon' => 'fas fa-home',
                 // 'submenu' => [
@@ -27,8 +27,8 @@ class Navbar extends Component
                 'icon' => 'fas fa-hand-holding-heart',
             ],
             [
-                'name' => 'عن الصندوق',
-                'route' => 'about',
+                'name' => 'التبرع',
+                'route' => 'donate',
                 'icon' => 'fas fa-circle-info',
             ],
             [
@@ -36,6 +36,13 @@ class Navbar extends Component
                 'route' => 'donors',
                 'icon' => 'fas fa-donors',
             ],
+            [
+                'name' => 'الصندوق',
+                'route' => 'about',
+                'icon' => 'fas fa-circle-info',
+            ],
+            
+            
             
 
         ]);

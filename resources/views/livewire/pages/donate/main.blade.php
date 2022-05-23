@@ -1,11 +1,9 @@
-<div class=" grid grid-cols-12 justify-between mt-16">
-
-    
-    <div class="basis-1/2 col-span-5 pt-2  text-center">
+<div class=" grid grid-cols-12 justify-between">
+    <div class="basis-1/2 col-span-5 pt-2 text-center">
         <h1 class="text-secondary-900 text-6xl mr-10 font-bold ">
             طريقة التبرع
         </h1>
-        <ul class="list-disc list-inside text-secondary-200 text-right mr-24 mt-10 text-2xl">
+        <ul class="list-disc list-inside text-secondary-200 text-right mr-24 mt-5 text-2xl">
             <li class="py-2">يتم التبرع عن طريق شراء الاسهم</li>
             <li class="py-2">سعر السهم 2000 دينار عراقي</li>
             <li class="py-2">ادخل عدد الاسهم التي تود شرائها</li>
@@ -30,9 +28,8 @@
             </div>
         </form>
     </div>
-
     
     <div class="basis-1/2 col-span-7 ">
-        <img src="/img/donate.png" class="w-3/4 h-auto m-auto mt-16">
+        <img src="/img/donate.png" class="w-3/4 h-auto m-auto">
     </div>
 </div>
