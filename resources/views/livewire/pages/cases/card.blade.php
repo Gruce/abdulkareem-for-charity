@@ -12,8 +12,9 @@
             <p class="leading-relaxed text-base font-bold text-gray-400">
                 {{ $event->getLimit('description') }}
                 {{-- more info button --}}
-                <a class="text-secondary-600 text-sm font-bold duration-300 mb-4" href="{{ route('events.show', $event) }}">
-                    
+                <a class="text-secondary-600 text-sm font-bold duration-300 mb-4"
+                    href="{{ route('case-page', ['case_id'=> $event->id]) }}">
+
                     قراءة المزيد
                 </a>
 
@@ -54,6 +55,24 @@
                                 class="text-red-400 fa-solid fa-trash text-xl hover:scale-110 duration-200 hover:text-red-500"></i>
 
                         </button>
+                        {{-- <button wire:click="$set('case_id', {{ $event->id }})"
+                        class="mx-2" type="button"
+                        data-modal-toggle="case-modal">
+                        <i
+                            class="text-secondary-600 fa-solid fa-pen-to-square text-xl hover:rotate-12 duration-200 hover:text-secondary-700"></i>
+                        </button> --}}
+                        <a
+                            href="{{ route('edit-case', ['case_id'=> $event->id]) }}">
+                            <i
+                                class="text-secondary-600 fa-solid fa-pen-to-square text-xl hover:rotate-12 duration-200 hover:text-secondary-700"></i>
+                        </a>
+                        @if($event->received_price < $event->target)
+                            <button @click="open = !open" class="mx-2">
+                                <i
+                                    class="text-red-400 fa-solid fa-trash text-xl hover:scale-110 duration-200 hover:text-red-500"></i>
+
+                            </button>
+                        @endif
                         <button wire:click="$set('case_id', {{ $event->id }})" class="mx-2" type="button"
                             data-modal-toggle="case-modal">
                             <i
