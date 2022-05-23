@@ -37,7 +37,7 @@
             </div>
 
         </div>
-        @admin
+        
         {{-- add-case --}}
         <div class="mt-4 xl:mt-10 mr-10 xl:mr-4 flex gap-5">
             {{-- <a href="{{ route('add-case') }}"
@@ -49,7 +49,7 @@
                 اضافة حالة
             </button>
         </div>
-        @endadmin
+        
 
         <!-- CaseAdd Modal -->
         <div id="case-modal" tabindex="-1"
