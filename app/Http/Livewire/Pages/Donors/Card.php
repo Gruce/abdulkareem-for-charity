@@ -62,9 +62,8 @@ class Card extends Component
         $share = new Share();
         $share->add($data);
         $this->reset();
-        
-        
     }
+    
     public function accept($id, $state)
     {
         $share = Share::findOrFail($id);
@@ -74,6 +73,7 @@ class Card extends Component
             'timer' => 3000,
             'toast' => true,
         ]);
+        $this->emitUp('$refresh');
     }
     public function deleteShare($id)
     {
@@ -84,8 +84,8 @@ class Card extends Component
             'timer' => 3000,
             'toast' => true,
         ]);
+        $this->emitUp('$refresh');
     }
-    
 
     public function getUserType($type, $gender, $state, $study_type, $stage, $department, $division)
     {

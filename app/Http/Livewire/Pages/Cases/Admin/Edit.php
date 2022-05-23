@@ -4,10 +4,13 @@ namespace App\Http\Livewire\Pages\Cases\Admin;
 
 use Livewire\Component;
 use App\Models\Event;
+use Livewire\WithFileUploads;
 use Jantinnerezo\LivewireAlert\LivewireAlert;
 class Edit extends Component
 {
     use LivewireAlert;
+    use WithFileUploads;
+
     public $title, $description, $image_path, $file_path, $target, $received_price, $case_id;
 
     protected $rules = [
