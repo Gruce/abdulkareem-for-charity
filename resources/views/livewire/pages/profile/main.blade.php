@@ -1,28 +1,29 @@
 <div>
     <div class="w-full mt-4 rounded my-24 overflow-hidden">
         <div class="top h-64 w-full overflow-hidden relative">
-            {{-- <img src="https://images.unsplash.com/photo-1503264116251-35a269479413?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
-                alt="" class="bg w-full h-full object-cover object-center absolute z-0"> --}}
+            <img src="https://png.pngtree.com/thumb_back/fw800/back_our/20190619/ourmid/pngtree-colorful-gradient-dreamy-business-corporate-background-image_135286.jpg"
+                alt="" class="bg w-full h-full rounded-t-lg object-cover object-center absolute z-0">
             <div class="flex flex-col justify-center items-center relative h-full bg-gray-200 bg-opacity-50 text-white">
                 <img src="{{ asset($user->profile_photo_path ?? 'img/user.png') }}"
                     class="h-32 w-32 object-cover rounded-full">
                 <h1 class="text-2xl font-semibold text-black">{{ $user->name }}</h1>
-                <h4 class="text-sm font-semibold text-black">انضم منذ {{ date('Y', strtotime($user->created_at)) }}</h4>
+                <h4 class="text-sm font-semibold text-black">انضم منذ {{ date('Y', strtotime($user->created_at)) }}
+                </h4>
             </div>
         </div>
 
         <div x-data="{ isOpen: true }" class="grid grid-cols-12 bg-white">
             <div
-                class="col-span-12 w-full px-3 py-6 justify-start flex space-x-4 border-b border-solid  md:space-y-4 md:flex-col md:col-span-2 md:justify-start ">
+                class="col-span-12 w-full px-3 py-6 justify-start flex space-x-4 md:space-y-4 md:flex-col md:col-span-2 md:justify-start ">
 
                 <button @click="isOpen = true"
-                    class="text-sm p-2 text-center rounded font-bold w-40 hover:scale-105 duration-200 bg-primary-300 hover:bg-primary-500 focus:bg-primary-600 focus:ring-2 focus:ring-primary-700">المعلومات
+                    class="text-sm p-2 text-center rounded font-bold w-60 hover:scale-105 duration-200 bg-primary-300 hover:bg-primary-500 focus:bg-primary-600 focus:ring-2 focus:ring-primary-700">المعلومات
                     الاساسية</button>
 
 
                 @if (auth()->user()->type == 1)
                     <button @click="isOpen = false"
-                        class="text-sm p-2 text-center rounded font-bold w-40  hover:scale-105 duration-200 focus:ring-2 focus:ring-primary-700 bg-primary-300 hover:bg-primary-500 focus:bg-primary-600">معلومات
+                        class="text-sm p-2 text-center rounded font-bold w-60  hover:scale-105 duration-200 focus:ring-2 focus:ring-primary-700 bg-primary-300 hover:bg-primary-500 focus:bg-primary-600">معلومات
                         الطالب</button>
                 @endif
             </div>
