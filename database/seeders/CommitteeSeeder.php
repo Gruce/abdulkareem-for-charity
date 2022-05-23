@@ -20,6 +20,7 @@ class CommitteeSeeder extends Seeder
             'name' => 'محمد جواد',
             'department'=>'علوم الحاسوب',
             'stage' => "المرحلة الثانية",
+            'study' => 'صباحية',
             'phone' => '077xxxxxx'
         ]);
 

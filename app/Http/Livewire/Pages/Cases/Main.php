@@ -11,9 +11,6 @@ class Main extends Component
 
     public $search , $received_price ,$target ,$selectEvent;
 
-    
-
-
     public function search($search){
         $this->search = $search;
 

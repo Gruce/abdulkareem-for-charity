@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('study');
             $table->string('stage');
             $table->string('phone');
+            $table->string('photo')->nullable();
             
             $table->timestamps();
         });

@@ -2,7 +2,6 @@
 <form wire:submit.prevent="edit">
     <div class="flex h-auto items-center justify-center">
 
-
         <div class="grid rounded-lg w-full">
             <div class="flex justify-center">
                 <div class="flex bg-primary-200 rounded-full md:p-2 p-2 border-2 border-primary-300">
