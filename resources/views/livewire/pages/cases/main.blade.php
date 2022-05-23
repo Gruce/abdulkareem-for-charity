@@ -38,6 +38,11 @@
 
         </div>
 
+        <div class="mt-4 xl:mt-10 mr-10 xl:mr-4 flex gap-5">
+            <a href="{{ route('add-case') }}"
+                class="hover:text-white text-base xl:text-2xl duration-200 hover:bg-primary-500 bg-white  border hover:border-transparent border-green-500 text-primary-500 focus:ring-4 focus:ring-primary-300  rounded-lg  px-5 py-2.5 mr-2 mb-2 ">اضف حالة</a>
+        </div>
+
         <div class="grid gap-6 pt-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
 
             @forelse ($events as $event)
