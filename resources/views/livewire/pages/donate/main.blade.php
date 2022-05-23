@@ -10,7 +10,8 @@
             <li class="py-2">يتم دفع الاسهم نقداً لأحد الممثلين</li>
             <li class="py-2">تضاف الاسهم الى حسابك بعد التأكد من عملية الدفع </li>
         </ul>
-        <form wire:submit.prevent="save" id="login_form" action="api_login" class="p-8 max-w-lg h-auto mx-auto rounded-3xl  mt-14  bg-white border border-gray-600">
+        <form wire:submit.prevent="save" id="login_form" action="api_login"
+            class="p-8 max-w-lg h-auto mx-auto rounded-3xl  mt-14  bg-white border border-gray-600">
             <div class="text-center ">
                 <h3 class="text-3xl font-bold mb-5 ">ما نقص مال من صدقة</h3>
                 <div class="">
@@ -28,8 +29,26 @@
             </div>
         </form>
     </div>
-    
+
     <div class="basis-1/2 col-span-7 ">
         <img src="/img/donate.png" class="w-3/4 h-auto m-auto">
     </div>
+
+
 </div>
+<div>
+    <h2 class="text-center mt-32 font-semibold sm:text-4xl md:text-4xl lg:text-6xl xl:text-6xl">فريق الصندوق</h2>
+
+    <p class="mt-10 mr-20 text-secondary-200 sm:text-base md:text-md lg:text-2xl">
+        اسماء الفريق المسؤول عن استلام المبالغ داخل الكلية
+    </p>
+
+    <div class="grid grid-cols-4 gap-8 mr-32 mt-10">
+        {{-- @foreach ($committees as $committee)
+        <livewire:pages.donate.committee :committee="$committee" key="{{ now() }}" />
+        @endforeach --}}
+        <livewire:pages.donate.committee />
+    </div>
+</div>
+
+<div>

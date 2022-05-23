@@ -4,6 +4,7 @@ namespace App\Http\Livewire\Pages\Donate;
 
 use Livewire\Component;
 use App\Models\Share;
+use App\Models\Committee;
 use Jantinnerezo\LivewireAlert\LivewireAlert;
 
 class Main extends Component{
@@ -24,6 +25,7 @@ class Main extends Component{
     }
 
     public function render(){
+        $this->committees = Committee::get();
         return view('livewire.pages.donate.main');
     }
 }
