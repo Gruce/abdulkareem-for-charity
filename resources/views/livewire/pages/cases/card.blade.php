@@ -10,10 +10,9 @@
 
             <p class="leading-relaxed text-base font-bold text-gray-400">{{ $event->getLimit('description') }}
                 {{-- more info button --}}
-                <button class="text-secondary-600 text-sm font-bold duration-300 mb-4" type="button"
-                    data-modal-toggle="defaultModal">
+                <a class="text-secondary-600 text-sm font-bold duration-300 mb-4" href="{{route('case-page', ['case_id'=> $event->id])}}">
                     قراءة المزيد
-                </button>
+</a>
 
             </p>
             <div id="defaultModal" tabindex="-1" aria-hidden="true"
@@ -57,7 +56,7 @@
 
                         class="text-secondary-600 fa-solid fa-pen-to-square text-xl hover:rotate-12 duration-200 hover:text-secondary-700"></i>
                     </button> --}}
-                        <a href={{route('edit-case', ['case_id'=> $event->id])}}>
+                        <a href="{{route('edit-case', ['case_id'=> $event->id])}}">
                         <i class="text-secondary-600 fa-solid fa-pen-to-square text-xl hover:rotate-12 duration-200 hover:text-secondary-700"></i>
                     </a>
                     @if ($event->received_price < $event->target)

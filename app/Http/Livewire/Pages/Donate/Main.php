@@ -9,9 +9,14 @@ use Jantinnerezo\LivewireAlert\LivewireAlert;
 class Main extends Component{
     use LivewireAlert;
     
+    protected $rules = [
+        'share' => 'required',
+    ];
+    
     public $share, $note;
     public function save()
     {
+        $this->validate();
         $donate = new Share;
         $donate->add($this->share, $this->note);
 
