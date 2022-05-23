@@ -37,7 +37,7 @@
             </div>
 
         </div>
-
+        @admin
         {{-- add-case --}}
         <div class="mt-4 xl:mt-10 mr-10 xl:mr-4 flex gap-5">
             {{-- <a href="{{ route('add-case') }}"
@@ -65,7 +65,7 @@
         </div>
     </div>
 </div>
-
+    @endadmin
         {{-- cases --}}
         <div class="grid gap-6 pt-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
 
