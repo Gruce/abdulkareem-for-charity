@@ -11,7 +11,7 @@
 
             <div class="flex justify-center">
                 <div class="flex">
-                    <h1 class="text-gray-800 font-bold md:text-2xl text-xl">إضافة الحالات</h1>
+                    <h1 class="text-gray-800 font-bold md:text-2xl text-xl">تعديل الحالات</h1>
                 </div>
             </div>
 
