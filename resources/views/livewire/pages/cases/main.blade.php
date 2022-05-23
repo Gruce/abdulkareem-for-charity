@@ -37,7 +37,7 @@
             </div>
 
         </div>
-        
+        @admin
         {{-- add-case --}}
         <div class="mt-4 xl:mt-10 mr-10 xl:mr-4 flex gap-5">
             {{-- <a href="{{ route('add-case') }}"
@@ -70,18 +70,19 @@
                 </div>
             </div>
         </div>
-
-        {{-- cases --}}
-        <div class="grid gap-6 pt-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-
-            @forelse ($events as $event)
-            <livewire:pages.cases.card :event="$event" key="{{ now() }}" />
-            @empty
-            <div class="text-2xl font-medium text-gray-700">
-                لايوجد حالات
-            </div>
-            @endforelse
-        </div>
-
     </div>
+
+    @endadmin
+    {{-- cases --}}
+    <div class="grid gap-6 pt-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+
+        @forelse ($events as $event)
+        <livewire:pages.cases.card :event="$event" key="{{ now() }}" />
+        @empty
+        <div class="text-2xl font-medium text-gray-700">
+            لايوجد حالات
+        </div>
+        @endforelse
+    </div>
+
 </div>
