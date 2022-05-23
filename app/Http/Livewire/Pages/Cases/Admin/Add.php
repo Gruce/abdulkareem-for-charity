@@ -39,6 +39,8 @@ class Add extends Component
         $case->add_file($this->image_path); // 1: image_path default
         $this->reset();
 
+        // $this->emitUp('$refresh');
+
     }
     public function render()
     {
