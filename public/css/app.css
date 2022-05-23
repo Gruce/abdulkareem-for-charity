@@ -2062,6 +2062,12 @@ select{
 .leading-normal{
   line-height: 1.5;
 }
+.leading-8{
+  line-height: 2rem;
+}
+.leading-10{
+  line-height: 2.5rem;
+}
 .tracking-widest{
   letter-spacing: 0.1em;
 }
@@ -2174,6 +2180,10 @@ select{
 .text-primary-600{
   --tw-text-opacity: 1;
   color: rgb(60 186 127 / var(--tw-text-opacity));
+}
+.text-primary-800{
+  --tw-text-opacity: 1;
+  color: rgb(45 139 95 / var(--tw-text-opacity));
 }
 .underline{
   -webkit-text-decoration-line: underline;
