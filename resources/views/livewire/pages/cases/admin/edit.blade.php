@@ -68,9 +68,9 @@
                         </div>
                         <span class="mt-2 text-base leading-normal">
                             @if ($image_path)
-                                تم اختيار الصورة
+                                تم تعديل الصورة
                             @else
-                                إختر صورة
+                                تعديل الصورة
                             @endif
                         </span>
                         <input wire:model.lazy="image_path" type="file" class="hidden" />
@@ -96,9 +96,9 @@
                         </div>
                         <span class="mt-2 text-base leading-normal">
                             @if ($file_path)
-                                تم اختيار الملف
+                                تم تعديل الملف
                             @else
-                                إختر ملف
+                                تعديل الملف
                             @endif
                         </span>
                         <input id="file" type='file' class="hidden" wire:model="file_path"/>
