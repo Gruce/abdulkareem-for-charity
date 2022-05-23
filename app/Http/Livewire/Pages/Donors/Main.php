@@ -10,7 +10,7 @@ use App\Models\Share;
 class Main extends Component
 {protected $listeners = ['search','$refresh'];
     public $search ,$type = 0, $gender = 0, $state = 0 , $study_type = 0, $stage = 0, $department = 0, $division = 0;
-    
+
     public function getType()
     {
         $this->emit(
@@ -28,6 +28,7 @@ class Main extends Component
     {
         $this->search = $search;
     }
+
     public function render()
     {$search = '%' . $this->search . '%';
 
@@ -70,7 +71,7 @@ class Main extends Component
             });
         }
         $this->users = $this->users->where('name', 'LIKE', $search)->get();
-       
+
 
         return view('livewire.pages.donors.main');
     }

@@ -1,7 +1,7 @@
 <div>
 
     <div x-data="{ isOpen: false }" class="">
-        
+
         <div
             class="flex flex-col justify-center max-w-sm p-6  rounded-xl sm:px-12 border-x-2 border-y border-gray-200">
             <img src="{{ asset($item->profile_photo_path ?? 'img/user.png') }}"
@@ -38,7 +38,7 @@
                                             <span>{{ $share->share }}</span>
                                         </h3>
                                     </div>
-                                    <div>
+                                    <div >
                                         <button type="button" wire:click="accept({{ $share->id }}, {{ $share->state }})"
                                             class="focus:outline-none text-white bg-green-500 hover:bg-green-500 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-2 py-2 mr-2 mb-2">قبول</button>
                                         <button type="button" wire:click="deleteShare({{ $share->id }})"
@@ -76,6 +76,6 @@
                 @endadmin
             </div>
         </div>
-        
+
     </div>
 </div>
