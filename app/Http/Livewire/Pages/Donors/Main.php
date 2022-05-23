@@ -29,10 +29,6 @@ class Main extends Component
         $this->search = $search;
     }
 
-    // public function getState($id)
-    // {
-    //     $this->state = $id;
-    // }
     public function render()
     {$search = '%' . $this->search . '%';
 
