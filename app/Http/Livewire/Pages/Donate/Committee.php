@@ -3,6 +3,7 @@
 namespace App\Http\Livewire\Pages\Donate;
 
 use Livewire\Component;
+//use App\Models\Committee;
 
 class Committee extends Component
 {

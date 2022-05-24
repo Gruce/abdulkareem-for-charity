@@ -2,9 +2,9 @@
 
 namespace Database\Seeders;
 
-use App\Http\Livewire\Pages\Donate\Committee;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use App\Models\Committee;
 
 class CommitteeSeeder extends Seeder
 {
@@ -20,9 +20,20 @@ class CommitteeSeeder extends Seeder
             'name' => 'محمد جواد',
             'department'=>1,
             'stage' => 2,
-            'study' => 1,
-            'phone' => '077xxxxxx'
+            'study_type' => 1,
+            'phone_num' => '077xxxxxx'
         ]);
+        // id=2
+
+        Committee::create([
+            'name' => 'زينب ',
+            'department'=>1,
+            'stage' => 4,
+            'study_type' => 1,
+            'phone_num' => '033xxx'
+        ]);
+        
+        
         
     }
 }

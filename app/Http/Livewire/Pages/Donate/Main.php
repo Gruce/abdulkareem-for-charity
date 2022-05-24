@@ -14,7 +14,7 @@ class Main extends Component{
         'share' => 'required',
     ];
     
-    public $share, $note;
+    public $share, $note ,$committee;
     public function save()
     {
         $this->validate();

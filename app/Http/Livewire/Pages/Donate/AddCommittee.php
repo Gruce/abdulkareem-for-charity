@@ -11,14 +11,15 @@ class AddCommittee extends Component
     use LivewireAlert;
     use WithFileUploads;
 
-    public $name, $department, $study, $stage, $phone, $photo;
+    public $name, $department, $study_type, $stage, $phone_num;
+    protected $listeners = ['$refresh'];
 
     protected $rules = [
         'name' => 'required',
         'department' => 'required',
-        'study' => 'required',
+        'study_type' => 'required',
         'stage' => 'required',
-        'phone' => 'required'
+        'phone_num' => 'required'
     ];
 
     public function add(){
@@ -27,23 +28,25 @@ class AddCommittee extends Component
         $data = [
             'name' => $this->name,
             'department' => $this->department,
-            'study_type' => $this->study,
+            'study_type' => $this->study_type,
             'stage' => $this->stage,
-            'phone' => $this->phone,
-            'photo' => $this->photo
+            'phone_num' => $this->phone_num,
+            //'photo' => $this->photo,
         ];
+        //dd($data);
+
+        $committe = new Committee();
+        $committe->add($data);
+        //dd($committe->toArray());
+        //$committe->add_file($this->image_path);
+        $this->reset();
 
         $this->alert('success', 'تمت الاضافة', [
             'position' => 'top',
             'timer' => 3000,
             'toast' => true,
         ]);
-
-        $committe = new Committee();
-        $committe->add($data);
-        $committe->add_file($this->image_path);
-        $this->reset();
-
+        $this->emitTo('pages.donate.main', '$refresh');
     }
 
     public function render()
