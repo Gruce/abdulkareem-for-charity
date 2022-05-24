@@ -10,9 +10,10 @@
 
             <p class="leading-relaxed text-base font-bold text-gray-400">{{ $event->getLimit('description') }}
                 {{-- more info button --}}
-                <a class="text-secondary-600 text-sm font-bold duration-300 mb-4" href="{{route('case-page', ['case_id'=> $event->id])}}">
-                    قراءة المزيد
-</a>
+                <a class="text-secondary-600 text-sm font-bold duration-300 mb-4"
+                    href="{{ route('case-page', ['case_id' => $event->id]) }}">
+                    للمزيد من المعلومات
+                </a>
 
             </p>
             <div id="defaultModal" tabindex="-1" aria-hidden="true"
@@ -40,52 +41,47 @@
                 </div>
             </div>
             @admin
-            <div x-data="{ open: false }" class="flex flex-col">
-                <hr class="mb-5">
-                {{-- edit/delete/add Buttons--}}
-                <div class="flex justify-around">
+                <div x-data="{ open: false }" class="flex flex-col">
+                    <hr class="mb-5">
+                    {{-- edit/delete/add Buttons --}}
+                    <div class="flex justify-around">
 
-                    <button wire:click="confirm({{ $event->id }})" class="mx-2">
-                        <i
-                            class="text-red-400 fa-solid fa-trash text-xl hover:scale-110 duration-200 hover:text-red-500"></i>
-
-                    </button>
-                    {{-- <button wire:click="$set('case_id', {{ $event->id }})" class="mx-2" type="button"
-                        data-modal-toggle="case-modal">
-                        <i
-
-                        class="text-secondary-600 fa-solid fa-pen-to-square text-xl hover:rotate-12 duration-200 hover:text-secondary-700"></i>
-                    </button> --}}
-                        <a href="{{route('edit-case', ['case_id'=> $event->id])}}">
-                        <i class="text-secondary-600 fa-solid fa-pen-to-square text-xl hover:rotate-12 duration-200 hover:text-secondary-700"></i>
-                    </a>
-                    @if ($event->received_price < $event->target)
-                        <button @click="open = !open" class="mx-2">
+                        <button wire:click="confirm({{ $event->id }})" class="mx-2">
                             <i
-                                class="text-red-400 fa-solid fa-plus text-xl hover:scale-110 hover:rotate-45 duration-300 hover:text-red-500"></i>
+                                class="text-red-400 fa-solid fa-trash text-xl hover:scale-110 duration-200 hover:text-red-500"></i>
+
                         </button>
+                        <a href="{{ route('edit-case', ['case_id' => $event->id]) }}">
+                            <i
+                                class="text-secondary-600 fa-solid fa-pen-to-square text-xl hover:rotate-12 duration-200 hover:text-secondary-700"></i>
+                        </a>
+                        @if ($event->received_price < $event->target)
+                            <button @click="open = !open" class="mx-2">
+                                <i
+                                    class="text-red-400 fa-solid fa-plus text-xl hover:scale-110 hover:rotate-45 duration-300 hover:text-red-500"></i>
+                            </button>
                         @endif
 
 
+                    </div>
+
+                    <div x-show="open" @click.outside="open = false" class="flex">
+
+                        <button wire:click="add_price ({{ $event->id }})"
+                            class=" mt-4 inline-flex items-center py-2 px-2 ml-2 text-sm font-medium text-white bg-primary-600 rounded-lg border border-primary-700 focus:ring-2 focus:outline-none focus:ring-primary-300">
+                            اضافة</button>
+                        <input type="number" wire:model="received_price"
+                            class="bg-gray-50 border  border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500  w-full h-1/2 p-1 mt-4 "
+                            placeholder="" required="">
+
+                    </div>
+
                 </div>
-
-                <div x-show="open" @click.outside="open = false" class="flex">
-
-                    <button wire:click="add_price ({{ $event->id }})"
-                        class=" mt-4 inline-flex items-center py-2 px-2 ml-2 text-sm font-medium text-white bg-primary-600 rounded-lg border border-primary-700 focus:ring-2 focus:outline-none focus:ring-primary-300">
-                        اضافة</button>
-                    <input type="number" wire:model="received_price"
-                        class="bg-gray-50 border  border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500  w-full h-1/2 p-1 mt-4 "
-                        placeholder="" required="">
-
-                </div>
-
-            </div>
             @endadmin
             <div class="w-full absolute bottom-0 right-0  text-center">
                 <div class="bg-green-500 h-4 text-2xs text-white "
                     style="width: {{ ($event->received_price * 100) / $event->target }}%">
-                    {{round( ($event->received_price * 100) / $event->target )}}%
+                    {{ round(($event->received_price * 100) / $event->target) }}%
                 </div>
 
             </div>
