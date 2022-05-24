@@ -48,7 +48,13 @@
         {{-- @foreach ($committees as $committee)
         <livewire:pages.donate.committee :committee="$committee" key="{{ now() }}" />
         @endforeach --}}
-        <livewire:pages.donate.committee />
+        @forelse($committees as $committee)
+        <livewire:pages.donate.committee :committee="$committee" key="{{ now() }}" />
+        @empty
+            <div class="text-2xl font-medium text-gray-700">
+                لايوجد فريق
+            </div>
+            @endforelse
     </div>
 
     <div class="cursor-pointer justify-center mt-4 xl:mt-10 mr-10 xl:mr-4 flex">
