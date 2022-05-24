@@ -50,7 +50,7 @@
                 </div>
             </div>
 
-            <div class="flex flex-row w-full justify-center">
+            {{-- <div class="flex flex-row w-full justify-center">
                 <div class="w-1/2 mt-5 mx-7 items-center justify-center bg-grey-lighter">
                     <label
                         class="w-full flex flex-col items-center px-2 py-6  @if ($photo) bg-primary-700 text-white @else bg-white text-primary-700 @endif rounded-lg tracking-wide border-4 border-dashed border-primary-700 cursor-pointer hover:bg-primary-700 hover:text-white">
@@ -79,7 +79,7 @@
                             الصورة</span>
                     @enderror
                 </div>
-            </div>
+            </div> --}}
 
             {{-- Button --}}
             <div class="flex items-center justify-center  md:gap-8 gap-4 pt-7 pb-7">

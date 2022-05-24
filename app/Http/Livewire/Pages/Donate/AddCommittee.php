@@ -27,7 +27,7 @@ class AddCommittee extends Component
         $data = [
             'name' => $this->name,
             'department' => $this->department,
-            'study' => $this->study,
+            'study_type' => $this->study,
             'stage' => $this->stage,
             'phone' => $this->phone,
             'photo' => $this->photo
