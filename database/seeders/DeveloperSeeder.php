@@ -23,6 +23,7 @@ class DeveloperSeeder extends Seeder
             'department'=>'علوم الحاسوب',
             'stage' => "المرحلة الثانية",
             'photo' => "/img/mo.jpg",
+            'github' => "https://github.com/MohammedJ18"
 
         ]);
 
