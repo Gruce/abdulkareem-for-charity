@@ -10,7 +10,7 @@
             </div>
             <div class="flex justify-between px-3 mt-2 text-xl text-secondary-200">
                 <div>الهدف 1,000,000</div>
-                <div>75%</div>
+                <div>( 75% )</div>
                 <div>الواصل 750,000</div>
             </div>
             <div class="h-0.5 w-full bg-gray-300 my-7 "></div>
