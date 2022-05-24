@@ -2855,6 +2855,12 @@ select{
   .md\:col-span-10{
     grid-column: span 10 / span 10;
   }
+  .md\:col-span-7{
+    grid-column: span 7 / span 7;
+  }
+  .md\:col-span-5{
+    grid-column: span 5 / span 5;
+  }
   .md\:mt-0{
     margin-top: 0px;
   }
@@ -2866,6 +2872,15 @@ select{
   }
   .md\:ml-0{
     margin-left: 0px;
+  }
+  .md\:mt-10{
+    margin-top: 2.5rem;
+  }
+  .md\:mt-16{
+    margin-top: 4rem;
+  }
+  .md\:mt-20{
+    margin-top: 5rem;
   }
   .md\:flex{
     display: flex;
@@ -2888,11 +2903,20 @@ select{
   .md\:w-full{
     width: 100%;
   }
+  .md\:w-3\/4{
+    width: 75%;
+  }
+  .md\:basis-1\/2{
+    flex-basis: 50%;
+  }
   .md\:grid-cols-3{
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
   .md\:grid-cols-2{
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .md\:grid-cols-12{
+    grid-template-columns: repeat(12, minmax(0, 1fr));
   }
   .md\:flex-row{
     flex-direction: row;
@@ -2960,6 +2984,16 @@ select{
     padding-left: 2.5rem;
     padding-right: 2.5rem;
   }
+  .md\:px-16{
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+  .md\:pt-20{
+    padding-top: 5rem;
+  }
+  .md\:text-right{
+    text-align: right;
+  }
   .md\:text-2xl{
     font-size: 1.5rem;
     line-height: 2rem;
@@ -2975,6 +3009,10 @@ select{
   .md\:text-4xl{
     font-size: 2.25rem;
     line-height: 2.5rem;
+  }
+  .md\:text-6xl{
+    font-size: 3.75rem;
+    line-height: 1;
   }
   .md\:font-medium{
     font-weight: 500;
