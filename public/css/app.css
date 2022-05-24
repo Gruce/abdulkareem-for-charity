@@ -1421,6 +1421,12 @@ select{
      -moz-appearance: none;
           appearance: none;
 }
+.grid-flow-row{
+  grid-auto-flow: row;
+}
+.grid-flow-col{
+  grid-auto-flow: column;
+}
 .grid-cols-6{
   grid-template-columns: repeat(6, minmax(0, 1fr));
 }
