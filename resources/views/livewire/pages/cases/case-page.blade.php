@@ -1,35 +1,48 @@
 <div class=" grid grid-cols-12 justify-between">
-    <div class="basis-1/2 col-span-5 pt-2 ">
-        <h1 class="text-secondary-900 text-6xl font-bold mr-24 ">
+    <div class="basis-1/2 col-span-5 pt-2 pr-24 ">
+        <h1 class="text-secondary-900 text-6xl font-bold ">
             اجراء عملية جراحية
         </h1>
-        <ul class="list-disc list-inside text-secondary-200 text-right mr-24 mt-5 text-2xl">
-            <li class="py-2">يتم التبرع عن طريق شراء الاسهم</li>
-            <li class="py-2">سعر السهم 2000 دينار عراقي</li>
-            <li class="py-2">ادخل عدد الاسهم التي تود شرائها</li>
-            <li class="py-2">يتم دفع الاسهم نقداً لأحد الممثلين</li>
-            <li class="py-2">تضاف الاسهم الى حسابك بعد التأكد من عملية الدفع </li>
-        </ul>
-        <form wire:submit.prevent="save" id="login_form" action="api_login" class="p-8 max-w-lg h-auto mx-auto rounded-3xl  mt-14  bg-white border border-gray-600">
-            <div class="text-center ">
-                <h3 class="text-3xl font-bold mb-5 ">ما نقص مال من صدقة</h3>
-                <div class="">
-                    <input wire:model="share" id="item_count" type="number" value="1"
-                        class="block px-2.5 pb-2.5  pt-4 w-full h-14 text-lg text-gray-900 bg-transparent rounded-lg border-1 border-gray-300 appearance-none  focus:outline-none focus:ring-0  focus:border-primary-500 peer"
-                        placeholder="ادخل عدد الاسهم" min=1 max=25  />
-                </div>
-                <button
-                    class="text-white text-2xl mt-4 bg-primary-500 hover:bg-primary-800 border border-transparent hover:border-green-500 focus:ring-2 focus:ring-primary-300 rounded-lg px-5 py-1 mr-2 mb-2"
-                    type="submit">
-
-                    <span class="" id="login_default_state">اشتري<span id="subtotal"></span></span>
-                </button>
-                <span class="text-sm"></span>
+        <div class="w-full  text-center mt-10">
+            <div class="w-full bg-gray-300 rounded-full">
+                <div class="bg-primary-500 text-xs font-medium text-blue-100 text-center h-2.5 p-0.5 leading-none rounded-full"
+                    style="width: 75%"></div>
             </div>
-        </form>
+            <div class="flex justify-between px-3 mt-2 text-xl text-secondary-200">
+                <div>الهدف 1,000,000</div>
+                <div>75%</div>
+                <div>الواصل 750,000</div>
+            </div>
+            <div class="h-0.5 w-full bg-gray-300 my-7 "></div>
+        </div>
+        <div class="text-xl text-gray-600 ">
+            "صـندوق الأستاذ عبد
+            الكريم الخيري" هو
+            مبادرة ونشاط طلابي
+            بحت ينطلق من
+            طلبة كلية علوم الحاسوب وتكنلوجيا المعلومات.
+
+            الهدف منه رعاية الاعمال الخيرية داخل الكلية وتكون الاولوية في صرف الصندوق للطلبة ذوي الدخل دون
+            المحدود
+            وبقية الاعمال الخيرية.
+
+            اساس عمل الصندوق قائم على اشتراكات شهرية لكل طالب او منتسب داخل الكلية، تبدئ الاشتراكات من مبلغ
+            (٢٠٠٠)
+            ألفين دينار عراقي او اكثر،
+            اساس عمل الصندوق سيتم جمع لجان من الطلبة من مختلف المراحل مع ممثلي المراحل للأشراف على
+
+
+        </div>
+        <div class="mt-4 xl:mt-10 mr-10 xl:mr-4 flex gap-5">
+            <a href="{{ route('cases') }}"
+                class="hover:text-white text-base xl:text-2xl duration-200 hover:bg-primary-500 bg-white  border hover:border-transparent border-green-500 text-primary-500 focus:ring-4 focus:ring-primary-300  rounded-lg  px-5 py-2.5 mr-2 mb-2 ">رجوع</a>
+            <a href=""
+                class="text-white text-base xl:text-2xl duration-200 bg-primary-500 hover:bg-white border border-transparent hover:border-green-500 hover:text-primary-500 focus:ring-4 focus:ring-primary-300 rounded-lg px-5 py-2.5 mr-2 mb-2 ">تبرع
+                الان</a>
+        </div>
     </div>
-    
+
     <div class="basis-1/2 col-span-7 ">
-        <img src="/img/kid.jpg" class="w-3/4 h-auto  rounded-3xl m-auto">
+        <img src="/img/kid.jpg" class="w-3/4 h-auto py-20  rounded-3xl m-auto">
     </div>
 </div>

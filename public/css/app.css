@@ -954,6 +954,9 @@ select{
 .m-1{
   margin: 0.25rem;
 }
+.m-5{
+  margin: 1.25rem;
+}
 .mx-auto{
   margin-left: auto;
   margin-right: auto;
@@ -993,6 +996,14 @@ select{
 .my-auto{
   margin-top: auto;
   margin-bottom: auto;
+}
+.my-5{
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+.my-7{
+  margin-top: 1.75rem;
+  margin-bottom: 1.75rem;
 }
 .ml-3{
   margin-left: 0.75rem;
@@ -1179,6 +1190,21 @@ select{
 }
 .h-1{
   height: 0.25rem;
+}
+.h-1\.5{
+  height: 0.375rem;
+}
+.h-2\.5{
+  height: 0.625rem;
+}
+.h-2{
+  height: 0.5rem;
+}
+.h-0\.5{
+  height: 0.125rem;
+}
+.h-0{
+  height: 0px;
 }
 .min-h-screen{
   min-height: 100vh;
@@ -1742,6 +1768,22 @@ select{
   --tw-bg-opacity: 1;
   background-color: rgb(147 220 186 / var(--tw-bg-opacity));
 }
+.bg-blue-600{
+  --tw-bg-opacity: 1;
+  background-color: rgb(37 99 235 / var(--tw-bg-opacity));
+}
+.bg-gray-300{
+  --tw-bg-opacity: 1;
+  background-color: rgb(209 213 219 / var(--tw-bg-opacity));
+}
+.bg-gray-400{
+  --tw-bg-opacity: 1;
+  background-color: rgb(156 163 175 / var(--tw-bg-opacity));
+}
+.bg-black{
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
 .bg-opacity-25{
   --tw-bg-opacity: 0.25;
 }
@@ -1797,6 +1839,12 @@ select{
 }
 .p-2\.5{
   padding: 0.625rem;
+}
+.p-0\.5{
+  padding: 0.125rem;
+}
+.p-0{
+  padding: 0px;
 }
 .px-4{
   padding-left: 1rem;
@@ -1882,6 +1930,14 @@ select{
   padding-left: 8rem;
   padding-right: 8rem;
 }
+.px-20{
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+.py-20{
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
 .pt-6{
   padding-top: 1.5rem;
 }
@@ -1938,6 +1994,9 @@ select{
 }
 .pb-12{
   padding-bottom: 3rem;
+}
+.pr-24{
+  padding-right: 6rem;
 }
 .text-left{
   text-align: left;
@@ -2163,6 +2222,10 @@ select{
 .text-primary-600{
   --tw-text-opacity: 1;
   color: rgb(60 186 127 / var(--tw-text-opacity));
+}
+.text-blue-100{
+  --tw-text-opacity: 1;
+  color: rgb(219 234 254 / var(--tw-text-opacity));
 }
 .underline{
   -webkit-text-decoration-line: underline;
@@ -2621,6 +2684,10 @@ select{
   .dark\:bg-gray-900{
     --tw-bg-opacity: 1;
     background-color: rgb(17 24 39 / var(--tw-bg-opacity));
+  }
+  .dark\:bg-gray-700{
+    --tw-bg-opacity: 1;
+    background-color: rgb(55 65 81 / var(--tw-bg-opacity));
   }
   .dark\:text-gray-600{
     --tw-text-opacity: 1;
