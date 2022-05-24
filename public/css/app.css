@@ -2882,6 +2882,9 @@ select{
   .md\:mt-20{
     margin-top: 5rem;
   }
+  .md\:mt-40{
+    margin-top: 10rem;
+  }
   .md\:flex{
     display: flex;
   }
@@ -2988,6 +2991,18 @@ select{
     padding-left: 4rem;
     padding-right: 4rem;
   }
+  .md\:px-20{
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+  .md\:px-2{
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  .md\:px-28{
+    padding-left: 7rem;
+    padding-right: 7rem;
+  }
   .md\:pt-20{
     padding-top: 5rem;
   }
@@ -3013,6 +3028,10 @@ select{
   .md\:text-6xl{
     font-size: 3.75rem;
     line-height: 1;
+  }
+  .md\:text-xl{
+    font-size: 1.25rem;
+    line-height: 1.75rem;
   }
   .md\:font-medium{
     font-weight: 500;
