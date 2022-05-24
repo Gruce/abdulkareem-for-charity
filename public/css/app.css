@@ -3188,6 +3188,9 @@ select{
   .xl\:mt-32{
     margin-top: 8rem;
   }
+  .xl\:mr-14{
+    margin-right: 3.5rem;
+  }
   .xl\:w-64{
     width: 16rem;
   }
