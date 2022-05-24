@@ -1411,6 +1411,9 @@ select{
 .justify-around{
   justify-content: space-around;
 }
+.justify-evenly{
+  justify-content: space-evenly;
+}
 .justify-items-center{
   justify-items: center;
 }
@@ -1476,6 +1479,9 @@ select{
 .divide-gray-700 > :not([hidden]) ~ :not([hidden]){
   --tw-divide-opacity: 1;
   border-color: rgb(55 65 81 / var(--tw-divide-opacity));
+}
+.justify-self-auto{
+  justify-self: auto;
 }
 .overflow-hidden{
   overflow: hidden;
@@ -2756,6 +2762,9 @@ select{
   }
 }
 @media (min-width: 768px){
+  .md\:visible{
+    visibility: visible;
+  }
   .md\:inset-0{
     top: 0px;
     right: 0px;
