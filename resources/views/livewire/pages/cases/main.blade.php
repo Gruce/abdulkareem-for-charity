@@ -12,7 +12,17 @@
                 </select>
             </div>
         </div>
+
         @admin
+        <div class="justify-center mt-4 xl:mt-10 mr-10 xl:mr-4 flex">
+            <a href="{{ route('add-case') }}"
+                class="text-white text-base xl:text-xl duration-200 bg-primary-500 hover:bg-white border border-transparent hover:border-green-500 hover:text-primary-500 focus:ring-4 focus:ring-primary-300 rounded-lg px-5 py-2.5 mr-2 ">
+                <i class="fa-solid fa-plus"></i>
+                إضافة حالة
+            </a>
+        </div>
+
+
         {{-- information --}}
         <div class="flex justify-center sm:mt-7 md:mt-7 lg:mt-10 xl:mt-14">
 
@@ -37,19 +47,19 @@
             </div>
 
         </div>
-        
+
         {{-- add-case --}}
-        <div class="mt-4 xl:mt-10 mr-10 xl:mr-4 flex gap-5">
-            {{-- <a href="{{ route('add-case') }}"
+        {{-- <div class="mt-4 xl:mt-10 mr-10 xl:mr-4 flex gap-5">
+            <a href="{{ route('add-case') }}"
                 class="hover:text-white text-base xl:text-2xl duration-200 hover:bg-primary-500 bg-white  border hover:border-transparent border-green-500 text-primary-500 focus:ring-4 focus:ring-primary-300  rounded-lg  px-5 py-2.5 mr-2 mb-2 ">اضف
-                حالة</a> --}}
+                حالة</a>
             <button
                 class="hover:text-white text-base xl:text-2xl duration-200 hover:bg-primary-500 bg-white  border hover:border-transparent border-green-500 text-primary-500 focus:ring-4 focus:ring-primary-300  rounded-lg  px-5 py-2.5 mr-2 mb-2"
                 type="button" data-modal-toggle="case-modal">
                 اضافة حالة
             </button>
-        </div>
-        
+        </div> --}}
+
 
         <!-- CaseAdd Modal -->
         <div id="case-modal" tabindex="-1"

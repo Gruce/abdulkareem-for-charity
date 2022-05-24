@@ -20,6 +20,8 @@ use App\Http\Livewire\Pages\Cases\{
     CasePage as CasePage,
 };
 
+use App\Http\Livewire\Pages\Donate\AddCommittee as addComittee;
+
 
 /*****************************************************************/
 /************************ Main Routes ****************************/
@@ -56,4 +58,8 @@ Route::middleware(['auth:sanctum'])->group(function () {
 
     // donate
     Route::get('/donate' , Donate::class)->name('donate');
+
+    // add committee
+    Route::get('/add-committee', addComittee::class)->name('add-committee');
+
 });

@@ -1,5 +1,4 @@
 <div>
-
     <div
         class="flex flex-col justify-center max-w-sm my-10 p-6 shadow-md rounded-xl sm:px-12 border-2 border-secondary-800 ">
         <div class="-mt-8 -translate-y-1/2 transform rounded-full border-secondary-800">
