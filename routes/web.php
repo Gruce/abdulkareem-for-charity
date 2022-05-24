@@ -17,7 +17,10 @@ use App\Http\Livewire\Pages\{
 use App\Http\Livewire\Pages\Cases\{
     Admin\Add as CaseAdd,
     Admin\Edit as CaseEdit,
+    CasePage as CasePage,
 };
+
+use App\Http\Livewire\Pages\Donate\AddCommittee as addComittee;
 
 
 /*****************************************************************/
@@ -41,6 +44,8 @@ Route::get('/donors' , Donors::class)->name('donors');
 // Cases
 Route::get('/cases', CaseMain::class)->name('cases');
 
+Route::get('/case-page/{case_id}', CasePage::class)->name('case-page');
+
 Route::middleware(['auth:sanctum'])->group(function () {
     Route::middleware(['admin'])->group(function (){
         Route::get('/add-case', CaseAdd::class)->name('add-case');
@@ -53,4 +58,8 @@ Route::middleware(['auth:sanctum'])->group(function () {
 
     // donate
     Route::get('/donate' , Donate::class)->name('donate');
+
+    // add committee
+    Route::get('/add-committee', addComittee::class)->name('add-committee');
+
 });
