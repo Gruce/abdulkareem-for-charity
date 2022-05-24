@@ -1,72 +1,51 @@
 <div>
-    <div class="flex flex-col px-16">
+    <div class="flex flex-col  container mx-auto">
 
-        <div class="basis-1/4 grid grid-cols-12 justify-between">
+        {{-- Intro --}}
+        <div class="basis-1/4 grid md:grid-cols-12 justify-between">
 
             <!-- Text -->
-            <div class="basis-1/2 col-span-7   text-center">
-                <h1 class="text-secondary-900 text-6xl font-bold ">
+            <div class="md:col-span-7 text-center md:mt-20">
+                <h1 class="text-secondary-900 text-4xl md:text-6xl font-bold ">
                     صندوق الكرم
                 </h1>
-                <p class="leading-10 mt-10 text-xl text-gray-700 font-Alhurrareg px-1 md:px-9 text-right"><b>صـندوق الأستاذ عبد
-                        الكريم الخيري</b> هو
-                    مبادرة ونشاط طلابي
-                    بحت ينطلق من
-                    طلبة كلية علوم الحاسوب<br> وتكنلوجيا المعلومات.
-
-                    الهدف منه رعاية الاعمال الخيرية داخل الكلية وتكون الاولوية في صرف الصندوق للطلبة<br> ذوي الدخل دون
-                    المحدود
-                    وبقية الاعمال الخيرية.
-
-                    اساس عمل الصندوق قائم على اشتراكات شهرية لكل طالب <br>او منتسب داخل الكلية، تبدئ الاشتراكات من مبلغ
-                    (٢٠٠٠)
-                    ألفين دينار عراقي او اكثر،
-                    اساس عمل الصندوق سيتم جمع لجان من الطلبة من مختلف المراحل مع ممثلي المراحل للأشراف على : <br>
-
-                    - جمع المبالغ <br>
-                    - أمانة الصندوق <br>
-                    - الاعمال التي تُصرف فيها مبالغ الصندوق<br>
+                <p
+                    class="leading-10 mt-6 md:mt-10 text-base md:text-xl text-gray-700 font-Alhurrareg px-2 md:px-12   ">
+                    هو مبادرة ونشاط طلابي بحت ينطلق من طلبة كلية علوم الحاسوب
+                    وتكنلوجيا المعلومات في جامعة البصرة. الهدف منه رعاية الاعمال الخيرية داخل الكلية وتكون الاولوية في
+                    صرف الصندوق
+                    للطلبة
+                    ذوي الدخل دون المحدود وبقية الاعمال الخيرية.
+                    
+                    سمي بأسم صندوق الكرم نسبة الى الأستاذ الراحل عبد الكريم حسين
                 </p>
 
             </div>
 
             {{-- Photo --}}
-            <div class="basis-1/2 col-span-5 ">
-                <img src="/img/About1.png" class="w-3/4 h-auto m-auto">
+            <div class="md:col-span-5 ">
+                <img src="/img/About1.png" class="w-full mt-6 md:mt-0 md:w-3/4 h-auto m-auto">
             </div>
 
         </div>
 
-        <div class="basis-1/4 grid grid-cols-12 justify-between mt-16">
+        <div class="basis-1/4 grid md:grid-cols-12 justify-between mt-20 md:mt-16">
 
             {{-- Photo --}}
-            <div class="basis-1/2 col-span-5 ">
+            <div class="basis-1/2 md:col-span-5 ">
                 <img src="/img/About2.png" class="w-3/4 h-auto m-auto">
             </div>
 
             <!-- Text -->
-            <div class="basis-1/2 col-span-7 pt-20  text-center">
-                <h1 class="text-secondary-900 text-6xl font-bold ">
+            <div class="basis-1/2 md:col-span-7 mt-4 md:mt-40   text-center">
+                <h1 class="text-secondary-900 text-2xl md:text-6xl font-bold ">
                     من هو الأستاذ عبدالكريم
                 </h1>
-                <p class="leading-10 mt-10 text-xl text-gray-700 font-Alhurrareg px-1 md:px-9 text-right">"صـندوق الأستاذ عبد
-                    الكريم الخيري" هو
-                    مبادرة ونشاط طلابي
-                    بحت ينطلق من
-                    طلبة كلية علوم الحاسوب<br> وتكنلوجيا المعلومات.
-
-                    الهدف منه رعاية الاعمال الخيرية داخل الكلية وتكون الاولوية في صرف الصندوق للطلبة<br> ذوي الدخل دون
-                    المحدود
-                    وبقية الاعمال الخيرية.
-
-                    اساس عمل الصندوق قائم على اشتراكات شهرية لكل طالب <br>او منتسب داخل الكلية، تبدئ الاشتراكات من مبلغ
-                    (٢٠٠٠)
-                    ألفين دينار عراقي او اكثر،
-                    اساس عمل الصندوق سيتم جمع لجان من الطلبة من مختلف المراحل مع ممثلي المراحل للأشراف على : <br>
-
-                    - جمع المبالغ <br>
-                    - أمانة الصندوق <br>
-                    - الاعمال التي تُصرف فيها مبالغ الصندوق<br>
+                <p class="leading-10 mt-10 text-base md:text-xl text-gray-700 font-Alhurrareg px-2 md:px-9 text-center">
+                    الأستاذ عبد الكريم حسين السوداني (1974 - 2021) تدريسي في كلية علوم الحاسوب وتكنلوجيا المعـلومات
+                    وشغل منصب مدير وحدة شؤون الطلبة سابقا
+                    عُرف عنه فعل الخير والمشاركة في النشاطات الخيرية والاهتمام بطلبته وتشجيعهم فأحبه طلبته و ارادوا ابقاء ذكر
+                    أستاذهم حتى بعد ان تَوَفَّاه الله لذا بدأوا بأنشاء مجموعة من الاعمال الخيرية داخل الكلية وربطها بأسم الأستاذ و أحد هذه الاعمال هذا الصندوق الخيري.
                 </p>
 
             </div>
@@ -74,72 +53,5 @@
         </div>
 
 
-        <div class="basis-1/4 grid grid-cols-12 justify-between mt-12">
-
-            <!-- Text -->
-            <div class="basis-1/2 col-span-5 pt-20  text-center">
-                <h1 class="text-secondary-900 text-5xl font-bold ">
-                    كيف يتم جمع التبرعات؟
-                </h1>
-                <p class="leading-10 mt-10 text-xl text-gray-700 font-Alhurrareg px-1 md:px-9 text-right">
-                    يعمل الصندوق على نظام الأسهم حيث السهم الواحد = 2000 دينار
-                    <br>
-                    يتم شراء الأسهم من خلال النقر على 
-                    <a href="{{ route('donate') }}" class="text-primary-500">تبرع الان</a>
-                    إقرأ التعليمات الموجودة لشراء الأسهم 
-                    <br>
-                    يوجد أسفل صندوق شراء الأسهم اسماء الفريق المسؤول عن استلام المبالغ مع أرقام الهواتف
-                    <br>
-                    يمكنك تصفح الحالات و قراءة التفاصيل اكثر من خلال النقر على 
-                    <a href="{{ route('cases') }}" class="text-primary-500">الحالات</a>
-                </p>
-
-                <div class="mt-4 xl:mt-10 mr-10 xl:mr-4 flex gap-5">
-                    <a href="{{ route('donate') }}"
-                        class="text-white text-base xl:text-2xl duration-200 bg-primary-500 hover:bg-white border border-transparent hover:border-green-500 hover:text-primary-500 focus:ring-4 focus:ring-primary-300 rounded-lg px-5 py-2.5 mr-2 mb-2 ">تبرع
-                        الان</a>
-                    <a href="{{ route('cases') }}"
-                        class="hover:text-white text-base xl:text-2xl duration-200 hover:bg-primary-500 bg-white  border hover:border-transparent border-green-500 text-primary-500 focus:ring-4 focus:ring-primary-300  rounded-lg  px-5 py-2.5 mr-2 mb-2 ">الحالات</a>
-                </div>
-
-            </div>
-
-            {{-- Photo --}}
-            <div class="basis-1/2 col-span-7 ">
-                <img src="/img/About3.png" class="w-3/4 h-auto m-auto">
-            </div>
-
-        </div>
-
-        <div class="basis-1/4 flex flex-col mt-20 py-10 space-y-40 px-32">
-
-            {{-- Managers --}}
-            <div>
-                <h1 class="text-secondary-900 text-6xl font-bold text-center mb-20">
-                    فريق الأداريين
-                </h1>
-                {{-- Cards --}}
-                <div class="grid grid-cols-4 gap-8 ">
-                    @foreach ($managers as $team)
-                    <livewire:pages.about.card :team="$team" key="{{ now() }}" />
-                    @endforeach
-                </div>
-            </div>
-
-            {{-- Developers --}}
-            <div>
-                <h1 class="text-secondary-900 text-6xl font-bold text-center mb-20">
-                    فريق المطورين
-                </h1>
-
-                {{-- Cards --}}
-                <div class="grid grid-cols-4 gap-8 ">
-                    @foreach ($developers as $team)
-                    <livewire:pages.about.card :team="$team" key="{{ now() }}" />
-                    @endforeach
-                </div>
-            </div>
-
-        </div>
     </div>
 </div>
