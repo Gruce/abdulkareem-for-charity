@@ -43,6 +43,6 @@
     </div>
 
     <div class="basis-1/2 col-span-7 rounded-3xl ">
-        <img src="/img/kid.jpg" class="w-3/4 h-auto my-20 rounded-3xl m-auto">
+        <img src="/img/kid.jpg" class="w-3/4 h-auto my-20 border-4 border-primary-500 rounded-3xl m-auto">
     </div>
 </div>

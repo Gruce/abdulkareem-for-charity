@@ -1677,6 +1677,10 @@ select{
   --tw-border-opacity: 1;
   border-color: rgb(124 213 172 / var(--tw-border-opacity));
 }
+.border-primary-500{
+  --tw-border-opacity: 1;
+  border-color: rgb(78 198 142 / var(--tw-border-opacity));
+}
 .bg-white{
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
