@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Committee extends Model
 {
-    protected $fillable = ['name', 'stage', 'department' ,'phone'];
+    protected $fillable = ['name', 'stage','study_type', 'photo', 'department' ,'phone_number'];
     use HasFactory;
 
     public function add($data){

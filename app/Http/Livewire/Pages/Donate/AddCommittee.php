@@ -11,14 +11,14 @@ class AddCommittee extends Component
     use LivewireAlert;
     use WithFileUploads;
 
-    public $name, $department, $study, $stage, $phone, $photo;
+    public $name, $department, $study_type, $stage, $phone_number, $photo;
 
     protected $rules = [
         'name' => 'required',
         'department' => 'required',
-        'study' => 'required',
+        'study_type' => 'required',
         'stage' => 'required',
-        'phone' => 'required'
+        'phone_number' => 'required'
     ];
 
     public function add(){
@@ -27,9 +27,9 @@ class AddCommittee extends Component
         $data = [
             'name' => $this->name,
             'department' => $this->department,
-            'study_type' => $this->study,
+            'study_type' => $this->study_type,
             'stage' => $this->stage,
-            'phone' => $this->phone,
+            'phone_number' => $this->phone_number,
             'photo' => $this->photo
         ];
 

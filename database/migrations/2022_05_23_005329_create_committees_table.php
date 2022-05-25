@@ -19,7 +19,7 @@ return new class extends Migration
             $table->integer('department')->nullable(); #### CS: 1, IS: 2 ###
             $table->integer('study_type')->nullable(); #### Morning: 1, Evening: 2 ###
             $table->integer('stage')->nullable(); #### first: 1, Second: 2, third: 3, fourth: 4 ###
-            $table->string('phone');
+            $table->string('phone_number');
             $table->string('photo')->nullable();
             
             $table->timestamps();

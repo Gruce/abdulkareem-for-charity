@@ -21,7 +21,8 @@ class CommitteeSeeder extends Seeder
             'department'=>1,
             'stage' => 2,
             'study' => 1,
-            'phone' => '077xxxxxx'
+            'photo' => '/img/mo.jpg',
+            'phone_number' => '077xxxxxx'
         ]);
         
     }
