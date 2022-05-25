@@ -22,6 +22,8 @@ class Card extends Component
 
     protected $listeners = ['delete', '$refresh' , 'getUserType'];
 
+
+
     public function delete()
     {
         User::findOrFail($this->share_id)->delete();

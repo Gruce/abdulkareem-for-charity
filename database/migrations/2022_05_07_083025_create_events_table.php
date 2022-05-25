@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('image_path')->nullable();
             $table->string('file_path')->nullable();
             $table->integer('target');
-            $table->integer('received_price')->nullable();
+            $table->integer('received_price')->default(0);
             $table->timestamps();
         });
     }

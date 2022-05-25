@@ -2,32 +2,21 @@
 
 namespace App\Http\Livewire\Components;
 
-use App\Models\{
-    Event,
-    Share
-};
 use Livewire\Component;
 
 class Navbar extends Component{
-    
-    protected $listeners = ['$refresh'];
 
     public function render(){
-
-        $this->payments = Event::sum('received_price');
-        $this->total = Share::where('state', true)->sum('share') * 2000;
-        $this->current_price = $this->total - $this->payments;
-
         $menu = new Menu([
             [
                 'name' => 'الرئيسية',
                 'route' => 'home',
-                'icon' => 'home',
+                'icon' => 'fas fa-home',
                 // 'submenu' => [
                 //     [
                 //         'name' => 'Home2',
                 //         'route' => 'home',
-                //         'icon' => 'home',
+                //         'icon' => 'fas fa-home',
                 //         'permissions' => 2,
                 //     ]
                 // ]
@@ -35,29 +24,22 @@ class Navbar extends Component{
             [
                 'name' => 'الحالات',
                 'route' => 'cases',
-                'icon' => 'hand-holding-heart',
+                'icon' => 'fas fa-hand-holding-heart',
             ],
             [
                 'name' => 'التبرع',
                 'route' => 'donate',
-                'icon' => 'circle-info',
-                
+                'icon' => 'fas fa-circle-info',
             ],
             [
                 'name' => 'المتبرعين ',
                 'route' => 'donors',
-                'icon' => 'donors',
+                'icon' => 'fas fa-donors',
             ],
             [
                 'name' => 'الصندوق',
                 'route' => 'about',
-                'icon' => 'circle-info',
-            ],
-            [
-                'name' => 'الاداريين',
-                'route' => 'committee',
-                'icon' => 'circle-info',
-                'permissions' => 4,
+                'icon' => 'fas fa-circle-info',
             ],
             
             
@@ -69,13 +51,13 @@ class Navbar extends Component{
             [
                 'name' => 'تسجيل الدخول',
                 'route' => 'login',
-                'icon' => 'home',
+                'icon' => 'fas fa-home',
                 'permissions' => 1,
             ],
             [
                 'name' => 'انشاء حساب',
                 'route' => 'register',
-                'icon' => 'home',
+                'icon' => 'fas fa-home',
                 'permissions' => 1,
             ],
         ]);

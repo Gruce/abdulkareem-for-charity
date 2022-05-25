@@ -39,7 +39,7 @@
                             الواصل</label>
                         <input wire:model.lazy="received_price"
                             class="w-full py-2 px-3 rounded-lg border-2 border-gray-200 mt-1 focus:outline-none focus:ring-2 focus:ring-primary-100 focus:border-transparent"
-                            type="number" value="0" placeholder="المبلغ الواصل" />
+                            type="number" placeholder="المبلغ الواصل" />
                     </div>
                 </div>
 

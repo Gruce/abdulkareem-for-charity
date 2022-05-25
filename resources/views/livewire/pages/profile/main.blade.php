@@ -17,13 +17,13 @@
                 class="col-span-12 w-full px-3 py-6 justify-start flex space-x-4 md:space-y-4 md:flex-col md:col-span-2 md:justify-start ">
 
                 <button @click="isOpen = true"
-                    class="text-sm text-white p-2 text-center rounded w-60 hover:scale-105 duration-200 bg-primary-500 focus:bg-primary-600 focus:ring-2 focus:ring-primary-700">المعلومات
+                    class="text-sm p-2 text-center rounded font-bold w-60 hover:scale-105 duration-200 bg-primary-300 hover:bg-primary-500 focus:bg-primary-600 focus:ring-2 focus:ring-primary-700">المعلومات
                     الاساسية</button>
 
 
                 @if (auth()->user()->type == 1)
                     <button @click="isOpen = false"
-                        class="text-sm text-white p-2 text-center rounded w-60  hover:scale-105 duration-200 focus:ring-2 focus:ring-primary-700 bg-primary-500 focus:bg-primary-600">معلومات
+                        class="text-sm p-2 text-center rounded font-bold w-60  hover:scale-105 duration-200 focus:ring-2 focus:ring-primary-700 bg-primary-300 hover:bg-primary-500 focus:bg-primary-600">معلومات
                         الطالب</button>
                 @endif
             </div>

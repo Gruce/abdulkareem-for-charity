@@ -6,7 +6,6 @@ use Livewire\Component;
 use App\Models\Event;
 use Jantinnerezo\LivewireAlert\LivewireAlert;
 use App\Models\Share;
-use App\Models\User;
 
 class Card extends Component
 {
@@ -52,7 +51,7 @@ class Card extends Component
                 'toast' => true,
             ]);
         }
-
+        
         elseif($this->received_price > $event->received()){
             $this->alert('warning', 'لا يمكن اضافة رسوم بقيمة اكبر من المطلوب', [
                         'position' => 'top',
@@ -78,10 +77,10 @@ class Card extends Component
         $this->target = $target;
         $this->selectEvent = $selectEvent;
     }
-
+    
 
     public function render(){
-
+        
         $payments = Event::sum('received_price');
         $total = Share::where('state', true)->sum('share') * 2000;
         $this->current_price = $total - $payments;

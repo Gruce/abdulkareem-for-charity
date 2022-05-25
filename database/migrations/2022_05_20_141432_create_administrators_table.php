@@ -13,15 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('committees', function (Blueprint $table) {
+        Schema::create('administrators', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('department');
-            $table->string('study');
-            $table->string('stage');
-            $table->string('phone');
-            $table->string('photo')->nullable();
-            
+            $table->string('email')->unique();
+            $table->string('phone_number')->nullable();
+            //$table->integer('type')->default(1); // ** = 1 : ** = 2
+            $table->string('photo');
             $table->timestamps();
         });
     }
@@ -33,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('committees');
+        Schema::dropIfExists('administrators');
     }
 };

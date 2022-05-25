@@ -2,7 +2,7 @@
     <div class="px-4 pt-4">
         <form action="#" class="flex flex-col space-y-8" wire:submit.prevent="edit">
             <div class="p-2">
-                <h3 class="text-2xl font-semibold text-primary-500">المعلومات الاساسية</h3>
+                <h3 class="text-2xl font-semibold text-primary-700">المعلومات الاساسية</h3>
                 <hr class="w-1/2">
             </div>
             <div class="form-item">
@@ -24,7 +24,7 @@
                 </div>
             </div>
             <div class="p-2">
-                <h3 class="text-2xl font-semibold text-primary-500">معلومات الاتصال</h3>
+                <h3 class="text-2xl font-semibold text-primary-700">معلومات الاتصال</h3>
                 <hr class="w-1/2">
             </div>
             <div class="form-item">
