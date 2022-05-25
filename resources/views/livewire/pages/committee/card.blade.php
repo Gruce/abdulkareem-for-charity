@@ -42,16 +42,17 @@
                     <i class="fa-solid fa-phone mr-4 "></i>
                 </a>
             </div>
-
+            @admin
             <button wire:click="confirm({{ $committee->id }})" class="mx-2">
                 <i class="text-red-400 fa-solid fa-trash text-xl hover:scale-110 duration-200 hover:text-red-600">
                 </i>
             </button>
 
-            <a href="{{ route('edit-committee')}}">
+            <a href="{{ route('edit-committee', , ['case_id' => $event->id])}}">
                 <i
                     class="text-secondary-600 fa-solid fa-pen-to-square text-xl hover:rotate-12 duration-200 hover:text-secondary-700"></i>
             </a>
+            @endadmin
         </div>
     </div>
 </div>

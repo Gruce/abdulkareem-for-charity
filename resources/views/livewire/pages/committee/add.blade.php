@@ -1,3 +1,4 @@
+<div>
 <form wire:submit.prevent="add">
     <div class="flex h-auto items-center justify-center">
 
@@ -96,3 +97,4 @@
         </div>
     </div>
 </form>
+</div>
