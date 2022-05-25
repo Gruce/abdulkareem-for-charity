@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Http\Livewire\Pages\Donate;
+namespace App\Http\Livewire\Pages\Committee;
+
 use Jantinnerezo\LivewireAlert\LivewireAlert;
 use App\Models\Committee;
 use Livewire\Component;
 use Livewire\WithFileUploads;
-
-class AddCommittee extends Component
+class Add extends Component
 {
     use LivewireAlert;
     use WithFileUploads;
@@ -50,8 +50,7 @@ class AddCommittee extends Component
     }
 
     public function render()
-    { 
-        
-        return view('livewire.pages.donate.add-committee');
+    {
+        return view('livewire.pages.committee.add');
     }
 }

@@ -41,6 +41,11 @@ class Navbar extends Component{
                 'route' => 'about',
                 'icon' => 'fas fa-circle-info',
             ],
+            [
+                'name' => 'لجنة الصندوق',
+                'route' => 'committee',
+                'icon' => 'fas fa-circle-info',
+            ],
             
             
             
