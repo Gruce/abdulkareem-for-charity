@@ -82,7 +82,7 @@
         <div class="hidden justify-center items-center w-full md:flex md:w-auto md:order-1" id="mobile-menu-2">
             <ul class="flex flex-col mt-4 md:flex-row  md:mt-0 md:text-sm md:font-medium">
                 @foreach($menu->items as $item)
-                <li class="pr-6 py-2">
+                <li class="px-6 py-2">
                     @if($item->hasSubmenu)
                     {{-- Has Submenu --}}
                     <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" id="user-menu-button"
@@ -116,7 +116,7 @@
                 @endforeach
 
                 @foreach($leftMenu->items as $item)
-                <li class="pr-6 py-2  md:hidden">
+                <li class="px-6 py-2  md:hidden">
                     @if($item->hasSubmenu)
                     {{-- Has Submenu --}}
                     <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" id="user-menu-button"
@@ -159,7 +159,7 @@
                 
 
                 @foreach($leftMenu->items as $item)
-                <li class="pr-6 py-2 ">
+                <li class="px-6 py-2 ">
                     @if($item->hasSubmenu)
                     {{-- Has Submenu --}}
                     <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" id="user-menu-button"
