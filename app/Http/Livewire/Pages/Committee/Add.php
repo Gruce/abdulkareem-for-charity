@@ -46,7 +46,7 @@ class Add extends Component
             'timer' => 3000,
             'toast' => true,
         ]);
-        $this->emitTo('pages.donate.main', '$refresh');
+        $this->emitTo('pages.committee.main', '$refresh');
     }
 
     public function render()

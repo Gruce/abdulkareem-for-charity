@@ -7,7 +7,8 @@ use App\Models\Committee;
 
 class Main extends Component
 {
-    public function render()
+    protected $listeners = [ '$refresh' ];
+        public function render()
     {
         $this->committees = Committee::get();
         return view('livewire.pages.committee.main');
