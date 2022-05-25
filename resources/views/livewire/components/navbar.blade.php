@@ -1,5 +1,5 @@
-<nav class="bg-neutral-100 border-gray-200 px-2 sm:px-4 py-2.5 rounded ">
-    <div class=" flex flex-wrap justify-between  items-center ">
+<nav class="bg-gradient-to-br from-[#e9efe3] to-[#e9efe3] border-gray-200 px-2 sm:px-4 py-2.5 rounded ">
+    <div class=" flex flex-wrap justify-between items-center  ">
 
         {{-- Logo & Title --}}
         <div>
@@ -80,9 +80,9 @@
             </svg>
         </button>
         <div class="hidden justify-center items-center w-full md:flex md:w-auto md:order-1" id="mobile-menu-2">
-            <ul class="flex flex-col mt-4 md:flex-row  md:mt-0 md:text-sm md:font-medium">
+            <ul class="flex flex-col mt-4 md:flex-row  md:mt-0 md:text-sm md:font-medium mr-28">
                 @foreach($menu->items as $item)
-                <li class="px-6 py-2">
+                <li class="mx-8">
                     @if($item->hasSubmenu)
                     {{-- Has Submenu --}}
                     <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" id="user-menu-button"
@@ -116,7 +116,7 @@
                 @endforeach
 
                 @foreach($leftMenu->items as $item)
-                <li class="px-6 py-2  md:hidden">
+                <li class="mx-8  md:hidden">
                     @if($item->hasSubmenu)
                     {{-- Has Submenu --}}
                     <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" id="user-menu-button"
@@ -159,7 +159,7 @@
                 
 
                 @foreach($leftMenu->items as $item)
-                <li class="px-6 py-2 ">
+                <li class="mx-8 ">
                     @if($item->hasSubmenu)
                     {{-- Has Submenu --}}
                     <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" id="user-menu-button"
