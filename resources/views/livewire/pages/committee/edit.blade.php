@@ -90,7 +90,7 @@
             {{-- Button --}}
             <div class="flex items-center justify-center  md:gap-8 gap-4 pt-7 pb-7">
                 <button type="submit"
-                    class="w-auto bg-primary-600 hover:bg-primary-800 rounded-lg shadow-md hover:shadow-xl hover:scale-105 font-medium text-white px-4 py-2">أضف</button>
+                    class="w-auto bg-primary-600 hover:bg-primary-800 rounded-lg shadow-md hover:shadow-xl hover:scale-105 font-medium text-white px-4 py-2">تعديل</button>
             </div>
 
         </div>

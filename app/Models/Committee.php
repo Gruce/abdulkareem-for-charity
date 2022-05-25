@@ -17,6 +17,11 @@ class Committee extends Model
         $this->save();
     }
     ### End add ###
+    ### edit ###
+    public function edit($data){
+        $this->update($data);
+    }
+    ### End edit ###
 
     // public function add_file($file, $type = 1)
     // {
