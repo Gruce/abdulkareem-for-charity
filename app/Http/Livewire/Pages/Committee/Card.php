@@ -16,11 +16,11 @@ class Card extends Component
     protected $listeners = ['delete', '$refresh'];
     use LivewireAlert;
 
-    public $committees_id ,$committee;
+    public $committee_id ,$committee;
 
     public function delete()
     {
-         Committee::findOrFail($this->committees_id)->delete();
+         Committee::findOrFail($this->committee_id)->delete();
         $this->alert('success', 'تم حذف ', [
             'position' => 'top',
             'timer' => 3000,
@@ -30,7 +30,7 @@ class Card extends Component
     }
 
     public function confirm($id){
-        $this->committees_id = $id;
+        $this->committee_id = $id;
         $this->alert('warning', 'هل انت متأكد من حذف؟', [
             'position' => 'center',
             'timer' => 3000,
