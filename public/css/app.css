@@ -939,6 +939,9 @@ select{
 .col-span-12{
   grid-column: span 12 / span 12;
 }
+.col-span-1{
+  grid-column: span 1 / span 1;
+}
 .m-auto{
   margin: auto;
 }
@@ -1262,6 +1265,9 @@ select{
 }
 .w-64{
   width: 16rem;
+}
+.w-2\/3{
+  width: 66.666667%;
 }
 .min-w-0{
   min-width: 0px;
