@@ -7,13 +7,15 @@ use Illuminate\Database\Eloquent\Model;
 
 class Committee extends Model
 {
-    protected $fillable = ['name', 'stage', 'department' ,'phone'];
+    protected $fillable = ['name', 'stage', 'department' ,'phone_num' ,'study_type'];
     use HasFactory;
 
+    ### add ###
     public function add($data){
         $this->fill($data);
         $this->save();
     }
+    ### End add ###
 
     // public function add_file($file, $type = 1)
     // {
