@@ -1110,6 +1110,9 @@ select{
 .mr-32{
   margin-right: 8rem;
 }
+.mr-4{
+  margin-right: 1rem;
+}
 .block{
   display: block;
 }
@@ -1779,6 +1782,18 @@ select{
   --tw-bg-opacity: 1;
   background-color: rgb(29 78 216 / var(--tw-bg-opacity));
 }
+.bg-red-400{
+  --tw-bg-opacity: 1;
+  background-color: rgb(248 113 113 / var(--tw-bg-opacity));
+}
+.bg-secondary-600{
+  --tw-bg-opacity: 1;
+  background-color: rgb(75 79 173 / var(--tw-bg-opacity));
+}
+.bg-secondary-500{
+  --tw-bg-opacity: 1;
+  background-color: rgb(108 111 191 / var(--tw-bg-opacity));
+}
 .bg-opacity-25{
   --tw-bg-opacity: 0.25;
 }
@@ -1967,6 +1982,9 @@ select{
 }
 .pr-24{
   padding-right: 6rem;
+}
+.pr-6{
+  padding-right: 1.5rem;
 }
 .text-left{
   text-align: left;

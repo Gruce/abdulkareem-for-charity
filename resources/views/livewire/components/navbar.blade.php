@@ -12,8 +12,9 @@
 
         {{-- Profile Dropdown --}}
         @auth
-        <div class="flex items-center md:order-2 @guest hidden @endguest">
-
+        
+        <div class="flex justify-around items-center md:order-2 @guest hidden @endguest">
+            <div class=" w-48 h-10 bg-secondary-500 ml-10 rounded-full"></div>
             <div class=" ">
                 <button type="button"
                     class="flex mr-3 text-sm bg-gray-100 rounded-full md:mr-0 focus:ring-4 focus:ring-gray-200 "
@@ -81,7 +82,7 @@
         <div class="hidden justify-center items-center w-full md:flex md:w-auto md:order-1" id="mobile-menu-2">
             <ul class="flex flex-col mt-4 md:flex-row  md:mt-0 md:text-sm md:font-medium">
                 @foreach($menu->items as $item)
-                <li class="px-6 py-2">
+                <li class="pr-6 py-2">
                     @if($item->hasSubmenu)
                     {{-- Has Submenu --}}
                     <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" id="user-menu-button"
@@ -115,7 +116,7 @@
                 @endforeach
 
                 @foreach($leftMenu->items as $item)
-                <li class="px-6 py-2  md:hidden">
+                <li class="pr-6 py-2  md:hidden">
                     @if($item->hasSubmenu)
                     {{-- Has Submenu --}}
                     <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" id="user-menu-button"
@@ -158,7 +159,7 @@
                 
 
                 @foreach($leftMenu->items as $item)
-                <li class="px-6 py-2 ">
+                <li class="pr-6 py-2 ">
                     @if($item->hasSubmenu)
                     {{-- Has Submenu --}}
                     <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" id="user-menu-button"
