@@ -42,6 +42,29 @@
                 </div>
             </div>
         </div>
+        <a href="{{ route('edit-committee', ['committee_id' => $committee->id]) }}">
+            <i
+                class="text-secondary-600 fa-solid fa-pen-to-square text-xl hover:rotate-12 duration-200 hover:text-secondary-700"></i>
+        </a>
+          {{-- modal --}}
+    <div wire:ignore.self id="committee-modal" tabindex="-1"
+        class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full">
+        <div class="relative p-4 w-full max-w-4xl h-full md:h-auto">
+            <!-- Modal content -->
+            <div class="relative bg-white rounded-lg shadow ">
+                <!-- Modal header -->
+                <div class="flex justify-between items-center">
+                    <button type="button"
+                        class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-red-600 rounded-bl-lg rounded-tr-lg text-lg p-1.5 ml-auto inline-flex items-center"
+                        data-modal-toggle="committee-modal">
+                        <i class="fa-solid fa-xmark text-2xl"></i>
+                    </button>
+                </div>
+                <!-- Modal body -->
+                @livewire('pages.committee.edit', ['committee_id' => $committee->id], key($committee_id))
+            </div>
+        </div>
+    </div>
     
     </div>
 </div>

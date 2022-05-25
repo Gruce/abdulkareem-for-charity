@@ -10,7 +10,7 @@
             </div>
 
             <div class="flex justify-center">
-                <div class="flex">
+                <div class="fzlex">
                     <h1 class="text-gray-800 font-bold md:text-2xl text-xl">تعديل الحالات</h1>
                 </div>
             </div>
