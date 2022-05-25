@@ -28,7 +28,7 @@
                 @enderror
             </div>
 
-            <div class="flex flex-col space-y-4 md:space-y-0 md:flex-row md:space-x-4">
+            <div class="flex flex-col space-y-4 md:space-y-0 md:flex-row md:space-x-4 ">
                 <div class="form-item w-full">
                     <label class="text-xl font-semibold mb-2">نوع الدراسة</label>
                     {{-- <select wire:model="study_type"
@@ -38,10 +38,10 @@
                     </select> --}}
 
                     <div class="text-base leading-7">
-                        <input type="radio" wire:model="study_type" value="1" id="morning">
+                        <input type="radio" wire:model="study_type" value="1" id="morning" class="accent-pink-500">
                         <label for="morning">صباحي</label><br>
 
-                        <input type="radio" wire:model="study_type" value="2" id="evening">
+                        <input type="radio" wire:model="study_type" value="2" id="evening" class="accent-pink-500">
                         <label for="evening">مسائي</label><br>
                     </div>
 
