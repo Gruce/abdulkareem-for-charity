@@ -49,6 +49,8 @@
                     class="text-red-400 fa-solid fa-trash text-xl hover:scale-110 duration-200 hover:text-red-600">
                 </i>
             </button>
+            
+          
         </div>
     </div>
 </div>
