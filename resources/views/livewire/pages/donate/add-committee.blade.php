@@ -17,9 +17,9 @@
 
             <div class="grid grid-cols-1 mt-5 mx-7">
                 <div class="p-1">
-                    <select
+                    <select wire:model.lazy="department"
                         class="px-10 py-3 w-full rounded-md border-2 border-gray-200 bg-white border-transparent focus:border-primary-100 focus:bg-white focus:ring-0 text-sm">
-                        <option value="0">القسم</option>
+                        <option value="">القسم</option>
                         <option value="1">علوم الحاسوب</option>
                         <option value="2">نظم المعلومات</option>
                     </select>
@@ -28,9 +28,9 @@
 
             <div class="grid grid-cols-1 mt-5 mx-7">
                 <div class="p-1">
-                    <select
+                    <select wire:model.lazy="stage"
                         class="px-10 py-3 w-full rounded-md border-2 border-gray-200 bg-white border-transparent focus:border-primary-100 focus:bg-white focus:ring-0 text-sm">
-                        <option value="0">المرحلة</option>
+                        <option value="">المرحلة</option>
                         <option value="1">اولى</option>
                         <option value="2">ثانية</option>
                         <option value="3">ثالثة</option>
@@ -41,13 +41,19 @@
 
             <div class="grid grid-cols-1 mt-5 mx-7">
                 <div class="p-1">
-                    <select
+                    <select  wire:model.lazy="study_type"
                         class="px-10 py-3 w-full rounded-md border-2 border-gray-200 bg-white border-transparent focus:border-primary-100 focus:bg-white focus:ring-0 text-sm">
-                        <option value="0">الدراسة</option>
+                        <option value="">الدراسة</option>
                         <option value="1">صباحية</option>
                         <option value="2">مسائية</option>
                     </select>
                 </div>
+            </div>
+            <div class="grid grid-cols-1 mt-5 mx-7">
+                <label class="md:text-sm text-xs text-gray-700 text-light font-semibold">رقم الهاتف</label>
+                <input wire:model.lazy="phone_num"
+                    class="py-2 px-3 rounded-lg border-2 border-gray-200 mt-1 focus:outline-none focus:ring-2 focus:ring-primary-100 focus:border-transparent"
+                    type="text" placeholder="رقم الهاتف" />
             </div>
 
             {{-- <div class="flex flex-row w-full justify-center">
