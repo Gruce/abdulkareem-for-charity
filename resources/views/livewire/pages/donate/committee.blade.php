@@ -43,6 +43,11 @@
                     <i class="fa-solid fa-phone mr-4 " ></i>
                 </a>
             </div>
+            <button wire:click="confirm({{ $committee->id }})" class="mx-2">
+                <i
+                    class="text-red-400 fa-solid fa-trash text-xl hover:scale-110 duration-200 hover:text-red-600">
+                </i>
+            </button>
         </div>
     </div>
 </div>

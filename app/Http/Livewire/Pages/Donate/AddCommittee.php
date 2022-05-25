@@ -35,8 +35,8 @@ class AddCommittee extends Component
         ];
         //dd($data);
 
-        $committe = new Committee();
-        $committe->add($data);
+        $committee = new Committee();
+        $committee->add($data);
         //dd($committe->toArray());
         //$committe->add_file($this->image_path);
         $this->reset();
