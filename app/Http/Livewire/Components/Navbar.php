@@ -30,6 +30,7 @@ class Navbar extends Component{
                 'name' => 'التبرع',
                 'route' => 'donate',
                 'icon' => 'fas fa-circle-info',
+                
             ],
             [
                 'name' => 'المتبرعين ',
@@ -45,6 +46,7 @@ class Navbar extends Component{
                 'name' => 'لجنة الصندوق',
                 'route' => 'committee',
                 'icon' => 'fas fa-circle-info',
+                'permissions' => 4,
             ],
             
             
