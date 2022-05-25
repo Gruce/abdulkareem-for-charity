@@ -23,30 +23,7 @@
         </div>
 
 
-        {{-- information --}}
-        <div class="flex justify-center sm:mt-7 md:mt-7 lg:mt-10">
-
-            <div class="flex flex-col p-2 text-center mx-10">
-                <span class="text-3xl font-bold font-noto">
-                    {{ $total }}
-                </span>
-
-                <span class="text-sm sm:text-xs md:text-base lg:text-xl">
-                    المبلغ الكلي
-                </span>
-            </div>
-
-            <div class="flex flex-col p-2 text-center mx-10">
-                <span class="text-3xl font-bold font-noto">
-                    {{ $current_price }}
-                </span>
-
-                <span class="text-sm sm:text-xs md:text-base lg:text-xl">
-                    المبلغ الحالي
-                </span>
-            </div>
-
-        </div>
+        
 
         {{-- add-case --}}
         {{-- <div class="mt-4 xl:mt-10 mr-10 xl:mr-4 flex gap-5">
