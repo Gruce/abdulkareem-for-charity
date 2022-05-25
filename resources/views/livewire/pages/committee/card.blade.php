@@ -48,7 +48,7 @@
                 </i>
             </button>
 
-            <a href="{{ route('edit-committee', , ['case_id' => $event->id])}}">
+            <a href="{{ route('edit-committee', ['committee_id' => $committee->id])}}">
                 <i
                     class="text-secondary-600 fa-solid fa-pen-to-square text-xl hover:rotate-12 duration-200 hover:text-secondary-700"></i>
             </a>
