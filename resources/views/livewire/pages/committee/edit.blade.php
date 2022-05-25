@@ -1,10 +1,10 @@
-<form wire:submit.prevent="add">
+<form wire:submit.prevent="edit">
     <div class="flex h-auto items-center justify-center">
 
         <div class="grid rounded-lg w-full">
             <div class="flex justify-center">
                 <div class="flex">
-                    <h1 class="text-gray-800 font-bold md:text-2xl text-xl">تعديل عضو</h1>
+                    <h1 class="text-gray-800 font-bold md:text-2xl text-xl">تعديل معلومات العضو</h1>
                 </div>
             </div>
 
