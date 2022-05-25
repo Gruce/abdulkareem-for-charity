@@ -68,8 +68,8 @@ class DeveloperSeeder extends Seeder
             'department'=>'علوم الحاسوب',
             'stage' => "المرحلة الثانية",
             'photo' => "/img/mo.jpg",
-            'github' => "https://github.com/MohammedJ18",
-            'email' => "jawad6686@gmail.com",
+            'github' => "https://github.com/MosaNameer",
+            'email' => "mosa.mn777@gmail.com",
 
         ]);
 
