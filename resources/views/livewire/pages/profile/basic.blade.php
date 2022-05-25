@@ -1,6 +1,6 @@
 <div>
     <div class="px-4 pt-4">
-        <form action="#" class="flex flex-col space-y-8" wire:submit.prevent="edit">
+        <form action="#" class=" space-y-8" wire:submit.prevent="edit">
             <div class="p-2">
                 <h3 class="text-2xl font-semibold text-primary-500">المعلومات الاساسية</h3>
                 <hr class="w-1/2">
