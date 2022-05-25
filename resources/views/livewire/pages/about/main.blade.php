@@ -5,11 +5,11 @@
         <div class="basis-1/4 grid lg:grid-cols-12 justify-between">
 
             <!-- Text -->
-            <div class="lg:col-span-7 text-center xl:mt-20">
+            <div class="lg:col-span-7 text-right xl:mt-20 md:px-12">
                 <h1 class="text-secondary-900 text-2xl md:text-4xl xl:text-5xl font-bold ">
                     صندوق الكرم
                 </h1>
-                <p class="leading-10 mt-6 md:mt-10 text-base md:text-xl xl:text-2xl text-gray-700 font-Alhurrareg px-2 md:px-12   ">
+                <p class="leading-10 mt-6 md:mt-10 text-base md:text-xl xl:text-2xl text-gray-700 font-Alhurrareg px-2    ">
                     هو مبادرة ونشاط طلابي بحت ينطلق من طلبة كلية علوم الحاسوب
                     وتكنلوجيا المعلومات في جامعة البصرة. الهدف منه رعاية الاعمال الخيرية داخل الكلية وتكون الاولوية في
                     صرف الصندوق
@@ -37,11 +37,11 @@
             </div>
 
             <!-- Text -->
-            <div class="basis-1/2 lg:col-span-7 mt-4 xl:mt-40   text-center">
+            <div class="basis-1/2 lg:col-span-7 mt-4 xl:mt-40 text-right md:px-9">
                 <h1 class="text-secondary-900 text-2xl md:text-4xl xl:text-5xl font-bold ">
                     من هو الأستاذ عبدالكريم
                 </h1>
-                <p class="leading-10 mt-10 text-base md:text-xl xl:text-2xl text-gray-700 font-Alhurrareg px-2 md:px-9 text-center">
+                <p class="leading-10 mt-10 text-base md:text-xl xl:text-2xl text-gray-700 font-Alhurrareg px-2  ">
                     الأستاذ عبد الكريم حسين السوداني (1974 - 2021) تدريسي في كلية علوم الحاسوب وتكنلوجيا المعـلومات
                     وشغل منصب مدير وحدة شؤون الطلبة سابقا
                     عُرف عنه فعل الخير والمشاركة في النشاطات الخيرية والاهتمام بطلبته وتشجيعهم فأحبه طلبته و ارادوا
@@ -58,11 +58,11 @@
         <div class="basis-1/4 grid lg:grid-cols-12 justify-between mt-12 lg:mt-20">
 
             <!-- Text -->
-            <div class="basis-1/2 lg:col-span-5 xl:mt-32  text-center">
+            <div class="basis-1/2 lg:col-span-5 xl:mt-32  text-right md:px-9">
                 <h1 class="text-secondary-900 text-2xl md:text-4xl xl:text-5xl font-bold ">
                     كيف يتم جمع التبرعات؟
                 </h1>
-                <p class="leading-10 mt-10 text-base md:text-xl xl:text-2xl text-gray-700 font-Alhurrareg px-2 md:px-9 ">
+                <p class="leading-10 mt-10 text-base md:text-xl xl:text-2xl text-gray-700 font-Alhurrareg px-2  ">
                     يعمل الصندوق على نظام الأسهم حيث يمتلك كل متبرع عدد من الاسهم تدل على حجم تبرعاته
                     وسيظهر عدد اسهمه في صفحة<a href="{{ route('donors') }}" class="text-primary-500"> المتبرعين </a>
                     سعر السهم في الصندوق هو 2000 د.ع ثابت
