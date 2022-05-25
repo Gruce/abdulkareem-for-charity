@@ -1,10 +1,12 @@
 <?php
 
-namespace App\Http\Livewire\Pages\Donate;
+namespace App\Http\Livewire\Pages\Committee;
 
 use Livewire\Component;
+use App\Models\Committee;
 use Jantinnerezo\LivewireAlert\LivewireAlert;
-class Committee extends Component
+
+class Card extends Component
 {
     protected $rules = [
         'name' => 'required',
@@ -39,8 +41,9 @@ class Committee extends Component
             'onDismissed' => '',
         ]);
     }
+
     public function render()
     {
-        return view('livewire.pages.donate.committee');
+        return view('livewire.pages.committee.card');
     }
 }
