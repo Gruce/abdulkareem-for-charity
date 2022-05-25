@@ -10,7 +10,7 @@ class Main extends Component
 {
     protected $listeners = ['$refresh', 'search'];
 
-    public $search, $received_price, $target, $selectEvent;
+    public $search, $received_price, $target, $selectEvent , $current_price;
 
     public function search($search)
     {
@@ -23,6 +23,7 @@ class Main extends Component
             $this->received_price,
             $this->target,
             $this->selectEvent,
+            $this->current_price,
         );
     }
     public function render()
