@@ -10,7 +10,8 @@
             <li class="py-2">يتم دفع الاسهم نقداً لأحد الممثلين</li>
             <li class="py-2">تضاف الاسهم الى حسابك بعد التأكد من عملية الدفع </li>
         </ul>
-        <form wire:submit.prevent="save" id="login_form" action="api_login" class="p-8 max-w-lg h-auto mx-auto rounded-3xl  mt-14  bg-white border border-gray-600">
+        <form wire:submit.prevent="save" id="login_form" action="api_login"
+            class="p-8 max-w-lg h-auto mx-auto rounded-3xl  mt-14  bg-white border border-gray-600">
             <div class="text-center ">
                 <h3 class="text-3xl font-bold mb-5 ">ما نقص مال من صدقة</h3>
                 <div class="">
@@ -29,8 +30,13 @@
             </div>
         </form>
     </div>
-    
+
     <div class="basis-1/2 col-span-7 ">
         <img src="/img/donate.png" class="w-3/4 h-auto m-auto">
     </div>
+
+
 </div>
+
+
+<div>

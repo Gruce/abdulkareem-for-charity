@@ -23,6 +23,9 @@ class DeveloperSeeder extends Seeder
             'department'=>'علوم الحاسوب',
             'stage' => "المرحلة الثانية",
             'photo' => "/img/mo.jpg",
+            'github' => "https://github.com/MohammedJ18",
+            'email' => "jawad6686@gmail.com",
+
 
         ]);
 
@@ -32,6 +35,8 @@ class DeveloperSeeder extends Seeder
             'department'=>'علوم الحاسوب',
             'stage' => "المرحلة الأولى",
             'photo' => "/img/dev2.jpg",
+            'github' => "https://github.com/i1Zeus​",
+            'email' => "husseinnajah123@gmail.com ",
 
         ]);
 
@@ -41,6 +46,8 @@ class DeveloperSeeder extends Seeder
             'department'=>'علوم الحاسوب',
             'stage' => "المرحلة الثالثة",
             'photo' => "/img/mo.jpg",
+            'github' => "https://github.com/6vnar",
+            'email' => 'manarnaseerabdulla@gmail.com',
 
         ]);
 
@@ -50,6 +57,8 @@ class DeveloperSeeder extends Seeder
             'department'=>'علوم الحاسوب',
             'stage' => "المرحلة الأولى",
             'photo' => "/img/dev4.jpg",
+            'github' => "https://github.com/MohammedJ18",
+            'email' => "jawad6686@gmail.com",
 
         ]);
 
@@ -59,6 +68,8 @@ class DeveloperSeeder extends Seeder
             'department'=>'علوم الحاسوب',
             'stage' => "المرحلة الثانية",
             'photo' => "/img/mo.jpg",
+            'github' => "https://github.com/MosaNameer",
+            'email' => "mosa.mn777@gmail.com",
 
         ]);
 
@@ -68,6 +79,8 @@ class DeveloperSeeder extends Seeder
             'department'=>'علوم الحاسوب',
             'stage' => "المرحلة الرابعة",
             'photo' => "/img/mo.jpg",
+            'github' => "https://github.com/zal3",
+            'email' => "zainabamjedlatef31@gmail.com",
 
         ]);
 
@@ -78,7 +91,6 @@ class DeveloperSeeder extends Seeder
             'stage' => 'المرحلة الثالثة',
             'photo' =>'/img/mo.jpg',
             'email' => 'fatma.nawfal.abdalrazak@gmail.com',
-            'linkedln' => 'https://www.linkedin.com/in/fatma-nawfal-99a8a2214',
             'github' => 'https://github.com/fatmanawfal'
         ]);
         ### manager ###

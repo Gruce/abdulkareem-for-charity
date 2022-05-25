@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Http\Livewire\Pages\Donate\Committee;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -20,7 +21,7 @@ class DatabaseSeeder extends Seeder
             ShareSeeder::class,
             EventSeeder::class,
             DeveloperSeeder::class,
-            AdministratorSeeder::class,
+            CommitteeSeeder::class,
 
         ]);
     }

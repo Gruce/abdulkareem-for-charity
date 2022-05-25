@@ -4,13 +4,11 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Livewire\WithFileUploads;
 use Illuminate\Database\Eloquent\Casts\Attribute;
 
 
 class Event extends Model
 {
-    use WithFileUploads;
     use HasFactory;
     protected $fillable = ['title', 'description', 'image_path', 'file_path', 'target', 'received_price'];
 
