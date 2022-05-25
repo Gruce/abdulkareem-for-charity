@@ -9,9 +9,9 @@
                     style="width:{{ ($received_price * 100) / $target }}%"></div>
             </div>
             <div class="flex justify-between px-3 mt-2 text-xl text-secondary-200">
-                <div>{{ $target }} د.ع</div>
-                <div>{{ round(($received_price * 100) / $target) }}%</div>
-                <div>{{$received_price}} د.ع</div>
+                <div>الهدف 1,000,000</div>
+                <div>( 75% )</div>
+                <div>الواصل 750,000</div>
             </div>
             <div class="h-0.5 w-full rounded-full bg-gray-300 my-7 "></div>
         </div>
