@@ -12,7 +12,7 @@ class AddCommittee extends Component
     use WithFileUploads;
 
     public $name, $department, $study_type, $stage, $phone_num;
-    protected $listeners = ['$refresh'];
+    
 
     protected $rules = [
         'name' => 'required',
@@ -50,7 +50,8 @@ class AddCommittee extends Component
     }
 
     public function render()
-    {
+    { 
+        
         return view('livewire.pages.donate.add-committee');
     }
 }

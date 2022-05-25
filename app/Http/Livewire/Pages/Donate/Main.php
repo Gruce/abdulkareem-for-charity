@@ -9,7 +9,7 @@ use Jantinnerezo\LivewireAlert\LivewireAlert;
 
 class Main extends Component{
     use LivewireAlert;
-    
+    protected $listeners = ['$refresh'];
     protected $rules = [
         'share' => 'required',
     ];
