@@ -2,7 +2,8 @@
     <div x-data="{ isOpen: false }" class="">
 
         <div class="flex flex-col justify-center max-w-sm p-6  rounded-xl sm:px-12 border-x-2 border-y border-gray-200">
-            <img src="{{ asset($item->profile_photo_path ?? 'img/user.png') }}"
+            
+            <img  src="@if($item->profile_photo_path){{ asset($item->profile_photo_path) }}@elseif($item->gender == 1) {{ asset('/img/profile_woman.png') }} @elseif($item->gender != 1) {{ asset('/img/profile_man.png')}} @endif" 
                 class="w-32 h-32 mx-auto rounded-full bg-white-500 aspect-square">
             <div class="space-y-4 text-center divide-y divide-gray-300">
                 <div class="my-2 space-y-1">
