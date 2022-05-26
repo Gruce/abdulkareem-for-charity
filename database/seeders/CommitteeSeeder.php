@@ -32,8 +32,17 @@ class CommitteeSeeder extends Seeder
             'study_type' => 1,
             'phone_num' => '033xxx'
         ]);
-        
-        
-        
+
+        // id=3
+        Committee::create([
+            'name' => 'منار ',
+            'department'=>1,
+            'stage' => 3,
+            'study_type' => 1,
+            'phone_num' => '033xxx'
+        ]);
+
+
+
     }
 }
