@@ -3074,6 +3074,9 @@ select{
   .xl\:mt-32{
     margin-top: 8rem;
   }
+  .xl\:mr-20{
+    margin-right: 5rem;
+  }
   .xl\:hidden{
     display: none;
   }
