@@ -8,15 +8,17 @@ use Illuminate\Database\Eloquent\Casts\Attribute;
 
 class Committee extends Model
 {
-    protected $fillable = ['name', 'stage', 'department' ,'phone_num' ,'study_type'];
+    protected $fillable = ['name', 'stage', 'department', 'phone_num', 'study_type'];
     use HasFactory;
 
     ### add ###
-    public function add($data){
+    public function add($data)
+    {
         $this->fill($data);
         $this->save();
     }
     ### End add ###
+
 
     // public function add_file($file, $type = 1)
     // {
@@ -32,4 +34,9 @@ class Committee extends Model
     //     $this->save();
     // }
 
+    ### edit ###
+    public function edit($data)
+    {
+        $this->update($data);
+    }
 }

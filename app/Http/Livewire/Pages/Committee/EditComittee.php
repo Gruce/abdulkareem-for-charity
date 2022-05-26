@@ -26,6 +26,7 @@ class EditComittee extends Component
 
     public function mount($committee_id)
     {
+
         $this->$committee_id = $committee_id;
     if ($committee_id) {
 
@@ -35,6 +36,7 @@ class EditComittee extends Component
         $this->study_type = $committee->study_type;
         $this->stage = $committee->stage;
         $this->phone_num = $committee->phone_num;
+
     }
     }
 
@@ -48,6 +50,7 @@ class EditComittee extends Component
             'study_type'=>$this->study_type,
             'stage'=>$this->stage,
             'phone_num'=>$this->phone_num,
+
         ]);
 
         $this->alert('success', 'تم التعديل', [
