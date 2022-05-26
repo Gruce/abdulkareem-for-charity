@@ -9,14 +9,14 @@
                     style="width:{{ ($received_price * 100) / $target }}%"></div>
             </div>
             <div class="flex justify-between px-3 mt-2 text-xl text-secondary-200">
-                <div>الهدف 1,000,000</div>
-                <div>( 75% )</div>
-                <div>الواصل 750,000</div>
+                <div>الواصل{{$received_price}} </div>
+                <div>{{ round(($received_price * 100) / $target) }}%</div>
+                <div>الهدف {{ $target }}</div>
             </div>
             <div class="h-0.5 w-full rounded-full bg-gray-300 my-7 "></div>
         </div>
         <div class="text-xl text-gray-600">
-            {{ $description ?? 'لا يوجد وصف' }} 
+            {{ $description ?? 'لا يوجد وصف' }}
         </div>
         <div class="mt-4 xl:mt-10 mr-10 xl:mr-4 flex gap-5">
             <a href="{{ route('cases') }}"
