@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Casts\Attribute;
 
 class Committee extends Model
 {
-    protected $fillable = ['name', 'stage', 'department', 'phone_num', 'study_type'];
+    protected $fillable = ['name', 'stage', 'department', 'phone_num', 'study_type', 'photo'];
     use HasFactory;
 
     ### add ###
@@ -20,19 +20,16 @@ class Committee extends Model
     ### End add ###
 
 
-    // public function add_file($file, $type = 1)
-    // {
+    public function add_image($photo)
+    {
 
-    //     $type = $type == 1 ? 'images' : 'files';
-    //     $ext = $file->extension();
-    //     $name =  \Str::random(10) . '.' . $ext;
-    //     $file = $file->storeAs('public/event/' . $this->id . '/' . $type . '/' , $name);
-    //     if ($type == 'images')
-    //         $this->image_path ='storage/event/' . $this->id . '/' . $type . '/' . $name;
-    //     else $this->file_path ='storage/event/' . $this->id . '/' . $type . '/' . $name;
+        $ext = $photo->extension();
+        $name =  \Str::random(10) . '.' . $ext;
+        $photo = $photo->storeAs('public/event/' . $this->id  . '/' , $name);
+        $this->image_path ='storage/event/' . $this->id  . '/' . $name;
 
-    //     $this->save();
-    // }
+        $this->save();
+    }
 
     ### edit ###
     public function edit($data)
