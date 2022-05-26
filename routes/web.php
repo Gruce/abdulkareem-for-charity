@@ -64,8 +64,8 @@ Route::middleware(['auth:sanctum'])->group(function () {
 
         // committee
         Route::get('/committee', Committee::class)->name('committee');
-        Route::get('/add-committee', AddCommittee::class)->name('add-committee');
-        Route::get('/edit-committee/{committee_id}', EditCommittee::class)->name('edit-committee');
+        // Route::get('/add-committee', AddCommittee::class)->name('add-committee');
+        // Route::get('/edit-committee/{committee_id}', EditCommittee::class)->name('edit-committee');
         //end committee
     });
     //Profile
