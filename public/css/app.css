@@ -2206,6 +2206,10 @@ select{
   --tw-text-opacity: 1;
   color: rgb(243 244 246 / var(--tw-text-opacity));
 }
+.text-gray-50{
+  --tw-text-opacity: 1;
+  color: rgb(249 250 251 / var(--tw-text-opacity));
+}
 .underline{
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
@@ -2452,6 +2456,14 @@ select{
 .hover\:text-violet-400:hover{
   --tw-text-opacity: 1;
   color: rgb(167 139 250 / var(--tw-text-opacity));
+}
+.hover\:text-primary-600:hover{
+  --tw-text-opacity: 1;
+  color: rgb(60 186 127 / var(--tw-text-opacity));
+}
+.hover\:text-primary-800:hover{
+  --tw-text-opacity: 1;
+  color: rgb(45 139 95 / var(--tw-text-opacity));
 }
 .hover\:shadow-xl:hover{
   --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
