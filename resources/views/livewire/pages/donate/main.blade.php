@@ -36,7 +36,7 @@
                 </form>
             </div>
 
-            <div class="basis-1/2 lg:col-span-7 invisible lg:visible">
+            <div class="basis-1/2 lg:col-span-7 ">
                 <img src="/img/donate.png" class="w-3/4 h-auto m-auto">
             </div>
         </div>
