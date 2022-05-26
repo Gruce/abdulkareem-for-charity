@@ -87,6 +87,7 @@
                 - موظف
                 @endif</p>
         </div>
+        @admin
         <div x-data="{ isOpen: false }" class="flex flex-col justify-between pt-2 space-x-4 ">
             <div class="flex justify-between ">
                 <div>
@@ -100,7 +101,7 @@
                     </button>
                     @endif
                     <button wire:click="confirm({{ $item->id }})" class="mx-2">
-                        <i class=" fa-solid fa-trash text-red-400 hover:scale-110 duration-200 hover:text-red-600">
+                        <i class=" fa-solid fa-trash text-red-500 hover:scale-110 duration-200 hover:text-red-600">
                         </i>
                     </button>
                 </div>
@@ -108,24 +109,26 @@
             <div x-show="isOpen" @click.outside="open = false" class="text-gray-500 text-base p-2  flex flex-col">
 
                 <span>الطلبات</span>
-                
-                @foreach ($item->shares as $share)
 
-                <div>
-                    <span class="text-xs">طلب {{ $item->name }} اضافة {{ $share->share }} سهم لحسابه تأكد من حصولك على
-                        {{ ($share->share)*2000 }} قبل الموافقة</span>
+                @foreach ($item->shares as $share)
+                <div class="flex justify-between">
+                    <div>
+                        <span class="text-xs">طلب اضافة {{ $share->share }} سهم</span>
+                    </div>
+                    <div class="flex ">
+                        <button type="button" wire:click="accept({{ $share->id }}, {{ $share->state }})"
+                            class="mx-2 text-primary-500"><i class="fa-solid fa-check"></i></button>
+                        <button type="button" wire:click="deleteShare({{ $share->id }})" class="mx-2 text-red-500"><i
+                                class="fa-solid fa-xmark"></i></button>
+                    </div>
                 </div>
-                <div class="flex">
-                    <button type="button" wire:click="accept({{ $share->id }}, {{ $share->state }})"
-                        class=""><i class="fa-solid fa-check"></i></button>
-                    <button type="button" wire:click="deleteShare({{ $share->id }})"
-                        class=""><i class="fa-solid fa-xmark"></i></button>
-                </div>
+
 
                 @endforeach
 
             </div>
 
         </div>
+        @endadmin
     </div>
 </div>
