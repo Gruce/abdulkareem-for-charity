@@ -88,7 +88,7 @@
                 @endif</p>
         </div>
         <div x-data="{ isOpen: false }" class="flex flex-col justify-between pt-2 space-x-4 ">
-            <div  class="flex justify-between ">
+            <div class="flex justify-between ">
                 <div>
                     <p class="text-xs text-gray-600 mr-2">انضم {{ $item->created_at->diffForHumans() }}</p>
                 </div>
@@ -106,22 +106,24 @@
                 </div>
             </div>
             <div x-show="isOpen" @click.outside="open = false" class="text-gray-500 text-base p-2  flex flex-col">
-                 
-                        
-                    @foreach ($item->shares as $share)
-                   
-                        <div>
-                            <span class="text-2xs">طلب {{ $item->name }} اضافة {{ $share->share }} سهم لحسابه تأكد من حصولك على {{ ($share->share)*2000 }} قبل الموافقة</span>
-                        </div>
-                        <div class="flex">
-                            <button type="button" wire:click="accept({{ $share->id }}, {{ $share->state }})"
-                                class="focus:outline-none text-white bg-green-500 hover:bg-green-500 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-2 py-2 mr-2 mb-2">قبول</button>
-                            <button type="button" wire:click="deleteShare({{ $share->id }})"
-                                class="focus:outline-none text-white bg-red-500 hover:bg-red-500 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-2 py-2 mr-2 mb-2">حذف</button>
-                        </div>
-                    
-                    @endforeach
+
+                <span>الطلبات</span>
                 
+                @foreach ($item->shares as $share)
+
+                <div>
+                    <span class="text-xs">طلب {{ $item->name }} اضافة {{ $share->share }} سهم لحسابه تأكد من حصولك على
+                        {{ ($share->share)*2000 }} قبل الموافقة</span>
+                </div>
+                <div class="flex">
+                    <button type="button" wire:click="accept({{ $share->id }}, {{ $share->state }})"
+                        class=""><i class="fa-solid fa-check"></i></button>
+                    <button type="button" wire:click="deleteShare({{ $share->id }})"
+                        class=""><i class="fa-solid fa-xmark"></i></button>
+                </div>
+
+                @endforeach
+
             </div>
 
         </div>
