@@ -20,8 +20,8 @@ return new class extends Migration
             $table->integer('study_type'); #### Morning: 1, Evening: 2 ###
             $table->integer('stage'); #### first: 1, Second: 2, third: 3, fourth: 4 ###
             $table->string('phone_num');
-            //$table->string('photo');
-            
+            $table->string('photo')->nullable();
+
             $table->timestamps();
         });
     }
