@@ -35,8 +35,8 @@ class DeveloperSeeder extends Seeder
             'department'=>'علوم الحاسوب',
             'stage' => "المرحلة الأولى",
             'photo' => "/img/dev2.jpg",
-            'github' => "https://github.com/i1Zeus​",
-            'email' => "husseinnajah123@gmail.com ",
+            'github' => "https://github.com/i1Zeus",
+            'email' => "husseinnajah123@gmail.com",
 
         ]);
 
@@ -57,8 +57,8 @@ class DeveloperSeeder extends Seeder
             'department'=>'علوم الحاسوب',
             'stage' => "المرحلة الأولى",
             'photo' => "/img/dev4.jpg",
-            'github' => "https://github.com/MohammedJ18",
-            'email' => "jawad6686@gmail.com",
+            'github' => "https://github.com/a7med3bd",
+            'email' => "mr.darkboss1@gmail.com",
 
         ]);
 
