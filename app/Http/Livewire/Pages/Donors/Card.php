@@ -11,16 +11,16 @@ class Card extends Component
 {
     use LivewireAlert;
 
-    public  $item ,$type, $gender, $request, $state,$study_type, $stage, $department, $division;
+    public  $item, $type, $gender, $request, $state, $study_type, $stage, $department, $division;
 
-    public $share_id;
+    public $share_id, $share_state;
 
     protected $rules = [
         'name' => 'required',
         'shares' => 'required',
     ];
 
-    protected $listeners = ['delete', '$refresh' , 'getUserType'];
+    protected $listeners = ['delete', '$refresh', 'getUserType', 'accept', 'deleteShare'];
 
     public function delete()
     {
@@ -33,7 +33,8 @@ class Card extends Component
         $this->emitUp('$refresh');
     }
 
-    public function confirm($id){
+    public function confirm($id)
+    {
         $this->share_id = $id;
         $this->alert('warning', 'هل انت متأكد من حذف الحالة؟', [
             'position' => 'center',
@@ -61,21 +62,24 @@ class Card extends Component
         $share->add($data);
         $this->reset();
     }
-    
-    public function accept($id, $state)
+
+    public function accept()
     {
-        $share = Share::findOrFail($id);
-        $share->state($state);
+
+        $share = Share::findOrFail($this->share_id);
+        $share->state($this->share_state);
+
         $this->alert('success', 'تم القبول', [
             'position' => 'top',
             'timer' => 3000,
             'toast' => true,
         ]);
+
         $this->emitUp('$refresh');
     }
-    public function deleteShare($id)
+    public function deleteShare()
     {
-        $share = Share::findOrFail($id);
+        $share = Share::findOrFail($this->share_id);
         $share->delete();
         $this->alert('success', 'تم الرفض', [
             'position' => 'top',
@@ -83,6 +87,35 @@ class Card extends Component
             'toast' => true,
         ]);
         $this->emitUp('$refresh');
+    }
+
+    public function confirm_accepet($id, $state)
+    {
+        $this->share_id = $id;
+        $this->share_state = $state;
+        $this->alert('warning', 'هل انت متأكد من قبول الطلب؟', [
+            'position' => 'center',
+            'timer' => 3000,
+            'toast' => true,
+            'showConfirmButton' => true,
+            'onConfirmed' => 'accept',
+            'showCancelButton' => true,
+            'onDismissed' => '',
+        ]);
+    }
+
+    public function confirm_delete($id)
+    {
+        $this->share_id = $id;
+        $this->alert('warning', 'هل انت متأكد من حذف الطلب؟', [
+            'position' => 'center',
+            'timer' => 3000,
+            'toast' => true,
+            'showConfirmButton' => true,
+            'onConfirmed' => 'deleteShare',
+            'showCancelButton' => true,
+            'onDismissed' => '',
+        ]);
     }
 
     public function getUserType($type, $gender, $state, $study_type, $stage, $department, $division)
