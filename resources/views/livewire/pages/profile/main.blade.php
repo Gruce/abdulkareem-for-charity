@@ -12,30 +12,30 @@
             </div>
         </div>
 
-        <div x-data="{ isOpen: true }" class="grid grid-cols-12 bg-white">
+        <div x-data="{ isOpen: true }" class="justify-start grid grid-cols-1 md:grid-cols-9 bg-white">
             <div
-                class="col-span-12 w-full px-3 py-6 justify-start flex space-x-4 md:space-y-4 md:flex-col md:col-span-2 md:justify-start ">
+                class="w-full px-2 py-4 justify-start flex gap-2 space-x-4 md:space-y-4 md:flex-col md:col-span-2 md:justify-start ">
 
                 <button @click="isOpen = true"
-                    class="text-sm text-white p-2 text-center rounded w-60 hover:scale-105 duration-200 bg-primary-500 focus:bg-primary-600 focus:ring-2 focus:ring-primary-700">المعلومات
+                    class="text-sm text-white p-2 text-center rounded w-56 hover:scale-105 duration-200 bg-primary-500 focus:bg-primary-600 focus:ring-2 focus:ring-primary-700">المعلومات
                     الاساسية</button>
 
 
                 @if (auth()->user()->type == 1)
                     <button @click="isOpen = false"
-                        class="text-sm text-white p-2 text-center rounded w-60  hover:scale-105 duration-200 focus:ring-2 focus:ring-primary-700 bg-primary-500 focus:bg-primary-600">معلومات
+                        class="text-sm text-white p-2 text-center rounded w-56 hover:scale-105 duration-200 focus:ring-2 focus:ring-primary-700 bg-primary-500 focus:bg-primary-600">معلومات
                         الطالب</button>
                 @endif
             </div>
 
             <div x-show="isOpen"
-                class="md:border-solid md:border-l md:border-black md:border-opacity-25 h-full pb-12 md:col-span-10">
+                class="h-full pb-12">
                 @livewire('pages.profile.basic', ['user' => $user])
             </div>
 
 
             <div x-show="!isOpen"
-                class="md:border-solid md:border-l md:border-black md:border-opacity-25 h-full pb-12 md:col-span-10">
+                class="h-full pb-12">
                 @livewire('pages.profile.student-info', ['user' => $user])
             </div>
         </div>

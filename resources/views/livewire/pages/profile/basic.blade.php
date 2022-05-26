@@ -8,7 +8,7 @@
             <div class="form-item">
                 <label class="text-xl">الاسم الكامل</label>
                 <input wire:model="name" type="text" value="{{ $name }}"
-                    class="bg-gray-50 border border-primary-400 text-sm focus:ring-primary-600 focus:border-primary-500 w-1/2 block p-2.5 rounded-md mt-2">
+                    class="bg-gray-50 border border-primary-400 text-sm focus:ring-primary-600 focus:border-primary-500  block p-2.5 rounded-md mt-2">
                 @error('name')
                     <span class="text-red-500 error">{{ $message }}</span>
                 @enderror
@@ -17,7 +17,7 @@
                 <div class="form-item w-full">
                     <label class="text-md">البريد الألكتروني</label>
                     <input wire:model="email" type="text" id="email"
-                        class="bg-gray-50 border border-primary-400  text-sm focus:ring-primary-600 focus:border-primary-500 block w-1/2 p-2.5 mt-2 rounded-md">
+                        class="bg-gray-50 border border-primary-400  text-sm focus:ring-primary-600 focus:border-primary-500 block  p-2.5 mt-2 rounded-md">
                     @error('email')
                         <span class="text-red-500 error">{{ $message }}</span>
                     @enderror
@@ -30,7 +30,7 @@
             <div class="form-item">
                 <label class="text-xl ">رقم الهاتف</label>
                 <input wire:model="phone_number" type="text"
-                    class="bg-gray-50 border border-primary-400 text-sm focus:ring-primary-600 focus:border-primary-500 block w-1/2 p-2.5 mt-2 rounded-md">
+                    class="bg-gray-50 border border-primary-400 text-sm focus:ring-primary-600 focus:border-primary-500 block  p-2.5 mt-2 rounded-md">
                 @error('phone_number')
                     <span class="text-red-500 error">{{ $message }}</span>
                 @enderror
