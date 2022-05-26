@@ -30,7 +30,7 @@ class Main extends Component{
     }
 
     public function render(){
-        $this->committees = Committee::get();
+        
         return view('livewire.pages.donate.main');
     }
 }
