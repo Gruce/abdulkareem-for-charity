@@ -88,7 +88,7 @@
                 @endif</p>
         </div>
         @admin
-        <div x-data="{ isOpen: false }" class="flex flex-col justify-between pt-2 space-x-4 ">
+        <div wire:ignore.self x-data="{ isOpen: false }" class="flex flex-col justify-between pt-2 space-x-4 ">
             <div class="flex justify-between ">
                 <div>
                     <p class="text-xs text-gray-600 mr-2">انضم {{ $item->created_at->diffForHumans() }}</p>
@@ -106,11 +106,12 @@
                     </button>
                 </div>
             </div>
-            <div x-show="isOpen" @click.outside="open = false" class="text-gray-500 text-base p-2  flex flex-col">
+            <div x-show="isOpen"  class="text-gray-500 text-base p-2  flex flex-col">
 
                 <span>الطلبات</span>
 
                 @foreach ($item->shares as $share)
+                @if (!$share->state)
                 <div class="flex justify-between">
                     <div>
                         <span class="text-xs">طلب اضافة {{ $share->share }} سهم</span>
@@ -122,7 +123,7 @@
                                 class="fa-solid fa-xmark"></i></button>
                     </div>
                 </div>
-
+                @endif
 
                 @endforeach
 
