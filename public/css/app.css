@@ -1260,6 +1260,9 @@ select{
 .w-10\/12{
   width: 83.333333%;
 }
+.w-56{
+  width: 14rem;
+}
 .min-w-0{
   min-width: 0px;
 }
@@ -2377,6 +2380,10 @@ select{
   --tw-bg-opacity: 1;
   background-color: rgb(34 197 94 / var(--tw-bg-opacity));
 }
+.hover\:bg-red-800:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(153 27 27 / var(--tw-bg-opacity));
+}
 .hover\:text-gray-500:hover{
   --tw-text-opacity: 1;
   color: rgb(107 114 128 / var(--tw-text-opacity));
@@ -2874,6 +2881,9 @@ select{
   }
   .md\:grid-cols-2{
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .md\:grid-cols-9{
+    grid-template-columns: repeat(9, minmax(0, 1fr));
   }
   .md\:flex-row{
     flex-direction: row;
