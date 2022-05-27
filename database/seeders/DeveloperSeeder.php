@@ -100,6 +100,7 @@ class DeveloperSeeder extends Seeder
             'stage' => "المرحلة الثالثة",
             'type' => 2,
             'photo' => '/img/mo.jpg',
+            'phone' => '01098989898',
 
         ]);
     }
