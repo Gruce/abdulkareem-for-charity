@@ -1,5 +1,5 @@
 <div>
-    <div class="flex flex-col justify-center max-w-xs p-6 shadow-md rounded-xl border border-gray-800 sm:px-12">
+    <div class="flex flex-col justify-center max-w-xs p-4 shadow-md rounded-xl border border-gray-800">
         @if($edit_id == $committee->id)
         <div>
             <div class="flex h-auto items-center justify-center">
@@ -21,7 +21,7 @@
                     <div class="grid grid-cols-1 mt-5 mx-7">
                         <div class="p-1">
                             <select wire:model.lazy="department"
-                                class="px-6 py-3 w-full rounded-md border-2 border-gray-200 bg-white border-transparent focus:border-primary-100 focus:bg-white focus:ring-0 text-sm">
+                                class="px-7 py-3 w-full rounded-md border-2 border-gray-200 bg-white border-transparent focus:border-primary-100 focus:bg-white focus:ring-0 text-sm">
                                 <option value="">القسم</option>
                                 <option value="1">علوم الحاسوب</option>
                                 <option value="2">نظم المعلومات</option>
