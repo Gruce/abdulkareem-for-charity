@@ -13,11 +13,11 @@
                     <div class="grid col-span-1">
                         <label class="text-xl font-semibold mb-2">القسم</label>
 
-                        <div class="text-base leading-7">
-                            <input type="radio" wire:model="department" value="1" id="CS">
+                        <div class="text-base leading-7 ">
+                            <input type="radio" wire:model="department" value="1" id="CS" class="focus:ring-primary-500 text-primary-600">
                             <label for="CS">علوم الحاسوب</label><br>
 
-                            <input type="radio" wire:model="department" value="2" id="IT">
+                            <input type="radio" wire:model="department" value="2" id="IT" class="focus:ring-primary-500 text-primary-600">
                             <label for="IT">نظم المعلومات</label><br>
                         </div>
 
@@ -32,10 +32,10 @@
                                 <label class="text-xl font-semibold mb-2">نوع الدراسة</label>
 
                                 <div class="text-base leading-7">
-                                    <input type="radio" wire:model="study_type" value="1" id="morning">
+                                    <input type="radio" wire:model="study_type" value="1" id="morning" class="focus:ring-primary-500 text-primary-600">
                                     <label for="morning">صباحي</label><br>
 
-                                    <input type="radio" wire:model="study_type" value="2" id="evening">
+                                    <input type="radio" wire:model="study_type" value="2" id="evening" class="focus:ring-primary-500 text-primary-600">
                                     <label for="evening">مسائي</label><br>
                                 </div>
 
@@ -56,16 +56,16 @@
                             <label class="text-xl font-semibold mb-2">المرحلة</label>
 
                             <div class="text-base leading-7">
-                                <input type="radio" wire:model="stage" value="1" id="first">
+                                <input type="radio" wire:model="stage" value="1" id="first" class="focus:ring-primary-500 text-primary-600">
                                 <label for="first">اولى</label><br>
 
-                                <input type="radio" wire:model="stage" value="2" id="second">
+                                <input type="radio" wire:model="stage" value="2" id="second" class="focus:ring-primary-500 text-primary-600">
                                 <label for="second">ثانية</label><br>
 
-                                <input type="radio" wire:model="stage" value="3" id="third">
+                                <input type="radio" wire:model="stage" value="3" id="third" class="focus:ring-primary-500 text-primary-600">
                                 <label for="third">ثالثة</label><br>
 
-                                <input type="radio" wire:model="stage" value="4" id="fourth">
+                                <input type="radio" wire:model="stage" value="4" id="fourth" class="focus:ring-primary-500 text-primary-600">
                                 <label for="fourth">رابعة</label><br>
                             </div>
 
@@ -83,19 +83,19 @@
                             <br>
 
                             <div class="text-base leading-7">
-                                <input type="radio" wire:model="division" value="1" id="A">
+                                <input type="radio" wire:model="division" value="1" id="A" class="focus:ring-primary-500 text-primary-600">
                                 <label for="A">A</label><br>
 
-                                <input type="radio" wire:model="division" value="2" id="B">
+                                <input type="radio" wire:model="division" value="2" id="B" class="focus:ring-primary-500 text-primary-600">
                                 <label for="B">B</label><br>
 
-                                <input type="radio" wire:model="division" value="3" id="C">
+                                <input type="radio" wire:model="division" value="3" id="C" class="focus:ring-primary-500 text-primary-600">
                                 <label for="C">C</label><br>
 
-                                <input type="radio" wire:model="division" value="4" id="D">
+                                <input type="radio" wire:model="division" value="4" id="D" class="focus:ring-primary-500 text-primary-600">
                                 <label for="D">D</label><br>
 
-                                <input type="radio" wire:model="division" value="5" id="E">
+                                <input type="radio" wire:model="division" value="5" id="E" class="focus:ring-primary-500 text-primary-600">
                                 <label for="E">E</label><br>
                             </div>
 

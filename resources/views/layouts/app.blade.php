@@ -35,7 +35,7 @@
     <div class="  ">
         @livewire('components.navbar')
         <!-- Page Content -->
-        <main class=" p-10 mt-5 overflow-y-auto  rounded-lg ">
+        <main class=" lg:p-10 lg:mt-5 overflow-y-auto  rounded-lg ">
             
             <div>
                 {{ $slot }}
