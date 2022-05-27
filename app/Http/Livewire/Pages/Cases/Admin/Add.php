@@ -53,7 +53,7 @@ class Add extends Component
             $this->reset();
 
             $this->alert('success', 'تمت الاضافة', [
-                'position' => 'top',
+                'position' => 'center',
                 'timer' => 3000,
                 'toast' => true,
             ]);

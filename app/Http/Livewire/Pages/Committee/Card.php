@@ -21,8 +21,8 @@ class Card extends Component
     public function delete()
     {
          Committee::findOrFail($this->committee_id)->delete();
-        $this->alert('success', 'تم حذف ', [
-            'position' => 'top',
+        $this->alert('success', 'تم الحذف', [
+            'position' => 'center',
             'timer' => 3000,
             'toast' => true,
         ]);
@@ -31,7 +31,7 @@ class Card extends Component
 
     public function confirm($id){
         $this->committee_id = $id;
-        $this->alert('warning', 'هل انت متأكد من حذف؟', [
+        $this->alert('warning', 'هل انت متأكد من الحذف؟', [
             'position' => 'center',
             'timer' => 3000,
             'toast' => true,

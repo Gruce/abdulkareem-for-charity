@@ -30,7 +30,7 @@ class Basic extends Component
             $this->user->addProfile($this->profile_photo);
 
         $this->alert('success', 'Done!', [
-            'position' => 'top-start',
+            'position' => 'top',
             'timer' => 3000,
             'toast' => true,
         ]);   
