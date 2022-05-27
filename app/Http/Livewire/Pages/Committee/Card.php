@@ -10,14 +10,14 @@ use Jantinnerezo\LivewireAlert\LivewireAlert;
 class Card extends Component
 {
     protected $rules = [
-        'name' => 'required', 
+        'name' => 'required',
     ];
 
     protected $listeners = ['delete', '$refresh'];
     use LivewireAlert;
 
     public $committee_id ,$committee, $edit_id = null;
-    
+
 
     public function delete()
     {
@@ -60,17 +60,16 @@ class Card extends Component
         $this->committee->study_type = $this->study_type;
         $this->committee->phone_num = $this->phone_num;
         $this->committee->save();
-
         $this->edit_id = null;
 
-        $this->alert('success', 'Done !', [
-            'position' => 'top-start',
+        $this->alert('success', 'تم التعديل', [
+            'position' => 'top',
             'timer' => '3000',
             'toast' => true,
         ]);
 
     }
-    
+
 
     public function render()
     {

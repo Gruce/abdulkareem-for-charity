@@ -13,7 +13,7 @@
 
                     <div class="grid grid-cols-1 mt-5 mx-7">
                         <label for="name" class="md:text-sm text-xs text-gray-700 text-light font-semibold">الأسم</label>
-                        <input wire:model.lazy="name" id="name" 
+                        <input wire:model.lazy="name" id="name"
                             class="py-2 px-3 rounded-lg border-2 border-gray-200 mt-1 focus:outline-none focus:ring-2 focus:ring-primary-100 focus:border-transparent"
                             type="text" />
                     </div>
@@ -88,9 +88,9 @@
                 </h2>
                 <p class="text-xs sm:text-base text-gray-700 text-center">
 
-                    @if ($committee->department == 1)
+                    @if ($committee->study_type == 1)
                     صباحي
-                    @elseif($committee->department == 2)
+                    @elseif($committee->study_type == 2)
                     مسائي
                     @endif
                     @if ($committee->stage == 1)

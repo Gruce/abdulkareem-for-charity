@@ -72,6 +72,7 @@
 
     </div>
 </div> --}}
+<div>
 <div class="flex flex-col justify-center max-w-xs p-6 shadow-sm rounded-xl sm:px-12 border border-gray-200">
     <img src="@if($item->profile_photo_path){{ asset($item->profile_photo_path) }}@elseif($item->gender == 1) {{ asset('/img/profile_woman.png') }} @elseif($item->gender != 1) {{ asset('/img/profile_man.png')}} @endif"
         alt="" class="w-32 h-32 mx-auto rounded-full bg-gray-500 aspect-square">
@@ -132,4 +133,5 @@
         </div>
         @endadmin
     </div>
+</div>
 </div>
