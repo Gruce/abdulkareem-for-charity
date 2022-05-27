@@ -63,9 +63,9 @@
                     {{-- Button --}}
                     <div class="flex items-center justify-center  md:gap-8 gap-4 pt-7 pb-7">
                         <button wire:click="save"
-                            class="w-auto text-sm bg-primary-600 hover:bg-primary-800 rounded-lg shadow-md hover:shadow-xl hover:scale-105 text-white px-2 py-2">حفظ</button>
+                            class="w-auto text-sm bg-primary-600 hover:bg-primary-800 rounded-lg duration-200 hover:shadow-xl hover:scale-105 text-white px-4 py-2">حفظ</button>
                         <button  wire:click="$set('edit_id', {{null}})"
-                            class="w-auto text-sm bg-red-600 hover:bg-red-800 rounded-lg shadow-md hover:shadow-xl hover:scale-105 text-white px-2 py-2">اغلاق</button>
+                            class="w-auto text-sm bg-red-600 hover:bg-red-800 rounded-lg duration-200 hover:shadow-xl hover:scale-105 text-white px-4 py-2">اغلاق</button>
                     </div>
 
                 </div>
