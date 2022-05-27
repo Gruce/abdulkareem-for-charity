@@ -47,7 +47,7 @@ class Edit extends Component
         ]);
 
         $this->alert('success', 'تم التعديل', [
-            'position' => 'top',
+            'position' => 'center',
             'timer' => 3000,
             'toast' => true,
         ]);

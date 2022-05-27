@@ -22,7 +22,7 @@ class Main extends Component{
         $donate->add($this->share, $this->note);
 
         $this->alert('success', 'تم', [
-            'position' => 'top',
+            'position' => 'top-start',
             'timer' => 3000,
             'toast' => true,
         ]);

@@ -26,7 +26,7 @@ class Card extends Component
     {
         User::findOrFail($this->share_id)->delete();
         $this->alert('success', 'تم حذف الحالة', [
-            'position' => 'top',
+            'position' => 'center',
             'timer' => 3000,
             'toast' => true,
         ]);
@@ -54,7 +54,7 @@ class Card extends Component
             'share' => $this->share,
         ];
         $this->alert('success', 'تمت الاضافة', [
-            'position' => 'top',
+            'position' => 'center',
             'timer' => 3000,
             'toast' => true,
         ]);

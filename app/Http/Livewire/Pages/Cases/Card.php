@@ -21,7 +21,7 @@ class Card extends Component
     {
         Event::findOrFail($this->event_id)->delete();
         $this->alert('success', 'تم حذف الحالة', [
-            'position' => 'top',
+            'position' => 'center',
             'timer' => 3000,
             'toast' => true,
         ]);
@@ -46,7 +46,7 @@ class Card extends Component
     public function add_price(Event $event)
     {
         if ($this->received_price > $this->current_price) {
-            $this->alert('warning', 'لا يمكنك اضافة مبالغ اكثر من الموجود في الصندوق', [
+            $this->alert('warning', 'يجب ان يكون المبلغ اقل او يساوي ما في الصندوق', [
                 'position' => 'top',
                 'timer' => 3000,
                 'toast' => true,
@@ -54,7 +54,7 @@ class Card extends Component
         }
 
         elseif($this->received_price > $event->received()){
-            $this->alert('warning', 'لا يمكن اضافة رسوم بقيمة اكبر من المطلوب', [
+            $this->alert('warning', 'لا يمكن اضافة مبلغ اكثر من ما هو مطلوب', [
                         'position' => 'top',
                         'timer' => 3000,
                         'toast' => true,
@@ -62,7 +62,7 @@ class Card extends Component
         }
         else{
             $event->add_price($this->received_price);
-            $this->alert('success', 'تم ', [
+            $this->alert('success', 'تم', [
                         'position' => 'top',
                         'timer' => 3000,
                         'toast' => true,

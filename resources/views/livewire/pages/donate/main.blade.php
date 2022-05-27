@@ -19,7 +19,7 @@
                         <div class="">
                             <input wire:model="share" id="item_count" type="number" value="1"
                                 class="block px-2.5 pb-2.5  pt-4 w-full h-14 text-lg text-gray-900 bg-transparent rounded-lg border-1 border-gray-300 appearance-none  focus:outline-none focus:ring-0  focus:border-primary-500 peer"
-                                placeholder="ادخل عدد الاسهم" min=1 max=25 />
+                                placeholder="ادخل عدد الاسهم" min=1 />
                             @error('share')
                                 <span class="error text-red-700 rounded-lg mt-3">يجب ملئ هذا الحقل</span>
                             @enderror

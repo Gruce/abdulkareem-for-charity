@@ -26,7 +26,7 @@ class StudentInfo extends Component
         ]);
 
         $this->alert('success', 'تم', [
-            'position' => 'top-start',
+            'position' => 'center',
             'timer' => 3000,
             'toast' => true,
         ]);
