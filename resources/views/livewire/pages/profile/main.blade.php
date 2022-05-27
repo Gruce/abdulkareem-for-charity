@@ -12,7 +12,7 @@
             </div>
         </div>
 
-        <div x-data="{ isOpen: true }" class="justify-start grid grid-cols-1 md:grid-cols-9 bg-white">
+        <div x-data="{ isOpen: true }" class="justify-start grid grid-cols-1 bg-white">
             <div
                 class="w-full px-2 py-4 justify-start flex gap-2 space-x-4 md:space-y-4 md:flex-col md:col-span-2 md:justify-start ">
 
