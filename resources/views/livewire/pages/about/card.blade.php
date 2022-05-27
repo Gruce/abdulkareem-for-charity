@@ -21,7 +21,7 @@
             </div>
         @else
         <div class="flex justify-end pt-2 space-x-4 align-center text-gray-700 ">
-            <a href="#" aria-label="number" class="p-2 rounded-md text-lg">
+            <a aria-label="number" class="p-2 rounded-md text-lg">
                 {{ $team->phone }}
                 <i class="fa-solid fa-phone mr-4 "></i>
             </a>
