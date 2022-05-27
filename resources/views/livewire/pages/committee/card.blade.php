@@ -7,7 +7,7 @@
                 <div class="grid rounded-lg w-full">
                     <div class="flex justify-center">
                         <div class="flex">
-                            <h1 class="text-gray-800 font-bold md:text-2xl text-xl">تعديل المعلومات</h1>
+                            <h1 class="text-gray-800 font-bold md:text-xl text-l">تعديل المعلومات</h1>
                         </div>
                     </div>
 
@@ -21,7 +21,7 @@
                     <div class="grid grid-cols-1 mt-5 mx-7">
                         <div class="p-1">
                             <select wire:model.lazy="department"
-                                class="px-10 py-3 w-full rounded-md border-2 border-gray-200 bg-white border-transparent focus:border-primary-100 focus:bg-white focus:ring-0 text-sm">
+                                class="px-6 py-3 w-full rounded-md border-2 border-gray-200 bg-white border-transparent focus:border-primary-100 focus:bg-white focus:ring-0 text-sm">
                                 <option value="">القسم</option>
                                 <option value="1">علوم الحاسوب</option>
                                 <option value="2">نظم المعلومات</option>
@@ -60,13 +60,12 @@
                     </div>
 
 
-
                     {{-- Button --}}
                     <div class="flex items-center justify-center  md:gap-8 gap-4 pt-7 pb-7">
                         <button wire:click="save"
-                            class="w-auto bg-primary-600 hover:bg-primary-800 rounded-lg shadow-md hover:shadow-xl hover:scale-105 font-medium text-white px-4 py-2">حفظ</button>
+                            class="w-auto text-sm bg-primary-600 hover:bg-primary-800 rounded-lg shadow-md hover:shadow-xl hover:scale-105 text-white px-2 py-2">حفظ</button>
                         <button  wire:click="$set('edit_id', {{null}})"
-                            class="w-auto bg-red-600 hover:bg-red-800 rounded-lg shadow-md hover:shadow-xl hover:scale-105 font-medium text-white px-4 py-2">اغلاق</button>
+                            class="w-auto text-sm bg-red-600 hover:bg-red-800 rounded-lg shadow-md hover:shadow-xl hover:scale-105 text-white px-2 py-2">اغلاق</button>
                     </div>
 
                 </div>
