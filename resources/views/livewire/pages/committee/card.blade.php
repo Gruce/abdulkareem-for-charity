@@ -1,6 +1,8 @@
 <div>
     <div class="flex flex-col justify-center max-w-xs p-6 shadow-md rounded-xl border border-gray-800 sm:px-12">
-
+        @if($edit_id == $committee->id)
+        hello
+        @else
         <div class="transform rounded-full border-secondary-200">
             <img src="/img/about1.png" class="mx-auto h-32 border-2 border-secondary-800 rounded-full" />
 
@@ -48,11 +50,12 @@
                 </i>
             </button>
 
-            <a href="{{ route('edit-committee', ['committee_id' => $committee->id])}}">
-                <i
-                    class="text-secondary-600 fa-solid fa-pen-to-square text-xl hover:rotate-12 duration-200 hover:text-secondary-700"></i>
-            </a>
+            <button wire:click="edit({{ $committee->id }})">
+
+                <i class="text-secondary-600 fa-solid fa-pen-to-square text-xl hover:rotate-12 duration-200 hover:text-secondary-700"></i>
+            </button>
             @endadmin
         </div>
+        @endif
     </div>
 </div>

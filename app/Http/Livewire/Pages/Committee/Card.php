@@ -9,14 +9,13 @@ use Jantinnerezo\LivewireAlert\LivewireAlert;
 class Card extends Component
 {
     protected $rules = [
-        'name' => 'required',
-        
+        'name' => 'required', 
     ];
 
     protected $listeners = ['delete', '$refresh'];
     use LivewireAlert;
 
-    public $committee_id ,$committee;
+    public $committee_id ,$committee, $edit_id = null;
 
     public function delete()
     {
@@ -40,6 +39,10 @@ class Card extends Component
             'showCancelButton' => true,
             'onDismissed' => '',
         ]);
+    }
+
+    public function edit($id){
+        $this->edit_id = $id;
     }
 
     public function render()
