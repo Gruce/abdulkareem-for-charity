@@ -1208,6 +1208,9 @@ select{
 .h-screen{
   height: 100vh;
 }
+.h-28{
+  height: 7rem;
+}
 .min-h-screen{
   min-height: 100vh;
 }
@@ -1279,6 +1282,15 @@ select{
 }
 .w-10\/12{
   width: 83.333333%;
+}
+.w-72{
+  width: 18rem;
+}
+.w-2\.5{
+  width: 0.625rem;
+}
+.w-2{
+  width: 0.5rem;
 }
 .min-w-0{
   min-width: 0px;
@@ -1437,6 +1449,9 @@ select{
 .flex-wrap{
   flex-wrap: wrap;
 }
+.items-end{
+  align-items: flex-end;
+}
 .items-center{
   align-items: center;
 }
@@ -1515,6 +1530,11 @@ select{
   --tw-space-y-reverse: 0;
   margin-top: calc(10rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(10rem * var(--tw-space-y-reverse));
+}
+.space-y-5 > :not([hidden]) ~ :not([hidden]){
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1.25rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1.25rem * var(--tw-space-y-reverse));
 }
 .divide-y > :not([hidden]) ~ :not([hidden]){
   --tw-divide-y-reverse: 0;
@@ -1981,6 +2001,9 @@ select{
 }
 .pb-2{
   padding-bottom: 0.5rem;
+}
+.pb-24{
+  padding-bottom: 6rem;
 }
 .text-left{
   text-align: left;
@@ -2735,6 +2758,9 @@ select{
   .sm\:w-full{
     width: 100%;
   }
+  .sm\:w-1\/2{
+    width: 50%;
+  }
   .sm\:max-w-md{
     max-width: 28rem;
   }
@@ -3022,6 +3048,15 @@ select{
   }
   .lg\:w-80{
     width: 20rem;
+  }
+  .lg\:w-1\/2{
+    width: 50%;
+  }
+  .lg\:w-full{
+    width: 100%;
+  }
+  .lg\:w-1{
+    width: 0.25rem;
   }
   .lg\:grid-cols-3{
     grid-template-columns: repeat(3, minmax(0, 1fr));

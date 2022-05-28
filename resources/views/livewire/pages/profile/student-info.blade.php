@@ -95,8 +95,6 @@
                                 <input type="radio" wire:model="division" value="4" id="D" class="focus:ring-primary-500 text-primary-600">
                                 <label for="D">D</label><br>
 
-                                <input type="radio" wire:model="division" value="5" id="E" class="focus:ring-primary-500 text-primary-600">
-                                <label for="E">E</label><br>
                             </div>
 
                             @error('division')
