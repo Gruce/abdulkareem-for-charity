@@ -1,14 +1,14 @@
 <div>
     <div class="px-4 pt-4">
-        <form action="#" class="space-y-8" wire:submit.prevent="edit">
+        <form action="#" class="space-y-5" wire:submit.prevent="edit">
             <div class="p-2">
                 <h3 class="text-2xl font-semibold text-primary-500">المعلومات الاساسية</h3>
-                <hr class="w-1/2">
+                <hr class="w-1/2 mt-1">
             </div>
             <div class="form-item">
                 <label class="text-xl">الاسم الكامل</label>
                 <input wire:model="name" type="text" value="{{ $name }}"
-                    class="bg-gray-50 border border-primary-400 text-sm w-full md:col-span-1 focus:ring-primary-600 focus:border-primary-500  block p-2.5 rounded-md mt-2">
+                    class="bg-gray-50 border border-primary-400 text-sm w-full lg:w-1/2 md:col-span-1 focus:ring-primary-600 focus:border-primary-500  block p-2.5 rounded-md mt-2 ">
                 @error('name')
                     <span class="text-red-500 error">{{ $message }}</span>
                 @enderror
@@ -17,7 +17,7 @@
                 <div class="form-item w-full">
                     <label class="text-md">البريد الألكتروني</label>
                     <input wire:model="email" type="text" id="email"
-                        class="bg-gray-50 border border-primary-400 w-full text-sm focus:ring-primary-600 focus:border-primary-500 block  p-2.5 mt-2 rounded-md">
+                        class="bg-gray-50 border border-primary-400 w-full lg:w-1/2 text-sm focus:ring-primary-600 focus:border-primary-500 block  p-2.5 mt-2 rounded-md">
                     @error('email')
                         <span class="text-red-500 error">{{ $message }}</span>
                     @enderror
@@ -25,12 +25,12 @@
             </div>
             <div class="p-2">
                 <h3 class="text-2xl font-semibold text-primary-500">معلومات الاتصال</h3>
-                <hr class="w-1/2">
+                <hr class="w-1/2 mt-1">
             </div>
             <div class="form-item">
                 <label class="text-xl ">رقم الهاتف</label>
                 <input wire:model="phone_number" type="text"
-                    class="bg-gray-50 border border-primary-400 text-sm w-full focus:ring-primary-600 focus:border-primary-500 block p-2.5 mt-2 rounded-md">
+                    class="bg-gray-50 border border-primary-400 text-sm w-full lg:w-1/2 focus:ring-primary-600 focus:border-primary-500 block p-2.5 mt-2 rounded-md">
                 @error('phone_number')
                     <span class="text-red-500 error">{{ $message }}</span>
                 @enderror
@@ -38,7 +38,7 @@
             {{-- profile image--}}
             <div class=" items-center justify-center">
                 <label
-                    class="w-full flex flex-col items-center px-2 py-6  @if ($profile_photo) bg-primary-700 text-white @else bg-white text-primary-700 @endif rounded-lg tracking-wide border-4 border-dashed border-primary-700 cursor-pointer hover:bg-primary-700 hover:text-white">
+                    class="w-full h-28 lg:w-1/2 lg  flex flex-col items-center px-2 py-6  @if ($profile_photo) bg-primary-700 text-white @else bg-white text-primary-700 @endif rounded-lg tracking-wide border-4 border-dashed border-primary-700 cursor-pointer hover:bg-primary-700 hover:text-white">
                     <div wire:loading wire:target="profile_photo">
                         <x-ui.loading />
                     </div>

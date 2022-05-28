@@ -1188,6 +1188,9 @@ select{
 .h-0{
   height: 0px;
 }
+.h-28{
+  height: 7rem;
+}
 .min-h-screen{
   min-height: 100vh;
 }
@@ -1491,6 +1494,11 @@ select{
   --tw-space-y-reverse: 0;
   margin-top: calc(10rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(10rem * var(--tw-space-y-reverse));
+}
+.space-y-5 > :not([hidden]) ~ :not([hidden]){
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1.25rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1.25rem * var(--tw-space-y-reverse));
 }
 .divide-y > :not([hidden]) ~ :not([hidden]){
   --tw-divide-y-reverse: 0;
@@ -2980,6 +2988,9 @@ select{
   }
   .lg\:w-80{
     width: 20rem;
+  }
+  .lg\:w-1\/2{
+    width: 50%;
   }
   .lg\:grid-cols-12{
     grid-template-columns: repeat(12, minmax(0, 1fr));
