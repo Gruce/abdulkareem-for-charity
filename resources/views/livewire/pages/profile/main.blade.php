@@ -29,7 +29,7 @@
             </div>
 
             <div x-show="isOpen"
-                class="h-full pb-12">
+                class="h-full pb-12 ">
                 @livewire('pages.profile.basic', ['user' => $user])
             </div>
 
