@@ -35,7 +35,7 @@
     <div class="  ">
         @livewire('components.navbar')
         <!-- Page Content -->
-        <main class=" p-10 mt-5 overflow-y-auto  rounded-lg ">
+        <main class=" lg:p-10 lg:mt-5 overflow-y-auto  rounded-lg ">
             
             <div>
                 {{ $slot }}
@@ -48,7 +48,7 @@
     @livewireScripts
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <x-livewire-alert::scripts />
-    <script src="//unpkg.com/alpinejs" defer></script>
+    {{-- <script src="//unpkg.com/alpinejs" defer></script> --}}
     <script src="https://unpkg.com/flowbite@1.4.4/dist/flowbite.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js"
         integrity="sha512-6PM0qYu5KExuNcKt5bURAoT6KCThUmHRewN3zUFNaoI6Di7XJPTMoT6K0nsagZKk2OB4L7E3q1uQKHNHd4stIQ=="
