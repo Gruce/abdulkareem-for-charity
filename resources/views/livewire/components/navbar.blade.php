@@ -1,5 +1,5 @@
-<nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded ">
-    <div class=" flex flex-wrap md:flex-col md:space-y-3 xl:flex-row justify-between xl:justify-around items-center  ">
+<nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded">
+    <div class=" flex flex-wrap md:flex-col md:space-y-3 xl:flex-row justify-between xl:justify-around items-center">
 
         {{-- Logo & Title --}}
         <div>
@@ -14,26 +14,28 @@
             @auth
 
             <div class="flex justify-around items-center md:order-2 @guest hidden @endguest ml-2">
+              @admin
                 <div
-                    class="hidden   md:flex justify-around   ml-10 rounded-lg text-gray-500 text-base text-center ">
+                    class="hidden   md:flex justify-around   ml-10  text-gray-500 text-base text-center ">
                     
-                    <div class="flex flex-col mx-2 border-b hover:bg-gray-200 rounded-lg border-gray-100 hover:scale-100 duration-200" >
+                    <div class="flex flex-col mx-2 border-b border-gray-200">
                         <span>{{ $total }}</span>
                         <span class="text-2xs -mt-2">الكلي</span>
                     </div>
-                    <div class="flex flex-col mx-2 border-b hover:bg-gray-200 rounded-lg border-gray-100 hover:scale-100 duration-200">
+                    <div class="flex flex-col mx-2 border-b border-gray-200">
                         <span>{{ $current_price }}</span>
                         <span class="text-2xs -mt-2">الحالي</span>
                     </div>
 
-                    <div class="flex flex-col mx-2 border-b hover:bg-gray-200 rounded-lg border-gray-100 hover:scale-100 duration-200">
+                    <div class="flex flex-col mx-2 border-b border-gray-200">
                         <span>{{ $payments }}</span>
                         <span class="text-2xs -mt-2">مصروف</span>
                     </div>
                 </div>
+                @endadmin
                 <div class=" ">
                     <button type="button"
-                        class="flex mr-3 text-sm  rounded-full md:mr-0 focus:ring-4 focus:ring-primary-200 "
+                        class="flex mr-3 text-sm border-2 border-transparent focus:border-b-primary-200 md:mr-0"
                         id="user-menu-button" aria-expanded="false" data-dropdown-toggle="dropdown">
                         <span class="sr-only">Open user menu</span>
                         <i class="fa-solid fa-angle-down ml-2 mt-3"></i>
@@ -157,7 +159,7 @@
                     @else
                     {{-- Has no submenu --}}
                     <a href="{{ route($item->route) }}"
-                        class="block py-2 pl-3 pr-4 {{ $item->active ? 'text-primary-500 border-primary-100' : 'text-gray-700 hover:bg-gray-300 rounded-lg border-gray-100 hover:scale-110 duration-200 ' }} border-b-2 ">
+                        class="block py-2 pl-3 pr-4 {{ $item->active ? 'text-primary-500 border-primary-100' : 'text-gray-700 hover:bg-gray-200 rounded-lg border-gray-100 hover:scale-110 duration-200 ' }} border-b-2">
                         {{ $item->name }}
                     </a>
                     @endif

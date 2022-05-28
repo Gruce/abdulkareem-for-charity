@@ -31,18 +31,18 @@ class Add extends Component
             'study_type' => $this->study_type,
             'stage' => $this->stage,
             'phone_num' => $this->phone_num,
-            //'photo' => $this->photo,
+            // 'photo' => $this->photo,
         ];
         //dd($data);
 
         $committee = new Committee();
         $committee->add($data);
+        // $committee->add_file($this->image_path);
         //dd($committe->toArray());
-        //$committe->add_file($this->image_path);
         $this->reset();
 
         $this->alert('success', 'تمت الاضافة', [
-            'position' => 'top',
+            'position' => 'center',
             'timer' => 3000,
             'toast' => true,
         ]);

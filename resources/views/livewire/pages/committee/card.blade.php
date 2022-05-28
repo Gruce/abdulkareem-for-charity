@@ -1,10 +1,82 @@
 <div>
-    <div class="flex flex-col justify-center max-w-xs p-6 shadow-md rounded-xl border border-gray-800 sm:px-12">
+    <div class="flex flex-col justify-center max-w-xs p-4 shadow-md rounded-xl border border-gray-800">
+        @if($edit_id == $committee->id)
+        <div>
+            <div class="flex h-auto items-center justify-center">
 
+                <div class="grid rounded-lg w-full">
+                    <div class="flex justify-center">
+                        <div class="flex">
+                            <h1 class="text-gray-800 font-bold md:text-xl text-l">تعديل المعلومات</h1>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 mt-5 mx-7">
+                        <label for="name" class="md:text-sm text-xs text-gray-700 text-light font-semibold">الأسم</label>
+                        <input wire:model.lazy="name" id="name"
+                            class="py-2 px-3 rounded-lg border-2 border-gray-200 mt-1 focus:outline-none focus:ring-2 focus:ring-primary-100 focus:border-transparent"
+                            type="text" />
+                    </div>
+
+                    <div class="grid grid-cols-1 mt-5 mx-7">
+                        <div class="p-1">
+                            <select wire:model.lazy="department"
+                                class="px-7 py-3 w-full rounded-md border-2 border-gray-200 bg-white border-transparent focus:border-primary-100 focus:bg-white focus:ring-0 text-sm">
+                                <option value="">القسم</option>
+                                <option value="1">علوم الحاسوب</option>
+                                <option value="2">نظم المعلومات</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 mt-5 mx-7">
+                        <div class="p-1">
+                            <select wire:model.lazy="stage"
+                                class="px-10 py-3 w-full rounded-md border-2 border-gray-200 bg-white border-transparent focus:border-primary-100 focus:bg-white focus:ring-0 text-sm">
+                                <option value="">المرحلة</option>
+                                <option value="1">اولى</option>
+                                <option value="2">ثانية</option>
+                                <option value="3">ثالثة</option>
+                                <option value="4">رابعة</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 mt-5 mx-7">
+                        <div class="p-1">
+                            <select wire:model.lazy="study_type"
+                                class="px-10 py-3 w-full rounded-md border-2 border-gray-200 bg-white border-transparent focus:border-primary-100 focus:bg-white focus:ring-0 text-sm">
+                                <option value="">الدراسة</option>
+                                <option value="1">صباحية</option>
+                                <option value="2">مسائية</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 mt-5 mx-7">
+                        <label class="md:text-sm text-xs text-gray-700 text-light font-semibold">رقم الهاتف</label>
+                        <input wire:model.lazy="phone_num"
+                            class="py-2 px-3 rounded-lg border-2 border-gray-200 mt-1 focus:outline-none focus:ring-2 focus:ring-primary-100 focus:border-transparent"
+                            type="text" placeholder="رقم الهاتف" />
+                    </div>
+
+
+                    {{-- Button --}}
+                    <div class="flex items-center justify-center  md:gap-8 gap-4 pt-7 pb-7">
+                        <button wire:click="save"
+                            class="w-auto text-sm bg-primary-600 hover:bg-primary-800 rounded-lg duration-200 hover:shadow-xl hover:scale-105 text-white px-4 py-2">حفظ</button>
+                        <button  wire:click="$set('edit_id', {{null}})"
+                            class="w-auto text-sm bg-red-600 hover:bg-red-800 rounded-lg duration-200 hover:shadow-xl hover:scale-105 text-white px-4 py-2">اغلاق</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        @else
         <div class="transform rounded-full border-secondary-200">
             <img src="/img/about1.png" class="mx-auto h-32 border-2 border-secondary-800 rounded-full" />
 
-            {{-- <img src="{{ $committee->photo ?? 'img/about1/png'}}" alt="" class="mx-auto h-32 border-2 border-secondary-800 rounded-full"> --}}
+            {{-- <img src="{{ $committee->photo ?? 'img/about1/png'}}" alt=""
+                class="mx-auto h-32 border-2 border-secondary-800 rounded-full"> --}}
         </div>
 
         <div class="space-y-4 divide-y divide-gray-200">
@@ -15,19 +87,19 @@
                 </h2>
                 <p class="text-xs sm:text-base text-gray-700 text-center">
 
-                    @if ($committee->department == 1)
-                        صباحي
-                    @elseif($committee->department == 2)
-                        مسائي
+                    @if ($committee->study_type == 1)
+                    صباحي
+                    @elseif($committee->study_type == 2)
+                    مسائي
                     @endif
                     @if ($committee->stage == 1)
-                        - المرحلة الاولى
+                    - المرحلة الاولى
                     @elseif($committee->stage == 2)
-                        - المرحلة الثانية
+                    - المرحلة الثانية
                     @elseif ($committee->stage == 3)
-                        - المرحلة الثالثة
+                    - المرحلة الثالثة
                     @elseif ($committee->stage == 4)
-                        - المرحلة الرابعة
+                    - المرحلة الرابعة
                     @endif
 
 
@@ -42,42 +114,19 @@
                     <i class="fa-solid fa-phone mr-4 "></i>
                 </a>
             </div>
-
+            @admin
             <button wire:click="confirm({{ $committee->id }})" class="mx-2">
                 <i class="text-red-400 fa-solid fa-trash text-xl hover:scale-110 duration-200 hover:text-red-600">
                 </i>
             </button>
 
-            {{-- edit committee information --}}
+            <button wire:click="edit({{ $committee->id }})">
 
-            <a data-modal-toggle="edit-committee-modal">
                 <i
                     class="text-secondary-600 fa-solid fa-pen-to-square text-xl hover:rotate-12 duration-200 hover:text-secondary-700"></i>
-            </a>
-
-            {{-- modal edit committee information --}}
-            <div wire:ignore.self id="edit-committee-modal" tabindex="-1"
-                class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full">
-                <div class="relative p-4 w-full max-w-4xl h-full md:h-auto">
-                    <!-- Modal content -->
-                    <div class="relative bg-white rounded-lg shadow ">
-                        <!-- Modal header -->
-                        <div class="flex justify-between items-center">
-                            <button type="button"
-                                class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-red-600 rounded-bl-lg rounded-tr-lg text-lg p-1.5 ml-auto inline-flex items-center"
-                                data-modal-toggle="edit-committee-modal">
-                                <i class="fa-solid fa-xmark text-2xl"></i>
-                            </button>
-                        </div>
-                        <!-- Modal body -->
-                        {{-- @livewire('pages.committee.edit', ['committee_id' => $committee->id], key($committee_id)) --}}
-
-                        @livewire('pages.committee.edit')
-                    </div>
-                </div>
-            </div>
-
-
+            </button>
+            @endadmin
         </div>
+        @endif
     </div>
 </div>

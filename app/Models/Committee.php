@@ -8,11 +8,12 @@ use Illuminate\Database\Eloquent\Casts\Attribute;
 
 class Committee extends Model
 {
-    protected $fillable = ['name', 'stage', 'department' ,'phone_num' ,'study_type'];
+    protected $fillable = ['name', 'stage', 'department', 'phone_num', 'study_type', 'photo'];
     use HasFactory;
 
     ### add ###
-    public function add($data){
+    public function add($data)
+    {
         $this->fill($data);
         $this->save();
     }
@@ -23,18 +24,21 @@ class Committee extends Model
     }
     ### End edit ###
 
-    // public function add_file($file, $type = 1)
-    // {
 
-    //     $type = $type == 1 ? 'images' : 'files';
-    //     $ext = $file->extension();
-    //     $name =  \Str::random(10) . '.' . $ext;
-    //     $file = $file->storeAs('public/event/' . $this->id . '/' . $type . '/' , $name);
-    //     if ($type == 'images')
-    //         $this->image_path ='storage/event/' . $this->id . '/' . $type . '/' . $name;
-    //     else $this->file_path ='storage/event/' . $this->id . '/' . $type . '/' . $name;
+    public function add_image($photo)
+    {
 
-    //     $this->save();
-    // }
+        $ext = $photo->extension();
+        $name =  \Str::random(10) . '.' . $ext;
+        $photo = $photo->storeAs('public/event/' . $this->id  . '/' , $name);
+        $this->image_path ='storage/event/' . $this->id  . '/' . $name;
 
+        $this->save();
+    }
+
+    ### edit ###
+    public function edit($data)
+    {
+        $this->update($data);
+    }
 }
