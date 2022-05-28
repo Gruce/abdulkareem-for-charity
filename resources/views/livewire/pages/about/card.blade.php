@@ -7,14 +7,26 @@
             <p class="text-xl font-semibold leading-snug">{{ $team->name }}</p>
             <p class="text-xs block mt-4">{{ $team->stage }} - {{ $team->department }}</p>
         </div>
-        <div class="flex items-center justify-around p-3 space-x-3 border-t-2">
-            <a rel="noopener noreferrer" href="#" title="Email" class="">
-                <i class="fa-solid fa-envelope"></i>
-            </a>
+        @if ($team->type == 1)
+            <div class="flex items-center justify-around p-3 space-x-3 border-t-2">
+                <a rel="noopener noreferrer" target="_blank" href="mailto:{{ $team->email }}" title="Email"
+                    class="">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
 
-            <a rel="noopener noreferrer" href="{{ $team->github }}" title="GitHub" class="">
-                <i class="fa-brands fa-github"></i>
+                <a rel="noopener noreferrer" target="_blank" href="{{ $team->github }}" title="GitHub"
+                    class="">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+            </div>
+        @else
+        <div class="flex justify-end pt-2 space-x-4 align-center text-gray-700 ">
+            <a aria-label="number" class="p-2 rounded-md text-lg">
+                {{ $team->phone }}
+                <i class="fa-solid fa-phone mr-4 "></i>
             </a>
         </div>
+        @endif
+
     </div>
 </div>
