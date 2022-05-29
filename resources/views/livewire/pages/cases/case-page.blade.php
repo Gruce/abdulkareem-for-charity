@@ -6,12 +6,12 @@
         <div class="w-full  text-center mt-10">
             <div class="w-full bg-gray-300 rounded-full">
                 <div class="bg-primary-500 text-xs font-medium text-blue-100 text-center h-2.5 p-0.5 leading-none rounded-full"
-                    style="width:{{ ($received_price * 100) / $target }}%"></div>
+                    style="width:{{ ($event->received_price * 100) / $event->target }}%"></div>
             </div>
             <div class="flex justify-between px-3 mt-2 text-xl text-secondary-200">
-                <div>الواصل{{$received_price}} </div>
-                <div>{{ round(($received_price * 100) / $target) }}%</div>
-                <div>الهدف {{ $target }}</div>
+                <div>الواصل {{$event->received_price}} </div>
+                <div>{{ ($event->received_price * 100) / $event->target }}%</div>
+                <div>الهدف {{ $event->target }}</div>
             </div>
             <div class="h-0.5 w-full rounded-full bg-gray-300 my-7 "></div>
         </div>
@@ -24,6 +24,12 @@
             <a href="{{ route('donate') }}"
                 class="text-white text-base xl:text-2xl duration-200 bg-primary-500 hover:bg-white border border-transparent hover:border-green-500 hover:text-primary-500 focus:ring-2 focus:ring-primary-300 rounded-lg px-5 py-2.5 mr-2 mb-2 ">تبرع
                 الان</a>
+                <div class="flex justify-around">
+                    <a href="{{ route('edit-case', ['case_id' => $event->id]) }}">
+                        <i
+                            class="text-secondary-600 fa-solid mt-4 fa-pen-to-square text-xl hover:rotate-12 duration-200 hover:text-secondary-700"></i>
+                    </a>
+                </div>
         </div>
     </div>
 
