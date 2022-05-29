@@ -36,9 +36,5 @@ class Committee extends Model
         $this->save();
     }
 
-    ### edit ###
-    public function edit($data)
-    {
-        $this->update($data);
-    }
+    
 }
