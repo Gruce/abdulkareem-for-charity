@@ -41,7 +41,7 @@ class Main extends Component
 
         if ( $this->gender) $this->users = $this->users->where('gender', $this->gender);
 
-        if ($this->state == 1  ) {
+        if ($this->state != 1 && $this->state != 0 ) {
             $this->users = $this->users->whereHas('shares',  function ($query) {
                 $query->where('state', $this->state);
             });
