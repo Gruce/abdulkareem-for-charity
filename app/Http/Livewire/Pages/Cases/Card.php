@@ -6,7 +6,7 @@ use Livewire\Component;
 use App\Models\Event;
 use Jantinnerezo\LivewireAlert\LivewireAlert;
 use App\Models\Share;
-use App\Models\User;
+
 
 class Card extends Component
 {
