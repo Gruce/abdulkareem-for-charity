@@ -63,19 +63,29 @@ class Card extends Component
         $this->reset();
     }
 
-    public function accept()
-    {
-
+    public function accept(){
         $share = Share::findOrFail($this->share_id);
         $share->state($this->share_state);
-
         $this->alert('success', 'تم القبول', [
             'position' => 'top',
             'timer' => 3000,
             'toast' => true,
         ]);
-
         $this->emitUp('$refresh');
+    }
+    
+    public function confirm_accepet($id, $state){
+        $this->share_id = $id;
+        $this->share_state = $state;
+        $this->alert('warning', 'هل انت متأكد من قبول الطلب؟', [
+            'position' => 'center',
+            'timer' => 3000,
+            'toast' => true,
+            'showConfirmButton' => true,
+            'onConfirmed' => 'accept',
+            'showCancelButton' => true,
+            'onDismissed' => '',
+        ]);
     }
     public function deleteShare()
     {
@@ -89,20 +99,6 @@ class Card extends Component
         $this->emitUp('$refresh');
     }
 
-    public function confirm_accepet($id, $state)
-    {
-        $this->share_id = $id;
-        $this->share_state = $state;
-        $this->alert('warning', 'هل انت متأكد من قبول الطلب؟', [
-            'position' => 'center',
-            'timer' => 3000,
-            'toast' => true,
-            'showConfirmButton' => true,
-            'onConfirmed' => 'accept',
-            'showCancelButton' => true,
-            'onDismissed' => '',
-        ]);
-    }
 
     public function confirm_delete($id)
     {
