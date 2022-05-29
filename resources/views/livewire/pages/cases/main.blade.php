@@ -4,7 +4,7 @@
         <div class="grid grid-cols-3">
             <div class="col-span-2 p-1">@livewire('ui.search', 'title')</div>
             <div class="p-1">
-                <select wire:change="getEventt" wire:model="selectEvent"
+                <select wire:change="getEvent" wire:model="selectEvent"
                     class="px-10 py-3 w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0 text-sm">
                     <option value="0">الكل</option>
                     <option value="1">الحالات التي تم علاجها</option>

@@ -18,6 +18,11 @@ class Committee extends Model
         $this->save();
     }
     ### End add ###
+    ### edit ###
+    public function edit($data){
+        $this->update($data);
+    }
+    ### End edit ###
 
 
     public function add_image($photo)
@@ -31,9 +36,5 @@ class Committee extends Model
         $this->save();
     }
 
-    ### edit ###
-    public function edit($data)
-    {
-        $this->update($data);
-    }
+    
 }
