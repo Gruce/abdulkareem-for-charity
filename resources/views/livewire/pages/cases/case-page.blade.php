@@ -25,10 +25,12 @@
                 class="text-white text-base xl:text-2xl duration-200 bg-primary-500 hover:bg-white border border-transparent hover:border-green-500 hover:text-primary-500 focus:ring-2 focus:ring-primary-300 rounded-lg px-5 py-2.5 mr-2 mb-2 ">تبرع
                 الان</a>
                 <div class="flex justify-around">
+                    @admin
                     <a href="{{ route('edit-case', ['case_id' => $event->id]) }}">
                         <i
                             class="text-secondary-600 fa-solid mt-4 fa-pen-to-square text-xl hover:rotate-12 duration-200 hover:text-secondary-700"></i>
                     </a>
+                    @endadmin
                 </div>
         </div>
     </div>
