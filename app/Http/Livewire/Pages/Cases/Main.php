@@ -16,7 +16,7 @@ class Main extends Component
     {
         $this->search = $search;
     }
-    public function getEvent()
+    public function getEventt()
     {
         $this->emit(
             'getEvent',

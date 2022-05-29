@@ -9,7 +9,7 @@ use App\Models\User;
 use App\Models\Share;
 class Main extends Component
 {protected $listeners = ['search','$refresh'];
-    public $search ,$type = 0, $gender = 0, $state = 0 , $study_type = 0, $stage = 0, $department = 0, $division = 0;
+    public $search ,$type = 0, $gender = 0, $state = 0  , $study_type = 0, $stage = 0, $department = 0, $division = 0;
 
     public function getType()
     {
@@ -41,11 +41,13 @@ class Main extends Component
 
         if ( $this->gender) $this->users = $this->users->where('gender', $this->gender);
 
-        if ($this->state != 1 && $this->state != 0 ) {
+        if ($this->state == 1  ) {
             $this->users = $this->users->whereHas('shares',  function ($query) {
                 $query->where('state', $this->state);
             });
+            
         }
+        //dd( $this->users);
 
         if ($this->study_type) {
             $this->users = $this->users->whereHas('student', function ($query) {

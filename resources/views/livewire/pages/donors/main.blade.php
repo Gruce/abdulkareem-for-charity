@@ -9,7 +9,7 @@
                 <div class="col-span-2">
                     @livewire('ui.search', 'name')
                 </div>
-                <select wire:change="getUserType" wire:model="state"
+                <select wire:change="getType" wire:model="state"
                     class="px-10 py-3 w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0 text-sm">
                     <option value="0">حالة التبرع </option>
                     <option value="1">أرسلَ طلب تبرع جديد</option>
