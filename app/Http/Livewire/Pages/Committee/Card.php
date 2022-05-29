@@ -63,7 +63,7 @@ class Card extends Component
         $this->edit_id = null;
 
         $this->alert('success', 'تم التعديل', [
-            'position' => 'top',
+            'position' => 'center',
             'timer' => '3000',
             'toast' => true,
         ]);

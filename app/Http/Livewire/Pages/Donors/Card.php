@@ -25,7 +25,7 @@ class Card extends Component
     public function delete()
     {
         User::findOrFail($this->share_id)->delete();
-        $this->alert('success', 'تم حذف الحالة', [
+        $this->alert('success', 'تم حذف المتبرع', [
             'position' => 'center',
             'timer' => 3000,
             'toast' => true,
@@ -36,7 +36,7 @@ class Card extends Component
     public function confirm($id)
     {
         $this->share_id = $id;
-        $this->alert('warning', 'هل انت متأكد من حذف الحالة؟', [
+        $this->alert('warning', 'هل انت متاكد من حذف المتبرع؟', [
             'position' => 'center',
             'timer' => 3000,
             'toast' => true,
