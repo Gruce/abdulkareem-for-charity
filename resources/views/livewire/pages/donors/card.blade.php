@@ -120,10 +120,10 @@
                                     </div>
                                     <div class="flex ">
                                         <button type="button"
-                                            wire:click="accept({{ $share->id }}, {{ $share->state }})"
+                                            wire:click="confirm_accepet({{ $share->id }}, {{ $share->state }})"
                                             class="mx-2 text-primary-500"><i class="fa-solid fa-check"></i>
                                         </button>
-                                        <button type="button" wire:click="deleteShare({{ $share->id }})"
+                                        <button type="button" wire:click="confirm_delete({{ $share->id }})"
                                             class="mx-2 text-red-500"><i class="fa-solid fa-xmark"></i>
                                         </button>
                                     </div>
