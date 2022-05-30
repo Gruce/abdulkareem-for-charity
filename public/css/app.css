@@ -2706,6 +2706,9 @@ select{
   .sm\:mb-0{
     margin-bottom: 0px;
   }
+  .sm\:mr-4{
+    margin-right: 1rem;
+  }
   .sm\:block{
     display: block;
   }
@@ -2729,6 +2732,9 @@ select{
   }
   .sm\:w-32{
     width: 8rem;
+  }
+  .sm\:w-1\/2{
+    width: 50%;
   }
   .sm\:max-w-md{
     max-width: 28rem;
@@ -2849,6 +2855,10 @@ select{
     font-size: 1.5rem;
     line-height: 2rem;
   }
+  .sm\:text-6xl{
+    font-size: 3.75rem;
+    line-height: 1;
+  }
 }
 @media (min-width: 768px){
   .md\:inset-0{
@@ -2877,6 +2887,9 @@ select{
   }
   .md\:mt-10{
     margin-top: 2.5rem;
+  }
+  .md\:ml-4{
+    margin-left: 1rem;
   }
   .md\:flex{
     display: flex;
@@ -2986,6 +2999,14 @@ select{
     font-size: 3rem;
     line-height: 1;
   }
+  .md\:text-6xl{
+    font-size: 3.75rem;
+    line-height: 1;
+  }
+  .md\:text-3xl{
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
   .md\:font-medium{
     font-weight: 500;
   }
@@ -3060,6 +3081,10 @@ select{
     margin-left: 2.5rem;
     margin-right: 2.5rem;
   }
+  .xl\:my-7{
+    margin-top: 1.75rem;
+    margin-bottom: 1.75rem;
+  }
   .xl\:mr-20{
     margin-right: 5rem;
   }
@@ -3111,6 +3136,9 @@ select{
   .xl\:w-64{
     width: 16rem;
   }
+  .xl\:w-full{
+    width: 100%;
+  }
   .xl\:grid-cols-12{
     grid-template-columns: repeat(12, minmax(0, 1fr));
   }
@@ -3136,6 +3164,10 @@ select{
   .xl\:px-32{
     padding-left: 8rem;
     padding-right: 8rem;
+  }
+  .xl\:px-0{
+    padding-left: 0px;
+    padding-right: 0px;
   }
   .xl\:pr-24{
     padding-right: 6rem;

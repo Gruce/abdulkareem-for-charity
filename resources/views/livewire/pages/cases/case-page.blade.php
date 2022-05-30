@@ -1,10 +1,10 @@
-<div class=" grid grid-cols-12 justify-between">
-    <div class="basis-1/2 col-span-5 pt-2 pr-24 ">
-        <h1 class="text-secondary-900 text-6xl font-bold">
+<div class=" grid grid-cols-1 xl:grid-cols-12 justify-between">
+    <div class="basis-1/2 col-span-5 pt-2 xl:pr-24 ">
+        <h1 class="text-secondary-900 text-2xl p-2 md:text-3xl xl:text-6xl font-bold">
             {{ $title }}
         </h1>
-        <div class="w-full  text-center mt-10">
-            <div class="w-full bg-gray-300 rounded-full">
+        <div class="w-full  text-center mt-5 px-5 xl:mt-10">
+            <div class="xl:w-full bg-gray-300 rounded-full">
                 <div class="bg-primary-500 text-xs font-medium text-blue-100 text-center h-2.5 p-0.5 leading-none rounded-full"
                     style="width:{{ ($event->received_price * 100) / $event->target }}%"></div>
             </div>
@@ -15,7 +15,7 @@
             </div>
             <div class="h-0.5 w-full rounded-full bg-gray-300 my-7 "></div>
         </div>
-        <div class="text-xl text-gray-600">
+        <div class="text-xl text-gray-600 px-6 xl:px-0">
             {{ $description ?? 'لا يوجد وصف' }}
         </div>
         <div class="mt-4 xl:mt-10 mr-10 xl:mr-4 flex gap-5">
@@ -35,7 +35,7 @@
         </div>
     </div>
 
-    <div class="basis-1/2 col-span-7 rounded-3xl">
+    <div class="basis-1/2 xl:col-span-7 rounded-3xl">
         <img src="{{ asset($image_path ?? 'img/caseImage.webp') }}" class="w-3/4 h-auto my-20 border-4 border-primary-500 rounded-3xl m-auto">
     </div>
 </div>
