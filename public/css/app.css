@@ -891,6 +891,9 @@ select{
   white-space: nowrap;
   border-width: 0;
 }
+.invisible{
+  visibility: hidden;
+}
 .fixed{
   position: fixed;
 }
@@ -938,6 +941,12 @@ select{
 }
 .col-span-1{
   grid-column: span 1 / span 1;
+}
+.col-span-3{
+  grid-column: span 3 / span 3;
+}
+.col-span-4{
+  grid-column: span 4 / span 4;
 }
 .m-auto{
   margin: auto;
@@ -1409,6 +1418,12 @@ select{
 }
 .grid-cols-3{
   grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.grid-cols-5{
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+.grid-cols-7{
+  grid-template-columns: repeat(7, minmax(0, 1fr));
 }
 .flex-row{
   flex-direction: row;
@@ -2200,6 +2215,15 @@ select{
   --tw-text-opacity: 1;
   color: rgb(209 213 219 / var(--tw-text-opacity));
 }
+.text-transparent{
+  color: transparent;
+}
+.text-inherit{
+  color: inherit;
+}
+.text-opacity-0{
+  --tw-text-opacity: 0;
+}
 .underline{
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
@@ -2401,6 +2425,10 @@ select{
 .hover\:bg-green-500:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(34 197 94 / var(--tw-bg-opacity));
+}
+.hover\:bg-primary-600:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(60 186 127 / var(--tw-bg-opacity));
 }
 .hover\:text-gray-500:hover{
   --tw-text-opacity: 1;
@@ -2670,6 +2698,9 @@ select{
   }
 }
 @media (min-width: 640px){
+  .sm\:invisible{
+    visibility: hidden;
+  }
   .sm\:col-span-4{
     grid-column: span 4 / span 4;
   }
@@ -2861,6 +2892,9 @@ select{
   }
 }
 @media (min-width: 768px){
+  .md\:invisible{
+    visibility: hidden;
+  }
   .md\:inset-0{
     top: 0px;
     right: 0px;
@@ -2890,6 +2924,9 @@ select{
   }
   .md\:ml-4{
     margin-left: 1rem;
+  }
+  .md\:block{
+    display: block;
   }
   .md\:flex{
     display: flex;
@@ -2979,6 +3016,10 @@ select{
     padding-left: 2.25rem;
     padding-right: 2.25rem;
   }
+  .md\:px-0{
+    padding-left: 0px;
+    padding-right: 0px;
+  }
   .md\:text-4xl{
     font-size: 2.25rem;
     line-height: 2.5rem;
@@ -3009,6 +3050,10 @@ select{
   }
   .md\:font-medium{
     font-weight: 500;
+  }
+  .md\:text-white{
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity));
   }
 }
 @media (min-width: 1024px){
@@ -3171,6 +3216,10 @@ select{
   .xl\:px-0{
     padding-left: 0px;
     padding-right: 0px;
+  }
+  .xl\:px-5{
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
   }
   .xl\:pr-24{
     padding-right: 6rem;
