@@ -35,10 +35,19 @@
                     <span class="text-red-500 error">{{ $message }}</span>
                 @enderror
             </div>
+            <div class="form-item">
+                <label class="text-xl ">معرف التلجرام</label>
+                <input type="text"
+                    class="bg-gray-50 border border-primary-400 text-sm w-full md:w-1/2 focus:ring-primary-600 focus:border-primary-500 block p-2.5 mt-2 rounded-md">
+                @error('telegram_username')
+                    <span class="text-red-500 error">{{ $message }}</span>
+                @enderror
+            </div>
+
             {{-- profile image--}}
             <div class=" items-center justify-center">
                 <label
-                    class="w-full h-28 md:w-1/2 flex flex-col items-center px-2 py-6  @if ($profile_photo) bg-primary-700 text-white @else bg-white text-primary-700 @endif rounded-lg tracking-wide border-4 border-dashed border-primary-700 cursor-pointer hover:bg-primary-700 hover:text-white">
+                    class="w-full pt-5 h-28 md:w-1/2 flex flex-col items-center px-2 py-6  @if ($profile_photo) bg-primary-700 text-white @else bg-white text-primary-700 @endif rounded-lg tracking-wide border-4 border-dashed border-primary-700 cursor-pointer hover:bg-primary-700 hover:text-white">
                     <div wire:loading wire:target="profile_photo">
                         <x-ui.loading />
                     </div>
