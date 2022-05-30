@@ -55,7 +55,7 @@ class Navbar extends Component{
             ],
             [
                 'name' => 'الاداريين',
-                'route' => 'committee',
+                'route' => 'admins',
                 'icon' => 'circle-info',
                 'permissions' => 4,
             ],

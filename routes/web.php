@@ -20,12 +20,9 @@ use App\Http\Livewire\Pages\Cases\{
     CasePage as CasePage,
 };
 
-use App\Http\Livewire\Pages\Committee\{
-    EditComittee
+use App\Http\Livewire\Pages\Admins\{
+    main as Admins
 };
-
-// use App\Http\Livewire\Pages\Donate\AddCommittee as AddComittee;
-use App\Http\Livewire\Pages\Committee\Main as Committee;
 
 
 /*****************************************************************/
@@ -48,8 +45,8 @@ Route::get('/donors' , Donors::class)->name('donors');
 
 // Cases
 Route::get('/cases', CaseMain::class)->name('cases');
-
 Route::get('/case-page/{case_id}', CasePage::class)->name('case-page');
+
 
 Route::middleware(['auth:sanctum'])->group(function () {
     Route::middleware(['admin'])->group(function (){
@@ -58,11 +55,11 @@ Route::middleware(['auth:sanctum'])->group(function () {
         Route::get('/edit-case/{case_id}', CaseEdit::class)->name('edit-case');
         // end cases
 
-        // committee
-        Route::get('/committee', Committee::class)->name('committee');
-        Route::get('/edit-committee/{committee_id}', EditComittee::class)->name('edit-committee');
-    // Route::get('/add-committee', AddComittee::class)->name('add-committee');
-        //end committee
+        // admins
+        Route::get('/admins', Admins::class)->name('admins');
+        // end admins
+        
+    
     });
     //Profile
 
@@ -72,3 +69,4 @@ Route::middleware(['auth:sanctum'])->group(function () {
     Route::get('/donate' , Donate::class)->name('donate');
 
 });
+
