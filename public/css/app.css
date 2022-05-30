@@ -2183,6 +2183,10 @@ select{
   --tw-text-opacity: 1;
   color: rgb(243 244 246 / var(--tw-text-opacity));
 }
+.text-primary-800{
+  --tw-text-opacity: 1;
+  color: rgb(45 139 95 / var(--tw-text-opacity));
+}
 .underline{
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
@@ -2424,6 +2428,14 @@ select{
 .hover\:text-primary-800:hover{
   --tw-text-opacity: 1;
   color: rgb(45 139 95 / var(--tw-text-opacity));
+}
+.hover\:text-primary-700:hover{
+  --tw-text-opacity: 1;
+  color: rgb(52 162 111 / var(--tw-text-opacity));
+}
+.hover\:underline:hover{
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
 }
 .hover\:shadow-xl:hover{
   --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
