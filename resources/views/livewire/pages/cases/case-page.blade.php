@@ -1,9 +1,9 @@
 <div class=" grid grid-cols-1 xl:grid-cols-12 justify-between">
     <div class="basis-1/2 col-span-5 pt-2 xl:pr-24 ">
-        <h1 class="text-secondary-900 text-2xl p-2 md:text-3xl xl:text-6xl font-bold">
+        <h1 class="text-secondary-900 text-2xl p-2 md:text-3xl xl:text-5xl font-bold">
             {{ $title }}
         </h1>
-        <div class="w-full  text-center mt-5 px-5 xl:mt-10">
+        <div class="w-full  text-center mt-5 py-2 px-5 xl:mt-8">
             <div class="xl:w-full bg-gray-300 rounded-full">
                 <div class="bg-primary-500 text-xs font-medium text-blue-100 text-center h-2.5 p-0.5 leading-none rounded-full"
                     style="width:{{ ($event->received_price * 100) / $event->target }}%"></div>
