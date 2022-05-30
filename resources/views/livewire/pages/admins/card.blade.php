@@ -13,6 +13,7 @@
                 - @if($admin->student->division == 1) A @elseif($admin->student->stage == 2) B @elseif($admin->student->stage == 3) C @elseif($admin->student->stage == 4) D @else E @endif
                 @elseif($admin->type == 2) تدريسي
                 @elseif($admin->type == 3) موظف
+                @elseif($admin->type == 4) من خارج الكلية
                 @endif</span>
         </div>
         <div class="space-y-1">
