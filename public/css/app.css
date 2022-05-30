@@ -1229,6 +1229,12 @@ select{
 .h-44{
   height: 11rem;
 }
+.h-56{
+  height: 14rem;
+}
+.h-60{
+  height: 15rem;
+}
 .min-h-screen{
   min-height: 100vh;
 }
