@@ -50,9 +50,16 @@
             {{ $description ?? 'لا يوجد وصف' }}
         </div>
         <div>
-            <a href="{{asset($file_path)}}" class="px-4 py-4 md:px-0">
-                <i class="fa-solid fa-file-signature text-gray-600 text-xl"></i>
-            عرض المستمسكات 
+            @if ($file_path != null)
+                <a href="{{ asset($file_path) }}" download class="px-4 py-2 md:px-0">
+                    <i class="fa-solid fa-file-circle-check text-gray-600 text-xl"></i>
+                    <span class="text-gray-600 text-xl">حمل الملف </span>
+                @else
+                    <i class="fa-solid fa-file-circle-xmark text-gray-600 text-xl"></i>
+                    <span class="text-gray-600 text-xl">لا يوجد ملف</span>
+                    <a href="#">
+                    </a>
+            @endif
             </a>
         </div>
         <div class="mt-4 xl:mt-10 mr-10 xl:mr-4 flex gap-5">
