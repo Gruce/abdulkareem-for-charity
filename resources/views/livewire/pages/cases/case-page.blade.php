@@ -10,7 +10,7 @@
             </div>
             <div class="flex justify-between px-3 mt-2 text-xl text-secondary-200">
                 <div>الواصل {{$event->received_price}} </div>
-                <div>{{ ($event->received_price * 100) / $event->target }}%</div>
+                <div>{{ round($event->received_price * 100) / $event->target }}%</div>
                 <div>الهدف {{ $event->target }}</div>
             </div>
             <div class="h-0.5 w-full rounded-full bg-gray-300 my-7 "></div>
