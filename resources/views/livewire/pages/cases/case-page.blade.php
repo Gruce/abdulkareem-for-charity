@@ -9,8 +9,7 @@
                     <i class="fa-solid fa-ellipsis-vertical"></i>
                 </button>
                 <!-- Dropdown menu -->
-                <div id="casepage"
-                    class="z-10 hidden bg-white divide-y divide-blue-200 rounded shadow  ">
+                <div id="casepage" class="z-10 hidden bg-white divide-y divide-blue-200 rounded shadow  ">
                     <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefault">
                         <li>
                             <a class="block px-4 py-2 my-1 hover:bg-gray-100 text-secondary-200 group"
@@ -21,11 +20,12 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#"
-                                class="block px-4 py-2 my-1 hover:bg-gray-100 text-secondary-200 group"> 
+                            <button wire:click="confirm({{ $event->id }})"
+                                class="block px-4 py-2 my-1 hover:bg-gray-100 text-secondary-200 group">
                                 <span>حذف </span>
-                                <i class="text-red-500 fa-solid  fa-pen-to-square text-xl group-hover:rotate-12 duration-200 group-hover:text-red-700 fa-solid fa-trash"></i>
-                            </a>
+                                <i
+                                    class="text-red-500 fa-solid  fa-pen-to-square text-xl group-hover:rotate-12 duration-200 group-hover:text-red-700 fa-solid fa-trash"></i>
+                            </button>
                         </li>
                     </ul>
                 </div>
