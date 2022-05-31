@@ -5,7 +5,7 @@
                 <h1 class="text-secondary-900 text-4xl md:text-4xl xl:text-5xl font-bold">
                     طريقة التبرع
                 </h1>
-                <ul class="list-disc list-inside text-secondary-200 text-right mt-5 mr-5 text-xl md:text-xl xl:text-2xl xl:mr-20">
+                <ul class="list-disc list-inside text-secondary-200 text-right mt-5  text-xl md:text-xl xl:text-2xl xl:mr-20">
                     <li class="py-2">يتم التبرع عن طريق شراء الاسهم</li>
                     <li class="py-2">سعر السهم 2000 دينار عراقي</li>
                     <li class="py-2">ادخل عدد الاسهم التي تود شرائها</li>
