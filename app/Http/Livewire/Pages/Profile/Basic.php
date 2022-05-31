@@ -12,11 +12,11 @@ class Basic extends Component
 {
     use WithFileUploads;
     use LivewireAlert;
-    
+
     protected $rules = [
         'name' => 'required',
     ];
-    
+
     public $profile_photo_path , $profile_photo ,  $name , $email , $phone_number , $telegram_username ;
 
     public  function edit(){
@@ -24,24 +24,26 @@ class Basic extends Component
         $this->user->edit([
             'name' => $this->name,
             'phone_number' => $this->phone_number,
+            'telegram_username' => $this->telegram_username,
         ]);
 
-        if($this->profile_photo) 
+        if($this->profile_photo)
             $this->user->addProfile($this->profile_photo);
 
         $this->alert('success', 'Done!', [
             'position' => 'top',
             'timer' => 3000,
             'toast' => true,
-        ]);   
+        ]);
     }
-    
+
     public function mount($user){
         $this->user = $user;
         $this->name = $this->user->name;
         $this->email = $this->user->email;
         $this->phone_number = $this->user->phone_number;
         $this->profile_photo_path = $this->user->profile_photo_path;
+        $this->telegram_username = $this->user->telegram_username;
     }
 
     public function render(){
