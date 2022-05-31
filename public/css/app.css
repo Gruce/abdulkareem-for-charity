@@ -936,9 +936,6 @@ select{
 .col-span-5{
   grid-column: span 5 / span 5;
 }
-.col-span-7{
-  grid-column: span 7 / span 7;
-}
 .col-span-4{
   grid-column: span 4 / span 4;
 }
@@ -1101,17 +1098,14 @@ select{
 .-mt-px{
   margin-top: -1px;
 }
+.mr-16{
+  margin-right: 4rem;
+}
 .mt-12{
   margin-top: 3rem;
 }
 .mb-20{
   margin-bottom: 5rem;
-}
-.mr-14{
-  margin-right: 3.5rem;
-}
-.mr-16{
-  margin-right: 4rem;
 }
 .block{
   display: block;
@@ -1398,9 +1392,6 @@ select{
 }
 .grid-cols-3{
   grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-.grid-cols-12{
-  grid-template-columns: repeat(12, minmax(0, 1fr));
 }
 .grid-cols-7{
   grid-template-columns: repeat(7, minmax(0, 1fr));
@@ -1951,9 +1942,6 @@ select{
 .pt-8{
   padding-top: 2rem;
 }
-.pr-24{
-  padding-right: 6rem;
-}
 .text-left{
   text-align: left;
 }
@@ -2006,10 +1994,6 @@ select{
 .text-3xl{
   font-size: 1.875rem;
   line-height: 2.25rem;
-}
-.text-6xl{
-  font-size: 3.75rem;
-  line-height: 1;
 }
 .text-7xl{
   font-size: 4.5rem;
@@ -2971,13 +2955,13 @@ select{
     font-size: 2.25rem;
     line-height: 2.5rem;
   }
-  .md\:text-5xl{
-    font-size: 3rem;
-    line-height: 1;
-  }
   .md\:text-3xl{
     font-size: 1.875rem;
     line-height: 2.25rem;
+  }
+  .md\:text-5xl{
+    font-size: 3rem;
+    line-height: 1;
   }
   .md\:font-medium{
     font-weight: 500;
@@ -3036,11 +3020,11 @@ select{
   }
 }
 @media (min-width: 1280px){
-  .xl\:col-span-5{
-    grid-column: span 5 / span 5;
-  }
   .xl\:col-span-7{
     grid-column: span 7 / span 7;
+  }
+  .xl\:col-span-5{
+    grid-column: span 5 / span 5;
   }
   .xl\:m-5{
     margin: 1.25rem;
@@ -3065,6 +3049,9 @@ select{
   .xl\:mr-20{
     margin-right: 5rem;
   }
+  .xl\:mt-8{
+    margin-top: 2rem;
+  }
   .xl\:mt-0{
     margin-top: 0px;
   }
@@ -3077,23 +3064,20 @@ select{
   .xl\:mt-16{
     margin-top: 4rem;
   }
-  .xl\:ml-0{
-    margin-left: 0px;
-  }
   .xl\:ml-16{
     margin-left: 4rem;
   }
   .xl\:mt-20{
     margin-top: 5rem;
   }
-  .xl\:mt-8{
-    margin-top: 2rem;
-  }
   .xl\:mt-40{
     margin-top: 10rem;
   }
   .xl\:mt-32{
     margin-top: 8rem;
+  }
+  .xl\:ml-0{
+    margin-left: 0px;
   }
   .xl\:h-10{
     height: 2.5rem;
@@ -3125,6 +3109,10 @@ select{
   .xl\:justify-around{
     justify-content: space-around;
   }
+  .xl\:px-0{
+    padding-left: 0px;
+    padding-right: 0px;
+  }
   .xl\:px-20{
     padding-left: 5rem;
     padding-right: 5rem;
@@ -3132,10 +3120,6 @@ select{
   .xl\:px-32{
     padding-left: 8rem;
     padding-right: 8rem;
-  }
-  .xl\:px-0{
-    padding-left: 0px;
-    padding-right: 0px;
   }
   .xl\:px-5{
     padding-left: 1.25rem;
