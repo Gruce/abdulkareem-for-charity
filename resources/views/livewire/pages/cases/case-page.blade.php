@@ -50,7 +50,7 @@
             {{ $description ?? 'لا يوجد وصف' }}
         </div>
         <div>
-            <a href="{{$event->file_path}}" download="{{$event->file_path}}" class="px-4 py-4 md:px-0">
+            <a href="{{asset($file_path)}}" class="px-4 py-4 md:px-0">
                 <i class="fa-solid fa-file-signature text-gray-600 text-xl"></i>
             عرض المستمسكات 
             </a>
