@@ -31,6 +31,7 @@ class User extends Authenticatable
         'password',
         'is_admin',
         'phone_number',
+        'telegram_username',
         'type',
     ];
 

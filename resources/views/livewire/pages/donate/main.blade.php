@@ -5,8 +5,7 @@
                 <h1 class="text-secondary-900 text-4xl md:text-4xl xl:text-5xl font-bold">
                     طريقة التبرع
                 </h1>
-                <ul
-                    class="list-disc list-inside text-secondary-200 text-right mt-5 text-xl md:text-xl xl:text-2xl xl:mr-20">
+                <ul class="list-disc list-inside text-secondary-200 text-right mt-5 mr-5 text-xl md:text-xl xl:text-2xl xl:mr-20">
                     <li class="py-2">يتم التبرع عن طريق شراء الاسهم</li>
                     <li class="py-2">سعر السهم 2000 دينار عراقي</li>
                     <li class="py-2">ادخل عدد الاسهم التي تود شرائها</li>
@@ -14,7 +13,7 @@
                     <li class="py-2">تضاف الاسهم الى حسابك بعد التأكد من عملية الدفع </li>
                 </ul>
                 <form wire:submit.prevent="save" id="login_form" action="api_login"
-                    class="p-8 max-w-lg h-auto mx-auto rounded-3xl  mt-14  bg-white border border-gray-600">
+                    class="p-8 w-11/12 h-60 mx-auto rounded-3xl mt-10 bg-white border border-gray-600 md:max-w-lg">
                     <div class="text-center ">
                         <h3 class="text-2xl xl:text-3xl font-bold mb-5 ">ما نقص مال من صدقة</h3>
                         <div class="">
@@ -36,7 +35,7 @@
                 </form>
             </div>
 
-            <div class="basis-1/2 lg:col-span-7 ">
+            <div class="basis-1/2 lg:col-span-7 mt-5">
                 <img src="/img/donate.png" class="w-3/4 h-auto m-auto">
             </div>
         </div>
