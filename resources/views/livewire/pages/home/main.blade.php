@@ -39,7 +39,7 @@
 
         {{-- Cases --}}
         <div class=" basis-4/12 xl:px-20 xl:ml-8 mt-10 xl:mt-16">
-            <span class="text-secondary-900 text-4xl xl:text-6xl font-bold ">
+            <span class="text-secondary-900 text-4xl xl:text-6xl font-bold pr-4 md:pr-0 ">
                 اخر الحالات
             </span>
             <div
@@ -52,7 +52,7 @@
 
         {{--Work for--}}
         <div class=" basis-2/12  mt-10 xl:mt-16 xl:ml-16">
-            <span class="text-secondary-900 text-4xl xl:text-6xl  font-bold  xl:pr-20">
+            <span class="text-secondary-900 text-4xl xl:text-6xl  font-bold pr-4  xl:pr-20">
                 نحن نعمل لأجل
             </span>
             <div class="my-6 xl:my-20">
