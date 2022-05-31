@@ -54,11 +54,6 @@
                 <a href="{{ asset($file_path) }}" download class="px-4 py-2 md:px-0">
                     <i class="fa-solid fa-file-circle-check text-gray-600 text-xl"></i>
                     <span class="text-gray-600 text-xl">حمل الملف </span>
-                @else
-                    <i class="fa-solid fa-file-circle-xmark text-gray-600 text-xl"></i>
-                    <span class="text-gray-600 text-xl">لا يوجد ملف</span>
-                    <a href="#">
-                    </a>
             @endif
             </a>
         </div>
