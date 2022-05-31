@@ -41,7 +41,7 @@
             </div>
             <div class="flex justify-between px-3 mt-2 text-xl text-secondary-200">
                 <div>الواصل {{ $event->received_price }} </div>
-                <div>{{ round($event->received_price * 100) / $event->target }}%</div>
+                <div class="px-1.5">{{ round($event->received_price * 100) / $event->target }}%</div>
                 <div>الهدف {{ $event->target }}</div>
             </div>
             <div class="h-0.5 w-full rounded-full bg-gray-300 my-7 "></div>
@@ -49,20 +49,19 @@
         <div class="text-xl text-gray-600 px-6 xl:px-0">
             {{ $description ?? 'لا يوجد وصف' }}
         </div>
-        <div>
-            @if ($file_path != null)
-                <a href="{{ asset($file_path) }}" download class="px-4 py-2 md:px-0">
-                    <i class="fa-solid fa-file-circle-check text-gray-600 text-xl"></i>
-                    <span class="text-gray-600 text-xl">حمل الملف </span>
-            @endif
-            </a>
-        </div>
-        <div class="mt-4 xl:mt-10 mr-10 xl:mr-4 flex gap-5">
+        <div class="mt-4 xl:mt-10 mr-3 xl:mr-4 flex gap-5">
             <a href="{{ route('cases') }}"
                 class="hover:text-white text-base xl:text-2xl duration-200 hover:bg-primary-500 bg-white border hover:border-transparent border-green-500 text-primary-500 focus:ring-2 focus:ring-primary-300 rounded-lg px-5 py-2.5 mr-2 mb-2 ">رجوع</a>
             <a href="{{ route('donate') }}"
                 class="text-white text-base xl:text-2xl duration-200 bg-primary-500 hover:bg-white border border-transparent hover:border-green-500 hover:text-primary-500 focus:ring-2 focus:ring-primary-300 rounded-lg px-5 py-2.5 mr-2 mb-2 ">تبرع
                 الان</a>
+            @if ($file_path != null)
+                <button href="{{ asset($file_path) }}" download class="hover:text-white text-base xl:text-2xl duration-200 hover:bg-primary-500 bg-white border hover:border-transparent border-green-500 text-primary-500 focus:ring-2 focus:ring-primary-300 rounded-lg px-5 py-2.5 mr-2 mb-2">
+                    <i class="fa-solid fa-file-circle-check"></i>
+                    <span>الملف</span>
+                </button>
+            @endif
+            
         </div>
     </div>
 
