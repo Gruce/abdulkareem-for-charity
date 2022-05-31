@@ -6,7 +6,7 @@
             
             <div class="p-1 col-span-2">
                 <select wire:change="getEvent" wire:model="selectEvent"
-                class=" px-7 py-3 w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0 text-sm">
+                class=" px-7 py-3 w-full rounded-md bg-gray-100 border-transparent focus:border-primary-500 focus:bg-white focus:ring-0 text-sm">
                     <option value="0">الكل</option>
                     <option value="1">الحالات التي تم علاجها</option>
                     <option value="2">حالات لم تعالج الى الان</option>
