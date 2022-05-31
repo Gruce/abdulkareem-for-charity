@@ -52,15 +52,15 @@
         <div class="mt-4 xl:mt-10 mr-8 xl:mr-4 flex gap-3 md:gap-5">
             <a href="{{ route('cases') }}"
                 class="hover:text-white text-base xl:text-2xl duration-200 hover:bg-primary-500 bg-white border hover:border-transparent border-green-500 text-primary-500 focus:ring-2 focus:ring-primary-300 rounded-lg px-5 py-2.5 mr-2 mb-2 ">رجوع</a>
+                @if ($file_path != null)
+                    <button href="{{ asset($file_path) }}" download class="text-white text-base xl:text-2xl duration-200 bg-primary-500 hover:bg-white border border-transparent hover:border-green-500 hover:text-primary-500 focus:ring-2 focus:ring-primary-300 rounded-lg px-5 py-2.5 mr-2 mb-2 ">
+                        <i class="fa-solid fa-file-arrow-down"></i>
+                        <span>ملف</span>
+                    </button>
+                @endif
             <a href="{{ route('donate') }}"
-                class="text-white text-base xl:text-2xl duration-200 bg-primary-500 hover:bg-white border border-transparent hover:border-green-500 hover:text-primary-500 focus:ring-2 focus:ring-primary-300 rounded-lg px-5 py-2.5 mr-2 mb-2 ">تبرع
+                class="hover:text-white text-base xl:text-2xl duration-200 hover:bg-primary-500 bg-white border hover:border-transparent border-green-500 text-primary-500 focus:ring-2 focus:ring-primary-300 rounded-lg px-5 py-2.5 mr-2 mb-2">تبرع
                 الان</a>
-            @if ($file_path != null)
-                <button href="{{ asset($file_path) }}" download class="hover:text-white text-base xl:text-2xl duration-200 hover:bg-primary-500 bg-white border hover:border-transparent border-green-500 text-primary-500 focus:ring-2 focus:ring-primary-300 rounded-lg px-5 py-2.5 mr-2 mb-2">
-                    <i class="fa-solid fa-file-arrow-down"></i>
-                    <span>ملف</span>
-                </button>
-            @endif
             
         </div>
     </div>
