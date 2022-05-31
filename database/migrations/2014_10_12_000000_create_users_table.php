@@ -24,6 +24,7 @@ return new class extends Migration
             $table->string('profile_photo_path', 2048)->nullable();
             $table->boolean('is_admin')->default(false);   ### Admin: true, User: false ###
             $table->string('phone_number')->nullable();
+            $table->string('telegram_username')->nullable();
             $table->integer('type')->default(1);   ### Student: 1, Teacher: 2, Employees: 3, Other: 4 ... ###
             $table->integer('gender')->default(1); ###  Female: 1, Male:2
             $table->timestamps();
