@@ -1,12 +1,12 @@
 <div>
-    <div class="flex flex-col  container mx-auto">
+    <div class="flex flex-col  container mx-auto px-4 py-8 md:px-0 md:py-0">
 
         {{-- Intro --}}
         <div class="basis-1/4 grid lg:grid-cols-12 justify-between">
 
             <!-- Text -->
             <div class="lg:col-span-7 text-right xl:mt-20 md:px-12">
-                <h1 class="text-secondary-900 text-2xl md:text-4xl xl:text-5xl font-bold ">
+                <h1 class="text-secondary-900 text-2xl md:text-4xl xl:text-5xl font-bold text-center md:text-right">
                     صندوق الكرم
                 </h1>
                 <p class="leading-10 mt-6 md:mt-10 text-base md:text-xl xl:text-2xl text-gray-700 font-Alhurrareg px-2    ">
@@ -38,7 +38,7 @@
 
             <!-- Text -->
             <div class="basis-1/2 lg:col-span-7 mt-4 xl:mt-40 text-right md:px-9">
-                <h1 class="text-secondary-900 text-2xl md:text-4xl xl:text-5xl font-bold ">
+                <h1 class="text-secondary-900 text-2xl md:text-4xl xl:text-5xl font-bold text-center md:text-right">
                     من هو الأستاذ عبدالكريم
                 </h1>
                 <p class="leading-10 mt-10 text-base md:text-xl xl:text-2xl text-gray-700 font-Alhurrareg px-2  ">
@@ -59,7 +59,7 @@
 
             <!-- Text -->
             <div class="basis-1/2 lg:col-span-5 xl:mt-32  text-right md:px-9">
-                <h1 class="text-secondary-900 text-2xl md:text-4xl xl:text-5xl font-bold ">
+                <h1 class="text-secondary-900 text-2xl md:text-4xl xl:text-5xl font-bold text-center md:text-right">
                     كيف يتم جمع التبرعات؟
                 </h1>
                 <p class="leading-10 mt-10 text-base md:text-xl xl:text-2xl text-gray-700 font-Alhurrareg px-2  ">

@@ -1130,6 +1130,9 @@ select{
 .mr-8{
   margin-right: 2rem;
 }
+.mr-16{
+  margin-right: 4rem;
+}
 .block{
   display: block;
 }
@@ -1219,6 +1222,9 @@ select{
 }
 .h-24{
   height: 6rem;
+}
+.h-60{
+  height: 15rem;
 }
 .min-h-screen{
   min-height: 100vh;
@@ -2932,6 +2938,9 @@ select{
   .md\:w-96{
     width: 24rem;
   }
+  .md\:max-w-lg{
+    max-width: 32rem;
+  }
   .md\:grid-cols-3{
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
@@ -2996,6 +3005,16 @@ select{
   .md\:px-0{
     padding-left: 0px;
     padding-right: 0px;
+  }
+  .md\:py-0{
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+  .md\:pr-0{
+    padding-right: 0px;
+  }
+  .md\:text-right{
+    text-align: right;
   }
   .md\:text-4xl{
     font-size: 2.25rem;

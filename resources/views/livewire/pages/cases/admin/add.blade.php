@@ -1,7 +1,7 @@
 <div>
-    <form wire:submit.prevent="add">
-        <div class="flex h-auto items-center justify-center">
 
+    <div class="flex h-auto items-center justify-center">
+        <form wire:submit.prevent="add">
             <div class="grid rounded-lg w-full">
                 <div class="flex justify-center">
                     <div class="flex bg-primary-200 rounded-full md:p-2 p-2 border-2 border-primary-300">
@@ -60,23 +60,23 @@
                             </div>
                             <div wire:loading.remove wire:target="image_path">
                                 @if ($image_path)
-                                    <i class="fa-solid fa-check text-2xl"></i>
+                                <i class="fa-solid fa-check text-2xl"></i>
                                 @else
-                                    <i class="fa-solid fa-upload text-2xl"></i>
+                                <i class="fa-solid fa-upload text-2xl"></i>
                                 @endif
                             </div>
                             <span class="mt-2 text-base leading-normal">
                                 @if ($image_path)
-                                    تم اختيار الصورة
+                                تم اختيار الصورة
                                 @else
-                                    إختر صورة
+                                إختر صورة
                                 @endif
                             </span>
                             <input wire:model.lazy="image_path" type="file" class="hidden" />
                         </label>
                         @error('image_path')
-                            <span class="error text-primary-600 bg-primary-100 rounded-lg py-1 px-2 text-xs">لم يتم تحميل
-                                الصورة</span>
+                        <span class="error text-primary-600 bg-primary-100 rounded-lg py-1 px-2 text-xs">لم يتم تحميل
+                            الصورة</span>
                         @enderror
                     </div>
 
@@ -88,23 +88,23 @@
                             </div>
                             <div wire:loading.remove wire:target="file_path">
                                 @if ($file_path)
-                                    <i class="fa-solid fa-check text-2xl"></i>
+                                <i class="fa-solid fa-check text-2xl"></i>
                                 @else
-                                    <i class="fa-solid fa-upload text-2xl"></i>
+                                <i class="fa-solid fa-upload text-2xl"></i>
                                 @endif
                             </div>
                             <span class="mt-2 text-base leading-normal">
                                 @if ($file_path)
-                                    تم اختيار الملف
+                                تم اختيار الملف
                                 @else
-                                    إختر ملف
+                                إختر ملف
                                 @endif
                             </span>
-                            <input id="file" type='file' class="hidden" wire:model="file_path"/>
+                            <input id="file" type='file' class="hidden" wire:model="file_path" />
                         </label>
                         @error('file_path')
-                            <span class="error text-primary-600 bg-primary-100 rounded-lg py-1 px-2 text-xs">لم يتم تحميل
-                                الملف</span>
+                        <span class="error text-primary-600 bg-primary-100 rounded-lg py-1 px-2 text-xs">لم يتم تحميل
+                            الملف</span>
                         @enderror
                     </div>
                 </div>
@@ -116,6 +116,6 @@
                 </div>
 
             </div>
-        </div>
-    </form>
+        </form>
+    </div>
 </div>
