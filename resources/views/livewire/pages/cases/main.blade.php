@@ -1,25 +1,34 @@
 @section('title', 'الحالات')
 <div>
     <div>
-        <div class="grid grid-cols-3">
-            <div class="col-span-2 p-1">@livewire('ui.search', 'title')</div>
-            <div class="p-1">
+        <div class="grid grid-cols-7 px-3 md:px-0">
+            <div class="col-span-4 py-1">@livewire('ui.search', 'title')</div>
+            
+            <div class="p-1 col-span-2">
                 <select wire:change="getEvent" wire:model="selectEvent"
-                    class="px-10 py-3 w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0 text-sm">
+                class=" px-7 py-3 w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0 text-sm">
                     <option value="0">الكل</option>
                     <option value="1">الحالات التي تم علاجها</option>
                     <option value="2">حالات لم تعالج الى الان</option>
                 </select>
             </div>
-        </div>
-
-        @admin
-        <div class="justify-center mt-4 xl:mt-10 mr-10 xl:mr-4 flex">
-            <a href="{{ route('add-case') }}"
-                class="text-white text-base xl:text-xl duration-200 bg-primary-500 hover:bg-white border border-transparent hover:border-green-500 hover:text-primary-500 focus:ring-2 focus:ring-primary-300 rounded-lg px-5 py-2.5 mr-2 ">
-                <i class="fa-solid fa-plus"></i>
-                إضافة حالة
-            </a>
+            @admin
+            <div class="col-span-1 p-1 md:hidden">
+                <a href="{{ route('add-case') }}">
+                    <button
+                        class="text-white px-4 py-2 text-sm font-bold rounded-md duration-200 bg-primary-500 hover:bg-white border border-transparent mt-1 hover:border-green-500 hover:text-primary-500 focus:ring-2 focus:ring-primary-300">
+                        <i class="fa-solid fa-plus text-lg"></i>
+                    </button>
+                </a>
+            </div>
+            <div class="justify-start items-center flex flex-col">
+                <a href="{{ route('add-case') }}"
+                    class="text-white text-md hidden md:block xl:text-xl duration-200 bg-primary-500 hover:bg-white border border-transparent hover:border-green-500 hover:text-primary-500 focus:ring-2 focus:ring-primary-300 rounded-lg px-1 xl:px-5 py-3">
+                    <i class="fa-solid fa-plus"></i>
+                    إضافة حالة
+                </a>
+            </div>
+            @endadmin
         </div>
         <!-- CaseAdd Modal -->
         <div id="case-modal" tabindex="-1"
@@ -42,16 +51,16 @@
         </div>
     </div>
 
-    @endadmin
+
     {{-- cases --}}
     <div class="grid gap-6 pt-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
 
         @forelse ($events as $event)
-        <livewire:pages.cases.card :event="$event" key="{{ now() }}" />
+            <livewire:pages.cases.card :event="$event" key="{{ now() }}" />
         @empty
-        <div class="text-2xl font-medium text-gray-700">
-            لايوجد حالات
-        </div>
+            <div class="text-2xl font-medium text-gray-700">
+                لايوجد حالات
+            </div>
         @endforelse
     </div>
 
