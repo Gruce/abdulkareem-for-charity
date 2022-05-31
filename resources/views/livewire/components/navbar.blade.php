@@ -159,7 +159,7 @@
                     @else
                     {{-- Has no submenu --}}
                     <a href="{{ route($item->route) }}"
-                        class="block py-2 pl-3 pr-4 {{ $item->active ? 'text-primary-500 border-primary-100' : 'text-gray-700 hover:bg-gray-200 rounded-lg border-gray-100 hover:scale-110 duration-200 ' }} border-b-2">
+                        class="block py-2 pl-3 pr-4 {{ $item->active ? 'text-primary-500 border-primary-100' : 'text-gray-700 hover:bg-gray-300 rounded-lg border-gray-100 hover:scale-110 duration-200 ' }} border-b-2 ">
                         {{ $item->name }}
                     </a>
                     @endif
