@@ -77,6 +77,9 @@
                 </div>
             @endforelse
         </div>
+        <div>
+            {{ $users->links() }}
+        </div>
     </div>
 
 </div>
