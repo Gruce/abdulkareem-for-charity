@@ -1906,6 +1906,10 @@ select{
   padding-left: 2.5rem;
   padding-right: 2.5rem;
 }
+.px-0{
+  padding-left: 0px;
+  padding-right: 0px;
+}
 .pt-6{
   padding-top: 1.5rem;
 }
@@ -2873,6 +2877,9 @@ select{
   .md\:mt-10{
     margin-top: 2.5rem;
   }
+  .md\:mt-5{
+    margin-top: 1.25rem;
+  }
   .md\:block{
     display: block;
   }
@@ -3066,6 +3073,10 @@ select{
     margin-left: 2.5rem;
     margin-right: 2.5rem;
   }
+  .xl\:my-1{
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+  }
   .xl\:mr-20{
     margin-right: 5rem;
   }
@@ -3107,6 +3118,9 @@ select{
   }
   .xl\:mt-32{
     margin-top: 8rem;
+  }
+  .xl\:mt-5{
+    margin-top: 1.25rem;
   }
   .xl\:h-10{
     height: 2.5rem;
@@ -3153,6 +3167,14 @@ select{
   .xl\:px-5{
     padding-left: 1.25rem;
     padding-right: 1.25rem;
+  }
+  .xl\:py-2{
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+  .xl\:py-4{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
   }
   .xl\:pr-24{
     padding-right: 6rem;

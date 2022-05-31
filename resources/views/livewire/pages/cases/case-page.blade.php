@@ -4,32 +4,35 @@
             <h1 class="text-secondary-900 text-2xl p-2 md:text-3xl xl:text-5xl font-bold">
                 {{ $title }}
             </h1>
-            <div>
-                <button id="pagecase" data-dropdown-toggle="casepage" class="mt-5 ml-7" type="button">
-                    <i class="fa-solid fa-ellipsis-vertical"></i>
-                </button>
-                <!-- Dropdown menu -->
-                <div id="casepage" class="z-10 hidden bg-white divide-y divide-blue-200 rounded shadow  ">
-                    <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefault">
-                        <li>
-                            <a class="block px-4 py-2 my-1 hover:bg-gray-100 text-secondary-200 group"
-                                href="{{ route('edit-case', ['case_id' => $event->id]) }}">
-                                <span>تعديل </span>
-                                <i
-                                    class="text-secondary-500 fa-solid fa-pen-to-square text-xl group-hover:rotate-12  duration-200 group-hover:text-secondary-700"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <button wire:click="confirm({{ $event->id }})"
-                                class="block px-4 py-2 my-1 hover:bg-gray-100 text-secondary-200 group">
-                                <span>حذف </span>
-                                <i
-                                    class="text-red-500 fa-solid  fa-pen-to-square text-xl group-hover:rotate-12 duration-200 group-hover:text-red-700 fa-solid fa-trash"></i>
-                            </button>
-                        </li>
-                    </ul>
+            <!-- Dropdown menu -->
+            @admin
+                <div>
+                    <button id="pagecase" data-dropdown-toggle="casepage" class="mt-3 md:mt-5 ml-7" type="button">
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </button>
+
+                    <div id="casepage" class="z-10 hidden bg-white divide-y divide-blue-200 rounded shadow  ">
+                        <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefault">
+                            <li>
+                                <a class="block px-4 py-2 my-1 hover:bg-gray-100 text-secondary-200 group"
+                                    href="{{ route('edit-case', ['case_id' => $event->id]) }}">
+                                    <span>تعديل </span>
+                                    <i
+                                        class="text-secondary-500 fa-solid fa-pen-to-square text-xl group-hover:rotate-12  duration-200 group-hover:text-secondary-700"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <button wire:click="confirm({{ $event->id }})"
+                                    class="block px-6 py-2 my-1 hover:bg-gray-100 text-secondary-200 group">
+                                    <span>حذف </span>
+                                    <i
+                                        class="text-red-500 fa-solid  fa-pen-to-square text-xl duration-200 group-hover:text-red-700 fa-solid fa-trash"></i>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
+            @endadmin
         </div>
         <div class="w-full  text-center mt-5 py-2 px-5 xl:mt-8">
             <div class="xl:w-full bg-gray-300 rounded-full">
@@ -37,7 +40,7 @@
                     style="width:{{ ($event->received_price * 100) / $event->target }}%"></div>
             </div>
             <div class="flex justify-between px-3 mt-2 text-xl text-secondary-200">
-                <div>الواصل {{$event->received_price}} </div>
+                <div>الواصل {{ $event->received_price }} </div>
                 <div>{{ round($event->received_price * 100) / $event->target }}%</div>
                 <div>الهدف {{ $event->target }}</div>
             </div>
@@ -45,6 +48,12 @@
         </div>
         <div class="text-xl text-gray-600 px-6 xl:px-0">
             {{ $description ?? 'لا يوجد وصف' }}
+        </div>
+        <div>
+            <a download="{{$event->file_path}}" class="px-4 py-4 md:px-0">
+                <i class="fa-solid fa-file-signature text-gray-600 text-xl"></i>
+            عرض المستمسكات 
+            </a>
         </div>
         <div class="mt-4 xl:mt-10 mr-10 xl:mr-4 flex gap-5">
             <a href="{{ route('cases') }}"
