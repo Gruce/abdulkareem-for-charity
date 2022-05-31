@@ -1,6 +1,6 @@
 <div>
     <div
-        class="flex flex-col justify-center w-full px-8 mx-6 my-12 text-center rounded-md md:w-96 lg:w-80 xl:w-64 border">
+        class="flex flex-col justify-center w-full px-8  my-12 text-center rounded-md md:w-96 lg:w-80 xl:w-64 border mx-auto">
         <img alt="" class="self-center flex-shrink-0 w-24 h-24 -mt-12 bg-center bg-cover rounded-full "
             src="{{ $team->photo }}">
         <div class="flex-1 my-4">
