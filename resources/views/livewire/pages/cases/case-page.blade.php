@@ -57,8 +57,8 @@
                 الان</a>
             @if ($file_path != null)
                 <button href="{{ asset($file_path) }}" download class="hover:text-white text-base xl:text-2xl duration-200 hover:bg-primary-500 bg-white border hover:border-transparent border-green-500 text-primary-500 focus:ring-2 focus:ring-primary-300 rounded-lg px-5 py-2.5 mr-2 mb-2">
-                    <i class="fa-solid fa-file-circle-check"></i>
-                    <span>الملف</span>
+                    <i class="fa-solid fa-file-arrow-down"></i>
+                    <span>ملف</span>
                 </button>
             @endif
             
