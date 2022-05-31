@@ -4,7 +4,7 @@
         {{-- Logo & Title --}}
         <div>
             <a href="/" class="flex items-center text-xl">
-                <img src="{{ asset('/img/logo.png') }}" class="h-12 ">
+                <img src="{{ asset('/img/logo.png') }}" class="h-12 mx-4">
                 <span class="font-Alhurra text-2xl font-bold text-gray-700">صندوق الكرم</span>
             </a>
         </div>
