@@ -10,13 +10,13 @@
                     @livewire('ui.search', 'name')
                 </div>
                 <select wire:change="getType" wire:model="state"
-                    class="px-10 py-3 w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0 text-sm">
+                    class="px-10 py-3 w-full rounded-md bg-gray-100 border-transparent focus:border-primary-500 focus:bg-white focus:ring-0 text-sm">
                     <option value="0">حالة التبرع </option>
                     <option value="">أرسلَ طلب تبرع جديد</option>
                 </select>
 
                 <select wire:change="getType" wire:model="type"
-                    class="px-10 py-3 w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0 text-sm">
+                    class="px-10 py-3 w-full rounded-md bg-gray-100 border-transparent focus:border-primary-500 focus:bg-white focus:ring-0 text-sm">
                     <option value="0">النوع</option>
                     <option value="1">طالب</option>
                     <option value="2">تدريسي</option>
@@ -24,7 +24,7 @@
                     <option value="4">اخرى</option>
                 </select>
                 <select wire:change="getType" wire:model="gender"
-                    class="px-10 py-3 w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0 text-sm">
+                    class="px-10 py-3 w-full rounded-md bg-gray-100 border-transparent focus:border-primary-500 focus:bg-white focus:ring-0 text-sm">
                     <option value="0">الجنس</option>
                     <option value="2">ذكر</option>
                     <option value="1">أنثى</option>
@@ -32,7 +32,7 @@
 
                 @if ($type == 1)
                     <select wire:change="getType" wire:model="study_type"
-                        class="px-10 py-3 w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0 text-sm">
+                        class="px-10 py-3 w-full rounded-md bg-gray-100 border-transparent focus:border-primary-500 focus:bg-white focus:ring-0 text-sm">
                         <option value="">نوع الدراسة</option>
                         <option value="1">صباحي</option>
                         <option value="2">مسائي</option>
@@ -40,7 +40,7 @@
                     </select>
 
                     <select wire:change="getType" wire:model="stage"
-                        class="px-10 py-3 w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0 text-sm">
+                        class="px-10 py-3 w-full rounded-md bg-gray-100 border-transparent focus:border-primary-500 focus:bg-white focus:ring-0 text-sm">
                         <option value="">المرحلة</option>
                         <option value="1">الاولى</option>
                         <option value="2">الثانية</option>
@@ -49,7 +49,7 @@
                     </select>
 
                     <select wire:change="getType" wire:model="division"
-                        class="px-10 py-3 w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0 text-sm">
+                        class="px-10 py-3 w-full rounded-md bg-gray-100 border-transparent focus:border-primary-500 focus:bg-white focus:ring-0 text-sm">
                         <option value="">الشعبة</option>
                         <option value="1">A</option>
                         <option value="2">B</option>
@@ -59,7 +59,7 @@
 
                     </select>
                     <select wire:change="getType" wire:model="department"
-                        class=" px-10 py-3 w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0 text-sm">
+                        class=" px-10 py-3 w-full rounded-md bg-gray-100 border-transparent focus:border-primary-500 focus:bg-white focus:ring-0 text-sm">
                         <option value="">القسم</option>
                         <option value="1">علوم الحاسوب</option>
                         <option value="2">نظم المعلومات</option>
