@@ -33,7 +33,7 @@
         </div>
 
         {{--information--}}
-        <div class=" basis-2/12 mt-6 xl:mt-14  ">
+        <div class=" basis-2/12 mt-6 xl:mt-10  ">
             @livewire('pages.home.info')
         </div>
 

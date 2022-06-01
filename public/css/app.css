@@ -1374,6 +1374,12 @@ select{
 .cursor-pointer{
   cursor: pointer;
 }
+.select-none{
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
 .list-inside{
   list-style-position: inside;
 }
@@ -3107,6 +3113,9 @@ select{
   }
   .xl\:ml-0{
     margin-left: 0px;
+  }
+  .xl\:mt-12{
+    margin-top: 3rem;
   }
   .xl\:h-10{
     height: 2.5rem;
