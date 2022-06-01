@@ -37,7 +37,7 @@
             </div>
             <div class="form-item">
                 <label class="text-xl ">معرف التلجرام</label>
-                <input type="text"
+                <input wire:model="telegram_username" type="text"
                     class="bg-gray-50 border border-primary-400 text-sm w-full md:w-1/2 focus:ring-primary-600 focus:border-primary-500 block p-2.5 mt-2 rounded-md">
                 @error('telegram_username')
                     <span class="text-red-500 error">{{ $message }}</span>
