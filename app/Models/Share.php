@@ -31,8 +31,7 @@ class Share extends Model
         $this->state = !$state;
         $this->save();
     }
+
+    
 }
-    // public function add($data){
-    //     $this->fill($data);
-    //     $this->save();
-    // }
+
