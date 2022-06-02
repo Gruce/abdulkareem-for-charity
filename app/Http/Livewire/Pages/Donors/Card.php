@@ -65,7 +65,7 @@ class Card extends Component
         $share = Share::findOrFail($this->share_id);
         $share->state($this->share_state);
         $this->alert('success', 'تم القبول', [
-            'position' => 'top',
+            'position' => 'center',
             'timer' => 3000,
             'toast' => true,
         ]);
@@ -90,7 +90,7 @@ class Card extends Component
         $share = Share::findOrFail($this->share_id);
         $share->delete();
         $this->alert('success', 'تم الرفض', [
-            'position' => 'top',
+            'position' => 'center',
             'timer' => 3000,
             'toast' => true,
         ]);

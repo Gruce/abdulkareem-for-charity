@@ -7,67 +7,67 @@
                 <h2 class="text-xl font-semibold sm:text-2xl">{{ $item->name }}</h2>
                 <p class="px-5 text-xs sm:text-base text-gray-500">{{ $item->getShare() ?? 0 }} سهم
                     @if ($item->type == 1)
-                    - طالب
+                        - طالب
                     @elseif($item->type == 2)
-                    - تدريسي
+                        - تدريسي
                     @elseif ($item->type == 3)
-                    - موظف
+                        - موظف
                     @endif
                 </p>
             </div>
             @admin
-            <div wire:ignore.self x-data="{ isOpen: false }" class="flex flex-col justify-between pt-2 space-x-4 ">
-                <div class="flex justify-between ">
-                    <div class="flex align-center">
-                        <p class="text-xs text-gray-600 mr-2">انضم {{ $item->created_at->diffForHumans() }}</p>
-                    </div>
-                    <div class="flex justify-between text-base">
-                        
-                        @if (count($item->pay()) > 0)
-
-                        <button @click="isOpen = !isOpen" class="mx-2 p-1 border-b-2  border-gray-500">
-                            <i
-                                class="fa-solid fa-bell text-yellow-500 hover:scale-110 duration-200 hover:text-primary-800 "></i>
-                        </button>
-                        @endif
-                        <button class="mx-2 p-1 border-b-2  border-gray-500">
-                            <i
-                                class="fa-solid fa-person-circle-check text-sky-500  hover:scale-110 duration-200 hover:text-yellow-600"></i>
-                            </i>
-                        </button>
-
-                        <button wire:click.prevent="confirm()" class="mx-2  p-1 border-b-2  border-gray-500">
-                            <i class=" fa-solid fa-trash text-red-500 hover:scale-110 duration-200 hover:text-red-600">
-                            </i>
-                        </button>
-                    </div>
-                </div>
-                <div x-show="isOpen" class="text-gray-500 text-base p-2  flex flex-col">
-
-                    <span>الطلبات</span>
-
-                    @foreach ($item->shares as $share)
-                    @if (!$share->state)
-                    <div class="flex justify-between">
-                        <div>
-                            <span class="text-xs">طلب اضافة {{ $share->share }} سهم</span>
+                <div wire:ignore.self x-data="{ isOpen: false }" class="flex flex-col justify-between pt-2 space-x-4 ">
+                    <div class="flex justify-between ">
+                        <div class="flex align-center">
+                            <p class="text-xs text-gray-600 mr-2">انضم {{ $item->created_at->diffForHumans() }}</p>
                         </div>
-                        <div class="flex ">
-                            <button type="button" wire:click="confirm_accepet({{ $share->id }}, {{ $share->state }})"
-                                class="mx-2 text-primary-500"><i class="fa-solid fa-check"></i>
-                            </button>
-                            <button type="button" wire:click="confirm_delete({{ $share->id }})"
-                                class="mx-2 text-red-500"><i class="fa-solid fa-xmark"></i>
+                        <div class="flex justify-between text-base">
+
+                            @if (count($item->pay()) > 0)
+                                <button @click="isOpen = !isOpen" class="mx-2 p-1 border-b-2  border-gray-500">
+                                    <i
+                                        class="fa-solid fa-bell text-yellow-400 duration-300 hover:animate-none animate-ping hover:text-yellow-500 "></i>
+                                </button>
+                            @endif
+                            {{-- <button class="mx-2 p-1 border-b-2  border-gray-500">
+                            <i
+                                class="fa-solid fa-person-circle-check text-sky-500 duration-200 hover:text-yellow-600"></i>
+                            </i>
+                        </button> --}}
+
+                            <button wire:click.prevent="confirm()" class="mx-2  p-1 border-b-2  border-gray-500">
+                                <i class=" fa-solid fa-trash text-red-500 duration-200 hover:text-red-700">
+                                </i>
                             </button>
                         </div>
                     </div>
-                    @endif
-                    @endforeach
+                    <div x-show="isOpen" class="text-gray-500 text-base p-2  flex flex-col">
 
+                        <span>الطلبات</span>
+
+                        @foreach ($item->shares as $share)
+                            @if (!$share->state)
+                                <div class="flex justify-between">
+                                    <div>
+                                        <span class="text-xs">طلب اضافة {{ $share->share }} سهم</span>
+                                    </div>
+                                    <div class="flex ">
+                                        <button type="button"
+                                            wire:click="confirm_accepet({{ $share->id }}, {{ $share->state }})"
+                                            class="mx-2 text-primary-500"><i class="fa-solid fa-check"></i>
+                                        </button>
+                                        <button type="button" wire:click="confirm_delete({{ $share->id }})"
+                                            class="mx-2 text-red-500"><i class="fa-solid fa-xmark"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            @endif
+                        @endforeach
+
+
+                    </div>
 
                 </div>
-
-            </div>
             @endadmin
         </div>
     </div>
