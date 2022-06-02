@@ -32,6 +32,7 @@ class User extends Authenticatable
         'is_admin',
         'phone_number',
         'telegram_username',
+        'gender',
         'type',
     ];
 
@@ -93,7 +94,7 @@ class User extends Authenticatable
     }
 
     public function addProfile($file , $type = null){
-        
+
         $type = $type ?? 'student';
         $ext = $file->extension();
         $name=\Str::random(10).'.'.$ext;
