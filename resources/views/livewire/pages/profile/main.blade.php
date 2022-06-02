@@ -1,4 +1,4 @@
-<div>
+{{-- <div>
     <div class="w-full mt-4 rounded my-24 overflow-hidden">
         <div class="top h-64 w-full overflow-hidden relative">
             <img src="https://png.pngtree.com/thumb_back/fw800/back_our/20190619/ourmid/pngtree-colorful-gradient-dreamy-business-corporate-background-image_135286.jpg"
@@ -38,6 +38,45 @@
                 class="h-full pb-12">
                 @livewire('pages.profile.student-info', ['user' => $user])
             </div>
+        </div>
+    </div>
+</div> --}}
+
+
+
+<div class="">
+    <div class="flex flex-col">
+        <div class="grid lg:grid-cols-2 ">
+            {{-- card --}}
+            <div class="row-span-6 justify-center mb-5">
+                <div class="max-w-md rounded-2xl overflow-hidden shadow-md bg-gray-100">
+                    <div class="row-span-2">
+                        <img class="w-full h-56" src="/img/about1.png" alt="Sunset in the mountains">
+                    </div>
+
+                    <div class="row-span-4">
+                        <livewire:pages.profile.basic :user="$user" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="row-span-2 bg-gray-50 mb-5">
+                <div class="max-w-md rounded-2xl overflow-hidden shadow-md bg-gray-100">
+                    <div class="row-span-4">
+                        <livewire:pages.profile.contact :user="$user" />
+                    </div>
+                </div>
+            </div>
+
+            @if (auth()->user()->type == 1)
+                <div class="row-span-2 bg-gray-50">
+                    <div class="max-w-md rounded-2xl overflow-hidden shadow-md bg-gray-100">
+                        <div class="row-span-4">
+                            <livewire:pages.profile.student-info :user="$user" />
+                        </div>
+                    </div>
+                </div>
+            @endif
         </div>
     </div>
 </div>

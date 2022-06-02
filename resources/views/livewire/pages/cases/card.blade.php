@@ -1,6 +1,6 @@
 <div>
     <div class="h-auto ">
-        <div class="relative bg-white hover:bg-gray-50 p-6 rounded-t-lg border  w-11/12 mx-auto">
+        <div class="relative bg-white hover:bg-gray-50 p-6 rounded-t-lg border w-11/12 mx-auto">
             <img class="h-64 rounded w-full object-cover object-center mb-6"
                 src="{{ asset($event->image_path ?? 'img/caseImage.webp') }}" alt="content">
 
