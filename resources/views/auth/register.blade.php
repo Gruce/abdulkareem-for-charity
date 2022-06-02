@@ -22,8 +22,8 @@
                     class="block mt-1 w-full border-gray-300 shadow-sm focus:border-green-500 focus:bg-white focus:ring-0"
                     type="email" name="email" :value="old('email')" required />
             </div>
-            <div class="flex gap-20 px-11">
-                <div class="mt-4">
+            <div class="flex mt-8 gap-x-2">
+                <div class=" w-full">
                     <x-jet-label for="gender" />
 
                     <select name="gender" id="gender" wire:model="gender" required
@@ -33,7 +33,7 @@
                         <option value="2">ذكر</option>
                     </select>
                 </div>
-                <div class="mt-4">
+                <div class=" w-full">
                     <x-jet-label for="type" />
                     <select name="type" id="type" wire:model="type" required
                         class="px-8 py-3 w-full rounded-md border-gray-300 shadow-sm focus:border-green-500 focus:bg-white focus:ring-0 text-sm">
