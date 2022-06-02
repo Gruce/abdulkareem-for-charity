@@ -9,11 +9,11 @@ use Jantinnerezo\LivewireAlert\LivewireAlert;
 
 class Main extends Component{
     use LivewireAlert;
-    
+
     protected $rules = [
         'share' => 'required',
     ];
-    
+
     public $share, $note;
     public function save()
     {
@@ -22,7 +22,7 @@ class Main extends Component{
         $donate->add($this->share, $this->note);
 
         $this->alert('success', 'تم', [
-            'position' => 'top-start',
+            'position' => 'center',
             'timer' => 3000,
             'toast' => true,
         ]);
@@ -30,7 +30,7 @@ class Main extends Component{
     }
 
     public function render(){
-        
+
         return view('livewire.pages.donate.main');
     }
 }
