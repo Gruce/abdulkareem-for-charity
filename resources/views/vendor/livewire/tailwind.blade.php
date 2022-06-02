@@ -36,18 +36,7 @@
                 </span>
             </div>
 
-            <div class="hidden sm:flex-1 sm:flex sm:items-center sm:justify-between">
-                <div>
-                    <p class="text-sm text-gray-700 leading-5">
-                        <span>{!! __('يعرض') !!}</span>
-                        <span class="font-medium">{{ $paginator->firstItem() }}</span>
-                        <span>{!! __('-') !!}</span>
-                        <span class="font-medium">{{ $paginator->lastItem() }}</span>
-                        <span>{!! __('من أصل') !!}</span>
-                        <span class="font-medium">{{ $paginator->total() }}</span>
-                        <span>{!! __('متبرع') !!}</span>
-                    </p>
-                </div>
+            <div class="hidden md:flex md:justify-between">
 
                 <div>
                     <span class="relative z-0 inline-flex rounded-md shadow-sm">
