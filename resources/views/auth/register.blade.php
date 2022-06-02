@@ -11,13 +11,16 @@
 
             <div>
                 <x-jet-label for="name" value="{{ __('الأسم') }}" />
-                <x-jet-input id="name" class="block mt-1 w-full border-gray-300 shadow-sm focus:border-green-500 focus:bg-white focus:ring-0" type="text" name="name" :value="old('name')" required
-                    autofocus autocomplete="name" />
+                <x-jet-input id="name"
+                    class="block mt-1 w-full border-gray-300 shadow-sm focus:border-green-500 focus:bg-white focus:ring-0"
+                    type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
             </div>
 
             <div class="mt-4">
                 <x-jet-label for="email" value="{{ __('البريد الألكتروني') }}" />
-                <x-jet-input id="email" class="block mt-1 w-full border-gray-300 shadow-sm focus:border-green-500 focus:bg-white focus:ring-0" type="email" name="email" :value="old('email')" required />
+                <x-jet-input id="email"
+                    class="block mt-1 w-full border-gray-300 shadow-sm focus:border-green-500 focus:bg-white focus:ring-0"
+                    type="email" name="email" :value="old('email')" required />
             </div>
             <div class="flex gap-20 px-11">
                 <div class="mt-4">
@@ -50,8 +53,9 @@
 
             <div class="mt-4">
                 <x-jet-label for="password_confirmation" value="{{ __('تأكيد كلمة السر') }}" />
-                <x-jet-input id="password_confirmation" class="block mt-1 w-full border-gray-300 shadow-sm focus:border-green-500 focus:bg-white focus:ring-0" type="password"
-                    name="password_confirmation" required autocomplete="new-password" />
+                <x-jet-input id="password_confirmation"
+                    class="block mt-1 w-full border-gray-300 shadow-sm focus:border-green-500 focus:bg-white focus:ring-0"
+                    type="password" name="password_confirmation" required autocomplete="new-password" />
             </div>
 
             @if (Laravel\Jetstream\Jetstream::hasTermsAndPrivacyPolicyFeature())
