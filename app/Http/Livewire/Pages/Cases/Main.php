@@ -5,9 +5,11 @@ namespace App\Http\Livewire\Pages\Cases;
 use Livewire\Component;
 use App\Models\Event;
 use App\Models\Share;
+use Livewire\WithPagination;
 
 class Main extends Component
 {
+    use WithPagination;
     protected $listeners = ['$refresh', 'search'];
 
     public $search, $received_price, $target, $selectEvent;
@@ -27,7 +29,7 @@ class Main extends Component
     }
     public function render()
     {
-        
+
 
         $search = '%' . $this->search . '%';
         $this->events = [];

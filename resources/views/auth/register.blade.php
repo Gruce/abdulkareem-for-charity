@@ -25,16 +25,17 @@
             <div class="flex gap-20 px-11">
                 <div class="mt-4">
                     <x-jet-label for="gender" />
-                    <select wire:change="getType" wire:model="gender" required
+
+                    <select name="gender" id="gender" wire:model="gender" required
                         class="px-8 py-3 w-full rounded-md border-gray-300 shadow-sm focus:border-green-500 focus:bg-white focus:ring-0 text-sm">
                         <option value="0">الجنس</option>
-                        <option value="2">ذكر</option>
                         <option value="1">أنثى</option>
+                        <option value="2">ذكر</option>
                     </select>
                 </div>
                 <div class="mt-4">
                     <x-jet-label for="type" />
-                    <select wire:change="getType" wire:model="type" required
+                    <select name="type" id="type" wire:model="type" required
                         class="px-8 py-3 w-full rounded-md border-gray-300 shadow-sm focus:border-green-500 focus:bg-white focus:ring-0 text-sm">
                         <option value="0">النوع</option>
                         <option value="1">طالب</option>
