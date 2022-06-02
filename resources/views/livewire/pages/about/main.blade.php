@@ -9,7 +9,7 @@
                 <h1 class="text-secondary-900 text-2xl md:text-4xl xl:text-5xl font-bold text-center md:text-right">
                     صندوق الكرم
                 </h1>
-                <p class="leading-10 mt-6 md:mt-10 text-base md:text-xl xl:text-2xl text-gray-700 font-Alhurrareg px-2    ">
+                <p class="leading-10 mt-6 md:mt-10 text-base md:text-xl xl:text-2xl text-gray-700 font-Alhurrareg px-2">
                     هو مبادرة ونشاط طلابي بحت ينطلق من طلبة كلية علوم الحاسوب
                     وتكنلوجيا المعلومات في جامعة البصرة. الهدف منه رعاية الاعمال الخيرية داخل الكلية وتكون الاولوية في
                     صرف الصندوق
@@ -22,7 +22,7 @@
             </div>
 
             {{-- Photo --}}
-            <div class="lg:col-span-5 ">
+            <div class="lg:col-span-5">
                 <img src="/img/About1.png" class="w-full mt-6 lg:mt-0 md:w-3/4 h-auto m-auto">
             </div>
 
