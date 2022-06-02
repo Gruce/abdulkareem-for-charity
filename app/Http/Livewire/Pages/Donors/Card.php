@@ -23,7 +23,7 @@ class Card extends Component
     protected $listeners = ['delete', '$refresh', 'getUserType', 'accept', 'deleteShare'];
 
     public function delete(){
-        User::findOrFail($this->share_id)->delete();
+        User::findOrFail($this->item->id)->delete();
         $this->alert('success', 'تم حذف المتبرع', [
             'position' => 'center',
             'timer' => 3000,
@@ -32,8 +32,8 @@ class Card extends Component
         $this->emitUp('$refresh');
     }
 
-    public function confirm($id){
-        $this->share_id = $id;
+    public function confirm(){
+        
         $this->alert('warning', 'هل انت متاكد من حذف المتبرع؟', [
             'position' => 'center',
             'timer' => 3000,

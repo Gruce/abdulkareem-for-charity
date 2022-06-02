@@ -110,5 +110,8 @@ class User extends Authenticatable
         return $this->shares()->where('state', true)->sum('share');
 
     }
+    public function pay(){
+        return $this->shares()->where('state', false)->get();
+    }
 
 }
