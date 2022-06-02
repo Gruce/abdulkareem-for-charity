@@ -56,14 +56,13 @@
                         <option value="3">C</option>
                         <option value="4">D</option>
                         <option value="5">E</option>
-
                     </select>
+
                     <select wire:change="getType" wire:model="department"
                         class=" px-10 py-3 w-full rounded-md bg-gray-100 border-transparent focus:border-primary-500 focus:bg-white focus:ring-0 text-sm">
                         <option value="">القسم</option>
                         <option value="1">علوم الحاسوب</option>
                         <option value="2">نظم المعلومات</option>
-
                     </select>
                 @endif
             </div>
