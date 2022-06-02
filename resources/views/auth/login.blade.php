@@ -17,12 +17,12 @@
 
             <div>
                 <x-jet-label for="email" value="{{ __('البريد الأالكتروني') }}" />
-                <x-jet-input id="email" class="block w-full mt-1" type="email" name="email" :value="old('email')" required autofocus />
+                <x-jet-input id="email" class="block w-full mt-1 border-gray-300 shadow-sm focus:border-green-500 focus:bg-white focus:ring-0" type="email" name="email" :value="old('email')" required autofocus />
             </div>
 
             <div class="mt-4">
                 <x-jet-label for="password" value="{{ __('كلمة السر') }}" />
-                <x-jet-input id="password" class="block w-full mt-1" type="password" name="password" required autocomplete="current-password" />
+                <x-jet-input id="password" class="block w-full mt-1 border-gray-300 shadow-sm focus:border-green-500 focus:bg-white focus:ring-0" type="password" name="password" required autocomplete="current-password" />
             </div>
 
             <div class="block mt-4">
