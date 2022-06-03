@@ -46,14 +46,14 @@ class="h-32 w-32 object-cover rounded-full">
 
 
 <div >
-    <div class="bg-gray-200 w-screen h-screen -mt-24">
+    <div class="bg-gray-200 w-screen h-screen">
         <div class="grid justify-items-center ">
-            <div class="flex ">
+            <div class="flex mt-10">
                 {{-- card --}}
                 <div class=" justify-center m-5">
                     <div class="max-w-md rounded-2xl overflow-hidden shadow-md bg-white">
                         <div class="row-span-2">
-                            <img class="w-full h-56" src="/img/about1.png" alt="Sunset in the mountains">
+                            <img class="w-full h-56 m-5 border-2 border-secondary-200" src="/img/user.png" alt="Sunset in the mountains">
                         </div>
 
                         <div class="">
