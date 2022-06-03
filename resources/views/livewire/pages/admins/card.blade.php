@@ -33,7 +33,7 @@
     </div>
 </div> --}}
 
-<div>
+{{-- <div>
     <div class=" p-4 w-full rounded-xl bg-gray-50 hover:bg-gray-100 border border-gray-300 transition duration-300">
         <div class="grid grid-cols-5 mb-5">
             <img src="@if ($item->profile_photo_path) {{ asset($item->profile_photo_path) }}@elseif($item->gender == 1) {{ asset('/img/profile_woman.png') }} @elseif($item->gender != 1) {{ asset('/img/profile_man.png') }} @endif"
@@ -55,13 +55,15 @@
                 </p>
             </div>
         </div>
-       
+
         <ul class="mt-16 mb-20 flex justify-center text-center text-2xl">
             <li class="flex flex-col"><span class="font-noto">سهم</span> {{ $item->admins->accepted_shares }}</li>
-            <li class="mx-6 flex flex-col"><span class="font-noto">مستلم</span> {{ $item->admins->accepted_shares * 2000 }}</li>
+            <li class="mx-6 flex flex-col"><span class="font-noto">مستلم</span> {{ $item->admins->accepted_shares * 2000
+                }}</li>
             <li class="ml-6 flex flex-col"><span class="font-noto">مدفوع</span> {{ $item->admins->paid_amount}}</li>
-            <li class="flex flex-col"><span class="font-noto">متبقي</span> {{ $item->admins->paid_amount - ($item->admins->accepted_shares * 2000) }}</li>
-          </ul>
+            <li class="flex flex-col"><span class="font-noto">متبقي</span> {{ $item->admins->paid_amount -
+                ($item->admins->accepted_shares * 2000) }}</li>
+        </ul>
         <ul class="mt-8 mb-4 flex justify-center space-x-4 text-center text-lg">
             <button wire:click="confirm_downgrade()" type="button"
                 class="inline-block rounded-full text-white bg-gradient-to-r from-red-400  to-red-500 hover:bg-gradient-to-br shadow-md  hover:shadow-lg transition duration-450 w-9 h-9">
@@ -76,4 +78,47 @@
 
     </div>
 
-</div>
+</div> --}}
+
+{{-- <div class="p-6 w-10/12 rounded-3xl duration-300 mb-20 mt-6 mx-auto bg-gray-50 border border-gray-300">
+    <div class="flex justify-around ">
+        <div class="text-center">
+            <h3 class="text-center text-3xl font-bold">{{ $item->name }}</h3>
+            <span class="text-sm">@if($item->type == 1)
+                طالب - @if($item->student->department == 1) علوم @else نظم @endif
+                - @if($item->student->study_type == 1) صباحي @else مسائي @endif
+                - @if($item->student->stage == 1) أولى @elseif($item->student->stage == 2) ثانية
+                @elseif($item->student->stage == 3) ثالثة @else رابعة @endif
+                - @if($item->student->division == 1) A @elseif($item->student->stage == 2) B
+                @elseif($item->student->stage == 3) C @elseif($item->student->stage == 4) D @else E @endif
+                @elseif($item->type == 2) تدريسي
+                @elseif($item->type == 3) موظف
+                @elseif($item->type == 4) من خارج الكلية
+                @endif
+            </span>
+        </div>
+        <div class=" mb-4 -mt-4 ">
+            <img src="@if ($item->profile_photo_path) {{ asset($item->profile_photo_path) }}@elseif($item->gender == 1) {{ asset('/img/profile_woman.png') }} @elseif($item->gender != 1) {{ asset('/img/profile_man.png') }} @endif"
+                class="mx-auto h-32 rounded-full" />
+        </div>
+
+    </div>
+
+    <ul class="  flex justify-around text-center text-2xl">
+        <li class="flex flex-col"><span class="font-sans mb-3">سهم</span> {{ $item->admins->accepted_shares }}</li>
+        <li class=" flex flex-col"><span class="font-sans mb-3">مستلم</span> {{ $item->admins->accepted_shares * 2000}}
+        </li>
+
+    </ul>
+    <ul class="mt-5 mb-8 flex justify-around text-center text-2xl">
+        <li class=" flex flex-col"><span class="font-sans mb-3">مدفوع</span> {{ $item->admins->paid_amount}}</li>
+        <li class="flex flex-col"><span class="font-sans mb-3">متبقي</span> {{ $item->admins->paid_amount
+            -($item->admins->accepted_shares * 2000) }}</li>
+    </ul>
+    <div class="flex justify-center">
+        <button wire:click="confirm_downgrade()" type="button"
+            class="inline-block rounded-full text-white bg-gradient-to-r from-red-400  to-red-500 hover:bg-gradient-to-br shadow-md  hover:shadow-lg transition duration-450 w-9 h-9">
+            <i class="fa-solid fa-person-circle-xmark"></i>
+        </button>
+    </div>
+</div> --}}
