@@ -47,8 +47,8 @@ class="h-32 w-32 object-cover rounded-full">
 
 <div>
     <div class="bg-gray-200">
-        <div class="grid justify-items-center ">
-            <div class="lg:flex mt-10">
+        <div class="grid flex justify-items-center ">
+            <div class="lg:flex mt-6">
                 {{-- card --}}
                 <div class="justify-center mb-5">
                     <div class="w-96 rounded-2xl overflow-hidden shadow-md bg-white">
@@ -63,13 +63,13 @@ class="h-32 w-32 object-cover rounded-full">
 
                         <div>
                             <livewire:pages.profile.basic :user="$user" />
-                            <div class="my-5 mx-28 hidden md:block">
+                            {{-- <div class="my-5 mx-28 hidden md:block">
                                 <button type="submit"
                                 class="text-white bg-primary-600 hover:scale-105 duration-200 hover:bg-primary-800 focus:ring-2 focus:outline-none focus:ring-primary-600 font-medium text-md w-40 px-5 py-2.5 text-center rounded-md">
                                 حفظ
                             </button>
-                            </div>
-                            
+                            </div> --}}
+
                         </div>
                     </div>
                 </div>
@@ -92,12 +92,12 @@ class="h-32 w-32 object-cover rounded-full">
                             </div>
                         </div>
                     @endif
-                    <div class="my-5 mx-28 lg:hidden mb-10">
+                    {{-- <div class="my-5 mx-28 lg:hidden mb-10">
                         <button type="submit"
                         class="text-white bg-primary-600 hover:scale-105 duration-200 hover:bg-primary-800 focus:ring-2 focus:outline-none focus:ring-primary-600 font-medium text-md w-40 px-5 py-2.5 text-center rounded-md">
                         حفظ
                     </button>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
         </div>
