@@ -26,7 +26,7 @@
                         @if (count($item->pay()) > 0)
                         <button @click="isOpen = !isOpen" class="mx-2 p-1">
                             <i
-                                class="fa-solid fa-bell text-amber-400 duration-300  animate-spin hover:text-amber-600 "></i>
+                                class="fa-solid fa-bell text-amber-400 duration-150 hover:animate-none animate-ping hover:text-amber-600 "></i>
                         </button>
                         @endif
 
