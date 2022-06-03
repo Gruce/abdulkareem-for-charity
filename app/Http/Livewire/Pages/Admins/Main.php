@@ -9,7 +9,7 @@ use Jantinnerezo\LivewireAlert\LivewireAlert;
 class Main extends Component
 {
     use LivewireAlert;
-
+    protected $listeners = ['$refresh'];
     public function add(){
         $this->alert('info', 'لأضافة مدير للموقع قم بترقيته من صفحة المتبرعين', [
             'position' => 'center',

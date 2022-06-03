@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="6cggQjElA7jcxz0K3cPM" name="Page-1">
-        <mxGraphModel dx="843" dy="457" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="1592" dy="445" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -22,11 +22,16 @@
                         <mxPoint as="offset"/>
                     </mxGeometry>
                 </mxCell>
+                <mxCell id="54" style="edgeStyle=none;html=1;exitX=0;exitY=1;exitDx=0;exitDy=0;shadow=1;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="9" target="55">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="110" y="400" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
                 <mxCell id="9" value="Users&lt;br&gt;&lt;br&gt;&lt;ul&gt;&lt;li&gt;type&lt;/li&gt;&lt;li&gt;contact&lt;/li&gt;&lt;span&gt;&amp;nbsp;&lt;/span&gt;&lt;/ul&gt;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry y="10" width="120" height="140" as="geometry"/>
                 </mxCell>
                 <mxCell id="19" value="Students&lt;br&gt;&lt;br&gt;&lt;ul&gt;&lt;li&gt;Department&lt;/li&gt;&lt;li&gt;Study type&lt;br&gt;&lt;/li&gt;&lt;li&gt;Stage&lt;/li&gt;&lt;li&gt;Division&lt;/li&gt;&lt;/ul&gt;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
-                    <mxGeometry x="130" y="220" width="120" height="140" as="geometry"/>
+                    <mxGeometry x="250" y="230" width="120" height="140" as="geometry"/>
                 </mxCell>
                 <mxCell id="28" value="Cases&lt;br&gt;&lt;br&gt;&lt;ul&gt;&lt;li&gt;title&lt;/li&gt;&lt;li&gt;description&lt;/li&gt;&lt;li&gt;image&lt;/li&gt;&lt;li&gt;details file&lt;/li&gt;&lt;li&gt;target&lt;/li&gt;&lt;li&gt;received_price&lt;/li&gt;&lt;/ul&gt;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="440" y="80" width="140" height="190" as="geometry"/>
@@ -34,8 +39,11 @@
                 <mxCell id="36" value="Payments&lt;br&gt;&lt;br&gt;&lt;ul&gt;&lt;li&gt;user_id&lt;/li&gt;&lt;li&gt;price&lt;/li&gt;&lt;/ul&gt;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="640" y="10" width="120" height="110" as="geometry"/>
                 </mxCell>
-                <mxCell id="53" value="&lt;font face=&quot;monospace&quot;&gt;&lt;font color=&quot;rgba(0, 0, 0, 0)&quot;&gt;&lt;span style=&quot;font-size: 0px&quot;&gt;shares%3CmxGraphModel%3E%3Croot%3E%3CmxCell%20id%3D%220%22%2F%3E%3CmxCell%20id%3D%221%22%20parent%3D%220%22%2F%3E%3CmxCell%20id%3D%222%22%20value%3D%22Payments%26lt%3Bbr%26gt%3B%26lt%3Bbr%26gt%3B%26lt%3Bul%26gt%3B%26lt%3Bli%26gt%3Buser_id%26lt%3B%2Fli%26gt%3B%26lt%3Bli%26gt%3Bprice%26lt%3B%2Fli%26gt%3B%26lt%3B%2Ful%26gt%3B%22%20style%3D%22whiteSpace%3Dwrap%3Bhtml%3D1%3B%22%20vertex%3D%221%22%20parent%3D%221%22%3E%3CmxGeometry%20x%3D%22700%22%20y%3D%2225%22%20width%3D%22120%22%20height%3D%22110%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3C%2Froot%3E%3C%2FmxGraphModel%3E&lt;/span&gt;&lt;/font&gt;&lt;font color=&quot;#ba0000&quot;&gt;&lt;span style=&quot;font-size: 0px&quot;&gt;shares&lt;/span&gt;&lt;/font&gt;&lt;br&gt;&lt;/font&gt;&lt;font color=&quot;rgba(0, 0, 0, 0)&quot; face=&quot;monospace&quot;&gt;&lt;span style=&quot;font-size: 0px&quot;&gt;shares%3CmxGraphModel%3E%3Croot%3E%3CmxCell%20id%3D%220%22%2F%3E%3CmxCell%20id%3D%221%22%20parent%3D%220%22%2F%3E%3CmxCell%20id%3D%222%22%20value%3D%22Payments%26lt%3Bbr%26gt%3B%26lt%3Bbr%26gt%3B%26lt%3Bul%26gt%3B%26lt%3Bli%26gt%3Buser_id%26lt%3B%2Fli%26gt%3B%26lt%3Bli%26gt%3Bprice%26lt%3B%2Fli%26gt%3B%26lt%3B%2Ful%26gt%3B%22%20style%3D%22whiteSpace%3Dwrap%3Bhtml%3D1%3B%22%20vertex%3D%221%22%20parent%3D%221%22%3E%3CmxGeometry%20x%3D%22700%22%20y%3D%2225%22%20width%3D%22120%22%20height%3D%22110%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3C%2Froot%3E%3C%2FmxGraphModel%3E&lt;/span&gt;&lt;/font&gt;&lt;font color=&quot;#ba0000&quot; face=&quot;monospace&quot;&gt;&lt;span style=&quot;font-size: 0px&quot;&gt;shares&lt;/span&gt;&lt;/font&gt;&lt;span&gt;shares&lt;/span&gt;&lt;font color=&quot;#ba0000&quot; face=&quot;monospace&quot;&gt;&lt;span style=&quot;font-size: 0px&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/font&gt;&lt;ul&gt;&lt;li&gt;user_id&lt;/li&gt;&lt;li&gt;Share&lt;/li&gt;&lt;/ul&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                <mxCell id="53" value="&lt;font face=&quot;monospace&quot;&gt;&lt;font color=&quot;rgba(0, 0, 0, 0)&quot;&gt;&lt;span style=&quot;font-size: 0px&quot;&gt;shares%3CmxGraphModel%3E%3Croot%3E%3CmxCell%20id%3D%220%22%2F%3E%3CmxCell%20id%3D%221%22%20parent%3D%220%22%2F%3E%3CmxCell%20id%3D%222%22%20value%3D%22Payments%26lt%3Bbr%26gt%3B%26lt%3Bbr%26gt%3B%26lt%3Bul%26gt%3B%26lt%3Bli%26gt%3Buser_id%26lt%3B%2Fli%26gt%3B%26lt%3Bli%26gt%3Bprice%26lt%3B%2Fli%26gt%3B%26lt%3B%2Ful%26gt%3B%22%20style%3D%22whiteSpace%3Dwrap%3Bhtml%3D1%3B%22%20vertex%3D%221%22%20parent%3D%221%22%3E%3CmxGeometry%20x%3D%22700%22%20y%3D%2225%22%20width%3D%22120%22%20height%3D%22110%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3C%2Froot%3E%3C%2FmxGraphModel%3E&lt;/span&gt;&lt;/font&gt;&lt;font color=&quot;#ba0000&quot;&gt;&lt;span style=&quot;font-size: 0px&quot;&gt;shares&lt;/span&gt;&lt;/font&gt;&lt;br&gt;&lt;/font&gt;&lt;font color=&quot;rgba(0, 0, 0, 0)&quot; face=&quot;monospace&quot;&gt;&lt;span style=&quot;font-size: 0px&quot;&gt;shares%3CmxGraphModel%3E%3Croot%3E%3CmxCell%20id%3D%220%22%2F%3E%3CmxCell%20id%3D%221%22%20parent%3D%220%22%2F%3E%3CmxCell%20id%3D%222%22%20value%3D%22Payments%26lt%3Bbr%26gt%3B%26lt%3Bbr%26gt%3B%26lt%3Bul%26gt%3B%26lt%3Bli%26gt%3Buser_id%26lt%3B%2Fli%26gt%3B%26lt%3Bli%26gt%3Bprice%26lt%3B%2Fli%26gt%3B%26lt%3B%2Ful%26gt%3B%22%20style%3D%22whiteSpace%3Dwrap%3Bhtml%3D1%3B%22%20vertex%3D%221%22%20parent%3D%221%22%3E%3CmxGeometry%20x%3D%22700%22%20y%3D%2225%22%20width%3D%22120%22%20height%3D%22110%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3C%2Froot%3E%3C%2FmxGraphModel%3E&lt;/span&gt;&lt;/font&gt;&lt;font color=&quot;#ba0000&quot; face=&quot;monospace&quot;&gt;&lt;span style=&quot;font-size: 0px&quot;&gt;shares&lt;/span&gt;&lt;/font&gt;&lt;span&gt;shares&lt;/span&gt;&lt;font color=&quot;#ba0000&quot; face=&quot;monospace&quot;&gt;&lt;span style=&quot;font-size: 0px&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/font&gt;&lt;ul&gt;&lt;li&gt;user_id&lt;/li&gt;&lt;li&gt;Share&lt;/li&gt;&lt;/ul&gt;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="250" y="25" width="120" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="55" value="admin&lt;br&gt;&lt;br&gt;&lt;ul&gt;&lt;li&gt;Accepted shares&lt;br&gt;&lt;/li&gt;&lt;li&gt;Payment statusPayment status&lt;br&gt;&lt;/li&gt;&lt;/ul&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="110" y="400" width="140" height="170" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>

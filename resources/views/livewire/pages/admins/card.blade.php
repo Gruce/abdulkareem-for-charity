@@ -65,13 +65,12 @@
 
         </div>
         <ul class="mt-8 mb-4 flex justify-center space-x-4 text-center text-lg">
-            <button  type="button"
+            <button wire:click="confirm_downgrade()" type="button"
                 class="inline-block rounded-full text-white bg-gradient-to-r from-red-400  to-red-500 hover:bg-gradient-to-br shadow-md  hover:shadow-lg transition duration-450 w-9 h-9">
                 <i class="fa-solid fa-person-circle-xmark"></i>
             </button>
         </ul>
-        <a 
-            class="flex justify-between items-center ">
+        <a class="flex justify-between items-center ">
             <span class="text-sm">{{ $admin->name }}'s profile &RightArrow;</span>
 
         </a>
