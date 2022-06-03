@@ -1,5 +1,5 @@
 <div>
-    <div>
+    <div class="px-12">
         <div class="flex justify-between">
             <h2 class="text-center font-semibold text-4xl xl:text-5xl">فريق الصندوق</h2>
             {{-- add committee --}}

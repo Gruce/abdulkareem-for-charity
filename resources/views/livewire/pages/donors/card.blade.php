@@ -32,9 +32,8 @@
 
                         @if(auth()->user()->id == 1)
                         <button wire:click.prevent="confirm_upgrade()" class="mx-2 p-1">
-                            <i
-                                class="fa-solid fa-person-circle-check text-stone-400 duration-200 hover:text-amber-400"></i>
-                            </i>
+                            <i class="fa-solid fa-person-circle-plus text-stone-400 duration-200 hover:text-amber-400"></i>
+                            
                         </button>
                         
 
