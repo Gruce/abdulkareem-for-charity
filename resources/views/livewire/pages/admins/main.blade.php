@@ -14,8 +14,8 @@
             @endif
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4  mt-20 ">
-            @forelse($admins as $admin)
-            <livewire:pages.admins.card :admin="$admin" key="{{ now() }}" />
+            @forelse($admins as $item)
+            <livewire:pages.admins.card :item="$item" key="{{ now() }}" />
             @empty
             <div class="text-2xl font-medium text-gray-700">
                 لايوجد فريق

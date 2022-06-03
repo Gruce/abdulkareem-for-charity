@@ -13,15 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('committees', function (Blueprint $table) {
+        Schema::create('admins', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->integer('department'); #### CS: 1, IS: 2 ###
-            $table->integer('study_type'); #### Morning: 1, Evening: 2 ###
-            $table->integer('stage'); #### first: 1, Second: 2, third: 3, fourth: 4 ###
-            $table->string('phone_num');
-            $table->string('photo')->nullable();
-
+            $table->foreignId('user_id')->nullable()->constrained('users')->onDelete('cascade');
+            $table->integer('accepted_shares')->default(0);
+            $table->double('paid_amount')->default(false); ### لم يسلم الدفعة : false , تم الدفع : true ####
             $table->timestamps();
         });
     }
@@ -33,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('committees');
+        Schema::dropIfExists('admins');
     }
 };
