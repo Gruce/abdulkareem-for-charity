@@ -1,4 +1,4 @@
-<div class=" p-6 sm:flex sm:space-x-6 border border-gray-500 rounded-md">
+{{-- <div class=" p-6 sm:flex sm:space-x-6 border border-gray-500 rounded-md">
     <div class="flex-shrink-0 w-full mb-6 ml-4 h-44 sm:h-32 sm:w-32 sm:mb-0 ">
         <img src="@if ($admin->profile_photo_path) {{ asset($admin->profile_photo_path) }}@elseif($admin->gender == 1) {{ asset('/img/profile_woman.png') }} @elseif($admin->gender != 1) {{ asset('/img/profile_man.png') }} @endif"
             class="object-cover md:object-center  h-40 md:w-full md:h-full rounded-full bg-gray-500">
@@ -29,4 +29,5 @@
             </span>
         </div>
     </div>
-</div>
+</div> --}}
+
