@@ -13,17 +13,10 @@
                 </select>
             </div>
             @admin
-            <div class="col-span-1 p-1 md:hidden">
-                <a href="{{ route('add-case') }}">
-                    <button
-                        class="text-white px-4 py-2 text-sm font-bold rounded-md duration-200 bg-primary-500 hover:bg-white border border-transparent mt-1 hover:border-green-500 hover:text-primary-500 focus:ring-2 focus:ring-primary-300">
-                        <i class="fa-solid fa-plus text-lg"></i>
-                    </button>
-                </a>
-            </div>
+            
             <div class="justify-start items-center flex flex-col">
                 <a href="{{ route('add-case') }}"
-                    class="text-white text-md hidden md:block xl:text-xl duration-200 bg-primary-500 hover:bg-white border border-transparent hover:border-green-500 hover:text-primary-500 focus:ring-2 focus:ring-primary-300 rounded-lg px-1 xl:px-5 py-3">
+                    class="text-white text-md  xl:text-xl duration-200 bg-primary-500 hover:bg-white border border-transparent hover:border-green-500 hover:text-primary-500 focus:ring-2 focus:ring-primary-300 rounded-lg px-1 xl:px-5 py-3">
                     <i class="fa-solid fa-plus"></i>
                     إضافة حالة
                 </a>

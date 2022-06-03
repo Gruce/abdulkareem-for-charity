@@ -20,7 +20,7 @@ class Card extends Component
         'shares' => 'required',
     ];
 
-    protected $listeners = ['delete', '$refresh', 'getUserType', 'accept', 'deleteShare'];
+    protected $listeners = ['delete', '$refresh', 'getUserType', 'accept', 'deleteShare','upgrade'];
 
     public function delete(){
         User::findOrFail($this->item->id)->delete();
@@ -111,6 +111,47 @@ class Card extends Component
             'onDismissed' => '',
         ]);
     }
+    
+    public function confirm_upgrade()
+    {
+        if ($this->item->is_admin) {
+            $this->alert('warning', 'هذا المتبرع بالفعل مشرف', [
+                'position' => 'center',
+                'timer' => 3000,
+                'toast' => true,
+            ]);
+            return;
+        }
+        $this->alert('warning', "هل انت متأكد من ترقية ".$this->item->name."", [
+            'position' => 'center',
+            'timer' => 3000,
+            'toast' => true,
+            'showConfirmButton' => true,
+            'onConfirmed' => 'upgrade',
+            'showCancelButton' => true,
+            'onDismissed' => '',
+            'width' => '500',
+            'cancelButtonText' => 'الغاء',
+             'confirmButtonText' => 'تأكييد',
+        ]);
+        
+    }
+    public function upgrade()
+    {
+        
+        $user = User::findOrFail($this->item->id);
+        $user->is_admin = 1;
+        $user->save();
+        $this->alert('success', 'تم الترقية', [
+            'position' => 'center',
+            'timer' => 3000,
+            'toast' => true,
+        ]);
+        
+        $this->emitUp('$refresh');
+    }
+
+
 
     public function getUserType($type, $gender, $state, $study_type, $stage, $department, $division)
     {
