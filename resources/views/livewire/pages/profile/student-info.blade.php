@@ -119,13 +119,13 @@
 
             <div class="p-2">
                 <h3 class="text-2xl font-semibold text-primary-500">معلومات الطالب</h3>
-                <hr class="w-2/3">
+                <hr class="w-full">
             </div>
 
             <div class="form-item">
                 <div class="grid col-span-1">
                     <div class="text-base leading-7 ">
-                        <select wire:model="department"  name="" id="department" class="bg-gray-50 border border-primary-400 text-sm w-full focus:ring-primary-600 focus:border-primary-500  block p-2.5 rounded-md mt-2">
+                        <select wire:model="department"  name="" id="department" class="bg-gray-50 px-7 border border-primary-400 text-sm w-full focus:ring-primary-600 focus:border-primary-500  block p-2.5 rounded-md mt-2">
                             <option value="0">القسم</option>
                             <option value="1">علوم الحاسوب</option>
                             <option value="2">نظم المعلومات</option>
@@ -141,7 +141,7 @@
             <div class="form-item">
                 <div class="grid col-span-1">
                     <div class="text-base leading-7 ">
-                        <select wire:model="study_type"  name="" id=""class="bg-gray-50 border border-primary-400 text-sm w-full focus:ring-primary-600 focus:border-primary-500  block p-2.5 rounded-md mt-2">
+                        <select wire:model="study_type"  name="" id=""class="bg-gray-50 px-7 border border-primary-400 text-sm w-full focus:ring-primary-600 focus:border-primary-500  block p-2.5 rounded-md mt-2">
                             <option value="0">نوع الدراسة</option>
                             <option value="1">صباحي</option>
                             <option value="2">مسائي</option>
@@ -158,7 +158,7 @@
             <div class="form-item">
                 <div class="grid col-span-1">
                     <div class="text-base leading-7 ">
-                        <select wire:model="stage"  name="" id=""class="bg-gray-50 border border-primary-400 text-sm w-full focus:ring-primary-600 focus:border-primary-500  block p-2.5 rounded-md mt-2">
+                        <select wire:model="stage"  name="" id=""class="bg-gray-50 px-7 border border-primary-400 text-sm w-full focus:ring-primary-600 focus:border-primary-500  block p-2.5 rounded-md mt-2">
                             <option value="0">المرحلة</option>
                             <option value="1">اولى</option>
                             <option value="2">ثانية</option>
@@ -177,7 +177,7 @@
             <div class="form-item">
                 <div class="grid col-span-1">
                     <div class="text-base leading-7 ">
-                        <select wire:model="division"  name="" id=""class="bg-gray-50 border border-primary-400 text-sm w-full focus:ring-primary-600 focus:border-primary-500  block p-2.5 rounded-md mt-2">
+                        <select wire:model="division"  name="" id=""class="bg-gray-50 px-7 border border-primary-400 text-sm w-full focus:ring-primary-600 focus:border-primary-500  block p-2.5 rounded-md mt-2">
                             <option value="0">الشعبة</option>
                             <option value="1">A</option>
                             <option value="2">B</option>

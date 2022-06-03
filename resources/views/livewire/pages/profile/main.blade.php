@@ -22,7 +22,7 @@ class="h-32 w-32 object-cover rounded-full">
             الاساسية</button>
 
 
-        @if(auth()->user()->type == 1)
+        @if (auth()->user()->type == 1)
             <button @click="isOpen = false"
                 class="text-sm text-white p-2 text-center rounded w-56 hover:scale-105 duration-200 focus:ring-2 focus:ring-primary-700 bg-primary-500 focus:bg-primary-600">معلومات
                 الطالب</button>
@@ -45,41 +45,59 @@ class="h-32 w-32 object-cover rounded-full">
 
 
 
-<div >
-    <div class="bg-gray-200 w-screen h-screen">
+<div>
+    <div class="bg-gray-200">
         <div class="grid justify-items-center ">
-            <div class="flex mt-10">
+            <div class="lg:flex mt-10">
                 {{-- card --}}
-                <div class=" justify-center m-5">
-                    <div class="max-w-md rounded-2xl overflow-hidden shadow-md bg-white">
-                        <div class="row-span-2">
-                            <img class="w-full h-56 m-5 border-2 border-secondary-200" src="/img/user.png" alt="Sunset in the mountains">
+                <div class="justify-center mb-5">
+                    <div class="w-96 rounded-2xl overflow-hidden shadow-md bg-white">
+
+                        <div
+                            class="flex flex-col justify-center items-center relative h-52 bg-gray-200 bg-opacity-50 text-white">
+                            <img src="{{ asset($user->profile_photo_path ?? 'img/user.png') }}"
+                                class="h-32 w-32 object-cover rounded-full">
+
+                            <h5 class="text-2xl font-semibold text-black">{{ $user->name }}</h5>
                         </div>
 
-                        <div class="">
+                        <div>
                             <livewire:pages.profile.basic :user="$user" />
+                            <div class="my-5 mx-28 hidden md:block">
+                                <button type="submit"
+                                class="text-white bg-primary-600 hover:scale-105 duration-200 hover:bg-primary-800 focus:ring-2 focus:outline-none focus:ring-primary-600 font-medium text-md w-40 px-5 py-2.5 text-center rounded-md">
+                                حفظ
+                            </button>
+                            </div>
+                            
                         </div>
                     </div>
                 </div>
 
-                <div class="flex flex-col mr-5">
+                <div class="flex flex-col lg:mr-5">
                     <div class="mb-5">
-                        <div class="max-w-xl rounded-2xl overflow-hidden shadow-md bg-white">
+                        <div class="w-96 rounded-2xl overflow-hidden shadow-md bg-white">
                             <div class="">
                                 <livewire:pages.profile.contact :user="$user" />
                             </div>
                         </div>
                     </div>
 
-                    @if(auth()->user()->type == 1)
+                    @if (auth()->user()->type == 1)
                         <div>
-                            <div class="max-w-md rounded-2xl overflow-hidden shadow-md bg-white">
+                            <div class="w-96 rounded-2xl overflow-hidden shadow-md bg-white">
                                 <div class="">
                                     <livewire:pages.profile.student-info :user="$user" />
                                 </div>
                             </div>
                         </div>
                     @endif
+                    <div class="my-5 mx-28 lg:hidden mb-10">
+                        <button type="submit"
+                        class="text-white bg-primary-600 hover:scale-105 duration-200 hover:bg-primary-800 focus:ring-2 focus:outline-none focus:ring-primary-600 font-medium text-md w-40 px-5 py-2.5 text-center rounded-md">
+                        حفظ
+                    </button>
+                    </div>
                 </div>
             </div>
         </div>

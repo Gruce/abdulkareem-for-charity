@@ -9,28 +9,28 @@
             <div class="flex flex-col md:space-y-0 md:flex-row md:space-x-4">
                 <div class="form-item w-full">
                     <label class="text-xl">البريد الألكتروني</label>
-                    <input  type="text" id="email"
+                    <input wire:model="email" type="text" id="email"
                         class="bg-gray-50 border border-primary-400 w-full text-sm focus:ring-primary-600 focus:border-primary-500 block  p-2.5 mt-2 rounded-md">
-                    {{-- @error('email')
+                    @error('email')
                         <span class="text-red-500 error">{{ $message }}</span>
-                    @enderror --}}
+                    @enderror
                 </div>
             </div>
             <div class="form-item">
-                <label class="text-xl ">رقم الهاتف</label>
-                <input  type="text"
+                <label class="text-xl">رقم الهاتف</label>
+                <input wire:model="phone_number" type="text" id="phone_number"
                     class="bg-gray-50 border border-primary-400 text-sm w-full focus:ring-primary-600 focus:border-primary-500 block p-2.5 mt-2 rounded-md">
-                {{-- @error('phone_number')
+                @error('phone_number')
                     <span class="text-red-500 error">{{ $message }}</span>
-                @enderror --}}
+                @enderror
             </div>
             <div class="form-item">
                 <label class="text-xl ">معرف التليجرام</label>
-                <input wire:model="telegram_username" type="text"
+                <input wire:model="telegram_username" type="text" id="telegram_username"
                     class="bg-gray-50 border border-primary-400 text-sm w-full focus:ring-primary-600 focus:border-primary-500 block p-2.5 mt-2 rounded-md">
-                {{-- @error('telegram_username')
+                @error('telegram_username')
                     <span class="text-red-500 error">{{ $message }}</span>
-                @enderror --}}
+                @enderror
             </div>
         </form>
     </div>
