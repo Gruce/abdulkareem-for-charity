@@ -1003,6 +1003,10 @@ select{
   margin-top: 6rem;
   margin-bottom: 6rem;
 }
+.mx-6{
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
 .ml-3{
   margin-left: 0.75rem;
 }
@@ -1113,6 +1117,9 @@ select{
 }
 .mr-8{
   margin-right: 2rem;
+}
+.mt-16{
+  margin-top: 4rem;
 }
 .block{
   display: block;
@@ -2013,6 +2020,9 @@ select{
 }
 .font-serif{
   font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+}
+.font-noto{
+  font-family: Noto Sans Arabic, sans-serif;
 }
 .text-sm{
   font-size: 0.875rem;

@@ -12,7 +12,7 @@ class Card extends Component
 
     protected $listeners = ['downgrade'];
 
-    public $admin;
+    public $item;
     public function confirm_downgrade()
     {
         

@@ -17,14 +17,30 @@ class AdminSeeder extends Seeder
     {
         ### id = 1 ###
         Admin::create([
-            'name' => 'محمد جواد',
-            'department'=>'علوم الحاسوب',
-            'stage' => "المرحلة الثانية",
-            'photo' => "/img/mo.jpg",
-            'github' => "https://github.com/MohammedJ18",
-            'email' => "jawad6686@gmail.com",
+            'user_id' => 1,
+            'accepted_shares' => 0,
+            'paid_amount' => 0,
+        ]);
 
+        ### id = 2 ###
+        Admin::create([
+            'user_id' => 2,
+            'accepted_shares' => 0,
+            'paid_amount' => 0,
+        ]);
 
+        ### id = 3 ###
+        Admin::create([
+            'user_id' => 3,
+            'accepted_shares' => 0,
+            'paid_amount' => 0,
+        ]);
+
+        ### id = 4 ###
+        Admin::create([
+            'user_id' => 4,
+            'accepted_shares' => 0,
+            'paid_amount' => 0,
         ]);
     }
 }
