@@ -2942,6 +2942,9 @@ select{
   .md\:mt-5{
     margin-top: 1.25rem;
   }
+  .md\:mr-3{
+    margin-right: 0.75rem;
+  }
   .md\:block{
     display: block;
   }
