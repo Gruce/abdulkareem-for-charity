@@ -86,7 +86,7 @@ class User extends Authenticatable
         return $this->hasMany(Share::class);
     }
 
-    public function admins()
+    public function admin()
     {
         return $this->hasOne(Admin::class);
     }
