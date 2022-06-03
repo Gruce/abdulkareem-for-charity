@@ -20,10 +20,10 @@ class Card extends Component
         'shares' => 'required',
     ];
 
-    protected $listeners = ['delete', '$refresh', 'getUserType', 'accept', 'deleteShare'];
+    protected $listeners = ['delete', '$refresh', 'getUserType', 'accept', 'deleteShare','upgrade'];
 
     public function delete(){
-        User::findOrFail($this->share_id)->delete();
+        User::findOrFail($this->item->id)->delete();
         $this->alert('success', 'تم حذف المتبرع', [
             'position' => 'center',
             'timer' => 3000,
@@ -32,8 +32,8 @@ class Card extends Component
         $this->emitUp('$refresh');
     }
 
-    public function confirm($id){
-        $this->share_id = $id;
+    public function confirm(){
+        
         $this->alert('warning', 'هل انت متاكد من حذف المتبرع؟', [
             'position' => 'center',
             'timer' => 3000,
@@ -65,7 +65,7 @@ class Card extends Component
         $share = Share::findOrFail($this->share_id);
         $share->state($this->share_state);
         $this->alert('success', 'تم القبول', [
-            'position' => 'top',
+            'position' => 'center',
             'timer' => 3000,
             'toast' => true,
         ]);
@@ -90,7 +90,7 @@ class Card extends Component
         $share = Share::findOrFail($this->share_id);
         $share->delete();
         $this->alert('success', 'تم الرفض', [
-            'position' => 'top',
+            'position' => 'center',
             'timer' => 3000,
             'toast' => true,
         ]);
@@ -111,6 +111,47 @@ class Card extends Component
             'onDismissed' => '',
         ]);
     }
+    
+    public function confirm_upgrade()
+    {
+        if ($this->item->is_admin) {
+            $this->alert('warning', 'هذا المتبرع بالفعل مشرف', [
+                'position' => 'center',
+                'timer' => 3000,
+                'toast' => true,
+            ]);
+            return;
+        }
+        $this->alert('warning', "هل انت متأكد من ترقية ".$this->item->name."", [
+            'position' => 'center',
+            'timer' => 3000,
+            'toast' => true,
+            'showConfirmButton' => true,
+            'onConfirmed' => 'upgrade',
+            'showCancelButton' => true,
+            'onDismissed' => '',
+            'width' => '500',
+            'cancelButtonText' => 'الغاء',
+             'confirmButtonText' => 'تأكييد',
+        ]);
+        
+    }
+    public function upgrade()
+    {
+        
+        $user = User::findOrFail($this->item->id);
+        $user->is_admin = 1;
+        $user->save();
+        $this->alert('success', 'تم الترقية', [
+            'position' => 'center',
+            'timer' => 3000,
+            'toast' => true,
+        ]);
+        
+        $this->emitUp('$refresh');
+    }
+
+
 
     public function getUserType($type, $gender, $state, $study_type, $stage, $department, $division)
     {
