@@ -1487,6 +1487,19 @@ select{
 .gap-10{
   gap: 2.5rem;
 }
+<<<<<<< Updated upstream
+.gap-x-2{
+  -moz-column-gap: 0.5rem;
+       column-gap: 0.5rem;
+}
+.gap-x-10{
+  -moz-column-gap: 2.5rem;
+       column-gap: 2.5rem;
+=======
+.gap-20{
+  gap: 5rem;
+>>>>>>> Stashed changes
+}
 .gap-x-2{
   -moz-column-gap: 0.5rem;
        column-gap: 0.5rem;
@@ -1991,6 +2004,17 @@ select{
 .px-12{
   padding-left: 3rem;
   padding-right: 3rem;
+<<<<<<< Updated upstream
+=======
+}
+.py-0\.5{
+  padding-top: 0.125rem;
+  padding-bottom: 0.125rem;
+}
+.py-0{
+  padding-top: 0px;
+  padding-bottom: 0px;
+>>>>>>> Stashed changes
 }
 .py-0\.5{
   padding-top: 0.125rem;
@@ -2278,6 +2302,17 @@ select{
   color: rgb(219 234 254 / var(--tw-text-opacity));
 }
 .text-blue-800{
+<<<<<<< Updated upstream
+=======
+  --tw-text-opacity: 1;
+  color: rgb(30 64 175 / var(--tw-text-opacity));
+}
+.text-gray-300{
+  --tw-text-opacity: 1;
+  color: rgb(209 213 219 / var(--tw-text-opacity));
+}
+.text-yellow-400{
+>>>>>>> Stashed changes
   --tw-text-opacity: 1;
   color: rgb(30 64 175 / var(--tw-text-opacity));
 }
@@ -2527,12 +2562,33 @@ select{
   color: rgb(60 63 137 / var(--tw-text-opacity));
 }
 .hover\:text-amber-600:hover{
+<<<<<<< Updated upstream
   --tw-text-opacity: 1;
   color: rgb(217 119 6 / var(--tw-text-opacity));
 }
 .hover\:text-amber-400:hover{
   --tw-text-opacity: 1;
   color: rgb(251 191 36 / var(--tw-text-opacity));
+=======
+  --tw-text-opacity: 1;
+  color: rgb(217 119 6 / var(--tw-text-opacity));
+}
+.hover\:text-amber-400:hover{
+  --tw-text-opacity: 1;
+  color: rgb(251 191 36 / var(--tw-text-opacity));
+}
+.hover\:text-yellow-500:hover{
+  --tw-text-opacity: 1;
+  color: rgb(234 179 8 / var(--tw-text-opacity));
+}
+.hover\:text-yellow-600:hover{
+  --tw-text-opacity: 1;
+  color: rgb(202 138 4 / var(--tw-text-opacity));
+>>>>>>> Stashed changes
+}
+.hover\:text-red-700:hover{
+  --tw-text-opacity: 1;
+  color: rgb(185 28 28 / var(--tw-text-opacity));
 }
 .hover\:shadow-xl:hover{
   --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
