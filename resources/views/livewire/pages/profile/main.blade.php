@@ -47,7 +47,7 @@ class="h-32 w-32 object-cover rounded-full">
 
 <div>
     <div class="bg-gray-200">
-        <div class="grid flex justify-items-center ">
+        <div class="grid justify-items-center ">
             <div class="lg:flex mt-6">
                 {{-- card --}}
                 <div class="justify-center mb-5">
