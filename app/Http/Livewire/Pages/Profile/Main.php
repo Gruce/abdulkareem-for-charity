@@ -8,7 +8,6 @@ class Main extends Component
 {
     public function mount(){
         $this->user = auth()->user()->load('student');
-        
     }
 
     public function render(){

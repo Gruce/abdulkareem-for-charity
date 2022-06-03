@@ -6,12 +6,12 @@
     <div class="flex flex-col space-y-4 ">
         <div>
             <h2 class="text-2xl font-semibold">{{ $admin->name }}</h2>
-            <span class="text-sm text-gray-400">@if($admin->type == 1)
-                طالب - @if($admin->student->department == 1) علوم @else نظم @endif
-                - @if($admin->student->study_type == 1) صباحي @else مسائي @endif
-                - @if($admin->student->stage == 1) أولى @elseif($admin->student->stage == 2) ثانية
+            <span class="text-sm text-gray-400">@if ($admin->type == 1)
+                طالب - @if ($admin->student->department == 1) علوم @else نظم @endif
+                - @if ($admin->student->study_type == 1) صباحي @else مسائي @endif
+                - @if ($admin->student->stage == 1) أولى @elseif($admin->student->stage == 2) ثانية
                 @elseif($admin->student->stage == 3) ثالثة @else رابعة @endif
-                - @if($admin->student->division == 1) A @elseif($admin->student->stage == 2) B
+                - @if ($admin->student->division == 1) A @elseif($admin->student->stage == 2) B
                 @elseif($admin->student->stage == 3) C @elseif($admin->student->stage == 4) D @else E @endif
                 @elseif($admin->type == 2) تدريسي
                 @elseif($admin->type == 3) موظف
@@ -41,17 +41,45 @@
             <div class="col-span-3">
                 <h3 class="mt-6 text-center text-2xl ">{{ $admin->name }}</h3>
                 <p class="text-center text-sm text-gray-600 ">
-                    @if($admin->type == 1)
-                    طالب - @if($admin->student->department == 1) علوم @else نظم @endif
-                    - @if($admin->student->study_type == 1) صباحي @else مسائي @endif
-                    - @if($admin->student->stage == 1) أولى @elseif($admin->student->stage == 2) ثانية
-                    @elseif($admin->student->stage == 3) ثالثة @else رابعة @endif
-                    - @if($admin->student->division == 1) A @elseif($admin->student->stage == 2) B
-                    @elseif($admin->student->stage == 3) C @elseif($admin->student->stage == 4) D @else E @endif
-                    @elseif($admin->type == 2) تدريسي
-                    @elseif($admin->type == 3) موظف
-                    @elseif($admin->type == 4) من خارج الكلية
-                    @endif</span>
+                    @if ($admin->type == 1)
+                        طالب - @if ($admin->student->department == 1)
+                            علوم
+                        @else
+                            نظم
+                        @endif
+                        - @if ($admin->student->study_type == 1)
+                            صباحي
+                        @else
+                            مسائي
+                        @endif
+                        - @if ($admin->student->stage == 1)
+                            أولى
+                        @elseif($admin->student->stage == 2)
+                            ثانية
+                        @elseif($admin->student->stage == 3)
+                            ثالثة
+                        @else
+                            رابعة
+                        @endif
+                        - @if ($admin->student->division == 1)
+                            A
+                        @elseif($admin->student->stage == 2)
+                            B
+                        @elseif($admin->student->stage == 3)
+                            C
+                        @elseif($admin->student->stage == 4)
+                            D
+                        @else
+                            E
+                        @endif
+                    @elseif($admin->type == 2)
+                        تدريسي
+                    @elseif($admin->type == 3)
+                        موظف
+                    @elseif($admin->type == 4)
+                        من خارج الكلية
+                    @endif
+                    </span>
                 </p>
             </div>
         </div>
@@ -65,13 +93,12 @@
 
         </div>
         <ul class="mt-8 mb-4 flex justify-center space-x-4 text-center text-lg">
-            <button  type="button"
+            <button type="button"
                 class="inline-block rounded-full text-white bg-gradient-to-r from-red-400  to-red-500 hover:bg-gradient-to-br shadow-md  hover:shadow-lg transition duration-450 w-9 h-9">
                 <i class="fa-solid fa-person-circle-xmark"></i>
             </button>
         </ul>
-        <a 
-            class="flex justify-between items-center ">
+        <a class="flex justify-between items-center ">
             <span class="text-sm">{{ $admin->name }}'s profile &RightArrow;</span>
 
         </a>
