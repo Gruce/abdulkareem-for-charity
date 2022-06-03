@@ -9,5 +9,14 @@ class Admin extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['accepted_shares', 'payment_status'];
+    protected $fillable = [ 'accepted_shares', 'paid_amount', 'user_id' ];
+
+    ### Relationships ###
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+
+    ### end Relationships ###
 }

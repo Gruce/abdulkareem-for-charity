@@ -15,8 +15,9 @@ return new class extends Migration
     {
         Schema::create('admins', function (Blueprint $table) {
             $table->id();
-            $table->integer('accepted_shares');
-            $table->boolean('payment_status')->default(false); ### لم يسلم الدفعة : false , تم الدفع : true ####
+            $table->foreignId('user_id')->nullable()->constrained('users')->onDelete('cascade');
+            $table->integer('accepted_shares')->default(0);
+            $table->double('paid_amount')->default(false); ### لم يسلم الدفعة : false , تم الدفع : true ####
             $table->timestamps();
         });
     }
