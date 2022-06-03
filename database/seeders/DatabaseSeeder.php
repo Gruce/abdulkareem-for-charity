@@ -21,7 +21,7 @@ class DatabaseSeeder extends Seeder
             ShareSeeder::class,
             EventSeeder::class,
             DeveloperSeeder::class,
-            CommitteeSeeder::class,
+            AdminSeeder::class,
 
         ]);
     }
