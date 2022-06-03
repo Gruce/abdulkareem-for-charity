@@ -1,15 +1,15 @@
 <div>
-    <div class="flex flex-col  container mx-auto px-4 py-8 md:px-0 md:py-0">
+    <div class="flex flex-col   px-4 py-8 md:px-10 md:py-0">
 
         {{-- Intro --}}
         <div class="basis-1/4 grid lg:grid-cols-12 justify-between">
 
             <!-- Text -->
-            <div class="lg:col-span-7 text-right xl:mt-20 md:px-12">
+            <div class="lg:col-span-7 text-right xl:mt-20 md:px-8">
                 <h1 class="text-secondary-900 text-2xl md:text-4xl xl:text-5xl font-bold text-center md:text-right">
                     صندوق الكرم
                 </h1>
-                <p class="leading-10 mt-6 md:mt-10 text-base md:text-xl xl:text-2xl text-gray-700 font-Alhurrareg px-2">
+                <p class="leading-10 mt-6 md:mt-10 text-base md:text-xl xl:text-2xl text-gray-700 font-Alhurrareg px-2 md:pl-4    ">
                     هو مبادرة ونشاط طلابي بحت ينطلق من طلبة كلية علوم الحاسوب
                     وتكنلوجيا المعلومات في جامعة البصرة. الهدف منه رعاية الاعمال الخيرية داخل الكلية وتكون الاولوية في
                     صرف الصندوق
@@ -22,7 +22,7 @@
             </div>
 
             {{-- Photo --}}
-            <div class="lg:col-span-5">
+            <div class="lg:col-span-5 ">
                 <img src="/img/About1.png" class="w-full mt-6 lg:mt-0 md:w-3/4 h-auto m-auto">
             </div>
 
@@ -37,7 +37,7 @@
             </div>
 
             <!-- Text -->
-            <div class="basis-1/2 lg:col-span-7 mt-4 xl:mt-40 text-right md:px-9">
+            <div class="basis-1/2 lg:col-span-7 mt-4 xl:mt-40 text-right md:px-8">
                 <h1 class="text-secondary-900 text-2xl md:text-4xl xl:text-5xl font-bold text-center md:text-right">
                     من هو الأستاذ عبدالكريم
                 </h1>
@@ -58,7 +58,7 @@
         <div class="basis-1/4 grid lg:grid-cols-12 justify-between mt-12 lg:mt-20">
 
             <!-- Text -->
-            <div class="basis-1/2 lg:col-span-5 xl:mt-32  text-right md:px-9">
+            <div class="basis-1/2 lg:col-span-5 xl:mt-32  text-right md:px-8">
                 <h1 class="text-secondary-900 text-2xl md:text-4xl xl:text-5xl font-bold text-center md:text-right">
                     كيف يتم جمع التبرعات؟
                 </h1>
@@ -83,7 +83,7 @@
         </div>
 
         {{-- Team --}}
-        <div class="basis-1/4 flex flex-col mt-20 py-10 space-y-40 xl:px-32">
+        <div class="basis-1/4 flex flex-col mt-20 py-10 space-y-40 xl:px-24">
 
             {{-- Developers --}}
             <div>
@@ -92,7 +92,7 @@
                 </h1>
 
                 {{-- Cards --}}
-                <div class="flex flex-wrap gap-2 justify-center ">
+                <div class="flex flex-wrap gap-x-10 justify-center ">
                     @foreach ($developers as $team)
                     <livewire:pages.about.card :team="$team" key="{{ now() }}" />
                     @endforeach

@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Livewire\Pages\Profile;
+
 use Jantinnerezo\LivewireAlert\LivewireAlert;
 use Livewire\Component;
 
@@ -13,8 +14,10 @@ class StudentInfo extends Component
         'study_type' => 'required',
         'stage' => 'required',
     ];
+    public $department, $study_type, $stage, $user, $division;
 
-    public function edit(){
+    public function edit()
+    {
         $this->validate();
 
         $this->user->student->edit([
@@ -31,17 +34,23 @@ class StudentInfo extends Component
             'toast' => true,
         ]);
     }
-    public function mount($user){
+    public function mount($user)
+    {
         $this->user = $user;
-        if(auth()->user()->type == 1){
-        $this->department = $this->user->student->department;
-        $this->study_type = $this->user->student->study_type;
-        $this->stage = $this->user->student->stage;
-        $this->division = $this->user->student->division;
+        if (auth()->user()->type == 1) {
+            if ($this->department)
+                $this->department = $this->user->student->department;
+            if ($this->study_type)
+                $this->study_type = $this->user->student->study_type;
+            if ($this->stage)
+                $this->stage = $this->user->student->stage;
+            if ($this->division)
+                $this->division = $this->user->student->division;
         }
     }
 
-    public function render(){
+    public function render()
+    {
         return view('livewire.pages.profile.student-info');
     }
 }

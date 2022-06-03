@@ -13,6 +13,7 @@
                     <span class="text-red-500 error">{{ $message }}</span>
                 @enderror
 
+                
                 <label class="text-xl">السكن</label>
                 <input wire:model="address" type="text" value="{{ $address }}"    class="bg-gray-50 border border-primary-400 text-sm w-full md:col-span-1 focus:ring-primary-600 focus:border-primary-500  block p-2.5 rounded-md mt-2 ">
                 @error('name')

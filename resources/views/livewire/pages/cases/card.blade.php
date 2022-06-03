@@ -10,9 +10,9 @@
 
             <p class="leading-relaxed text-base font-bold text-gray-400">{{ $event->getLimit('description') }}
                 {{-- more info button --}}
-                <a class="text-secondary-600 text-sm font-bold duration-300 mb-4"
+                <a class="text-gray-600 text-sm font-bold duration-300 mb-4"
                     href="{{ route('case-page', ['case_id' => $event->id]) }}">
-                    للمزيد من المعلومات
+                    للمزيد  
                 </a>
 
             </p>
