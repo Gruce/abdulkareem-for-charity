@@ -17,7 +17,7 @@ class Basic extends Component
         'name' => 'required',
     ];
 
-    public $profile_photo_path , $profile_photo ,  $name, $address;
+    public $profile_photo_path , $profile_photo ,  $name , $email , $phone_number , $telegram_username ;
 
     public  function edit(){
         $this->validate();
@@ -25,7 +25,6 @@ class Basic extends Component
             'name' => $this->name,
             'phone_number' => $this->phone_number,
             'telegram_username' => $this->telegram_username,
-            'address' => $this->address,
         ]);
 
         if($this->profile_photo)
@@ -42,7 +41,6 @@ class Basic extends Component
         $this->user = $user;
         $this->name = $this->user->name;
         $this->email = $this->user->email;
-        $this->address = $this->user->address;
         $this->phone_number = $this->user->phone_number;
         $this->profile_photo_path = $this->user->profile_photo_path;
         $this->telegram_username = $this->user->telegram_username;
