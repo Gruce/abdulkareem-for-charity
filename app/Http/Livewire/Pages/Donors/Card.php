@@ -60,6 +60,8 @@ class Card extends Component
         ]);
         $share = new Share();
         $share->add($data);
+
+        
         $this->reset();
     }
 
