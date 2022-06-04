@@ -17,7 +17,7 @@ class Basic extends Component
         'name' => 'required',
     ];
 
-    public $profile_photo_path , $profile_photo , $name, $phone_number,$telegram_username;
+    public $profile_photo_path , $profile_photo ,  $name , $email , $phone_number , $telegram_username ;
 
     public  function edit(){
         $this->validate();
@@ -26,8 +26,6 @@ class Basic extends Component
             'phone_number' => $this->phone_number,
             'telegram_username' => $this->telegram_username,
         ]);
-        // dd($this->phone_number);
-
 
         if($this->profile_photo)
             $this->user->addProfile($this->profile_photo);
