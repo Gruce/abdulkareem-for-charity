@@ -16,10 +16,10 @@ return new class extends Migration
         Schema::create('students', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->nullable()->constrained('users')->onDelete('cascade');
-            $table->integer('department')->nullable(); #### CS: 1, IS: 2 ###
-            $table->integer('study_type')->nullable(); #### Morning: 1, Evening: 2 ###
-            $table->integer('stage')->nullable(); #### first: 1, Second: 2, third: 3, fourth: 4 ###
-            $table->integer('division')->nullable(); #### A:1, B:2, C:3, D:4, E:5 #####
+            $table->integer('department')->default(1)->nullable(); #### CS: 1, IS: 2 ###
+            $table->integer('study_type')->default(1)->nullable(); #### Morning: 1, Evening: 2 ###
+            $table->integer('stage')->default(1)->nullable(); #### first: 1, Second: 2, third: 3, fourth: 4 ###
+            $table->integer('division')->default(1)->nullable(); #### A:1, B:2, C:3, D:4, E:5 #####
             $table->timestamps();
         });
     }

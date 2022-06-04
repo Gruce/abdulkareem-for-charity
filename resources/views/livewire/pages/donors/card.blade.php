@@ -26,16 +26,16 @@
                         @if (count($item->pay()) > 0)
                         <button @click="isOpen = !isOpen" class="mx-2 p-1">
                             <i
-                                class="fa-solid fa-bell text-amber-400 duration-300  animate-spin hover:text-amber-600 "></i>
+                                class="fa-solid fa-bell text-amber-400 duration-150 hover:animate-none animate-ping hover:text-amber-600 "></i>
                         </button>
                         @endif
 
                         @if(auth()->user()->id == 1)
                         <button wire:click.prevent="confirm_upgrade()" class="mx-2 p-1">
                             <i class="fa-solid fa-person-circle-plus text-stone-400 duration-200 hover:text-amber-400"></i>
-                            
+
                         </button>
-                        
+
 
                         <button wire:click.prevent="confirm()" class="mx-2 p-1">
                             <i class=" fa-solid fa-trash text-stone-400 duration-200 hover:text-red-500">
@@ -65,6 +65,7 @@
                     </div>
                     @endif
                     @endforeach
+                    
 
 
                 </div>
