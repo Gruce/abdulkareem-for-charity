@@ -4,11 +4,12 @@ namespace App\Http\Livewire\Pages\Profile;
 use Jantinnerezo\LivewireAlert\LivewireAlert;
 use Livewire\Component;
 
+
 class StudentInfo extends Component
 {
     use LivewireAlert;
 
-    public $department , $study_type ,  $stage , $division;
+    public $department, $study_type, $stage, $division;
 
     protected $rules = [
         'department' => 'required',

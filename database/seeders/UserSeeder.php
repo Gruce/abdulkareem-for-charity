@@ -24,7 +24,10 @@ class UserSeeder extends Seeder
             'password' => bcrypt('123456'),
             'is_admin' => true,
             'type' => 1,
-            'gender' => 1
+            'gender' => 1,
+            'phone_number' =>077,
+            'telegram_username' =>077,
+
         ]);
 
         // id:2
