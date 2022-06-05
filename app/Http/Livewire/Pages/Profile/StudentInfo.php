@@ -8,6 +8,8 @@ class StudentInfo extends Component
 {
     use LivewireAlert;
 
+    public $department , $study_type ,  $stage , $division;
+
     protected $rules = [
         'department' => 'required',
         'study_type' => 'required',
