@@ -15,6 +15,7 @@ class StudentInfo extends Component
         'department' => 'required',
         'study_type' => 'required',
         'stage' => 'required',
+        'devision' => 'required',
     ];
 
     public function edit(){
