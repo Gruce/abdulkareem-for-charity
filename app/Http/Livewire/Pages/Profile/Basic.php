@@ -17,7 +17,7 @@ class Basic extends Component
         'name' => 'required',
     ];
 
-    public $profile_photo_path , $profile_photo ,  $name , $email , $phone_number , $telegram_username ;
+    public $profile_photo_path, $profile_photo, $name, $email, $phone_number, $telegram_username ;
 
     public  function edit(){
         $this->validate();
