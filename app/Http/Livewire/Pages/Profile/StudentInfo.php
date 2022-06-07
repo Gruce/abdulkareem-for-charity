@@ -15,7 +15,7 @@ class StudentInfo extends Component
         'department' => 'required',
         'study_type' => 'required',
         'stage' => 'required',
-        'devision' => 'required',
+        'division' => 'required',
     ];
 
     public function edit(){
@@ -34,7 +34,7 @@ class StudentInfo extends Component
             'toast' => true,
         ]);
     }
-    
+
     public function mount($user){
         $this->user = $user;
         if(auth()->user()->type == 1){
