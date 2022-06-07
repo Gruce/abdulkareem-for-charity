@@ -20,7 +20,6 @@ class StudentInfo extends Component
 
     public function edit(){
         $this->validate();
-
         $this->user->student->edit([
             'department' => $this->department,
             'study_type' => $this->study_type,
@@ -35,16 +34,13 @@ class StudentInfo extends Component
             'toast' => true,
         ]);
     }
+    
     public function mount($user){
         $this->user = $user;
         if(auth()->user()->type == 1){
-        if( $this->department)
         $this->department = $this->user->student->department;
-        if( $this->study_type)
         $this->study_type = $this->user->student->study_type;
-        if( $this->stage)
         $this->stage = $this->user->student->stage;
-        if( $this->division)
         $this->division = $this->user->student->division;
         }
     }
