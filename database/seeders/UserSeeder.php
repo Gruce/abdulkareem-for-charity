@@ -24,7 +24,10 @@ class UserSeeder extends Seeder
             'password' => bcrypt('123456'),
             'is_admin' => true,
             'type' => 1,
-            'gender' => 1
+            'gender' => 1,
+            'phone_number' =>'077',
+            'telegram_username' =>'tttt',
+
         ]);
 
         // id:2
@@ -35,8 +38,8 @@ class UserSeeder extends Seeder
             'is_admin' => true,
             'type' => 2,
             'gender' => 2,
-            'phone_number' =>077,
-            'telegram_username' =>077,
+            'phone_number' =>'077777',
+            'telegram_username' =>'ttt',
 
         ]);
 
