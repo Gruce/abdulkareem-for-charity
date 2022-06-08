@@ -61,7 +61,7 @@ class Card extends Component
         $share = new Share();
         $share->add($data);
 
-        
+
         $this->reset();
     }
 
@@ -75,6 +75,7 @@ class Card extends Component
             'toast' => true,
         ]);
         $this->emitUp('$refresh');
+        $this->emitTo('pages.home.info', '$refresh');
     }
 
     public function confirm_accepet($id, $state)

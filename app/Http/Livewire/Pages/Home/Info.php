@@ -11,8 +11,8 @@ use Livewire\Component;
 
 class Info extends Component
 {
-   
-    
+
+    protected $listeners = ['$refresh'];
 
     public function render()
     {
@@ -60,7 +60,7 @@ class Info extends Component
 
 
         ]);
-        
+
         return view('livewire.pages.home.info', [
             'menu' => $menu,
         ]);
@@ -91,4 +91,3 @@ class MenuItem
         $this->value = $data['value'];
     }
 }
-

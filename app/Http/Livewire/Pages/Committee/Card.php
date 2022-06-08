@@ -16,12 +16,12 @@ class Card extends Component
     protected $listeners = ['delete', '$refresh'];
     use LivewireAlert;
 
-    public $committee_id ,$committee, $edit_id = null;
+    public $committee_id, $committee, $edit_id = null;
 
 
     public function delete()
     {
-         Committee::findOrFail($this->committee_id)->delete();
+        Committee::findOrFail($this->committee_id)->delete();
         $this->alert('success', 'تم الحذف', [
             'position' => 'center',
             'timer' => 3000,
@@ -30,7 +30,8 @@ class Card extends Component
         $this->emitUp('$refresh');
     }
 
-    public function confirm($id){
+    public function confirm($id)
+    {
         $this->committee_id = $id;
         $this->alert('warning', 'هل انت متأكد من الحذف؟', [
             'position' => 'center',
@@ -43,17 +44,18 @@ class Card extends Component
         ]);
     }
 
-    public function edit(Committee $committee){
+    public function edit(Committee $committee)
+    {
         $this->edit_id = $committee->id;
         $this->name = $committee->name;
         $this->department = $committee->department;
         $this->stage = $committee->stage;
         $this->study_type = $committee->study_type;
         $this->phone_num = $committee->phone_num;
-
     }
 
-    public function save(){
+    public function save()
+    {
         $this->committee->name = $this->name;
         $this->committee->department = $this->department;
         $this->committee->stage = $this->stage;
@@ -67,7 +69,6 @@ class Card extends Component
             'timer' => '3000',
             'toast' => true,
         ]);
-
     }
 
 
