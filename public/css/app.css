@@ -1507,13 +1507,13 @@ select{
 .gap-8{
   gap: 2rem;
 }
-.gap-x-10{
-  -moz-column-gap: 2.5rem;
-       column-gap: 2.5rem;
-}
 .gap-x-2{
   -moz-column-gap: 0.5rem;
        column-gap: 0.5rem;
+}
+.gap-x-10{
+  -moz-column-gap: 2.5rem;
+       column-gap: 2.5rem;
 }
 .space-x-8 > :not([hidden]) ~ :not([hidden]){
   --tw-space-x-reverse: 0;
@@ -3043,14 +3043,14 @@ select{
   .md\:w-1\/2{
     width: 50%;
   }
+  .md\:w-1\/4{
+    width: 25%;
+  }
   .md\:w-full{
     width: 100%;
   }
   .md\:w-3\/4{
     width: 75%;
-  }
-  .md\:w-1\/4{
-    width: 25%;
   }
   .md\:max-w-lg{
     max-width: 32rem;

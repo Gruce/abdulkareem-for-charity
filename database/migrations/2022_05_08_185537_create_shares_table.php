@@ -18,7 +18,7 @@ return new class extends Migration
             $table->foreignId('user_id')->nullable()->constrained('users')->onDelete('set null');
             $table->integer('share')->default(0);
             $table->boolean('state')->default(false);
-            $table->text('note')->nullable();
+            $table->integer('admin_id')->nullable();
             $table->timestamps();
         });
     }

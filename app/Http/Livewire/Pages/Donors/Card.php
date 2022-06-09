@@ -47,41 +47,27 @@ class Card extends Component
         ]);
     }
 
-    public function add($id)
-    {
-        $data = [
-            'user_id' => $id,
-            'share' => $this->share,
-        ];
-        $this->alert('success', 'تمت الاضافة', [
-            'position' => 'center',
-            'timer' => 3000,
-            'toast' => true,
-        ]);
-        $share = new Share();
-        $share->add($data);
-
-
-        $this->reset();
-    }
+   
 
     public function accept()
     {
         $share = Share::findOrFail($this->share_id);
-        $share->state($this->share_state);
+        $share->accept_share($this->share_state);
+        $share->admin_id = auth()->user()->id;
         $this->alert('success', 'تم القبول', [
             'position' => 'center',
             'timer' => 3000,
             'toast' => true,
         ]);
         $this->emitUp('$refresh');
-        $this->emitTo('pages.home.info', '$refresh');
+        $this->emitTo('components.navbar', '$refresh');
     }
 
     public function confirm_accepet($id, $state)
     {
         $this->share_id = $id;
         $this->share_state = $state;
+        
         $this->alert('warning', 'هل انت متأكد من قبول الطلب؟', [
             'position' => 'center',
             'timer' => 3000,
