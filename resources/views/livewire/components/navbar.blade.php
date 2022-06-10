@@ -17,9 +17,9 @@
               @admin
                 <div
                     class="hidden   md:flex justify-around   ml-10  text-gray-500 text-base text-center ">
-                    
+
                     <div class="flex flex-col mx-2 border-b border-gray-200">
-                        <span>{{ $total }}</span>
+                        <span>@money_parse_by_decimal($total, 'IQD') </span>
                         <span class="text-2xs -mt-2">الكلي</span>
                     </div>
                     <div class="flex flex-col mx-2 border-b border-gray-200">
