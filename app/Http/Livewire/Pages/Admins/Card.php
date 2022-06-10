@@ -5,6 +5,8 @@ namespace App\Http\Livewire\Pages\Admins;
 
 use Jantinnerezo\LivewireAlert\LivewireAlert;
 use Livewire\Component;
+use Cknow\Money\Money;
+
 
 class Card extends Component
 {
