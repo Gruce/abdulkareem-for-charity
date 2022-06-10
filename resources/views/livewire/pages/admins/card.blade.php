@@ -5,21 +5,50 @@
                 class="col-span-2 rounded-full h-32" />
             <div class="col-span-3">
                 <h3 class="mt-6 text-center text-2xl ">{{ $item->name }}</h3>
-                <h3 class="mt-2 text-center text-base ">@if($item->type == 1)
-                    طالب - @if($item->student->department == 1) علوم @else نظم @endif
-                    - @if($item->student->study_type == 1) صباحي @else مسائي @endif
-                    - @if($item->student->stage == 1) أولى @elseif($item->student->stage == 2) ثانية
-                    @elseif($item->student->stage == 3) ثالثة @else رابعة @endif
-                    - @if($item->student->division == 1) A @elseif($item->student->stage == 2) B
-                    @elseif($item->student->stage == 3) C @elseif($item->student->stage == 4) D @else E @endif
-                    @elseif($item->type == 2) تدريسي
-                    @elseif($item->type == 3) موظف
-                    @elseif($item->type == 4) من خارج الكلية
-                    @endif</h3>
+                <h3 class="mt-2 text-center text-base ">
+                    @if ($item->type == 1)
+                        طالب - @if ($item->student->department == 1)
+                            علوم
+                        @else
+                            نظم
+                        @endif
+                        - @if ($item->student->study_type == 1)
+                            صباحي
+                        @else
+                            مسائي
+                        @endif
+                        - @if ($item->student->stage == 1)
+                            أولى
+                        @elseif($item->student->stage == 2)
+                            ثانية
+                        @elseif($item->student->stage == 3)
+                            ثالثة
+                        @else
+                            رابعة
+                        @endif
+                        - @if ($item->student->division == 1)
+                            A
+                        @elseif($item->student->stage == 2)
+                            B
+                        @elseif($item->student->stage == 3)
+                            C
+                        @elseif($item->student->stage == 4)
+                            D
+                        @else
+                            E
+                        @endif
+                    @elseif($item->type == 2)
+                        تدريسي
+                    @elseif($item->type == 3)
+                        موظف
+                    @elseif($item->type == 4)
+                        من خارج الكلية
+                    @endif
+                </h3>
             </div>
         </div>
         <div class="grid grid-cols-5 mb-5">
-            <div x-data="{isOpen: false}" class="col-span-2 flex flex-col">
+            <div x-data="{ isOpen: false }" class="col-span-2 flex flex-col">
                 <div class="flex justify-center">
                     <button wire:click="confirm_downgrade()" type="button"
                         class="inline-block rounded-full text-white bg-gradient-to-r from-red-400  to-red-500 hover:bg-gradient-to-br shadow-md  hover:shadow-lg transition duration-450 w-9 h-9">
