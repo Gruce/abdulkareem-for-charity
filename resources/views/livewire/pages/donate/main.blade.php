@@ -42,11 +42,13 @@
             </div>
         </div>
         {{-- card --}}
-        <div
+        {{-- <div
+        @forelse($admins as $item)
+
             class="flex flex-col justify-center w-full px-8  my-12 text-center rounded-md md:w-96 lg:w-80 xl:w-64 border border-primary-500 mx-auto">
             <img alt="" class="self-center flex-shrink-0 w-24 h-24 -mt-12 bg-center bg-cover rounded-full " src="/img/mo.jpg">
             <div class="flex-1 my-4">
-                <p class="text-xl font-semibold leading-snug">موسى نمير</p>
+                <p class="text-xl font-semibold leading-snug"> {{ $item->name }}</p>
                 <p class="text-xs block mt-4">مرحلة ثانية - علوم الحاسوب</p>
             </div>
             <div class="flex flex-col items-center p-3 space-x-3 border-t-2 border-primary-500 w-auto">
@@ -58,5 +60,16 @@
                 </div>
             </div>
         </div>
+        @empty
+        @endforelse
+    </div> --}}
+        <div class="">
+            @forelse($admins as $item)
+                <livewire:pages.donate.card :item="$item" key="{{ now() }}" />
+            @empty
+                <div class="text-2xl font-medium text-gray-700">
+                    لايوجد فريق
+                </div>
+            @endforelse
+        </div>
     </div>
-</div>
