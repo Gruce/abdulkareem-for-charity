@@ -4,10 +4,11 @@ namespace App\Http\Livewire\Pages\Donate;
 
 use Livewire\Component;
 use App\Models\Share;
-use App\Models\Committee;
+use App\Models\User;
 use Jantinnerezo\LivewireAlert\LivewireAlert;
 
-class Main extends Component{
+class Main extends Component
+{
     use LivewireAlert;
 
     protected $rules = [
@@ -29,7 +30,9 @@ class Main extends Component{
         $this->reset();
     }
 
-    public function render(){
+    public function render()
+    {
+        $this->admins = User::where('is_admin', true)->get();
 
         return view('livewire.pages.donate.main');
     }

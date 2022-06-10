@@ -19,7 +19,8 @@
             <div wire:ignore.self x-data="{ isOpen: false }" class="flex flex-col justify-between pt-2 space-x-4 ">
                 <div class="flex justify-between h-8">
                     <div class="flex align-center">
-                        <p class="text-xs text-gray-600 mr-2 self-center">انضم {{ $item->created_at->diffForHumans() }}</p>
+                        <p class="text-xs text-gray-600 mr-2 self-center">انضم {{ $item->created_at->diffForHumans() }}
+                        </p>
                     </div>
                     <div class="flex  justify-between text-base">
 
@@ -32,7 +33,8 @@
 
                         @if(auth()->user()->id == 1)
                         <button wire:click.prevent="confirm_upgrade()" class="mx-2 p-1">
-                            <i class="fa-solid fa-person-circle-plus text-stone-400 duration-200 hover:text-amber-400"></i>
+                            <i
+                                class="fa-solid fa-person-circle-plus text-stone-400 duration-200 hover:text-amber-400"></i>
 
                         </button>
 
@@ -65,7 +67,7 @@
                     </div>
                     @endif
                     @endforeach
-                    
+
 
 
                 </div>
