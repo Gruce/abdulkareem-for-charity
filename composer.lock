@@ -4,8 +4,76 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3a451f4002dec7d6bb850816fa8d5227",
+    "content-hash": "3711605d9c5f5890b15b00e090e9b450",
     "packages": [
+        {
+            "name": "akaunting/laravel-money",
+            "version": "3.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/akaunting/laravel-money.git",
+                "reference": "22336631239eb008e26d322faa208cbc50757a38"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/akaunting/laravel-money/zipball/22336631239eb008e26d322faa208cbc50757a38",
+                "reference": "22336631239eb008e26d322faa208cbc50757a38",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/contracts": "^8.67|^9.0",
+                "illuminate/support": "^8.67|^9.0",
+                "illuminate/view": "^8.67|^9.0",
+                "php": "^8.0",
+                "vlucas/phpdotenv": "^5.4.1"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^6.23|^7.4",
+                "phpunit/phpunit": "^9.5",
+                "vimeo/psalm": "^4.23"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Akaunting\\Money\\Provider"
+                    ]
+                }
+            },
+            "autoload": {
+                "files": [
+                    "src/helpers.php"
+                ],
+                "psr-4": {
+                    "Akaunting\\Money\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Denis Duliçi",
+                    "email": "info@akaunting.com",
+                    "homepage": "https://akaunting.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Currency formatting and conversion package for Laravel",
+            "keywords": [
+                "convert",
+                "currency",
+                "format",
+                "laravel",
+                "money"
+            ],
+            "support": {
+                "issues": "https://github.com/akaunting/laravel-money/issues",
+                "source": "https://github.com/akaunting/laravel-money/tree/3.0.1"
+            },
+            "time": "2022-05-11T06:34:38+00:00"
+        },
         {
             "name": "bacon/bacon-qr-code",
             "version": "2.0.7",
@@ -119,74 +187,6 @@
                 }
             ],
             "time": "2021-08-15T20:50:18+00:00"
-        },
-        {
-            "name": "cknow/laravel-money",
-            "version": "v6.5.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/cknow/laravel-money.git",
-                "reference": "f082518d1ec9544c84b406fb4cc86915c740d312"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/cknow/laravel-money/zipball/f082518d1ec9544c84b406fb4cc86915c740d312",
-                "reference": "f082518d1ec9544c84b406fb4cc86915c740d312",
-                "shasum": ""
-            },
-            "require": {
-                "ext-intl": "*",
-                "ext-json": "*",
-                "illuminate/support": "^7.0|^8.0|^9.0",
-                "illuminate/view": "^7.0|^8.0|^9.0",
-                "moneyphp/money": "^3.3|^4.0.3",
-                "php": "^7.3|^8.0"
-            },
-            "require-dev": {
-                "graham-campbell/testbench": "^5.7",
-                "illuminate/filesystem": "^7.0|^8.0|^9.0",
-                "mockery/mockery": "^1.5",
-                "phpunit/phpunit": "^8.5|^9.5.10",
-                "spatie/phpunit-watcher": "^1.0"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "Cknow\\Money\\MoneyServiceProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "files": [
-                    "src/helpers.php"
-                ],
-                "psr-4": {
-                    "Cknow\\Money\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Ricardo Gobbo de Souza",
-                    "email": "ricardogobbosouza@yahoo.com.br"
-                }
-            ],
-            "description": "Laravel Money",
-            "homepage": "https://github.com/cknow/laravel-money",
-            "keywords": [
-                "currency",
-                "laravel",
-                "money"
-            ],
-            "support": {
-                "issues": "https://github.com/cknow/laravel-money/issues",
-                "source": "https://github.com/cknow/laravel-money/tree/v6.5.1"
-            },
-            "time": "2022-05-20T17:20:23+00:00"
         },
         {
             "name": "dasprid/enum",

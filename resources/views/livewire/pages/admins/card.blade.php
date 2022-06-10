@@ -4,6 +4,7 @@
             <img src="@if ($item->profile_photo_path) {{ asset($item->profile_photo_path) }}@elseif($item->gender == 1) {{ asset('/img/profile_woman.png') }} @elseif($item->gender != 1) {{ asset('/img/profile_man.png') }} @endif"
                 class="col-span-2 rounded-full h-32" />
             <div class="col-span-3">
+
                 <h3 class="mt-6 text-center text-2xl ">{{ $item->name }}</h3>
                 <h3 class="mt-2 text-center text-base ">
                     @if ($item->type == 1)
@@ -72,14 +73,11 @@
             </div>
             <div class="col-span-3">
                 <ul class="  flex justify-around text-center text-2xl">
-                    <li class="flex flex-col"><span class="font-sans mb-3">سهم</span></li>
-                    <li class=" flex flex-col"><span class="font-sans mb-3">مستلم</span>0</li>
+                    <li class="flex flex-col"><span class="font-sans mb-3">سهم</span>{{ $item->get_shares }}</li>
+                    <li class=" flex flex-col"><span class="font-sans mb-3">مستلم</span>{{ $item->get_shares * 2000}}</li>
 
                 </ul>
-                <ul class="mt-5 mb-8 flex justify-around text-center text-2xl">
-                    <li class=" flex flex-col"><span class="font-sans mb-3">مدفوع</span>0</li>
-                    <li class="flex flex-col"><span class="font-sans mb-3">متبقي</span>0</li>
-                </ul>
+
             </div>
 
         </div>

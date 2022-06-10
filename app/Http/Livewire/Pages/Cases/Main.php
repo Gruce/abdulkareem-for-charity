@@ -46,6 +46,7 @@ class Main extends Component
 
 
         //$this->events =  $this->events->where('title', 'LIKE', $search)->get();
+        
         return view('livewire.pages.cases.main');
     }
 }
