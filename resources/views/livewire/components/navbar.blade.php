@@ -13,22 +13,22 @@
             {{-- Profile Dropdown --}}
             @auth
 
-            <div class="flex justify-around items-center md:order-2 md:-mt-4 @guest hidden @endguest ml-2">
+            <div class="flex justify-around items-center md:order-2 @guest hidden @endguest ml-2">
               @admin
                 <div
                     class="hidden   md:flex justify-around   ml-10  text-gray-500 text-base text-center ">
 
                     <div class="flex flex-col mx-2 border-b border-gray-200">
-                        <span>@money_parse_by_decimal($total, 'IQD') </span>
+                        <span>@money($total, 'IQD')</span>
                         <span class="text-2xs -mt-2">الكلي</span>
                     </div>
                     <div class="flex flex-col mx-2 border-b border-gray-200">
-                        <span>@money_parse_by_decimal($current_price, 'IQD') </span>
+                        <span>@money($current_price, 'IQD')</span>
                         <span class="text-2xs -mt-2">الحالي</span>
                     </div>
 
                     <div class="flex flex-col mx-2 border-b border-gray-200">
-                        <span>@money_parse_by_decimal($payments, 'IQD')</span>
+                        <span>{{ $payments }}</span>
                         <span class="text-2xs -mt-2">مصروف</span>
                     </div>
                 </div>
@@ -94,8 +94,8 @@
                 </svg>
             </button>
         </div>
-        <div class="hidden justify-center items-center w-full md:flex md:w-auto md:order-1 " id="mobile-menu-2">
-            <ul class="flex flex-col mt-4 md:flex-row  md:-mt-4 md:text-sm md:font-medium xl:mr-28">
+        <div class="hidden justify-center items-center w-full md:flex md:w-auto md:order-1" id="mobile-menu-2">
+            <ul class="flex flex-col mt-4 md:flex-row  md:mt-0 md:text-sm md:font-medium xl:mr-28">
                 @foreach($menu->items as $item)
                 <li class="mx-8">
                     @if($item->hasSubmenu)
