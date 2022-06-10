@@ -72,7 +72,7 @@
             </div>
             <div class="col-span-3">
                 <ul class="  flex justify-around text-center text-2xl">
-                    <li class="flex flex-col"><span class="font-sans mb-3">سهم</span>0</li>
+                    <li class="flex flex-col"><span class="font-sans mb-3">سهم</span></li>
                     <li class=" flex flex-col"><span class="font-sans mb-3">مستلم</span>0</li>
 
                 </ul>
