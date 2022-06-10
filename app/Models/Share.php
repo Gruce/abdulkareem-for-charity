@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Share extends Model
 {
     use HasFactory;
-    protected $fillable = ['share', 'note', 'user_id'];
+    protected $fillable = ['share', 'note', 'user_id', 'admin_id'];
 
     ### Start Relationships ###
 
@@ -19,18 +19,15 @@ class Share extends Model
 
     ### End Relationships ###
 
-    public function add($share, $note = null)
+
+    ### Start Scopes ###
+    public function accept_share($state)
     {
-        $this->share = $share;
-        $this->note = $note;
-        $this->user_id = auth()->user()->id;
-        $this->save();
-    }
-    public function state($state)
-    {
+        $this->admin_id = auth()->user()->id;
         $this->state = !$state;
         $this->save();
     }
+    ### End Scopes ###
 
     
 }

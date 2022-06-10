@@ -9,7 +9,7 @@ class Student extends Model
 {
 
     use HasFactory;
-    protected $fillable = ['department' , 'study_type','stage','division'];
+    protected $fillable = ['department' ,'study_type', 'stage', 'division'];
 
 
     ### Start Relationships ###
@@ -21,7 +21,7 @@ class Student extends Model
 
     ### End Relationships ###
 
-    
+
     public function edit($data)    {
         $this->fill($data);
         $this->save();

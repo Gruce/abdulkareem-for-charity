@@ -20,9 +20,10 @@ class Card extends Component
         'shares' => 'required',
     ];
 
-    protected $listeners = ['delete', '$refresh', 'getUserType', 'accept', 'deleteShare','upgrade'];
+    protected $listeners = ['delete', '$refresh', 'getUserType', 'accept', 'deleteShare', 'upgrade'];
 
-    public function delete(){
+    public function delete()
+    {
         User::findOrFail($this->item->id)->delete();
         $this->alert('success', 'تم حذف المتبرع', [
             'position' => 'center',
@@ -32,8 +33,9 @@ class Card extends Component
         $this->emitUp('$refresh');
     }
 
-    public function confirm(){
-        
+    public function confirm()
+    {
+
         $this->alert('warning', 'هل انت متاكد من حذف المتبرع؟', [
             'position' => 'center',
             'timer' => 3000,
@@ -45,36 +47,27 @@ class Card extends Component
         ]);
     }
 
-    public function add($id)
-    {
-        $data = [
-            'user_id' => $id,
-            'share' => $this->share,
-        ];
-        $this->alert('success', 'تمت الاضافة', [
-            'position' => 'center',
-            'timer' => 3000,
-            'toast' => true,
-        ]);
-        $share = new Share();
-        $share->add($data);
-        $this->reset();
-    }
+   
 
-    public function accept(){
+    public function accept()
+    {
         $share = Share::findOrFail($this->share_id);
-        $share->state($this->share_state);
+        $share->accept_share($this->share_state);
+        $share->admin_id = auth()->user()->id;
         $this->alert('success', 'تم القبول', [
             'position' => 'center',
             'timer' => 3000,
             'toast' => true,
         ]);
         $this->emitUp('$refresh');
+        $this->emitTo('components.navbar', '$refresh');
     }
-    
-    public function confirm_accepet($id, $state){
+
+    public function confirm_accepet($id, $state)
+    {
         $this->share_id = $id;
         $this->share_state = $state;
+        
         $this->alert('warning', 'هل انت متأكد من قبول الطلب؟', [
             'position' => 'center',
             'timer' => 3000,
@@ -111,7 +104,7 @@ class Card extends Component
             'onDismissed' => '',
         ]);
     }
-    
+
     public function confirm_upgrade()
     {
         if ($this->item->is_admin) {
@@ -122,7 +115,7 @@ class Card extends Component
             ]);
             return;
         }
-        $this->alert('warning', "هل انت متأكد من ترقية ".$this->item->name."", [
+        $this->alert('warning', "هل انت متأكد من ترقية " . $this->item->name . "", [
             'position' => 'center',
             'timer' => 3000,
             'toast' => true,
@@ -132,13 +125,12 @@ class Card extends Component
             'onDismissed' => '',
             'width' => '500',
             'cancelButtonText' => 'الغاء',
-             'confirmButtonText' => 'تأكييد',
+            'confirmButtonText' => 'تأكييد',
         ]);
-        
     }
     public function upgrade()
     {
-        
+
         $user = User::findOrFail($this->item->id);
         $user->is_admin = 1;
         $user->save();
@@ -147,7 +139,7 @@ class Card extends Component
             'timer' => 3000,
             'toast' => true,
         ]);
-        
+
         $this->emitUp('$refresh');
     }
 

@@ -38,6 +38,13 @@ class Main extends Component
         } elseif ($this->selectEvent == 2)
             $this->events = Event::where('title', 'LIKE', $search)->whereColumn('received_price', '<', 'target')->get();
         else $this->events =  Event::where('title', 'LIKE', $search)->get();
+
+        // $events = Event::all();
+        // if($this->search) $events = $events->where('title', 'LIKE', $search);
+
+        //     $events = $events->paginate(1);
+
+
         //$this->events =  $this->events->where('title', 'LIKE', $search)->get();
         return view('livewire.pages.cases.main');
     }

@@ -1,7 +1,7 @@
-<x-guest-layout>
+{{-- <x-guest-layout>
     <x-jet-authentication-card>
         <x-slot name="logo">
-            <img src="{{ asset('/img/logo.png') }}" class="mb-4 h-32">
+            <img src="{{ asset('/img/logo1.png') }}" class="mb-4 h-56 md:h-72">
         </x-slot>
 
         <x-jet-validation-errors class="mb-4" />
@@ -87,4 +87,7 @@
             </div>
         </form>
     </x-jet-authentication-card>
-</x-guest-layout>
+</x-guest-layout> --}}
+<div>
+    @livewire('guest.new-user')
+</div>

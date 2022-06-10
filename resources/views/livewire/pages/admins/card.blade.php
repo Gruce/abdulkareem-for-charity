@@ -1,82 +1,88 @@
-{{-- <div class=" p-6 sm:flex sm:space-x-6 border border-gray-500 rounded-md">
-    <div class="flex-shrink-0 w-full mb-6 ml-4 h-44 sm:h-32 sm:w-32 sm:mb-0 ">
-        <img src="@if ($admin->profile_photo_path) {{ asset($admin->profile_photo_path) }}@elseif($admin->gender == 1) {{ asset('/img/profile_woman.png') }} @elseif($admin->gender != 1) {{ asset('/img/profile_man.png') }} @endif"
-            class="object-cover md:object-center  h-40 md:w-full md:h-full rounded-full bg-gray-500">
-    </div>
-    <div class="flex flex-col space-y-4 ">
-        <div>
-            <h2 class="text-2xl font-semibold">{{ $admin->name }}</h2>
-            <span class="text-sm text-gray-400">@if($admin->type == 1)
-                طالب - @if($admin->student->department == 1) علوم @else نظم @endif
-                - @if($admin->student->study_type == 1) صباحي @else مسائي @endif
-                - @if($admin->student->stage == 1) أولى @elseif($admin->student->stage == 2) ثانية
-                @elseif($admin->student->stage == 3) ثالثة @else رابعة @endif
-                - @if($admin->student->division == 1) A @elseif($admin->student->stage == 2) B
-                @elseif($admin->student->stage == 3) C @elseif($admin->student->stage == 4) D @else E @endif
-                @elseif($admin->type == 2) تدريسي
-                @elseif($admin->type == 3) موظف
-                @elseif($admin->type == 4) من خارج الكلية
-                @endif</span>
-        </div>
-        <div class="space-y-1">
-            <span class="flex items-center space-x-2">
-                <i class="fa-brands fa-telegram text-gray-600"></i>
-                <span class="text-gray-400">@company.com</span>
-            </span>
-            <span class="flex items-center space-x-2">
-                <span class="flex items-center space-x-2">
-                    <i class="fa-solid fa-phone text-gray-600"></i>
-                    <span class="text-gray-400 ">+25 381 77 983 </span>
-                </span>
-            </span>
-        </div>
-    </div>
-</div> --}}
-
 <div>
-    <div class=" p-4 w-full rounded-xl bg-gray-50 hover:bg-gray-100 border border-gray-300 transition duration-300">
+    <div class=" p-4 w-full rounded-t-xl bg-gray-50 hover:bg-gray-100 transition duration-300 border border-gray-200">
         <div class="grid grid-cols-5 mb-5">
-            <img src="@if ($admin->profile_photo_path) {{ asset($admin->profile_photo_path) }}@elseif($admin->gender == 1) {{ asset('/img/profile_woman.png') }} @elseif($admin->gender != 1) {{ asset('/img/profile_man.png') }} @endif"
+            <img src="@if ($item->profile_photo_path) {{ asset($item->profile_photo_path) }}@elseif($item->gender == 1) {{ asset('/img/profile_woman.png') }} @elseif($item->gender != 1) {{ asset('/img/profile_man.png') }} @endif"
                 class="col-span-2 rounded-full h-32" />
             <div class="col-span-3">
-                <h3 class="mt-6 text-center text-2xl ">{{ $admin->name }}</h3>
-                <p class="text-center text-sm text-gray-600 ">
-                    @if($admin->type == 1)
-                    طالب - @if($admin->student->department == 1) علوم @else نظم @endif
-                    - @if($admin->student->study_type == 1) صباحي @else مسائي @endif
-                    - @if($admin->student->stage == 1) أولى @elseif($admin->student->stage == 2) ثانية
-                    @elseif($admin->student->stage == 3) ثالثة @else رابعة @endif
-                    - @if($admin->student->division == 1) A @elseif($admin->student->stage == 2) B
-                    @elseif($admin->student->stage == 3) C @elseif($admin->student->stage == 4) D @else E @endif
-                    @elseif($admin->type == 2) تدريسي
-                    @elseif($admin->type == 3) موظف
-                    @elseif($admin->type == 4) من خارج الكلية
-                    @endif</span>
-                </p>
+                <h3 class="mt-6 text-center text-2xl ">{{ $item->name }}</h3>
+                <h3 class="mt-2 text-center text-base ">
+                    @if ($item->type == 1)
+                        طالب - @if ($item->student->department == 1)
+                            علوم
+                        @else
+                            نظم
+                        @endif
+                        - @if ($item->student->study_type == 1)
+                            صباحي
+                        @else
+                            مسائي
+                        @endif
+                        - @if ($item->student->stage == 1)
+                            أولى
+                        @elseif($item->student->stage == 2)
+                            ثانية
+                        @elseif($item->student->stage == 3)
+                            ثالثة
+                        @else
+                            رابعة
+                        @endif
+                        - @if ($item->student->division == 1)
+                            A
+                        @elseif($item->student->stage == 2)
+                            B
+                        @elseif($item->student->stage == 3)
+                            C
+                        @elseif($item->student->stage == 4)
+                            D
+                        @else
+                            E
+                        @endif
+                    @elseif($item->type == 2)
+                        تدريسي
+                    @elseif($item->type == 3)
+                        موظف
+                    @elseif($item->type == 4)
+                        من خارج الكلية
+                    @endif
+                </h3>
             </div>
         </div>
-        <div class="text-center">
-            <span>Birthdy : fdf </span><br>
-            <span>
+        <div class="grid grid-cols-5 mb-5">
+            <div x-data="{ isOpen: false }" class="col-span-2 flex flex-col">
+                <div class="flex justify-center">
+                    <button wire:click="confirm_downgrade()" type="button"
+                        class="inline-block rounded-full text-white bg-gradient-to-r from-red-400  to-red-500 hover:bg-gradient-to-br shadow-md  hover:shadow-lg transition duration-450 w-9 h-9">
+                        <i class="fa-solid fa-person-circle-xmark"></i>
+                    </button>
+                    <button @click="isOpen = !isOpen" type="button"
+                        class="inline-block rounded-full text-white bg-gradient-to-r from-primary-400  to-primary-500 hover:bg-gradient-to-br shadow-md  hover:shadow-lg transition duration-450 w-9 h-9 ml-16 mr-2">
+                        <i class="fa-solid fa-sack-dollar"></i>
+                    </button>
+                </div>
+                <div x-show="isOpen" class="mt-10 text-xs text-center">
+                    <span class=" ">اذا سلم هذا المدير مبالغ للصندوق </span>
+                    <span class=" ">قم بأضافتها هنا</span>
+                    <input type="number" wire:model="paid_amount"
+                        class="mt-2 w-full rounded-t-md border border-gray-300 p-2 text-center focus:border-green-400 " />
+                    <button wire:click="add_paid_amount" type="button"
+                        class="inline-block rounded-b-sm text-white bg-gradient-to-r from-primary-400  to-primary-500 hover:bg-gradient-to-br shadow-md  hover:shadow-lg transition duration-450 w-full h-9 mt-1">
+                        اضافة
+                </div>
 
-                <span>
-                    fdfdfd
-                </span>
+            </div>
+            <div class="col-span-3">
+                <ul class="  flex justify-around text-center text-2xl">
+                    <li class="flex flex-col"><span class="font-sans mb-3">سهم</span></li>
+                    <li class=" flex flex-col"><span class="font-sans mb-3">مستلم</span>0</li>
+
+                </ul>
+                <ul class="mt-5 mb-8 flex justify-around text-center text-2xl">
+                    <li class=" flex flex-col"><span class="font-sans mb-3">مدفوع</span>0</li>
+                    <li class="flex flex-col"><span class="font-sans mb-3">متبقي</span>0</li>
+                </ul>
+            </div>
 
         </div>
-        <ul class="mt-8 mb-4 flex justify-center space-x-4 text-center text-lg">
-            <button  type="button"
-                class="inline-block rounded-full text-white bg-gradient-to-r from-red-400  to-red-500 hover:bg-gradient-to-br shadow-md  hover:shadow-lg transition duration-450 w-9 h-9">
-                <i class="fa-solid fa-person-circle-xmark"></i>
-            </button>
-        </ul>
-        <a 
-            class="flex justify-between items-center ">
-            <span class="text-sm">{{ $admin->name }}'s profile &RightArrow;</span>
-
-        </a>
-
-
     </div>
 
 </div>
