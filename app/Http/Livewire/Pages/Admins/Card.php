@@ -5,7 +5,7 @@ namespace App\Http\Livewire\Pages\Admins;
 
 use Jantinnerezo\LivewireAlert\LivewireAlert;
 use Livewire\Component;
-use Cknow\Money\Money;
+// use Cknow\Money\Money;
 
 
 class Card extends Component
@@ -17,7 +17,7 @@ class Card extends Component
     public $item , $paid_amount;
     public function confirm_downgrade()
     {
-        
+
         $this->alert('warning', "هل انت متاكد من الغاء خاصية ادارة الموقع من ".$this->item->name." ؟", [
             'position' => 'center',
             'timer' => 3000,
@@ -30,7 +30,7 @@ class Card extends Component
             'cancelButtonText' => 'الغاء',
             'confirmButtonText' => 'تأكييد',
         ]);
-        
+
     }
     public function add_paid_amount(){
         $this->item->admin->update(['paid_amount' => $this->paid_amount]);
