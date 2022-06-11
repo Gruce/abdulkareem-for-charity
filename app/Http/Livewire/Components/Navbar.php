@@ -9,7 +9,7 @@ use App\Models\{
 use Livewire\Component;
 
 class Navbar extends Component{
-
+    
     protected $listeners = ['$refresh'];
 
     public function render(){
@@ -31,7 +31,7 @@ class Navbar extends Component{
                 //         'permissions' => 2,
                 //     ]
                 // ]
-            ],
+            ],                                                                                                                                                                                                                                                                                                                     
             [
                 'name' => 'الحالات',
                 'route' => 'cases',
@@ -41,8 +41,7 @@ class Navbar extends Component{
                 'name' => 'التبرع',
                 'route' => 'donate',
                 'icon' => 'circle-info',
-                'permissions' => 2,
-
+                
             ],
             [
                 'name' => 'المتبرعين ',
@@ -60,9 +59,9 @@ class Navbar extends Component{
                 'icon' => 'circle-info',
                 'permissions' => 4,
             ],
-
-
-
+            
+            
+            
 
         ]);
 
@@ -95,8 +94,8 @@ class Menu {
     function __construct($items = []) {
         // Menu Generation
         foreach ($items as $item) $this->items[] = new MenuItem($item);
-
-        $this->filter();
+        
+        $this->filter(); 
     }
 
     function filter(){
