@@ -1111,9 +1111,6 @@ select{
 .mb-3{
   margin-bottom: 0.75rem;
 }
-.mb-8{
-  margin-bottom: 2rem;
-}
 .mr-16{
   margin-right: 4rem;
 }
@@ -1125,6 +1122,9 @@ select{
 }
 .mr-8{
   margin-right: 2rem;
+}
+.mr-32{
+  margin-right: 8rem;
 }
 .block{
   display: block;
@@ -2950,6 +2950,15 @@ select{
   .md\:mt-5{
     margin-top: 1.25rem;
   }
+  .md\:mr-20{
+    margin-right: 5rem;
+  }
+  .md\:mr-32{
+    margin-right: 8rem;
+  }
+  .md\:mr-10{
+    margin-right: 2.5rem;
+  }
   .md\:block{
     display: block;
   }
@@ -3168,6 +3177,10 @@ select{
     margin-left: 2.5rem;
     margin-right: 2.5rem;
   }
+  .xl\:my-0{
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
   .xl\:mr-4{
     margin-right: 1rem;
   }
@@ -3206,6 +3219,21 @@ select{
   }
   .xl\:ml-0{
     margin-left: 0px;
+  }
+  .xl\:mr-32{
+    margin-right: 8rem;
+  }
+  .xl\:mr-36{
+    margin-right: 9rem;
+  }
+  .xl\:mr-10{
+    margin-right: 2.5rem;
+  }
+  .xl\:mr-12{
+    margin-right: 3rem;
+  }
+  .xl\:mr-16{
+    margin-right: 4rem;
   }
   .xl\:h-10{
     height: 2.5rem;
