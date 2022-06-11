@@ -100,7 +100,25 @@ class DeveloperSeeder extends Seeder
             'stage' => "المرحلة الثالثة",
             'type' => 2,
             'photo' => '/img/mo.jpg',
-            'phone' => '01098989898',
+            'adjective' => 'اداري',
+
+        ]);
+        Developer::create([
+            'name' => 'حسن عبدالكريم',
+            'department' => 'علوم الحاسوب',
+            'stage' => "المرحلة الرابعة ",
+            'type' => 2,
+            'photo' => '/img/mo.jpg',
+            'adjective' => 'مصمم الشعار',
+
+        ]);
+        Developer::create([
+            'name' => 'حسن خالد',
+            'department' => 'علوم الحاسوب',
+            'stage' => "المرحلة الرابعة",
+            'type' => 2,
+            'photo' => '/img/mo.jpg',
+            'adjective' => 'مبرمج',
 
         ]);
     }

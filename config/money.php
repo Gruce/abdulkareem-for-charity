@@ -713,7 +713,7 @@ return [
         'subunit'             => 1000,
         'symbol'              => 'IQD',
         'symbol_first'        => false,
-        'decimal_mark'        => '.',
+        'decimal_mark'        => ',',
         'thousands_separator' => ',',
     ],
 

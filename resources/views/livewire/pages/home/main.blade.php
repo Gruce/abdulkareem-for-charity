@@ -5,7 +5,7 @@
         <div class="basis-4/12 grid grid-cols-1 xl:grid-cols-12 justify-between mt-10 md:mt-0">
             <!-- Text -->
             <div class=" xl:col-span-5 xl:pr-24 xl:pt-20  ">
-                <h1 class="text-secondary-900 text-4xl xl:text-6xl font-bold text-center md:text-right">
+                <h1 class="text-secondary-900 text-4xl xl:text-6xl font-bold mr-6">
                     صندوق الكرم
                 </h1>
                 <p class="text-secondary-200 text-lg xl:text-2xl mt-6 px-6">

@@ -88,7 +88,7 @@
             {{-- Developers --}}
             <div>
                 <h1 class="text-secondary-900 text-2xl md:text-4xl xl:text-5xl font-bold text-center mb-20">
-                    فريق المطورين
+                     المطورين
                 </h1>
 
                 {{-- Cards --}}
@@ -102,10 +102,10 @@
             {{-- Managers --}}
             <div>
                 <h1 class="text-secondary-900 text-2xl md:text-5xl font-bold text-center mb-20">
-                    فريق الأداريين
+                    المساهمين
                 </h1>
                 {{-- Cards --}}
-                <div class="flex flex-wrap gap-2 justify-center">
+                <div class="flex flex-wrap gap-x-10 justify-center ">
                     @foreach ($managers as $team)
                     <livewire:pages.about.card :team="$team" key="{{ now() }}" />
                     @endforeach
