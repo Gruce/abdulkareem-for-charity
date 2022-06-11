@@ -2,7 +2,7 @@
     <div class=" flex flex-wrap md:flex-col md:space-y-3 xl:flex-row justify-between xl:justify-around items-center">
 
         {{-- Logo & Title --}}
-        <div>
+        <div class="mb-2 md:my-0">
             <a href="/" class="flex items-center text-xl">
                 <img src="{{ asset('/img/logo.png') }}" class="h-12 mx-4">
                 <span class="font-Alhurra text-2xl font-bold text-gray-700">صندوق الكرم</span>
@@ -95,74 +95,29 @@
             </button>
         </div>
         <div class="hidden justify-center items-center w-full md:flex md:w-auto md:order-1 " id="mobile-menu-2">
-            <ul class="flex flex-col mt-4 md:flex-row  md:-mt-4 md:text-sm md:font-medium xl:mr-28">
+            <ul class="flex flex-col mt-4 md:flex-row  md:-mt-1 md:text-sm md:font-medium xl:mr-28 my-2 ">
                 @foreach($menu->items as $item)
                 <li class="mx-8">
-                    @if($item->hasSubmenu)
-                    {{-- Has Submenu --}}
-                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" id="user-menu-button"
-                        aria-expanded="false" data-dropdown-toggle="dropdown-{{ $item->name }}">
-                        <span>{{ $item->name }}</span>
-                    </a>
 
-                    <div class="z-50 hidden my-4 text-base text-center list-none bg-white divide-y divide-gray-100 rounded shadow w-36 "
-                        id="dropdown-{{ $item->name }}" data-popper-reference-hidden="" data-popper-escaped=""
-                        data-popper-placement="top"
-                        style="position: absolute; inset: auto auto 0px 0px; margin: 0px; transform: translate3d(1142.67px, 866px, 0px);">
-                        <ul class="py-1" aria-labelledby="dropdown">
-                            @foreach($item->submenu->items as $subitem)
-                            <li>
-                                <a href="{{ route($subitem->route) }}"
-                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 ">
-                                    {{ $subitem->name }}
-                                </a>
-                            </li>
-                            @endforeach
-                        </ul>
-                    </div>
-                    @else
-                    {{-- Has no submenu / edit button here! --}}
                     <a href="{{ route($item->route) }}" class="block py-2 pl-3 pr-4 font-Alhurra1 {{ $item->active ? "
                         text-primary-500
                         border-primary-100 " : 'text-gray-700 hover:bg-gray-300 rounded-lg border-gray-100 hover:scale-110 duration-200 ' }} border-b">
                         {{ $item->name }}
 
                     </a>
-                    @endif
+
                 </li>
                 @endforeach
 
                 @foreach($leftMenu->items as $item)
-                <li class="mx-8  md:hidden">
-                    @if($item->hasSubmenu)
-                    {{-- Has Submenu --}}
-                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" id="user-menu-button"
-                        aria-expanded="false" data-dropdown-toggle="dropdown-{{ $item->name }}">
-                        <span>{{ $item->name }}</span>
-                    </a>
+                <li class="mx-8  md:hidden ">
 
-                    <div class="z-50 hidden my-4 text-base text-center list-none bg-white divide-y divide-gray-100 rounded shadow w-36 "
-                        id="dropdown-{{ $item->name }}" data-popper-reference-hidden="" data-popper-escaped=""
-                        data-popper-placement="top"
-                        style="position: absolute; inset: auto auto 0px 0px; margin: 0px; transform: translate3d(1142.67px, 866px, 0px);">
-                        <ul class="py-1" aria-labelledby="dropdown">
-                            @foreach($item->submenu->items as $subitem)
-                            <li>
-                                <a href="{{ route($subitem->route) }}"
-                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 ">
-                                    {{ $subitem->name }}
-                                </a>
-                            </li>
-                            @endforeach
-                        </ul>
-                    </div>
-                    @else
                     {{-- Has no submenu --}}
                     <a href="{{ route($item->route) }}"
-                        class="block py-2 pl-3 pr-4 {{ $item->active ? 'text-primary-500 border-primary-100' : 'text-gray-700 hover:bg-gray-300 rounded-lg border-gray-100 hover:scale-110 duration-200 ' }} border-b-2 ">
+                        class="block py-2 pl-3 pr-4  {{ $item->active ? 'text-primary-500 border-primary-100' : 'text-gray-700 hover:bg-gray-300 rounded-lg border-gray-100 hover:scale-110 duration-200 ' }} border-b ">
                         {{ $item->name }}
                     </a>
-                    @endif
+
                 </li>
                 @endforeach
 
@@ -172,40 +127,17 @@
         </div>
         <div class="hidden justify-center items-center w-full md:flex md:w-auto md:order-1" id="mobile-menu-2">
 
-            <ul class="flex flex-col mt-4 md:flex-row  md:mt-0 md:text-sm md:font-medium">
+            <ul class="flex flex-col mt-4 md:flex-row  md:-mt-4  md:text-sm md:font-medium">
 
 
                 @foreach($leftMenu->items as $item)
                 <li class="mx-8 ">
-                    @if($item->hasSubmenu)
-                    {{-- Has Submenu --}}
-                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" id="user-menu-button"
-                        aria-expanded="false" data-dropdown-toggle="dropdown-{{ $item->name }}">
-                        <span>{{ $item->name }}</span>
-                    </a>
 
-                    <div class="z-50 hidden my-4 text-base text-center list-none bg-white divide-y divide-gray-100 rounded shadow w-36 "
-                        id="dropdown-{{ $item->name }}" data-popper-reference-hidden="" data-popper-escaped=""
-                        data-popper-placement="top"
-                        style="position: absolute; inset: auto auto 0px 0px; margin: 0px; transform: translate3d(1142.67px, 866px, 0px);">
-                        <ul class="py-1" aria-labelledby="dropdown">
-                            @foreach($item->submenu->items as $subitem)
-                            <li>
-                                <a href="{{ route($subitem->route) }}"
-                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 ">
-                                    {{ $subitem->name }}
-                                </a>
-                            </li>
-                            @endforeach
-                        </ul>
-                    </div>
-                    @else
-                    {{-- Has no submenu --}}
                     <a href="{{ route($item->route) }}"
                         class="block py-2 pl-3 pr-4 {{ $item->active ? 'text-primary-500 border-primary-100' : 'text-gray-700 hover:bg-gray-300 rounded-lg border-gray-100 hover:scale-110 duration-200 ' }} border-b-2 ">
                         {{ $item->name }}
                     </a>
-                    @endif
+
                 </li>
                 @endforeach
 

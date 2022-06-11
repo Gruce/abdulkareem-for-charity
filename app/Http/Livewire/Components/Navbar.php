@@ -9,7 +9,7 @@ use App\Models\{
 use Livewire\Component;
 
 class Navbar extends Component{
-    
+
     protected $listeners = ['$refresh'];
 
     public function render(){
@@ -23,15 +23,8 @@ class Navbar extends Component{
                 'name' => 'الرئيسية',
                 'route' => 'home',
                 'icon' => 'home',
-                // 'submenu' => [
-                //     [
-                //         'name' => 'Home2',
-                //         'route' => 'home',
-                //         'icon' => 'home',
-                //         'permissions' => 2,
-                //     ]
-                // ]
-            ],                                                                                                                                                                                                                                                                                                                     
+
+            ],
             [
                 'name' => 'الحالات',
                 'route' => 'cases',
@@ -41,7 +34,7 @@ class Navbar extends Component{
                 'name' => 'التبرع',
                 'route' => 'donate',
                 'icon' => 'circle-info',
-                
+
             ],
             [
                 'name' => 'المتبرعين ',
@@ -59,9 +52,9 @@ class Navbar extends Component{
                 'icon' => 'circle-info',
                 'permissions' => 4,
             ],
-            
-            
-            
+
+
+
 
         ]);
 
@@ -94,13 +87,13 @@ class Menu {
     function __construct($items = []) {
         // Menu Generation
         foreach ($items as $item) $this->items[] = new MenuItem($item);
-        
-        $this->filter(); 
+
+        $this->filter();
     }
 
     function filter(){
         $this->items = collect($this->items)->filter(function ($item) {
-            if ($item->hasSubmenu && !$item->submenu->items) return false;
+
             return $item->show;
         })->all();
     }
@@ -127,8 +120,7 @@ class MenuItem
         $this->route = $data['route'];
         $this->icon = $data['icon'];
         $this->permissions = $data['permissions'] ?? 0;
-        $this->hasSubmenu = isset($data['submenu']);
-        $this->submenu = new Menu($data['submenu'] ?? []);
+        
 
         $this->active = request()->routeIs($this->route);
 
