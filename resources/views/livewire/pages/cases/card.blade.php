@@ -6,13 +6,13 @@
 
             <h2 class="text-xl text-gray-900 font-medium title-font mb-2 text-center">{{ $event->title }}</h2>
             <h3 class="tracking-widest text-secondary-700 text-base font-medium title-font text-center mb-4">
-                {{ $event->target }} د.ع</h3>
+                @money($event->target, 'IQD')</h3>
 
             <p class="leading-relaxed text-base font-bold text-gray-400">{{ $event->getLimit('description') }}
                 {{-- more info button --}}
                 <a class="text-gray-600 text-sm font-bold duration-300 mb-4"
                     href="{{ route('case-page', ['case_id' => $event->id]) }}">
-                    للمزيد  
+                    للمزيد
                 </a>
 
             </p>

@@ -1939,6 +1939,10 @@ select{
   padding-left: 0.375rem;
   padding-right: 0.375rem;
 }
+.px-7{
+  padding-left: 1.75rem;
+  padding-right: 1.75rem;
+}
 .pt-6{
   padding-top: 1.5rem;
 }
