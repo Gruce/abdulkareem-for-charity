@@ -974,6 +974,10 @@ select{
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
+.my-2{
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
 .mx-8{
   margin-left: 2rem;
   margin-right: 2rem;
@@ -981,10 +985,6 @@ select{
 .mx-7{
   margin-left: 1.75rem;
   margin-right: 1.75rem;
-}
-.my-2{
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
 }
 .my-10{
   margin-top: 2.5rem;
@@ -1124,6 +1124,9 @@ select{
 }
 .mb-20{
   margin-bottom: 5rem;
+}
+.mr-6{
+  margin-right: 1.5rem;
 }
 .mr-16{
   margin-right: 4rem;
@@ -1302,9 +1305,6 @@ select{
 .w-11\/12{
   width: 91.666667%;
 }
-.w-36{
-  width: 9rem;
-}
 .w-40{
   width: 10rem;
 }
@@ -1435,22 +1435,6 @@ select{
 .animate-spin{
   -webkit-animation: spin 1s linear infinite;
           animation: spin 1s linear infinite;
-}
-@-webkit-keyframes ping{
-  75%, 100%{
-    transform: scale(2);
-    opacity: 0;
-  }
-}
-@keyframes ping{
-  75%, 100%{
-    transform: scale(2);
-    opacity: 0;
-  }
-}
-.animate-ping{
-  -webkit-animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
-          animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
 }
 .cursor-default{
   cursor: default;
@@ -2598,6 +2582,10 @@ select{
   --tw-text-opacity: 1;
   color: rgb(251 191 36 / var(--tw-text-opacity));
 }
+.hover\:text-amber-500:hover{
+  --tw-text-opacity: 1;
+  color: rgb(245 158 11 / var(--tw-text-opacity));
+}
 .hover\:shadow-xl:hover{
   --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
@@ -2858,10 +2846,6 @@ select{
     --tw-text-opacity: 1;
     color: rgb(75 85 99 / var(--tw-text-opacity));
   }
-  .dark\:text-gray-200{
-    --tw-text-opacity: 1;
-    color: rgb(229 231 235 / var(--tw-text-opacity));
-  }
 }
 @media (min-width: 640px){
   .sm\:col-span-4{
@@ -3069,6 +3053,10 @@ select{
   .md\:col-span-3{
     grid-column: span 3 / span 3;
   }
+  .md\:my-0{
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
   .md\:mt-0{
     margin-top: 0px;
   }
@@ -3077,6 +3065,9 @@ select{
   }
   .md\:mr-0{
     margin-right: 0px;
+  }
+  .md\:-mt-1{
+    margin-top: -0.25rem;
   }
   .md\:mt-10{
     margin-top: 2.5rem;
@@ -3297,9 +3288,9 @@ select{
     padding-left: 2rem;
     padding-right: 2rem;
   }
-  .lg\:text-6xl{
-    font-size: 3.75rem;
-    line-height: 1;
+  .lg\:text-4xl{
+    font-size: 2.25rem;
+    line-height: 2.5rem;
   }
 }
 @media (min-width: 1280px){
