@@ -45,7 +45,7 @@ class DeveloperSeeder extends Seeder
             'name' => 'منار ناصر',
             'department'=>'علوم الحاسوب',
             'stage' => "المرحلة الثالثة",
-            'photo' => "/img/mo.jpg",
+            'photo' => "/img/dev3.jpg",
             'github' => "https://github.com/6vnar",
             'email' => 'manarnaseerabdulla@gmail.com',
 
