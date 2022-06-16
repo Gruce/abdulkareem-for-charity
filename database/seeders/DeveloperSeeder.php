@@ -78,7 +78,7 @@ class DeveloperSeeder extends Seeder
             'name' => 'زينب أمجد ',
             'department'=>'علوم الحاسوب',
             'stage' => "المرحلة الرابعة",
-            'photo' => "/img/mo.jpg",
+            'photo' => "/img/zainab.jpg",
             'github' => "https://github.com/zal3",
             'email' => "zainabamjedlatef31@gmail.com",
 
