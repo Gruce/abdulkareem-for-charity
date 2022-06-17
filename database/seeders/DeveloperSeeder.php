@@ -67,7 +67,7 @@ class DeveloperSeeder extends Seeder
             'name' => 'موسى نمير',
             'department'=>'علوم الحاسوب',
             'stage' => "المرحلة الثانية",
-            'photo' => "/img/mo.jpg",
+            'photo' => "/img/dev5.jpg",
             'github' => "https://github.com/MosaNameer",
             'email' => "mosa.mn777@gmail.com",
 

@@ -2,7 +2,7 @@
     <div class=" p-4 w-full rounded-t-xl bg-gray-50 hover:bg-gray-100 transition duration-300 border border-gray-200">
         <div class="grid grid-cols-5 mb-5">
             <img src="@if ($item->profile_photo_path) {{ asset($item->profile_photo_path) }}@elseif($item->gender == 1) {{ asset('/img/profile_woman.png') }} @elseif($item->gender != 1) {{ asset('/img/profile_man.png') }} @endif"
-                class="col-span-2 rounded-full h-32" />
+                class="col-span-2 rounded-full h-32 border-2 border-primary-600" />
             <div class="col-span-3">
 
                 <h3 class="mt-6 text-center text-2xl ">{{ $item->name }}</h3>
