@@ -89,7 +89,7 @@ class DeveloperSeeder extends Seeder
             'name' => 'فاطمة نوفل',
             'department'=>'علوم الحاسوب',
             'stage' => 'المرحلة الثالثة',
-            'photo' =>'/img/mo.jpg',
+            'photo' =>'/img/dev7.jpg',
             'email' => 'fatma.nawfal.abdalrazak@gmail.com',
             'github' => 'https://github.com/fatmanawfal'
         ]);
