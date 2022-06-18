@@ -32,11 +32,11 @@
 <body class="font-NotoKufi " dir="rtl">
     <x-jet-banner />
 
-    <div class="  ">
+    <div class=" w-full  ">
         @livewire('components.navbar')
         <!-- Page Content -->
         <main class=" lg:p-10 lg:mt-5 overflow-y-auto  rounded-lg ">
-            
+
             <div>
                 {{ $slot }}
             </div>

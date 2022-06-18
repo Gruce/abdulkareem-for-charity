@@ -68,7 +68,7 @@
                 @endif
             </div>
         </div>
-        <div class="mt-4 grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 group ">
+        <div class="mt-4 grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4  group ">
             @forelse($users as $item)
                 <livewire:pages.donors.card :item="$item" key="{{ now() }}" />
             @empty
