@@ -45,7 +45,7 @@ class DeveloperSeeder extends Seeder
             'name' => 'منار ناصر',
             'department'=>'علوم الحاسوب',
             'stage' => "المرحلة الثالثة",
-            'photo' => "/img/mo.jpg",
+            'photo' => "/img/dev3.jpg",
             'github' => "https://github.com/6vnar",
             'email' => 'manarnaseerabdulla@gmail.com',
 
@@ -78,7 +78,7 @@ class DeveloperSeeder extends Seeder
             'name' => 'زينب أمجد ',
             'department'=>'علوم الحاسوب',
             'stage' => "المرحلة الرابعة",
-            'photo' => "/img/mo.jpg",
+            'photo' => "/img/zainab.jpg",
             'github' => "https://github.com/zal3",
             'email' => "zainabamjedlatef31@gmail.com",
 
@@ -89,7 +89,7 @@ class DeveloperSeeder extends Seeder
             'name' => 'فاطمة نوفل',
             'department'=>'علوم الحاسوب',
             'stage' => 'المرحلة الثالثة',
-            'photo' =>'/img/mo.jpg',
+            'photo' =>'/img/dev7.jpg',
             'email' => 'fatma.nawfal.abdalrazak@gmail.com',
             'github' => 'https://github.com/fatmanawfal'
         ]);
