@@ -22,7 +22,7 @@ class DeveloperSeeder extends Seeder
             'name' => 'محمد جواد',
             'department'=>'علوم الحاسوب',
             'stage' => "المرحلة الثانية",
-            'photo' => "/img/mo.jpg",
+            'photo' => "/img/dev11.jpg",
             'github' => "https://github.com/MohammedJ18",
             'email' => "jawad6686@gmail.com",
 
@@ -67,7 +67,7 @@ class DeveloperSeeder extends Seeder
             'name' => 'موسى نمير',
             'department'=>'علوم الحاسوب',
             'stage' => "المرحلة الثانية",
-            'photo' => "/img/mo.jpg",
+            'photo' => "/img/dev5.jpg",
             'github' => "https://github.com/MosaNameer",
             'email' => "mosa.mn777@gmail.com",
 

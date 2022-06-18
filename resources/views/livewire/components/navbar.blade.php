@@ -4,7 +4,7 @@
         {{-- Logo & Title --}}
         <div class="mb-2 md:my-0">
             <a href="/" class="flex items-center text-xl">
-                <img src="{{ asset('/img/logo.png') }}" class="h-12 mx-4">
+                <img src="{{ asset('/img/logo.png') }}" class="h-12 mx-4 ">
                 <span class="font-Alhurra text-2xl font-bold text-gray-700">صندوق الكرم</span>
             </a>
         </div>
@@ -34,11 +34,11 @@
                 @endadmin
                 <div class=" ">
                     <button type="button"
-                        class="flex mr-3 text-sm border-2 border-transparent focus:border-b-primary-200 md:mr-0"
+                        class="flex mr-3 text-sm border-2 border-transparent  md:mr-0"
                         id="user-menu-button" aria-expanded="false" data-dropdown-toggle="dropdown">
                         <span class="sr-only">Open user menu</span>
                         <i class="fa-solid fa-angle-down ml-2 mt-3"></i>
-                        <img class="w-8 h-8 xl:w-10 xl:h-10 rounded-full"
+                        <img class="w-8 h-8 xl:w-10 xl:h-10 rounded-full border-2 border-primary-600"
                             src="{{ asset(auth()->user()->profile_photo_path ?? '/img/user.png') }}" alt="user photo">
                     </button>
 
