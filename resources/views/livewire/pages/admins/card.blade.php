@@ -49,26 +49,15 @@
             </div>
         </div>
         <div class="grid grid-cols-5 mb-5">
-            <div x-data="{ isOpen: false }" class="col-span-2 flex flex-col">
+            <div class="col-span-2 flex flex-col">
                 <div class="flex justify-center">
                     <button wire:click="confirm_downgrade()" type="button"
                         class="inline-block rounded-full text-white bg-gradient-to-r from-red-400  to-red-500 hover:bg-gradient-to-br shadow-md  hover:shadow-lg transition duration-450 w-9 h-9">
                         <i class="fa-solid fa-person-circle-xmark"></i>
                     </button>
-                    <button @click="isOpen = !isOpen" type="button"
-                        class="inline-block rounded-full text-white bg-gradient-to-r from-primary-400  to-primary-500 hover:bg-gradient-to-br shadow-md  hover:shadow-lg transition duration-450 w-9 h-9 ml-16 mr-2">
-                        <i class="fa-solid fa-sack-dollar"></i>
-                    </button>
+
                 </div>
-                <div x-show="isOpen" class="mt-10 text-xs text-center">
-                    <span class=" ">اذا سلم هذا المدير مبالغ للصندوق </span>
-                    <span class=" ">قم بأضافتها هنا</span>
-                    <input type="number" wire:model="paid_amount"
-                        class="mt-2 w-full rounded-t-md border border-gray-300 p-2 text-center focus:border-green-400 " />
-                    <button wire:click="add_paid_amount" type="button"
-                        class="inline-block rounded-b-sm text-white bg-gradient-to-r from-primary-400  to-primary-500 hover:bg-gradient-to-br shadow-md  hover:shadow-lg transition duration-450 w-full h-9 mt-1">
-                        اضافة
-                </div>
+
 
             </div>
             <div class="col-span-3">
