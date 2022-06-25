@@ -16,7 +16,7 @@
                 <div class="lg:hidden mt-10">
                     <img src="/img/donate.png" class="w-1/2 h-auto m-auto">
                 </div>
-                <form wire:submit.prevent="save" id="login_form" action="api_login"
+                <form wire:submit.prevent="save" 
                     class="p-8 w-11/12 h-60 mx-auto rounded-3xl mt-10 bg-white border border-gray-600 md:max-w-lg">
                     <div class="text-center ">
                         <h3 class="text-2xl xl:text-3xl font-bold mb-5 ">ما نقص مال من صدقة</h3>
