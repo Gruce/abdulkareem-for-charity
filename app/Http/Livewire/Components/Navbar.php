@@ -60,20 +60,20 @@ class Navbar extends Component{
 
         $leftMenu = new Menu([
             [
-                'name' => 'تسجيل الدخول',
+                'name' => ' الدخول',
                 'route' => 'login',
-                'icon' => 'home',
+                'icon' => 'arrow-right-to-bracket',
                 'permissions' => 1,
             ],
             [
-                'name' => 'انشاء حساب',
+                'name' => 'تسجيل',
                 'route' => 'register',
-                'icon' => 'home',
+                'icon' => 'user-plus',
                 'permissions' => 1,
             ],
         ]);
 
-        return view('livewire.components.navbar', [
+        return view('livewire.components.old', [
             'menu' => $menu,
             'leftMenu' => $leftMenu,
         ]);
@@ -120,7 +120,7 @@ class MenuItem
         $this->route = $data['route'];
         $this->icon = $data['icon'];
         $this->permissions = $data['permissions'] ?? 0;
-        
+
 
         $this->active = request()->routeIs($this->route);
 

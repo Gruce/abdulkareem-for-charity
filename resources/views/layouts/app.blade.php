@@ -33,7 +33,8 @@
     <x-jet-banner />
 
     <div class=" w-full  ">
-        @livewire('components.navbar')
+        <div class="overflow-x-hidden overflow-y-hidden  lg:p-2">@livewire('components.navbar')</div>
+
         <!-- Page Content -->
         <main class=" lg:p-10 lg:mt-5 overflow-y-auto  rounded-lg ">
 
