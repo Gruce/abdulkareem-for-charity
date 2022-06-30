@@ -2,9 +2,9 @@
     <div class="flex flex-col absolute h-screen">
 
         <!-- INTRO -->
-        <div class="basis-4/12 grid grid-cols-1 xl:grid-cols-12 justify-between mt-10 md:mt-0">
+        <div class="basis-4/12 grid grid-cols-1 xl:grid-cols-12 justify-between mt-10 md:mt-0 ">
             <!-- Text -->
-            <div class=" xl:col-span-5 xl:pr-24 xl:pt-20  ">
+            <div class=" xl:col-span-5 xl:pr-20 xl:pt-16  ">
                 <h1 class="text-secondary-900 text-4xl xl:text-6xl font-bold mr-6">
                     صندوق الكرم
                 </h1>
@@ -39,8 +39,8 @@
 
         {{-- Cases --}}
         <div class=" basis-4/12 xl:px-20 xl:ml-8 mt-10 xl:mt-16">
-            <span class="text-secondary-900 text-4xl xl:text-6xl font-bold pr-4 md:pr-0 ">
-                اخر الحالات
+            <span class="text-secondary-900 text-4xl xl:text-6xl  font-bold pr-4  xl:pr-20">
+                احدث الحالات
             </span>
             <div
             class="my-6 xl:my-20  grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 ">

@@ -66,14 +66,14 @@ class Navbar extends Component{
                 'permissions' => 1,
             ],
             [
-                'name' => 'تسجيل',
+                'name' => 'انضمام',
                 'route' => 'register',
                 'icon' => 'user-plus',
                 'permissions' => 1,
             ],
         ]);
 
-        return view('livewire.components.old', [
+        return view('livewire.components.navbar', [
             'menu' => $menu,
             'leftMenu' => $leftMenu,
         ]);
