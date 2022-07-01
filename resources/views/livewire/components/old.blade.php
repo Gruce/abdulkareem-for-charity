@@ -1,5 +1,5 @@
 <nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded">
-    <div class=" flex flex-wrap md:flex-col md:space-y-3 xl:flex-row justify-between xl:justify-around  items-center">
+    <div class=" flex flex-wrap md:flex-col md:space-y-3 xl:flex-row justify-between  items-center">
 
         {{-- Logo & Title --}}
         <div class="mb-2 md:my-0">

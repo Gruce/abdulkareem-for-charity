@@ -73,7 +73,7 @@ class Navbar extends Component{
             ],
         ]);
 
-        return view('livewire.components.navbar', [
+        return view('livewire.components.old', [
             'menu' => $menu,
             'leftMenu' => $leftMenu,
         ]);
