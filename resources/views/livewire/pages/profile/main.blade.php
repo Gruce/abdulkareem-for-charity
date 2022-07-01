@@ -51,31 +51,3 @@
     </div>
 
 </div>
-
-
-{{-- <div x-data="{ isOpen: true }" class="justify-start  bg-white ">
-    <div
-        class=" w-full px-2 py-4 justify-start flex gap-2 space-x-4 md:space-y-4 md:flex-row md:col-span-2 md:justify-start ">
-
-        <button @click="isOpen = true"
-            class="text-sm text-white p-2 text-center rounded w-56 hover:scale-105 duration-200 focus:ring-2 focus:ring-primary-700 bg-primary-500 focus:bg-primary-600">المعلومات
-            الاساسية</button>
-
-
-        @if (auth()->user()->type == 1)
-        <button @click="isOpen = false"
-            class="text-sm text-white p-2 text-center rounded w-56 hover:scale-105 duration-200 focus:ring-2 focus:ring-primary-700 bg-primary-500 focus:bg-primary-600">معلومات
-            الطالب</button>
-        @endif
-    </div>
-    <div class=" ">
-        <div x-show="isOpen" class="mx-auto">
-            @livewire('pages.profile.basic', ['user' => $user])
-        </div>
-
-
-        <div x-show="!isOpen" class="h-full pb-12">
-            @livewire('pages.profile.student-info', ['user' => $user])
-        </div>
-    </div>
-</div> --}}
