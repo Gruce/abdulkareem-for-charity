@@ -27,15 +27,8 @@ class Add extends Component
             'title' => $this->title,
             'description' => $this->description,
             'target' => $this->target,
-            'received_price' => $this->received_price,
         ];
-        if ($this->received_price > $this->current_price) {
-            $this->alert('warning', 'لا يمكنك اضافة مبالغ اكثر من الموجود في الصندوق', [
-                'position' => 'top',
-                'timer' => 3000,
-                'toast' => true,
-            ]);
-        } elseif ($this->target < $this->received_price) {
+        if ($this->target < $this->received_price) {
             $this->alert('warning', 'لا يمكن اضافة رسوم بقيمة اكبر من المطلوب', [
                 'position' => 'top',
                 'timer' => 3000,

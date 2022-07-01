@@ -1,8 +1,8 @@
 <nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded">
-    <div class="grid grid-cols-12">
+    <div class=" flex flex-wrap md:flex-col md:space-y-3 xl:flex-row justify-between xl:justify-around  items-center">
 
         {{-- Logo & Title --}}
-        <div class="col-span-2 mb-2 md:my-0">
+        <div class="mb-2 md:my-0">
             <a href="/" class="flex items-center text-xl">
                 <img src="{{ asset('/img/logo.png') }}" class="h-12 mx-4 ">
                 <span class="font-Alhurra text-xl md:text-2xl font-bold text-gray-700">صندوق الكرم</span>
