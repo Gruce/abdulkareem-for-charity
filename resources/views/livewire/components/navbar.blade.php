@@ -1,8 +1,8 @@
 <nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded">
-    <div class="grid grid-cols-12">
+    <div class=" flex flex-wrap md:justify-between md:space-y-3 xl:justify-between justify-between  items-center">
 
         {{-- Logo & Title --}}
-        <div class="col-span-2 mb-2 md:my-0">
+        <div class="mb-2 md:mb-4 order-1">
             <a href="/" class="flex items-center text-xl">
                 <img src="{{ asset('/img/logo.png') }}" class="h-12 mx-4 ">
                 <span class="font-Alhurra text-xl md:text-2xl font-bold text-gray-700">صندوق الكرم</span>
@@ -95,12 +95,13 @@
 
 
         {{-- List and sign in/up --}}
-        <div class="hidden justify-center items-center w-full md:flex md:w-auto md:order-1 " id="mobile-menu-2">
-            <ul class="flex flex-col mt-4 md:flex-row  md:-mt-1 md:text-sm md:font-medium  my-2 ">
+        <div class="hidden justify-center items-center w-full md:flex  md:flex-initial md:w-full xl:w-auto md:order-3 xl:order-2"
+            id="mobile-menu-2">
+            <ul class="flex flex-col mt-4 md:flex-row  md:-mt-1 md:text-sm md:font-medium ">
                 @foreach ($menu->items as $item)
-                <li class="mx-8">
+                <li class="md:mx-8">
 
-                    <a href="{{ route($item->route) }}" class="block py-2 pl-3 pr-4 font-Alhurra1
+                    <a href="{{ route($item->route) }}" class="block py-2 pl-3 pr-4 text-center font-Alhurra1
                         {{ $item->active ? " text-primary-500 border-primary-100"
                         : 'text-gray-700 hover:bg-gray-300 rounded-lg border-gray-100 hover:scale-110 duration-200 ' }}
                         border-b">
@@ -112,11 +113,11 @@
                 @endforeach
 
                 @foreach ($leftMenu->items as $item)
-                <li class="mx-8  md:hidden ">
+                <li class="md:mx-8  md:hidden ">
 
                     {{-- Has no submenu --}}
                     <a href="{{ route($item->route) }}"
-                        class="block py-2 pl-3 pr-4  {{ $item->active ? 'text-primary-500 border-primary-100' : 'text-gray-700 hover:bg-gray-300 rounded-lg border-gray-100 hover:scale-110 duration-200 ' }} border-b ">
+                        class="block py-2 pl-3 pr-4 text-center {{ $item->active ? 'text-primary-500 border-primary-100' : 'text-gray-700 hover:bg-gray-300 rounded-lg border-gray-100 hover:scale-110 duration-200 ' }} border-b ">
                         {{ $item->name }}
                     </a>
 
@@ -129,9 +130,9 @@
         </div>
 
         {{-- leftmenu --}}
-        <div class="hidden  w-full md:flex md:w-auto md:order-1">
+        <div class="hidden  w-full md:flex mt-1 md:w-auto md:order-2 xl:order-3">
 
-            <ul class="flex flex-col mt-4 md:flex-row  md:-mt-4  md:text-sm md:font-medium">
+            <ul class="flex flex-col mt-4 md:flex-row  md:-mt-4  md:text-sm md:font-medium ">
 
 
                 @foreach ($leftMenu->items as $item)
