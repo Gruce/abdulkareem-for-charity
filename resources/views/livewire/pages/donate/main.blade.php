@@ -2,11 +2,11 @@
     <div class="flex flex-col px-4 py-8 md:px-0 md:py-0">
         <div class="basis-1/4 grid lg:grid-cols-12 justify-between">
             <div class="sm:grid-cols-12 lg:col-span-5 pt-2 ">
-                <h1 class="text-secondary-900 text-4xl md:text-4xl xl:text-5xl font-bold md:mr-3 xl:mr-20">
+                <h1 class="text-secondary-900 text-4xl md:text-4xl xl:text-5xl font-bold md:mr-3 xl:mr-10">
                     طريقة التبرع
                 </h1>
                 <ul
-                    class="list-disc list-inside text-secondary-200 text-right mt-5  text-lg md:text-xl md:mr-3 xl:text-xl xl:mr-20">
+                    class="list-disc list-inside text-secondary-200 text-right mt-5  text-lg md:text-xl md:mr-3 xl:text-xl xl:mr-10">
                     <li class="py-2">يتم التبرع عن طريق شراء الاسهم</li>
                     <li class="py-2">سعر السهم 2000 دينار عراقي</li>
                     <li class="py-2">ادخل عدد الاسهم التي تود شرائها</li>

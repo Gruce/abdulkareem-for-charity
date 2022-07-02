@@ -20,10 +20,10 @@
                     </svg>
                 </button>
             </div>
-            <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
-                <div class="flex-shrink-0 flex items-center">
+            <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start ">
+                <div class="flex-shrink-0 flex items-center ">
                     <a href="/" class="flex items-center text-xl">
-                        <span class="font-Alhurra text-xl md:text-2xl font-bold text-gray-700">صندوق الكرم</span>
+                        <span class="hidden lg:block font-Alhurra text-xl md:text-2xl font-bold text-gray-700">صندوق الكرم</span>
                         <img src="{{ asset('/img/logo.png') }}" class="h-12 mx-4 ">
 
                     </a>
@@ -44,7 +44,7 @@
 
             <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
 
-                @guest
+                @auth
                 <!-- Profile dropdown -->
                 <div class="ml-3 relative">
                     {{-- Button --}}
@@ -90,12 +90,12 @@
                 </div>
                 @else
                 
-                <div class="hidden md:block">
+                <div class="">
                     @foreach ($leftMenu->items as $item)
 
 
                     <a href="{{ route($item->route) }}"
-                        class=" py-1 pl-3 pr-4 mx-2 text-primary-700 @if($item->route == 'login') border border-primary-500 @endif rounded-lg">
+                        class=" text-xs md:text-sm py-1 pl-3 pr-4 lg:mx-2 text-primary-700 @if($item->route == 'login') border border-primary-500 @else hidden lg:inline @endif rounded-lg">
                         {{ $item->name }}
                         <i class="fa-solid fa-{{ $item->icon }}"></i>
 
@@ -105,7 +105,9 @@
                     @endforeach
                 </div>
 
-                @endguest
+                
+
+                @endauth
             </div>
 
         </div>
