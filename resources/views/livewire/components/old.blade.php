@@ -50,11 +50,12 @@
                     {{-- Button --}}
                     <div>
                         <button type="button"
-                            class="bg-gray-800 flex text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
+                            class="bg-gray-800 flex text-sm rounded-full border-2 border-primary-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-primary-800 focus:ring-white"
                             id="user-menu-button" aria-expanded="false" data-dropdown-toggle="dropdown">
                             <span class="sr-only">Open user menu</span>
-                            <img class="h-8 w-8 rounded-full"
-                                src="{{ asset(auth()->user()->profile_photo_path ?? '/img/user.png') }}">
+                            <img class="h-10 w-10 rounded-full"
+                            src="@if (auth()->user()->profile_photo_path) {{ asset(auth()->user()->profile_photo_path) }}@elseif(auth()->user()->gender == 1) {{ asset('/img/profile_woman.png') }} @elseif(auth()->user()->gender != 1) {{ asset('/img/profile_man.png') }} @endif"
+                                >
                         </button>
                     </div>
                     {{-- content --}}
