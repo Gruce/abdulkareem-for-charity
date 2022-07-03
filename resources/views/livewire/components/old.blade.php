@@ -1,132 +1,158 @@
-<!-- This example requires Tailwind CSS v2.0+ -->
-<nav class="">
-    <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
-        <div class="relative flex items-center justify-between h-16">
-            <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
-                <!-- Mobile menu button-->
-                <button data-collapse-toggle="mobile-menu-2" type="button" aria-controls="mobile-menu-2"
-                    
-                    class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
-                    <span class="sr-only">Open main menu</span>
 
-                    <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                        stroke-width="2" stroke="currentColor" aria-hidden="true">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-                    </svg>
 
-                    <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                        stroke-width="2" stroke="currentColor" aria-hidden="true">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                </button>
-            </div>
-            <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start ">
-                <div class="flex-shrink-0 flex items-center ">
-                    <a href="/" class="flex items-center text-xl">
-                        <span class="hidden lg:block font-Alhurra text-xl md:text-2xl font-bold text-gray-700">صندوق الكرم</span>
-                        <img src="{{ asset('/img/logo.png') }}" class="h-12 mx-4 ">
-                        
+<nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded">
+    <div class=" flex flex-wrap md:justify-between md:space-y-3 xl:justify-between justify-between  items-center">
 
-                    </a>
-                </div>
-                <div class="hidden sm:block sm:ml-6">
-                    <div class="flex space-x-4">
-                        @foreach ($menu->items as $item)
-                        <a href="{{ route($item->route) }}" @if($item->active) class="bg-primary-700 text-white px-3
-                            py-2 rounded-md text-sm font-medium"
-                            @else class="text-gray-700 hover:bg-primary-500 hover:text-white px-3 py-2 rounded-md
-                            text-sm font-medium" @endif>
-                            {{ $item->name }}</a>
+        {{-- Logo & Title --}}
+        <div class="mb-2 md:mb-4 order-1">
+            <a href="/" class="flex items-center text-xl">
+                <img src="{{ asset('/img/logo.png') }}" class="h-12 mx-4 ">
+                <span class="font-Alhurra text-xl md:text-2xl font-bold text-gray-700">صندوق الكرم</span>
+            </a>
+        </div>
 
-                        @endforeach
-                    </div>
-                </div>
-            </div>
-
-            <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-
+        {{-- Left --}}
+        <div class="@guest md:hidden @endguest md:order-3 flex">
+            {{-- dropdwon button and box info --}}
+            <div class="flex items-center md:order-2 ">
+                {{-- Profile Dropdown --}}
                 @auth
-                <!-- Profile dropdown -->
-                <div class="ml-3 relative">
-                    {{-- Button --}}
-                    <div>
-                        <button type="button"
-                            class=" flex text-sm rounded-full border-2 border-primary-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-primary-500 focus:ring-white"
+
+                <div class="flex justify-around items-center md:order-2 md:-mt-4 @guest hidden @endguest ml-2">
+                    @admin
+                    <div class="hidden   md:flex justify-around   ml-10  text-gray-500 text-base text-center ">
+
+                        <div class="flex flex-col mx-2 border-b border-gray-200">
+                            <span>@money($total, 'IQD') </span>
+                            <span class="text-2xs -mt-2">الكلي</span>
+                        </div>
+                        <div class="flex flex-col mx-2 border-b border-gray-200">
+                            <span>@money($current_price, 'IQD') </span>
+                            <span class="text-2xs -mt-2">الحالي</span>
+                        </div>
+
+                        <div class="flex flex-col mx-2 border-b border-gray-200">
+                            <span>@money($payments, 'IQD')</span>
+                            <span class="text-2xs -mt-2">مصروف</span>
+                        </div>
+                    </div>
+                    @endadmin
+                    <div class=" ">
+                        <button type="button" class="flex mr-3 text-sm border-2 border-transparent  md:mr-0"
                             id="user-menu-button" aria-expanded="false" data-dropdown-toggle="dropdown">
                             <span class="sr-only">Open user menu</span>
-                            <img class="h-10 w-10 rounded-full"
-                            src="@if (auth()->user()->profile_photo_path) {{ asset(auth()->user()->profile_photo_path) }}@elseif(auth()->user()->gender == 1) {{ asset('/img/profile_woman.png') }} @elseif(auth()->user()->gender != 1) {{ asset('/img/profile_man.png') }} @endif"
-                                >
+                            <i class="fa-solid fa-angle-down ml-2 mt-3"></i>
+                            <img class="w-8 h-8 xl:w-10 xl:h-10 rounded-full border-2 border-primary-600"
+                                src="{{ asset(auth()->user()->profile_photo_path ?? '/img/user.png') }}"
+                                alt="user photo">
                         </button>
-                    </div>
-                    {{-- content --}}
-                    <div class="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none hidden"
-                        id="dropdown" data-popper-reference-hidden="" data-popper-escaped="" data-popper-placement="top"
-                        style="position: absolute; inset: auto auto 0px 0px; margin: 0px; transform: translate(1246px, 801px);">
-                        <div class="py-3 px-4">
-                            <span class="block text-sm text-gray-900 ">dffdf</span>
-                            <span class="block text-sm font-medium text-gray-500 truncate ">fdfd</span>
+
+                        <div class="hidden z-50 my-4 text-base list-none bg-white rounded divide-y divide-gray-100 shadow "
+                            id="dropdown" data-popper-reference-hidden="" data-popper-escaped=""
+                            data-popper-placement="top"
+                            style="position: absolute; inset: auto auto 0px 0px; margin: 0px; transform: translate(1246px, 801px);">
+                            <div class="py-3 px-4">
+                                <span class="block text-sm text-gray-900 ">{{ auth()->user()->name }}</span>
+                                <span class="block text-sm font-medium text-gray-500 truncate ">{{ auth()->user()->email
+                                    }}</span>
+                            </div>
+                            <ul class="py-1" aria-labelledby="dropdown">
+
+                                <li>
+                                    <a href="{{ route('profile') }}"
+                                        class=" py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 flex justify-between">
+                                        <span> حسابك</span>
+                                        <i class="fa-solid fa-circle-user"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <form method="POST" action="{{ route('logout') }}" class="" x-data>
+                                        @csrf
+                                        <button type="submit"
+                                            class="flex justify-around items-center p-3 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900 w-full">
+                                            <span> تسجيل الخروج</span>
+                                            <i class="fa-solid fa-right-from-bracket"></i>
+
+                                        </button>
+                                    </form>
+                                </li>
+                            </ul>
                         </div>
-                        <ul class="py-1" aria-labelledby="dropdown">
-
-                            <li>
-                                <a href="{{ route('profile') }}"
-                                    class=" py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 flex justify-between">
-                                    <span> حسابك</span>
-                                    <i class="fa-solid fa-circle-user"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <form method="POST" action="{{ route('logout') }}" class="" x-data>
-                                    @csrf
-                                    <button type="submit"
-                                        class="flex justify-around items-center p-3 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900 w-full">
-                                        <span> تسجيل الخروج</span>
-                                        <i class="fa-solid fa-right-from-bracket"></i>
-
-                                    </button>
-                                </form>
-                            </li>
-                        </ul>
                     </div>
                 </div>
-                @else
-                
-                <div class="">
-                    @foreach ($leftMenu->items as $item)
+                @endauth
 
+
+            </div>
+
+            {{-- Mobile buttion --}}
+            <button data-collapse-toggle="mobile-menu-2" type="button"
+                class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 "
+                aria-controls="mobile-menu-2" aria-expanded="false">
+                <span class="sr-only">Open main menu</span>
+                <i class="fa-solid fa-ellipsis text-2xl"></i>
+
+            </button>
+        </div>
+
+
+        {{-- List and sign in/up --}}
+        <div class="hidden justify-center items-center w-full md:flex  md:flex-initial md:w-full xl:w-auto md:order-3 xl:order-2"
+            id="mobile-menu-2">
+            <ul class="flex flex-col mt-4 md:flex-row  md:-mt-1 md:text-sm md:font-medium ">
+                @foreach ($menu->items as $item)
+                <li class="md:mx-8">
+
+                    <a href="{{ route($item->route) }}" class="block py-2 pl-3 pr-4 text-center font-Alhurra1
+                        {{ $item->active ? " text-primary-500 border-primary-100"
+                        : 'text-gray-700 hover:bg-gray-300 rounded-lg border-gray-100 hover:scale-110 duration-200 ' }}
+                        border-b">
+                        {{ $item->name }}
+
+                    </a>
+
+                </li>
+                @endforeach
+
+                @foreach ($leftMenu->items as $item)
+                <li class="md:mx-8  md:hidden ">
+
+                    {{-- Has no submenu --}}
+                    <a href="{{ route($item->route) }}"
+                        class="block py-2 pl-3 pr-4 text-center {{ $item->active ? 'text-primary-500 border-primary-100' : 'text-gray-700 hover:bg-gray-300 rounded-lg border-gray-100 hover:scale-110 duration-200 ' }} border-b ">
+                        {{ $item->name }}
+                    </a>
+
+                </li>
+                @endforeach
+
+            </ul>
+
+
+        </div>
+
+        {{-- leftmenu --}}
+        <div class="hidden  w-full md:flex mt-1 md:w-auto md:order-2 xl:order-3">
+
+            <ul class="flex flex-col mt-4 md:flex-row  md:-mt-4  md:text-sm md:font-medium ">
+
+
+                @foreach ($leftMenu->items as $item)
+                <li class="mx-8 ">
 
                     <a href="{{ route($item->route) }}"
-                        class=" text-xs md:text-sm py-1 pl-3 pr-4 lg:mx-2 text-primary-700 @if($item->route == 'login') border border-primary-500 @else hidden lg:inline @endif rounded-lg">
+                        class=" py-2 pl-3 pr-4 text-white bg-primary-500 hover:bg-primary-600 rounded-lg border-gray-100 hover:scale-110 duration-200  border-b-2 ">
                         {{ $item->name }}
                         <i class="fa-solid fa-{{ $item->icon }}"></i>
 
                     </a>
 
+                </li>
+                @endforeach
 
-                    @endforeach
-                </div>
-
-                
-
-                @endauth
-            </div>
+            </ul>
 
         </div>
-    </div>
 
-    <!-- Mobile menu, show/hide based on menu state. -->
-    <div class="sm:hidden hidden" id="mobile-menu-2">
-        <div class="px-2 pt-2 pb-3 space-y-1">
-            @foreach ($menu->items as $item)
-            <a href="{{ route($item->route) }}" @if($item->active) class="bg-primary-500 text-white block px-3 py-2
-                rounded-md text-base font-medium"
-                @else class="text-gray-900 bg-gray-100 hover:text-black block px-3 py-2 rounded-md text-base
-                font-medium" @endif>
-                {{ $item->name }}</a>
-
-            @endforeach
-
-        </div>
     </div>
 </nav>

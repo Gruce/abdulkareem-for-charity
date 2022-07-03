@@ -1,7 +1,7 @@
 <div>
     <div class="flex flex-col justify-center max-w-xs p-6 shadow-sm rounded-xl border border-gray-200 mx-auto">
         <img src="@if ($item->profile_photo_path) {{ asset($item->profile_photo_path) }}@elseif($item->gender == 1) {{ asset('/img/profile_woman.png') }} @elseif($item->gender != 1) {{ asset('/img/profile_man.png') }} @endif"
-            alt="" class="w-32 h-32 mx-auto rounded-full bg-gray-500 aspect-square border-2 border-primary-600">
+            alt="" class="w-32 h-32 mx-auto rounded-full aspect-square border-2 border-primary-600">
         <div class="space-y-4 text-center divide-y divide-gray-200">
             <div class="my-2 space-y-1">
                 <h2 class="text-xl font-semibold sm:text-2xl">{{ $item->name }}</h2>

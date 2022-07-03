@@ -3535,6 +3535,12 @@ body[dir="rtl"] .checkbox:checked,
 .w-10\/12{
   width: 83.333333%;
 }
+.w-44{
+  width: 11rem;
+}
+.w-40{
+  width: 10rem;
+}
 .min-w-0{
   min-width: 0px;
 }
@@ -4030,10 +4036,6 @@ body[dir="rtl"] .checkbox:checked,
 .bg-gray-900{
   --tw-bg-opacity: 1;
   background-color: rgb(17 24 39 / var(--tw-bg-opacity));
-}
-.bg-green-400{
-  --tw-bg-opacity: 1;
-  background-color: rgb(74 222 128 / var(--tw-bg-opacity));
 }
 .bg-opacity-25{
   --tw-bg-opacity: 0.25;
@@ -4916,14 +4918,11 @@ body[dir="rtl"] .checkbox:checked,
 .focus\:ring-offset-2:focus{
   --tw-ring-offset-width: 2px;
 }
-.focus\:ring-offset-primary-400:focus{
-  --tw-ring-offset-color: #7cd5ac;
+.focus\:ring-offset-primary-500:focus{
+  --tw-ring-offset-color: #4ec68e;
 }
 .focus\:ring-offset-gray-800:focus{
   --tw-ring-offset-color: #1f2937;
-}
-.focus\:ring-offset-primary-500:focus{
-  --tw-ring-offset-color: #4ec68e;
 }
 .active\:bg-gray-100:active{
   --tw-bg-opacity: 1;
@@ -4981,13 +4980,37 @@ body[dir="rtl"] .checkbox:checked,
   color: rgb(185 28 28 / var(--tw-text-opacity));
 }
 @media (prefers-color-scheme: dark){
+  .dark\:divide-gray-600 > :not([hidden]) ~ :not([hidden]){
+    --tw-divide-opacity: 1;
+    border-color: rgb(75 85 99 / var(--tw-divide-opacity));
+  }
   .dark\:bg-gray-900{
     --tw-bg-opacity: 1;
     background-color: rgb(17 24 39 / var(--tw-bg-opacity));
   }
+  .dark\:bg-gray-700{
+    --tw-bg-opacity: 1;
+    background-color: rgb(55 65 81 / var(--tw-bg-opacity));
+  }
   .dark\:text-gray-600{
     --tw-text-opacity: 1;
     color: rgb(75 85 99 / var(--tw-text-opacity));
+  }
+  .dark\:text-white{
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity));
+  }
+  .dark\:text-gray-200{
+    --tw-text-opacity: 1;
+    color: rgb(229 231 235 / var(--tw-text-opacity));
+  }
+  .dark\:hover\:bg-gray-600:hover{
+    --tw-bg-opacity: 1;
+    background-color: rgb(75 85 99 / var(--tw-bg-opacity));
+  }
+  .dark\:hover\:text-white:hover{
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity));
   }
 }
 @media (min-width: 640px){
@@ -5274,6 +5297,9 @@ body[dir="rtl"] .checkbox:checked,
   }
   .md\:w-3\/4{
     width: 75%;
+  }
+  .md\:w-40{
+    width: 10rem;
   }
   .md\:max-w-lg{
     max-width: 32rem;
