@@ -31,6 +31,8 @@ class User extends Authenticatable
         'password',
         'is_admin',
         'phone_number',
+        'telegram_username',
+        'gender',
         'type',
     ];
 
@@ -84,6 +86,11 @@ class User extends Authenticatable
         return $this->hasMany(Share::class);
     }
 
+    public function admin()
+    {
+        return $this->hasOne(Admin::class);
+    }
+
     ### End Relationships ###
 
     public function edit($data)    {
@@ -92,7 +99,7 @@ class User extends Authenticatable
     }
 
     public function addProfile($file , $type = null){
-        
+
         $type = $type ?? 'student';
         $ext = $file->extension();
         $name=\Str::random(10).'.'.$ext;
@@ -107,6 +114,26 @@ class User extends Authenticatable
     public function getShare() {
         return $this->shares()->where('state', true)->sum('share');
 
+    }
+    public function pay(){
+        return $this->shares()->where('state', false)->get();
+    }
+
+    public function getProfilePhotoUrlAttribute()
+    {
+        return $this->profile_photo_path ?? 'https://www.gravatar.com/avatar/'.md5($this->email).'?s=200&d=mm';
+    }
+
+
+
+    protected function getShares(): Attribute
+    {
+        return Attribute::make(
+            get: function () {
+                $shares = Share:: where('admin_id',$this->id)->where('state', true)->sum('share');
+                return $shares;
+            }
+        );
     }
 
 }

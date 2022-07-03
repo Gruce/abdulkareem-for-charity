@@ -6,10 +6,13 @@ namespace App\Http\Livewire\Pages\Donors;
 use Livewire\Component;
 use Jantinnerezo\LivewireAlert\LivewireAlert;
 use App\Models\User;
-use App\Models\Share;
+use Livewire\WithPagination;
+
 class Main extends Component
-{protected $listeners = ['search','$refresh'];
-    public $search ,$type = 0, $gender = 0, $state = 0 , $study_type = 0, $stage = 0, $department = 0, $division = 0;
+{
+    use WithPagination;
+    protected $listeners = ['search', '$refresh'];
+    public $search, $type = 0, $gender = 0, $state = 0, $study_type = 0, $stage = 0, $department = 0, $division = 0;
 
     public function getType()
     {
@@ -30,49 +33,52 @@ class Main extends Component
     }
 
     public function render()
-    {$search = '%' . $this->search . '%';
+    {
+        $search = '%' . $this->search . '%';
 
-        $this->users = User::with([
+        $users = User::with([
             'shares' => function ($query) {
                 return $query->where('state', false)->get();
             }
         ]);
-        if ($this->type) $this->users = $this->users->where('type', $this->type);
+        if ($this->type) $users = $users->where('type', $this->type);
 
-        if ( $this->gender) $this->users = $this->users->where('gender', $this->gender);
+        if ($this->gender) $users = $users->where('gender', $this->gender);
 
-        if ($this->state != 1 && $this->state != 0 ) {
-            $this->users = $this->users->whereHas('shares',  function ($query) {
+        if ($this->state != 1 && $this->state != 0) {
+            $users = $users->whereHas('shares',  function ($query) {
                 $query->where('state', $this->state);
             });
         }
 
         if ($this->study_type) {
-            $this->users = $this->users->whereHas('student', function ($query) {
+            $users = $users->whereHas('student', function ($query) {
                 $query->where('study_type', $this->study_type);
             });
         }
 
         if ($this->stage) {
-            $this->users = $this->users->whereHas('student', function ($query) {
+            $users = $users->whereHas('student', function ($query) {
                 $query->where('stage', $this->stage);
             });
         }
 
         if ($this->division) {
-            $this->users = $this->users->whereHas('student', function ($query) {
+            $users = $users->whereHas('student', function ($query) {
                 $query->where('division', $this->division);
             });
         }
 
         if ($this->department) {
-            $this->users = $this->users->whereHas('student', function ($query) {
+            $users = $users->whereHas('student', function ($query) {
                 $query->where('department', $this->department);
             });
         }
-        $this->users = $this->users->where('name', 'LIKE', $search)->get();
+        if ($this->search) {
+            $users = $users->where('name', 'like', $search);
+        }
+        $users = $users->paginate(10);
 
-
-        return view('livewire.pages.donors.main');
+        return view('livewire.pages.donors.main', compact('users'));
     }
 }

@@ -5,9 +5,11 @@ namespace App\Http\Livewire\Pages\Cases;
 use Livewire\Component;
 use App\Models\Event;
 use App\Models\Share;
+use Livewire\WithPagination;
 
 class Main extends Component
 {
+    use WithPagination;
     protected $listeners = ['$refresh', 'search'];
 
     public $search, $received_price, $target, $selectEvent;
@@ -27,7 +29,7 @@ class Main extends Component
     }
     public function render()
     {
-        
+
 
         $search = '%' . $this->search . '%';
         $this->events = [];
@@ -36,7 +38,15 @@ class Main extends Component
         } elseif ($this->selectEvent == 2)
             $this->events = Event::where('title', 'LIKE', $search)->whereColumn('received_price', '<', 'target')->get();
         else $this->events =  Event::where('title', 'LIKE', $search)->get();
+
+        // $events = Event::all();
+        // if($this->search) $events = $events->where('title', 'LIKE', $search);
+
+        //     $events = $events->paginate(1);
+
+
         //$this->events =  $this->events->where('title', 'LIKE', $search)->get();
+        
         return view('livewire.pages.cases.main');
     }
 }
