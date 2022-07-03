@@ -95,6 +95,15 @@ class DeveloperSeeder extends Seeder
         ]);
         ### manager ###
         Developer::create([
+            'name' => 'حسن خالد',
+            'department' => 'علوم الحاسوب',
+            'stage' => "المرحلة الرابعة",
+            'type' => 2,
+            'photo' => '/img/mo.jpg',
+            'adjective' => 'مبرمج',
+
+        ]);
+        Developer::create([
             'name' => 'مصطفى معتز',
             'department' => 'علوم الحاسوب',
             'stage' => "المرحلة الثالثة",
@@ -108,17 +117,28 @@ class DeveloperSeeder extends Seeder
             'department' => 'علوم الحاسوب',
             'stage' => "المرحلة الرابعة ",
             'type' => 2,
-            'photo' => '/img/mo.jpg',
+            'photo' => '/img/hasan_graphics.jpg',
             'adjective' => 'مصمم الشعار',
 
         ]);
+
         Developer::create([
-            'name' => 'حسن خالد',
+            'name' => 'عزالدين حكيم',
             'department' => 'علوم الحاسوب',
-            'stage' => "المرحلة الرابعة",
+            'stage' => "المرحلة الثالثة",
             'type' => 2,
-            'photo' => '/img/mo.jpg',
-            'adjective' => 'مبرمج',
+            'photo' => '/img/ayman.jpg',
+            'adjective' => 'مصمم شعارات ',
+
+        ]);
+
+        Developer::create([
+            'name' => 'أيمن احمد',
+            'department' => "كلية علوم الحاسوب"  ,
+            'stage' => 'متخرج',
+            'type' => 2,
+            'photo' => '/img/ayman.jpg',
+            'adjective' => 'مصمم الموشن ',
 
         ]);
     }

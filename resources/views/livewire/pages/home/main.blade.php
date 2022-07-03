@@ -1,11 +1,11 @@
 <div>
-    <div class="flex flex-col absolute h-screen">
+    <div class="flex flex-col container mx-auto">
 
         <!-- INTRO -->
-        <div class="basis-4/12 grid grid-cols-1 xl:grid-cols-12 justify-between mt-10 md:mt-0">
+        <div class="basis-4/12 grid grid-cols-1 xl:grid-cols-12 justify-between mt-10 md:mt-0 ">
             <!-- Text -->
-            <div class=" xl:col-span-5 xl:pr-24 xl:pt-20  ">
-                <h1 class="text-secondary-900 text-4xl xl:text-6xl font-bold mr-6">
+            <div class=" xl:col-span-5  md:pt-12 lg:pt-8 xl:pt-10  ">
+                <h1 class="text-secondary-900 text-4xl xl:text-5xl font-bold mr-6">
                     صندوق الكرم
                 </h1>
                 <p class="text-secondary-200 text-lg xl:text-2xl mt-6 px-6">
@@ -27,7 +27,7 @@
             </div>
             {{--Photo--}}
 
-            <div class=" xl:col-span-7 mt-6 xl:mt-0 ml-6 ">
+            <div class=" xl:col-span-7 mt-6 xl:mt-0 ">
                 <img src="/img/charity.png" class="w-10/12 h-auto m-auto">
             </div>
         </div>
@@ -38,12 +38,12 @@
         </div>
 
         {{-- Cases --}}
-        <div class=" basis-4/12 xl:px-20 xl:ml-8 mt-10 xl:mt-16">
-            <span class="text-secondary-900 text-4xl xl:text-6xl font-bold pr-4 md:pr-0 ">
-                اخر الحالات
+        <div class=" basis-4/12  mt-10 xl:mt-16">
+            <span class="text-secondary-900 text-4xl xl:text-5xl  font-bold pr-4  ">
+                احدث الحالات
             </span>
             <div
-            class="my-6 xl:my-20  grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 ">
+            class="my-6 xl:my-12  grid  grid-cols-1 md:grid-cols-2  xl:grid-cols-4 gap-16 xl:gap-0 ">
                 @foreach ($events as $event)
                 @livewire('pages.cases.card', ['event' => $event], key($event->id . "hi"))
                 @endforeach
@@ -51,11 +51,11 @@
         </div>
 
         {{--Work for--}}
-        <div class=" basis-2/12  mt-10 xl:mt-16 xl:ml-16">
-            <span class="text-secondary-900 text-4xl xl:text-6xl  font-bold pr-4  xl:pr-20">
+        <div class=" basis-2/12  mt-10 xl:mt-12 ">
+            <span class="text-secondary-900 text-4xl xl:text-5xl  font-bold pr-4  ">
                 نحن نعمل لأجل
             </span>
-            <div class="my-6 xl:my-20">
+            <div class="my-6 xl:my-12">
                 @livewire('pages.home.activities')
             </div>
         </div>

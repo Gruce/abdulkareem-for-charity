@@ -9,10 +9,10 @@
 
             <div class="grid grid-cols-4 md:grid-cols-2 gap-2">
 
-                <div class="col-span-2 md:col-span-1 bg-primary-700 rounded-md p-2">
-                    <label class=" text-base md:text-xl ">القسم</label>
+                <div class="col-span-2 md:col-span-1 border-dashed border-2 border-primary-500 text-primary-500 rounded-md p-2">
+                    <label class=" text-base font-light md:text-xl ">القسم</label>
 
-                    <div class="text-base mt-6 ">
+                    <div class="text-base mt-4 ">
                         <div class="mb-3">
                             <input type="radio" wire:model="department" value="1" id="CS"
                                 class="focus:ring-primary-500 text-primary-600">
@@ -33,12 +33,12 @@
                     @enderror
                 </div>
 
-                <div class="col-span-2 md:col-span-1 bg-primary-700 rounded-md p-2">
+                <div class="col-span-2 md:col-span-1 border-dashed border-2 border-primary-500 text-primary-500 rounded-md p-2">
                     <div class="flex flex-col space-y-4 md:space-y-0 md:flex-row md:space-x-4">
                         <div class="form-item w-full">
-                            <label class=" text-base md:text-xl  ">نوع الدراسة</label>
+                            <label class=" text-base font-light md:text-xl">نوع الدراسة</label>
 
-                            <div class="text-base mt-6">
+                            <div class="text-base mt-4">
 
                                 <div class="mb-3">
                                     <input type="radio" wire:model="study_type" value="1" id="morning"
@@ -67,12 +67,12 @@
 
             <div class="grid grid-cols-4 md:grid-cols-2 gap-2">
                 {{-- المرحلة --}}
-                <div class="col-span-2 md:col-span-1 bg-primary-700 rounded-md p-2">
+                <div class="col-span-2 md:col-span-1 border-dashed border-2 border-primary-500 text-primary-500 rounded-md p-2">
                     <div class="flex flex-col space-y-4 md:space-y-0 md:flex-row md:space-x-4">
                         <div class="form-item w-full">
-                            <label class=" text-base md:text-xl  ">المرحلة</label>
+                            <label class=" text-base font-light md:text-xl">المرحلة</label>
 
-                            <div class="text-base flex mt-6">
+                            <div class="text-base flex mt-4">
                                 <div class="ml-5 ">
 
                                     <div class="mb-3">
@@ -110,14 +110,14 @@
                     </div>
                 </div>
                 {{-- الشعبة --}}
-                <div class="col-span-2 md:col-span-1 bg-primary-700 rounded-md p-2">
+                <div class="col-span-2 md:col-span-1 border-dashed border-2 border-primary-500 text-primary-500 rounded-md p-2">
                     <div class="flex flex-col space-y-4 md:space-y-0 md:flex-row md:space-x-4">
                         <div class="form-item w-full">
-                            <label class=" text-base md:text-xl ">الشعبة</label>
+                            <label class=" text-base font-light md:text-xl">الشعبة</label>
                             <br>
 
-                            <div class="text-base mt-7 flex">
-                                <div class="ml-5 ">
+                            <div class="text-base mt-6 flex">
+                                <div class="ml-5">
                                     <div class="mb-3">
                                         <input type="radio" wire:model="division" value="1" id="A"
                                             class="focus:ring-primary-500 text-primary-600">

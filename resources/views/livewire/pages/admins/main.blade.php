@@ -13,7 +13,7 @@
                 </div>
             @endif
         </div>
-        <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-6 mt-20 ">
+        <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-6 mt-20 ">
             @forelse($admins as $item)
                 <livewire:pages.admins.card :item="$item" key="{{ now() }}" />
             @empty
