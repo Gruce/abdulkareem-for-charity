@@ -3928,10 +3928,6 @@ body[dir="rtl"] .checkbox:checked,
   --tw-border-opacity: 1;
   border-color: rgb(75 85 99 / var(--tw-border-opacity));
 }
-.border-primary-200{
-  --tw-border-opacity: 1;
-  border-color: rgb(171 228 201 / var(--tw-border-opacity));
-}
 .border-primary-400{
   --tw-border-opacity: 1;
   border-color: rgb(124 213 172 / var(--tw-border-opacity));
@@ -4019,10 +4015,6 @@ body[dir="rtl"] .checkbox:checked,
 .bg-transparent{
   background-color: transparent;
 }
-.bg-gray-300{
-  --tw-bg-opacity: 1;
-  background-color: rgb(209 213 219 / var(--tw-bg-opacity));
-}
 .bg-green-500{
   --tw-bg-opacity: 1;
   background-color: rgb(34 197 94 / var(--tw-bg-opacity));
@@ -4031,9 +4023,17 @@ body[dir="rtl"] .checkbox:checked,
   --tw-bg-opacity: 1;
   background-color: rgb(215 215 237 / var(--tw-bg-opacity));
 }
+.bg-gray-300{
+  --tw-bg-opacity: 1;
+  background-color: rgb(209 213 219 / var(--tw-bg-opacity));
+}
 .bg-gray-900{
   --tw-bg-opacity: 1;
   background-color: rgb(17 24 39 / var(--tw-bg-opacity));
+}
+.bg-green-400{
+  --tw-bg-opacity: 1;
+  background-color: rgb(74 222 128 / var(--tw-bg-opacity));
 }
 .bg-opacity-25{
   --tw-bg-opacity: 0.25;
@@ -4916,11 +4916,14 @@ body[dir="rtl"] .checkbox:checked,
 .focus\:ring-offset-2:focus{
   --tw-ring-offset-width: 2px;
 }
-.focus\:ring-offset-primary-800:focus{
-  --tw-ring-offset-color: #2d8b5f;
+.focus\:ring-offset-primary-400:focus{
+  --tw-ring-offset-color: #7cd5ac;
 }
 .focus\:ring-offset-gray-800:focus{
   --tw-ring-offset-color: #1f2937;
+}
+.focus\:ring-offset-primary-500:focus{
+  --tw-ring-offset-color: #4ec68e;
 }
 .active\:bg-gray-100:active{
   --tw-bg-opacity: 1;
@@ -5290,9 +5293,6 @@ body[dir="rtl"] .checkbox:checked,
   .md\:flex-row{
     flex-direction: row;
   }
-  .md\:flex-wrap-reverse{
-    flex-wrap: wrap-reverse;
-  }
   .md\:justify-between{
     justify-content: space-between;
   }
@@ -5563,14 +5563,11 @@ body[dir="rtl"] .checkbox:checked,
   .xl\:w-full{
     width: 100%;
   }
-  .xl\:w-10\/12{
-    width: 83.333333%;
+  .xl\:w-9\/12{
+    width: 75%;
   }
   .xl\:w-10{
     width: 2.5rem;
-  }
-  .xl\:w-9\/12{
-    width: 75%;
   }
   .xl\:grid-cols-3{
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -5626,24 +5623,8 @@ body[dir="rtl"] .checkbox:checked,
   .\32xl\:grid-cols-4{
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
-  .\32xl\:gap-x-16{
-    -moz-column-gap: 4rem;
-         column-gap: 4rem;
-  }
-  .\32xl\:gap-x-20{
-    -moz-column-gap: 5rem;
-         column-gap: 5rem;
-  }
-  .\32xl\:gap-x-24{
-    -moz-column-gap: 6rem;
-         column-gap: 6rem;
-  }
   .\32xl\:gap-x-28{
     -moz-column-gap: 7rem;
          column-gap: 7rem;
-  }
-  .\32xl\:gap-x-2{
-    -moz-column-gap: 0.5rem;
-         column-gap: 0.5rem;
   }
 }

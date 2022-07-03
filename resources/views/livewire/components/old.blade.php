@@ -5,7 +5,7 @@
             <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
                 <!-- Mobile menu button-->
                 <button data-collapse-toggle="mobile-menu-2" type="button" aria-controls="mobile-menu-2"
-                    aria-expanded="false"
+                    
                     class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                     <span class="sr-only">Open main menu</span>
 
@@ -25,6 +25,7 @@
                     <a href="/" class="flex items-center text-xl">
                         <span class="hidden lg:block font-Alhurra text-xl md:text-2xl font-bold text-gray-700">صندوق الكرم</span>
                         <img src="{{ asset('/img/logo.png') }}" class="h-12 mx-4 ">
+                        
 
                     </a>
                 </div>
@@ -50,7 +51,7 @@
                     {{-- Button --}}
                     <div>
                         <button type="button"
-                            class="bg-gray-800 flex text-sm rounded-full  border-primary-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-primary-800 focus:ring-white"
+                            class=" flex text-sm rounded-full border-2 border-primary-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-primary-500 focus:ring-white"
                             id="user-menu-button" aria-expanded="false" data-dropdown-toggle="dropdown">
                             <span class="sr-only">Open user menu</span>
                             <img class="h-10 w-10 rounded-full"
@@ -59,7 +60,7 @@
                         </button>
                     </div>
                     {{-- content --}}
-                    <div class="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"
+                    <div class="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none hidden"
                         id="dropdown" data-popper-reference-hidden="" data-popper-escaped="" data-popper-placement="top"
                         style="position: absolute; inset: auto auto 0px 0px; margin: 0px; transform: translate(1246px, 801px);">
                         <div class="py-3 px-4">
@@ -115,12 +116,12 @@
     </div>
 
     <!-- Mobile menu, show/hide based on menu state. -->
-    <div class="sm:hidden" id="mobile-menu-2">
+    <div class="sm:hidden hidden" id="mobile-menu-2">
         <div class="px-2 pt-2 pb-3 space-y-1">
             @foreach ($menu->items as $item)
             <a href="{{ route($item->route) }}" @if($item->active) class="bg-primary-500 text-white block px-3 py-2
                 rounded-md text-base font-medium"
-                @else class="text-gray-900 bg-gray-300 hover:text-black block px-3 py-2 rounded-md text-base
+                @else class="text-gray-900 bg-gray-100 hover:text-black block px-3 py-2 rounded-md text-base
                 font-medium" @endif>
                 {{ $item->name }}</a>
 
