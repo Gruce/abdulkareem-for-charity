@@ -3027,13 +3027,6 @@ body[dir="rtl"] .checkbox:checked,
   --tw-bg-opacity: 1;
   background-color: hsl(var(--b3, var(--b2)) / var(--tw-bg-opacity));
 }
-.table tr.hover:hover th, 
-    .table tr.hover:hover td, 
-    .table tr.hover:nth-child(even):hover th, 
-    .table tr.hover:nth-child(even):hover td{
-  --tw-bg-opacity: 1;
-  background-color: hsl(var(--b3, var(--b2)) / var(--tw-bg-opacity));
-}
 .textarea:focus{
   outline: 2px solid hsla(var(--bc) / 0.2);
   outline-offset: 2px;
@@ -3188,20 +3181,14 @@ body[dir="rtl"] .checkbox:checked,
 .col-span-2{
   grid-column: span 2 / span 2;
 }
-.col-span-5{
-  grid-column: span 5 / span 5;
-}
-.col-span-1{
-  grid-column: span 1 / span 1;
-}
-.col-span-3{
-  grid-column: span 3 / span 3;
-}
 .col-span-8{
   grid-column: span 8 / span 8;
 }
 .col-span-4{
   grid-column: span 4 / span 4;
+}
+.col-span-5{
+  grid-column: span 5 / span 5;
 }
 .m-auto{
   margin: auto;
@@ -3228,10 +3215,6 @@ body[dir="rtl"] .checkbox:checked,
   margin-left: 2rem;
   margin-right: 2rem;
 }
-.mx-2{
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
-}
 .my-12{
   margin-top: 3rem;
   margin-bottom: 3rem;
@@ -3239,6 +3222,10 @@ body[dir="rtl"] .checkbox:checked,
 .my-4{
   margin-top: 1rem;
   margin-bottom: 1rem;
+}
+.mx-2{
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
 }
 .my-1{
   margin-top: 0.25rem;
@@ -3385,9 +3372,6 @@ body[dir="rtl"] .checkbox:checked,
 }
 .-mt-2{
   margin-top: -0.5rem;
-}
-.mr-10{
-  margin-right: 2.5rem;
 }
 .block{
   display: block;
@@ -3536,11 +3520,11 @@ body[dir="rtl"] .checkbox:checked,
 .w-2\/3{
   width: 66.666667%;
 }
-.w-11\/12{
-  width: 91.666667%;
-}
 .w-24{
   width: 6rem;
+}
+.w-11\/12{
+  width: 91.666667%;
 }
 .w-3\/5{
   width: 60%;
@@ -3550,15 +3534,6 @@ body[dir="rtl"] .checkbox:checked,
 }
 .w-10\/12{
   width: 83.333333%;
-}
-.w-96{
-  width: 24rem;
-}
-.w-80{
-  width: 20rem;
-}
-.w-9\/12{
-  width: 75%;
 }
 .min-w-0{
   min-width: 0px;
@@ -3739,19 +3714,12 @@ body[dir="rtl"] .checkbox:checked,
 .gap-16{
   gap: 4rem;
 }
+.gap-y-6{
+  row-gap: 1.5rem;
+}
 .gap-x-2{
   -moz-column-gap: 0.5rem;
        column-gap: 0.5rem;
-}
-.gap-x-10{
-  -moz-column-gap: 2.5rem;
-       column-gap: 2.5rem;
-}
-.gap-y-4{
-  row-gap: 1rem;
-}
-.gap-y-6{
-  row-gap: 1.5rem;
 }
 .gap-x-4{
   -moz-column-gap: 1rem;
@@ -3960,6 +3928,10 @@ body[dir="rtl"] .checkbox:checked,
   --tw-border-opacity: 1;
   border-color: rgb(75 85 99 / var(--tw-border-opacity));
 }
+.border-primary-200{
+  --tw-border-opacity: 1;
+  border-color: rgb(171 228 201 / var(--tw-border-opacity));
+}
 .border-primary-400{
   --tw-border-opacity: 1;
   border-color: rgb(124 213 172 / var(--tw-border-opacity));
@@ -3975,10 +3947,6 @@ body[dir="rtl"] .checkbox:checked,
 .border-green-500{
   --tw-border-opacity: 1;
   border-color: rgb(34 197 94 / var(--tw-border-opacity));
-}
-.border-primary-200{
-  --tw-border-opacity: 1;
-  border-color: rgb(171 228 201 / var(--tw-border-opacity));
 }
 .bg-white{
   --tw-bg-opacity: 1;
@@ -4067,14 +4035,6 @@ body[dir="rtl"] .checkbox:checked,
   --tw-bg-opacity: 1;
   background-color: rgb(17 24 39 / var(--tw-bg-opacity));
 }
-.bg-primary-300{
-  --tw-bg-opacity: 1;
-  background-color: rgb(147 220 186 / var(--tw-bg-opacity));
-}
-.bg-primary-400{
-  --tw-bg-opacity: 1;
-  background-color: rgb(124 213 172 / var(--tw-bg-opacity));
-}
 .bg-opacity-25{
   --tw-bg-opacity: 0.25;
 }
@@ -4121,6 +4081,9 @@ body[dir="rtl"] .checkbox:checked,
 .p-8{
   padding: 2rem;
 }
+.p-5{
+  padding: 1.25rem;
+}
 .p-3{
   padding: 0.75rem;
 }
@@ -4136,17 +4099,11 @@ body[dir="rtl"] .checkbox:checked,
 .p-2\.5{
   padding: 0.625rem;
 }
-.p-5{
-  padding: 1.25rem;
-}
 .p-0\.5{
   padding: 0.125rem;
 }
 .p-0{
   padding: 0px;
-}
-.p-10{
-  padding: 2.5rem;
 }
 .px-4{
   padding-left: 1rem;
@@ -4228,14 +4185,6 @@ body[dir="rtl"] .checkbox:checked,
   padding-left: 0.375rem;
   padding-right: 0.375rem;
 }
-.px-24{
-  padding-left: 6rem;
-  padding-right: 6rem;
-}
-.px-0{
-  padding-left: 0px;
-  padding-right: 0px;
-}
 .px-20{
   padding-left: 5rem;
   padding-right: 5rem;
@@ -4276,20 +4225,14 @@ body[dir="rtl"] .checkbox:checked,
 .pb-7{
   padding-bottom: 1.75rem;
 }
-.pb-2\.5{
-  padding-bottom: 0.625rem;
-}
-.pb-2{
-  padding-bottom: 0.5rem;
+.pt-3{
+  padding-top: 0.75rem;
 }
 .pr-2{
   padding-right: 0.5rem;
 }
 .pt-8{
   padding-top: 2rem;
-}
-.pt-3{
-  padding-top: 0.75rem;
 }
 .text-left{
   text-align: left;
@@ -4299,12 +4242,6 @@ body[dir="rtl"] .checkbox:checked,
 }
 .text-right{
   text-align: right;
-}
-.align-middle{
-  vertical-align: middle;
-}
-.align-bottom{
-  vertical-align: bottom;
 }
 .font-sans{
   font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -4973,21 +4910,17 @@ body[dir="rtl"] .checkbox:checked,
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(229 231 235 / var(--tw-ring-opacity));
 }
-.focus\:ring-primary-700:focus{
-  --tw-ring-opacity: 1;
-  --tw-ring-color: rgb(52 162 111 / var(--tw-ring-opacity));
-}
 .focus\:ring-opacity-50:focus{
   --tw-ring-opacity: 0.5;
 }
 .focus\:ring-offset-2:focus{
   --tw-ring-offset-width: 2px;
 }
-.focus\:ring-offset-gray-800:focus{
-  --tw-ring-offset-color: #1f2937;
-}
 .focus\:ring-offset-primary-800:focus{
   --tw-ring-offset-color: #2d8b5f;
+}
+.focus\:ring-offset-gray-800:focus{
+  --tw-ring-offset-color: #1f2937;
 }
 .active\:bg-gray-100:active{
   --tw-bg-opacity: 1;
@@ -5254,9 +5187,6 @@ body[dir="rtl"] .checkbox:checked,
   .md\:col-span-3{
     grid-column: span 3 / span 3;
   }
-  .md\:col-span-4{
-    grid-column: span 4 / span 4;
-  }
   .md\:col-span-5{
     grid-column: span 5 / span 5;
   }
@@ -5282,29 +5212,26 @@ body[dir="rtl"] .checkbox:checked,
   .md\:-mt-4{
     margin-top: -1rem;
   }
+  .md\:mt-10{
+    margin-top: 2.5rem;
+  }
+  .md\:mr-10{
+    margin-right: 2.5rem;
+  }
   .md\:mr-3{
     margin-right: 0.75rem;
   }
   .md\:mt-5{
     margin-top: 1.25rem;
   }
-  .md\:mt-10{
-    margin-top: 2.5rem;
-  }
-  .md\:mr-0{
-    margin-right: 0px;
-  }
-  .md\:mr-10{
-    margin-right: 2.5rem;
+  .md\:mt-12{
+    margin-top: 3rem;
   }
   .md\:mt-20{
     margin-top: 5rem;
   }
-  .md\:mt-12{
-    margin-top: 3rem;
-  }
-  .md\:block{
-    display: block;
+  .md\:mr-0{
+    margin-right: 0px;
   }
   .md\:inline{
     display: inline;
@@ -5336,20 +5263,14 @@ body[dir="rtl"] .checkbox:checked,
   .md\:w-auto{
     width: auto;
   }
-  .md\:w-96{
-    width: 24rem;
+  .md\:w-11\/12{
+    width: 91.666667%;
   }
   .md\:w-3\/5{
     width: 60%;
   }
-  .md\:w-11\/12{
-    width: 91.666667%;
-  }
   .md\:w-3\/4{
     width: 75%;
-  }
-  .md\:w-2\/4{
-    width: 50%;
   }
   .md\:max-w-lg{
     max-width: 32rem;
@@ -5368,6 +5289,9 @@ body[dir="rtl"] .checkbox:checked,
   }
   .md\:flex-row{
     flex-direction: row;
+  }
+  .md\:flex-wrap-reverse{
+    flex-wrap: wrap-reverse;
   }
   .md\:justify-between{
     justify-content: space-between;
@@ -5429,35 +5353,23 @@ body[dir="rtl"] .checkbox:checked,
     padding-top: 0px;
     padding-bottom: 0px;
   }
-  .md\:px-10{
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
-  }
-  .md\:px-6{
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-  }
   .md\:px-4{
     padding-left: 1rem;
     padding-right: 1rem;
+  }
+  .md\:px-10{
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
   }
   .md\:px-2{
     padding-left: 0.5rem;
     padding-right: 0.5rem;
   }
-  .md\:px-1{
-    padding-left: 0.25rem;
-    padding-right: 0.25rem;
-  }
-  .md\:px-3{
-    padding-left: 0.75rem;
-    padding-right: 0.75rem;
+  .md\:pt-12{
+    padding-top: 3rem;
   }
   .md\:pl-4{
     padding-left: 1rem;
-  }
-  .md\:pt-12{
-    padding-top: 3rem;
   }
   .md\:text-right{
     text-align: right;
@@ -5482,6 +5394,10 @@ body[dir="rtl"] .checkbox:checked,
     font-size: 2.25rem;
     line-height: 2.5rem;
   }
+  .md\:text-lg{
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
   .md\:text-base{
     font-size: 1rem;
     line-height: 1.5rem;
@@ -5489,10 +5405,6 @@ body[dir="rtl"] .checkbox:checked,
   .md\:text-5xl{
     font-size: 3rem;
     line-height: 1;
-  }
-  .md\:text-lg{
-    font-size: 1.125rem;
-    line-height: 1.75rem;
   }
   .md\:font-medium{
     font-weight: 500;
@@ -5524,17 +5436,14 @@ body[dir="rtl"] .checkbox:checked,
   .lg\:mt-5{
     margin-top: 1.25rem;
   }
-  .lg\:mt-0{
-    margin-top: 0px;
-  }
-  .lg\:mt-20{
-    margin-top: 5rem;
+  .lg\:mr-0{
+    margin-right: 0px;
   }
   .lg\:mr-10{
     margin-right: 2.5rem;
   }
-  .lg\:mr-0{
-    margin-right: 0px;
+  .lg\:mt-0{
+    margin-top: 0px;
   }
   .lg\:mt-10{
     margin-top: 2.5rem;
@@ -5548,32 +5457,14 @@ body[dir="rtl"] .checkbox:checked,
   .lg\:hidden{
     display: none;
   }
-  .lg\:w-80{
-    width: 20rem;
-  }
   .lg\:w-10\/12{
     width: 83.333333%;
-  }
-  .lg\:w-96{
-    width: 24rem;
-  }
-  .lg\:w-10{
-    width: 2.5rem;
-  }
-  .lg\:w-3\/4{
-    width: 75%;
-  }
-  .lg\:w-3\/5{
-    width: 60%;
   }
   .lg\:grid-cols-2{
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
   .lg\:grid-cols-12{
     grid-template-columns: repeat(12, minmax(0, 1fr));
-  }
-  .lg\:grid-cols-4{
-    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
   .lg\:grid-cols-3{
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -5594,33 +5485,16 @@ body[dir="rtl"] .checkbox:checked,
   .lg\:text-right{
     text-align: right;
   }
-  .lg\:text-4xl{
-    font-size: 2.25rem;
-    line-height: 2.5rem;
-  }
   .lg\:text-xl{
     font-size: 1.25rem;
     line-height: 1.75rem;
   }
+  .lg\:text-4xl{
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
 }
 @media (min-width: 1280px){
-  .xl\:label{
-    display: flex;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-     -ms-user-select: none;
-         user-select: none;
-    align-items: center;
-    justify-content: space-between;
-    padding-left: 0.25rem;
-    padding-right: 0.25rem;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-  }
-  .xl\:label a:hover{
-    --tw-text-opacity: 1;
-    color: hsl(var(--bc) / var(--tw-text-opacity));
-  }
   .xl\:order-2{
     order: 2;
   }
@@ -5633,32 +5507,22 @@ body[dir="rtl"] .checkbox:checked,
   .xl\:col-span-5{
     grid-column: span 5 / span 5;
   }
-  .xl\:col-span-2{
-    grid-column: span 2 / span 2;
-  }
-  .xl\:col-span-6{
-    grid-column: span 6 / span 6;
-  }
   .xl\:m-5{
     margin: 1.25rem;
-  }
-  .xl\:my-20{
-    margin-top: 5rem;
-    margin-bottom: 5rem;
-  }
-  .xl\:mx-10{
-    margin-left: 2.5rem;
-    margin-right: 2.5rem;
   }
   .xl\:my-12{
     margin-top: 3rem;
     margin-bottom: 3rem;
   }
+  .xl\:mx-10{
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+  }
   .xl\:mr-4{
     margin-right: 1rem;
   }
-  .xl\:mr-20{
-    margin-right: 5rem;
+  .xl\:mr-10{
+    margin-right: 2.5rem;
   }
   .xl\:mt-8{
     margin-top: 2rem;
@@ -5672,11 +5536,14 @@ body[dir="rtl"] .checkbox:checked,
   .xl\:mt-16{
     margin-top: 4rem;
   }
+  .xl\:mt-12{
+    margin-top: 3rem;
+  }
   .xl\:mt-20{
     margin-top: 5rem;
   }
-  .xl\:mt-40{
-    margin-top: 10rem;
+  .xl\:mt-6{
+    margin-top: 1.5rem;
   }
   .xl\:mt-32{
     margin-top: 8rem;
@@ -5684,53 +5551,26 @@ body[dir="rtl"] .checkbox:checked,
   .xl\:ml-0{
     margin-left: 0px;
   }
-  .xl\:mt-12{
-    margin-top: 3rem;
-  }
-  .xl\:mr-10{
-    margin-right: 2.5rem;
-  }
-  .xl\:mt-28{
-    margin-top: 7rem;
-  }
-  .xl\:mt-6{
-    margin-top: 1.5rem;
-  }
-  .xl\:mt-24{
-    margin-top: 6rem;
-  }
-  .xl\:block{
-    display: block;
-  }
-  .xl\:inline{
-    display: inline;
-  }
-  .xl\:flex{
-    display: flex;
-  }
   .xl\:h-10{
     height: 2.5rem;
   }
   .xl\:w-auto{
     width: auto;
   }
-  .xl\:w-64{
-    width: 16rem;
+  .xl\:w-11\/12{
+    width: 91.666667%;
   }
   .xl\:w-full{
     width: 100%;
   }
+  .xl\:w-10\/12{
+    width: 83.333333%;
+  }
   .xl\:w-10{
     width: 2.5rem;
   }
-  .xl\:w-11\/12{
-    width: 91.666667%;
-  }
-  .xl\:w-1{
-    width: 0.25rem;
-  }
-  .xl\:w-10\/12{
-    width: 83.333333%;
+  .xl\:w-9\/12{
+    width: 75%;
   }
   .xl\:grid-cols-3{
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -5744,19 +5584,12 @@ body[dir="rtl"] .checkbox:checked,
   .xl\:justify-between{
     justify-content: space-between;
   }
-  .xl\:gap-2{
-    gap: 0.5rem;
-  }
   .xl\:gap-0{
     gap: 0px;
   }
   .xl\:px-12{
     padding-left: 3rem;
     padding-right: 3rem;
-  }
-  .xl\:px-5{
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
   }
   .xl\:px-0{
     padding-left: 0px;
@@ -5768,12 +5601,6 @@ body[dir="rtl"] .checkbox:checked,
   }
   .xl\:pr-24{
     padding-right: 6rem;
-  }
-  .xl\:pt-16{
-    padding-top: 4rem;
-  }
-  .xl\:pt-12{
-    padding-top: 3rem;
   }
   .xl\:pt-10{
     padding-top: 2.5rem;
@@ -5794,17 +5621,29 @@ body[dir="rtl"] .checkbox:checked,
     font-size: 1.5rem;
     line-height: 2rem;
   }
-  .xl\:text-lg{
-    font-size: 1.125rem;
-    line-height: 1.75rem;
-  }
-  .xl\:text-6xl{
-    font-size: 3.75rem;
-    line-height: 1;
-  }
 }
 @media (min-width: 1536px){
   .\32xl\:grid-cols-4{
     grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+  .\32xl\:gap-x-16{
+    -moz-column-gap: 4rem;
+         column-gap: 4rem;
+  }
+  .\32xl\:gap-x-20{
+    -moz-column-gap: 5rem;
+         column-gap: 5rem;
+  }
+  .\32xl\:gap-x-24{
+    -moz-column-gap: 6rem;
+         column-gap: 6rem;
+  }
+  .\32xl\:gap-x-28{
+    -moz-column-gap: 7rem;
+         column-gap: 7rem;
+  }
+  .\32xl\:gap-x-2{
+    -moz-column-gap: 0.5rem;
+         column-gap: 0.5rem;
   }
 }

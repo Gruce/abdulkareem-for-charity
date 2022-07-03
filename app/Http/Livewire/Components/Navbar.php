@@ -36,6 +36,7 @@ class Navbar extends Component
                 'name' => 'التبرع',
                 'route' => 'donate',
                 'icon' => 'circle-info',
+                'permissions' => 2,
 
             ],
             [

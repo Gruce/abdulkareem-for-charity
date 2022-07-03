@@ -23,7 +23,7 @@
 
             {{-- Photo --}}
             <div class="md:col-span-5 ">
-                <img src="/img/About1.png" class="w-full mt-6 lg:mt-0 xl:w-10/12 h-auto m-auto">
+                <img src="/img/About1.png" class="w-full mt-6 lg:mt-0 xl:w-9/12 h-auto m-auto">
             </div>
 
         </div>
@@ -92,7 +92,7 @@
                 </h1>
 
                 {{-- Cards --}}
-                <div class="flex flex-wrap gap-x-4 justify-center ">
+                <div class="flex flex-wrap gap-x-4 justify-center 2xl:gap-x-28">
                     @foreach ($developers as $team)
                     <livewire:pages.about.card :team="$team" key="{{ now() }}" />
                     @endforeach
