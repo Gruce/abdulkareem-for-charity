@@ -48,10 +48,10 @@
         </div>
 
         {{-- card --}}
-        <h3 class="text-secondary-900 text-4xl md:text-4xl xl:text-5xl font-bold md:mr-3 xl:mr-20 mt-10">
+        <h3 class="text-secondary-900 text-4xl md:text-4xl xl:text-5xl font-bold md:mr-3 xl:mr-10 mt-10">
             فريق الصندوق
         </h3>
-        <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2  lg:grid-cols-3 xl:grid-cols-4 gap-2">
+        <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2  lg:grid-cols-3 xl:grid-cols-4 gap-2 p-5">
             @forelse($admins as $item)
             <livewire:pages.donate.card :item="$item" key="{{ now() }}" />
             @empty

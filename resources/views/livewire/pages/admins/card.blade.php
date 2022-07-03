@@ -1,5 +1,5 @@
 <div >
-    <div class="py-4 px-2 w-10/12 md:w-11/12  rounded-xl bg-gray-100 hover:bg-gray-200 transition duration-300 mx-auto">
+    <div class="py-4 px-2 rounded-xl transition duration-300 mx-auto border border-gray-300 hover:shadow-md hover:bg-gray-50">
         <div class="">
             <img src="@if ($item->profile_photo_path) {{ asset($item->profile_photo_path) }}@elseif($item->gender == 1) {{ asset('/img/profile_woman.png') }} @elseif($item->gender != 1) {{ asset('/img/profile_man.png') }} @endif"
                 class="mx-auto h-48" />
@@ -54,7 +54,7 @@
         </ul>
         <div class="text-center">
             <button wire:click="confirm_downgrade()" type="button"
-                class="rounded-xl mb-2  bg-gradient-to-r from-red-400 to-red-500 hover:bg-gradient-to-br px-24 py-2 text-white">تخفيض
+                class="rounded-xl mb-2  bg-gradient-to-r from-red-400 to-red-500 hover:bg-gradient-to-br px-20 py-2 text-white">تخفيض
                 المدير</button>
         </div>
     </div>
