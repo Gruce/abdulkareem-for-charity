@@ -1,6 +1,6 @@
 <div>
 
-    <div class="flex h-auto items-center justify-center">
+    <div class="flex h-auto items-center justify-center text-gray-600">
         <form wire:submit.prevent="add">
             <div class="grid rounded-lg w-full">
                 <div class="flex justify-center">
