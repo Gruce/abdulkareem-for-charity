@@ -31,7 +31,7 @@
                         </button>
                         @endif
 
-                        @if(auth()->user()->id == 1)
+                        @superAdmin
                         <button wire:click.prevent="confirm_upgrade()" class="mx-2 p-1">
                             <i
                                 class="fa-solid fa-person-circle-plus text-stone-400  duration-200 hover:text-amber-400"></i>
@@ -43,7 +43,7 @@
                             <i class=" fa-solid fa-trash text-stone-400 duration-200 hover:text-red-500">
                             </i>
                         </button>
-                        @endif
+                        @endsuperAdmin
                     </div>
                 </div>
                 <div x-show="isOpen" class="text-gray-500 text-base p-2  flex flex-col">

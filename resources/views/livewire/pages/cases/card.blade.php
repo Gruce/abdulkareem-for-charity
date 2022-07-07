@@ -40,7 +40,7 @@
                     </div>
                 </div>
             </div>
-            @admin
+            @superAdmin
                 <div x-data="{ open: false }" class="flex flex-col">
                     <hr class="mb-5">
                     {{-- edit/delete/add Buttons --}}
@@ -77,7 +77,7 @@
                     </div>
 
                 </div>
-            @endadmin
+            @endsuperAdmin
             <div class="w-full absolute bottom-0 right-0  text-center">
                 <div class="bg-green-500 h-4 text-2xs text-white "
                     style="width: {{ ($event->received_price * 100) / $event->target }}%">

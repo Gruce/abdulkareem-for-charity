@@ -52,7 +52,7 @@ class Add extends Component
             ]);
         }
 
-        $this->emitTo('pages.cases.main', '$refresh');
+        redirect()->route('cases');
     }
     public function render()
     {
