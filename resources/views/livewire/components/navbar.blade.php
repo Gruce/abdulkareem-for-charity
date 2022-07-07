@@ -65,7 +65,7 @@
                             <div>{{auth()->user()->name}}</div>
                             
                         </div>
-                        <ul class=" text-sm text-gray-700 dark:text-gray-200"
+                        <ul class=" text-sm text-gray-700"
                                 aria-labelledby="dropdownInformationButton">
                                 <li>
                                     <a href="{{ route('profile') }}" class="block px-4 py-2  hover:bg-gray-100 ">
