@@ -6,7 +6,7 @@
 
             <div class="@superAdmin col-span-4 md:col-span-6 @else col-span-8 md:col-span-3 lg:col-span-2 @endsuperAdmin p-1">
                 <select wire:change="getEvent" wire:model="selectEvent"
-                    class=" px-6 py-3 w-full rounded-md bg-gray-100 border-transparent focus:border-primary-500 focus:bg-white focus:ring-0 text-sm">
+                    class=" px-6 py-3 w-full rounded-md bg-gray-100 border-transparent focus:border-primary-500 focus:bg-white focus:ring-0 text-sm text-gray-800">
                     <option value="0">الكل</option>
                     <option value="1">الحالات التي تم علاجها</option>
                     <option value="2">حالات لم تعالج الى الان</option>

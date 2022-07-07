@@ -4,7 +4,7 @@
             alt="" class="w-32 h-32 mx-auto rounded-full aspect-square border-2 border-primary-600">
         <div class="space-y-4 text-center divide-y divide-gray-200">
             <div class="my-2 space-y-1">
-                <h2 class="text-xl font-semibold sm:text-2xl">{{ $item->name }}</h2>
+                <h2 class="text-xl font-semibold sm:text-2xl text-gray-800">{{ $item->name }}</h2>
                 <p class="px-5 text-xs sm:text-base text-gray-500">{{ $item->getShare() ?? 0 }} سهم
                     @if ($item->type == 1)
                     - طالب

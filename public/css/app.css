@@ -3470,6 +3470,9 @@ body[dir="rtl"] .checkbox:checked,
 .h-28{
   height: 7rem;
 }
+.h-screen{
+  height: 100vh;
+}
 .min-h-screen{
   min-height: 100vh;
 }
