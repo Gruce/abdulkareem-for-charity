@@ -52,11 +52,13 @@
             <li class=" flex flex-col"><span class="mb-2">مبلغ</span> {{ $item->get_shares * 2000}}</li>
 
         </ul>
+        @superAdmin
         <div class="text-center">
             <button wire:click="confirm_downgrade()" type="button"
                 class="rounded-xl mb-2  bg-gradient-to-r from-red-400 to-red-500 hover:bg-gradient-to-br px-20 py-2 text-white">تخفيض
                 المدير</button>
         </div>
+        @endsuperAdmin
     </div>
 
 </div>

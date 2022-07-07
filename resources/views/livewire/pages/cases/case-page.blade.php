@@ -5,7 +5,7 @@
                 {{ $title }}
             </h1>
             <!-- Dropdown menu -->
-            @admin
+            @superAdmin
             <div>
                 <button id="pagecase" data-dropdown-toggle="casepage" class="mt-3 md:mt-5 ml-7" type="button">
                     <i class="fa-solid fa-ellipsis-vertical"></i>
@@ -32,7 +32,7 @@
                     </ul>
                 </div>
             </div>
-            @endadmin
+            @endsuperAdmin
         </div>
         <div class="w-full  text-center mt-5 p-2 xl:mt-8">
             <div class="xl:w-full bg-gray-300 rounded-full">
