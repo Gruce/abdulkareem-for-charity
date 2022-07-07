@@ -29,14 +29,14 @@
     <script src="{{ mix('js/app.js') }}" defer></script>
 </head>
 
-<body class="font-NotoKufi bg-white " dir="rtl">
+<body class="font-NotoKufi bg-white h-screen " dir="rtl">
     <x-jet-banner />
 
     <div class=" w-full  ">
         <div class="">@livewire('components.navbar')</div>
 
         <!-- Page Content -->
-        <main class=" lg:p-10 lg:mt-5 overflow-y-auto  rounded-lg ">
+        <main class=" lg:p-10 lg:mt-5 overflow-y-auto  rounded-lg bg-white ">
 
             <div>
                 {{ $slot }}
