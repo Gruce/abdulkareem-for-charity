@@ -22,7 +22,7 @@
                 <form wire:submit.prevent="save"
                     class="p-8 w-full md:w-11/12 h-60 mx-auto lg:mr-10 rounded-3xl mt-10 bg-white border border-gray-600 md:max-w-lg">
                     <div class="text-center ">
-                        <h3 class="text-xl md:text-2xl xl:text-3xl font-bold mb-5 ">ما نقص مال من صدقة</h3>
+                        <h3 class="text-xl md:text-2xl xl:text-3xl font-bold mb-5 text-gray-800">ما نقص مال من صدقة</h3>
                         <div class="">
                             <input wire:model="share" id="item_count" type="number" value="1"
                                 class="block px-2.5 pb-3  pt-3 w-full h-14 text-md md:text-lg text-gray-900 bg-transparent rounded-lg border-1 border-gray-300 appearance-none  focus:outline-none focus:ring-0  focus:border-primary-500 peer"

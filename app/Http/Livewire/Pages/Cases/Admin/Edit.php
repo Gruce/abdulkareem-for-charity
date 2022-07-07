@@ -40,7 +40,6 @@ class Edit extends Component
             'title' => $this->title,
             'description' => $this->description,
             'target' => $this->target,
-            'received_price' => $this->received_price,
         ];
 
         $case = Event::findOrFail($this->case_id);
@@ -56,6 +55,7 @@ class Edit extends Component
             'timer' => 3000,
             'toast' => true,
         ]);
+        redirect()->route('cases');
     }
 
     public function render()

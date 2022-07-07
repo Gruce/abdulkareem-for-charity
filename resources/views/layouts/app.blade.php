@@ -29,7 +29,7 @@
     <script src="{{ mix('js/app.js') }}" defer></script>
 </head>
 
-<body class="font-NotoKufi " dir="rtl">
+<body class="font-NotoKufi bg-white " dir="rtl">
     <x-jet-banner />
 
     <div class=" w-full  ">
