@@ -6,7 +6,7 @@
                 <div class="">
                     <div class="p">
                         <h3 class=" text-xl md:text-2xl text-primary-700">معلومات عامة</h3>
-                        <hr class="w-3/5 mt-2 mb-4">
+                        <hr class="w-full md:w-3/5 mt-2 mb-4">
                     </div>
                     <div class="form-item">
                         <label class=" text-base md:text-xl">الاسم الكامل</label>

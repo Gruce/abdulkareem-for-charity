@@ -1,12 +1,13 @@
 <div>
-    <div class="bg-secondary-300 ">
-        <div class=" overflow-hidden w-full lg:w-10/12 mx-auto border-b">
+    <div class="">
+        <div class=" overflow-hidden w-full  mx-auto border-primary-400">
             <div class="top h-64 w-full overflow-hidden relative">
                 <img src="/img/profile_background.png" alt=""
-                    class="bg w-full h-full rounded-t-lg object-cover object-center absolute z-0 border-2 border-primary-600">
+                    class="bg w-full h-full object-cover object-center absolute z-0 border-2 border-primary-600">
                 <div
                     class="flex flex-col justify-center items-center relative h-full bg-gray-200 bg-opacity-50 text-white">
-                    <img src="{{ asset($user->profile_photo_path ?? 'img/user.png') }}"
+                    <img src="@if ($user->profile_photo_path) {{ asset($user->profile_photo_path) }}@elseif($user->gender == 1) {{ asset('/img/profile_woman.png') }} @elseif($user->gender != 1) {{ asset('/img/profile_man.png') }} @endif"
+                    
                         class="h-32 w-32 object-cover rounded-full">
                     <h1 class="text-3xl font-semibold text-gray-900">{{ $user->name }}</h1>
                     <h4 class="text-sm mt-2  text-black">انضم منذ {{ date('Y', strtotime($user->created_at)) }}
