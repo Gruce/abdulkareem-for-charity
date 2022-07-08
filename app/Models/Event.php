@@ -21,19 +21,73 @@ class Event extends Model
         $this->save();
     }
     ### End add ###
-    public function add_file($file, $type = 1)
+
+    // public function add_file($file, $type = 1) {
+
+    //     $type = $type == 1 ? 'images' : 'files';
+    //     $ext = $file->extension();
+    //     $name =  \Str::random(10) . '.' . $ext;
+    //     $file = $file->storeAs('public/event/' . $this->id . '/' . $type . '/' , $name);
+    //     if ($type == 'images')
+    //         $this->image_path ='storage/event/' . $this->id . '/' . $type . '/' . $name;
+    //     else $this->file_path ='storage/event/' . $this->id . '/' . $type . '/' . $name;
+
+    //     $this->save();
+    // }
+
+
+
+    
+    ### image ###
+
+    //add_image
+    public function add_image($image)
     {
-
-        $type = $type == 1 ? 'images' : 'files';
-        $ext = $file->extension();
+        $ext = $image->extension();
         $name =  \Str::random(10) . '.' . $ext;
-        $file = $file->storeAs('public/event/' . $this->id . '/' . $type . '/' , $name);
-        if ($type == 'images')
-            $this->image_path ='storage/event/' . $this->id . '/' . $type . '/' . $name;
-        else $this->file_path ='storage/event/' . $this->id . '/' . $type . '/' . $name;
-
+        $image = $image->storeAs('public/event/' . $this->id . '/images/' , $name);
+        $this->image_path ='storage/event/' . $this->id . '/images/' . $name;
         $this->save();
     }
+
+    //update_image
+    public function update_image($image)
+    {
+        $ext = $image->extension();
+        $name =  \Str::random(10) . '.' . $ext;
+        $image = $image->storeAs('public/event/' . $this->id . '/images/' , $name);
+        $this->image_path ='storage/event/' . $this->id . '/images/' . $name;
+        $this->save();
+    }
+
+    ### End image ###
+
+    ### file ###
+
+    //add_file
+    public function add_file($file)
+    {
+        $ext = $file->extension();
+        $name =  \Str::random(10) . '.' . $ext;
+        $file = $file->storeAs('public/event/' . $this->id . '/files/' , $name);
+        $this->file_path ='storage/event/' . $this->id . '/files/' . $name;
+        $this->save();
+    }
+
+    //update_file
+    public function update_file($file)
+    {
+        $ext = $file->extension();
+        $name =  \Str::random(10) . '.' . $ext;
+        $file = $file->storeAs('public/event/' . $this->id . '/files/' , $name);
+        $this->file_path ='storage/event/' . $this->id . '/files/' . $name;
+        $this->save();
+    }
+    
+    ### End file ###
+
+
+
     ### edit ###
     public function edit($data){
         $this->update($data);

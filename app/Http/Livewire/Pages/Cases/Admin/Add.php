@@ -40,9 +40,10 @@ class Add extends Component
             $case->add($data);
 
             if ($this->file_path)
-                $case->add_file($this->file_path, 2); // 2: file_path
+                $case->add_file($this->file_path); 
+                
             if ($this->image_path)
-                $case->add_file($this->image_path); // 1: image_path default
+                $case->add_image($this->image_path); 
             $this->reset();
 
             $this->alert('success', 'تمت الاضافة', [
