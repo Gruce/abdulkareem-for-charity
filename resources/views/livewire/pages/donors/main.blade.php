@@ -1,7 +1,7 @@
 @section('title', 'المتبرعين')
 <div>
 
-    <div class="w-full md:w-full  p-5 rounded-lg bg-white">
+    <div class="w-full md:w-full  p-5 rounded-lg bg-white text-gray-800">
 
         <div>
 

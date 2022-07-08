@@ -1,5 +1,5 @@
 <div>
-    <div class=" grid grid-cols-2 lg:grid-cols-5 mx-auto">
+    <div class=" grid grid-cols-2 lg:grid-cols-5 mx-auto text-gray-800">
 
         @forelse($activities->items as $item)
         <div class="p-4 bg-white xl:m-5 m-1  xl:ml-0 mx-auto">

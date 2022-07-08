@@ -1,5 +1,5 @@
-<div>
-    <div class="flex flex-col container mx-auto">
+<div class="bg-white">
+    <div class="flex flex-col container mx-auto ">
 
         <!-- INTRO -->
         <div class="basis-4/12 grid grid-cols-1 xl:grid-cols-12 justify-between mt-10 md:mt-0 ">
