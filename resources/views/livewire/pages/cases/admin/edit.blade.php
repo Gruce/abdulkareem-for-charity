@@ -66,7 +66,7 @@
                             </div>
                             <span class="mt-2 text-base leading-normal">
                                 @if ($image_path)
-                                تم اختيار الصورة
+                                هل تريد تغيير الصورة
                                 @else
                                 إختر صورة
                                 @endif
@@ -94,7 +94,7 @@
                             </div>
                             <span class="mt-2 text-base leading-normal">
                                 @if ($file_path)
-                                تم اختيار الملف
+                                هل تريد تغيير الملف
                                 @else
                                 إختر ملف
                                 @endif
