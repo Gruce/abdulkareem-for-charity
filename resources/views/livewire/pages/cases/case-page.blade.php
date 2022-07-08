@@ -41,9 +41,9 @@
             </div>
             <div class="flex justify-between px-3 mt-2 text-xl text-secondary-200">
                 <div>
-                    <h3>@money($event->received_price, 'IQD')</h3>
+                    <h3> @if($event->received_price) @money($event->received_price, 'IQD') @else @money(0, 'IQD') @endif </h3>
                     <p class="text-sm">المدفوع</p>
-                </div>
+                </div> 
                 <div class="px-1.5">{{ round(($event->received_price * 100) / $event->target) }}%</div>
                 <div>
                     <h3>@money($event->target, 'IQD')</h3>
@@ -59,11 +59,11 @@
             <a href="{{ route('cases') }}"
                 class="hover:text-white text-base xl:text-2xl duration-200 hover:bg-primary-500 bg-white border hover:border-transparent border-green-500 text-primary-500 focus:ring-2 focus:ring-primary-300 rounded-lg px-5 py-2.5 mr-2 mb-2 ">رجوع</a>
             @if ($file_path != null)
-            <button href="{{ asset($file_path) }}" download
+            <a href="{{ asset($file_path) }}" download
                 class="text-white text-base xl:text-2xl duration-200 bg-primary-500 hover:bg-white border border-transparent hover:border-green-500 hover:text-primary-500 focus:ring-2 focus:ring-primary-300 rounded-lg px-5 py-2.5 mr-2 mb-2 ">
                 <i class="fa-solid fa-file-arrow-down"></i>
                 <span>ملف</span>
-            </button>
+            </a>
             @endif
             <a href="{{ route('donate') }}"
                 class="hover:text-white text-base xl:text-2xl duration-200 hover:bg-primary-500 bg-white border hover:border-transparent border-green-500 text-primary-500 focus:ring-2 focus:ring-primary-300 rounded-lg px-5 py-2.5 mr-2 mb-2">تبرع

@@ -1,6 +1,6 @@
 <div>
 
-    <div class="flex h-auto items-center justify-center">
+    <div class="flex h-auto items-center justify-center text-gray-600">
         <form wire:submit.prevent="edit">
             <div class="grid rounded-lg w-full">
                 <div class="flex justify-center">
@@ -66,12 +66,12 @@
                             </div>
                             <span class="mt-2 text-base leading-normal">
                                 @if ($image_path)
-                                تم اختيار الصورة
+                                هل تريد تغيير الصورة
                                 @else
                                 إختر صورة
                                 @endif
                             </span>
-                            <input wire:model.lazy="image_path" type="file" class="hidden" />
+                            <input wire:model.lazy="new_image" type="file" class="hidden" />
                         </label>
                         @error('image_path')
                         <span class="error text-primary-600 bg-primary-100 rounded-lg py-1 px-2 text-xs">لم يتم تحميل
@@ -94,12 +94,12 @@
                             </div>
                             <span class="mt-2 text-base leading-normal">
                                 @if ($file_path)
-                                تم اختيار الملف
+                                هل تريد تغيير الملف
                                 @else
                                 إختر ملف
                                 @endif
                             </span>
-                            <input id="file" type='file' class="hidden" wire:model="file_path" />
+                            <input id="file" type='file' class="hidden" wire:model="new_file" />
                         </label>
                         @error('file_path')
                         <span class="error text-primary-600 bg-primary-100 rounded-lg py-1 px-2 text-xs">لم يتم تحميل
