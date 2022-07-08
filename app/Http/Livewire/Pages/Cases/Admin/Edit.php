@@ -46,7 +46,7 @@ class Edit extends Component
         $case->edit($data);
         
         if ($this->new_file){
-            
+             
             $case->update_file($this->new_file); 
         }
         
