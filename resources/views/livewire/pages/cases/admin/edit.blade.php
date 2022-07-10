@@ -1,6 +1,6 @@
 <div>
 
-    <div class="flex h-auto items-center justify-center">
+    <div class="flex h-auto items-center justify-center text-gray-600">
         <form wire:submit.prevent="edit">
             <div class="grid rounded-lg w-full">
                 <div class="flex justify-center">
@@ -11,7 +11,7 @@
 
                 <div class="flex justify-center">
                     <div class="flex">
-                        <h1 class="text-gray-800 font-bold md:text-2xl text-xl mt-4">إضافة الحالات</h1>
+                        <h1 class="text-gray-800 font-bold md:text-2xl text-xl mt-4">تعديل الحالات</h1>
                     </div>
                 </div>
 
@@ -58,20 +58,14 @@
                                 <x-ui.loading />
                             </div>
                             <div wire:loading.remove wire:target="image_path">
-                                @if ($image_path)
-                                <i class="fa-solid fa-check text-2xl"></i>
-                                @else
+                                
                                 <i class="fa-solid fa-upload text-2xl"></i>
-                                @endif
+                                
                             </div>
-                            <span class="mt-2 text-base leading-normal">
-                                @if ($image_path)
-                                تم اختيار الصورة
-                                @else
-                                إختر صورة
-                                @endif
+                            <span class="mt-2 text-base leading-normal">                               
+                                إضافة صورة                       
                             </span>
-                            <input wire:model.lazy="image_path" type="file" class="hidden" />
+                            <input wire:model.lazy="new_image" type="file" class="hidden" />
                         </label>
                         @error('image_path')
                         <span class="error text-primary-600 bg-primary-100 rounded-lg py-1 px-2 text-xs">لم يتم تحميل
@@ -86,20 +80,16 @@
                                 <x-ui.loading />
                             </div>
                             <div wire:loading.remove wire:target="file_path">
-                                @if ($file_path)
-                                <i class="fa-solid fa-check text-2xl"></i>
-                                @else
+                                
                                 <i class="fa-solid fa-upload text-2xl"></i>
-                                @endif
+                                
                             </div>
                             <span class="mt-2 text-base leading-normal">
-                                @if ($file_path)
-                                تم اختيار الملف
-                                @else
-                                إختر ملف
-                                @endif
+                                
+                                إضافة ملف
+                                
                             </span>
-                            <input id="file" type='file' class="hidden" wire:model="file_path" />
+                            <input id="file" type='file' class="hidden" wire:model="new_file" />
                         </label>
                         @error('file_path')
                         <span class="error text-primary-600 bg-primary-100 rounded-lg py-1 px-2 text-xs">لم يتم تحميل

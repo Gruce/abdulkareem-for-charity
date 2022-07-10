@@ -27,6 +27,7 @@ class Add extends Component
             'title' => $this->title,
             'description' => $this->description,
             'target' => $this->target,
+            'received_price' => 0,
         ];
         if ($this->target < $this->received_price) {
             $this->alert('warning', 'لا يمكن اضافة رسوم بقيمة اكبر من المطلوب', [
@@ -40,9 +41,10 @@ class Add extends Component
             $case->add($data);
 
             if ($this->file_path)
-                $case->add_file($this->file_path, 2); // 2: file_path
+                $case->add_file($this->file_path); 
+                
             if ($this->image_path)
-                $case->add_file($this->image_path); // 1: image_path default
+                $case->add_image($this->image_path); 
             $this->reset();
 
             $this->alert('success', 'تمت الاضافة', [
