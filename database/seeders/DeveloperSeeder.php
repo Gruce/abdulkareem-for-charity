@@ -22,7 +22,7 @@ class DeveloperSeeder extends Seeder
             'name' => 'محمد جواد',
             'department'=>'علوم الحاسوب',
             'stage' => "المرحلة الثانية",
-            'photo' => "/img/dev11.jpg",
+            'photo' => "/img/dev1.jpg",
             'github' => "https://github.com/MohammedJ18",
             'email' => "jawad6686@gmail.com",
 
@@ -78,7 +78,7 @@ class DeveloperSeeder extends Seeder
             'name' => 'زينب أمجد ',
             'department'=>'علوم الحاسوب',
             'stage' => "المرحلة الرابعة",
-            'photo' => "/img/zainab.jpg",
+            'photo' => "/img/dev6.jpg",
             'github' => "https://github.com/zal3",
             'email' => "zainabamjedlatef31@gmail.com",
 
@@ -99,7 +99,7 @@ class DeveloperSeeder extends Seeder
             'department' => 'علوم الحاسوب',
             'stage' => "المرحلة الرابعة",
             'type' => 2,
-            'photo' => '/img/mo.jpg',
+            'photo' => '/img/hassan.jpg',
             'adjective' => 'مبرمج',
 
         ]);
@@ -108,7 +108,7 @@ class DeveloperSeeder extends Seeder
             'department' => 'علوم الحاسوب',
             'stage' => "المرحلة الثالثة",
             'type' => 2,
-            'photo' => '/img/mo.jpg',
+            'photo' => '/img/mustafa.jpg',
             'adjective' => 'اداري',
 
         ]);
@@ -125,16 +125,16 @@ class DeveloperSeeder extends Seeder
         Developer::create([
             'name' => 'عزالدين حكيم',
             'department' => 'علوم الحاسوب',
-            'stage' => "المرحلة الثالثة",
+            'stage' => "المرحلة الثانية",
             'type' => 2,
-            'photo' => '/img/ayman.jpg',
+            'photo' => '/img/az_aldeen.jpg',
             'adjective' => 'مصمم شعارات ',
 
         ]);
 
         Developer::create([
             'name' => 'أيمن احمد',
-            'department' => "كلية علوم الحاسوب"  ,
+            'department' => "كلية علوم الحاسوب",
             'stage' => 'متخرج',
             'type' => 2,
             'photo' => '/img/ayman.jpg',
