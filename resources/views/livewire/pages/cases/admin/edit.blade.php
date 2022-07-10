@@ -11,7 +11,7 @@
 
                 <div class="flex justify-center">
                     <div class="flex">
-                        <h1 class="text-gray-800 font-bold md:text-2xl text-xl mt-4">إضافة الحالات</h1>
+                        <h1 class="text-gray-800 font-bold md:text-2xl text-xl mt-4">تعديل الحالات</h1>
                     </div>
                 </div>
 
@@ -58,18 +58,12 @@
                                 <x-ui.loading />
                             </div>
                             <div wire:loading.remove wire:target="image_path">
-                                @if ($image_path)
-                                <i class="fa-solid fa-check text-2xl"></i>
-                                @else
+                                
                                 <i class="fa-solid fa-upload text-2xl"></i>
-                                @endif
+                                
                             </div>
-                            <span class="mt-2 text-base leading-normal">
-                                @if ($image_path)
-                                هل تريد تغيير الصورة
-                                @else
-                                إختر صورة
-                                @endif
+                            <span class="mt-2 text-base leading-normal">                               
+                                إضافة صورة                       
                             </span>
                             <input wire:model.lazy="new_image" type="file" class="hidden" />
                         </label>
@@ -86,18 +80,14 @@
                                 <x-ui.loading />
                             </div>
                             <div wire:loading.remove wire:target="file_path">
-                                @if ($file_path)
-                                <i class="fa-solid fa-check text-2xl"></i>
-                                @else
+                                
                                 <i class="fa-solid fa-upload text-2xl"></i>
-                                @endif
+                                
                             </div>
                             <span class="mt-2 text-base leading-normal">
-                                @if ($file_path)
-                                هل تريد تغيير الملف
-                                @else
-                                إختر ملف
-                                @endif
+                                
+                                إضافة ملف
+                                
                             </span>
                             <input id="file" type='file' class="hidden" wire:model="new_file" />
                         </label>
