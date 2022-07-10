@@ -22,6 +22,7 @@
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
+    <link rel="icon" type="image/png" href="img/logo.png">
 
     @livewireStyles
 
