@@ -1,6 +1,6 @@
 <div>
     <div
-        class="flex flex-col justify-center w-full px-4 my-12 text-center rounded-md md:w-96 lg:w-80 xl:w-64 border border-gray-500 mx-auto">
+        class="flex flex-col justify-center text-gray-800 px-4 my-12 text-center rounded-md w-11/12 border border-gray-500 mx-auto">
         <img alt=""
             class="self-center flex-shrink-0 w-24 h-24 mt-12 bg-center bg-cover rounded-full border-2 border-primary-600"
             src="@if ($item->profile_photo_path) {{ asset($item->profile_photo_path) }}@elseif($item->gender == 1) {{ asset('/img/profile_woman.png') }} @elseif($item->gender != 1) {{ asset('/img/profile_man.png') }} @endif">

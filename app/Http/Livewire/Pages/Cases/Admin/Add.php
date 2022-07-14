@@ -27,15 +27,9 @@ class Add extends Component
             'title' => $this->title,
             'description' => $this->description,
             'target' => $this->target,
-            'received_price' => $this->received_price,
+            'received_price' => 0,
         ];
-        if ($this->received_price > $this->current_price) {
-            $this->alert('warning', 'لا يمكنك اضافة مبالغ اكثر من الموجود في الصندوق', [
-                'position' => 'top',
-                'timer' => 3000,
-                'toast' => true,
-            ]);
-        } elseif ($this->target < $this->received_price) {
+        if ($this->target < $this->received_price) {
             $this->alert('warning', 'لا يمكن اضافة رسوم بقيمة اكبر من المطلوب', [
                 'position' => 'top',
                 'timer' => 3000,
@@ -47,9 +41,10 @@ class Add extends Component
             $case->add($data);
 
             if ($this->file_path)
-                $case->add_file($this->file_path, 2); // 2: file_path
+                $case->add_file($this->file_path); 
+                
             if ($this->image_path)
-                $case->add_file($this->image_path); // 1: image_path default
+                $case->add_image($this->image_path); 
             $this->reset();
 
             $this->alert('success', 'تمت الاضافة', [
@@ -59,7 +54,7 @@ class Add extends Component
             ]);
         }
 
-        $this->emitTo('pages.cases.main', '$refresh');
+        redirect()->route('cases');
     }
     public function render()
     {

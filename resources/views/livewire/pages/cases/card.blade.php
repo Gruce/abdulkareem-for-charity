@@ -1,6 +1,6 @@
 <div>
-    <div class="h-auto ">
-        <div class="relative bg-white hover:bg-gray-50 p-6 rounded-t-lg border  w-11/12 mx-auto">
+    <div class="h-auto w-11/12 lg:w-10/12 xl:w-11/12 mx-auto">
+        <div class="relative bg-white hover:bg-gray-50 p-6 rounded-t-lg border ">
             <img class="h-64 rounded w-full object-cover object-center mb-6"
                 src="{{ asset($event->image_path ?? 'img/caseImage.webp') }}" alt="content">
 
@@ -40,7 +40,7 @@
                     </div>
                 </div>
             </div>
-            @admin
+            @superAdmin
                 <div x-data="{ open: false }" class="flex flex-col">
                     <hr class="mb-5">
                     {{-- edit/delete/add Buttons --}}
@@ -77,7 +77,7 @@
                     </div>
 
                 </div>
-            @endadmin
+            @endsuperAdmin
             <div class="w-full absolute bottom-0 right-0  text-center">
                 <div class="bg-green-500 h-4 text-2xs text-white "
                     style="width: {{ ($event->received_price * 100) / $event->target }}%">
