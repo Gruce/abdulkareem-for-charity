@@ -39,6 +39,7 @@
 
         {{-- Cases --}}
         <div class=" basis-4/12  mt-10 xl:mt-16">
+            @if($events->count() > 0)
             <span class="text-secondary-900 text-4xl xl:text-5xl  font-bold pr-4  ">
                 احدث الحالات
             </span>
@@ -48,6 +49,7 @@
                 @livewire('pages.cases.card', ['event' => $event], key($event->id . "hi"))
                 @endforeach
             </div>
+            @endif
         </div>
 
         {{--Work for--}}
