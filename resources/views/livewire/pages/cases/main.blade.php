@@ -36,9 +36,9 @@
         @forelse ($events as $event)
         <livewire:pages.cases.card :event="$event" key="{{ now() }}" />
         @empty
-        <div class="text-2xl font-medium text-gray-700">
-            لايوجد حالات
-        </div>
+        <div class="px-2 py-4  mb-4 text-sm text-gray-700 bg-primary-100 rounded-lg" role="alert">
+            <span class="font-medium">ملاحظة:</span>لم يتم اضافة حالات للموقع ليتم عرضها
+          </div>
         @endforelse
     </div>
     <div>
