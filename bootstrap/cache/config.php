@@ -1,10 +1,10 @@
 <?php return array (
   'app' => 
   array (
-    'name' => 'Laravel',
+    'name' => 'صندوق الكرم الخيري',
     'env' => 'local',
     'debug' => true,
-    'url' => 'http://localhost',
+    'url' => 'https://krm.gruceing.dev/',
     'asset_url' => NULL,
     'timezone' => 'Asia/Baghdad',
     'locale' => 'ar',
@@ -237,7 +237,7 @@
         'driver' => 'octane',
       ),
     ),
-    'prefix' => 'laravel_cache_',
+    'prefix' => 'sndok_alkrm_alkhyry_cache_',
   ),
   'cors' => 
   array (
@@ -336,7 +336,7 @@
       'options' => 
       array (
         'cluster' => 'redis',
-        'prefix' => 'laravel_database_',
+        'prefix' => 'sndok_alkrm_alkhyry_database_',
       ),
       'default' => 
       array (
@@ -373,7 +373,7 @@
       array (
         'driver' => 'local',
         'root' => '/www/wwwroot/abdulkareem-for-charity/storage/app/public',
-        'url' => 'http://localhost/storage',
+        'url' => 'https://krm.gruceing.dev//storage',
         'visibility' => 'public',
         'throw' => false,
       ),
@@ -643,7 +643,7 @@
     'from' => 
     array (
       'address' => 'hello@example.com',
-      'name' => 'Laravel',
+      'name' => 'صندوق الكرم الخيري',
     ),
     'markdown' => 
     array (
@@ -2524,7 +2524,7 @@
       2 => '127.0.0.1',
       3 => '127.0.0.1:8000',
       4 => '::1',
-      5 => 'localhost',
+      5 => 'krm.gruceing.dev',
     ),
     'guard' => 
     array (
@@ -2572,7 +2572,7 @@
       0 => 2,
       1 => 100,
     ),
-    'cookie' => 'laravel_session',
+    'cookie' => 'sndok_alkrm_alkhyry_session',
     'path' => '/',
     'domain' => NULL,
     'secure' => NULL,
