@@ -24,8 +24,5 @@ class DatabaseSeeder extends Seeder
 
         ]);
 
-        //userFactory
-        \App\Models\User::factory(5000)->create();
-        \App\Models\Event::factory(1000)->create();
     }
 }
