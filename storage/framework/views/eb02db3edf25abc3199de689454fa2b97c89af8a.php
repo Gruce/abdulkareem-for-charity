@@ -9,14 +9,9 @@
                     صندوق الكرم
                 </h1>
                 <p class="text-secondary-200 text-lg xl:text-2xl mt-6 px-6">
-                    مبادرة ونشاط طلابي بحت ينطلق من طلبة كلية علوم
-
-                    الحـاسوب وتـكنلوجيا المعـلومات الهدف منه رعاية الاعمال
-
-                    الخيرية داخل الكلية وتكون الاولوية في صرف الصندوق
-
-                    للطلبة ذوي الدخل دون المحدود وبقية الاعمال الخيرية.
-                </p>
+                    مبادرة ونشاط طلابي بحت ينطلق من طلبة كلية علوم الحـاسوب وتكنولوجيا المعـلومات الهدف منه رعاية
+                    الأعمال الخيريّة داخل الكليّة وتكون الأولوية في صرف الصندوق للطلبة ذوي الدخل دون المحدود وبقيّة
+                    الأعمال الخيريّة.</p>
                 <div class="mt-4 xl:mt-10 mr-16 xl:mr-4 flex gap-5">
                     <a href="<?php echo e(route('donate')); ?>"
                         class="text-white text-base xl:text-2xl duration-200 bg-primary-500 hover:bg-white border border-transparent hover:border-green-500 hover:text-primary-500 focus:ring-2 focus:ring-primary-300 rounded-lg px-5 py-2.5 mr-2 mb-2 ">تبرع
@@ -57,8 +52,7 @@ echo $html;
             <span class="text-secondary-900 text-4xl xl:text-5xl  font-bold pr-4  ">
                 احدث الحالات
             </span>
-            <div
-            class="my-6 xl:my-12  grid  grid-cols-1 md:grid-cols-2  xl:grid-cols-4 gap-16 xl:gap-0 ">
+            <div class="my-6 xl:my-12  grid  grid-cols-1 md:grid-cols-2  xl:grid-cols-4 gap-16 xl:gap-0 ">
                 <?php $__currentLoopData = $events; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $event): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                 <?php
 if (! isset($_instance)) {
@@ -105,5 +99,4 @@ echo $html;
         </div>
 
     </div>
-</div>
-<?php /**PATH E:\abdulkareem-for-charity\resources\views/livewire/pages/home/main.blade.php ENDPATH**/ ?>
+</div><?php /**PATH E:\abdulkareem-for-charity\resources\views/livewire/pages/home/main.blade.php ENDPATH**/ ?>
