@@ -55,7 +55,7 @@
                         <label
                             class="w-full flex flex-col items-center px-2 py-6  @if ($image_path) bg-primary-700 text-white @else bg-white text-primary-700 @endif rounded-lg tracking-wide border-4 border-dashed border-primary-700 cursor-pointer hover:bg-primary-700 hover:text-white">
                             <div wire:loading wire:target="image_path">
-                                <x-ui.loading />
+                                <x-u-i.loading />
                             </div>
                             <div wire:loading.remove wire:target="image_path">
                                 @if ($image_path)
@@ -83,7 +83,7 @@
                         <label
                             class="w-full flex flex-col items-center px-2 py-6  @if ($file_path) bg-primary-700 text-white @else bg-white text-primary-700 @endif rounded-lg tracking-wide border-4 border-dashed border-primary-700 cursor-pointer hover:bg-primary-700 hover:text-white">
                             <div wire:loading wire:target="file_path">
-                                <x-ui.loading />
+                                <x-u-i.loading />
                             </div>
                             <div wire:loading.remove wire:target="file_path">
                                 @if ($file_path)

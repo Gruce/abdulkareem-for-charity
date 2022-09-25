@@ -27,6 +27,7 @@ class Add extends Component
             'title' => $this->title,
             'description' => $this->description,
             'target' => $this->target,
+            'received_price' => 0,
         ];
         if ($this->target < $this->received_price) {
             $this->alert('warning', 'لا يمكن اضافة رسوم بقيمة اكبر من المطلوب', [

@@ -18,7 +18,9 @@ class SuperAdmin
      */
     public function handle(Request $request, Closure $next)
     {
-        if(auth()->check() && auth()->user()->is_admin && auth()->user()->id == 1) return $next($request);
+        // if(auth()->check() && auth()->user()->is_admin && (auth()->user()->id == 1 || auth()->user()->id == 2)) 
+        
+        if(auth()->user()->is_admin == 1)return $next($request);
         else return redirect(RouteServiceProvider::HOME);
     }
 }
