@@ -41,7 +41,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::zskylwPWQFABwOwP',
+            '_route' => 'generated::7p2FEOdJJoDjHa2R',
           ),
           1 => NULL,
           2 => 
@@ -151,7 +151,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::yHvTPZeHNaTjhLYa',
+            '_route' => 'generated::FuLlTQB8vMgYg7HP',
           ),
           1 => NULL,
           2 => 
@@ -208,7 +208,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::lxCq4s3fcvYq18mH',
+            '_route' => 'generated::Ka2YX5fYspedCa1h',
           ),
           1 => NULL,
           2 => 
@@ -281,7 +281,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::MP6tJzCwupgodlJV',
+            '_route' => 'generated::6s1UyQFaEsSMfYxA',
           ),
           1 => NULL,
           2 => 
@@ -411,7 +411,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::Fg9yzcAoQSCBDCPU',
+            '_route' => 'generated::ewtO0Dn8uqWJvzD0',
           ),
           1 => NULL,
           2 => 
@@ -450,7 +450,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::rqPwFOSQY9oPGOPY',
+            '_route' => 'generated::pNR44p6TcBfpIlpv',
           ),
           1 => NULL,
           2 => 
@@ -489,7 +489,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::P4g3Y36FpuyPrmgp',
+            '_route' => 'generated::V71urugGTcwSXNHN',
           ),
           1 => NULL,
           2 => 
@@ -509,7 +509,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::8uDGSzI2YVgidOKb',
+            '_route' => 'generated::ZnSAfiZhJyXKYkCr',
           ),
           1 => NULL,
           2 => 
@@ -587,7 +587,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::uq4nyeSfqvahTfYf',
+            '_route' => 'generated::W6EwoIhZvmA8ShxE',
           ),
           1 => NULL,
           2 => 
@@ -936,7 +936,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::zskylwPWQFABwOwP' => 
+    'generated::7p2FEOdJJoDjHa2R' => 
     array (
       'methods' => 
       array (
@@ -959,7 +959,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::zskylwPWQFABwOwP',
+        'as' => 'generated::7p2FEOdJJoDjHa2R',
       ),
       'fallback' => false,
       'defaults' => 
@@ -1205,7 +1205,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::yHvTPZeHNaTjhLYa' => 
+    'generated::FuLlTQB8vMgYg7HP' => 
     array (
       'methods' => 
       array (
@@ -1227,7 +1227,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::yHvTPZeHNaTjhLYa',
+        'as' => 'generated::FuLlTQB8vMgYg7HP',
       ),
       'fallback' => false,
       'defaults' => 
@@ -1319,7 +1319,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::lxCq4s3fcvYq18mH' => 
+    'generated::Ka2YX5fYspedCa1h' => 
     array (
       'methods' => 
       array (
@@ -1342,7 +1342,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::lxCq4s3fcvYq18mH',
+        'as' => 'generated::Ka2YX5fYspedCa1h',
       ),
       'fallback' => false,
       'defaults' => 
@@ -1474,7 +1474,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::MP6tJzCwupgodlJV' => 
+    'generated::6s1UyQFaEsSMfYxA' => 
     array (
       'methods' => 
       array (
@@ -1497,7 +1497,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::MP6tJzCwupgodlJV',
+        'as' => 'generated::6s1UyQFaEsSMfYxA',
       ),
       'fallback' => false,
       'defaults' => 
@@ -1750,7 +1750,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::Fg9yzcAoQSCBDCPU' => 
+    'generated::ewtO0Dn8uqWJvzD0' => 
     array (
       'methods' => 
       array (
@@ -1773,7 +1773,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::Fg9yzcAoQSCBDCPU',
+        'as' => 'generated::ewtO0Dn8uqWJvzD0',
       ),
       'fallback' => false,
       'defaults' => 
@@ -1829,7 +1829,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::rqPwFOSQY9oPGOPY' => 
+    'generated::pNR44p6TcBfpIlpv' => 
     array (
       'methods' => 
       array (
@@ -1850,7 +1850,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 'web',
         ),
-        'as' => 'generated::rqPwFOSQY9oPGOPY',
+        'as' => 'generated::pNR44p6TcBfpIlpv',
       ),
       'fallback' => false,
       'defaults' => 
@@ -1960,7 +1960,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::P4g3Y36FpuyPrmgp' => 
+    'generated::V71urugGTcwSXNHN' => 
     array (
       'methods' => 
       array (
@@ -1972,7 +1972,7 @@ app('router')->setCompiledRoutes(
       array (
         'uses' => 'Livewire\\Controllers\\LivewireJavaScriptAssets@source',
         'controller' => 'Livewire\\Controllers\\LivewireJavaScriptAssets@source',
-        'as' => 'generated::P4g3Y36FpuyPrmgp',
+        'as' => 'generated::V71urugGTcwSXNHN',
       ),
       'fallback' => false,
       'defaults' => 
@@ -1988,7 +1988,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::8uDGSzI2YVgidOKb' => 
+    'generated::ZnSAfiZhJyXKYkCr' => 
     array (
       'methods' => 
       array (
@@ -2000,7 +2000,7 @@ app('router')->setCompiledRoutes(
       array (
         'uses' => 'Livewire\\Controllers\\LivewireJavaScriptAssets@maps',
         'controller' => 'Livewire\\Controllers\\LivewireJavaScriptAssets@maps',
-        'as' => 'generated::8uDGSzI2YVgidOKb',
+        'as' => 'generated::ZnSAfiZhJyXKYkCr',
       ),
       'fallback' => false,
       'defaults' => 
@@ -2125,7 +2125,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::uq4nyeSfqvahTfYf' => 
+    'generated::W6EwoIhZvmA8ShxE' => 
     array (
       'methods' => 
       array (
@@ -2142,13 +2142,13 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'O:47:"Laravel\\SerializableClosure\\SerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Signed":2:{s:12:"serializable";s:295:"O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:77:"function (\\Illuminate\\Http\\Request $request) {
     return $request->user();
-}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000546476d70000000005186428";}";s:4:"hash";s:44:"6VB33Ly6DXYRc/zQwkqA4TG5SNCqlOePWzWwI9R0bnE=";}}',
+}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"000000001bb3e6ff00000000369b5e27";}";s:4:"hash";s:44:"P2tl8PRKVJh+0oaBG43B/TjgFDppG/A57KPuILvTSzA=";}}',
         'namespace' => NULL,
         'prefix' => 'api',
         'where' => 
         array (
         ),
-        'as' => 'generated::uq4nyeSfqvahTfYf',
+        'as' => 'generated::W6EwoIhZvmA8ShxE',
       ),
       'fallback' => false,
       'defaults' => 
