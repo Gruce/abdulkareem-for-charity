@@ -1,11 +1,11 @@
 <div>
     <div
-        class="flex flex-col justify-center w-full px-8  my-12 text-center rounded-md md:w-96 lg:w-80 xl:w-64 border mx-auto">
+        class="flex flex-col justify-center text-gray-600 px-8 my-12 text-center rounded-md border mx-auto w-full">
         <img alt="" class="self-center flex-shrink-0 w-24 h-24 -mt-12 bg-center bg-cover rounded-full border-2 border-primary-600"
             src="<?php echo e($team->photo); ?>">
         <div class="flex-1 my-4">
-            <p class="text-xl font-semibold leading-snug"><?php echo e($team->name); ?></p>
-            <p class="text-xs block mt-4"><?php echo e($team->stage); ?> - <?php echo e($team->department); ?></p>
+            <p class="text-xl font-semibold leading-snug text-gray-800"><?php echo e($team->name); ?></p>
+            <p class="text-xs block mt-4 "><?php echo e($team->stage); ?> - <?php echo e($team->department); ?></p>
         </div>
         <?php if($team->type == 1): ?>
             <div class="flex items-center justify-around p-3 space-x-3 border-t-2">

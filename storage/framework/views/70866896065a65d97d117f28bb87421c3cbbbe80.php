@@ -7,6 +7,8 @@
     <meta name="csrf-token" content="<?php echo e(csrf_token()); ?>">
 
     <title><?php echo e(config('app.name', 'Laravel')); ?></title>
+    <link rel="icon" type="image/png" href="img/logo.png">
+
 
     <!-- Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
@@ -51,15 +53,15 @@
         <div class=""><?php
 if (! isset($_instance)) {
     $html = \Livewire\Livewire::mount('components.navbar')->html();
-} elseif ($_instance->childHasBeenRendered('FUqXDk8')) {
-    $componentId = $_instance->getRenderedChildComponentId('FUqXDk8');
-    $componentTag = $_instance->getRenderedChildComponentTagName('FUqXDk8');
+} elseif ($_instance->childHasBeenRendered('1QuQWOM')) {
+    $componentId = $_instance->getRenderedChildComponentId('1QuQWOM');
+    $componentTag = $_instance->getRenderedChildComponentTagName('1QuQWOM');
     $html = \Livewire\Livewire::dummyMount($componentId, $componentTag);
-    $_instance->preserveRenderedChild('FUqXDk8');
+    $_instance->preserveRenderedChild('1QuQWOM');
 } else {
     $response = \Livewire\Livewire::mount('components.navbar');
     $html = $response->html();
-    $_instance->logRenderedChild('FUqXDk8', $response->id(), \Livewire\Livewire::getRootElementTagName($html));
+    $_instance->logRenderedChild('1QuQWOM', $response->id(), \Livewire\Livewire::getRootElementTagName($html));
 }
 echo $html;
 ?></div>

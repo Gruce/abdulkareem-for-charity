@@ -18,7 +18,9 @@
 <?php endif; ?>
 <?php $component->withAttributes([]); ?>
              <?php $__env->slot('logo', null, []); ?> 
-                <img src="<?php echo e(asset('/img/logo1.png')); ?>" class="mb-4 h-56 md:h-72">
+                <a href="<?php echo e(route('home')); ?>">
+                    <img src="<?php echo e(asset('/img/logo1.png')); ?>" class="mb-4 h-56 md:h-72">
+                </a>
              <?php $__env->endSlot(); ?>
 
             <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
@@ -75,7 +77,7 @@ $__bag = $errors->getBag($__errorArgs[1] ?? 'default');
 if ($__bag->has($__errorArgs[0])) :
 if (isset($message)) { $__messageOriginal = $message; }
 $message = $__bag->first($__errorArgs[0]); ?>
-                        <span class="error"><?php echo e($message); ?></span>
+                    <span class="error"><?php echo e($message); ?></span>
                     <?php unset($message);
 if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;
@@ -118,7 +120,7 @@ $__bag = $errors->getBag($__errorArgs[1] ?? 'default');
 if ($__bag->has($__errorArgs[0])) :
 if (isset($message)) { $__messageOriginal = $message; }
 $message = $__bag->first($__errorArgs[0]); ?>
-                        <span class="error"><?php echo e($message); ?></span>
+                    <span class="error"><?php echo e($message); ?></span>
                     <?php unset($message);
 if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;
@@ -211,7 +213,7 @@ $__bag = $errors->getBag($__errorArgs[1] ?? 'default');
 if ($__bag->has($__errorArgs[0])) :
 if (isset($message)) { $__messageOriginal = $message; }
 $message = $__bag->first($__errorArgs[0]); ?>
-                        <span class="error"><?php echo e($message); ?></span>
+                    <span class="error"><?php echo e($message); ?></span>
                     <?php unset($message);
 if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;
@@ -254,16 +256,16 @@ $__bag = $errors->getBag($__errorArgs[1] ?? 'default');
 if ($__bag->has($__errorArgs[0])) :
 if (isset($message)) { $__messageOriginal = $message; }
 $message = $__bag->first($__errorArgs[0]); ?>
-                        <span class="error"><?php echo e($message); ?></span>
+                    <span class="error"><?php echo e($message); ?></span>
                     <?php unset($message);
 if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;
 unset($__errorArgs, $__bag); ?>
                 </div>
                 <?php if($type == 1): ?>
-                    <div class="flex mt-8 gap-x-2">
-                        <div class=" w-full">
-                            <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
+                <div class="flex mt-8 gap-x-2">
+                    <div class=" w-full">
+                        <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
 <?php $component = $__env->getContainer()->make(Illuminate\View\AnonymousComponent::class, ['view' => 'jetstream::components.label','data' => ['for' => 'department']] + (isset($attributes) ? (array) $attributes->getIterator() : [])); ?>
 <?php $component->withName('jet-label'); ?>
 <?php if ($component->shouldRender()): ?>
@@ -279,25 +281,25 @@ unset($__errorArgs, $__bag); ?>
 <?php unset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4); ?>
 <?php endif; ?>
 
-                            <select name="department" id="department" wire:model="department" required
-                                class="px-8 py-3 w-full rounded-md border-gray-300 shadow-sm focus:border-green-500 focus:bg-white focus:ring-0 text-sm">
-                                <option value="0">القسم</option>
-                                <option value="1">علوم حاسوب</option>
-                                <option value="2">نظم المعلومات</option>
-                            </select>
-                            <?php $__errorArgs = ['department'];
+                        <select name="department" id="department" wire:model="department" required
+                            class="px-8 py-3 w-full rounded-md border-gray-300 shadow-sm focus:border-green-500 focus:bg-white focus:ring-0 text-sm">
+                            <option value="0">القسم</option>
+                            <option value="1">علوم حاسوب</option>
+                            <option value="2">نظم المعلومات</option>
+                        </select>
+                        <?php $__errorArgs = ['department'];
 $__bag = $errors->getBag($__errorArgs[1] ?? 'default');
 if ($__bag->has($__errorArgs[0])) :
 if (isset($message)) { $__messageOriginal = $message; }
 $message = $__bag->first($__errorArgs[0]); ?>
-                                <span class="error"><?php echo e($message); ?></span>
-                            <?php unset($message);
+                        <span class="error"><?php echo e($message); ?></span>
+                        <?php unset($message);
 if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;
 unset($__errorArgs, $__bag); ?>
-                        </div>
-                        <div class=" w-full">
-                            <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
+                    </div>
+                    <div class=" w-full">
+                        <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
 <?php $component = $__env->getContainer()->make(Illuminate\View\AnonymousComponent::class, ['view' => 'jetstream::components.label','data' => ['for' => 'study_type']] + (isset($attributes) ? (array) $attributes->getIterator() : [])); ?>
 <?php $component->withName('jet-label'); ?>
 <?php if ($component->shouldRender()): ?>
@@ -312,28 +314,28 @@ unset($__errorArgs, $__bag); ?>
 <?php $component = $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4; ?>
 <?php unset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4); ?>
 <?php endif; ?>
-                            <select name="study_type" id="study_type" wire:model="study_type" required
-                                class="px-8 py-3 w-full rounded-md border-gray-300 shadow-sm focus:border-green-500 focus:bg-white focus:ring-0 text-sm">
-                                <option value="0">الدراسة</option>
-                                <option value="1">صباحي</option>
-                                <option value="2">مسائي</option>
-                            </select>
-                            <?php $__errorArgs = ['study_type'];
+                        <select name="study_type" id="study_type" wire:model="study_type" required
+                            class="px-8 py-3 w-full rounded-md border-gray-300 shadow-sm focus:border-green-500 focus:bg-white focus:ring-0 text-sm">
+                            <option value="0">الدراسة</option>
+                            <option value="1">صباحي</option>
+                            <option value="2">مسائي</option>
+                        </select>
+                        <?php $__errorArgs = ['study_type'];
 $__bag = $errors->getBag($__errorArgs[1] ?? 'default');
 if ($__bag->has($__errorArgs[0])) :
 if (isset($message)) { $__messageOriginal = $message; }
 $message = $__bag->first($__errorArgs[0]); ?>
-                                <span class="error"><?php echo e($message); ?></span>
-                            <?php unset($message);
+                        <span class="error"><?php echo e($message); ?></span>
+                        <?php unset($message);
 if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;
 unset($__errorArgs, $__bag); ?>
-                        </div>
                     </div>
+                </div>
 
-                    <div class="flex mt-8 gap-x-2">
-                        <div class=" w-full">
-                            <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
+                <div class="flex mt-8 gap-x-2">
+                    <div class=" w-full">
+                        <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
 <?php $component = $__env->getContainer()->make(Illuminate\View\AnonymousComponent::class, ['view' => 'jetstream::components.label','data' => ['for' => 'stage']] + (isset($attributes) ? (array) $attributes->getIterator() : [])); ?>
 <?php $component->withName('jet-label'); ?>
 <?php if ($component->shouldRender()): ?>
@@ -349,28 +351,28 @@ unset($__errorArgs, $__bag); ?>
 <?php unset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4); ?>
 <?php endif; ?>
 
-                            <select name="stage" id="stage" wire:model="stage" required
-                                class="px-8 py-3 w-full rounded-md border-gray-300 shadow-sm focus:border-green-500 focus:bg-white focus:ring-0 text-sm">
-                                <option value="0">المرحلة</option>
-                                <option value="1">اولى </option>
-                                <option value="2">ثانية</option>
-                                <option value="3">ثالثة</option>
-                                <option value="4">رابعة</option>
+                        <select name="stage" id="stage" wire:model="stage" required
+                            class="px-8 py-3 w-full rounded-md border-gray-300 shadow-sm focus:border-green-500 focus:bg-white focus:ring-0 text-sm">
+                            <option value="0">المرحلة</option>
+                            <option value="1">اولى </option>
+                            <option value="2">ثانية</option>
+                            <option value="3">ثالثة</option>
+                            <option value="4">رابعة</option>
 
-                            </select>
-                            <?php $__errorArgs = ['stage'];
+                        </select>
+                        <?php $__errorArgs = ['stage'];
 $__bag = $errors->getBag($__errorArgs[1] ?? 'default');
 if ($__bag->has($__errorArgs[0])) :
 if (isset($message)) { $__messageOriginal = $message; }
 $message = $__bag->first($__errorArgs[0]); ?>
-                                <span class="error"><?php echo e($message); ?></span>
-                            <?php unset($message);
+                        <span class="error"><?php echo e($message); ?></span>
+                        <?php unset($message);
 if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;
 unset($__errorArgs, $__bag); ?>
-                        </div>
-                        <div class=" w-full">
-                            <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
+                    </div>
+                    <div class=" w-full">
+                        <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
 <?php $component = $__env->getContainer()->make(Illuminate\View\AnonymousComponent::class, ['view' => 'jetstream::components.label','data' => ['for' => 'division']] + (isset($attributes) ? (array) $attributes->getIterator() : [])); ?>
 <?php $component->withName('jet-label'); ?>
 <?php if ($component->shouldRender()): ?>
@@ -385,28 +387,28 @@ unset($__errorArgs, $__bag); ?>
 <?php $component = $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4; ?>
 <?php unset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4); ?>
 <?php endif; ?>
-                            <select name="division" id="division" wire:model="division" required
-                                class="px-8 py-3 w-full rounded-md border-gray-300 shadow-sm focus:border-green-500 focus:bg-white focus:ring-0 text-sm">
-                                <option value="0">الشعبة</option>
-                                <option value="1">A</option>
-                                <option value="2">B</option>
-                                <option value="3">C</option>
-                                <option value="4">D</option>
-                                <option value="5">E</option>
+                        <select name="division" id="division" wire:model="division" required
+                            class="px-8 py-3 w-full rounded-md border-gray-300 shadow-sm focus:border-green-500 focus:bg-white focus:ring-0 text-sm">
+                            <option value="0">الشعبة</option>
+                            <option value="1">A</option>
+                            <option value="2">B</option>
+                            <option value="3">C</option>
+                            <option value="4">D</option>
+                            <option value="5">E</option>
 
-                            </select>
-                            <?php $__errorArgs = ['division'];
+                        </select>
+                        <?php $__errorArgs = ['division'];
 $__bag = $errors->getBag($__errorArgs[1] ?? 'default');
 if ($__bag->has($__errorArgs[0])) :
 if (isset($message)) { $__messageOriginal = $message; }
 $message = $__bag->first($__errorArgs[0]); ?>
-                                <span class="error"><?php echo e($message); ?></span>
-                            <?php unset($message);
+                        <span class="error"><?php echo e($message); ?></span>
+                        <?php unset($message);
 if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;
 unset($__errorArgs, $__bag); ?>
-                        </div>
                     </div>
+                </div>
                 <?php endif; ?>
 
                 

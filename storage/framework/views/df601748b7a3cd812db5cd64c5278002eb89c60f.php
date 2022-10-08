@@ -1,10 +1,10 @@
 <div>
     <div class="flex flex-col justify-center max-w-xs p-6 shadow-sm rounded-xl border border-gray-200 mx-auto">
         <img src="<?php if($item->profile_photo_path): ?> <?php echo e(asset($item->profile_photo_path)); ?><?php elseif($item->gender == 1): ?> <?php echo e(asset('/img/profile_woman.png')); ?> <?php elseif($item->gender != 1): ?> <?php echo e(asset('/img/profile_man.png')); ?> <?php endif; ?>"
-            alt="" class="w-32 h-32 mx-auto rounded-full bg-gray-500 aspect-square border-2 border-primary-600">
+            alt="" class="w-32 h-32 mx-auto rounded-full aspect-square border-2 border-primary-600">
         <div class="space-y-4 text-center divide-y divide-gray-200">
             <div class="my-2 space-y-1">
-                <h2 class="text-xl font-semibold sm:text-2xl"><?php echo e($item->name); ?></h2>
+                <h2 class="text-xl font-semibold sm:text-2xl text-gray-800"><?php echo e($item->name); ?></h2>
                 <p class="px-5 text-xs sm:text-base text-gray-500"><?php echo e($item->getShare() ?? 0); ?> سهم
                     <?php if($item->type == 1): ?>
                     - طالب
@@ -32,7 +32,7 @@
                         </button>
                         <?php endif; ?>
 
-                        <?php if(auth()->user()->id == 1): ?>
+                        <?php if (\Illuminate\Support\Facades\Blade::check('superAdmin')): ?>
                         <button wire:click.prevent="confirm_upgrade()" class="mx-2 p-1">
                             <i
                                 class="fa-solid fa-person-circle-plus text-stone-400  duration-200 hover:text-amber-400"></i>

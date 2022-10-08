@@ -1,12 +1,12 @@
 <?php $__env->startSection('title', 'المتبرعين'); ?>
 <div>
 
-    <div class="w-full md:w-full shadow p-5 rounded-lg bg-white">
+    <div class="w-full md:w-full  p-5 rounded-lg bg-white text-gray-800">
 
         <div>
 
             <div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-3 gap-4 mt-4">
-                <div class="col-span-2">
+                <div <?php if (\Illuminate\Support\Facades\Blade::check('admin')): ?> <?php if($type == 1): ?> class="col-span-2" <?php endif; ?> class="col-span-2 md:col-span-3 "<?php endif; ?>  class="col-span-2 md:col-span-1" >
                     <?php
 if (! isset($_instance)) {
     $html = \Livewire\Livewire::mount('ui.search', 'name')->html();
@@ -23,11 +23,13 @@ if (! isset($_instance)) {
 echo $html;
 ?>
                 </div>
+                <?php if (\Illuminate\Support\Facades\Blade::check('admin')): ?>
                 <select wire:change="getType" wire:model="state"
-                    class="px-10 py-3 w-full rounded-md bg-gray-100 border-transparent focus:border-primary-500 focus:bg-white focus:ring-0 text-sm">
+                    class="col-span-2 md:col-span-1 px-10 py-3 w-full rounded-md bg-gray-100 border-transparent focus:border-primary-500 focus:bg-white focus:ring-0 text-sm">
                     <option value="0">حالة التبرع </option>
                     <option value="">أرسلَ طلب تبرع جديد</option>
                 </select>
+                <?php endif; ?>
 
                 <select wire:change="getType" wire:model="type"
                     class="px-10 py-3 w-full rounded-md bg-gray-100 border-transparent focus:border-primary-500 focus:bg-white focus:ring-0 text-sm">
@@ -43,7 +45,7 @@ echo $html;
                     <option value="2">ذكر</option>
                     <option value="1">أنثى</option>
                 </select>
-
+                <?php if (\Illuminate\Support\Facades\Blade::check('admin')): ?>
                 <?php if($type == 1): ?>
                     <select wire:change="getType" wire:model="study_type"
                         class="px-10 py-3 w-full rounded-md bg-gray-100 border-transparent focus:border-primary-500 focus:bg-white focus:ring-0 text-sm">
@@ -79,6 +81,7 @@ echo $html;
                         <option value="2">نظم المعلومات</option>
 
                     </select>
+                <?php endif; ?>
                 <?php endif; ?>
             </div>
         </div>
