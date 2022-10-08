@@ -58,7 +58,7 @@
                 <label
                     class="w-full pt-5 h-28  md:w-3/5 flex flex-col items-center px-2 py-6  @if ($profile_photo) bg-primary-700 text-white @else bg-white text-primary-700 @endif rounded-lg tracking-wide border-4 border-dashed border-primary-700 cursor-pointer hover:bg-primary-700 hover:text-white">
                     <div wire:loading wire:target="profile_photo">
-                        <x-ui.loading />
+                        <x-u-i.loading />
                     </div>
                     <div wire:loading.remove wire:target="profile_photo">
                         @if ($profile_photo)

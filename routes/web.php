@@ -21,7 +21,7 @@ use App\Http\Livewire\Pages\Cases\{
 };
 
 use App\Http\Livewire\Pages\Admins\{
-    main as Admins
+    Main as Admins
 };
 
 
