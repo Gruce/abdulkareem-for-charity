@@ -41,7 +41,7 @@
 
                     </div>
                 </form>
-                <livewire:pages.donate.stripe />
+                <livewire:pages.donate.stripe  key="{{ now() }}" />
             </div>
 
             <div class="basis-1/2 lg:col-span-7 mt-5 hidden lg:block">

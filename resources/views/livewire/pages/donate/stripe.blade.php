@@ -1,39 +1,14 @@
+<div>
 <h1>stripe pay</h1>
-{{-- <!DOCTYPE html>
-<html>
-<head>
-    <title>Laravel</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <style type="text/css">
-        .panel-title {
-        display: inline;
-        font-weight: bold;
-        }
-        .display-table {
-            display: table;
-        }
-        .display-tr {
-            display: table-row;
-        }
-        .display-td {
-            display: table-cell;
-            vertical-align: middle;
-            width: 61%;
-        }
-    </style>
-</head>
-<body>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</div>
+
 
 <div class="container">
-
-
-  <br><br><br><br>
     <div class="row">
-
         <div class="col-md-6 col-md-offset-3">
             <div class="panel panel-default credit-card-box">
-
                 <div class="panel-body">
                      <h1>Stripe Payment Gateway  </h1>
 
@@ -46,7 +21,7 @@
 
                     <form
                             role="form"
-                            action="{{ route('stripe.post') }}"
+                            action="{{ route('stripe') }}"
                             method="post"
                             class="require-validation"
                             data-cc-on-file="false"
@@ -110,9 +85,6 @@
 
 </div>
 
-</body>
-
-<script type="text/javascript" src="https://js.stripe.com/v2/"></script>
 
 <script type="text/javascript">
 $(function() {
@@ -170,4 +142,4 @@ $(function() {
 
 });
 </script>
-</html> --}}
+

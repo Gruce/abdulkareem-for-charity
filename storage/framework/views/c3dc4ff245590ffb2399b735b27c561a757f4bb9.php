@@ -45,24 +45,24 @@ unset($__errorArgs, $__bag); ?>
                             <span class="" id="login_default_state">تبرع<span id="subtotal"></span></span>
                         </button>
                         <span class="text-sm"></span>
-                        
-                        <?php
+
+                    </div>
+                </form>
+                <?php
 if (! isset($_instance)) {
     $html = \Livewire\Livewire::mount('pages.donate.stripe', [])->html();
-} elseif ($_instance->childHasBeenRendered('l2043805527-0')) {
-    $componentId = $_instance->getRenderedChildComponentId('l2043805527-0');
-    $componentTag = $_instance->getRenderedChildComponentTagName('l2043805527-0');
+} elseif ($_instance->childHasBeenRendered(''.e(now()).'')) {
+    $componentId = $_instance->getRenderedChildComponentId(''.e(now()).'');
+    $componentTag = $_instance->getRenderedChildComponentTagName(''.e(now()).'');
     $html = \Livewire\Livewire::dummyMount($componentId, $componentTag);
-    $_instance->preserveRenderedChild('l2043805527-0');
+    $_instance->preserveRenderedChild(''.e(now()).'');
 } else {
     $response = \Livewire\Livewire::mount('pages.donate.stripe', []);
     $html = $response->html();
-    $_instance->logRenderedChild('l2043805527-0', $response->id(), \Livewire\Livewire::getRootElementTagName($html));
+    $_instance->logRenderedChild(''.e(now()).'', $response->id(), \Livewire\Livewire::getRootElementTagName($html));
 }
 echo $html;
 ?>
-                    </div>
-                </form>
             </div>
 
             <div class="basis-1/2 lg:col-span-7 mt-5 hidden lg:block">
