@@ -10,10 +10,9 @@ use App\Http\Livewire\Pages\{
     About\Main as About,
     Cases\Main as CaseMain,
     Profile\Main as Profile,
-    Donate\Main as Donate,
     Donors\Main as Donors,
+    Donate\Main as Donate,
 };
-
 use App\Http\Livewire\Pages\Cases\{
     Admin\Add as CaseAdd,
     Admin\Edit as CaseEdit,
@@ -70,4 +69,7 @@ Route::middleware(['auth:sanctum'])->group(function () {
 
     // donate
     Route::get('/donate', Donate::class)->name('donate');
+
+    // stripe
+    Route::get('/stripe', Stripe::class)->name('stripe');
 });

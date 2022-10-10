@@ -45,12 +45,22 @@ unset($__errorArgs, $__bag); ?>
                             <span class="" id="login_default_state">تبرع<span id="subtotal"></span></span>
                         </button>
                         <span class="text-sm"></span>
-                         <button
-                            class="text-white text-xl xl:text-2xl mt-4 bg-primary-500 hover:bg-primary-800 border border-transparent hover:border-green-500 focus:ring-2 focus:ring-primary-300 rounded-lg px-5 py-1 mr-2 mb-2"
-                            type="submit">
-
-                            <span class="" id="login_default_state">تبرع<span id="subtotal"></span></span>
-                        </button>
+                        
+                        <?php
+if (! isset($_instance)) {
+    $html = \Livewire\Livewire::mount('pages.donate.stripe', [])->html();
+} elseif ($_instance->childHasBeenRendered('l2043805527-0')) {
+    $componentId = $_instance->getRenderedChildComponentId('l2043805527-0');
+    $componentTag = $_instance->getRenderedChildComponentTagName('l2043805527-0');
+    $html = \Livewire\Livewire::dummyMount($componentId, $componentTag);
+    $_instance->preserveRenderedChild('l2043805527-0');
+} else {
+    $response = \Livewire\Livewire::mount('pages.donate.stripe', []);
+    $html = $response->html();
+    $_instance->logRenderedChild('l2043805527-0', $response->id(), \Livewire\Livewire::getRootElementTagName($html));
+}
+echo $html;
+?>
                     </div>
                 </form>
             </div>
