@@ -38,10 +38,10 @@
                             <span class="" id="login_default_state">تبرع<span id="subtotal"></span></span>
                         </button>
                         <span class="text-sm"></span>
-                        
-                        <livewire:pages.donate.stripe />
+
                     </div>
                 </form>
+                <livewire:pages.donate.stripe />
             </div>
 
             <div class="basis-1/2 lg:col-span-7 mt-5 hidden lg:block">
