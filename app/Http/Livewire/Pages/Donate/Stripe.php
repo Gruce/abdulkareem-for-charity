@@ -7,9 +7,7 @@ use Livewire\Component;
 class Stripe extends Component
 {
 
-   
-
-         public function render()
+    public function render()
     {
         return view('livewire.pages.donate.stripe');
     }

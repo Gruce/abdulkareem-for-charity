@@ -70,5 +70,7 @@ Route::middleware(['auth:sanctum'])->group(function () {
     // donate
     Route::get('/donate', Donate::class)->name('donate');
 
+    //stripe
+    
 
 });
