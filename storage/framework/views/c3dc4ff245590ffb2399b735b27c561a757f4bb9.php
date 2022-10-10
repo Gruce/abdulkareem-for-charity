@@ -45,6 +45,12 @@ unset($__errorArgs, $__bag); ?>
                             <span class="" id="login_default_state">تبرع<span id="subtotal"></span></span>
                         </button>
                         <span class="text-sm"></span>
+                         <button
+                            class="text-white text-xl xl:text-2xl mt-4 bg-primary-500 hover:bg-primary-800 border border-transparent hover:border-green-500 focus:ring-2 focus:ring-primary-300 rounded-lg px-5 py-1 mr-2 mb-2"
+                            type="submit">
+
+                            <span class="" id="login_default_state">تبرع<span id="subtotal"></span></span>
+                        </button>
                     </div>
                 </form>
             </div>
@@ -81,4 +87,5 @@ echo $html;
             </div>
             <?php endif; ?>
         </div>
-    </div><?php /**PATH E:\github\abdulkareem-for-charity\resources\views/livewire/pages/donate/main.blade.php ENDPATH**/ ?>
+    </div>
+<?php /**PATH E:\github\abdulkareem-for-charity\resources\views/livewire/pages/donate/main.blade.php ENDPATH**/ ?>

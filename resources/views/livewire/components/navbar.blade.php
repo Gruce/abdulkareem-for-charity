@@ -29,11 +29,11 @@
                     </a>
                 </div>
                 <div class="hidden sm:block sm:ml-6">
-                    <div class="flex space-x-4">
+                    <div class="flex  gap-3">
                         @foreach ($menu->items as $item)
-                        <a href="{{ route($item->route) }}" @if($item->active) class="bg-primary-700 text-white px-3
-                            py-2 rounded-md text-sm font-medium"
-                            @else class="text-gray-700 hover:bg-primary-500 hover:text-white px-3 py-2 rounded-md
+                        <a href="{{ route($item->route) }}" @if($item->active) class="bg-primary-700  text-white px-3
+                            py-2 rounded-md text-sm font-medium "
+                            @else class="text-gray-700  hover:bg-primary-500 hover:text-white px-3 py-2 rounded-md
                             text-sm font-medium" @endif>
                             {{ $item->name }}</a>
 
@@ -63,7 +63,7 @@
                         class="z-10 hidden bg-white divide-y divide-gray-100 rounded shadow w-44">
                         <div class="px-4 py-3 text-sm text-gray-900 ">
                             <div>{{auth()->user()->name}}</div>
-                            
+
                         </div>
                         <ul class=" text-sm text-gray-700"
                                 aria-labelledby="dropdownInformationButton">
