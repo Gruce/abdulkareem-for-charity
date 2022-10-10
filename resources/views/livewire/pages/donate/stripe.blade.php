@@ -1,4 +1,4 @@
-<h1>helllllllllllllo</h1>
+<h1>stripe pay</h1>
 {{-- <!DOCTYPE html>
 <html>
 <head>
