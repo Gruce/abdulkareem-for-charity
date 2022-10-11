@@ -48,7 +48,7 @@
 <?php unset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4); ?>
 <?php endif; ?>
 
-        <form method="POST" action="<?php echo e(route('password.email')); ?>">
+        <form class="text-gray-800" method="POST" action="<?php echo e(route('password.email')); ?>">
             <?php echo csrf_field(); ?>
 
             <div class="block">
