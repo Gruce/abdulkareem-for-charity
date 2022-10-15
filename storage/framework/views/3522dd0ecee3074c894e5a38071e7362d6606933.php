@@ -104,20 +104,20 @@ unset($__errorArgs, $__bag); ?>
                         <label
                             class="w-full flex flex-col items-center px-2 py-6  <?php if($file_path): ?> bg-primary-700 text-white <?php else: ?> bg-white text-primary-700 <?php endif; ?> rounded-lg tracking-wide border-4 border-dashed border-primary-700 cursor-pointer hover:bg-primary-700 hover:text-white">
                             <div wire:loading wire:target="file_path">
-                                <?php if (isset($component)) { $__componentOriginal1716da4f44bad2ad281abfc716acec42a1914ead = $component; } ?>
-<?php $component = $__env->getContainer()->make(App\View\Components\Ui\Loading::class, [] + (isset($attributes) ? (array) $attributes->getIterator() : [])); ?>
-<?php $component->withName('ui.loading'); ?>
+                                <?php if (isset($component)) { $__componentOriginal9a625ee34a8b7533f703aed1356d2207d90e640a = $component; } ?>
+<?php $component = $__env->getContainer()->make(App\View\Components\UI\Loading::class, [] + (isset($attributes) ? (array) $attributes->getIterator() : [])); ?>
+<?php $component->withName('u-i.loading'); ?>
 <?php if ($component->shouldRender()): ?>
 <?php $__env->startComponent($component->resolveView(), $component->data()); ?>
-<?php if (isset($attributes) && $constructor = (new ReflectionClass(App\View\Components\Ui\Loading::class))->getConstructor()): ?>
+<?php if (isset($attributes) && $constructor = (new ReflectionClass(App\View\Components\UI\Loading::class))->getConstructor()): ?>
 <?php $attributes = $attributes->except(collect($constructor->getParameters())->map->getName()->all()); ?>
 <?php endif; ?>
 <?php $component->withAttributes([]); ?>
 <?php echo $__env->renderComponent(); ?>
 <?php endif; ?>
-<?php if (isset($__componentOriginal1716da4f44bad2ad281abfc716acec42a1914ead)): ?>
-<?php $component = $__componentOriginal1716da4f44bad2ad281abfc716acec42a1914ead; ?>
-<?php unset($__componentOriginal1716da4f44bad2ad281abfc716acec42a1914ead); ?>
+<?php if (isset($__componentOriginal9a625ee34a8b7533f703aed1356d2207d90e640a)): ?>
+<?php $component = $__componentOriginal9a625ee34a8b7533f703aed1356d2207d90e640a; ?>
+<?php unset($__componentOriginal9a625ee34a8b7533f703aed1356d2207d90e640a); ?>
 <?php endif; ?>
                             </div>
                             <div wire:loading.remove wire:target="file_path">
