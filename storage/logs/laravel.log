@@ -10274,3 +10274,63 @@
 #45 /www/wwwroot/abdulkareem-for-charity/public/index.php(52): Illuminate\\Foundation\\Http\\Kernel->handle()
 #46 {main}
 "} 
+[2022-10-15 15:09:31] local.ERROR: Class "Termwind\Laravel\TermwindServiceProvider" not found {"exception":"[object] (Error(code: 0): Class \"Termwind\\Laravel\\TermwindServiceProvider\" not found at E:\\GitHub\\abdulkareem-for-charity\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php:749)
+[stacktrace]
+#0 E:\\GitHub\\abdulkareem-for-charity\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(683): Illuminate\\Foundation\\Application->resolveProvider('Termwind\\\\Larave...')
+#1 E:\\GitHub\\abdulkareem-for-charity\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\ProviderRepository.php(75): Illuminate\\Foundation\\Application->register('Termwind\\\\Larave...')
+#2 E:\\GitHub\\abdulkareem-for-charity\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(663): Illuminate\\Foundation\\ProviderRepository->load(Array)
+#3 E:\\GitHub\\abdulkareem-for-charity\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\RegisterProviders.php(17): Illuminate\\Foundation\\Application->registerConfiguredProviders()
+#4 E:\\GitHub\\abdulkareem-for-charity\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(239): Illuminate\\Foundation\\Bootstrap\\RegisterProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#5 E:\\GitHub\\abdulkareem-for-charity\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(310): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#6 E:\\GitHub\\abdulkareem-for-charity\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(127): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#7 E:\\GitHub\\abdulkareem-for-charity\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#8 {main}
+"} 
+[2022-10-15 15:09:51] local.ERROR: Class "Termwind\Laravel\TermwindServiceProvider" not found {"exception":"[object] (Error(code: 0): Class \"Termwind\\Laravel\\TermwindServiceProvider\" not found at E:\\GitHub\\abdulkareem-for-charity\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php:749)
+[stacktrace]
+#0 E:\\GitHub\\abdulkareem-for-charity\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(683): Illuminate\\Foundation\\Application->resolveProvider('Termwind\\\\Larave...')
+#1 E:\\GitHub\\abdulkareem-for-charity\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\ProviderRepository.php(75): Illuminate\\Foundation\\Application->register('Termwind\\\\Larave...')
+#2 E:\\GitHub\\abdulkareem-for-charity\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(663): Illuminate\\Foundation\\ProviderRepository->load(Array)
+#3 E:\\GitHub\\abdulkareem-for-charity\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\RegisterProviders.php(17): Illuminate\\Foundation\\Application->registerConfiguredProviders()
+#4 E:\\GitHub\\abdulkareem-for-charity\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(239): Illuminate\\Foundation\\Bootstrap\\RegisterProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#5 E:\\GitHub\\abdulkareem-for-charity\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(310): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#6 E:\\GitHub\\abdulkareem-for-charity\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(127): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#7 E:\\GitHub\\abdulkareem-for-charity\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#8 {main}
+"} 
+[2022-10-15 15:09:55] local.ERROR: Class "Termwind\Laravel\TermwindServiceProvider" not found {"exception":"[object] (Error(code: 0): Class \"Termwind\\Laravel\\TermwindServiceProvider\" not found at E:\\GitHub\\abdulkareem-for-charity\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php:749)
+[stacktrace]
+#0 E:\\GitHub\\abdulkareem-for-charity\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(683): Illuminate\\Foundation\\Application->resolveProvider('Termwind\\\\Larave...')
+#1 E:\\GitHub\\abdulkareem-for-charity\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\ProviderRepository.php(75): Illuminate\\Foundation\\Application->register('Termwind\\\\Larave...')
+#2 E:\\GitHub\\abdulkareem-for-charity\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(663): Illuminate\\Foundation\\ProviderRepository->load(Array)
+#3 E:\\GitHub\\abdulkareem-for-charity\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\RegisterProviders.php(17): Illuminate\\Foundation\\Application->registerConfiguredProviders()
+#4 E:\\GitHub\\abdulkareem-for-charity\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(239): Illuminate\\Foundation\\Bootstrap\\RegisterProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#5 E:\\GitHub\\abdulkareem-for-charity\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(310): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#6 E:\\GitHub\\abdulkareem-for-charity\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(127): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#7 E:\\GitHub\\abdulkareem-for-charity\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#8 {main}
+"} 
+[2022-10-15 15:10:18] local.ERROR: Class "Termwind\Laravel\TermwindServiceProvider" not found {"exception":"[object] (Error(code: 0): Class \"Termwind\\Laravel\\TermwindServiceProvider\" not found at E:\\GitHub\\abdulkareem-for-charity\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php:749)
+[stacktrace]
+#0 E:\\GitHub\\abdulkareem-for-charity\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(683): Illuminate\\Foundation\\Application->resolveProvider('Termwind\\\\Larave...')
+#1 E:\\GitHub\\abdulkareem-for-charity\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\ProviderRepository.php(75): Illuminate\\Foundation\\Application->register('Termwind\\\\Larave...')
+#2 E:\\GitHub\\abdulkareem-for-charity\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(663): Illuminate\\Foundation\\ProviderRepository->load(Array)
+#3 E:\\GitHub\\abdulkareem-for-charity\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\RegisterProviders.php(17): Illuminate\\Foundation\\Application->registerConfiguredProviders()
+#4 E:\\GitHub\\abdulkareem-for-charity\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(239): Illuminate\\Foundation\\Bootstrap\\RegisterProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#5 E:\\GitHub\\abdulkareem-for-charity\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(310): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#6 E:\\GitHub\\abdulkareem-for-charity\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(127): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#7 E:\\GitHub\\abdulkareem-for-charity\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#8 {main}
+"} 
+[2022-10-15 15:10:26] local.ERROR: Class "Termwind\Laravel\TermwindServiceProvider" not found {"exception":"[object] (Error(code: 0): Class \"Termwind\\Laravel\\TermwindServiceProvider\" not found at E:\\GitHub\\abdulkareem-for-charity\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php:749)
+[stacktrace]
+#0 E:\\GitHub\\abdulkareem-for-charity\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(683): Illuminate\\Foundation\\Application->resolveProvider('Termwind\\\\Larave...')
+#1 E:\\GitHub\\abdulkareem-for-charity\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\ProviderRepository.php(75): Illuminate\\Foundation\\Application->register('Termwind\\\\Larave...')
+#2 E:\\GitHub\\abdulkareem-for-charity\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(663): Illuminate\\Foundation\\ProviderRepository->load(Array)
+#3 E:\\GitHub\\abdulkareem-for-charity\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\RegisterProviders.php(17): Illuminate\\Foundation\\Application->registerConfiguredProviders()
+#4 E:\\GitHub\\abdulkareem-for-charity\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(239): Illuminate\\Foundation\\Bootstrap\\RegisterProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#5 E:\\GitHub\\abdulkareem-for-charity\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(310): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#6 E:\\GitHub\\abdulkareem-for-charity\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(127): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#7 E:\\GitHub\\abdulkareem-for-charity\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#8 {main}
+"} 

@@ -64,9 +64,9 @@ if (! isset($_instance)) {
 echo $html;
 ?>
         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); if ($__empty_1): ?>
-        <div class="text-2xl font-medium text-gray-700">
-            لايوجد حالات
-        </div>
+        <div class="px-2 py-4  mb-4 text-sm text-gray-700 bg-primary-100 rounded-lg" role="alert">
+            <span class="font-medium">ملاحظة:</span>لم يتم اضافة حالات للموقع ليتم عرضها
+          </div>
         <?php endif; ?>
     </div>
     <div>
