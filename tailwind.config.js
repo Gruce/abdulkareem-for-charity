@@ -27,7 +27,6 @@ module.exports = {
             fontFamily: {
                 noto: ["Noto Sans Arabic", "sans-serif"],
                 NotoKufi: ['Noto Kufi Arabic , sans-serif'],
-
             },
 
             //Border Color
