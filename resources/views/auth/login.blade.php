@@ -15,7 +15,7 @@
         </div>
         @endif
 
-        <form method="POST" action="{{ route('login') }}">
+        <form class="text-gray-800" method="POST" action="{{ route('login') }}">
             @csrf
 
             <div>
