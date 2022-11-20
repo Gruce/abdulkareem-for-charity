@@ -34,10 +34,10 @@ class Main extends Component
         $search = '%' . $this->search . '%';
         $this->events = [];
         if ($this->selectEvent == 1) {
-            $this->events = Event::where('title', 'LIKE', $search)->whereColumn('received_price', '=', 'target')->get();
+            $this->events = Event::where('title', 'LIKE', $search)->whereColumn('received_price', '=', 'target')->orderByDesc('id')->get();
         } elseif ($this->selectEvent == 2)
-            $this->events = Event::where('title', 'LIKE', $search)->whereColumn('received_price', '<', 'target')->get();
-        else $this->events =  Event::where('title', 'LIKE', $search)->get();
+            $this->events = Event::where('title', 'LIKE', $search)->whereColumn('received_price', '<', 'target')->orderByDesc('id')->get();
+        else $this->events =  Event::where('title', 'LIKE', $search)->orderByDesc('id')->get();
 
         // $events = Event::all();
         // if($this->search) $events = $events->where('title', 'LIKE', $search);
