@@ -83,8 +83,8 @@
 
             
             <div>
-                <h1 class="text-secondary-900 text-2xl md:text-4xl xl:text-5xl font-bold text-center mb-20">
-                    المطورين
+                <h1 class="text-secondary-900 text-2xl md:text-3xl font-bold text-center mb-20">
+                    المطورين  <span class="text-base">(اعضاء ضمن  <a href="https://csitelites.tech" target="_blank" class="text-blue-700">فريق النخبة في كلية علوم الحاسوب</a> )</span>
                 </h1>
 
                 
@@ -111,7 +111,7 @@ echo $html;
 
             
             <div>
-                <h1 class="text-secondary-900 text-2xl md:text-5xl font-bold text-center mb-20">
+                <h1 class="text-secondary-900 text-2xl md:text-3xl font-bold text-center mb-20">
                     المساهمين
                 </h1>
                 
