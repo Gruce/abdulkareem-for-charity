@@ -7,8 +7,6 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>{{ config('app.name', 'Laravel') }}</title>
-    <link rel="icon" type="image/png" href="img/logo.png">
-
 
     <!-- Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
@@ -31,15 +29,14 @@
     <script src="{{ mix('js/app.js') }}" defer></script>
 </head>
 
-<body class="font-NotoKufi bg-white h-screen " dir="rtl">
+<body class="font-NotoKufi " dir="rtl">
     <x-jet-banner />
 
-    <div class=" w-full  ">
-        <div class="">@livewire('components.navbar')</div>
-
+    <div class="  ">
+        @livewire('components.navbar')
         <!-- Page Content -->
-        <main class=" lg:p-10 lg:mt-5 overflow-y-auto  rounded-lg bg-white ">
-
+        <main class=" lg:p-10 lg:mt-5 overflow-y-auto  rounded-lg ">
+            
             <div>
                 {{ $slot }}
             </div>

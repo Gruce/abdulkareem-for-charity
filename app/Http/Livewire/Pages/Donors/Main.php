@@ -41,7 +41,6 @@ class Main extends Component
                 return $query->where('state', false)->get();
             }
         ]);
-
         if ($this->type) $users = $users->where('type', $this->type);
 
         if ($this->gender) $users = $users->where('gender', $this->gender);
@@ -78,7 +77,7 @@ class Main extends Component
         if ($this->search) {
             $users = $users->where('name', 'like', $search);
         }
-        $users = $users->paginate(24);
+        $users = $users->paginate(10);
 
         return view('livewire.pages.donors.main', compact('users'));
     }

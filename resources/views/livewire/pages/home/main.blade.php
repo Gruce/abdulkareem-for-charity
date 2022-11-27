@@ -1,28 +1,33 @@
-<div class="bg-white">
-    <div class="flex flex-col container mx-auto ">
+<div>
+    <div class="flex flex-col absolute h-screen">
 
         <!-- INTRO -->
-        <div class="basis-4/12 grid grid-cols-1 xl:grid-cols-12 justify-between mt-10 md:mt-0 ">
+        <div class="basis-4/12 grid grid-cols-1 xl:grid-cols-12 justify-between mt-10 md:mt-0">
             <!-- Text -->
-            <div class=" xl:col-span-5  md:pt-12 lg:pt-8 xl:pt-6  ">
-                <h1 class="text-secondary-900 text-3xl xl:text-4xl font-bold mr-6">
+            <div class=" xl:col-span-5 xl:pr-24 xl:pt-20  ">
+                <h1 class="text-secondary-900 text-4xl xl:text-6xl font-bold text-center md:text-right">
                     صندوق الكرم
                 </h1>
-                <p class="text-secondary-200 text-lg xl:text-xl 2xl:text-2xl mt-6 px-6" style="text-align: justify">
-                    مبادرة ونشاط طلابي بحت ينطلق من طلبة كلية علوم الحـاسوب وتكنولوجيا المعـلومات الهدف منه رعاية
-                    الأعمال الخيريّة داخل الكليّة وتكون الأولوية في صرف الصندوق للطلبة ذوي الدخل دون المحدود وبقيّة
-                    الأعمال الخيريّة.</p>
+                <p class="text-secondary-200 text-lg xl:text-2xl mt-6 px-6">
+                    مبادرة ونشاط طلابي بحت ينطلق من طلبة كلية علوم
+
+                    الحـاسوب وتـكنلوجيا المعـلومات الهدف منه رعاية الاعمال
+
+                    الخيرية داخل الكلية وتكون الاولوية في صرف الصندوق
+
+                    للطلبة ذوي الدخل دون المحدود وبقية الاعمال الخيرية.
+                </p>
                 <div class="mt-4 xl:mt-10 mr-16 xl:mr-4 flex gap-5">
                     <a href="{{ route('donate') }}"
-                        class="text-white text-base xl:text-xl 2xl:text-2xl duration-200 bg-primary-500 hover:bg-white border border-transparent hover:border-green-500 hover:text-primary-500 focus:ring-2 focus:ring-primary-300 rounded-lg px-5 py-2.5 mr-2 mb-2 ">تبرع
+                        class="text-white text-base xl:text-2xl duration-200 bg-primary-500 hover:bg-white border border-transparent hover:border-green-500 hover:text-primary-500 focus:ring-2 focus:ring-primary-300 rounded-lg px-5 py-2.5 mr-2 mb-2 ">تبرع
                         الان</a>
                     <a href="{{ route('cases') }}"
-                        class="hover:text-white text-base xl:text-xl 2xl:text-2xl duration-200 hover:bg-primary-500 bg-white  border hover:border-transparent border-green-500 text-primary-500 focus:ring-2 focus:ring-primary-300  rounded-lg  px-5 py-2.5 mr-2 mb-2 ">الحالات</a>
+                        class="hover:text-white text-base xl:text-2xl duration-200 hover:bg-primary-500 bg-white  border hover:border-transparent border-green-500 text-primary-500 focus:ring-2 focus:ring-primary-300  rounded-lg  px-5 py-2.5 mr-2 mb-2 ">الحالات</a>
                 </div>
             </div>
             {{--Photo--}}
 
-            <div class=" xl:col-span-7 mt-6 xl:mt-0 ">
+            <div class=" xl:col-span-7 mt-6 xl:mt-0 ml-6 ">
                 <img src="/img/charity.png" class="w-10/12 h-auto m-auto">
             </div>
         </div>
@@ -33,25 +38,24 @@
         </div>
 
         {{-- Cases --}}
-        <div class=" basis-4/12  mt-10 xl:mt-16">
-            @if($events->count() > 0)
-            <span class="text-secondary-900 text-3xl xl:text-4xl  font-bold pr-4  ">
-                احدث الحالات
+        <div class=" basis-4/12 xl:px-20 xl:ml-8 mt-10 xl:mt-16">
+            <span class="text-secondary-900 text-4xl xl:text-6xl font-bold pr-4 md:pr-0 ">
+                اخر الحالات
             </span>
-            <div class="my-6 xl:my-12  grid  grid-cols-1 md:grid-cols-2  xl:grid-cols-4 gap-16 xl:gap-0 ">
+            <div
+            class="my-6 xl:my-20  grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 ">
                 @foreach ($events as $event)
                 @livewire('pages.cases.card', ['event' => $event], key($event->id . "hi"))
                 @endforeach
             </div>
-            @endif
         </div>
 
         {{--Work for--}}
-        <div class=" basis-2/12  mt-10 xl:mt-12 ">
-            <h1 class="text-secondary-900 text-3xl xl:text-4xl  font-bold pr-4  text-center">
+        <div class=" basis-2/12  mt-10 xl:mt-16 xl:ml-16">
+            <span class="text-secondary-900 text-4xl xl:text-6xl  font-bold pr-4  xl:pr-20">
                 نحن نعمل لأجل
-            </h1>
-            <div class="my-6 xl:my-12">
+            </span>
+            <div class="my-6 xl:my-20">
                 @livewire('pages.home.activities')
             </div>
         </div>

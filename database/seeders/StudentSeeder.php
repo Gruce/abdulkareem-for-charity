@@ -5,7 +5,6 @@ namespace Database\Seeders;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use App\Models\Student;
-
 class StudentSeeder extends Seeder
 {
     /**
@@ -23,5 +22,14 @@ class StudentSeeder extends Seeder
             'stage' => 2,
             'division' => 2
         ]);
+
+            // id:2
+            Student::create([
+                'user_id' => 5,
+                'department' => 2,
+                'study_type' => 2,
+                'stage' => 4,
+                'division' => 3
+            ]);
     }
 }

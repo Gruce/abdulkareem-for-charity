@@ -5,6 +5,7 @@ namespace App\Http\Livewire\Pages\Profile;
 use Livewire\Component;
 use Jantinnerezo\LivewireAlert\LivewireAlert;
 use Livewire\WithFileUploads;
+use App\Models\Student as StudentModel;
 
 
 class Basic extends Component
@@ -34,8 +35,6 @@ class Basic extends Component
             'timer' => 3000,
             'toast' => true,
         ]);
-        return redirect()->to('/profile');
-
     }
 
     public function mount($user){

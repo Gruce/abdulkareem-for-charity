@@ -1,64 +1,88 @@
-<div >
-    <div class="py-4 px-2 rounded-xl transition duration-300 mx-auto border border-gray-300 hover:shadow-md hover:bg-gray-50">
-        <div class="">
+<div>
+    <div class=" p-4 w-full rounded-t-xl bg-gray-50 hover:bg-gray-100 transition duration-300 border border-gray-200">
+        <div class="grid grid-cols-5 mb-5">
             <img src="@if ($item->profile_photo_path) {{ asset($item->profile_photo_path) }}@elseif($item->gender == 1) {{ asset('/img/profile_woman.png') }} @elseif($item->gender != 1) {{ asset('/img/profile_man.png') }} @endif"
-                class="mx-auto h-48" />
+                class="col-span-2 rounded-full h-32" />
+            <div class="col-span-3">
+                <h3 class="mt-6 text-center text-2xl ">{{ $item->name }}</h3>
+                <h3 class="mt-2 text-center text-base ">
+                    @if ($item->type == 1)
+                        طالب - @if ($item->student->department == 1)
+                            علوم
+                        @else
+                            نظم
+                        @endif
+                        - @if ($item->student->study_type == 1)
+                            صباحي
+                        @else
+                            مسائي
+                        @endif
+                        - @if ($item->student->stage == 1)
+                            أولى
+                        @elseif($item->student->stage == 2)
+                            ثانية
+                        @elseif($item->student->stage == 3)
+                            ثالثة
+                        @else
+                            رابعة
+                        @endif
+                        - @if ($item->student->division == 1)
+                            A
+                        @elseif($item->student->stage == 2)
+                            B
+                        @elseif($item->student->stage == 3)
+                            C
+                        @elseif($item->student->stage == 4)
+                            D
+                        @else
+                            E
+                        @endif
+                    @elseif($item->type == 2)
+                        تدريسي
+                    @elseif($item->type == 3)
+                        موظف
+                    @elseif($item->type == 4)
+                        من خارج الكلية
+                    @endif
+                </h3>
+            </div>
         </div>
-        <div class="text-center">
-            <h3 class="text-center text-3xl font-semibold mt-4">{{ $item->name }}</h3>
-            <span class="text-sm">
-                @if ($item->type == 1)
-                طالب - @if ($item->student->department == 1)
-                علوم
-                @else
-                نظم
-                @endif
-                - @if ($item->student->study_type == 1)
-                صباحي
-                @else
-                مسائي
-                @endif
-                - @if ($item->student->stage == 1)
-                أولى
-                @elseif($item->student->stage == 2)
-                ثانية
-                @elseif($item->student->stage == 3)
-                ثالثة
-                @else
-                رابعة
-                @endif
-                - @if ($item->student->division == 1)
-                A
-                @elseif($item->student->stage == 2)
-                B
-                @elseif($item->student->stage == 3)
-                C
-                @elseif($item->student->stage == 4)
-                D
-                @else
-                E
-                @endif
-                @elseif($item->type == 2)
-                تدريسي
-                @elseif($item->type == 3)
-                موظف
-                @elseif($item->type == 4)
-                من خارج الكلية
-                @endif
-            </span>
-        </div>
-        <ul class="mt-12 mb-8 flex justify-evenly text-center text-2xl">
-            <li class="flex flex-col"><span class="mb-2">سهم</span> {{ $item->get_shares }}</li>
-            <li class=" flex flex-col"><span class="mb-2">مبلغ</span> {{ $item->get_shares * 2000}}</li>
+        <div class="grid grid-cols-5 mb-5">
+            <div x-data="{ isOpen: false }" class="col-span-2 flex flex-col">
+                <div class="flex justify-center">
+                    <button wire:click="confirm_downgrade()" type="button"
+                        class="inline-block rounded-full text-white bg-gradient-to-r from-red-400  to-red-500 hover:bg-gradient-to-br shadow-md  hover:shadow-lg transition duration-450 w-9 h-9">
+                        <i class="fa-solid fa-person-circle-xmark"></i>
+                    </button>
+                    <button @click="isOpen = !isOpen" type="button"
+                        class="inline-block rounded-full text-white bg-gradient-to-r from-primary-400  to-primary-500 hover:bg-gradient-to-br shadow-md  hover:shadow-lg transition duration-450 w-9 h-9 ml-16 mr-2">
+                        <i class="fa-solid fa-sack-dollar"></i>
+                    </button>
+                </div>
+                <div x-show="isOpen" class="mt-10 text-xs text-center">
+                    <span class=" ">اذا سلم هذا المدير مبالغ للصندوق </span>
+                    <span class=" ">قم بأضافتها هنا</span>
+                    <input type="number" wire:model="paid_amount"
+                        class="mt-2 w-full rounded-t-md border border-gray-300 p-2 text-center focus:border-green-400 " />
+                    <button wire:click="add_paid_amount" type="button"
+                        class="inline-block rounded-b-sm text-white bg-gradient-to-r from-primary-400  to-primary-500 hover:bg-gradient-to-br shadow-md  hover:shadow-lg transition duration-450 w-full h-9 mt-1">
+                        اضافة
+                </div>
 
-        </ul>
-        @superAdmin
-        <div class="text-center">
-            <button wire:click="confirm_downgrade()" type="button"
-                class="rounded-xl mb-2  bg-gradient-to-r from-red-400 to-red-500 hover:bg-gradient-to-br px-20 py-2 text-white">تخفيض
-                المدير</button>
+            </div>
+            <div class="col-span-3">
+                <ul class="  flex justify-around text-center text-2xl">
+                    <li class="flex flex-col"><span class="font-sans mb-3">سهم</span></li>
+                    <li class=" flex flex-col"><span class="font-sans mb-3">مستلم</span>0</li>
+
+                </ul>
+                <ul class="mt-5 mb-8 flex justify-around text-center text-2xl">
+                    <li class=" flex flex-col"><span class="font-sans mb-3">مدفوع</span>0</li>
+                    <li class="flex flex-col"><span class="font-sans mb-3">متبقي</span>0</li>
+                </ul>
+            </div>
+
         </div>
-        @endsuperAdmin
     </div>
 
 </div>

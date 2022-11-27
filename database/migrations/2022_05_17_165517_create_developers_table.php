@@ -24,7 +24,6 @@ return new class extends Migration
             $table->string('linkedln')->nullable();
             $table->string('github')->nullable();
             $table->string('phone')->nullable();
-            $table->string('adjective')->nullable();
             $table->timestamps();
         });
     }

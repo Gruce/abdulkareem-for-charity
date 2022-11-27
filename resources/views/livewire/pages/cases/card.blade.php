@@ -1,18 +1,18 @@
 <div>
-    <div class="h-auto w-11/12 lg:w-10/12 xl:w-11/12 mx-auto">
-        <div class="relative bg-white hover:bg-gray-50 p-6 rounded-t-lg border ">
+    <div class="h-auto ">
+        <div class="relative bg-white hover:bg-gray-50 p-6 rounded-t-lg border  w-11/12 mx-auto">
             <img class="h-64 rounded w-full object-cover object-center mb-6"
                 src="{{ asset($event->image_path ?? 'img/caseImage.webp') }}" alt="content">
 
             <h2 class="text-xl text-gray-900 font-medium title-font mb-2 text-center">{{ $event->title }}</h2>
             <h3 class="tracking-widest text-secondary-700 text-base font-medium title-font text-center mb-4">
-                @money($event->target, 'IQD')</h3>
+                {{ $event->target }} د.ع</h3>
 
             <p class="leading-relaxed text-base font-bold text-gray-400">{{ $event->getLimit('description') }}
                 {{-- more info button --}}
                 <a class="text-gray-600 text-sm font-bold duration-300 mb-4"
                     href="{{ route('case-page', ['case_id' => $event->id]) }}">
-                    للمزيد
+                    للمزيد  
                 </a>
 
             </p>
@@ -40,7 +40,7 @@
                     </div>
                 </div>
             </div>
-            @superAdmin
+            @admin
                 <div x-data="{ open: false }" class="flex flex-col">
                     <hr class="mb-5">
                     {{-- edit/delete/add Buttons --}}
@@ -77,7 +77,7 @@
                     </div>
 
                 </div>
-            @endsuperAdmin
+            @endadmin
             <div class="w-full absolute bottom-0 right-0  text-center">
                 <div class="bg-green-500 h-4 text-2xs text-white "
                     style="width: {{ ($event->received_price * 100) / $event->target }}%">

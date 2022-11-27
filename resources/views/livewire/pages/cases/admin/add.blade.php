@@ -1,6 +1,6 @@
 <div>
 
-    <div class="flex h-auto items-center justify-center text-gray-600">
+    <div class="flex h-auto items-center justify-center">
         <form wire:submit.prevent="add">
             <div class="grid rounded-lg w-full">
                 <div class="flex justify-center">
@@ -11,35 +11,36 @@
 
                 <div class="flex justify-center">
                     <div class="flex">
-                        <h1 class="text-gray-800 font-bold md:text-2xl text-xl mt-4">إضافة الحالات</h1>
+                        <h1 class="text-gray-800 font-bold md:text-2xl text-xl">إضافة الحالات</h1>
                     </div>
                 </div>
 
+                {{-- Case Name --}}
+                <div class="grid grid-cols-1 mt-5 mx-7">
+                    <label class="md:text-sm text-xs text-gray-700 text-light font-semibold">عنوان الحالة</label>
+                    <input wire:model.lazy="title"
+                        class="py-2 px-3 rounded-lg border-2 border-gray-200 mt-1 focus:outline-none focus:ring-2 focus:ring-primary-100 focus:border-transparent"
+                        type="text" placeholder="عنوان الحالة" />
+                </div>
 
-
-
-                <div class="flex flex-row w-full mt-10">
-
-                    {{-- Case Name --}}
-                    <div class="w-1/2 grid grid-cols-1 mt-5 mx-7">
-                        <label class="md:text-sm text-xs text-gray-700 text-light font-semibold">عنوان الحالة</label>
-                        <input wire:model.lazy="title"
-                            class="py-2 px-3 rounded-lg border-2 border-gray-200 mt-1 focus:outline-none focus:ring-2 focus:ring-primary-100 focus:border-transparent"
-                            type="text" placeholder="عنوان الحالة" required />
-                    </div>
-
-                    {{-- Total Target --}}
+                {{-- Total Target --}}
+                <div class="flex flex-row w-full">
                     <div class="w-1/2 grid grid-cols-1 mt-5 mx-7">
                         <label class="w-full md:text-sm text-xs text-gray-700 text-light font-semibold">المبلغ
                             الكلي</label>
                         <input wire:model.lazy="target"
                             class="w-full py-2 px-3 rounded-lg border-2 border-gray-200 mt-1 focus:outline-none focus:ring-2 focus:ring-primary-100 focus:border-transparent"
-                            type="number" placeholder="المبلغ الكلي" required />
+                            type="number" placeholder="المبلغ الكلي" />
                     </div>
 
-
-
-
+                    {{-- Received Payment --}}
+                    <div class="grid grid-cols-1 mt-5 mx-7 w-1/2">
+                        <label class="w-full md:text-sm text-xs text-gray-700 text-light font-semibold">المبلغ
+                            الواصل</label>
+                        <input wire:model.lazy="received_price"
+                            class="w-full py-2 px-3 rounded-lg border-2 border-gray-200 mt-1 focus:outline-none focus:ring-2 focus:ring-primary-100 focus:border-transparent"
+                            type="number" value="0" placeholder="المبلغ الواصل" />
+                    </div>
                 </div>
 
                 {{-- Case Descrition --}}
@@ -47,7 +48,7 @@
                     <label class="md:text-sm text-xs text-gray-700 text-light font-semibold">تفاصيل الحالة</label>
                     <textarea wire:model.lazy="description"
                         class="py-2 px-3 rounded-lg h-32 border-2 border-gray-200 mt-1 focus:outline-none focus:ring-2 focus:ring-primary-100 focus:border-transparent"
-                        type="text" required></textarea>
+                        type="text"></textarea>
                 </div>
 
                 <div class="flex flex-row w-full">
@@ -55,7 +56,7 @@
                         <label
                             class="w-full flex flex-col items-center px-2 py-6  @if ($image_path) bg-primary-700 text-white @else bg-white text-primary-700 @endif rounded-lg tracking-wide border-4 border-dashed border-primary-700 cursor-pointer hover:bg-primary-700 hover:text-white">
                             <div wire:loading wire:target="image_path">
-                                <x-u-i.loading />
+                                <x-ui.loading />
                             </div>
                             <div wire:loading.remove wire:target="image_path">
                                 @if ($image_path)
@@ -83,7 +84,7 @@
                         <label
                             class="w-full flex flex-col items-center px-2 py-6  @if ($file_path) bg-primary-700 text-white @else bg-white text-primary-700 @endif rounded-lg tracking-wide border-4 border-dashed border-primary-700 cursor-pointer hover:bg-primary-700 hover:text-white">
                             <div wire:loading wire:target="file_path">
-                                <x-u-i.loading />
+                                <x-ui.loading />
                             </div>
                             <div wire:loading.remove wire:target="file_path">
                                 @if ($file_path)
@@ -110,12 +111,8 @@
 
                 {{-- Button --}}
                 <div class="flex items-center justify-center  md:gap-8 gap-4 pt-7 pb-7">
-                    <a href="{{ route('cases') }}"
-                        class="w-auto bg-white hover:bg-primary-600 text-primary-600 hover:text-white border border-primary-600 rounded-lg shadow-md hover:shadow-xl hover:scale-105 font-medium  px-4 py-2">الرجوع</a>
                     <button type="submit"
-                        class="w-auto bg-primary-600 hover:bg-white text-white hover:text-primary-600 border border-primary-600 rounded-lg shadow-md hover:shadow-xl hover:scale-105 font-medium  px-4 py-2">أضافة
-                        الحالة</button>
-
+                        class="w-auto bg-primary-600 hover:bg-primary-800 rounded-lg shadow-md hover:shadow-xl hover:scale-105 font-medium text-white px-4 py-2">أضف</button>
                 </div>
 
             </div>

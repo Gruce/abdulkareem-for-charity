@@ -40,29 +40,22 @@ class Edit extends Component
             'title' => $this->title,
             'description' => $this->description,
             'target' => $this->target,
+            'received_price' => $this->received_price,
         ];
 
         $case = Event::findOrFail($this->case_id);
         $case->edit($data);
-        
-        if ($this->new_file){
-             
-            $case->update_file($this->new_file); 
-        }
-        
 
-        if ($this->new_image){
-            
-            $case->update_image($this->new_image); 
-        }
-        
+        if ($this->new_file)
+        $case->add_file($this->new_file, 2); // 2: new_file
+        if ($this->new_image)
+        $case->add_file($this->new_image); // 1:new_image default
         
         $this->alert('success', 'تم التعديل', [
             'position' => 'center',
             'timer' => 3000,
             'toast' => true,
         ]);
-        redirect()->route('cases');
     }
 
     public function render()

@@ -15,12 +15,12 @@ class Main extends Component
         'share' => 'required',
     ];
 
-    public $share, $note, $admins;
+    public $share, $note;
     public function save()
     {
         $this->validate();
         $donate = new Share;
-        $donate->add($this->share);
+        $donate->add($this->share, $this->note);
 
         $this->alert('success', 'تم', [
             'position' => 'center',
