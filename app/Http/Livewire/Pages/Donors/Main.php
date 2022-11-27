@@ -40,7 +40,8 @@ class Main extends Component
             'shares' => function ($query) {
                 return $query->where('state', false)->get();
             }
-        ]);
+        ])->whereHas('shares');
+
         if ($this->type) $users = $users->where('type', $this->type);
 
         if ($this->gender) $users = $users->where('gender', $this->gender);
