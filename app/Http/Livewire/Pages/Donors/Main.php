@@ -78,7 +78,7 @@ class Main extends Component
         if ($this->search) {
             $users = $users->where('name', 'like', $search);
         }
-        $users = $users->paginate(10);
+        $users = $users->paginate(24);
 
         return view('livewire.pages.donors.main', compact('users'));
     }
