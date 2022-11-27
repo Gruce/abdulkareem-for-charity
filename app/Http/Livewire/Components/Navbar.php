@@ -8,11 +8,13 @@ use App\Models\{
 };
 use Livewire\Component;
 
-class Navbar extends Component{
-    
+class Navbar extends Component
+{
+
     protected $listeners = ['$refresh'];
 
-    public function render(){
+    public function render()
+    {
 
         $this->payments = Event::sum('received_price');
         $this->total = Share::where('state', true)->sum('share') * 2000;
@@ -23,15 +25,8 @@ class Navbar extends Component{
                 'name' => 'الرئيسية',
                 'route' => 'home',
                 'icon' => 'home',
-                // 'submenu' => [
-                //     [
-                //         'name' => 'Home2',
-                //         'route' => 'home',
-                //         'icon' => 'home',
-                //         'permissions' => 2,
-                //     ]
-                // ]
-            ],                                                                                                                                                                                                                                                                                                                     
+
+            ],
             [
                 'name' => 'الحالات',
                 'route' => 'cases',
@@ -41,7 +36,8 @@ class Navbar extends Component{
                 'name' => 'التبرع',
                 'route' => 'donate',
                 'icon' => 'circle-info',
-                
+                'permissions' => 2,
+
             ],
             [
                 'name' => 'المتبرعين ',
@@ -59,25 +55,26 @@ class Navbar extends Component{
                 'icon' => 'circle-info',
                 'permissions' => 4,
             ],
-            
-            
-            
+
+
+
 
         ]);
 
         $leftMenu = new Menu([
             [
-                'name' => 'تسجيل الدخول',
-                'route' => 'login',
-                'icon' => 'home',
+                'name' => 'انضمام',
+                'route' => 'register',
+                'icon' => 'user-plus',
                 'permissions' => 1,
             ],
             [
-                'name' => 'انشاء حساب',
-                'route' => 'register',
-                'icon' => 'home',
+                'name' => ' الدخول',
+                'route' => 'login',
+                'icon' => 'people-pulling',
                 'permissions' => 1,
             ],
+
         ]);
 
         return view('livewire.components.navbar', [
@@ -88,19 +85,22 @@ class Navbar extends Component{
 }
 
 
-class Menu {
+class Menu
+{
     public $items;
 
-    function __construct($items = []) {
+    function __construct($items = [])
+    {
         // Menu Generation
         foreach ($items as $item) $this->items[] = new MenuItem($item);
-        
-        $this->filter(); 
+
+        $this->filter();
     }
 
-    function filter(){
+    function filter()
+    {
         $this->items = collect($this->items)->filter(function ($item) {
-            if ($item->hasSubmenu && !$item->submenu->items) return false;
+
             return $item->show;
         })->all();
     }
@@ -122,13 +122,13 @@ class MenuItem
     // 3 => only users
     // 4 => only admins
 
-    public function __construct($data){
+    public function __construct($data)
+    {
         $this->name = $data['name'];
         $this->route = $data['route'];
         $this->icon = $data['icon'];
         $this->permissions = $data['permissions'] ?? 0;
-        $this->hasSubmenu = isset($data['submenu']);
-        $this->submenu = new Menu($data['submenu'] ?? []);
+
 
         $this->active = request()->routeIs($this->route);
 
@@ -137,25 +137,21 @@ class MenuItem
             if (auth()->check()) {
                 $this->show = false;
             }
-
         } elseif ($this->permissions == 2) {
             // users (users & admins)
             if (!auth()->check()) {
                 $this->show = false;
             }
-
         } elseif ($this->permissions == 3) {
             // only users
             if (!auth()->check() || auth()->user()->is_admin == true) {
                 $this->show = false;
             }
-
         } elseif ($this->permissions == 4) {
             // only admins
             if (!auth()->check() || auth()->user()->is_admin == false) {
                 $this->show = false;
             }
-
         }
     }
 }

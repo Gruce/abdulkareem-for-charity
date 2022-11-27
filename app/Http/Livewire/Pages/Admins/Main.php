@@ -21,7 +21,9 @@ class Main extends Component
     public function render()
     {
         // $this->admins = User::where('is_admin', true)->get();
-        $this->admins = User::with('shares')->where('is_admin', true)->get();
+        $this->admins = User::with('shares')->where('is_admin', true)->get()->append('get_shares');
+        //dd($this->admins->toArray());
+        //dd($this->admins->append('get_shares')->toArray());
         //dd($this->admins->toArray());
         return view('livewire.pages.admins.main');
     }

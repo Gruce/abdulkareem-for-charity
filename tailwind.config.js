@@ -44,7 +44,7 @@ module.exports = {
                     800: "#2d8b5f",
                     900: "#25744f",
                 },
-                
+
                 secondary: {
                     300: "#d7d7ed",
                     400: "#b3b5de",
@@ -106,5 +106,6 @@ module.exports = {
     plugins: [
         require("@tailwindcss/forms"),
         require("@tailwindcss/typography"),
+        require("daisyui"),
     ],
 };

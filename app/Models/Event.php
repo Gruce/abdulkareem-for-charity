@@ -16,46 +16,90 @@ class Event extends Model
     ######### FUNCTIONS ##########
 
     ### add ###
-    public function add($data){
+    public function add($data)
+    {
         $this->fill($data);
         $this->save();
     }
     ### End add ###
-    public function add_file($file, $type = 1)
-    {
 
-        $type = $type == 1 ? 'images' : 'files';
-        $ext = $file->extension();
-        $name =  \Str::random(10) . '.' . $ext;
-        $file = $file->storeAs('public/event/' . $this->id . '/' . $type . '/' , $name);
-        if ($type == 'images')
-            $this->image_path ='storage/event/' . $this->id . '/' . $type . '/' . $name;
-        else $this->file_path ='storage/event/' . $this->id . '/' . $type . '/' . $name;
-
-        $this->save();
-    }
     ### edit ###
-    public function edit($data){
+    public function edit($data)
+    {
         $this->update($data);
     }
     ### End edit ###
 
-    public function getLimit($column, $value = 140){
-        return \Str::limit($this->$column, $value);
-    }
-    public function add_price($received_price){
-        $this->received_price += $received_price;
+
+
+    ### image ###
+
+    //add_image
+    public function add_image($image)
+    {
+        $ext = $image->extension();
+        $name =  \Str::random(10) . '.' . $ext;
+        $image = $image->storeAs('public/event/' . $this->id . '/images/', $name);
+        $this->image_path = 'storage/event/' . $this->id . '/images/' . $name;
         $this->save();
     }
 
-    ######### END FUNCTIONS ##########
+    //update_image
+    public function update_image($image)
+    {
+        $ext = $image->extension();
+        $name =  \Str::random(10) . '.' . $ext;
+        $image = $image->storeAs('public/event/' . $this->id . '/images/', $name);
+        $this->image_path = 'storage/event/' . $this->id . '/images/' . $name;
+        $this->save();
+    }
 
+    ### End image ###
+
+    ### file ###
+
+    //add_file
+    public function add_file($file)
+    {
+        $ext = $file->extension();
+        $name =  \Str::random(10) . '.' . $ext;
+        $file = $file->storeAs('public/event/' . $this->id . '/files/', $name);
+        $this->file_path = 'storage/event/' . $this->id . '/files/' . $name;
+        $this->save();
+    }
+
+    //update_file
+    public function update_file($file)
+    {
+        $ext = $file->extension();
+        $name =  \Str::random(10) . '.' . $ext;
+        $file = $file->storeAs('public/event/' . $this->id . '/files/', $name);
+        $this->file_path = 'storage/event/' . $this->id . '/files/' . $name;
+        $this->save();
+    }
+
+    ### End file ###
+
+
+    public function getLimit($column, $value = 140)
+    {
+        return \Str::limit($this->$column, $value);
+    }
+    
+    public function add_price($received_price)
+    {
+        $this->received_price += $received_price;
+        $this->save();
+    }
+    
     public function received()
     {
         return $this->target - $this->received_price;
-
     }
-    
+    ######### END FUNCTIONS ##########
+
+
+
     // protected function getReceivedState():Attribute{
     //     return Attribute::make(
     //         get: function () {
@@ -66,5 +110,3 @@ class Event extends Model
     // }
 
 }
-
-

@@ -29,6 +29,14 @@ class Share extends Model
     }
     ### End Scopes ###
 
-    
+    public function add($share)
+    {
+        Share::create([
+            'user_id' => auth()->user()->id,
+            'share' => $share,
+
+        ]);
+    }
+
 }
 

@@ -705,16 +705,18 @@ return [
         'decimal_mark'        => '.',
         'thousands_separator' => ',',
     ],
+
     'IQD' => [
         'name'                => 'Iraqi Dinar',
         'code'                => 368,
-        'precision'           => 0,
-        'subunit'             => 1,
-        'symbol'              => 'د.ع',
+        'precision'           => 3,
+        'subunit'             => 1000,
+        'symbol'              => 'IQD',
         'symbol_first'        => false,
         'decimal_mark'        => ',',
         'thousands_separator' => ',',
     ],
+
     'IRR' => [
         'name'                => 'Iranian Rial',
         'code'                => 364,

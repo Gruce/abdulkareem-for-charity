@@ -6,6 +6,8 @@ use App\Modles\User;
 use App\Modles\Student as StudentModel;
 class Main extends Component
 {
+    protected $listeners = [ '$refresh'];
+
     public function mount(){
         $this->user = auth()->user()->load('student');
     }

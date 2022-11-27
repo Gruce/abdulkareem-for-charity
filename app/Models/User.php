@@ -119,4 +119,21 @@ class User extends Authenticatable
         return $this->shares()->where('state', false)->get();
     }
 
+    public function getProfilePhotoUrlAttribute()
+    {
+        return $this->profile_photo_path ?? 'https://www.gravatar.com/avatar/'.md5($this->email).'?s=200&d=mm';
+    }
+
+
+
+    protected function getShares(): Attribute
+    {
+        return Attribute::make(
+            get: function () {
+                $shares = Share:: where('admin_id',$this->id)->where('state', true)->sum('share');
+                return $shares;
+            }
+        );
+    }
+
 }
