@@ -597,11 +597,11 @@
       'smtp' => 
       array (
         'transport' => 'smtp',
-        'host' => 'mailhog',
-        'port' => '1025',
-        'encryption' => NULL,
-        'username' => NULL,
-        'password' => NULL,
+        'host' => 'smtp.googlemail.com',
+        'port' => '465',
+        'encryption' => 'ssl',
+        'username' => 'sanduqalkaraam@gmail.com',
+        'password' => 'uwjdthuecexbmjrz',
         'timeout' => NULL,
       ),
       'ses' => 
@@ -642,7 +642,7 @@
     ),
     'from' => 
     array (
-      'address' => 'hello@example.com',
+      'address' => 'sanduqalkaraam@gmail.com',
       'name' => 'صندوق الكرم الخيري',
     ),
     'markdown' => 

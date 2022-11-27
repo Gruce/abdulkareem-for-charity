@@ -1,4 +1,4 @@
-<div>
+<div class="text-gray-800">
     <x-guest-layout>
         <x-jet-authentication-card>
             <x-slot name="logo">
@@ -9,7 +9,7 @@
 
             <x-jet-validation-errors class="mb-4" />
 
-            <form wire:submit.prevent="save">
+            <form wire:submit.prevent="save" class="text-gray-700">
 
                 <div>
                     <x-jet-label for="name" value="{{ __('الأسم') }}" />
