@@ -17,7 +17,7 @@ class Info extends Component
     public function render()
     {
         $users = User::all()->count();
-        $share = Share::all()->sum('share');
+        $share = Share::all()->where('state', true)->sum('share');
         $event = Event::whereColumn('received_price', 'target')->count();
         $payments = Event::sum('received_price');
         $total = Share::where('state', true)->sum('share') * 2000;
