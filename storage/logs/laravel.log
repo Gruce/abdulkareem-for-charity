@@ -11071,3 +11071,32 @@
 #51 C:\\Github Repositories\\Elites Projects\\abdulkareem-for-charity\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('C:\\\\Github Repos...')
 #52 {main}
 "} 
+[2022-11-30 17:47:10] local.ERROR: Command "optimize:cleat" is not defined.
+
+Did you mean one of these?
+    cache:clear
+    config:clear
+    event:clear
+    optimize
+    optimize:clear
+    queue:clear
+    route:clear
+    view:clear {"exception":"[object] (Symfony\\Component\\Console\\Exception\\CommandNotFoundException(code: 0): Command \"optimize:cleat\" is not defined.
+
+Did you mean one of these?
+    cache:clear
+    config:clear
+    event:clear
+    optimize
+    optimize:clear
+    queue:clear
+    route:clear
+    view:clear at C:\\Github Repositories\\Elites Projects\\abdulkareem-for-charity\\vendor\\symfony\\console\\Application.php:694)
+[stacktrace]
+#0 C:\\Github Repositories\\Elites Projects\\abdulkareem-for-charity\\vendor\\symfony\\console\\Application.php(259): Symfony\\Component\\Console\\Application->find('optimize:cleat')
+#1 C:\\Github Repositories\\Elites Projects\\abdulkareem-for-charity\\vendor\\symfony\\console\\Application.php(171): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#2 C:\\Github Repositories\\Elites Projects\\abdulkareem-for-charity\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(102): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#3 C:\\Github Repositories\\Elites Projects\\abdulkareem-for-charity\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(155): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#4 C:\\Github Repositories\\Elites Projects\\abdulkareem-for-charity\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#5 {main}
+"} 
