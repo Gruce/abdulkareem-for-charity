@@ -31,12 +31,11 @@
                 <div class="hidden sm:block sm:ml-6">
                     <div class="flex space-x-4">
                         @foreach ($menu->items as $item)
-                        <a href="{{ route($item->route) }}" @if($item->active) class="bg-primary-700 text-white px-3
+                        <a href="{{ route($item->route) }}" @if($item->active) class="mx-4 bg-primary-700 text-white px-3
                             py-2 rounded-md text-sm font-medium"
-                            @else class="text-gray-700 hover:bg-primary-500 hover:text-white px-3 py-2 rounded-md
+                            @else class="mx-4 text-gray-700 hover:bg-primary-500 hover:text-white px-3 py-2 rounded-md
                             text-sm font-medium" @endif>
                             {{ $item->name }}</a>
-
                         @endforeach
                     </div>
                 </div>

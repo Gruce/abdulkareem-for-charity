@@ -1,31 +1,23 @@
 <div>
-    <div
-        class="flex flex-col justify-center text-gray-600 px-8 my-12 text-center rounded-md border mx-auto w-full">
-        <img alt="" class="self-center flex-shrink-0 w-24 h-24 -mt-12 bg-center bg-cover rounded-full border-2 border-primary-600"
-            src="{{ $team->photo }}">
-        <div class="flex-1 my-4">
-            <p class="text-xl font-semibold leading-snug text-gray-800">{{ $team->name }}</p>
-            <p class="text-xs block mt-4 ">{{ $team->stage }} - {{ $team->department }}</p>
-        </div>
-        @if ($team->type == 1)
-            <div class="flex items-center justify-around p-3 space-x-3 border-t-2">
-                <a rel="noopener noreferrer" target="_blank" href="mailto:{{ $team->email }}" title="Email"
-                    class="">
+
+    <div class="text-center text-gray-500 dark:text-gray-40 p-4">
+        <img class="mx-auto mb-4 w-28 h-28 rounded-full  border-2 border-primary-600" src="{{ asset($team['photo']) }}" alt="{{ $team['name'] }}">
+        <h3 class="mb-1 text-xl font-bold tracking-tight text-gray-900 ">
+            {{ $team['name']}}
+        </h3>
+        <p>{{ $team['job_title'] }}</p>
+
+        <ul class="flex justify-around mt-4 ">
+            <li>
+                <a target="_blank" href="mailto:{{ $team['email'] }}" title="Email" class="text-[#39569c] hover:text-gray-900">
                     <i class="fa-solid fa-envelope"></i>
                 </a>
-
-                <a rel="noopener noreferrer" target="_blank" href="{{ $team->github }}" title="GitHub"
-                    class="">
+            </li>
+            <li>
+                <a target="_blank" href="{{ $team['github'] }}" title="GitHub" class="text-gray-900 hover:text-gray-900" >
                     <i class="fa-brands fa-github"></i>
                 </a>
-            </div>
-        @else
-        <div class="flex justify-end pt-2 space-x-4 align-center text-gray-700 ">
-            <a aria-label="number" class="p-2 rounded-md text-lg mx-auto">
-                {{ $team->adjective }}
-            </a>
-        </div>
-        @endif
-
+            </li>   
+        </ul>
     </div>
 </div>

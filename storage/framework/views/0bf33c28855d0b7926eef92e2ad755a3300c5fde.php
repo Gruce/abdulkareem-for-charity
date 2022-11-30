@@ -31,12 +31,11 @@
                 <div class="hidden sm:block sm:ml-6">
                     <div class="flex space-x-4">
                         <?php $__currentLoopData = $menu->items; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                        <a href="<?php echo e(route($item->route)); ?>" <?php if($item->active): ?> class="bg-primary-700 text-white px-3
+                        <a href="<?php echo e(route($item->route)); ?>" <?php if($item->active): ?> class="mx-4 bg-primary-700 text-white px-3
                             py-2 rounded-md text-sm font-medium"
-                            <?php else: ?> class="text-gray-700 hover:bg-primary-500 hover:text-white px-3 py-2 rounded-md
+                            <?php else: ?> class="mx-4 text-gray-700 hover:bg-primary-500 hover:text-white px-3 py-2 rounded-md
                             text-sm font-medium" <?php endif; ?>>
                             <?php echo e($item->name); ?></a>
-
                         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                     </div>
                 </div>

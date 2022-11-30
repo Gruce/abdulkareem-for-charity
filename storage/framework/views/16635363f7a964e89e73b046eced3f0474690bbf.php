@@ -8,7 +8,7 @@
                 <h1 class="text-secondary-900 text-3xl xl:text-4xl font-bold mr-6">
                     صندوق الكرم
                 </h1>
-                <p class="text-secondary-200 text-lg xl:text-xl 2xl:text-2xl mt-6 px-6" style="text-align: justify">
+                <p class="text-gray-500 text-lg xl:text-xl 2xl:text-2xl mt-6 px-6" style="text-align: justify">
                     مبادرة ونشاط طلابي بحت ينطلق من طلبة كلية علوم الحـاسوب وتكنولوجيا المعـلومات الهدف منه رعاية
                     الأعمال الخيريّة داخل الكليّة وتكون الأولوية في صرف الصندوق للطلبة ذوي الدخل دون المحدود وبقيّة
                     الأعمال الخيريّة.</p>

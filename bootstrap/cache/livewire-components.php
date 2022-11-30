@@ -2,6 +2,7 @@
   'components.navbar' => 'App\\Http\\Livewire\\Components\\Navbar',
   'guest.new-user' => 'App\\Http\\Livewire\\Guest\\NewUser',
   'pages.about.card' => 'App\\Http\\Livewire\\Pages\\About\\Card',
+  'pages.about.card-contributors' => 'App\\Http\\Livewire\\Pages\\About\\CardContributors',
   'pages.about.main' => 'App\\Http\\Livewire\\Pages\\About\\Main',
   'pages.admins.card' => 'App\\Http\\Livewire\\Pages\\Admins\\Card',
   'pages.admins.main' => 'App\\Http\\Livewire\\Pages\\Admins\\Main',
