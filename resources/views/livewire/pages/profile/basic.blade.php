@@ -1,5 +1,5 @@
 <div>
-    <div class="px-4 pt-4 ">
+    <div class="px-4 pt-4 text-gray-600">
         <form action="#" class="space-y-5" wire:submit.prevent="edit">
 
             <div class=" ">
@@ -9,7 +9,7 @@
                         <hr class="w-full md:w-3/5 mt-2 mb-4">
                     </div>
                     <div class="form-item">
-                        <label class=" text-base md:text-xl">الاسم الكامل</label>
+                        <label class=" text-base ">الاسم الكامل</label>
                         <input wire:model="name" type="text" value="{{ $name }}"
                             class="bg-gray-50 border border-primary-400 text-sm w-full md:w-3/5 md:col-span-1 focus:ring-primary-600 focus:border-primary-500  block p-2.5 rounded-md mt-2 ">
                         @error('name')
@@ -18,7 +18,7 @@
                     </div>
                     <div class="flex flex-col space-y-4 md:space-y-0 md:flex-row md:space-x-4">
                         <div class="form-item w-full mt-3">
-                            <label class=" text-base md:text-xl">البريد الألكتروني</label>
+                            <label class=" text-base ">البريد الألكتروني</label>
                             <input wire:model="email" type="text" id="email"
                                 class="bg-gray-50 border border-primary-400 w-full md:w-3/5 text-sm focus:ring-primary-600 focus:border-primary-500 block  p-2.5 mt-2 rounded-md" disabled>
                             @error('email')
@@ -34,7 +34,7 @@
                         <hr class="w-3/5 mt-2 mb-4">
                     </div>
                     <div class="form-item">
-                        <label class=" text-base md:text-xl ">رقم الهاتف</label>
+                        <label class=" text-base  ">رقم الهاتف</label>
                         <input wire:model="phone_number" type="text"
                             class="bg-gray-50 border border-primary-400 text-sm w-full md:w-3/5 focus:ring-primary-600 focus:border-primary-500 block p-2.5 mt-2 rounded-md">
                         @error('phone_number')
@@ -42,7 +42,7 @@
                         @enderror
                     </div>
                     <div class="form-item mt-3">
-                        <label class=" text-base md:text-xl">معرف التلجرام</label>
+                        <label class=" text-base ">معرف التلجرام</label>
                         <input wire:model="telegram_username" type="text"
                             class="bg-gray-50 border border-primary-400 text-sm w-full md:w-3/5 focus:ring-primary-600 focus:border-primary-500 block p-2.5 mt-2 rounded-md">
                         @error('telegram_username')
